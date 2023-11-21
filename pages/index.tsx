@@ -13,11 +13,10 @@ const Index = () => {  console.log(Section)
        
         <MainLayout>
 
-       
-           
+        <div className=''>
 
-        <div className='container'>
-        <Sections {...Section.SectionOne} />
+        {/* <Sections {...Section.sections} /> */}
+
         </div>
         </MainLayout>
        
