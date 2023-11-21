@@ -9,7 +9,7 @@ const Index = () => {
        
            
 
-        <div>
+        <div className='container'>
             <h1>Добро пожаловать!</h1>
             <h3>Здесь собраны лучшие треки!</h3>
 
