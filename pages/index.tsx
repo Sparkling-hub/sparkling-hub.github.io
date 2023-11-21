@@ -1,7 +1,14 @@
 import MainLayout from '../layouts/MainLayuout';
+
+
+import * as Section from '../data/data-sections'
+import Sections from '../components/sections/sections'
+
+
 import React from 'react';
 
-const Index = () => {
+const Index = () => {  console.log(Section)  
+  console.log()
     return (
        
         <MainLayout>
@@ -10,9 +17,7 @@ const Index = () => {
            
 
         <div className='container'>
-            <h1>Добро пожаловать!</h1>
-            <h3>Здесь собраны лучшие треки!</h3>
-
+        <Sections {...Section.SectionOne} />
         </div>
         </MainLayout>
        
