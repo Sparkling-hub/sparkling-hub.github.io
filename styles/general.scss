@@ -135,6 +135,8 @@ nav {
     height: 100%;
     position: absolute;
     z-index: -2;
+    transform: translateY(-300px);
+    
 
     @media (max-width: 768px) {
         height: auto;
