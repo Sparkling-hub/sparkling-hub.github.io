@@ -1,13 +1,45 @@
+import Link from 'next/link';
 import React from 'react';
 
-const Footer: React.FC = () => {
-    return (
-      <footer className ="bg-black text-white flex items-center justify-center">
 
-        footer
-        &copy; 2023 Your Company
-      </footer>
-    );
-  };
-  
-  export default Footer;
+
+const Footer: React.FC = () => {
+	return (
+		<footer >
+			<div className='container-footer bg-teal-900 w-150 h-96 text-white flex-col items-center justify-center '>
+				<div className='footer-background'></div>				
+					<div className='footer-blocks container mx-auto px-4 flex justify-between'>
+						<div className='left-block max-w-[33%]'>
+							<div>Sparkling</div>
+							<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  </div>
+						</div>
+						<div className='center-block max-w-[33%]'>
+							<div>LINKS</div>
+							<ul className='flex-col w-1/2 justify-between py-4'>
+								<li>
+									<Link className="no-underline p-4" href="/">Home</Link>
+								</li>
+								<li>
+									<Link className="no-underline p-4" href="/about">About Us</Link>
+								</li>
+								<li>
+									<Link className="no-underline p-4" href="/services">Services</Link>
+								</li>
+								<li>
+									<Link className="no-underline p-4" href="/startup">Startup</Link>
+								</li>
+							</ul>
+						</div>
+						<div className='right-block max-w-[33%]'>
+							<div>GET IN TOUCH</div>
+							<div>info@sparkling.co.com</div>
+							<div>+41 (0)91 752 0707 </div>
+						</div>						
+					</div>
+					<div className='footer-text'> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
+			</div>
+		</footer>
+	);
+};
+
+export default Footer;

@@ -1,8 +1,102 @@
 $primary-color: #3498db;
 
+$footerBgColor: #008080;
+$footerTextColor: #ffffff;
 
-.container {
-background-color: $primary-color;
+
+
+.footer {
+    &-background {
+        width: 150%;
+        margin-left: -25%;
+        height: 800px;
+        background-color: #ffffff;
+        position: relative;
+        border-radius: 0 0 70% 70%/0 0 70% 70%;
+        z-index: -1;
+        transform: translateY(-300px);
+    }
+
+    &-text {
+        position: absolute;
+        text-align: center;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 500;
+    }
+   
+    &-blocks {  // mx-auto px-4 flex justify-between
+        position: relative;
+        bottom: 250px;
+
+        .left-block{
+            
+            div:nth-child(1){
+                margin-bottom: 20px;
+                font-weight: 900;                
+            }
+
+        }
+        .center-block{            
+            min-width: 200px;
+            transform: translateX(-180px);
+            
+            div{
+                font-weight: 700;
+                margin-left: 15px;
+            }
+            li{
+                line-height: 30px;
+            }
+
+        }
+        .right-block{
+
+            div:nth-child(1){
+                font-weight: 700;  
+                margin-bottom: 20px;             
+            }
+
+        }
+    }
+
+    &-links {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: space-between;
+            padding: 1rem 0;
+
+            li {
+                a {
+                    &.no-underline {
+                        text-decoration: none;
+                    }
+
+                    &.p-4 {
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
 
 }
 
+.container-footer {
+    background: #134e4a;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+
+    @media (max-width: 768px) {
+        height: auto;
+    }
+}
