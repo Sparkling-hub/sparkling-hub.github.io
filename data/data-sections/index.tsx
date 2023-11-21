@@ -1,12 +1,8 @@
 import SectionOne from "./section";
-
-interface ISectionData {
-  content: JSX.Element;
-  header: JSX.Element;
-  button: string;
-}
+import type  SectionData  from "../../interface/section";
 
 
-export const sections: { SectionOne: ISectionData } = {
+
+export const sections: { SectionOne: SectionData } = {
   SectionOne: SectionOne,
 };

@@ -7,7 +7,9 @@ import Sections from '../components/sections/sections'
 
 import React from 'react';
 
-const Index = () => {  console.log(Section)  
+const Index = () => {  console.log({...Section.sections})
+  
+
   console.log()
     return (
        
@@ -15,7 +17,7 @@ const Index = () => {  console.log(Section)
 
         <div className=''>
 
-        {/* <Sections {...Section.sections} /> */}
+        <Sections {...Section.sections.SectionOne}/> 
 
         </div>
         </MainLayout>
