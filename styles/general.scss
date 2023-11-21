@@ -25,37 +25,49 @@ $footerTextColor: #ffffff;
         transform: translateX(-50%);
         font-weight: 500;
     }
-   
-    &-blocks {  // mx-auto px-4 flex justify-between
+
+    &-blocks {
+        // mx-auto px-4 flex justify-between
         position: relative;
         bottom: 250px;
 
-        .left-block{
-            
-            div:nth-child(1){
+        .left-block {
+
+            div:nth-child(1) {
                 margin-bottom: 20px;
-                font-weight: 900;                
+                font-weight: 900;
+
             }
 
         }
-        .center-block{            
+
+        .center-block {
             min-width: 200px;
             transform: translateX(-180px);
-            
-            div{
+
+
+            div {
                 font-weight: 700;
                 margin-left: 15px;
             }
-            li{
+
+            li {
                 line-height: 30px;
             }
 
         }
-        .right-block{
 
-            div:nth-child(1){
-                font-weight: 700;  
-                margin-bottom: 20px;             
+        .right-block {
+
+            text-align: right;
+
+            div:not(:first-child) {
+                line-height: 30px;
+            }
+
+            div:nth-child(1) {
+                font-weight: 700;
+                margin-bottom: 20px;
             }
 
         }
