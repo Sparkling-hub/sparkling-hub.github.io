@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import MainLayout from '../layouts/MainLayuout'; // Подставьте свой путь к компоненту макета
 
+=======
+import type { AppProps } from 'next/app';
+import MainLayout  from '../layouts/MainLayuout'; // Подставьте свой путь к компоненту макета
+import "../styles/global.css"; 
+>>>>>>> WEB-13-MainLayout-Navbar
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Component {...pageProps} />
