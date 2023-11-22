@@ -3,7 +3,7 @@ import type SectionType from '../../interface/section';
 import Button from '../button';
 
 
-const Section: React.FC<SectionType> = ({ header, content, image }) => {
+const Section: React.FC<SectionType> = ({ header, content, image, button }) => {
   console.log(header)
   return (
 
@@ -20,7 +20,7 @@ const Section: React.FC<SectionType> = ({ header, content, image }) => {
 
         </div>
         <div className='absolute bottom-20 left-0'>
-          <Button href="/get-in-touch" text="Get in touch" />
+        {button}
         </div>
       </div>
 
