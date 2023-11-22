@@ -1,7 +1,12 @@
+export interface Ibutton {
+
+
+}
+
 interface SectionData {
    content?: JSX.Element;
   header?: JSX.Element;
-  button?: string;
+  button?: JSX.Element;
   image?: JSX.Element;
   }
 export default SectionData
