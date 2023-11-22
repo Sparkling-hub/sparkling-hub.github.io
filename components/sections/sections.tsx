@@ -6,22 +6,28 @@ import Button from '../button';
 const Section: React.FC<SectionType> = ({ header , content, image }) => {
   console.log(header)
   return (
-    <div className='flex items-center justify-center'>
-      <div className='content-section flex   items-start justify-center flex-col justify-center '>
+
+    <div className='flex items-center justify-center relative'>
+      <div className='content-section flex   items-start justify-center flex-col justify-center'>
 
           <div className='flex items-center whitespace-normal'>
-          <div className='uppercase flex justify-center flex-col'>{header}   
+          <div className='flex justify-center flex-col'>{header}   
           {content}
           </div>
     
           {image }
-          
+      
         </div>
         <div className='absolute bottom-20 left-0'>
-        <Button/>
-        </div>
-      </div>
+     <Button/>
+     </div>
+      </div> 
+  
     </div>
+   
+
+    
+     
   );
 };
 
