@@ -1,5 +1,5 @@
 import SectionOne from "./section_one";
-import SectionTwo from "./sectionn_two";
+import SectionTwo from "./section_two";
 import type  SectionData  from "../../interface/section";
 
 

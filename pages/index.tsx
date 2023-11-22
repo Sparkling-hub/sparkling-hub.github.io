@@ -7,6 +7,7 @@ import Sections from '../components/sections/sections'
 
 import React from 'react';
 
+
 const Index = () => { 
   
 
