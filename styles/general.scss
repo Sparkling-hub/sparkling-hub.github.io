@@ -1,9 +1,8 @@
-
 $primary-color: #3498db;
 
 $footerBgColor: #008080;
 $footerTextColor: #ffffff;
-$widhConainers: 1020px;
+$widhConainers: 1050px;
 
 nav {
     position: relative;
@@ -12,25 +11,26 @@ nav {
     padding: 20px;
     align-items: center;
     text-decoration: none;
-  
+
     a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-  
-      img {
-        width: 33.33%;
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, #134e4a, #5eead4);
-            z-index: 1;
-          }
-      }
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+            width: 33.33%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, #134e4a, #5eead4);
+                z-index: 1;
+            }
+        }
     }
 }
 
@@ -136,7 +136,7 @@ nav {
     position: absolute;
     z-index: -2;
     transform: translateY(-300px);
-    
+
 
     @media (max-width: 768px) {
         height: auto;
@@ -144,13 +144,51 @@ nav {
 }
 
 .content-section {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: $widhConainers;
+    flex-direction: column;
+    position: relative;
+    height: auto;
 
-  display: flex;
-  justify-content:center;
-  width:$widhConainers;
-  flex-direction: column;
-  align-items: center;
+    font-weight: 100;
+
+    & h1 {
+        margin-bottom: 40px;
+        line-height: 1;
+        color: #044b46;
+        font-size: 40px;
+
+        & strong {
+            text-transform: uppercase;
+            color: #134e4a;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        & span {
+
+            color: #17cfc2;
+            font-size: 40px;
+
+        }
+
+
+    }
+
+    & p {
+        padding-bottom: 50px;
+    }
 
 
 
 }
+@media (max-width: 900px) {
+    .content-section{
+    width: 100%;
+    /* Добавлено для уверенности, что ширина будет 100% на экранах < 900px */
+    min-width: auto;
+    /* Сброс минимальной ширины */
+    flex-direction: column !important;
+}}
