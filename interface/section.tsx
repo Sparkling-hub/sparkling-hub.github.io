@@ -1,7 +1,3 @@
-export interface Ibutton {
-
-
-}
 
 interface SectionData {
    content?: JSX.Element;

@@ -4,7 +4,7 @@ import Button from '../button';
 
 
 const Section: React.FC<SectionType> = ({ header, content, image, button }) => {
-  console.log(header)
+
   return (
 
 

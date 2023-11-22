@@ -2,7 +2,7 @@ $primary-color: #3498db;
 
 $footerBgColor: #008080;
 $footerTextColor: #ffffff;
-$widhConainers: 1050px;
+$widhConainers: 1450px;
 
 nav {
     position: relative;
@@ -178,7 +178,7 @@ nav {
     }
 
     & p {
-        padding-bottom: 50px;
+     
     }
 
 
@@ -192,3 +192,14 @@ nav {
     /* Сброс минимальной ширины */
     flex-direction: column !important;
 }}
+.benefist {
+    width: 55%  ;
+    & img {width: 200px !important;
+    max-width: 200px;}
+    & h3 {   color: #08a096;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+
+}
