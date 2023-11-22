@@ -9,16 +9,18 @@ const Section: React.FC<SectionType> = ({ header, content }) => {
     <div className='flex items-center justify-center'>
       <div className='content-section flex items-center justify-center flex-col justify-center '>
 
-          <div className='flex items-center'>
+        <div className='flex items-center'>
           <div className='flex justify-center flex-col'>{header}   </div>
-    
-          {content }
-          
+
+          {content}
+
         </div>
-        <Button />
+        <Button  href = "/get-in-touch" text = "Get in touch"/>
       </div>
     </div>
   );
 };
 
 export default Section;
+
+// Sparkling

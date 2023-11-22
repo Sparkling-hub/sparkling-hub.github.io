@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
             <Link className="no-underline p-4" href="/startup">Startup</Link>
           </li>
           <li>
-            <Link className="no-underline text-white py-3 px-8 bg-gradient-to-r from-teal-900 to-teal-300 rounded-3xl" href="/get-in-touch">Get in touch</Link>
+              <Button  href = "/get-in-touch" text = "Get in touch"/>
           </li>
           
         </ul>
