@@ -16,7 +16,7 @@ const Benefits: FC = () => {
          
 
             <div className={`${(index + 1) % 2 ? 'flex-row-reverse text-right' : 'flex-row'} flex`}>
-            <div className='w-full'>{value.image}</div>
+            <div className=''>{value.image}</div>
             <div key={index} className='flex flex-col'>
                 
              {value.header}

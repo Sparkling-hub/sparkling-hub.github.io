@@ -5,7 +5,7 @@ const content = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
      </p>
 import IBenedits, { FlexValues } from '../../interface/IBenefits';
 const header = <h3>Lorem5 ipsum dolddddddddddddddddddor sit</h3>
-const image = <img src='/img/section/sectionOne.png' width={2500}/>;
+const image = <img src='/img/section/sectionOne.png'/>;
 const element : IBenedits= {
     header: header,
     content: content,
