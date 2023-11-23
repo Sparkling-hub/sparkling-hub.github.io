@@ -11,7 +11,7 @@ import React from 'react';
 const Index = () => { 
   
 
-  console.log()
+  console.log(Section.sections)
     return (
        
         <MainLayout>
@@ -19,7 +19,7 @@ const Index = () => {
         <div className=''>
 
         <Sections {...Section.sections.SectionOne}/> 
-   
+        <Sections {...Section.sections.SectionTwo}/> 
         <Sections {...Section.sections.SectionFour}/> 
         </div>
         </MainLayout>
