@@ -1,26 +1,20 @@
 import React from 'react';
-import services from '../../data/data-services'
+import dataServices from '../../data/data-services'
 import IService from '../../interface/service'
+import Service from '../service'
 
 const Services: React.FC<IService> = () => {
 
-  
-  if(services){
-    console.log(services)
-    debugger
-  }
-  
-  return (
-    <>
-      {/* services? 
-      {services.map((item, index) => ( 
-        <Service id = {index} item = {item}/> ))
-      } 
-      :
-      {
+  //const {services} = dataServices
 
-      } */}
-    </>
+  return (
+    <div className='flex '>
+      
+	  {dataServices.map((service, index) => (
+        <Service key={index} {...service} />
+      ))}
+      
+    </div>
   );
 };
 

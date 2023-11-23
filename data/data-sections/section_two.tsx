@@ -2,10 +2,12 @@ import Services from "@/components/services"
 
 
 const header =
-  <h1><span>We </span> Provide<br/></h1>
+  <h1 className="flex items-center justify-center">
+    <span className="color-primary-light mx-4">We </span> <span className="text-black font-medium">Provide</span> <br />
+  </h1>
 
 
-const content = <Services/>
+const content = <Services />
 
 
 const element = {

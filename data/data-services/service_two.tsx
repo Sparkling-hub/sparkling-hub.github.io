@@ -1,21 +1,29 @@
+
+import React from 'react';
 import Button from "../../components/button";
 
 const header =
-  <h1>We <span>build </span>software to <br/> <strong> reach your goals</strong></h1>
+  <h1><span><strong>Team augmentation</strong></span> </h1>
 
 
-const content = <p>Whether you are looking to expand your Development Team, build your idea from scratch,
-  or do some good old Research and Development (R&D) you need more than coders, you need problem-solvers.
-  Talk to us for seasoned and affordable Software Engineers that add real value to your long-term future.</p>
+const content = 
+				<div className="mb-12">
+					<p>Bring additions to your existing team or build your team from scratch. Adapt it to your needs to create a perfect fit</p>
+					<ul>
+						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="Logo"/>Full stack develoment</li>
+						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="Logo"/>Technical support</li>
+						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="Logo"/>Agile working team</li>
+					</ul>
+				</div>
+       
 
-const image = <img src='/img/section/sectionOne.png' width={3000} />;
-
-const button=   <Button href="/get-in-touch" text="Get in touch" />
-
+const image = <img src='/img/services/img1.png'/>;
+const button=   <Button href="/get-in-touch" text="Find out more" />
 const element = {
   content: content,
   header: header,
   image: image,
   button:button
 }
+
 export default element

@@ -1,9 +1,13 @@
 $primary-color: #3498db;
 
 $footerBgColor: #008080;
+$primaryLightColor: #17cfc2;
 $footerTextColor: #ffffff;
 $widhConainers: 1050px;
 
+.color-primary-light{
+    color: $primaryLightColor;
+}
 nav {
     position: relative;
     display: flex;
@@ -168,10 +172,7 @@ nav {
         }
 
         & span {
-
-            color: #17cfc2;
             font-size: 40px;
-
         }
 
 
@@ -187,8 +188,14 @@ nav {
 @media (max-width: 900px) {
     .content-section{
     width: 100%;
-    /* Добавлено для уверенности, что ширина будет 100% на экранах < 900px */
     min-width: auto;
-    /* Сброс минимальной ширины */
     flex-direction: column !important;
 }}
+
+
+
+.r-arrow{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}

@@ -1,7 +1,7 @@
 import Button from "../../components/button";
 
 const header =
-  <h1>We <span>build </span>software to <br/> <strong> reach your goals</strong></h1>
+  <h1>We <span className="color-primary-light">build </span>software to <br/> <strong> reach your goals</strong></h1>
 
 
 const content = <p>Whether you are looking to expand your Development Team, build your idea from scratch,
