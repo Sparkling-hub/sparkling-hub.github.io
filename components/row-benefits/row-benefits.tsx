@@ -17,7 +17,7 @@ const Benefits: FC = () => {
          
 
             <div className='justify-center flex w-64 h-64 '>{value.image}</div>
-            <div key={index} className='flex flex-col justify-center mx-50 w-2/4'>
+            <div key={index} className='flex flex-col justify-center mx-50 w-2/3'>
                 
              {value.header}
                 <div className='min-w-full max-w-full ' >{value.content} </div>    </div>
