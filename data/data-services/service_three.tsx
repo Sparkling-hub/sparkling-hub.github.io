@@ -3,7 +3,7 @@ import React from 'react';
 import Button from "../../components/button";
 
 const header =
-  <h1><span><strong>Team augmentation</strong></span> </h1>
+  <h1><span><strong className='color-primary-light'>Team augmentation</strong></span> </h1>
 
 
 const content = 
