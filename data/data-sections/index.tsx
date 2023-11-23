@@ -11,3 +11,5 @@ export const sections: Record<string, SectionData> = {
   SectionTwo:SectionTwo,
   SectionFour:SectionFour
 };  
+
+

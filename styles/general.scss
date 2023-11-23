@@ -1,9 +1,13 @@
 $primary-color: #3498db;
 
 $footerBgColor: #008080;
+$primaryLightColor: #17cfc2;
 $footerTextColor: #ffffff;
 $widhConainers: 1330px;
 
+.color-primary-light{
+    color: $primaryLightColor;
+}
 nav {
     position: relative;
     display: flex;
@@ -160,7 +164,7 @@ nav {
         color: #044b46;
         font-size: 40px;
 
-        & strong {
+        & strong.s2-uppercase {
             text-transform: uppercase;
             color: #134e4a;
             font-size: 40px;
@@ -168,10 +172,7 @@ nav {
         }
 
         & span {
-
-            color: #17cfc2;
             font-size: 40px;
-
         }
 
 
@@ -188,9 +189,6 @@ font-size: 40px;   margin: 50px;
 }
     }
 
-    & p {
-     
-    }
 
 
 
@@ -198,9 +196,7 @@ font-size: 40px;   margin: 50px;
 @media (max-width: 900px) {
     .content-section{
     width: 100%;
-    /* Добавлено для уверенности, что ширина будет 100% на экранах < 900px */
     min-width: auto;
-    /* Сброс минимальной ширины */
     flex-direction: column !important;
     .benefist{ width: 100%  ;
     flex-direction:row-reverse !important; text-align: left;}
@@ -222,4 +218,13 @@ font-size: 40px;   margin: 50px;
         width:auto;
     }
 
+}
+
+
+
+
+.r-arrow{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
 }
