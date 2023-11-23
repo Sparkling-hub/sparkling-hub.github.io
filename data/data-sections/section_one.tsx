@@ -8,7 +8,7 @@ const content = <p>Whether you are looking to expand your Development Team, buil
   or do some good old Research and Development (R&D) you need more than coders, you need problem-solvers.
   Talk to us for seasoned and affordable Software Engineers that add real value to your long-term future.</p>
 
-const image = <img src='/img/section/sectionOne.png' width={3000} />;
+const image = <img src='/img/section/sectionOne.png' className="w-full"/>;
 const button=   <Button href="/get-in-touch" text="Get in touch" />
 const element = {
   content: content,

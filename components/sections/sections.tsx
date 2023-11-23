@@ -16,8 +16,9 @@ const Section: React.FC<SectionType> = ({ header, content, image, button }) => {
             {content}
           </div>
 
-          {image}
+            <div className='content-image'>  {image}
 
+          </div>
         </div>
         <div className='absolute bottom-20 left-0'>
         {button}

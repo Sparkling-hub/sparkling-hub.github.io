@@ -21,6 +21,7 @@ const Index = () => {
         <Sections {...Section.sections.SectionOne}/> 
         <Sections {...Section.sections.SectionTwo}/> 
         <Sections {...Section.sections.SectionFour}/> 
+        <Sections {...Section.sections.SectionFive}/> 
         </div>
         </MainLayout>
        
