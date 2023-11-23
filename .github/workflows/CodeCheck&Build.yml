@@ -8,7 +8,7 @@ on:
   # Runs on pushes targeting the default branch
   pull_request:
    # The branches below must be a subset of the branches above
-   branches: [ "master" ]
+   branches: '**' 
     
 
   # Allows you to run this workflow manually from the Actions tab
