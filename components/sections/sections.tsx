@@ -11,18 +11,18 @@ const Section: React.FC<SectionType> = ({ header, content, image, button }) => {
     <div className='flex items-center justify-center relative'>
       <div className='content-section flex   items-start justify-center flex-col justify-center'>
 
-        <div className='flex items-center whitespace-normal'>
-          <div className='flex justify-center flex-col'>{header}
+        <div className='flex items-center whitespace-normal w-full'>
+          <div className='flex justify-center flex-col w-full'>{header}
             {content}
           </div>
 
-            <div className='content-image'>  {image}
+            {!image?null:<div className='content-image'>  {image}
 
-          </div>
+          </div>}
         </div>
-        <div className='absolute bottom-20 left-0'>
+        {!button? null:<div className='absolute bottom-20 left-0'>
         {button}
-        </div>
+        </div>}
       </div>
 
 

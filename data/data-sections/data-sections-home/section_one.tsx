@@ -1,4 +1,4 @@
-import Button from "../../components/button";
+import Button from "../../../components/button";
 
 const header =
   <h1>We <span className="color-primary-light">build </span>software to <br/> <strong className="s2-uppercase"> reach your goals</strong></h1>
