@@ -1,6 +1,6 @@
 const Select = ({ name, value, onChange, placeholder, data }) => {
     return (
-        <select name= {name} id="Position" required="" style={{marginBottom: "3%"}} value={value} onChange={onChange}>
+        <select name= {name} id="Position" required="" className="border border-green-500 rounded-3xl p-4 w-full m-5"  value={value} onChange={onChange}>
             <option value="" selected="" disabled="">{placeholder}</option>
       
 

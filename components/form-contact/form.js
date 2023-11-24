@@ -26,14 +26,16 @@ const Form = () => {
           };
       
     return (
-        <form method="post" id="rec_form" action="" enctype="multipart/form-data" class="form flex flex-col items-center"    >
+        <form method="post" id="rec_form" action="" enctype="multipart/form-data" class="form flex flex-col items-center w-2/4 p-5 m-auto"     >
 
-            <Input type="text" name="name" value={formData.name} placeholder="Name" onChange={handleInputChange} />
-            <Input type="text" name="phone" value={formData.phone} placeholder="Phone number" onChange={handleInputChange}/>
-            <Input type="email" name="email" value={formData.email}
-        onChange={handleInputChange} placeholder="Email address" />
-       <Select onChange={handleInputChange} value={formData.select} name='select' placeholder="Choose course"/>
-            <TextArea name="message" placeholder="Write your message here" required=""   value={formData.message}
+            <Input type="text" name="name" value={formData.name} placeholder="Full Name*" onChange={handleInputChange} />
+      
+            <Input type="email" name="email*" value={formData.email}
+            
+        onChange={handleInputChange} placeholder="Email*" />
+              <Input type="text" name="Company" value={formData.phone} placeholder="Company" onChange={handleInputChange}/>
+       <Select onChange={handleInputChange} value={formData.select} name='select' placeholder="I am looking for..."/>
+            <TextArea name="message" placeholder="Tell us about your project and goals" required=""   value={formData.message}
         onChange={handleInputChange}/>
 
             <br />

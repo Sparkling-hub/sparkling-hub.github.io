@@ -1,7 +1,7 @@
 import Button from "../../../components/button";
 
 const header =
-  <h1><strong>Contact Us</strong></h1>
+  <h1><strong className="s2">Contact Us</strong></h1>
 
 
 const content = <p><strong>Get in touch!</strong><br/>
