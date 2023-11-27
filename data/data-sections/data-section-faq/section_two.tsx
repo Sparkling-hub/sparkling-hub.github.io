@@ -11,6 +11,7 @@ const content = <Questions/>
 const element = {
   content: content,
   header: header,
-  background:'teal-50'
+  background:'teal-50',
+  id: "answers"
 }
 export default element

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-const DisabledSelect = ({answer}) => {
-console.log(answer);
+const DisabledSelect = ({ answer, questionId }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDropdownToggle = () => {
@@ -9,18 +8,16 @@ console.log(answer);
   };
 
   return (
-    <div className="relative">
+    <div className="relative m-5 ">
       <div
-        className={`w-full p-2 border rounded cursor-pointer ${
-          isDropdownOpen ? 'border-green-500' : ''
+        className={`w-full p-3 border rounded cursor-pointer text-lg border-none ${
+          isDropdownOpen ? 'bg-emerald-900 text-teal-300 rounded-t-2xl' : 'rounded-2xl bg-slate-100'
         }`}
         onClick={handleDropdownToggle}
       >
         <span className="block">{answer.question}</span>
         <svg
-          className={`absolute top-0 right-0 h-full w-8 p-2 pointer-events-none ${
-            isDropdownOpen ? 'transform rotate-180' : ''
-          }`}
+          className={`absolute top-2.5 right-2.5 h-6 pointer-events-none  transform ${isDropdownOpen ?'text-black rotate-180 bg-teal-300' :'text-white rotate-90 bg-gradient-to-t from-teal-900 to-teal-300'}`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -32,9 +29,8 @@ console.log(answer);
         </svg>
       </div>
       {isDropdownOpen && (
-        <div className="top-full left-0 bg-white border border-green-500 rounded-3xl p-4 w-full m-5">
-          {/* Здесь добавьте содержимое выпадающего списка */}
-  <p>{answer.answer}</p>
+        <div className="top-full left-0 bg-white border border-gray-300 rounded-b-2xl p-4 w-full">
+          <p>{answer.answer}</p>
         </div>
       )}
     </div>
