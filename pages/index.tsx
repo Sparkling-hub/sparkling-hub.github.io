@@ -5,7 +5,6 @@ import  SeparatePage from './contact'
 
 
 
-
 import React from 'react';
 
 
@@ -25,6 +24,7 @@ const Index = () => {
 
         </div>
         <SeparatePage/>
+   
         </MainLayout>
        
     );

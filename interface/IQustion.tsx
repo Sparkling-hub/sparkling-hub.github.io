@@ -1,8 +1,8 @@
 
 
-interface serviceData {
+interface  IQustion{
     qustion?: JSX.Element;  
     answer?: JSX.Element;  
 
     }
-  export default serviceData
+  export default IQustion

@@ -6,7 +6,7 @@ import questionFive from "./questionFive"
 import questionSix from "./questionSix"
 import questionSeven from "./questionSeven"
 import IQustion from "../../interface/IQustion";
-const benefits: Record<string, IQustion> = {
+const question: Record<string, IQustion> = {
     questionOne: questionOne,
     questionTwo: questionTwo,
     questionThree: questionThree,
@@ -17,4 +17,4 @@ const benefits: Record<string, IQustion> = {
   
   };
   
-  export default {benefits}
+  export default {question}
