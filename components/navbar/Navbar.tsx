@@ -6,9 +6,10 @@ const Navbar: React.FC = () => {
     <div className='container mx-auto px-4 '>
       <nav className='flex justify-between px-20 py-4'>
 
-        <a href="/" title="Back to Home flex w-1/2">
+        
+        <Link href="/" title="Back to Home flex w-1/2">
           <img src='/img/navbar/logo2.png' alt="Logo" className="logo_img w-1/3" />
-        </a>
+        </Link>
 
         <ul className='flex w-1/2 justify-between py-4'>
           <li>

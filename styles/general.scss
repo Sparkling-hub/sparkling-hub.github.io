@@ -3,7 +3,7 @@ $primary-color: #3498db;
 $footerBgColor: #008080;
 $primaryLightColor: #17cfc2;
 $footerTextColor: #ffffff;
-$widhConainers: 1050px;
+$widhConainers: 1330px;
 
 .color-primary-light{
     color: $primaryLightColor;
@@ -162,25 +162,51 @@ nav {
         margin-bottom: 40px;
         line-height: 1;
         color: #044b46;
-        font-size: 40px;
+        font-size: 45px;
+    
 
         & strong.s2-uppercase {
             text-transform: uppercase;
             color: #134e4a;
-            font-size: 40px;
+            font-size: 45px;
             font-weight: bold;
         }
-
+        & strong.s2 {
+    
+            color: #134e4a;
+            font-size: 45px;
+            font-weight:900;
+        }
         & span {
-            font-size: 40px;
+            font-size: 45px;
         }
 
 
     }
+    & h2 {
+text-align: center;
+font-size: 40px;   margin: 50px;
+& span {
 
-    & p {
-        padding-bottom: 50px;
+    color: #17cfc2;
+    font-size: 40px;
+    font-weight: 400;
+ 
+}
     }
+    & h3 {
+        text-align: center;
+        font-size: 25px;   margin: 50px;
+        & span {
+        
+            color: #17cfc2;
+ 
+            font-weight: 400;
+         
+        }
+            }
+        
+
 
 
 
@@ -190,7 +216,28 @@ nav {
     width: 100%;
     min-width: auto;
     flex-direction: column !important;
+    .benefist{ width: 100%  ;
+    flex-direction:row-reverse !important; text-align: left;}
 }}
+.benefist {
+    width: 63%  ;
+    & img {width: 100% !important;
+        display: flex;
+     
+    max-width:none;}
+    & h3 {   color: #08a096;
+        font-size: 30px;
+        font-weight: 400;
+    }
+    & p {
+     
+        width:max-content;
+        word-break: break-all;
+        width:auto;
+    }
+
+}
+
 
 
 
@@ -198,4 +245,19 @@ nav {
     width: 24px;
     height: 24px;
     display: inline-block;
+}
+
+.content-image img{width: 700px;      max-width: none;
+   }
+
+.form{
+   .text-form{width: 95%;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid #dedede;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: normal !important}
+    
+  
 }
