@@ -1,14 +1,14 @@
 import MainLayout from '../layouts/MainLayuout';
-import * as Section from '../data/data-sections/data-sections-home'
+import * as Section from '../data/data-sections/data-section-faq'
 import Sections from '../components/sections/sections'
-import  SeparatePage from './contact'
+
 
 
 
 import React from 'react';
 
 
-const Index = () => { 
+const Contact = () => { 
   
 
   console.log(Section.sections)
@@ -19,15 +19,11 @@ const Index = () => {
         <div className=''>
 
         <Sections {...Section.sections.SectionOne}/> 
-        <Sections {...Section.sections.SectionTwo}/> 
-        <Sections {...Section.sections.SectionFour}/> 
-
+   <Sections {...Section.sections.SectionTwo}/> 
         </div>
-        <SeparatePage/>
-   
         </MainLayout>
        
     );
 };
 
-export default Index;
+export default Contact;

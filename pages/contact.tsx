@@ -1,17 +1,17 @@
 import MainLayout from '../layouts/MainLayuout';
-import * as Section from '../data/data-sections/data-sections-home'
+import * as Section from '../data/data-sections/data-section-contact'
 import Sections from '../components/sections/sections'
-import  SeparatePage from './contact'
+
 
 
 
 import React from 'react';
 
 
-const Index = () => { 
+const Contact = () => { 
   
 
-  console.log(Section.sections)
+
     return (
        
         <MainLayout>
@@ -20,14 +20,10 @@ const Index = () => {
 
         <Sections {...Section.sections.SectionOne}/> 
         <Sections {...Section.sections.SectionTwo}/> 
-        <Sections {...Section.sections.SectionFour}/> 
-
         </div>
-        <SeparatePage/>
-   
         </MainLayout>
        
     );
 };
 
-export default Index;
+export default Contact;

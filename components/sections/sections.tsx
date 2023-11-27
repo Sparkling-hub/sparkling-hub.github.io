@@ -3,25 +3,26 @@ import type SectionType from '../../interface/section';
 import Button from '../button';
 
 
-const Section: React.FC<SectionType> = ({ header, content, image, button }) => {
-  console.log(header)
+const Section: React.FC<SectionType> = ({ header, content, image, button, background }) => {
+
   return (
 
 
-    <div className='flex items-center justify-center relative'>
+    <div className={`flex items-center justify-center relative bg-${background}`}>
       <div className='content-section flex   items-start justify-center flex-col justify-center'>
 
-        <div className='flex items-center whitespace-normal'>
-          <div className='flex justify-center flex-col'>{header}
+        <div className='flex items-center whitespace-normal w-full '>
+          <div className='flex justify-center flex-col w-full'>{header}
             {content}
           </div>
 
-          {image}
+            {!image?null:<div className='content-image'>  {image}
 
+          </div>}
         </div>
-        <div className='absolute bottom-20 left-0'>
+        {!button? null:<div className='absolute bottom-20 left-0'>
         {button}
-        </div>
+        </div>}
       </div>
 
 
