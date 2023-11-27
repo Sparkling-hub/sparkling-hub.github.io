@@ -11,7 +11,7 @@ const content = <ContentBenefits/>
 const element = {
   content: content,
   header: header,
- 
+  id: "benefits", 
 
 }
 export default element

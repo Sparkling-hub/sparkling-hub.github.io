@@ -11,7 +11,7 @@ const Service: React.FC<IService> = ({content, header, image, button}) => {
   // debugger
   return (
     <div className='flex-col'>
-      {image}
+      <div className='service_icon'>{image} </div>
       {header}
       {content}
       {button}
