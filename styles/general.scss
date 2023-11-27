@@ -146,6 +146,9 @@ nav {
         height: auto;
     }
 }
+#services div.service_icon img{
+    width: 200px;
+}
 
 .content-section {
     margin: 20px;
@@ -194,17 +197,17 @@ font-size: 40px;   margin: 50px;
  
 }
     }
-    & h3 {
-        text-align: center;
-        font-size: 25px;   margin: 50px;
-        & span {
+    // & h3 {
+    //     text-align: center;
+    //     font-size: 25px;   margin: 50px;
+    //     & span {
         
-            color: #17cfc2;
+    //         color: #17cfc2;
  
-            font-weight: 400;
+    //         font-weight: 400;
          
-        }
-            }
+    //     }
+    //         }
         
 
 

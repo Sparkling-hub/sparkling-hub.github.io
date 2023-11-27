@@ -15,16 +15,11 @@ const Index = () => {
     return (
        
         <MainLayout>
-
-        <div className=''>
-
-        <Sections {...Section.sections.SectionOne}/> 
-        <Sections {...Section.sections.SectionTwo}/> 
-        <Sections {...Section.sections.SectionFour}/> 
-
-        </div>
-        <SeparatePage/>
-   
+          <div className=''>
+            <Sections {...Section.sections.SectionOne}/> 
+            <Sections {...Section.sections.SectionTwo}/> 
+            <Sections {...Section.sections.SectionFour}/> 
+          </div>
         </MainLayout>
        
     );

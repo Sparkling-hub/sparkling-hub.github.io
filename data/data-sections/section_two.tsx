@@ -1,4 +1,5 @@
-import Services from "@/components/services"
+import Services from "../../components/services"
+import React from 'react';
 
 
 const header =
@@ -13,6 +14,5 @@ const content = <Services />
 const element = {
   content: content,
   header: header,
-  id: "services"
 }
 export default element
