@@ -9,9 +9,13 @@ const Questions: FC = () => {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Disabled Select Example</h1>
-      <DisabledSelect />
-    </div>
-  );
+      {Object.values(questions.question).map((value, index) => (
+      <DisabledSelect answer={value} key={index}/>
+ 
+    
+    ))};
+       </div>
+  )
 
 };
 

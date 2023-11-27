@@ -197,17 +197,7 @@ font-size: 40px;   margin: 50px;
  
 }
     }
-    // & h3 {
-    //     text-align: center;
-    //     font-size: 25px;   margin: 50px;
-    //     & span {
-        
-    //         color: #17cfc2;
- 
-    //         font-weight: 400;
-         
-    //     }
-    //         }
+    
         
 
 
@@ -264,3 +254,15 @@ font-size: 40px;   margin: 50px;
     
   
 }
+
+#form-contact h3 {
+    text-align: center;
+    font-size: 25px;   margin: 50px;
+    & span {
+    
+        color: #17cfc2;
+
+        font-weight: 400;
+     
+    }
+        }

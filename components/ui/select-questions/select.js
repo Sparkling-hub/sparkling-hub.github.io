@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const DisabledSelect = () => {
+const DisabledSelect = ({answer}) => {
+console.log(answer);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
   return (
     <div className="relative">
       <div
-        className="w-full p-2 border rounded cursor-not-allowed"
-        tabIndex="-1"
-        aria-disabled="true"
+        className={`w-full p-2 border rounded cursor-pointer ${
+          isDropdownOpen ? 'border-green-500' : ''
+        }`}
+        onClick={handleDropdownToggle}
       >
-        <span className="block">Выберите опцию</span>
+        <span className="block">{answer.question}</span>
         <svg
-          className="absolute top-0 right-0 h-full w-8 p-2 pointer-events-none"
+          className={`absolute top-0 right-0 h-full w-8 p-2 pointer-events-none ${
+            isDropdownOpen ? 'transform rotate-180' : ''
+          }`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -21,6 +31,12 @@ const DisabledSelect = () => {
           />
         </svg>
       </div>
+      {isDropdownOpen && (
+        <div className="top-full left-0 bg-white border border-green-500 rounded-3xl p-4 w-full m-5">
+          {/* Здесь добавьте содержимое выпадающего списка */}
+  <p>{answer.answer}</p>
+        </div>
+      )}
     </div>
   );
 };
