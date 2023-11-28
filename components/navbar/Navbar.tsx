@@ -25,6 +25,12 @@ const Navbar: React.FC = () => {
             <Link className="no-underline p-4" href="/startup">Startup</Link>
           </li>
           <li>
+            <Link className="no-underline p-4" href="/startup">Careers</Link>
+          </li>
+          <li>
+            <Link className="no-underline p-4" href="/startup">FAQ</Link>
+          </li>
+          <li>
               <Button  href = "/get-in-touch" text = "Get in touch"/>
           </li>
           
