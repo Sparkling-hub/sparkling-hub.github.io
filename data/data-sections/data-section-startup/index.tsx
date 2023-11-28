@@ -1,15 +1,13 @@
 import SectionOne from "./section_one";
 import SectionTwo from "./section_two";
 
-import type  SectionData  from "../../../interface/section";
+import type  IStartupData  from "../../../interface/IStartupItemList";
 
 
+const sections: IStartupData[] = [
+  SectionOne,
+  SectionTwo,
+];
 
-export const sections: Record<string, SectionData> = {
-  SectionOne: SectionOne,
-  SectionTwo:SectionTwo,
-
-
-};  
-
+export default sections
 

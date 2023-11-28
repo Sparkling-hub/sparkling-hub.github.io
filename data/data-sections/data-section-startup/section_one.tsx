@@ -1,5 +1,4 @@
-import Button from "../../../components/button";
-
+ 
 const header =
                 <h1 className="flex items-center justify-center 	">
                   <span className="font-bold text-7xl mx-4">Start-up</span> <span className="text-7xl color-primary-light">Sheme</span> <br />
