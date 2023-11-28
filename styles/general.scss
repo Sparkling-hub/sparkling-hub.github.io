@@ -3,7 +3,7 @@ $primary-color: #3498db;
 $footerBgColor: #008080;
 $primaryLightColor: #17cfc2;
 $footerTextColor: #ffffff;
-$widhConainers: 1330px;
+$widhConainers: 1200px;
 
 .color-primary-light{
     color: $primaryLightColor;
@@ -162,7 +162,7 @@ nav {
     font-weight: 100;
 
     & h1 {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         line-height: 1;
         color: #044b46;
         font-size: 45px;
