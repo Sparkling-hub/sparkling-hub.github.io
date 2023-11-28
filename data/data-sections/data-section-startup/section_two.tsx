@@ -1,16 +1,18 @@
-import Button from "../../../components/button";
-import Questions from "../../../components/row-questions/row-qustions";
+
+import StartupsItemList from "@/components/startup-item-list"
+
+
 
 const header =
-  <h3>Fill in the form below and we will get back to you within 24hours.</h3>
+  <h1 className="flex items-center justify-center">
+    <span className="color-primary-light mx-4">We </span> <span className="text-black font-black">Provide</span> <br />
+  </h1>
 
-
-const content = <Questions/>
+const content = <StartupsItemList />
 
 
 const element = {
   content: content,
-  header: header,
-  background:'teal-50'
+  header: header
 }
 export default element

@@ -8,7 +8,7 @@ const header =
 const content = <ContentBenefits/>
 
 
-const element = {
+const element = { 
   content: content,
   header: header,
   id: "benefits", 

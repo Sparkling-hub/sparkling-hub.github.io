@@ -10,9 +10,9 @@ const content =
 				<div className="mb-12">
 					<p>Bring additions to your existing team or build your team from scratch. Adapt it to your needs to create a perfect fit</p>
 					<ul>
-						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="Logo"/>Full stack develoment</li>
-						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="Logo"/>Technical support</li>
-						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="Logo"/>Agile working team</li>
+						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Full stack develoment</li>
+						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Technical support</li>
+						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Agile working team</li>
 					</ul>
 				</div>
        
