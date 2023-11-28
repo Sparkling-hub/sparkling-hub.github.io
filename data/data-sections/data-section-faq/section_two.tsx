@@ -1,17 +1,21 @@
-import Button from "../../../components/button";
+import Link from "next/link";
 import Questions from "../../../components/row-questions/row-qustions";
+import Button from "../../../components/button"
 
 const header =
-  <h3>Fill in the form below and we will get back to you within 24hours.</h3>
+  <h3>Here are our most common questions:</h3>
 
 
-const content = <Questions/>
+const content = <><Questions/><h3>Any other burning questions?</h3>
+</>
+const button= <Button href={""} text={"Let us know"}/>
 
 
 const element = {
   content: content,
   header: header,
   background:'teal-50',
-  id: "answers"
+  id: "answers",
+  button:button
 }
 export default element

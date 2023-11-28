@@ -218,7 +218,7 @@ font-size: 40px;   margin: 50px;
         display: flex;
      
     max-width:none;}
-    & h3 {   color: #08a096;
+    & h3 {   color: $primaryLightColor;
         font-size: 30px;
         font-weight: 400;
     }
@@ -266,4 +266,12 @@ font-size: 40px;   margin: 50px;
      
     }
         }
-#answers svg{border-radius: 50%; padding: 0;width:auto;}
+#answers{
+
+ & h3{text-align: center;   margin-bottom: 30px;
+    line-height: 1;
+    color: #0d8b83;
+    font-size: 40px;}
+ & svg{border-radius: 50%; padding: 0;width:auto;}
+ & .button {position:relative; bottom: 0; margin: auto;}
+}
