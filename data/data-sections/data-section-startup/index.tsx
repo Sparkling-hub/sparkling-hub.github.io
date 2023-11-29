@@ -1,12 +1,14 @@
-import SectionOne from "./section_one";
-import SectionTwo from "./section_two";
+import Section1 from "./section1";
+import Section2 from "./section2";
+import Section3 from "./section3";
 
 import type  IStartupData  from "../../../interface/IStartupItemList";
 
 
 const sections: IStartupData[] = [
-  SectionOne,
-  SectionTwo,
+  Section1,
+  Section2,
+  Section3,
 ];
 
 export default sections
