@@ -270,8 +270,47 @@ font-size: 40px;   margin: 50px;
 
  & h3{text-align: center;   margin-bottom: 30px;
     line-height: 1;
+
     color: #0d8b83;
     font-size: 40px;}
- & svg{border-radius: 50%; padding: 0;width:auto;}
+
  & .button {position:relative; bottom: 0; margin: auto;}
 }
+
+.job-content {
+    font-size: 15px;
+    color: rgb(60, 60, 60);
+    font-weight: 400 !important;
+    z-index: 1;
+    line-height:25px    ;
+    margin: 20px 25px;
+    & h3 {font-size: 25px; color: $footerBgColor;  margin-bottom: 10px;}
+   & img {width: 20px; margin:0 10px;}
+
+    }
+    .square-circle {
+    top:0%;
+        
+        width: 25px;
+        height: 25px;
+       
+      }
+    
+      .square-circle::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #004d40, #81c784);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.5s ease-in-out;
+        z-index: 0;
+      }
+    
+      .animation:hover .square-circle::before {
+        transform: translate(-50%, -50%) scale(35);
+      }
+      

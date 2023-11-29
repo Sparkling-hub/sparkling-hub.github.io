@@ -1,19 +1,17 @@
-const bid = <p><span><strong>PAID INTERNSHIP</strong></span></p>
-const head=<h1>Full stack - Node JS - React JS Intern</h1>
+const bid = <p>PAID INTERNSHIP</p>
+const head = <h3>Full stack - Node JS - React JS Intern</h3>
 
-const text =<p>
-    <strong>Working place in Tunis - Tunisia 
-    <br/>
-<span>Internship contract</span><br/>
-Full time or part time<br/>
-Monthly salary depending on experience</strong></p>
+const text = <p>
+
+        Full time or part time<br />
+        Monthly salary depending on experience</p>
 
 const jobs = {
-    place: <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} />,
+    place: { img: <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} />, place:<p>Tunis</p>},
     bid: bid,
-    head:head,
-    text:text,
-    slug:'pm-dev',
+    head: head,
+    text: text,
+    slug: 'php-dev-lug-part',
     task: ['Backend development in Magento or WordPress.'],
     nameProf: 'PHP DEVELOPERS',
     descript:<p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
@@ -30,10 +28,10 @@ const jobs = {
         'Knowledge in WordPress',
         'Experience in Agile environment',
         'Knowledge in Trello, Jira, Confluence.'
-    ], weOffer:[
-'Career opportunities',
-'English lessons',
-'Chartered accountant for quarterly tax/consultancy.'
-]
+    ], weOffer: [
+        'Career opportunities',
+        'English lessons',
+        'Chartered accountant for quarterly tax/consultancy.'
+    ]
 }
 export default jobs
