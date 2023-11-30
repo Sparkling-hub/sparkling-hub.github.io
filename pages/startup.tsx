@@ -6,17 +6,19 @@ import Sections from '../components/sections/sections'
 import React from 'react';
 
 
-const Startup_page = () => { 
-  
+const Startup_page = () => {
+
     return (
-       
+
         <MainLayout>
-              {Section.map((section, index) => (
-                                <Sections key={index} {...section}/>
-                          ))
-              }          
+            {Section.map((section, index) => (
+                <Sections key={index} {...section} />
+            ))
+            }
         </MainLayout>
-       
+
+
+
     );
 };
 

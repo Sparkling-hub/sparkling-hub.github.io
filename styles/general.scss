@@ -1,8 +1,18 @@
-$primary-color: #3498db;
 
-$footerBgColor: #008080;
-$primaryLightColor: #17cfc2;
-$footerTextColor: #ffffff;
+
+$color1:  #eafffd;
+$color2:  #86C0BB;
+$color3:  #285c5c;
+$color4:  #285c5c;
+$color5:  #eafffd;
+
+
+
+$primaryBlueColor: #3498db;
+$primaryDarkColor: #134e4a;
+$primaryLightColor: #5eead4;
+$col : #86C0BB; 
+$white: #eafffd;
 $widhConainers: 1330px;
 
 .color-primary-light{
@@ -31,7 +41,7 @@ nav {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(to right, #134e4a, #5eead4);
+                background: linear-gradient(to right, $primaryDarkColor, $primaryLightColor);
                 z-index: 1;
             }
         }
@@ -43,7 +53,7 @@ nav {
         width: 150%;
         margin-left: -25%;
         height: 800px;
-        background-color: #ffffff;
+        background-color: $white;
         position: relative;
         border-radius: 0 0 70% 70%/0 0 70% 70%;
         z-index: -1;
@@ -134,7 +144,7 @@ nav {
 }
 
 .container-footer {
-    background: #134e4a;
+    background: $primaryDarkColor;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -164,19 +174,19 @@ nav {
     & h1 {
         margin-bottom: 40px;
         line-height: 1;
-        color: #044b46;
+        color: $primaryDarkColor;
         font-size: 45px;
     
 
         & strong.s2-uppercase {
             text-transform: uppercase;
-            color: #134e4a;
+            color: $primaryDarkColor;
             font-size: 45px;
             font-weight: bold;
         }
         & strong.s2 {
     
-            color: #134e4a;
+            color: $primaryDarkColor;
             font-size: 45px;
             font-weight:900;
         }
@@ -228,7 +238,7 @@ nav {
         display: flex;
      
     max-width:none;}
-    & h3 {   color: #08a096;
+    & h3 {   color: $primaryLightColor;
         font-size: 30px;
         font-weight: 400;
     }
@@ -257,7 +267,7 @@ nav {
    .text-form{width: 95%;
     height: 35px;
     margin-bottom: 20px;
-    border: 1px solid #dedede;
+    border: 1px solid $white;
     padding: 5px 10px;
     font-size: 13px;
     font-weight: normal !important}
@@ -268,4 +278,44 @@ nav {
 
 .startup-icon{
     flex-direction: column;
+}
+
+
+
+
+
+.s-b-s-title{
+    border: 2px solid $primaryDarkColor;
+    padding: 2px;
+    width: fit-content;
+    & .text {
+        padding: 0 15px ;
+        line-height: 35px;
+    }
+
+}
+li .s-b-s-text{
+    border-left: 3px solid transparent; 
+    padding-top: 20px;
+    margin-left: 21px;
+    margin-top: -10px;
+}
+li:not(:last-child) .s-b-s-text{
+    border-left: .4em solid $primaryLightColor;   
+    position: relative;
+    z-index: 1;
+    margin-bottom: -10px;
+}
+.kolo{
+    position: relative;
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+    background: $primaryLightColor;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 400;
+    color: $primaryDarkColor;
 }
