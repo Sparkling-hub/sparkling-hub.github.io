@@ -19,7 +19,7 @@ const Section = () => {
 
      
           
-            <div class=" bg-gray-100   shadow-sm flex text-gray-500  flex justify-between ">
+            <div className=" bg-gray-100   shadow-sm flex text-gray-500  flex justify-between ">
               <div className='flex px-5 py-3  overflow-hidden'>
               <p className='w-5/6 z-10'>
               
