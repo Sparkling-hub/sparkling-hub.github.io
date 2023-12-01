@@ -24,6 +24,6 @@ const element = {
   image: image,
   button: button,
   // id: "home",
-  // curvedClass: 'before:content-curved-primary-white before:w-full before:absolute'
+  curvedClass: 'before:content-curved-primary-white before:w-full before:absolute  -mt-20'
 };
 export default element;
