@@ -1,44 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import gps from './image/gps.png'
 import dataJobs from '../../data/data-jobs'
 import Link from 'next/link';
 import Button from '../ui/circle-button';
+import JobsFiltre from './filters-jobs/section'
+
+
+function areElementsUnique(arr) {
+  const seen = new Set();
+  arr.filter((item) => {
+    const value = item.bid.props.children;
+    return seen.has(value) ? false : seen.add(value);
+  })
+  return [...seen];
+}
+
 
 const Section = () => {
-
-  return (
-    <div class="flex flex-wrap justify-center">
-
-
-      {dataJobs.map((job, index) => (
-   <div className="job-content border border-gray-100 border-solid border-1 rounded-xl shadow-sm relative ">
+  const [selectedBid, setSelectedBid] = useState(null);
+  const uniqueBidsSet = (areElementsUnique(dataJobs));
 
 
-          <div className='h-20  py-3 px-5 text-gray-500'>{job.bid}</div>
-         
+  return (<>
 
-     
-          
-            <div class=" bg-gray-100   shadow-sm flex text-gray-500  flex justify-between ">
-              <div className='flex px-5 py-3  overflow-hidden'>
-              <p className='w-5/6 z-10'>
-              
-                {job.head}
-                  {job.text}
-                  {job.salary}
-           
-              </p>
-               
-              <Link href={job.slug} className='animation my-2 relative'><Button/></Link>
-              </div> 
-          
-       
-            </div>       
-            <div className="flex items-center p-2  mx-5 uppercase text-base">  <img src={gps} alt="GPS" className="h-8" />{job.place.img}{job.place.place}</div>
+    <div className="flex flex-wrap m-auto justify-between">
 
-        </div>))}
+      <div className={`m-6 w-full l border rounded cursor-pointer text-lg border-none bg-slate-100 rounded-2xl`}>
+        {uniqueBidsSet.map((bid, index) => (
+
+          <button className={`no-underline text-white py-1 px-8 ${bid==selectedBid ? 'bg-gradient-to-r from-teal-900 to-teal-300' :''} rounded-3xl`} key={index} onClick={() => {bid==selectedBid ?setSelectedBid(null): setSelectedBid(bid) }}>
+            {bid}
+          </button>
+
+        ))}
+      </div>
+      <JobsFiltre dataJobs={dataJobs} filter={selectedBid} />
     </div>
-
+  </>
 
 
 

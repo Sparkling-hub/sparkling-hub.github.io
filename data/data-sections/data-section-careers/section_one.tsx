@@ -13,6 +13,7 @@ const element = {
   content: content,
   header: header,
   image: image,
+  id:"head_career"
 
 }
 export default element

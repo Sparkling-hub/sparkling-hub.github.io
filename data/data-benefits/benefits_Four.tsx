@@ -1,10 +1,7 @@
-const content = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-     </p>
+const content = <p>We believe in fair opportunities for all, challenging the market status quo to ensure quality doesn’t have to come with a hefty price tag.
+    </p>
 import IBenedits, { FlexValues } from '../../interface/IBenefits';
-const header = <h3>L\\\ol4or 4sit</h3>
+const header = <h3>Affordable Excellence</h3>
 const image = <img src='/img/section/sectionOne.png'/>;
 
 const element : IBenedits= {
