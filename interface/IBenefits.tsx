@@ -3,7 +3,9 @@ export enum FlexValues {
   Row = 'row',
   ReverseRow = 'reverse-row',
 }
-interface IBenedits {
+
+//TODO change to IBenefits 
+interface IBenedits { 
     content?: JSX.Element;
    header?: JSX.Element;
    image?: JSX.Element;

@@ -11,10 +11,12 @@ const Startup_page = () => {
     return (
 
         <MainLayout>
+
             {Section.map((section, index) => (
                 <Sections key={index} {...section} />
             ))
             }
+
         </MainLayout>
 
 
