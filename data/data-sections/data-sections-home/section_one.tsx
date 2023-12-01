@@ -23,7 +23,7 @@ const element = {
   header: header,
   image: image,
   button: button,
-  id: "home",
-  curvedClass: 'before:content-curved-primary-white before:w-full before:absolute before:-top-20'
+  // id: "home",
+  // curvedClass: 'before:content-curved-primary-white before:w-full before:absolute'
 };
 export default element;
