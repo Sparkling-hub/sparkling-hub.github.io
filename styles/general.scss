@@ -330,9 +330,10 @@ nav {
     font-size: 15px;
     color: rgb(60, 60, 60);
     font-weight: 400 !important;
-    z-index: 0;
+    z-index: 15;
     line-height: 25px;
     margin: 20px 25px;
+position: relative;
 
     & h3 {
         font-size: 25px;
@@ -356,6 +357,8 @@ nav {
     transition: transform 0.5s ease-in-out;
     height: 25px;
     background: linear-gradient(to bottom, #004d40, #81c784);
+    
+    
 }
 
 .square-circle::before {
@@ -368,7 +371,6 @@ nav {
     height: 100%;
     background: #285c5c;
     border-radius: 50%;
-
 
     transform: translate(-50%, -50%) scale(1);
 
@@ -386,6 +388,9 @@ nav {
 
 .animation:hover .square-circle::before {
     opacity: 1;
+}
+.animation:hover .job-content {
+border-color: #285c5c;
 }
 
 #jobs {
@@ -422,5 +427,38 @@ nav {
      
     }
 
+        & .border-animation {
+            background-color: #e0e0e0;
+            border-radius: 0.75rem;
+            width: 101%;
+            height: 101%;
+            top: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+    
+            &::before {
+                content: "";
+                
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background-color: $footerBgColor; /* Изменен цвет на переменную $footerBgColor */
+                border-radius: inherit;
+                transition: opacity 1s ease; /* Плавный переход цвета */
+                z-index: -1; /* Установлен более высокий z-index */
+            }
+    
+          
+        
+      
+     
+      
 
+        }
+        & .animation:hover .border-animation::before {
+            opacity: 1;
+        }
 }

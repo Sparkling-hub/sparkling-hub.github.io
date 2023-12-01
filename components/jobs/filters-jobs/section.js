@@ -18,7 +18,8 @@ const JobsFiltre = ({dataJobs, filter}) => {
   return (<>
   
       {(filter? filterJobs(dataJobs,filter):dataJobs).map((job, index) => (
-        <div className="job-content border border-gray-100 border-solid border-1 rounded-xl shadow-sm relative bg-white " key={index}>
+      
+        <div className="job-content bg-white rounded-xl" key={index}>
 
 
           <div className='h-20  py-3 px-5 text-gray-500'>{job.bid}</div>
@@ -38,14 +39,14 @@ const JobsFiltre = ({dataJobs, filter}) => {
 
               </div>
 
-              <Link href={job.slug} className='h-2/3 w-1/6 animation flex justify-end'><Button /></Link>
+              <Link href={job.slug} className='h-2/3 w-1/6 animation flex justify-end'><Button /> <div className="border-animation" key={index}></div></Link>
             </div>
 
 
           </div>
           <div className="flex items-center p-2  mx-5 uppercase text-base">  <img src={gps} alt="GPS" className="h-8" />{job.place.img}{job.place.place}</div>
 
-        </div>))}</>)
+        </div>    ))}</>)
 
 }
 export default JobsFiltre;

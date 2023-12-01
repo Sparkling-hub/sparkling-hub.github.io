@@ -23,7 +23,7 @@ const Section = () => {
 
   return (<>
 
-    <div className="flex flex-wrap m-auto w-full m-3">
+    <div className="flex flex-wrap m-auto w-full m-3 relative">
 
       <div className={`m-6 w-full l border rounded cursor-pointer text-lg border-none bg-slate-100 rounded-2xl`}>
         {uniqueBidsSet.map((bid, index) => (
