@@ -18,7 +18,7 @@ const JobsFiltre = ({dataJobs, filter}) => {
   return (<>
   
       {(filter? filterJobs(dataJobs,filter):dataJobs).map((job, index) => (
-        <div className="job-content border border-gray-100 border-solid border-1 rounded-xl shadow-sm relative " key={index}>
+        <div className="job-content border border-gray-100 border-solid border-1 rounded-xl shadow-sm relative bg-white " key={index}>
 
 
           <div className='h-20  py-3 px-5 text-gray-500'>{job.bid}</div>
@@ -27,8 +27,8 @@ const JobsFiltre = ({dataJobs, filter}) => {
 
 
           <div className=" bg-gray-100   shadow-sm flex text-gray-500  flex justify-between ">
-            <div className='flex pr-5 py-3  overflow-hidden w-full'>
-              <div className='w-5/6 z-10  ml-5'>
+            <div className='flex pr-5 py-3  overflow-hidden w-full items-baseline'>
+              <div className='w-5/6 z-10  ml-5 text-left  items-left'>
 
                 {job.head}
 

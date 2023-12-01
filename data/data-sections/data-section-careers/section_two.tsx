@@ -2,16 +2,17 @@ import Button from "../../../components/button";
 import Form from "../../../components/jobs";
 
 const header =
-  <h3>Fill in the form below and we will get back to you within 24hours.</h3>
+  <h3></h3>
 
 
-const content = <><Form/></>
+const content = <><Form/> <h2><span>Want to join </span> us but your specific skills aren’t listed on an open position?<br/> Don't worry! Please send us your details because  <span>we are always looking for bright talents!</span></h2></>
 
-
+const button=<Button href={"/contact#form-contact"} text="Get in touch"/>
 const element = {
   content: content,
   header: header,
-  background:'teal-50',
-  id:"jobs"
+  background:'bg-teal-50',
+  id:"jobs",
+  button:button
 }
 export default element

@@ -23,13 +23,13 @@ const Section = () => {
 
   return (<>
 
-    <div className="flex flex-wrap m-auto w-full">
+    <div className="flex flex-wrap m-auto w-full m-3">
 
       <div className={`m-6 w-full l border rounded cursor-pointer text-lg border-none bg-slate-100 rounded-2xl`}>
         {uniqueBidsSet.map((bid, index) => (
 
 
-          <button className={`no-underline text-white py-1 px-8 ${bid==selectedBid ? 'bg-gradient-to-r from-teal-900 to-teal-300' :''} rounded-3xl`} key={index} onClick={() => {bid==selectedBid ?setSelectedBid(null): setSelectedBid(bid) }}>
+          <button className={`no-underline py-1 px-8 ${bid==selectedBid ? 'on' :'off'} rounded-3xl`} key={index} onClick={() => {bid==selectedBid ?setSelectedBid(null): setSelectedBid(bid) }}>
             {bid}
           </button>
 
