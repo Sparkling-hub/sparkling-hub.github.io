@@ -1,4 +1,4 @@
-const bid = <p>PAID INTERNSHIP</p>
+const bid = <p>PAID INTERNS@sfsHIP</p>
 const head = <h3>Full stack - Node JS - React JS Intern</h3>
 
 const text = <p>

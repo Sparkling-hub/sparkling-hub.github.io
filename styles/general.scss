@@ -3,7 +3,7 @@ $primary-color: #3498db;
 $footerBgColor: #008080;
 $primaryLightColor: #17cfc2;
 $footerTextColor: #ffffff;
-$widhConainers: 1200px;
+$widhConainers: 1250px;
 
 .color-primary-light{
     color: $primaryLightColor;
@@ -212,23 +212,35 @@ font-size: 40px;   margin: 50px;
     .benefist{ width: 100%  ;
     flex-direction:row-reverse !important; text-align: left;}
 }}
-.benefist {
-    width: 63%  ;
-    & img {width: 100% !important;
+#benefits { & .benefist {
+    width: 62%;  font-weight: 300;
+    line-height: 30px;
+    & img {width: 200px !important; 
         display: flex;
      
     max-width:none;}
-    & h3 {   color: $primaryLightColor;
+    & h3 {   color: $footerBgColor;
+        margin-bottom: 10px;
         font-size: 30px;
         font-weight: 400;
     }
+  
     & p {
-     
+        font-weight: 300;
         width:max-content;
-        word-break: break-all;
+        font-weight: 400;
+     
+        color: #3b3b3b;
         width:auto;
     }
 
+}
+& h2 {   
+    margin-bottom: 10px;
+    font-size: 50px ; 
+    font-weight:lighter;
+    margin-bottom: 40px;
+}       
 }
 
 
@@ -278,6 +290,7 @@ font-size: 40px;   margin: 50px;
 }
 
 .job-content {
+    width: 575px;
     font-size: 15px;
     color: rgb(60, 60, 60);
     font-weight: 400 !important;
@@ -290,11 +303,13 @@ font-size: 40px;   margin: 50px;
 
     }
     .square-circle {
-    top:0%;
+        top:0%;
+        transform:  translate(0%, 0%) scale(1)rotate(90deg);;
         
         width: 25px;
+        transition: transform 0.5s ease-in-out;
         height: 25px;
-       
+        background: linear-gradient(to bottom, #004d40, #81c784);
       }
     
       .square-circle::before {
@@ -304,16 +319,24 @@ font-size: 40px;   margin: 50px;
         top: 50%;
         left: 50%;
         width: 100%;
-        height: 100%;
-        background: linear-gradient(to right, #004d40, #81c784);
+        height: 100%    ;
+        background: #285c5c;
         border-radius: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        transition: transform 1s ease-in-out;
-        z-index: 0;
-      
+
+
+        transform: translate(-50%, -50%) scale(1);
+        
+        transition: transform 1s ease-in-out, opacity 1s ease;
+        opacity: 0;
+   
+
       }
-    
-      .animation:hover .square-circle::before {
-        transform: translate(-50%, -50%) scale(35);
-      }
       
+      /* Увеличиваем z-index, чтобы ::before был над основным квадратом */
+      .animation:hover .square-circle{
+        transform: translate(-50%, 100%) scale(2) rotate(90deg);
+        z-index: 2;
+      }
+      .animation:hover  .square-circle::before {
+        opacity: 1;    
+    }
