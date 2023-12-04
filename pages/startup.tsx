@@ -13,6 +13,7 @@ const Startup_page = () => {
         <MainLayout>
             {Section.map((section, i) => (
                 <Sections key={i} {...section} />
+
             ))
             }
         </MainLayout>
