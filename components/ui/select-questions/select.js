@@ -11,11 +11,11 @@ const DisabledSelect = ({ answer, questionId }) => {
     <div className="relative m-5 ">
       <div
         className={`w-full p-3 border rounded cursor-pointer text-lg border-none ${
-          isDropdownOpen ? 'bg-emerald-900 text-teal-300 rounded-t-2xl' : 'rounded-2xl bg-slate-100'
+          isDropdownOpen ? 'bg-emerald-900 text-teal-500 rounded-t-2xl' : 'rounded-2xl bg-slate-100'
         }`}
         onClick={handleDropdownToggle}
       >
-        <span className="block relative">{answer.question}<ButtonCircle isDropdownOpen={isDropdownOpen}/> </span>
+        <span className="block relative flex justify-between ">{answer.question}<ButtonCircle isDropdownOpen={isDropdownOpen}/> </span>
         
       </div>
       {isDropdownOpen && (

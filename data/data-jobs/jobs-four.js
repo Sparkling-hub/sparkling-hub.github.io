@@ -1,4 +1,4 @@
-const bid = <p>PAID POSITION</p>
+const experience = <p>PAID POSITION</p>
 const head = <h3>Full stack - Node JS - React JS Intern</h3>
 
 const text = <p>
@@ -7,8 +7,8 @@ const text = <p>
         Monthly salary depending on experience</p>
 
 const jobs = {
-    place: { img: <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} />, place:<p>Tunis</p>},
-    bid: bid,
+    location:{ img: <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} />, place:<p>Tunis</p>},
+    experience: experience,
     head: head,
     text: text,
     slug: 'php-dev-lug-part',

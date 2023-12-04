@@ -1,6 +1,6 @@
 function Button({isDropdownOpen}){
 
-return(<div className={`square-circle rounded-full p-0 pointer-events-none transform ${isDropdownOpen ?'text-black rotate-180 bg-teal-300' :'text-white rotate-90 '}`}
+return(<div className={`square-circle rounded-full p-0 pointer-events-none transform mr-3 ${isDropdownOpen ?'text-black rotate-180 bg-teal-300' :'text-white rotate-90 bg-gradient-to-t from-teal-900 to-teal-300'}`}
 > <svg
 className={`rounded-full p-0 w-auto  h-6 pointer-events-none  transform`}
 xmlns="http://www.w3.org/2000/svg"
