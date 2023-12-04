@@ -43,17 +43,17 @@ const Section = () => {
         {uniqueBidsSet.map((experience, index) => (
 
 
-          <button className={`no-underline py-1 px-8 ${experience == selectedBid ? 'on' : 'off'} rounded-3xl`} key={index} onClick={() => { experience == selectedBid ? setSelectedBid(null) : setSelectedBid(experience); filterJobs() }}>
+          <button className={`no-underline py-1 px-8 ${experience == selectedBid ? 'on' : 'off'} rounded-3xl`} key={index} onClick={() => { experience == selectedBid ? setSelectedBid(null) : setSelectedBid(experience); }}>
             {experience}
           </button>
 
 
         ))}
       </div>
-
-      {(filterJobs() ? filterJobs() : dataJobs).map((job, index) => (
-
-        <JobsFiltre job={job} key={index} filter={filterJobs} />
+      {console.log(uniqueBidsSet)}
+      {(selectedBid ? filterJobs() : dataJobs).map((job, index) => (
+    
+        <JobsFiltre job={job} key={index} />
       ))}
     </div>
   </>
