@@ -36,12 +36,12 @@ const Form = () => {
         onChange={handleInputChange} placeholder="Email*" />
               <Input type="text" name="company" value={formData.company} placeholder="Company" onChange={handleInputChange}/>
        <Select onChange={handleInputChange} value={formData.select} name='select' placeholder="I am looking for..."/>
-            <TextArea name="message" placeholder="Tell us about your project and goals" required=""   value={formData.message}
+            <TextArea name="message" placeholder="Tell us about your project and goals*" required=""   value={formData.message}
         onChange={handleInputChange}/>
 
             <br />
 
-            <Submit type="submit" name="submit" formData={formData}  http={'http://localhost:3033/send-form'}/>
+            <Submit type="submit" name="submit" formData={formData} disabled={ (formData.name && formData.email &&formData.message ? true : false)} http={'http://localhost:3033/send-form'}/>
 
         </form>)
 }

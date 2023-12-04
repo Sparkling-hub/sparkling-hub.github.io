@@ -22,8 +22,8 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, placeholder, valu
       console.error('Send eeror:', error);
     }
   };
-
-  const buttonClass = disabled ? 'active' : 'disabled';
+  console.log(disabled)
+  const buttonClass = disabled? 'bg-gradient-to-r from-teal-900 to-teal-300' : 'bg-teal-900';
 
   return (
     <input
@@ -31,8 +31,8 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, placeholder, valu
       type={type}
       placeholder={placeholder}
       value={value}
-      
-      className="no-underline text-white py-3 px-8 bg-gradient-to-r from-teal-900 to-teal-300 rounded-3xl p-2 w-40"
+      disabled={!disabled}
+      className={`no-underline text-white py-3 px-8  rounded-3xl p-2 w-40 ${buttonClass}`}
       onClick={handleSubmit}
     />
   );

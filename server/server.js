@@ -29,7 +29,7 @@ app.post('/send-form',  (req, res) => {
     from: 'misliazsite@gmail.com',
     to: "nastyj2003@gmail.com",
     subject: select + "From: " + email,
-    text:"Name: "+name+"\nCompany"+company+"\nText:  "+message,
+    text:"Name: "+name+"\nCompany:  "+company+"\nText:  "+message,
     attachments: [
   
     ],
