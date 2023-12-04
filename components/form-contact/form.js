@@ -40,7 +40,7 @@ const Form = () => {
 
             <br />
 
-            <Submit type="submit" name="submit" formData={formData}  http={'http://localhost:3033/send-email'}/>
+            <Submit type="submit" name="submit" formData={formData}  http={'http://localhost:3033/send-form'}/>
 
         </form>)
 }
