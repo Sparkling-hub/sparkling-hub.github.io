@@ -10,8 +10,9 @@ const Form = () => {
    
         const [formData, setformData] = useState({
             name: '',
-            phone: '',
+            select: '',
             email: '',
+            company:'',
             message:''
 
         }); 
@@ -30,10 +31,10 @@ const Form = () => {
 
             <Input type="text" name="name" value={formData.name} placeholder="Full Name*" onChange={handleInputChange} />
       
-            <Input type="email" name="email*" value={formData.email}
+            <Input type="email" name="email" value={formData.email}
             
         onChange={handleInputChange} placeholder="Email*" />
-              <Input type="text" name="Company" value={formData.phone} placeholder="Company" onChange={handleInputChange}/>
+              <Input type="text" name="company" value={formData.company} placeholder="Company" onChange={handleInputChange}/>
        <Select onChange={handleInputChange} value={formData.select} name='select' placeholder="I am looking for..."/>
             <TextArea name="message" placeholder="Tell us about your project and goals" required=""   value={formData.message}
         onChange={handleInputChange}/>
