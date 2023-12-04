@@ -12,14 +12,14 @@ const Benefits: FC = () => {
 
         <div key={index} className={`${(index + 1) % 2 ? 'items-start' : 'items-end'} flex flex-col w-full `}>
 
-<div className={`${(index + 1) % 2 ? 'flex-row' : 'flex-row-reverse'} flex w-full `}>
-          <div className={`${(index + 1) % 2 ? 'flex-row-reverse text-right' : 'flex-row'} flex benefist items-center`}>
-         
+          <div className={`${(index + 1) % 2 ? 'flex-row' : 'flex-row-reverse'} flex w-full `}>
+            <div className={`${(index + 1) % 2 ? 'flex-row-reverse text-right ' : 'flex-row'} flex benefist items-center `}>
 
-            <div className='justify-center flex w-64 h-64 '>{value.image}</div>
-            <div key={index} className='flex flex-col justify-center mx-50 w-2/3'>
-                
-             {value.header}
+
+              <div className='justify-center flex '>{value.image}</div>
+              <div key={index} className='flex flex-col justify-center w-2/3'>
+
+                {value.header}
                 <div className='min-w-full max-w-full ' >{value.content} </div>    </div>
             </div>
           </div>

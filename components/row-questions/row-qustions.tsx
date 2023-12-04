@@ -8,10 +8,14 @@ const Questions: FC = () => {
   { console.log(questions) }
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Disabled Select Example</h1>
-      <DisabledSelect />
-    </div>
-  );
+      
+      {Object.values(questions.question).map((value, index) => (
+      <DisabledSelect answer={value} questionId={index}/>
+ 
+    
+    ))};
+       </div>
+  )
 
 };
 
