@@ -30,8 +30,8 @@ const StartupStepByStep: React.FC = () => {
   return (
     <div className='flex flex-wrap justify-center items-center'>
       <ol>
-        {dataStartupSteps.map((step, i) => (
-          <StartupStepItem key={`StepItem${i}`} {...step} highlighted={highlightedIndices.includes(i)} />
+        {dataStartupSteps.map((step) => (
+          <StartupStepItem key={step.id} {...step} highlighted={highlightedIndices.includes( Number(step.id) )} />
         ))}
       </ol>
       <div className='m-20'>

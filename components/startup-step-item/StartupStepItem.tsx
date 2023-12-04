@@ -4,7 +4,7 @@ import React from 'react';
 import IStartupStepItem from '../../interface/IStartupStepItem'
 
 
-const StartupStepItem: React.FC<IStartupStepItem> = ({ title, subtext, index, highlighted }) => {
+const StartupStepItem: React.FC<IStartupStepItem> = ({ title, subtext, id, highlighted }) => {
 
 	
 
@@ -13,7 +13,7 @@ const StartupStepItem: React.FC<IStartupStepItem> = ({ title, subtext, index, hi
 	return (
 		<li className={`flex-col px-40 ${highlighted ? 'highlight' : ''}`}>
 			<div className="s-b-s-title rounded-3xl p-1 flex">
-				<div className={`kolo ${highlighted ? 'highlight' : ''}`}>{index}</div>
+				<div className={`kolo ${highlighted ? 'highlight' : ''}`}>{Number(id)+1}</div>
 				<div className={`text text-emerald-900 font-bold text-2xl ${highlighted ? 'highlight' : ''}`}>{title}</div>
 			</div>
 			<div className="s-b-s-text">
