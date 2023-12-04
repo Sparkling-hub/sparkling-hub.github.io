@@ -24,8 +24,7 @@ const upload = multer({ dest: 'uploads' });
 app.post('/send-form',  (req, res) => {
 
   const { name, email, message, file } = req.body.formData;
-  console.log(file); 
-  debugger
+
   const mailOptions = {
     from: 'misliazsite@gmail.com',
     to: "nastyj2003@gmail.com",
