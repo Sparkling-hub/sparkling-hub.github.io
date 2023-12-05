@@ -4,6 +4,7 @@ $footerBgColor: #008080;
 $primaryLightColor: #17cfc2;
 $footerTextColor: #ffffff;
 $widhConainers: 1250px;
+$weight:400px;
 
 .color-primary-light {
     color: $primaryLightColor;
@@ -200,7 +201,7 @@ nav {
 
             color: #17cfc2;
             font-size: 40px;
-            font-weight: 400;
+            font-weight: $weight;
 
         }
     }
@@ -243,13 +244,13 @@ nav {
             color: $footerBgColor;
             margin-bottom: 10px;
             font-size: 30px;
-            font-weight: 400;
+            font-weight: $weight;
         }
 
         & p {
-            font-weight: 300;
+         
             width: max-content;
-            font-weight: 400;
+            font-weight: $weight;
 
             color: #3b3b3b;
             width: auto;
@@ -258,7 +259,7 @@ nav {
     }
 
     & h2 {
-        margin-bottom: 10px;
+
         font-size: 50px;
         font-weight: lighter;
         margin-bottom: 40px;
@@ -302,7 +303,7 @@ nav {
 
         color: #17cfc2;
 
-        font-weight: 400;
+        font-weight: $weight;
 
     }
 }
@@ -326,13 +327,16 @@ nav {
 }
 
 .job-content {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(236, 236, 236);
     width: 575px;
     font-size: 15px;
     color: rgb(60, 60, 60);
     font-weight: 400 !important;
     z-index: 0;
     line-height: 25px;
-    margin: 20px 25px;
+    transition: border-color 1s ease-out;
 
     & h3 {
         font-size: 25px;
@@ -342,20 +346,20 @@ nav {
 
     & img {
         width: 20px;
-        margin: 0 10px;
+        margin: 0 3px;
     }
 
 }
 
 .square-circle {
     top: 0%;
-    transform: translate(0%, 0%) scale(1)rotate(90deg);
-    ;
-
+  
     width: 25px;
     transition: transform 0.5s ease-in-out;
     height: 25px;
-    background: linear-gradient(to bottom, #004d40, #81c784);
+ 
+    
+    
 }
 
 .square-circle::before {
@@ -368,7 +372,7 @@ nav {
     height: 100%;
     background: #285c5c;
     border-radius: 50%;
-
+    
 
     transform: translate(-50%, -50%) scale(1);
 
@@ -379,20 +383,26 @@ nav {
 }
 
 /* Увеличиваем z-index, чтобы ::before был над основным квадратом */
-.animation:hover .square-circle {
+.job-content:hover .square-circle {
     transform: translate(-50%, 100%) scale(2) rotate(90deg);
     z-index: 2;
 }
 
-.animation:hover .square-circle::before {
+.job-content:hover .square-circle::before {
     opacity: 1;
+}
+.job-content:hover {
+border-color: $footerBgColor;
 }
 
 #jobs {
+    & .square-circle {
+        width: 25px; height: 25px; 
+        transition: transform 0.5s ease-in-out;}
     & .on {
         color: $primaryLightColor;
         background: $footerBgColor;
-        font-weight: 400;
+        font-weight: $weight;
     }
 
     & .off {
@@ -422,5 +432,10 @@ nav {
      
     }
 
-
-}
+    
+     & .active {border-color: gray; 
+ }
+    
+      
+} 
+    
