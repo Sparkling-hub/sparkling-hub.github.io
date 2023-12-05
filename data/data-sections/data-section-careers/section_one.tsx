@@ -6,7 +6,7 @@ const header =
 const content = <p>Sparkling Co. is Swiss headquartered company with presence all around Europe always in search of great professionals!
    Want to join the team? Here are the current open positions.</p>
 
-const image = <img src='/img/section/sectionOne.png' className="w-full"/>;
+const image = <img src='/img/section/sectionOne.png' className="w-full" alt="careers"/>;
 
 const element = {
   content: content,
