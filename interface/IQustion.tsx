@@ -1,7 +1,7 @@
 
 
 interface  IQustion{
-    qustion?: JSX.Element;  
+  question?: JSX.Element;  
     answer?: JSX.Element;  
 
     }

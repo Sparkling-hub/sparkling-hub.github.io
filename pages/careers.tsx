@@ -1,5 +1,5 @@
 import MainLayout from '../layouts/MainLayuout';
-import * as Section from '../data/data-sections/data-section-contact'
+import * as Section from '../data/data-sections/data-section-careers'
 import Sections from '../components/sections/sections'
 
 
@@ -8,7 +8,7 @@ import Sections from '../components/sections/sections'
 import React from 'react';
 
 
-const Contact = () => { 
+const Careers = () => { 
   
 
 
@@ -19,11 +19,11 @@ const Contact = () => {
         <div className=''>
 
         <Sections {...Section.sections.SectionOne}/> 
-    
+      
         </div>
         </MainLayout>
        
     );
 };
 
-export default Contact;
+export default Careers;

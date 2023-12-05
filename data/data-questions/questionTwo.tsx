@@ -1,4 +1,4 @@
-const question =<h3>Where is your team located?</h3>
+const question =<p>Where is your team located?</p>
 const answer = <p>
 Our offices are in London, Tunis and Zaporizhzhia, with our headquarter in Lugano
 Switzerland. We work mostly within the European time zone (UTC+0/1/2) and American
