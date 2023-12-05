@@ -1,4 +1,3 @@
-import Button from "../../../components/button";
 
 const header =
   <h1><strong className="s2">Careers</strong></h1>

@@ -16,7 +16,7 @@ const DisabledSelect: FC<{ data: IQustion }> = ({ data }) => {
         className={`w-full p-3 border rounded cursor-pointer text-lg border-none ${
           isDropdownOpen ? 'bg-emerald-900 text-teal-500 rounded-t-2xl' : 'rounded-2xl bg-slate-100'
         }`}
-        role='button'
+        role='dropdown'
         onClick={handleDropdownToggle}
         onKeyDown={handleDropdownToggle}
       >
