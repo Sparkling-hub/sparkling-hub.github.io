@@ -14,6 +14,7 @@ const DisabledSelect = ({ answer, questionId }) => {
           isDropdownOpen ? 'bg-emerald-900 text-teal-300 rounded-t-2xl' : 'rounded-2xl bg-slate-100'
         }`}
         onClick={handleDropdownToggle}
+        onKeyDown={handleDropdownToggle}
       >
         <span className="block relative">{answer.question}<ButtonCircle isDropdownOpen={isDropdownOpen}/> </span>
         
