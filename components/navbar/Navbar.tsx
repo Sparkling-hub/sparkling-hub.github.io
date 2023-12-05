@@ -3,7 +3,7 @@ import Button from '../button';
 
 const Navbar: React.FC = () => {
   return (
-    <div className='container mx-auto px-4 '>
+    <div id='navbar' className=' content-section mx-auto px-4 '>
       <nav className='flex justify-between px-20 py-4'>
 
         
@@ -12,23 +12,23 @@ const Navbar: React.FC = () => {
         </Link>
 
         <ul className='flex basis-3/5 justify-between py-4'>
-          <li>
+          {/* <li>
             <Link className="no-underline p-4" href="/">Home</Link>
-          </li>
-          <li>
-            <Link className="no-underline p-4" href="/about">About Us</Link>
-          </li>
+          </li> */}
           <li>
             <Link className="no-underline p-4" href="/services">Services</Link>
           </li>
           <li>
-            <Link className="no-underline p-4" href="/startup">Startup</Link>
+            <Link className="no-underline p-4" href="/about">About Us</Link>
+          </li>          
+          <li>
+            <Link className="no-underline p-4" href="/startup">Start Up</Link>
           </li>
           <li>
-            <Link className="no-underline p-4" href="/startup">Careers</Link>
+            <Link className="no-underline p-4" href="/careers">Careers</Link>
           </li>
           <li>
-            <Link className="no-underline p-4" href="/startup">FAQ</Link>
+            <Link className="no-underline p-4" href="/faq">FAQ</Link>
           </li>
           <li>
               <Button  href = "/get-in-touch" text = "Get in touch"/>
