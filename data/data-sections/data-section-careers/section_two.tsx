@@ -1,11 +1,11 @@
 import Button from "../../../components/button";
-import Form from "../../../components/jobs";
+import Jobs from "../../../components/jobs";
 
 const header =
   <h3></h3>
 
 
-const content = <><Form/> <h2><span>Want to join </span> us but your specific skills aren’t listed on an open position?<br/> Don't worry! Please send us your details because  <span>we are always looking for bright talents!</span></h2></>
+const content = <><Jobs/> <h2><span>Want to join </span> us but your specific skills aren’t listed on an open position?<br/> Don't worry! Please send us your details because  <span>we are always looking for bright talents!</span></h2></>
 
 const button=<Button href={"/contact#form-contact"} text="Get in touch"/>
 const element = {
