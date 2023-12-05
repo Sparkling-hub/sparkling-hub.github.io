@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+
 import gps from '../image/gps.png'
-import dataJobs from '../../../data/data-jobs'
+
 import Link from 'next/link';
 import Button from '../../ui/circle-button';
 
