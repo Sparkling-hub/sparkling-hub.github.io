@@ -14,6 +14,7 @@ const DisabledSelect = ({data}) => {
           isDropdownOpen ? 'bg-emerald-900 text-teal-500 rounded-t-2xl' : 'rounded-2xl bg-slate-100'
         }`}
         onClick={handleDropdownToggle}
+        onKeyDown={handleDropdownToggle}
       >
         <span className="block relative flex justify-between ">{data.question}<ButtonCircle isDropdownOpen={isDropdownOpen}/> </span>
         
