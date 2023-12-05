@@ -25,13 +25,10 @@ const Navbar: React.FC = () => {
             <Link className="no-underline p-4" href="/startup">Start Up</Link>
           </li>
           <li>
-            <Link className="no-underline p-4" href="/startup">Careers</Link>
+            <Link className="no-underline p-4" href="/careers">Careers</Link>
           </li>
           <li>
-            <Link className="no-underline p-4" href="/startup">FAQ</Link>
-          </li>
-          <li>
-            <Link className="no-underline p-4" href="/contact">Contact Us</Link>
+            <Link className="no-underline p-4" href="/faq">FAQ</Link>
           </li>
           <li>
               <Button  href = "/get-in-touch" text = "Get in touch"/>
