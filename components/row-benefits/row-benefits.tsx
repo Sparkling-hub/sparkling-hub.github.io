@@ -1,8 +1,8 @@
 import React from 'react';
 import type IBenefitsType from '../../interface/IBenefits';
-import Button from '../button';
-import benefits from '../../data/data-benefits';  // Используйте дефолтный импорт, если он предоставляется
-import type { FC } from 'react';  // Импортируем тип FC из React
+
+import benefits from '../../data/data-benefits';
+import type { FC } from 'react';  
 const Benefits: FC = () => {
   { console.log(benefits.benefits) }
   return (
@@ -17,7 +17,7 @@ const Benefits: FC = () => {
 
 
               <div className='justify-center flex '>{value.image}</div>
-              <div key={index} className='flex flex-col justify-center w-2/3'>
+              <div className='flex flex-col justify-center w-2/3'>
 
                 {value.header}
                 <div className='min-w-full max-w-full ' >{value.content} </div>    </div>

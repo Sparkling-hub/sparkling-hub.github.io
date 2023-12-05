@@ -12,11 +12,11 @@ const Questions: FC = () => {
       {Object.values(questions.question).map((value, index) => (
 
    
-
-      <DisabledSelect data={value} key={index}/>
+<div className="relative m-5 " key={index}>
+      <DisabledSelect data={value}/>
 
  
-    
+      </div>
     ))};
        </div>
   )
