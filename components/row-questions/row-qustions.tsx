@@ -12,7 +12,7 @@ const Questions: FC = () => {
       {Object.values(questions.question).map((value:IQustians, index) => (
 
    
-<div className="relative m-5 ">
+<div className="relative m-5 " key={index}>
       <DisabledSelect data={value}/>
 
  
