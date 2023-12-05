@@ -20,11 +20,7 @@ const Select: React.FC<SelectProps> = ({ name, value, onChange, placeholder, dat
       <option value= {placeholder}>
         {placeholder}
       </option>
-      {/* {data.map((item, index) => (
-        <option key={index} value={item.value}>
-          {item.label}
-        </option>
-      ))} */}
+   
     </select>
   );
 };
