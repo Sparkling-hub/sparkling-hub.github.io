@@ -10,7 +10,7 @@ const Questions: FC = () => {
     <div className="p-4">
       
       {Object.values(questions.question).map((value, index) => (
-      <DisabledSelect answer={value} questionId={index}/>
+      <DisabledSelect data={value} key={index}/>
  
     
     ))};
