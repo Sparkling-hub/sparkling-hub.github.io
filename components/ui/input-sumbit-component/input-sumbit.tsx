@@ -22,7 +22,6 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, placeholder, valu
       console.error('Send eeror:', error);
     }
   };
-  console.log(disabled)
   const buttonClass = disabled? 'bg-gradient-to-r from-teal-900 to-teal-300' : 'bg-teal-900';
 
   return (
