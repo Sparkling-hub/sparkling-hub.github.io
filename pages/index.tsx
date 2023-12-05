@@ -10,7 +10,7 @@ const Index = () => {
     return (
        
         <MainLayout>
-          <div>
+          <div className=''>
             <Sections {...Section.sections.SectionOne}/> 
             <Sections {...Section.sections.SectionTwo}/> 
             <Sections {...Section.sections.SectionFour}/> 
