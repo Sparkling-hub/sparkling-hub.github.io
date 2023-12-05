@@ -19,7 +19,7 @@ const Careers = () => {
         <div className=''>
 
         <Sections {...Section.sections.SectionOne}/> 
-        <Sections {...Section.sections.SectionTwo}/> 
+      
         </div>
         </MainLayout>
        
