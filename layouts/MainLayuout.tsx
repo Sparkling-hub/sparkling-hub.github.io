@@ -11,7 +11,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div>
       <Navbar />
-      <main>{children}</main>
+      <main className='xl:px-40 2xl:px-96'>{children}</main>
       <Footer />
     </div>
   );

@@ -4,7 +4,7 @@ import Button from '../button';
 
 
 const Section: React.FC<SectionType> = ({ header, content, image, button, background, id }) => {
-  console.log(background)
+  
   return (
     <section className={`flex items-center justify-center relative ${background}`} id={id}>
       <div className='content-section flex   items-start justify-center flex-col justify-center'>

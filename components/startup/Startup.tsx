@@ -6,10 +6,6 @@ import IStartup from '../../interface/IStartupItem'
 
 const Startup: React.FC<IStartup> = ({ content, header, link, reverse }) => {
 
-
-	console.log(header)
-
-	// debugger
 	return (
 
 		<div className={`flex justify-between items-center ${!reverse ? 'flex-row-reverse' : ''}  m-10 border-solid border-2 border-emerald-900 rounded-4xl`}>
