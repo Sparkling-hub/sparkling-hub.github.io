@@ -1,5 +1,5 @@
 interface ButtonProps {
-  isDropdownOpen: boolean;
+  readonly isDropdownOpen: boolean;
 }
 
 function Button({ isDropdownOpen }: ButtonProps) {
