@@ -5,9 +5,11 @@ const text = <p>
 
         Full time or part time<br />
         Monthly salary depending on experience</p>
+const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} /><p>Tunis</p></>
+
 
 const jobs = {
-    location:{ img: <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} />, place:<p>Tunis</p>},
+    location:location,
     experience: experience,
     head: head,
     text: text,
