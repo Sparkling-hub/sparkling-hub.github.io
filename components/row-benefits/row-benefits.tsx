@@ -6,7 +6,7 @@ import type IBenefitsType from '../../interface/IBenefits';
 import benefits from '../../data/data-benefits';
 import type { FC } from 'react';  
 const Benefits: FC = () => {
-  { console.log(benefits.benefits) }
+ 
   return (
 
     <div className='flex items-center justify-center relative flex-col'>
