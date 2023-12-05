@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ButtonCircle from "../circle-button";
-const DisabledSelect = ({ answer, questionId }) => {
+const DisabledSelect = ({ data, questionId }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDropdownToggle = () => {
@@ -16,12 +16,12 @@ const DisabledSelect = ({ answer, questionId }) => {
         onClick={handleDropdownToggle}
         onKeyDown={handleDropdownToggle}
       >
-        <span className="block relative">{answer.question}<ButtonCircle isDropdownOpen={isDropdownOpen}/> </span>
+        <span className="block relative">{data.question}<ButtonCircle isDropdownOpen={isDropdownOpen}/> </span>
         
       </div>
       {isDropdownOpen && (
         <div className="top-full left-0 bg-white border border-gray-300 rounded-b-2xl p-4 w-full">
-          <p>{answer.answer}</p>
+          <p>{data.answer}</p>
         </div>
       )}
     </div>
