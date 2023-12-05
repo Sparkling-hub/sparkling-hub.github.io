@@ -3,7 +3,7 @@ import Button from '../button';
 
 const Navbar: React.FC = () => {
   return (
-    <div id='navbar' className=' content-section mx-auto xl:px-40 2xl:px-96 '>
+    <div id='navbar' className=' content-section mx-auto xl:px-40 3xl:px-96 '>
       <nav className='flex justify-between px-20 py-4'>
 
         
