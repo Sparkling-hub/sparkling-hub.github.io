@@ -4,6 +4,7 @@ $footerBgColor: #008080;
 $primaryLightColor: #17cfc2;
 $footerTextColor: #ffffff;
 $widhConainers: 1250px;
+$weight:400px;
 
 .color-primary-light {
     color: $primaryLightColor;
@@ -200,7 +201,7 @@ nav {
 
             color: #17cfc2;
             font-size: 40px;
-            font-weight: 400;
+            font-weight: $weight;
 
         }
     }
@@ -243,13 +244,13 @@ nav {
             color: $footerBgColor;
             margin-bottom: 10px;
             font-size: 30px;
-            font-weight: 400;
+            font-weight: $weight;
         }
 
         & p {
-            font-weight: 300;
+         
             width: max-content;
-            font-weight: 400;
+            font-weight: $weight;
 
             color: #3b3b3b;
             width: auto;
@@ -258,7 +259,7 @@ nav {
     }
 
     & h2 {
-        margin-bottom: 10px;
+
         font-size: 50px;
         font-weight: lighter;
         margin-bottom: 40px;
@@ -302,7 +303,7 @@ nav {
 
         color: #17cfc2;
 
-        font-weight: 400;
+        font-weight: $weight;
 
     }
 }
@@ -401,7 +402,7 @@ border-color: $footerBgColor;
     & .on {
         color: $primaryLightColor;
         background: $footerBgColor;
-        font-weight: 400;
+        font-weight: $weight;
     }
 
     & .off {
