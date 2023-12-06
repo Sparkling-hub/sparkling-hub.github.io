@@ -1,6 +1,5 @@
 import React from 'react';
 import type SectionType from '../../interface/section';
-import Button from '../button';
 
 
 const Section: React.FC<SectionType> = ({ header, content, image, button, background, id }) => {
