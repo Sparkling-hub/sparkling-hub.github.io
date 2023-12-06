@@ -1,3 +1,4 @@
+import Button from "../../../components/button";
 import Form from "../../../components/form-contact";
 
 const header =
@@ -10,7 +11,6 @@ const content = <Form/>
 const element = {
   content: content,
   header: header,
-  background:'teal-50',
-  id:"form-contact"
+  background:'teal-50'
 }
 export default element

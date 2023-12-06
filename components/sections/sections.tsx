@@ -3,34 +3,35 @@ import type SectionType from '../../interface/section';
 import Button from '../button';
 
 
-const Section: React.FC<SectionType> = ({ header, content, image, button, background, id, curvedClass, padding_bottom }) => {
+const Section: React.FC<SectionType> = ({ header, content, image, button, background, id }) => {
 
   return (
-   
-      <section className={`flex items-center justify-center relative ${background} ${curvedClass} ${padding_bottom} xl:px-40 custom-3xl`} id={id}>
+    <section className={`flex items-center justify-center relative bg-${background}`} id={id}>
+      <div className='content-section flex   items-start justify-center flex-col justify-center'>
 
-        <div className='content-section flex   items-start justify-center flex-col justify-center'>
-
-          <div className='flex items-center whitespace-normal w-full '>
-            <div className='flex justify-center flex-col w-full'>{header}
-              {content}
-            </div>
-
-            {!image ? null : <div className='content-image'>  {image}
-
-            </div>}
+        <div className='flex items-center whitespace-normal w-full '>
+          <div className='flex justify-center flex-col w-full'>{header}
+            {content}
           </div>
 
-          {button ? <div className='button absolute bottom-20 left-0'>
-            {button}
-          </div>
-            :
-            null
-          }
+          {!image ? null : <div className='content-image'>  {image}
 
+          </div>}
         </div>
 
-      </section>  
+        {button ? <div className='absolute bottom-20 left-0'>
+          {button}
+        </div>
+          :
+          null
+        }
+
+      </div>
+
+
+    </section>
+
+
 
 
   );

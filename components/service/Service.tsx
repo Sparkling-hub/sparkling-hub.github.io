@@ -4,9 +4,13 @@ import IService from '../../interface/service'
 
 
 const Service: React.FC<IService> = ({content, header, image, button}) => {
+
   
+  console.log(header)
+  
+  // debugger
   return (
-    <div className='flex-col max-w-sm pb-40'>
+    <div className='flex-col'>
       <div className='service_icon'>{image} </div>
       {header}
       {content}

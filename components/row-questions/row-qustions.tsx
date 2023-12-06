@@ -1,24 +1,23 @@
 import React from 'react';
 import type IQustians from '../../interface/IQustion';
-
-import DisabledSelect from '../ui/select-questions/select';
+import Button from '../button';
 import questions from '../../data/data-questions';  // Используйте дефолтный импорт, если он предоставляется
 import type { FC } from 'react';  // Импортируем тип FC из React
 const Questions: FC = () => {
+  { console.log(questions) }
   return (
-    <div className="p-4">
-      
-      {Object.values(questions.question).map((value:IQustians, index) => (
 
+    <div className='flex items-center justify-center relative flex-col'>
+     <section className="p-4">
    
-<div className="relative m-5 " key={index}>
-      <DisabledSelect data={value}/>
-
- 
-      </div>
-    ))};
-       </div>
-  )
+     <select id="dropdown" name="dropdown" className="w-full p-2 border rounded">
+        {/* <option value="option1">{questions.question.questionOne.question}</option> */}
+       {questions.question.questionOne.answer}
+    
+    </select>
+</section>
+    </div>
+  );
 
 };
 

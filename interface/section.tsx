@@ -6,7 +6,5 @@ interface SectionData {
   image?: JSX.Element;
   background?: string;
   id?: string;
-  curvedClass?: string;
-  padding_bottom?: string;
   }
 export default SectionData

@@ -1,9 +1,9 @@
 
 
-interface ServiceData {
+interface serviceData {
   image?: JSX.Element;  
   header?: JSX.Element;  
   content?: JSX.Element;  
   button?: JSX.Element;  
   }
-export default ServiceData
+export default serviceData

@@ -6,4 +6,4 @@ interface IStartupItem {
     link?: string;  
     reverse?: boolean;
     }
-export default IStartupItem
+  export default IStartupItem

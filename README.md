@@ -25,14 +25,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Visual Studio Code addons to install
-
-- Prettier: Conde formatter, to make sure the code is always readable
-- GitBlame: Keep track of the owner of the code
-- Code Spell Checker: No more typos
-- Bracket Pair Colorizer: Keep track of Brakets
-- Css Peek: Keeping track of Css Styles
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

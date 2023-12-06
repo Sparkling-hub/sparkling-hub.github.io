@@ -1,12 +1,20 @@
-const content = <p>We believe in synergy! Either by augmenting your existing team or creating a crew from scratch, we find the perfect solution for your needs.</p>
+const content = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+    tempor incididunt ut labasdasd dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+     </p>
 import IBenedits, { FlexValues } from '../../interface/IBenefits';
-const header = <h3>Tailored Teams</h3>
+const header = <h3>Lo1fasfafrasit</h3>
 const image = <img src='/img/section/sectionOne.png'/>;
 
-const element: IBenedits = {
-  header: header,
-  content: content,
-  image: image,
-  flex: FlexValues.ReverseRow,
-};
-export default element;
+const element : IBenedits= {
+    header: header,
+    content: content,
+    image: image,
+    flex: FlexValues.ReverseRow
+ 
+    
+
+
+}
+export default element

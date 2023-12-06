@@ -5,12 +5,15 @@ import Service from '../service'
 
 const Services: React.FC<IService> = () => {
 
-  return (
+  //const {services} = dataServices
 
-    <div className='flex justify-around'>  
-	    {dataServices.map((service, i) => (
-          <Service key={i} {...service} />
-       ))}
+  return (
+    <div className='flex '>
+      
+	  {dataServices.map((service, index) => (
+        <Service key={index} {...service} />
+      ))}
+      
     </div>
   );
 };
