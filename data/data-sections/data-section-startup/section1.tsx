@@ -1,41 +1,24 @@
  
-const header = (
-  <h1 className="flex items-center justify-center 	">
-    <span className="font-bold text-7xl mx-4">Start-up</span>{" "}
-    <span className="text-7xl color-primary-light">Sheme</span> <br />
-  </h1>
-);
+const header =
+<h1 className="flex items-center justify-start">
+  <span className="font-bold text-4xl 2xl:text-6xl mr-4">Start-up</span> <span className="2xl:text-6xl text-4xl color-primary-light">accelerator</span> <br />
+</h1>
 
-const content = (
-  <>
-    <p>
-      OLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.{" "}
-    </p>
-    <br />
-    <br />
-    <p>
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-      amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-      incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
-      minima veniam, quis nostrum exercitationem ullam corporis suscipit
-      laboriosam, nisi ut aliquid ex ea commodi consequatur?
-    </p>
-  </>
-);
+const content = 
+<>
+<p>Over the last decade, we have collaborated with more than 20 start-ups, spanning from pre-seed stages to Series A, helping entrepreneurs in transforming their ideas into reality and supporting others in scaling and iterating.</p>
+<br/>
+<br/>
+<p>Our strategic partnerships with multiple universities offer us the unique access to exceptionally talented graduating software engineers, enriching our project teams and accelerating development. Following a 6-months internship program, you will have the chance to handpick and onboard the most suitable engineers to continue working on your project.</p>
+</>
 
-const image = <img src="/img/startup/startup_icon.png" className="w-full" alt="Startup" />;
+
+const image = <img src='/img/startup/startup_icon.png' className="w-full"/>;
 
 const element = {
-  content: content,
-  header: header,
-  image: image,
-};
-export default element;
+content: content,
+header: header,
+image: image,
+
+}
+export default element
