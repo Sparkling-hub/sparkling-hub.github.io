@@ -19,8 +19,9 @@ const config: Config = {
         '4xl': '2rem',
       },
       content: {
-        'curved-primary-dark': 'url("/img/curved/curved-primary-dark-green.svg")',
+        'curved-primary-dark': 'url("/img/curved/curved-primary-dark-green.svg")',        
         'curved-primary-white': 'url("/img/curved/curved-white.svg")',
+        'curved-line': 'url("/img/curved/devide_line.svg")',
       },
     },
   },

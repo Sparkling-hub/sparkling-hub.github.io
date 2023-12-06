@@ -7,5 +7,6 @@ interface SectionData {
   background?: string;
   id?: string;
   curvedClass?: string;
+  padding_bottom?: string;
   }
 export default SectionData
