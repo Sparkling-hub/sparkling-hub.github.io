@@ -17,7 +17,7 @@ const content =
 				</div>
        
 
-const image = <img src='/img/services/team_augmentation_icon.png' alt="IT Consulting"/>;
+const image = <img src='/img/services/it_consulting_icon.png' alt="IT Consulting"/>;
 const button=   <Button href="/get-in-touch" text="Find out more" />
 const element = {
   content: content,
