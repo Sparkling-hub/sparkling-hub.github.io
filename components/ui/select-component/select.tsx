@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import FormData from '@/interface/IFromData';
+
 
 interface SelectProps {
   name: string;
