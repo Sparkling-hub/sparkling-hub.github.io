@@ -13,6 +13,7 @@ const content = <Services />
 const element = {
   content: content,
   header: header,
-  id: "services"
+  id: "services", 
+  // curvedClass: 'before:content-curved-primary-white before:w-full before:absolute  -mt-20',
 }
 export default element
