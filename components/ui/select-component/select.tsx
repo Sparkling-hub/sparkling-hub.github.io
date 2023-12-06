@@ -17,12 +17,12 @@ const Select: React.FC<SelectProps> = ({ name, value, onChange, placeholder, dat
       value={value || ''} 
       onChange={onChange}
     >
-      <option value="" disabled hidden>
+      <option value={placeholder}>
         {placeholder}
       </option>
     
     </select>
-  );
+  );  
 };
 
 export default Select;

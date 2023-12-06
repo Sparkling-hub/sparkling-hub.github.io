@@ -24,7 +24,7 @@ const upload = (0, multer_1.default)({ dest: 'uploads' });
 const validateForm = [
     (0, express_validator_1.body)('formData.name').isLength({ min: 3, max: 255 }).withMessage('Name is required and must be less than 255 characters'),
     (0, express_validator_1.body)('formData.email').isEmail().withMessage('Valid email is required'),
-    (0, express_validator_1.body)('formData.message').isLength({ min: 15, max: 2000 }).withMessage('Message is required and must be less than 2000 characters'),
+    (0, express_validator_1.body)('formData.message').isLength({ min: 0, max: 2000 }).withMessage('Message is required and must be less than 2000 characters'),
     (0, express_validator_1.body)('formData.company').isLength({ max: 255 }).withMessage('Company must be less than 255 characters'),
     (0, express_validator_1.body)('formData.select').isLength({ max: 255 }).withMessage('Select must be less than 255 characters'),
 ];
@@ -36,7 +36,7 @@ app.post('/send-form', validateForm, (req, res) => {
     const { name, email, message, company, select } = req.body.formData;
     const mailOptions = {
         from: 'misliazsite@gmail.com',
-        to: 'nastyj2003@gmail.com',
+        to: 'n.arthofer@sparkling.co.com',
         subject: `${select} From: ${email}`,
         text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nText: ${message}`,
         attachments: [],
