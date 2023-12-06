@@ -1,12 +1,12 @@
 import React, { ChangeEvent } from 'react';
 
 interface InputProps {
-  name: string;
-  type: string;
-  placeholder?: string;
-  value: string | number;
+  name: string | undefined;
+  type: string | undefined;
+  placeholder?: string | undefined;
+  value: string | number | undefined;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  id?: string;
+  id?: string | undefined;
 }
 
 const Input: React.FC<InputProps> = ({ name, type, placeholder, value, onChange, id }) => {
