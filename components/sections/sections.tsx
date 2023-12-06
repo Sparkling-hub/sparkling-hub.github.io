@@ -39,4 +39,3 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 
 export default Section;
 
-// Sparkling
