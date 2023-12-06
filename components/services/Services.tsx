@@ -7,7 +7,7 @@ const Services: React.FC<IService> = () => {
 
   return (
 
-    <div className='flex '>  
+    <div className='flex justify-around'>  
 	    {dataServices.map((service, i) => (
           <Service key={i} {...service} />
        ))}
