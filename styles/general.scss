@@ -278,11 +278,9 @@ section div::before, footer div::before{
 	flex-direction: column;
 }
 
-.before\:-mt-curved-startup::before {    
-    margin-top: -85rem;
-}
+
 .before\:-mt-240::before {    
-    margin-top: -65rem;
+    margin-top: -60rem;
 }
 @media (min-width: 2200px) {
 	.custom-3xl {
@@ -292,9 +290,7 @@ section div::before, footer div::before{
 		padding-bottom: 10rem;
 	}
 	.before\:-mt-240::before {
-		margin-top: -68rem;
+		margin-top: -60rem;
 	}
-    .before\:-mt-curved-startup::before {
-        margin-top: -88rem;
-    }
+    
 }
