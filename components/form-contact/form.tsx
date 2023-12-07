@@ -18,9 +18,10 @@ const Form: React.FC = () => {
   const [check, setCheck] = useState(false);
 
   const isValidEmail = (email: string): boolean => {
-    const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w])/.exec(email);
+    const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w\d])/.exec(email);
     return emailRegex !== null;
 };
+
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
