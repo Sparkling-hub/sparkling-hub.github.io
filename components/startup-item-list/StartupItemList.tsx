@@ -7,8 +7,8 @@ const StartupItemList: React.FC = () => {
 
 	return (
 		<div className='flex-col '>
-			{dataStartups.map((startup, i) => (
-				<Startup key={i} {...startup} reverse={i % 2 === 0} />
+			{dataStartups.map((startup) => (
+				<Startup key={Number(startup.index)} {...startup} reverse={Number(startup.index) % 2 === 0} />
 			))}
 		</div>
 	);

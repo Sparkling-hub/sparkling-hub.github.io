@@ -4,11 +4,17 @@ $color3: #285c5c;
 $color5: #eafffd;
 $color6: #4DA59B;
 
+$divideColor: #6AE5CE;
+$colorarrow: #73C9BD;
+
+
+
 
 
 $primaryBlueColor: #3498db;
 $primaryDarkColor: #134e4a;
 $primaryMediumColor: #4DA59B;
+$primaryMediumColor2: #73C9BD;
 $primaryLightColor: #86C0BB;
 
 $white: #eafffd;
@@ -16,6 +22,18 @@ $widhConainers: 1440px;
 
 .color-primary-light {
 	color: $primaryLightColor;
+}
+.bg-color-primary-light {
+	background-color: $white;
+}
+.bg-color-primary-medium {
+	background-color: $primaryMediumColor;
+}
+.bg-color-primary-medium2 {
+	background-color: $primaryMediumColor2;
+}
+.border-medium2{
+    border: 2px solid $primaryMediumColor2;
 }
 
 #navbar {
@@ -260,6 +278,9 @@ section div::before, footer div::before{
 	flex-direction: column;
 }
 
+.before\:-mt-curved-startup::before {    
+    margin-top: -85rem;
+}
 .before\:-mt-240::before {    
     margin-top: -65rem;
 }
@@ -273,4 +294,7 @@ section div::before, footer div::before{
 	.before\:-mt-240::before {
 		margin-top: -68rem;
 	}
+    .before\:-mt-curved-startup::before {
+        margin-top: -88rem;
+    }
 }

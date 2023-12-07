@@ -23,7 +23,8 @@ const element = {
   content: content,
   header: header,
   image: image,
-  button:button
+  button:button,
+  index: 3,
 }
 
 export default element
