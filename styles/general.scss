@@ -278,7 +278,9 @@ section div::before, footer div::before{
 	flex-direction: column;
 }
 
-
+.before\:-mt-curved-startup::before {    
+    margin-top: -85rem;
+}
 .before\:-mt-240::before {    
     margin-top: -60rem;
 }
@@ -292,5 +294,7 @@ section div::before, footer div::before{
 	.before\:-mt-240::before {
 		margin-top: -60rem;
 	}
-    
+    .before\:-mt-curved-startup::before {
+        margin-top: -85rem;
+    }
 }
