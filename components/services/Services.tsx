@@ -8,8 +8,8 @@ const Services: React.FC<IService> = () => {
   return (
 
     <div className='flex justify-around'>  
-	    {dataServices.map((service, i) => (
-          <Service key={i} {...service} />
+	    {dataServices.map((service) => (
+          <Service key={service.index} {...service} />
        ))}
     </div>
   );
