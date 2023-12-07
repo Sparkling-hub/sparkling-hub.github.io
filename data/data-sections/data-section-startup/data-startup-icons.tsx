@@ -40,7 +40,7 @@ const startupIcon: IStartupTechnologiesItem[] = [
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/PHP.png',
-		text: "PHP",
+		text: "PHP#",
 	},
 
 ];
