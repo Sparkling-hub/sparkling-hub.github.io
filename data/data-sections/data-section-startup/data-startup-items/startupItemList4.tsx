@@ -1,9 +1,10 @@
-const content = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labasdasd dolore magna aliqua.</p>
+const content = <p>oversees and facilitates the project, bridging the gap between technical and non-technical aspects.</p>
 
-const header = <h3>A project manager</h3>
+const header = <h3>A Project Manager</h3>
 
 const element = {
     header: header,
     content: content,
+    img: '/img/startup/section2/Project Manager Avatar.png',
 }
 export default element

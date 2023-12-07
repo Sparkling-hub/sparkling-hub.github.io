@@ -5,5 +5,6 @@ interface IStartupItem {
     content?: JSX.Element;  
     link?: string;  
     reverse?: boolean;
+    img?: string;
     }
 export default IStartupItem
