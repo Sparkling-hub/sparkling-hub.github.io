@@ -168,7 +168,7 @@ section div::before, footer div::before{
 .content-section {
 	display: flex;
 	justify-content: center;
-
+	width: $widhConainers;
 	width: 100%;
 	flex-direction: column;
 	position: relative;

@@ -7,11 +7,10 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
   
   return (
     <section className={`flex items-center justify-center relative ${background}`} id={id}>
-      <div className='content-section flex  items-center justify-center flex-col justify-center'>
-      <div className='max-w-screen-xl items-start '>
+      <div className='content-section flex   items-start justify-center flex-col justify-center'>
 
         <div className='flex items-center whitespace-normal w-full '>
-          <div className='flex justify-center flex-col  '>{header}
+          <div className='flex justify-center flex-col w-full'>{header}
             {content}
           </div>
 
@@ -20,7 +19,7 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
           </div>}
         </div>
 
-        {button ? <div className='button absolute bottom-20 left-auto'>
+        {button ? <div className='button absolute bottom-20 left-0'>
           {button}
         </div>
           :
@@ -29,7 +28,7 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 
       </div>
 
-      </div>
+
     </section>
 
 
