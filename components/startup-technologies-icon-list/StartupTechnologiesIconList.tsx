@@ -7,7 +7,7 @@ import Button from '../button';
 const StartupTechnologiesIconList: React.FC = () => {
 
 	return (
-		<div className='flex flex-wrap justify-center items-center bg-emerald-900'>
+		<div className='flex flex-wrap justify-center items-center'>
 			{dataStartups.map((startup, index) => (
 				<StartupIcon key={index} {...startup}/>
 			))}

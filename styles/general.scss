@@ -16,7 +16,7 @@ $primaryDarkColor: #134e4a;
 $primaryMediumColor: #4DA59B;
 $primaryMediumColor2: #73C9BD;
 $primaryLightColor: #86C0BB;
-
+$iconColorStartupSecion3: #C4F4EC;
 $white: #eafffd;
 $widhConainers: 1440px;
 
@@ -26,8 +26,14 @@ $widhConainers: 1440px;
 .bg-color-primary-light {
 	background-color: $white;
 }
+.bg-icon-color-startup-secion3 {
+	background-color: $iconColorStartupSecion3;
+}
 .bg-color-primary-medium {
 	background-color: $primaryMediumColor;
+}
+.bg-color-primary-dark {
+	background-color: $primaryDarkColor;
 }
 .bg-color-primary-medium2 {
 	background-color: $primaryMediumColor2;

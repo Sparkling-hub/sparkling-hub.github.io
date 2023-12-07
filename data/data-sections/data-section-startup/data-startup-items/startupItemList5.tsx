@@ -5,7 +5,7 @@ const header = <h3>A UI/UX Designer</h3>
 const element = {
     header: header,
     content: content,
-    img: '/img/startup/section2/UI_UX Designer.png',
+    img: '/img/startup/section2/UI_UX Designer.svg',
     index: 5,
 }
 export default element
