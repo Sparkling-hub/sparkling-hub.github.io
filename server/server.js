@@ -1,10 +1,10 @@
 "use strict";
-const __importDefault = (mod) => (mod && mod.__esModule) ? mod : { "default": mod };
+
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const nodemailer_1 = __importDefault(require("nodemailer"));
-const cors_1 = __importDefault(require("cors"));
-const multer_1 = __importDefault(require("multer"));
+const express_1 = (require("express"));
+const nodemailer_1 = (require("nodemailer"));
+const cors_1 = (require("cors"));
+const multer_1 = (require("multer"));
 const express_validator_1 = require("express-validator");
 const app = (0, express_1.default)();
 const port = 3033;
