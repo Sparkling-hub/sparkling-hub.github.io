@@ -18,7 +18,7 @@ const Form: React.FC = () => {
   const [check, setCheck] = useState(false);
 
   const isValidEmail = (email: string): boolean => {
-    const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w\d])/.exec(email);
+    const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([a-z\d])/.exec(email);
     return emailRegex !== null;
 };
 
