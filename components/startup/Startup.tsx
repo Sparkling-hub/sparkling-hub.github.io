@@ -18,7 +18,7 @@ const Startup: React.FC<IStartup> = ({ content, header, link, reverse, img }) =>
 
 			</div>
 			<div className='flex items-center justify-center square-green bg-color-primary-medium h-40 w-48 rounded-3xl'>
-				<img className='w-5 h-5 inline-block mx-4 w-32 h-32' src={img} alt="" />
+				<img className='inline-block mx-4 w-32 h-32' src={img} alt="" />
 			</div>
 		</div>
 

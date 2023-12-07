@@ -6,5 +6,6 @@ const element = {
     header: header,
     content: content,
     img: '/img/startup/section2/UI_UX Designer.png',
+    index: 5,
 }
 export default element

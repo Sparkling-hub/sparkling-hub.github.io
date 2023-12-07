@@ -6,5 +6,6 @@ const element = {
     header: header,
     content: content,
     img: '/img/startup/section2/Project Manager Avatar.png',
+    index: 4,
 }
 export default element
