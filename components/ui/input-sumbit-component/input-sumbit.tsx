@@ -29,7 +29,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, formDat
       name={name}
       type={type}
       disabled={!disabled}
-      className={`no-underline text-white py-3 px-8  rounded-3xl p-2 w-40 ${buttonClass}`}
+      className={`no-underline text-white py-3 px-8  rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
       onClick={handleSubmit}
     />
   );

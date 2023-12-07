@@ -11,7 +11,7 @@ const content = <><Form/></>
 const element = {
   content: content,
   header: header,
-  background:'teal-50',
+  background:'bg-teal-50',
   id:"form-contact"
 }
 export default element

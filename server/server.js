@@ -13,8 +13,8 @@ const port = 3033;
 const transporter = nodemailer_1.default.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'misliazsite@gmail.com',
-        pass: 'fgmrqgkrmpvgwtag',
+        user: 'careers.sparkling.co@gmail.com',
+        pass: 'tuuj ioas vyjh vywx',
     },
 });
 app.use((0, multer_1.default)({ dest: 'uploads' }).single('file'));
@@ -35,8 +35,8 @@ app.post('/send-form', validateForm, (req, res) => {
     }
     const { name, email, message, company, select } = req.body.formData;
     const mailOptions = {
-        from: 'misliazsite@gmail.com',
-        to: 'n.arthofer@sparkling.co.com',
+        from: 'careers.sparkling.co@gmail.com',
+        to: 'l.arthofer@sparkling.co.com',
         subject: `${select} From: ${email}`,
         text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nText: ${message}`,
         attachments: [],

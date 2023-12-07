@@ -13,7 +13,7 @@ const Select: React.FC<SelectProps> = ({ name, value, onChange, placeholder, dat
   return (
     <select
       name={name}
-      className="border border-green-500 rounded-3xl p-4 w-full m-5"
+      className={`border border-green-500 rounded-3xl p-4 w-full my-5 ${value==''? "text-gray-400 ":""}`}
       value={value || ''} 
       onChange={onChange}
     >
