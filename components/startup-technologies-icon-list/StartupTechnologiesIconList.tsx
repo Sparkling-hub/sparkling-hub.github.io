@@ -14,7 +14,7 @@ const StartupTechnologiesIconList: React.FC = () => {
 			))}
 			<div className='m-20'>
 				{/* <Button href="/get-in-touch" text="Find out more" /> */}
-				<Link className="p-4 underline underline-offset-8 text-teal-500/100 text-xl font-bold " href="/contact">The technology you need isn't here? Contact us to see if we can help!</Link>
+				<Link className="p-4 underline underline-offset-8 text-teal-500/100 text-xl font-bold " href="/contact">The technology you need isn&rsquo;t here? Contact us to see if we can help!</Link>
 				
 			</div>
 			 
