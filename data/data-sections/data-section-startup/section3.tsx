@@ -22,6 +22,7 @@ const content = <StartupsTechnologiesIconList />
 
 const element = {
   content: content,
-  header: header
+  header: header,  
+  index: 3,
 }
 export default element

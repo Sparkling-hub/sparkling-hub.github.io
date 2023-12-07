@@ -20,6 +20,7 @@ const element = {
 	content: content,
 	header: header,
 	curvedClass: 'before:content-curved-line before:w-full before:absolute before:-mt-curved-startup ',
-	// background: 'bg-color-primary-light',
+	// background: 'bg-color-primary-light',	
+	index: 2,
 }
 export default element

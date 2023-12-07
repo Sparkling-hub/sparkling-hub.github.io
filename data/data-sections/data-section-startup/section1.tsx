@@ -13,13 +13,14 @@ const content =
 </>
 
 
-const image = <img src='/img/startup/startup_icon.png' className="w-full"/>;
+const image = <img src='/img/startup/startup_icon.png' className="w-full" alt="startup_icon"/>;
 
 const element = {
 content: content,
 header: header,
 image: image,
-padding_bottom: "pb-40 custom-pb-60"
+padding_bottom: "pb-40 custom-pb-60",
+index: 1,
 
 }
 export default element
