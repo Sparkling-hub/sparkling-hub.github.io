@@ -7,7 +7,7 @@ const header = <h3>A CTO or Technical Supervisor</h3>
 const element = {
     header: header,
     content: content,
-    img: '/img/startup/section2/CTO avatar.png',
+    img: '/img/startup/section2/CTO avatar.svg',
     index: 1,
 }
 export default element

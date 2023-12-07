@@ -5,7 +5,7 @@ const header = <h3>A team of Software Engineers</h3>
 const element = {
     header: header,
     content: content,
-    img: '/img/startup/section2/Software engineers Avatar.png',
+    img: '/img/startup/section2/Software Engineer Avatar.svg',
     index: 2,
 
 }

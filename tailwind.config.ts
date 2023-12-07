@@ -22,6 +22,7 @@ const config: Config = {
         'curved-primary-dark': 'url("/img/curved/curved-primary-dark-green.svg")',        
         'curved-primary-white': 'url("/img/curved/curved-white.svg")',
         'curved-line': 'url("/img/curved/devide_line.svg")',
+        'curved_white_with_line': 'url("/img/curved/curved_white_with_line.svg")',
       },
     },
   },
