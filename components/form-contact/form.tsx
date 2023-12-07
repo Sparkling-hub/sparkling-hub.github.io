@@ -18,8 +18,8 @@ const Form: React.FC = () => {
   const [check, setCheck] = useState(false);
 
   const isValidEmail = (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    const emailRegex = email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w])/);
+    return emailRegex ?true  : false;
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
