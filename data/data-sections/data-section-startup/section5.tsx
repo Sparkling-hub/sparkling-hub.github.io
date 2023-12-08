@@ -1,9 +1,5 @@
 
 import StartupAssistings from "@/components/startup-assistings"
-import StartupStepByStep from "@/components/startup-step-by-step"
-import StartupsTechnologiesIconList from "@/components/startup-technologies-icon-list"
-
-
 
 const header =
     <h2 className="flex-col items-center justify-center  p-4">
@@ -20,7 +16,6 @@ const header =
     </h2>
 
 const content = <StartupAssistings />
-
 
 const element = {
     content: content,
