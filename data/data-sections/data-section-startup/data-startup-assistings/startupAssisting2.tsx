@@ -10,8 +10,8 @@ const element = {
     header: header,
     content: content,
     image: image,
-    background: 'bg-color-primary-light-light',
     rotate: 'transform scale-x-[-1]',
+    border: 'border-primary-light-light'
 
 }
 export default element
