@@ -21,6 +21,9 @@ const content = <StartupStepByStep />
 
 const element = {
     content: content,
-    header: header
+    header: header,
+    curvedClass: 'before:content-curved_white_without_line before:w-full before:absolute before:-mt-curved-startup ',
+	background: 'bg-color-primary-light',	
+	index: 4,
 }
 export default element
