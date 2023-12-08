@@ -2,7 +2,7 @@ import React, { ChangeEvent } from 'react';
 
 interface TextAreaProps {
   name: string;
-  type: string;
+
   placeholder: string;
   value: string;
   onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
