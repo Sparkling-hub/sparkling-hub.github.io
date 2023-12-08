@@ -14,6 +14,7 @@ const element = {
   content: content,
   header: header,
   id: "services", 
+  background: 'bg-color-primary-light', 
   curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute before:-mt-240 ',
 }
 export default element

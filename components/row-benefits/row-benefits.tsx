@@ -9,7 +9,7 @@ const Benefits: FC = () => {
  
   return (
 
-    <div className='flex items-center justify-center relative flex-col'>
+    <div className='flex items-center justify-center relative flex-col pb-20'>
       {Object.values(benefits.benefits).map((value: IBenefitsType, index: number) => (
 
         <div key={index} className={`${(index + 1) % 2 ? 'items-start' : 'items-end'} flex flex-col w-full `}>

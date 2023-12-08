@@ -23,6 +23,6 @@ const element = {
 	background: 'bg-color-primary-light',	
 	index: 2,
 	padding_bottom: 'pb-40',
-	margin_bottom: 'mb-64'
+	// margin_bottom: 'mb-64'
 }
 export default element

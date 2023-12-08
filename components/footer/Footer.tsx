@@ -18,7 +18,8 @@ const Footer: React.FC = () => {
 							items-center 
 							justify-center
 							xl:px-40
-							custom-3xl'>
+							custom-3xl
+							-mt-36'>
 				<div className='footer-background'></div>				
 					<div className='footer-blocks container mx-auto px-4 flex justify-between'>
 						<div className='left-block max-w-[33%]'>

@@ -15,14 +15,14 @@ const header =
 
     </h2>
 
-const content = <StartupAssistings />
+const content = <StartupAssistings/>
 
 const element = {
     content: content,
     header: header,
-    curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute before:-mt-curved-startup ',
+    curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute before:-mt-curved-startup-plane padding-plane-block',
 	background: 'bg-color-primary-light',	
-	index: 4,
-    
+	index: 4,    
+    padding_bottom: 'pb-32'
 }
 export default element
