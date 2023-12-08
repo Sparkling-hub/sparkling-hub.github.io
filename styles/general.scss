@@ -17,6 +17,7 @@ $primaryDarkColor: #134e4a;
 $primaryMediumColor: #4DA59B;
 $primaryMediumColor2: #73C9BD;
 $primaryLightColor: #86C0BB;
+$primaryDoubleLightColor: #CBF0E9;
 $iconColorStartupSecion3: #C4F4EC;
 $white: #eafffd;
 $colorActiveStep: #fce205;
@@ -30,6 +31,9 @@ $widhConainers: 1440px;
 }
 .bg-color-primary-light {
 	background-color: $white;
+}
+.bg-color-primary-light-light{
+    background: $primaryDoubleLightColor;
 }
 .bg-icon-color-startup-secion3 {
 	background-color: $iconColorStartupSecion3;

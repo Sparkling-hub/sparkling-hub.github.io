@@ -14,8 +14,8 @@ const StartupStepByStep: React.FC = () => {
         const rect = element.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight / 2 && rect.bottom >= 0;
 
-        if (isVisible && !highlightedIndices.includes(index)) {
-          setHighlightedIndices((prevIndices) => [...prevIndices, index]);
+        if (isVisible && !highlightedIndices.includes(index+1)) {
+          setHighlightedIndices((prevIndices) => [...prevIndices, index+1]);
         }
       });
     };
