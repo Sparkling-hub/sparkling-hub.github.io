@@ -7,9 +7,6 @@ const element : IBenedits= {
     content: content,
     image: image,
     flex: FlexValues.ReverseRow
-    
-    
-
 
 }
 export default element

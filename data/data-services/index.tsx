@@ -1,9 +1,9 @@
 import serviceOne from "./service_one";
 import serviceTwo from "./service_two";
 import serviceThree from "./service_three";
-import type  serviceData  from "../../interface/service";
+import type  ServiceData  from "../../interface/service";
 
-const services: serviceData[] = [
+const services: ServiceData[] = [
   serviceOne,
   serviceTwo,
   serviceThree

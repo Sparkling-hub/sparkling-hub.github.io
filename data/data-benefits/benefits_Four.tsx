@@ -4,14 +4,10 @@ import IBenedits, { FlexValues } from '../../interface/IBenefits';
 const header = <h3>Affordable Excellence</h3>
 const image = <img src='/img/section/sectionOne.png'/>;
 
-const element : IBenedits= {
-    header: header,
-    content: content,
-    image: image,
-    flex: FlexValues.ReverseRow
-    
-    
-
-
-}
-export default element
+const element: IBenedits = {
+  header: header,
+  content: content,
+  image: image,
+  flex: FlexValues.ReverseRow,
+};
+export default element;
