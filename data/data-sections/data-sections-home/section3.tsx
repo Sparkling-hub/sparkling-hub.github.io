@@ -23,6 +23,7 @@ const content = <StartupsTechnologiesIconList />
 const element = {
   content: content,
   header: header,  
+  id: 'technologies',
   index: 3,  
   curvedClass: 'before:content-curved_dark_without_line before:w-full before:absolute before:-mt-240',
 	background: 'bg-color-primary-dark', 

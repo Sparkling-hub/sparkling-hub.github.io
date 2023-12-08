@@ -8,6 +8,9 @@ const element = {
   content: content,
   header: header,
   id: "benefits", 
-  // curvedClass: 'before:content-curved-primary-white before:w-full before:absolute -mt-20'
+  index:4,
+  curvedClass: 'before:content-curved_white_without_line before:w-full before:absolute before:-mt-240',
+	background: 'bg-color-primary-light', 
+	margin_bottom: 'mb-12'
 }
 export default element

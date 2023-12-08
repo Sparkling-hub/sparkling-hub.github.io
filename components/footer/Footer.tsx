@@ -6,7 +6,7 @@ import React from 'react';
 const Footer: React.FC = () => {
 	return (
 		<footer className='mt-36'>
-			<div className='before:content-curved-primary-dark 
+			<div className='before:content-curved_dark_without_line 
 							before:w-full
 							before:absolute
 							before:-mt-20
