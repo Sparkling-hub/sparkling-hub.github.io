@@ -3,7 +3,7 @@ import Input from "../ui/input-component/input";
 import TextArea from "../ui/text-area-component/text-area";
 import Submit from "../ui/input-sumbit-component";
 import Select from "../ui/select-component";
-import FormData from "../../interface/IFromData"
+import FormData from "@/interface/IFromData"
 import Link from "next/link";
 
 const Form: React.FC = () => {
