@@ -16,5 +16,7 @@ const element = {
   id: "services", 
   background: 'bg-color-primary-light', 
   curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute before:-mt-240 ',
+  padding_bottom: "pb-12",
+
 }
 export default element
