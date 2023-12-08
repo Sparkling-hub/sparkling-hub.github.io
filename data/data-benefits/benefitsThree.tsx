@@ -8,8 +8,5 @@ const element : IBenedits= {
     image: image,
     flex: FlexValues.Row
  
-    
-
-
 }
 export default element

@@ -1,17 +1,10 @@
 import MainLayout from '../layouts/MainLayuout';
-import * as Section from '../data/data-sections/data-sections-home'
-import Sections from '../components/sections/sections'
-import  SeparatePage from './contact'
-
-
-
+import * as Section from '../data/data-sections/data-sections-home';
+import Sections from '../components/sections/sections';
 import React from 'react';
 
-
 const Index = () => { 
-  
 
-  console.log(Section.sections)
     return (
        
         <MainLayout>

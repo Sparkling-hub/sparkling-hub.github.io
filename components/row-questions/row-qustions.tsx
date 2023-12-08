@@ -5,7 +5,6 @@ import DisabledSelect from '../ui/select-questions/select';
 import questions from '../../data/data-questions';  // Используйте дефолтный импорт, если он предоставляется
 import type { FC } from 'react';  // Импортируем тип FC из React
 const Questions: FC = () => {
-  { console.log(questions) }
   return (
     <div className="p-4">
       

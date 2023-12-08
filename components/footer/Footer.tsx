@@ -5,8 +5,20 @@ import React from 'react';
 
 const Footer: React.FC = () => {
 	return (
-		<footer >
-			<div className='container-footer bg-teal-900 w-150 h-96 text-white flex-col items-center justify-center '>
+		<footer className='mt-36'>
+			<div className='before:content-curved-primary-dark 
+							before:w-full
+							before:absolute
+							before:-mt-20
+							content-section 
+							bg-teal-900 
+							w-150 
+							text-white 
+							flex-col 
+							items-center 
+							justify-center
+							xl:px-40
+							custom-3xl'>
 				<div className='footer-background'></div>				
 					<div className='footer-blocks container mx-auto px-4 flex justify-between'>
 						<div className='left-block max-w-[33%]'>
