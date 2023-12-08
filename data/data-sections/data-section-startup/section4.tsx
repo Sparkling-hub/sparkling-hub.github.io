@@ -1,6 +1,5 @@
 
 import StartupStepByStep from "@/components/startup-step-by-step"
-import StartupsTechnologiesIconList from "@/components/startup-technologies-icon-list"
 
 
 
