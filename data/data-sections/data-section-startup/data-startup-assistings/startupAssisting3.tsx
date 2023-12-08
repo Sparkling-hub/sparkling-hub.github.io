@@ -9,7 +9,7 @@ const element = {
     header: header,
     content: content,
     image: image,
-    // background: 'color-primary-white',    
+    index: 3,     
 
 }
 export default element

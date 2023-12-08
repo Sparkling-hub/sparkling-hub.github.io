@@ -11,7 +11,8 @@ const element = {
     content: content,
     image: image,
     rotate: 'transform scale-x-[-1]',
-    border: 'border-primary-light-light'
+    border: 'border-primary-light-light',
+    index: 2, 
 
 }
 export default element

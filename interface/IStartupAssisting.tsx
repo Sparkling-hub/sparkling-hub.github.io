@@ -7,5 +7,6 @@ interface IStartupAssisting {
     reverse?: boolean;
     rotate?: string;
     border?: string;
+    index: number;
     }
 export default IStartupAssisting
