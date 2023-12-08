@@ -304,8 +304,7 @@ section div::before, footer div::before{
 .before\:-mt-curved-startup::before {    
     margin-top: -88rem;
 }
-.before\:-mt-240::before {    
-    // margin-top: -60rem;
+.before\:-mt-240::before {  
     top: 0;
     margin-top: -15rem;
 }
@@ -317,7 +316,6 @@ section div::before, footer div::before{
 		padding-bottom: 10rem;
 	}
 	.before\:-mt-240::before {
-		// margin-top: -60rem;
         top: 0;
         margin-top: -15rem;
 	}
