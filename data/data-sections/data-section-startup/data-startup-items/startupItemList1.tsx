@@ -1,6 +1,6 @@
 
 
-const content = <p>provides crucial technical guidance, leading the project development, and ensuring control over the architecture and its related processes.</p>
+const content = <p>Provides crucial technical guidance, leading the project development, and ensuring control over the architecture and its related processes.</p>
 
 const header = <h3>A CTO or Technical Supervisor</h3>
 
