@@ -1,4 +1,4 @@
-const content = <p>oversees and facilitates the project, bridging the gap between technical and non-technical aspects.</p>
+const content = <p>Oversees and facilitates the project, bridging the gap between technical and non-technical aspects.</p>
 
 const header = <h3>A Project Manager</h3>
 
