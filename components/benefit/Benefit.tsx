@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-import IStartup from '../../interface/IStartupItem'
 import IBenefit from '@/interface/IBenefits';
 
 const Benefit: React.FC<IBenefit> = ({ content, header, reverse, image }) => {
