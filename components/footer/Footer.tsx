@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 							before:absolute
 							before:-mt-20
 							content-section 
-							bg-teal-900 
+							bg-color-primary-dark 
 							w-150 
 							text-white 
 							flex-col 
