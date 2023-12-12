@@ -19,7 +19,6 @@ const element = {
 content: content,
 header: header,
 image: image,
-padding_bottom: "pb-40 custom-pb-60",
 index: 1,
 
 }
