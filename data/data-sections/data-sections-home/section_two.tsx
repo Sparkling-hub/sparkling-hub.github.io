@@ -13,10 +13,9 @@ const content = <Services />
 const element = {
   content: content,
   header: header,
-  id: "services", 
+  id: "services",
+  index: 2,  
+  curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute',
   background: 'bg-color-primary-light', 
-  curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute before:-mt-240 ',
-  padding_bottom: "pb-12",
-
 }
 export default element

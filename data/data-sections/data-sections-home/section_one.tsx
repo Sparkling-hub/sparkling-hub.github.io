@@ -20,10 +20,9 @@ const image = <img src="/img/section/sectionOne.png" className="w-full" alt='sec
 const button = <Button href="/get-in-touch" text="Get in touch" />;
 const element = {
   content: content,
-  header: header,
-  image: image,
-  button: button,
-  padding_bottom: "pb-40 custom-pb-60"
- 
+  header: header,  
+  index: 1,  
+  image: image,  
+  button: button,  
 };
 export default element;
