@@ -26,6 +26,9 @@ const element = {
   id: 'technologies',
   index: 3,  
   curvedClass: 'before:content-curved_dark_without_line before:w-full before:absolute',
-	background: 'bg-color-primary-dark'
+	background: 'bg-color-primary-dark', 
+	margin_bottom: 'mb-12',
+  padding_bottom: "pb-12"
+
 }
 export default element

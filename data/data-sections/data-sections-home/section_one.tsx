@@ -22,6 +22,9 @@ const element = {
   content: content,
   header: header,
   image: image,
-  button: button
+  button: button,
+  padding_bottom: "pb-40 custom-pb-60"
+  // id: "home",
+  // curvedClass: 'before:content-curved-primary-white before:w-full before:absolute  -mt-20'
 };
 export default element;

@@ -11,7 +11,7 @@ import type  SectionData  from "../../../interface/section";
 export const sections: Record<string, SectionData> = {
   SectionOne: SectionOne,
   SectionTwo:SectionTwo,
-  Section3:Section3,
+  Section3:SectionTwo,
   SectionFour:SectionFour,
 
 };  

@@ -24,5 +24,6 @@ const element = {
     curvedClass: 'before:content-curved_white_without_line before:w-full before:absolute',
 	background: 'bg-color-primary-light',	
 	index: 4,
+	margin_bottom: 'mb-12'
 }
 export default element
