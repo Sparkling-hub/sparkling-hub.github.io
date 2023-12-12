@@ -24,7 +24,7 @@ const element = {
   content: content,
   header: header,  
   index: 3,  
-  curvedClass: 'before:content-curved_primary_dark_without_line before:w-full before:absolute before:-mt-240',
+  curvedClass: 'before:content-curved_primary_dark_without_line before:w-full before:absolute',
 	background: 'bg-color-primary-dark', 
 	margin_bottom: 'mb-12'
 

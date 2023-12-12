@@ -6,7 +6,8 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 
   return (
    
-      <section className={`flex items-center justify-center relative ${background} ${curvedClass} ${margin_bottom} ${padding_bottom} xl:px-40 custom-3xl`} id={id}>
+      // <section className={`flex items-center justify-center relative ${background} ${curvedClass} ${margin_bottom} ${padding_bottom} xl:px-40 custom-3xl`} id={id}>
+      <section className={`flex items-center justify-center relative ${background} ${curvedClass} before:-top-60 pb-60  xl:px-40 custom-3xl`} id={id}>
 
         <div className='content-section flex   items-start justify-center flex-col justify-center'>
 
