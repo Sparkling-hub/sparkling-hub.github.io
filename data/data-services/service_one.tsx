@@ -7,7 +7,7 @@ const header =
 
 
 const content = 
-				<div className="mb-12">
+				<div className="mb-12 h-48">
 					<p>Enhance your development efforts by extending your existing team or build your new team from scratch. Customise it to your needs to create a perfect fit!</p>
 					<ul>
 						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Full stack develoment</li>

@@ -7,7 +7,7 @@ const header =
 
 
 const content = 
-				<div className="mb-12">
+				<div className="mb-12 h-48">
 					<p>Revamp your product strategy with personalized guidance addressing complex challenges with tailored solutions. Our experts are here to steer you back on the right track.</p>
 					<ul>
 						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Research & Development (R&D)</li>
