@@ -80,7 +80,6 @@ const Form: React.FC = () => {
         <TextArea
           name="message"
           placeholder="Tell us about your project and goals*"
-          
           value={formData.message}
           onChange={handleInputChange}
         />
