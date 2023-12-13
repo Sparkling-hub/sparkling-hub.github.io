@@ -385,6 +385,17 @@ li:not(:last-child).highlight .s-b-s-text {
 .kolo.highlight{
 	background: $colorActiveStep;
 }
+.form {
+	.text-form {
+		width: 95%;
+		height: 35px;
+		margin-bottom: 20px;
+		border: 1px solid #dedede;
+		padding: 5px 10px;
+		font-size: 13px;
+		font-weight: normal !important;
+	}
+}
 #form-contact h3 {
     text-align: center;
     font-size: 25px;
