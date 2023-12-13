@@ -12,7 +12,7 @@ const Contact = () => {
         <div className=''>
 
         <Sections {...Section.sections.SectionOne}/> 
-   <Sections {...Section.sections.SectionTwo}/> 
+   <    Sections {...Section.sections.SectionTwo}/> 
         </div>
         </MainLayout>
        
