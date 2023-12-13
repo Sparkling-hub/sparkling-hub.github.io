@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
             <Link className="no-underline p-4" href="/faq">FAQ</Link>
           </li>
           <li>
-              <Button  href = "/get-in-touch" text = "Get in touch"/>
+              <Button  href = "/contact" text = "Get in touch"/>
           </li>
           
         </ul>

@@ -6,24 +6,25 @@ import React from 'react';
 const Footer: React.FC = () => {
 	return (
 		<footer className='mt-36'>
-			<div className='before:content-curved-primary-dark 
+			<div className='before:content-curved_dark_without_line 
 							before:w-full
 							before:absolute
 							before:-mt-20
 							content-section 
-							bg-teal-900 
+							bg-color-primary-dark 
 							w-150 
 							text-white 
 							flex-col 
 							items-center 
 							justify-center
 							xl:px-40
-							custom-3xl'>
+							custom-3xl
+							-mt-36'>
 				<div className='footer-background'></div>				
 					<div className='footer-blocks container mx-auto px-4 flex justify-between'>
 						<div className='left-block max-w-[33%]'>
 							<div>Sparkling</div>
-							<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&aposs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  </div>
+							<div>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
 						</div>
 						<div className='center-block max-w-[33%]'>
 							<div>LINKS</div>

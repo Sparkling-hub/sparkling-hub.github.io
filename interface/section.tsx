@@ -8,5 +8,6 @@ interface SectionData {
   id?: string;
   curvedClass?: string;
   padding_bottom?: string;
+  margin_bottom?: string;
   }
 export default SectionData

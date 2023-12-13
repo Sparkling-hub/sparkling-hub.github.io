@@ -4,7 +4,7 @@ import StartupsTechnologiesIconList from "@/components/startup-technologies-icon
 
 
 const header =
-  <h2 className="flex-col items-center justify-center bg-emerald-900 p-4">
+  <h2 className="flex-col items-center justify-center p-4">
     <div className="flex justify-center text-5xl mb-4">
         <span className="color-primary-light font-medium mx-4">Technologies</span> 
         <span className="text-white font-light">We Work With</span>
@@ -24,5 +24,9 @@ const element = {
   content: content,
   header: header,  
   index: 3,  
+  curvedClass: 'before:content-curved_dark_without_line before:w-full before:absolute',
+	background: 'bg-color-primary-dark', 
+	margin_bottom: 'mb-12'
+
 }
 export default element

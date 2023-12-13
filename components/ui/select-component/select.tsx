@@ -1,26 +1,24 @@
-import React, { ChangeEvent } from 'react';
 
 interface SelectProps {
   name: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  value: string | undefined;
+  onChange: any;
   placeholder: string;
-  data: any[]; // Замените any на конкретный тип вашего массива данных
+  data?: any;
 }
 
 const Select: React.FC<SelectProps> = ({ name, value, onChange, placeholder, data }) => {
   return (
     <select
       name={name}
-   
-      className="border border-green-500 rounded-3xl p-4 w-full m-5"
-      value={placeholder}
+      className={`border border-green-500 rounded-3xl p-4 w-full my-5 ${value == '' ? "text-gray-400 " : ""}`}
+      value={value || ''}
       onChange={onChange}
     >
-      <option value= {placeholder}>
+      <option value={placeholder}>
         {placeholder}
       </option>
-   
+
     </select>
   );
 };
