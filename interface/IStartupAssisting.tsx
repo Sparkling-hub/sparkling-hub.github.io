@@ -2,7 +2,7 @@
 interface IStartupAssisting {
     header?: JSX.Element;  
     content?: JSX.Element;  
-    image?: JSX.Element;  
+    image?: string;  
     background?: string;     
     reverse?: boolean;
     rotate?: string;

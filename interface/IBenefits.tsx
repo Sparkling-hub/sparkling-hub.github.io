@@ -1,5 +1,5 @@
 
-//TODO change to IBenefits 
+
 interface IBenefit {
 	content?: JSX.Element;
 	header?: JSX.Element;
