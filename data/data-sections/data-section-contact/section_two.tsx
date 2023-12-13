@@ -1,7 +1,7 @@
 import Form from "../../../components/form-contact";
 
 const header =
-  <h3>Fill in the form below and we will get back to you within 24hours.</h3>
+<h3>Fill in the form below and <span>we will get back to you </span>within 24hours.</h3>
 
 
 const content = <Form/>
