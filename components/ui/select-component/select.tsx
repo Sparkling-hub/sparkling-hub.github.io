@@ -5,7 +5,7 @@ interface SelectProps {
   value: string;
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
   placeholder: string;
-  data: any[]; // Замените any на конкретный тип вашего массива данных
+  data: any[]; 
 }
 
 const Select: React.FC<SelectProps> = ({ name, value, onChange, placeholder, data }) => {
