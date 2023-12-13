@@ -21,8 +21,8 @@ const config: Config = {
       content: {
         'curved_white_with_line': 'url("/img/curved/curved_white_with_line.svg")',
         'curved_white_without_line': 'url("/img/curved/curved_white_without_line.svg")',
-        'curved_primary_dark_without_line': 'url("/img/curved/curved_primary_dark_without_line.svg")', 
-        'curved_primary_dark_with_line': 'url("/img/curved/curved_primary_dark_with_line.svg")', 
+        'curved_dark_without_line': 'url("/img/curved/curved_dark_without_line.svg")', 
+        'curved_dark_with_line': 'url("/img/curved/curved_dark_with_line.svg")', 
       },
     },
   },
