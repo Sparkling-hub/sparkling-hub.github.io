@@ -298,3 +298,21 @@ section div::before, footer div::before{
         margin-top: -88rem;
     }
 }
+#answers {
+
+    & h3 {
+        text-align: center;
+        margin-bottom: 30px;
+        line-height: 1;
+
+        color: #0d8b83;
+        font-size: 40px;
+    }
+
+    & .button {
+        position: relative !important;
+        bottom: 0;
+		height: 50px;
+        margin: auto;
+    }
+}
