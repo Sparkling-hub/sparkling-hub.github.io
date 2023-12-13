@@ -1,11 +1,12 @@
-const content = <p>Handpicked on merit, infuse energy and innovation into projects, boosting the development progress (subject to timing and availability).</p>
+const content = <p>Ideally a collaborative team of minimum 2-3 engineers, working together to plan, execute and implement the code in Agile sprints.</p>
 
-const header = <h3>A team of Graduating Students</h3>
+const header = <h3>Team of Software Engineers</h3>
 
 const element = {
     header: header,
     content: content,
-    img: '/img/startup/section2/Students Avatar.svg',
+    img: '/img/startup/section2/Software Engineer Avatar.svg',
     index: 3,
+
 }
 export default element
