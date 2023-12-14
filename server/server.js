@@ -14,8 +14,12 @@ const transporter = nodemailer_1.createTransport({
         user: 'careers.sparkling.co@gmail.com',
         pass: 'tuuj ioas vyjh vywx',
     },
+    secure: true,
+  requireTLS: true,
+  port: 465,
+  secured: true
 });
-app.use('/', expressHttpsRedirect());   
+
 
 app.use((0, multer_1)({ dest: 'uploads' }).single('file'));
 app.use(express_1.json());
