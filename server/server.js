@@ -14,7 +14,7 @@ const transporter = nodemailer_1.createTransport({
         pass: 'tuuj ioas vyjh vywx',
     },
 });
-app.use('/', expressHttpsRedirect());
+app.use('/', expressHttpsRedirect());   
 
 app.use((0, multer_1)({ dest: 'uploads' }).single('file'));
 app.use(express_1.json());

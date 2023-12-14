@@ -3,11 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
- 
-      "start": "next start",
+    "start": "next start",
     "dev": "next dev",
     "build": "next build",
-    
     "lint": "next lint"
   },
   "dependencies": {
@@ -15,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.18",
     "axios": "^1.6.2",
+    "express-https-redirect": "^1.0.0",
     "next": "^14.0.3",
     "postcss-cli": "^10.1.0",
     "react": "^18",
