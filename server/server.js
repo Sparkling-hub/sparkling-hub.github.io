@@ -14,10 +14,8 @@ const transporter = nodemailer_1.createTransport({
         pass: 'tuuj ioas vyjh vywx',
     },
 });
-app.use((req, res, next) => {
-    res.setHeader('X-Powered-By', 'YourAppName'); // Замените 'YourAppName' на имя вашего приложения или пустую строку ''
-    next();
-  });
+app.use('/', httpsRedirect());
+
 app.use((0, multer_1)({ dest: 'uploads' }).single('file'));
 app.use(express_1.json());
 app.use((0, cors_1)());
