@@ -1,48 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import Select from 'react-select';
+import React from 'react';
+import chroma from 'chroma-js';
 
-const CustomSelect = ({ name, options, value, onChange, isMulti }:any) => {
-  const formattedOptions = [{ value: '', label: 'Select' }, ...Object.entries(options).map(([value, label]) => ({ value, label }))];
+import { ColourOption, colourOptions } from '../../data/multi-select/data';
+import Select, { StylesConfig } from 'react-select';
 
-  const handleChange = (selectedOption:any) => {
-    onChange(selectedOption ? (isMulti ? selectedOption.map((option: { value: any; }) => option.value) : selectedOption.value) : null);
-  };
+const colourStyles: StylesConfig<ColourOption, true> = {
+  control: (styles) => ({ ...styles, backgroundColor: 'white' }),
+  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    const color = chroma(data.color);
+    return {
+      ...styles,
+      backgroundColor: isDisabled
+        ? undefined
+        : isSelected
+        ? data.color
+        : isFocused
+        ? color.alpha(0.1).css()
+        : undefined,
+      color: isDisabled
+        ? '#ccc'
+        : isSelected
+        ? chroma.contrast(color, 'white') > 2
+          ? 'white'
+          : 'black'
+        : data.color,
+      cursor: isDisabled ? 'not-allowed' : 'default',
 
-  return (
-    <Select
-      name={name}
-      options={formattedOptions}
-      value={formattedOptions.find((option) => (isMulti ? value.includes(option.value) : value === option.value))}
-      isMulti={isMulti}
-      placeholder="Select"
-      onChange={handleChange}
-    />
-  );
+      ':active': {
+        ...styles[':active'],
+        backgroundColor: !isDisabled
+          ? isSelected
+            ? data.color
+            : color.alpha(0.3).css()
+          : undefined,
+      },
+    };
+  },
+  multiValue: (styles, { data }) => {
+    const color = chroma(data.color);
+    return {
+      ...styles,
+      backgroundColor: color.alpha(0.1).css(),
+    };
+  },
+  multiValueLabel: (styles, { data }) => ({
+    ...styles,
+    color: data.color,
+  }),
+  multiValueRemove: (styles, { data }) => ({
+    ...styles,
+    color: data.color,
+    ':hover': {
+      backgroundColor: data.color,
+      color: 'white',
+    },
+  }),
 };
 
-const MultipleSelect = () => {
-  const [selectedValues, setSelectedValues] = useState(['apples']);
-  const options = {
-    apples: 'green',
-    bananas: 'yellow',
-    orange: 'orange',
-  };
+export default () => (
+  <Select
+    closeMenuOnSelect={false}
+    defaultValue={[colourOptions[0], colourOptions[1]]}
+    isMulti
+    options={colourOptions}
+    styles={colourStyles}
+  />
+);
 
-  const handleChange = (newValues:any) => {
-    setSelectedValues(newValues);
-    console.log(newValues);
-    // Handle selected values as needed
-  };
-
-  return (
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-6">
-          <CustomSelect name="test" options={options} value={selectedValues} onChange={handleChange} isMulti />
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default MultipleSelect;
