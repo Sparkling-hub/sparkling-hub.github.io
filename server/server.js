@@ -15,12 +15,12 @@ const transporter = nodemailer_1.createTransport({
         pass: 'tuuj ioas vyjh vywx',
     },
 });
-
+app.use('/', expressHttpsRedirect());   
 
 app.use((0, multer_1)({ dest: 'uploads' }).single('file'));
 app.use(express_1.json());
 app.use((0, cors_1)());
-app.use('/', expressHttpsRedirect());   
+
 const upload = (0, multer_1)({ dest: 'uploads' });
 const validateForm = [
     (0, express_validator_1.body)('formData.name').isLength({ min: 0, max: 255 }).withMessage('Name is required and must be less than 255 characters'),
