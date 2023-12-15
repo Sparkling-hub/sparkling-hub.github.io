@@ -5,13 +5,13 @@ import ICheckboxSelect from '@/interface/ICheckboxSelect';
 
 
 
-const CheckboxSelect: React.FC<ICheckboxSelect> = ({ onChange, id }) => {
+const CheckboxSelect: React.FC<ICheckboxSelect> = ({  id, checked, onChange }) => {
 
 
   return (
     <>
-        <input className='m-4' id = {id} type="checkbox"  onChange = {onChange}/>
-		<label className='text-white' htmlFor="html">{id}</label>
+        <input className='m-4' id = {id} type="checkbox"  onChange = {onChange} checked= {checked}/>
+		    <label className='text-white' htmlFor="html">{id}</label>
     </>
   );
 };

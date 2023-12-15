@@ -15,17 +15,18 @@ const Careers: React.FC = () => {
 		let newValue: string[] = []
 
 		if (e.target.checked) {
-			newValue = [...activeMultiselect, e.target.id]
+			newValue = [...activeMultiselect, e.currentTarget.id]
 		}
-		else if (!e.target.checked){
-			newValue = activeMultiselect.filter( (value) => value != e.target.id)
+		else if (!e.currentTarget.checked){
+			newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
 		}		
 		setLocation(newValue);
 	};
 	const deleteItem: MouseEventHandler<HTMLSpanElement> = (e) => {
-
-		debugger
-		// ваш код обработки события
+		
+		let newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
+		setLocation(newValue);
+		
 	  };
 
 	useEffect(() => {		

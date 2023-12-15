@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import CheckboxSelect from '@/components/checkbox-select';
 import MultiSelectActiveItem from '../multi-select-active-item';
 import IMultiSelect from '@/interface/IMultiSelect';
@@ -7,8 +7,9 @@ import IMultiSelect from '@/interface/IMultiSelect';
 const MyMultipleSelect: React.FC<IMultiSelect> = ({  dataJobs, uniqueIds, activeMultiselect, placeholder, handleLocationChange, deleteItem }) => {
 
 	const [isActive, setIsActive] = useState(false);
-	const handleClick = () => {
+	const handleClick = (e:any) => {
 
+		debugger
 		setIsActive(!isActive);
 	};
 
@@ -41,10 +42,10 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({  dataJobs, uniqueIds, active
 
 			{uniqueIds.map(id => (
 				<CheckboxSelect
-				key={id}
-				onChange={handleLocationChange}
-				id={id}
-				checked={activeMultiselect.includes(id)}
+					key={id}					
+					id={id}
+					checked={activeMultiselect.includes(id)}
+					onChange={handleLocationChange}
 				/>
 			))}
 				
