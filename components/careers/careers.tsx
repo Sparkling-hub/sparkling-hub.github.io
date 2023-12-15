@@ -26,7 +26,7 @@ const Careers: React.FC = () => {
 		
 		let newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
 		setLocation(newValue);
-		
+
 	  };
 
 	useEffect(() => {		
