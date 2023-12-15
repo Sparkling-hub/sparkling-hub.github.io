@@ -1,28 +1,12 @@
 import React from 'react';
-import Input from '@/components/ui/input-component';
-import IJob from '../../interface/IJob';
-// import ListSearch from '../listSearch/listSearch';
-import { useState, useEffect } from 'react';
-import MultipleSelect from '../multi-select';
-
-interface FilterProps {
-	search: {
-		name: string;
-		location: string;
-		experience: string;
-	};
-	setSearch: React.Dispatch<React.SetStateAction<{
-		name: string;
-		location: string;
-		experience: string;
-	}>>;
-	dataJobs: IJob[];
-}
-
-const Filter: React.FC<FilterProps> = ({ search, setSearch, dataJobs }) => {
+import MyMultileSelect from '../my-multi-select';
+import IFilterProps from '@/interface/IFilterProps';
 
 
-	console.log(search);
+
+const Filter: React.FC<IFilterProps> = ({  dataJobs, uniqueIds, activeMultiselect, handleLocationChange, deleteItem }) => {
+
+	
 
 
 	return (
@@ -35,10 +19,14 @@ const Filter: React.FC<FilterProps> = ({ search, setSearch, dataJobs }) => {
 						<img src="https://www.kape.com/wp-content/themes/kape/assets/img/search-ico.png" className="w-3 h-3 m-auto" alt="" />
 					</button>
 				</form>
-				<span className="input arrow m-4 h-9 bg-gray-200  leading-8">
-					{/* <input name="location" type="text" placeholder="Set Location" className="w-full h-full resize-none rounded-md bg-gray-200 px-5" value="" /> */}
-					<MultipleSelect />
-				</span>
+				
+				<MyMultileSelect  	dataJobs={dataJobs} 
+									uniqueIds = {uniqueIds}
+									activeMultiselect = {activeMultiselect}
+									placeholder = "Set Location" 
+									handleLocationChange = {handleLocationChange}
+									deleteItem = {deleteItem}/>
+
 				<span className="input arrow m-4 h-9 bg-gray-200 leading-8">
 					<input name="experience" type="text" placeholder="All departament" className="w-full h-full resize-none rounded-md bg-gray-200 px-5" value="" />
 				</span>

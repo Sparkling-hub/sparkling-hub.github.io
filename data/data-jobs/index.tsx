@@ -5,9 +5,9 @@ import jobs_four from './jobs-four';
 import IJob from '../../interface/IJob'
 
 const dataJobs:  IJob[] = [
-jobs_one,
-jobs_two,
-jobs_three,
-jobs_four,
+    jobs_one,
+    jobs_two,
+    jobs_three,
+    jobs_four,
 ]
 export default dataJobs

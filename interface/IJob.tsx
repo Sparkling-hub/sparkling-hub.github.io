@@ -1,4 +1,5 @@
 interface Job {
+    id: string;
     location: JSX.Element;
     experience: JSX.Element;
     head: JSX.Element;
