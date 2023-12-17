@@ -30,10 +30,8 @@ const Careers: React.FC = () => {
 	  };
 
 	useEffect(() => {		
-		const ids = getResult(dataJobs, "id");
-		const uniqueIdsSet = new Set(ids);
-		const uniqueIdsArray = Array.from(uniqueIdsSet);
-		setUniqueIds(uniqueIdsArray);
+	
+		setUniqueIds(getResult(dataJobs, "id"));
 	  }, [dataJobs]);
 
 	
