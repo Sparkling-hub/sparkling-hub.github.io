@@ -7,7 +7,7 @@ import InputLocate from '../ui/custom-input-jobs';
 const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeMultiselect, placeholder, handleLocationChange, deleteItem }) => {
 
 	const [isActive, setIsActive] = useState(false);
-	const [value, setIsvalue] = useState('');
+
 	const handleClick = (e: any) => {
 
 
@@ -23,8 +23,6 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeM
   
       const filtered = uniqueIds.filter((id) => id.toLowerCase().includes(inputValue));
       setFilteredIds(filtered);
-      uniqueIds=filtered;
-      console.log(uniqueIds);
     };
 	return (
 
