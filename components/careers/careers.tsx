@@ -2,7 +2,7 @@ import { useState, useEffect, ChangeEvent, MouseEventHandler } from 'react';
 import dataJobs from '../../data/data-jobs';
 import JobList from '../job-list';
 import Filter from '../filter/filter';
-
+import {getResult} from "../search_function/search_function"
 
 
 const Careers: React.FC = () => {
@@ -30,7 +30,7 @@ const Careers: React.FC = () => {
 	  };
 
 	useEffect(() => {		
-		const ids = dataJobs.map(job => job.id);
+		const ids = getResult(dataJobs, "id");
 		const uniqueIdsSet = new Set(ids);
 		const uniqueIdsArray = Array.from(uniqueIdsSet);
 		setUniqueIds(uniqueIdsArray);
