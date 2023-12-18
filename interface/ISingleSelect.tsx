@@ -7,7 +7,7 @@ import IJob from "./IJob"
 interface ISingleSelect {
     dataJobs: IJob[]
     uniqueExp: string[]
-    activeSingleselect: string
+    position: string
     placeholder: string    
 
     handleExpChange:  (event: ChangeEvent<HTMLInputElement>) => void

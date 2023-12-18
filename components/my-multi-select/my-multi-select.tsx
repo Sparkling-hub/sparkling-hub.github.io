@@ -4,7 +4,7 @@ import MultiSelectActiveItem from '../multi-select-active-item';
 import IMultiSelect from '@/interface/IMultiSelect';
 import InputLocate from '../ui/custom-input-jobs';
 
-const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeMultiselect, placeholder, handleLocationChange, deleteItem }) => {
+const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, location, placeholder, handleLocationChange, deleteItem }) => {
 
 	const [isActive, setIsActive] = useState(false);
 
@@ -38,9 +38,9 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeM
 
 			<div className={`my-multiple-select-container flex ${isActive ? 'rounded-t-lg' : 'rounded-lg'}  relative bg-color-primary-medium border-bg-color-primary-medium`} onClick={handleClick}>
 
-				<div className={`flex ${activeMultiselect.length > 0 ? 'w-4/5' : ''} flex-wrap items-center `}>
+				<div className={`flex ${location.length > 0 ? 'w-4/5' : ''} flex-wrap items-center `}>
 
-					{activeMultiselect.map(id => (
+					{location.map(id => (
 						<MultiSelectActiveItem key={id}
 							deleteItem={deleteItem}
 							id={id} />
@@ -50,7 +50,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeM
 				<div className={`flex items-center absolute right-4 bottom-0 top-0`}><img src="/img/down-arrow-svgrepo-com.svg" className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
 				</div>
 
-				<div className={`${activeMultiselect.length > 0 ? 'w-1/5' : ''} px-4`} >
+				<div className={`${location.length > 0 ? 'w-1/5' : ''} px-4`} >
 					<InputLocate
 						id={"focused_input"}
 						type={"text"}
@@ -64,7 +64,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeM
 							<CheckboxSelect
 								key={id}
 								id={id}
-								checked={activeMultiselect.includes(id)}
+								checked={location.includes(id)}
 								onChange={handleLocationChange}
 							/>
 						)) : "No found"}
