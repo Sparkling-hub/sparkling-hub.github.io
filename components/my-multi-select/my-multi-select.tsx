@@ -58,7 +58,8 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, locatio
 						placeholder={"Set Location"}
 						name={"id"}
 						handleSearchChange={handleSearchChange}
-					/><div className="absolute top-19 h-max w-full left-0 z-10 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown}>
+					/>
+					<div className="absolute top-19 h-max w-full left-0 z-10 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown}>
 
 						{filteredIds.length ? filteredIds.map(id => (
 							<CheckboxSelect
