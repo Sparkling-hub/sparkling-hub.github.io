@@ -10,24 +10,24 @@ const Careers: React.FC<ICareersProps> = () => {
 
 	const [filterPhraze, setFilterPhraze] = useState<string>("");
 	const [uniqueIds, setUniqueIds] = useState<string[]>([]);	
-	const [activeMultiselect, setLocation] = useState<string[]>([]);
+	const [location, setLocation] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
-	const [activeSingleselect, setExp] = useState<string>("");
+	const [position, setPosition] = useState<string>("");
 	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
 		
 		let newValue: string[] = []
 
 		if (e.target.checked) {
-			newValue = [...activeMultiselect, e.currentTarget.id]
+			newValue = [...location, e.currentTarget.id]
 		}
 		else if (!e.currentTarget.checked){
-			newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
+			newValue = location.filter( (value) => value != e.currentTarget.id)
 		}		
 		setLocation(newValue);
 	};
 	const handleExpChange = (e: ChangeEvent<HTMLInputElement>) => {
 
-		setExp(e.currentTarget.id)
+		setPosition(e.currentTarget.id)
 	
 	};
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -37,7 +37,7 @@ const Careers: React.FC<ICareersProps> = () => {
 	};
 	const deleteItem: MouseEventHandler<HTMLSpanElement> = (e) => {
 		
-		let newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
+		let newValue = location.filter( (value) => value != e.currentTarget.id)
 		setLocation(newValue);
 		e.stopPropagation()
 		
@@ -51,11 +51,11 @@ const Careers: React.FC<ICareersProps> = () => {
 	}, [dataJobs]);
 
 	const filteredJobsList = dataJobs.filter((job)=>{												
-										if(!activeMultiselect.length) return dataJobs												
-										return activeMultiselect.includes(job.id) })
+										if(!location.length) return dataJobs												
+										return location.includes(job.id) })
 									 .filter((job)=>{
-										if(!activeSingleselect) return dataJobs
-										return activeSingleselect.includes(job.nameProf)})
+										if(!position) return dataJobs
+										return position.includes(job.nameProf)})
 									 .filter((job)=>{
 										if(!filterPhraze) return dataJobs										
 										return job.namePosition.toLowerCase().includes(filterPhraze.toLowerCase())})
@@ -65,9 +65,9 @@ const Careers: React.FC<ICareersProps> = () => {
 
 			<Filter dataJobs={dataJobs} 
 					filterPhraze={filterPhraze}
-					activeMultiselect = {activeMultiselect}
+					location = {location}
 					uniqueIds={uniqueIds}					
-					activeSingleselect = {activeSingleselect}
+					position = {position}
 					uniqueExp={uniqueExp}
 
 					handleFilterPrazeChange={handleFilterPrazeChange}

@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import dataJobs from '../../data/data-jobs';
+
 import ICheckboxSelect from '@/interface/ICheckboxSelect';
 
 

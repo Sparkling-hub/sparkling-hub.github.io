@@ -1,19 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Button from '../ui/circle-button';
-import IJob from '../../interface/IJob';
-import dataJobs from '../../data/data-jobs';
+import React from 'react';
 import JobsFiltre from './job/job';
 import IJobListProps from '@/interface/IJobListProps';
 
 const JobList: React.FC<IJobListProps> = ( {jobs} ) => {
-
-
-	
-
-
-	
-
 
 	return (
 		<>
@@ -28,8 +17,6 @@ const JobList: React.FC<IJobListProps> = ( {jobs} ) => {
 				</div>
 			</div>
 		</>
-
-
 	);
 };
 
