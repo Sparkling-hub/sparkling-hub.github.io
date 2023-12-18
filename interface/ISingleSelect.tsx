@@ -1,5 +1,5 @@
 
-import { ChangeEvent, MouseEventHandler } from "react"
+import { ChangeEvent } from "react"
 import IJob from "./IJob"
 
 
