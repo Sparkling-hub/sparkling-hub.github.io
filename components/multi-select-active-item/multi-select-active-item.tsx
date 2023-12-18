@@ -8,6 +8,7 @@ const MultiSelectActiveItem: React.FC<IMultiSelectActiveItem> = ({ id, deleteIte
 			<button type="button" className="" title="Remove item" aria-label="Remove item" aria-describedby="select2-filter_locations-container-choice-rjty-Tel Aviv">
 				<span 	id={id} 
 						className='delete_item_button'  
+						role="button"
 						aria-hidden="true" 
 						onClick={deleteItem} 
 						tabIndex={0}
