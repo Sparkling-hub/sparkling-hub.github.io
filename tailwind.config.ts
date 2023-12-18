@@ -34,6 +34,9 @@ const config: Config = {
       bottom: {
         '-20': '-5rem'
       },
+      zIndex:{
+        "-1":'-1'
+      }
     },
   },
   plugins: [],

@@ -5,12 +5,11 @@ import IJob from "./IJob"
 
 
 interface IMultiSelect {
-    dataJobs: IJob[]
+    name: string;
     uniqueIds: string[]
     activeMultiselect: string[]
     placeholder: string    
-
-    handleLocationChange:  (event: ChangeEvent<HTMLInputElement>) => void
+    handleLocationChange: (event: ChangeEvent<HTMLInputElement>, name:string,active:string[]) => void
     deleteItem:  MouseEventHandler<HTMLSpanElement>;
   }
   

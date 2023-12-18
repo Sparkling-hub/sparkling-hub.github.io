@@ -549,7 +549,7 @@ li:not(:last-child).highlight .s-b-s-text {
     top: 50px;
     margin: 1.5rem;
     width: 25%;
-    height: 300px;
+	height: max-content;
     border: 1px solid #e2e8f0;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -558,7 +558,7 @@ li:not(:last-child).highlight .s-b-s-text {
     border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
-    z-index: 15;
+    z-index: 1;
 
     box-shadow: -10px 10px 0px $primaryDarkColor;
 

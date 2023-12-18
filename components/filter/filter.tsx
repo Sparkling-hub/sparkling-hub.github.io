@@ -15,7 +15,7 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 											handleFilterPrazeChange,
 											handleLocationChange, 
 											deleteItem,
-											handleExpChange, 
+						
 											}) => {
 
 	return (
@@ -35,7 +35,7 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 					</button>
 				</div>
 
-				<MyMultileSelect dataJobs={dataJobs}
+				<MyMultileSelect name={"location"}
 								 uniqueIds={uniqueIds}
 								 activeMultiselect={activeMultiselect}
 								 placeholder="Set Location"
@@ -43,11 +43,13 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 								 deleteItem={deleteItem} />
 
 
-				<MySingleSelect dataJobs={dataJobs}
-								uniqueExp={uniqueExp}
-								activeSingleselect={activeSingleselect}
+				<MyMultileSelect name={"exp"}
+								uniqueIds={uniqueExp}
+								activeMultiselect={activeSingleselect}
 								placeholder="Set Location"
-								handleExpChange={handleExpChange} />
+								handleLocationChange={handleLocationChange} deleteItem={deleteItem} />
+								
+								
 
 			</div>
 		</div>

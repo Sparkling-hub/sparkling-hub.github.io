@@ -9,13 +9,12 @@ interface IFilterProps {
     filterPhraze: string
     activeMultiselect: string[]
     uniqueIds: string[]
-    activeSingleselect: string    
+    activeSingleselect: string[]  
     uniqueExp: string[]
     
     handleFilterPrazeChange: (event: ChangeEvent<HTMLInputElement>) => void
-    handleLocationChange: (event: ChangeEvent<HTMLInputElement>) => void
+    handleLocationChange: (event: ChangeEvent<HTMLInputElement>, name:string,active:string[]) => void
     deleteItem:  MouseEventHandler<HTMLSpanElement>;
-    handleExpChange: (event: ChangeEvent<HTMLInputElement>) => void      
   }
   
   export default IFilterProps

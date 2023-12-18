@@ -6,6 +6,7 @@ import {getResult} from "../search_function/search_function"
 
 import ICareersProps from '@/interface/ICareersProps';
 import IJob from '@/interface/IJob';
+import exp from 'constants';
 
 
 
@@ -15,24 +16,22 @@ const Careers: React.FC<ICareersProps> = () => {
 	const [uniqueIds, setUniqueIds] = useState<string[]>([]);	
 	const [activeMultiselect, setLocation] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
-	const [activeSingleselect, setExp] = useState<string>("");
-	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
+	const [activeSingleselect, setExp] = useState<string[]>([]);
+	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
 		
 		let newValue: string[] = []
-
+		
 		if (e.target.checked) {
-			newValue = [...activeMultiselect, e.currentTarget.id]
+			newValue = [...active, e.currentTarget.id]
 		}
 		else if (!e.currentTarget.checked){
-			newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
+			newValue = active.filter( (value) => value != e.currentTarget.id)
 		}		
-		setLocation(newValue);
-	};
-	const handleExpChange = (e: ChangeEvent<HTMLInputElement>) => {
 
-		setExp(e.currentTarget.id)
-	
+		if(name==='exp'){setExp(newValue)}
+		if(name==='location'){setLocation(newValue)}
 	};
+
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
 
 		setFilterPraze(e.currentTarget.value)
@@ -76,7 +75,7 @@ const Careers: React.FC<ICareersProps> = () => {
 					handleFilterPrazeChange={handleFilterPrazeChange}
 					handleLocationChange={handleLocationChange}
 					deleteItem = {deleteItem}					
-					handleExpChange={handleExpChange} 
+
 					/>
 
 			<JobList jobs = {filteredJobsList}/>

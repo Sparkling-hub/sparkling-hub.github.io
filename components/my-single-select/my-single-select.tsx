@@ -36,11 +36,11 @@ const MySingleSelect: React.FC<ISingleSelect> = ({ dataJobs, uniqueExp, activeSi
 				<div className={`flex ${activeSingleselect.length > 0 ? 'w-4/5' : ''} flex-wrap items-center `}>
 					<SingleSelectActiveItem id={activeSingleselect} />
 				</div>
-				<div className={`flex items-center absolute right-4 bottom-0 top-0`}><img src="/img/down-arrow-svgrepo-com.svg" className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
+				<div className={`flex items-center absolute top-3 right-3`}><img src="/img/down-arrow-svgrepo-com.svg" className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
 				</div>
 				<div className={`${activeSingleselect.length > 0 ? 'w-1/5' : ''} px-4`} >
 					<input type="text" name={"id"} className="w-full p-2 placeholder-teal-800  focus:outline-none bg-color-primary-medium focus:bg-color-primary-medium" readOnly />
-					<div className="absolute top-19 h-max w-full left-0 z-10 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown}>
+					<div className="z-10 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown}>
 
 						{uniqueExp.map(id => (
 							<CheckboxSelect
