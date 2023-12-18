@@ -31,7 +31,9 @@ const config: Config = {
         'curved_dark_without_line': 'url("/img/curved/curved_dark_without_line.svg")', 
         'curved_dark_with_line': 'url("/img/curved/curved_dark_with_line.svg")', 
       },
-      
+      bottom: {
+        '-20': '-5rem'
+      },
     },
   },
   plugins: [],

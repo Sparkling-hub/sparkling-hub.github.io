@@ -4,7 +4,7 @@ import { MouseEventHandler } from "react"
 
 interface IMultiSelectActiveItem {
     
-    id: string;
+    id: string 
     deleteItem:  MouseEventHandler<HTMLSpanElement>;
   }
   

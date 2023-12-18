@@ -5,18 +5,18 @@ const text = <p>
 
         Full time or part time<br />
         Monthly salary depending on experience</p>
-const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} /><p>Dnepr</p></>
+const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} /><p>Tunis</p></>
 
 
 const jobs = {
-    id: "Dnepr",
+    id: "Tunis",
     location:location,
     experience: experience,
     head: head,
     text: text,
     slug: 'php-dev-lug-part',
     task: ['Backend development in Magento or WordPress.'],
-    nameProf: 'PHP DEVELOPERS',
+    nameProf: 'PHP',
     descript:<p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
     mustHave: [
         'Completed a degree in computer science (or similar)',
