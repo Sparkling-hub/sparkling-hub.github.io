@@ -9,7 +9,8 @@ import IJob from '@/interface/IJob';
 
 const Careers: React.FC<ICareersProps> = () => {
 
-	const [uniqueIds, setUniqueIds] = useState<string[]>([]);
+	const [filterPhraze, setFilterPraze] = useState<string>("");
+	const [uniqueIds, setUniqueIds] = useState<string[]>([]);	
 	const [activeMultiselect, setLocation] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
 	const [activeSingleselect, setExp] = useState<string>("");
@@ -28,6 +29,11 @@ const Careers: React.FC<ICareersProps> = () => {
 	const handleExpChange = (e: ChangeEvent<HTMLInputElement>) => {
 
 		setExp(e.currentTarget.id)
+	
+	};
+	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
+
+		setFilterPraze(e.currentTarget.value)
 	
 	};
 	const deleteItem: MouseEventHandler<HTMLSpanElement> = (e) => {
@@ -50,18 +56,24 @@ const Careers: React.FC<ICareersProps> = () => {
 									 .filter((job)=>{
 										if(!activeSingleselect) return dataJobs
 										return activeSingleselect.includes(job.nameProf)})
+									 .filter((job)=>{
+										if(!filterPhraze) return dataJobs										
+										return job.namePosition.toLowerCase().includes(filterPhraze.toLowerCase())})
 
 	return (
 		<div className='flex relative'>
 
 			<Filter dataJobs={dataJobs} 
-					uniqueIds={uniqueIds}					
+					filterPhraze={filterPhraze}
 					activeMultiselect = {activeMultiselect}
-					handleLocationChange={handleLocationChange}
-					uniqueExp={uniqueExp}
+					uniqueIds={uniqueIds}					
 					activeSingleselect = {activeSingleselect}
+					uniqueExp={uniqueExp}
+
+					handleFilterPrazeChange={handleFilterPrazeChange}
+					handleLocationChange={handleLocationChange}
+					deleteItem = {deleteItem}					
 					handleExpChange={handleExpChange} 
-					deleteItem = {deleteItem}
 					/>
 
 			<JobList jobs = {filteredJobsList}/>

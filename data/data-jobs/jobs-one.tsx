@@ -1,5 +1,5 @@
 const experience = <p>PAID POSITION</p>
-const head = <h3>Full stack - Node JS - React JS Intern</h3>
+const head = <h3>Node JS - React JS Intern</h3>
 
 const text = <p>
 
@@ -9,7 +9,8 @@ const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-c
 
 
 const jobs = {
-    id: "Tunis asd",    
+    id: "Tunis asd", 
+    namePosition: "Node JS - React JS Intern",   
     location:location,
     experience: experience,
     head: head,
