@@ -22,11 +22,14 @@ const MySingleSelect: React.FC<ISingleSelect> = ({ dataJobs, uniqueExp, activeSi
 
 		setFilteredIds("all");
 	}, [uniqueExp]);
-	console.log(activeSingleselect);
+	
+	const handleBlur = () => {
+		// setIsActive(false);
+	};
 
 	return (
 
-		<div className={`my-single-select ${isActive ? 'active' : ''} m-4`} >
+		<div className={`my-single-select ${isActive ? 'active' : ''} m-4`} onBlur={handleBlur}>
 
 			<div className={`my-single-select-container flex ${isActive ? 'rounded-t-lg' : 'rounded-lg'}  relative bg-color-primary-medium border-bg-color-primary-medium`} onClick={handleClick}>
 

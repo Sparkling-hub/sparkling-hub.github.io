@@ -20,7 +20,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeM
 		// Initialize filteredIds with a copy of uniqueIds
 		setFilteredIds([...uniqueIds]);
 	}, [uniqueIds]);
-	console.log(filteredIds);
+	
 	const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
 
 		setIsActive(true);
@@ -31,6 +31,8 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeM
 		const filtered = uniqueIds.filter((id) => id.toLowerCase().includes(inputValue));
 		setFilteredIds(filtered);
 	};
+
+
 	return (
 
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >

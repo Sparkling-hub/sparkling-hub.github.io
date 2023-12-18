@@ -15,8 +15,7 @@ const Careers: React.FC<ICareersProps> = () => {
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
 	const [activeSingleselect, setExp] = useState<string>("");
 	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
-
-		debugger
+		
 		let newValue: string[] = []
 
 		if (e.target.checked) {

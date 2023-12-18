@@ -7,6 +7,7 @@ import IMultiSelectActiveItem from '@/interface/IMultiSelectActiveItem';
 const MultiSelectActiveItem: React.FC <IMultiSelectActiveItem> = ({  id, deleteItem }) => {
 
 	
+	
 
 	return (
 		<>
