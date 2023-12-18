@@ -601,26 +601,33 @@ li:not(:last-child).highlight .s-b-s-text {
     }
 
 }
-.my-multiple-select .list{
+.my-multiple-select .list,
+.my-single-select .list{
 	display: none;
 }
-.my-multiple-select .my-multiple-select-container{
+.my-multiple-select .my-multiple-select-container,
+.my-single-select .my-single-select-container{
 	padding: 0 5px;
 }
-.my-multiple-select.active .list{
+.my-multiple-select.active .list,
+.my-single-select.active .list{
 	display: block;
 }
 
-.my-multiple-select #focused_input:focus{
+.my-multiple-select #focused_input:focus,
+.my-single-select #focused_input:focus{
 	background-color: $primaryMediumColor;
 }
-.my-multiple-select .active-item {
+.my-multiple-select .active-item,
+.my-single-select .active-item  {
 	background: #17cfc2;
 }
-.my-multiple-select .active-item {
+.my-multiple-select .active-item,
+.my-single-select .active-item {
 	color: white;
 }
-.my-multiple-select .active-item-container{
+.my-multiple-select .active-item-container,
+.my-single-select .active-item-container{
 	background-color: transparent;
     margin: 0 5px 0 0;
     border: 1px solid grey;
@@ -628,14 +635,17 @@ li:not(:last-child).highlight .s-b-s-text {
     padding: 1px;
 	width: max-content;
 }
-.my-multiple-select .active-item-container button{
+.my-multiple-select .active-item-container button,
+.my-single-select .active-item-container button{
 	border-right: 1px solid grey;
     margin-right: 2px;
 }
-.my-multiple-select .active-item-container button span{
+.my-multiple-select .active-item-container button span,
+.my-single-select .active-item-container button span{
 	padding: 2px;
 }
-.my-multiple-select .active-item-container .item-title{
+.my-multiple-select .active-item-container .item-title,
+.my-single-select .active-item-container .item-title{
 	padding: 0 8px;
 }
 

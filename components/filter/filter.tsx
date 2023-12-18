@@ -30,13 +30,11 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs, uniqueIds, uniqueExp, active
 								 deleteItem={deleteItem} />
 
 
-
 				<MySingleSelect dataJobs={dataJobs}
 								uniqueExp={uniqueExp}
 								activeSingleselect={activeSingleselect}
 								placeholder="Set Location"
-								handleExpChange={handleExpChange}
-								deleteItem={deleteItem} />
+								handleExpChange={handleExpChange} />
 
 			</div>
 		</div>

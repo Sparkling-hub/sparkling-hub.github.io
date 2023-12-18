@@ -1,4 +1,4 @@
-interface Job {
+interface IJob {
     id: string;
     location: JSX.Element;
     experience: JSX.Element;
@@ -13,4 +13,4 @@ interface Job {
     weOffer: string[];
   }
   
-  export default Job
+  export default IJob

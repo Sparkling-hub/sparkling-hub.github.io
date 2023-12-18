@@ -11,7 +11,6 @@ interface ISingleSelect {
     placeholder: string    
 
     handleExpChange:  (event: ChangeEvent<HTMLInputElement>) => void
-    deleteItem:  MouseEventHandler<HTMLSpanElement>;
   }
   
 export default ISingleSelect

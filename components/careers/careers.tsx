@@ -3,9 +3,11 @@ import dataJobs from '../../data/data-jobs';
 import JobList from '../job-list';
 import Filter from '../filter/filter';
 import {getResult} from "../search_function/search_function"
+import ICareersProps from '@/interface/ICareersProps';
+import IJob from '@/interface/IJob';
 
 
-const Careers: React.FC = () => {
+const Careers: React.FC<ICareersProps> = () => {
 
 	const [uniqueIds, setUniqueIds] = useState<string[]>([]);
 	const [activeMultiselect, setLocation] = useState<string[]>([]);
@@ -33,19 +35,21 @@ const Careers: React.FC = () => {
 		let newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
 		setLocation(newValue);
 		
-	  };
+	};
 
 	useEffect(() => {		
 	
 		setUniqueIds(getResult(dataJobs, "id"));
 		setUniqueExp(getResult(dataJobs, "nameProf"));
-	  }, [dataJobs]);
 
-	
+	}, [dataJobs]);
 
-
-
-
+	const filteredJobsList = dataJobs.filter((job)=>{												
+										if(!activeMultiselect.length) return dataJobs												
+										return activeMultiselect.includes(job.id) })
+									 .filter((job)=>{
+										if(!activeSingleselect) return dataJobs
+										return activeSingleselect.includes(job.nameProf)})
 
 	return (
 		<div className='flex relative'>
@@ -60,7 +64,7 @@ const Careers: React.FC = () => {
 					deleteItem = {deleteItem}
 					/>
 
-			<JobList />
+			<JobList jobs = {filteredJobsList}/>
 
 		</div>
 	);
