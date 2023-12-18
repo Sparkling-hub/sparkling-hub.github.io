@@ -1,9 +1,7 @@
-import React, { useEffect, ChangeEvent, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CheckboxSelect from '@/components/checkbox-select';
 import SingleSelectActiveItem from '../single-select-active-item';
 import ISingleSelect from '@/interface/ISingleSelect';
-import InputLocate from '../ui/custom-input-jobs';
-import { all } from 'axios';
 
 const MySingleSelect: React.FC<ISingleSelect> = ({ dataJobs, uniqueExp, position, placeholder, handleExpChange }) => {
 
