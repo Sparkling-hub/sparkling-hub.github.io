@@ -16,8 +16,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeM
 	};
 	const [searchValue, setSearchValue] = useState('');
 	const [filteredIds, setFilteredIds] = useState(uniqueIds);
-	useEffect(() => {
-		// Initialize filteredIds with a copy of uniqueIds
+	useEffect(() => {		
 		setFilteredIds([...uniqueIds]);
 	}, [uniqueIds]);
 	

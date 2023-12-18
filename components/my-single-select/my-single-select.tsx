@@ -24,12 +24,12 @@ const MySingleSelect: React.FC<ISingleSelect> = ({ dataJobs, uniqueExp, activeSi
 	}, [uniqueExp]);
 	
 	const handleBlur = () => {
-		// setIsActive(false);
+		setIsActive(false);
 	};
 
 	return (
 
-		<div className={`my-single-select ${isActive ? 'active' : ''} m-4`} onBlur={handleBlur}>
+		<div className={`my-single-select ${isActive ? 'active' : ''} m-4`} >
 
 			<div className={`my-single-select-container flex ${isActive ? 'rounded-t-lg' : 'rounded-lg'}  relative bg-color-primary-medium border-bg-color-primary-medium`} onClick={handleClick}>
 
@@ -40,7 +40,7 @@ const MySingleSelect: React.FC<ISingleSelect> = ({ dataJobs, uniqueExp, activeSi
 				</div>
 				<div className={`${activeSingleselect.length > 0 ? 'w-1/5' : ''} px-4`} >
 					<input type="text" name={"id"} className="w-full p-2 placeholder-teal-800  focus:outline-none bg-color-primary-medium focus:bg-color-primary-medium" readOnly />
-					<div className="absolute top-19 h-max w-full left-0 z-10 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown}>
+					<div className="absolute top-19 h-max w-full left-0 z-10 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown} onBlur={handleBlur}>
 
 						{uniqueExp.map(id => (
 							<CheckboxSelect

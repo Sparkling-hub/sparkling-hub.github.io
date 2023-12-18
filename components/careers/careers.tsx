@@ -4,12 +4,11 @@ import JobList from '../job-list';
 import Filter from '../filter/filter';
 import {getResult} from "../search_function/search_function"
 import ICareersProps from '@/interface/ICareersProps';
-import IJob from '@/interface/IJob';
 
 
 const Careers: React.FC<ICareersProps> = () => {
 
-	const [filterPhraze, setFilterPraze] = useState<string>("");
+	const [filterPhraze, setFilterPhraze] = useState<string>("");
 	const [uniqueIds, setUniqueIds] = useState<string[]>([]);	
 	const [activeMultiselect, setLocation] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
@@ -33,7 +32,7 @@ const Careers: React.FC<ICareersProps> = () => {
 	};
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
 
-		setFilterPraze(e.currentTarget.value)
+		setFilterPhraze(e.currentTarget.value)
 	
 	};
 	const deleteItem: MouseEventHandler<HTMLSpanElement> = (e) => {
