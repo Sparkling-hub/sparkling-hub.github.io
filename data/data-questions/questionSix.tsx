@@ -5,9 +5,8 @@ nurturing our talents is imperative. To ensure this, we offer Competitive Salari
 career opportunities and bonusses to our team members. Are you a bright talent? Join us
 and be part of our success story!</p>
 const element = {
+    id: 6,
     question:question,
     answer:answer
-
-
 }
 export default element

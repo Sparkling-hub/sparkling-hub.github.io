@@ -4,9 +4,8 @@ We occasionally offer single developers, but also know that a minimum team of 2-
 engineers works best and our bundle team packages often offer better value anyways. Feel
 free to contact us to know our rates, no strings attached.</p>
 const element = {
+    id: 5,
     question:question,
     answer:answer
-
-
 }
 export default element

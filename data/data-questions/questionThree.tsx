@@ -4,9 +4,8 @@ provide regular language classes to continuously improve their level and in addi
 English, they speak their native languages such as French, Italian, Spanish, Arabic, Ukrainian
 and Russian.</p>
 const element = {
+    id: 3,
     question:question,
     answer:answer
-
-
 }
 export default element
