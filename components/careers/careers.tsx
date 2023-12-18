@@ -16,6 +16,7 @@ const Careers: React.FC<ICareersProps> = () => {
 	const [activeSingleselect, setExp] = useState<string>("");
 	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
 
+		debugger
 		let newValue: string[] = []
 
 		if (e.target.checked) {
@@ -40,6 +41,7 @@ const Careers: React.FC<ICareersProps> = () => {
 		
 		let newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
 		setLocation(newValue);
+		e.stopPropagation()
 		
 	};
 
