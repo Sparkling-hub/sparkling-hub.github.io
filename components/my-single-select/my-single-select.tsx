@@ -40,7 +40,7 @@ const MySingleSelect: React.FC<ISingleSelect> = ({ dataJobs, uniqueExp, activeSi
 				<div className={`flex items-center absolute right-4 bottom-0 top-0`}><img src="/img/down-arrow-svgrepo-com.svg"  className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
 			</div>
 	
-				<div className={`${activeSingleselect.length > 0 ? 'w-1/5' : ''} p-4`} >
+				<div className={`${activeSingleselect.length > 0 ? 'w-1/5' : ''} px-4`} >
 				<input type="text" 	name={"id"}   className="w-full p-2 placeholder-teal-800  focus:outline-none bg-color-primary-medium focus:bg-color-primary-medium"
 
    readOnly/>

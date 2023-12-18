@@ -48,7 +48,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, activeM
 				<div className={`flex items-center absolute right-4 bottom-0 top-0`}><img src="/img/down-arrow-svgrepo-com.svg"  className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
 			</div>
 	
-				<div className={`${activeMultiselect.length > 0 ? 'w-1/5' : ''} p-4`} >
+				<div className={`${activeMultiselect.length > 0 ? 'w-1/5' : ''} px-4`} >
 					<InputLocate
 						id={"focused_input"}
 						type={"text"}
