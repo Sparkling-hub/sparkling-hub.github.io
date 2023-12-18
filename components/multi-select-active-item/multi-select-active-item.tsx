@@ -10,6 +10,7 @@ const MultiSelectActiveItem: React.FC<IMultiSelectActiveItem> = ({ id, deleteIte
 						className='delete_item_button'  
 						aria-hidden="true" 
 						onClick={deleteItem} 
+						tabIndex={0}
 						onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) => {
 							if (event.key === 'Enter' || event.key === ' ') {
 								deleteItem;
