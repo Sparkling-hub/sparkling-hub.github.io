@@ -18,7 +18,6 @@ const DisabledSelect: FC<{ data: IQustion }> = ({ data }) => {
         }`}
         role='button'
         onClick={handleDropdownToggle}
-        tabIndex={0}  
         onKeyDown={handleDropdownToggle}
       >
         <span className="block relative flex justify-between ">{data.question}<ButtonCircle isDropdownOpen={isDropdownOpen} /> </span>

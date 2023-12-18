@@ -36,7 +36,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, locatio
 
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
 
-			<div className={`my-multiple-select-container flex ${isActive ? 'rounded-t-lg' : 'rounded-lg'}  relative bg-color-primary-medium border-bg-color-primary-medium`} onClick={handleClick}>
+			<div className={`my-multiple-select-container flex ${isActive ? 'rounded-t-lg' : 'rounded-lg'}  relative bg-color-primary-medium border-bg-color-primary-medium`} onClick={handleClick} onKeyDown={handleClick}>
 
 				<div className={`flex ${location.length > 0 ? 'w-4/5' : ''} flex-wrap items-center `}>
 
@@ -59,7 +59,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ dataJobs, uniqueIds, locatio
 						name={"id"}
 						handleSearchChange={handleSearchChange}
 					/>
-					<div className="absolute top-19 h-max w-full left-0 z-10 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown}>
+					<div className="absolute top-19 h-max w-full left-0 z-10 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown} onKeyDown={handleClickDropDown}>
 
 						{filteredIds.length ? filteredIds.map(id => (
 							<CheckboxSelect
