@@ -7,17 +7,9 @@ const MultiSelectActiveItem: React.FC<IMultiSelectActiveItem> = ({ id, deleteIte
 		<div className="flex flex-no-wrap active-item-container" title={id} >
 			<button type="button" className="" title="Remove item" aria-label="Remove item" aria-describedby="select2-filter_locations-container-choice-rjty-Tel Aviv">
 				<span 	id={id} 
-						className='delete_item_button'  
-						role="button"
+						className='delete_item_button'
 						aria-hidden="true" 
-						onClick={deleteItem} 
-						tabIndex={0}
-						onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) => {
-							if (event.key === 'Enter' || event.key === ' ') {
-								deleteItem;
-							}
-						  }}>
-
+						onClick={deleteItem}>
 							×
 				</span>
 			</button>

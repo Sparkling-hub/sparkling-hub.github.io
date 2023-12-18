@@ -12,12 +12,10 @@ const MySingleSelect: React.FC<ISingleSelect> = ({ dataJobs, uniqueExp, position
 	};
 	const handleClickDropDown = (e: any) => {
 		e.stopPropagation()
-	};
-	console.log(uniqueExp)
-	const [searchValue, setSearchValue] = useState('');
+	};	
 	const [filteredIds, setFilteredIds] = useState<any>();
-	useEffect(() => {
 
+	useEffect(() => {
 		setFilteredIds("all");
 	}, [uniqueExp]);
 	
