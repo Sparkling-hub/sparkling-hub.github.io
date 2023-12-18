@@ -6,13 +6,13 @@ interface InputProps {
   placeholder?: string ;
   value: string | number | undefined;
   id:string;
-  uniqueIds:string[];
   handleSearchChange: (event: ChangeEvent<HTMLInputElement>) => void;
 
 }
 
 
-const Input: React.FC<InputProps> = ({ name, id,type, placeholder, value,uniqueIds , handleSearchChange}) => {
+
+const Input: React.FC<InputProps> = ({ name, id,type, placeholder, value , handleSearchChange}) => {
 
   return (
     <input

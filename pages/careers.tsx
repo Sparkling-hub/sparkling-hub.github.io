@@ -8,7 +8,7 @@ import Sections from '../components/sections/sections'
 import React from 'react';
 
 
-const Careers = () => { 
+const CareersPage = () => { 
   
 
 
@@ -27,4 +27,4 @@ const Careers = () => {
     );
 };
 
-export default Careers;
+export default CareersPage;

@@ -10,6 +10,7 @@ const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-c
 
 const jobs = {
     id: "Kyiv",
+    namePosition: "Full stack - Node JS - React JS Intern",
     location:location,
     experience: experience,
     head: head,

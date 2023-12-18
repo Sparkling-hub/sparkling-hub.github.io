@@ -10,13 +10,14 @@ const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-c
 
 const jobs = {
     id: "Tunis",
+    namePosition: "Full stack - Node JS - React JS Intern",
     location:location,
     experience: experience,
     head: head,
     text: text,
     slug: 'php-dev-lug-part',
     task: ['Backend development in Magento or WordPress.'],
-    nameProf: 'PHP DEVELOPERS',
+    nameProf: 'PHP',
     descript:<p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
     mustHave: [
         'Completed a degree in computer science (or similar)',
