@@ -10,32 +10,32 @@ const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-c
 
 const jobs = {
     id: "Tunis",
-    namePosition: "Full stack - Node JS - React JS Intern",
+    namePosition: "Full stack - Noe JS - Reat JS Intrn",
     location:location,
     experience: experience,
     head: head,
     text: text,
-    slug: 'php-dev-lug-part',
-    task: ['Backend development in Magento or WordPress.'],
-    nameProf: 'PHP DEVELOPERS',
+    slug: 'php-dev-lugpart',
+    task: ['Backend development in Magnto or WordPress.'],
+    nameProf: 'PHP DEVELPERS',
     descript:<p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
     mustHave: [
-        'Completed a degree in computer science (or similar)',
-        '1-3 years experience on similar role',
-        'Relevant and CV-proven experience in PHP projects',
-        'Good knowledge in PHP',
-        'Knowledge in Laravel / Zend frameworks',
-        'Knowledge in English spoken and written is mandatory.'
+        'Completed a deg in computer science (or similar)',
+        '1-3 ars experience on similar role',
+        'Relevantnd CV-proven experience in PHP projects',
+        'Good knowlge in PHP',
+        'Knowlee in Laravel / Zend frameworks',
+        'Knowlge in English spoken and written is mdatory.'
     ],
     niceToHave: [
-        'Knowledge in Magento 1 and/or Magento 2',
-        'Knowledge in WordPress',
-        'Experience in Agile environment',
-        'Knowledge in Trello, Jira, Confluence.'
+        'Knowledge in Mento 1 and/or Magento 2',
+        'Knowledge in Wordess',
+        'Experience in Ale environment',
+        'Knowledge in Treo, Jira, Confluence.'
     ], weOffer: [
-        'Career opportunities',
-        'English lessons',
-        'Chartered accountant for quarterly tax/consultancy.'
+        'Career oppounities',
+        'English lesns',
+        'Chartered aountant for quarterly tax/consultancy.'
     ]
 }
 export default jobs
