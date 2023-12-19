@@ -10,7 +10,7 @@ const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-c
 
 const jobs = {
     id: "Tunis asd", 
-    namePosition: "Node JS - Ret JS Intern",   
+    namePosition: "Node JS - React JS Intern",   
     location:location,
     experience: experience,
     head: head,
@@ -20,22 +20,22 @@ const jobs = {
     nameProf: 'PHP INVALID',
     descript:<p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
     mustHave: [
-        'Completed a deee in computer sciee (or similar)',
+        'Completed a degree in computer science (or similar)',
         '1-3 years experience on similar role',
-        'Relevant andV-proven experience in PHP projects',
+        'Relevant and CV-proven experience in PHP projects',
         'Good knowledge in PHP',
-        'Knowledge inLarael / Zend frameworks',
-        'Knowledge in English spokand written is mandatory.'
+        'Knowledge in Laravel / Zend frameworks',
+        'Knowledge in English spoken and written is mandatory.'
     ],
     niceToHave: [
-        'Knowledge in Mageo 1 and/or Magento 2',
-        'Knowledge in WoPress',
-        'Experice in Agile environment',
+        'Knowledge in Magento 1 and/or Magento 2',
+        'Knowledge in WordPress',
+        'Experience in Agile environment',
         'Knowledge in Trello, Jira, Confluence.'
     ], weOffer: [
-        'Career opportuties',
+        'Career opportunities',
         'English lessons',
-        'Chartered accounta for quarterly tax/nsultancy.'
+        'Chartered accountant for quarterly tax/consultancy.'
     ]
 }
 export default jobs
