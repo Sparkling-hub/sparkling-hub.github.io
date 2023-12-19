@@ -35,8 +35,8 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 			<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
 				role="button"
 				
-				tabIndex={0}
-				onClick={handleClick}
+				tabIndex={0}				
+				onClick={(e) => {handleClick}}
 				onKeyDown={(e) => {
 				  if (e.key === 'Enter' || e.key === ' ') {
 					handleClick();
@@ -72,6 +72,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 				
 					tabIndex={0}
 					onClick={handleClick}
+					handleSubmit
 					onKeyDown={(e) => {
 					  if (e.key === 'Enter' || e.key === ' ') {
 						handleClick();
