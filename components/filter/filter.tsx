@@ -2,14 +2,12 @@ import React from 'react';
 import MyMultileSelect from '../my-multi-select';
 import IFilterProps from '@/interface/IFilterProps';
 
-import MySingleSelect from '../my-single-select';
-
 
 const Filter: React.FC<IFilterProps> = ({ 	dataJobs, 
 											filterPhraze,
-											activeMultiselect,
+											activeLocations,
 											uniqueIds,
-											activeSingleselect,											
+											activePositions,											
 											uniqueExp, 
 											
 											handleFilterPrazeChange,
@@ -37,7 +35,7 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 
 				<MyMultileSelect name={"location"}
 								 uniqueIds={uniqueIds}
-								 activeMultiselect={activeMultiselect}
+								 activeLocations={activeLocations}
 								 placeholder="Set Location"
 								 handleLocationChange={handleLocationChange}
 								 deleteItem={deleteItem} />
@@ -45,7 +43,7 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 
 				<MyMultileSelect name={"exp"}
 								uniqueIds={uniqueExp}
-								activeMultiselect={activeSingleselect}
+								activeLocations={activePositions}
 								placeholder="Set Position"
 								handleLocationChange={handleLocationChange} deleteItem={deleteItem} />
 								

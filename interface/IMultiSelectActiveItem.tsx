@@ -7,7 +7,7 @@ interface IMultiSelectActiveItem {
     id: string 
     deleteItem: (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[])=> void
     name: string;
-    activeMultiselect: string[];
+    activeLocations: string[];
   }
   
 export default IMultiSelectActiveItem

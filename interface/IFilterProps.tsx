@@ -7,9 +7,9 @@ import IJob from "./IJob"
 interface IFilterProps {
     dataJobs: IJob[]
     filterPhraze: string
-    activeMultiselect: string[]
+    activeLocations: string[]
     uniqueIds: string[]
-    activeSingleselect: string[]  
+    activePositions: string[]  
     uniqueExp: string[]
     
     handleFilterPrazeChange: (event: ChangeEvent<HTMLInputElement>) => void

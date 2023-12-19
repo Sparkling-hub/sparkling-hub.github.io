@@ -4,7 +4,7 @@ import MultiSelectActiveItem from '../multi-select-active-item';
 import IMultiSelect from '@/interface/IMultiSelect';
 import InputLocate from '../ui/custom-input-jobs';
 
-const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeMultiselect, placeholder, handleLocationChange, deleteItem }) => {
+const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocations, placeholder, handleLocationChange, deleteItem }) => {
 
 	const [isActive, setIsActive] = useState(false);
 
@@ -37,13 +37,13 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeMulti
  
 		<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`} onClick={handleClick}>
 
-			<div className={`${isActive ? 'min-h-8' : 'p-4'} flex left-3 flex-wrap items-center h-max ${activeMultiselect.length?' p-3':''}`}>
+			<div className={`${isActive ? 'min-h-8' : 'p-4'} flex left-3 flex-wrap items-center h-max ${activeLocations.length?' p-3':''}`}>
 
-				{activeMultiselect.map(id => (
+				{activeLocations.map(id => (
 					<MultiSelectActiveItem key={id}
 						deleteItem={deleteItem}
 						name={name}
-						activeMultiselect={activeMultiselect}
+						activeLocations={activeLocations}
 						id={id} />
 				))}
 
@@ -56,7 +56,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeMulti
 					id={"focused_input"}
 					type={"text"}
 					value={searchValue}
-					placeholder={activeMultiselect.length?"": placeholder }
+					placeholder={activeLocations.length?"": placeholder }
 					name={name}
 					handleSearchChange={handleSearchChange}
 				/><div className="flex top-19 h-max w-full left-0 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown}>
@@ -65,8 +65,8 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeMulti
 						<CheckboxSelect
 							key={id}
 							id={id}
-							checked={activeMultiselect.includes(id)}
-							onChange={(event) => handleLocationChange(event, name,activeMultiselect)}
+							checked={activeLocations.includes(id)}
+							onChange={(event) => handleLocationChange(event, name,activeLocations)}
 						/>
 					)) : "No found"}
 
