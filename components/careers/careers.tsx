@@ -9,9 +9,9 @@ import ICareersProps from '@/interface/ICareersProps';
 
 const Careers: React.FC<ICareersProps> = () => {
 
-	const [filterPhraze, setfilterPhraze] = useState<string>("");
+	const [filterPhraze, setFilterPhraze] = useState<string>("");
 	const [uniqueIds, setUniqueIds] = useState<string[]>([]);	
-	const [activeLocations, setactiveLocations] = useState<string[]>([]);
+	const [activeLocations, setActiveLocations] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
 	const [activePositions, setActivePositions] = useState<string[]>([]);
 	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
@@ -25,13 +25,13 @@ const Careers: React.FC<ICareersProps> = () => {
 			newValue = active.filter( (value) => value != e.currentTarget.id)
 		}		
 
-		if(name==='location'){setactiveLocations(newValue);}
+		if(name==='location'){setActiveLocations(newValue);}
 		if(name==='exp'){setActivePositions(newValue)}
 	};
 
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
 
-		setfilterPhraze(e.currentTarget.value)
+		setFilterPhraze(e.currentTarget.value)
 	
 	};
 	const deleteItem = (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[]) => {
@@ -39,7 +39,7 @@ const Careers: React.FC<ICareersProps> = () => {
 		console.log(active)
 		const newValue = active.filter((value) => value !== idToDelete);
 	
-		if(name==='location'){setactiveLocations(newValue);}
+		if(name==='location'){setActiveLocations(newValue);}
 		if(name==='exp'){setActivePositions(newValue)}
 		e.stopPropagation();
 	  };
