@@ -11,9 +11,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 	const handleClick = () => {
 		setIsActive(!isActive);
 	};
-	const handleClickDropDown = (e: any) => {		
-		e.stopPropagation()
-	};
+
 	const [searchValue, setSearchValue] = useState('');
 	const [filteredIds, setFilteredIds] = useState(uniqueIds);
 	useEffect(() => {
