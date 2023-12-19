@@ -32,8 +32,16 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 	return (
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
 
-			<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}				
-				onClick={() => {handleClick()}}
+			<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
+				role="button"
+				
+				tabIndex={0}
+				onClick={handleClick}
+				onKeyDown={(e) => {
+				  if (e.key === 'Enter' || e.key === ' ') {
+					handleClick();
+				  }
+				}}
 			>
 
 
@@ -60,7 +68,15 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 						name={name}
 						handleSearchChange={handleSearchChange}
 					/><div className="flex top-19 h-max w-full left-0 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" 
-					onClick={() => {handleClick()}}
+					role="button"
+				
+					tabIndex={0}
+					onClick={handleClick}
+					onKeyDown={(e) => {
+					  if (e.key === 'Enter' || e.key === ' ') {
+						handleClick();
+					  }
+					}}
 				>
 
 						{filteredIds.length ? filteredIds.map(id => (
