@@ -1,4 +1,5 @@
 "use strict";
+
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const nodemailer_1 = require("nodemailer");
@@ -26,6 +27,7 @@ app.use(express_1.json());
 app.use((0, cors_1)());
 
 app.use(helmet.hidePoweredBy());
+
 const validateForm = [
     (0, express_validator_1.body)('formData.name').isLength({ min: 0, max: 255 }).withMessage('Name is required and must be less than 255 characters'),
     (0, express_validator_1.body)('formData.email').isEmail().withMessage('Valid email is required'),

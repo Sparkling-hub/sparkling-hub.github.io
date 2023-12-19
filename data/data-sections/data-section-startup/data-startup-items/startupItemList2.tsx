@@ -1,12 +1,11 @@
-const content = <p>ideally a collaborative team of minimum 2-3 engineers, working together to plan, execute and implement the code in Agile sprints.</p>
+const content = <p>Oversees and facilitates the project, bridging the gap between technical and non-technical aspects.</p>
 
-const header = <h3>A team of Software Engineers</h3>
+const header = <h3>Project Manager</h3>
 
 const element = {
     header: header,
     content: content,
-    img: '/img/startup/section2/Software Engineer Avatar.svg',
+    img: '/img/startup/section2/Project Manager Avatar.svg',
     index: 2,
-
 }
 export default element
