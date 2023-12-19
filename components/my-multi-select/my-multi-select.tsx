@@ -35,10 +35,14 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
 
 			<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
-				role='button'
-				onClick={handleClick}
+				role="button"
 				tabIndex={0}
-				onKeyDown={handleClick}
+				onClick={handleClick}
+				onKeyDown={(e) => {
+				  if (e.key === 'Enter' || e.key === ' ') {
+					handleClick();
+				  }
+				}}
 			>
 
 				<div className={`${isActive ? 'min-h-8' : 'p-4'} flex left-3 flex-wrap items-center h-max ${activeLocations.length ? ' p-3' : ''}`}>
