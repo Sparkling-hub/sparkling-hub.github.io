@@ -69,8 +69,10 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 				
 					tabIndex={0}
 					onClick={handleClick}
+
 					onKeyDown={handleClick}
 					
+
 
 				>
 
