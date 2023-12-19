@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import JobsFiltre from './job/job';
 import IJobListProps from '@/interface/IJobListProps';
 
