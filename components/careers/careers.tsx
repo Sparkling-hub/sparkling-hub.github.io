@@ -3,7 +3,7 @@ import dataJobs from '../../data/data-jobs';
 import JobList from '../job-list';
 import Filter from '../filter/filter';
 import ICareersProps from '@/interface/ICareersProps';
-
+import {getIds} from './search_function/search_function'
 
 const Careers: React.FC<ICareersProps> = () => {
 
@@ -28,6 +28,12 @@ const Careers: React.FC<ICareersProps> = () => {
 
 	};
 
+	useEffect(() => {		
+
+		setUniqueIds(getIds(dataJobs, "id"));
+		setUniqueExp(getIds(dataJobs, "nameProf"));
+
+	}, [dataJobs]);
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
 
 		setFilterPraze(e.currentTarget.value)
