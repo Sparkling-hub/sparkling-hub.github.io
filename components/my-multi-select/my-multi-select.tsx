@@ -33,15 +33,10 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 
 	return (
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
-<<<<<<< HEAD
- 
-
-		<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`} onClick={handleClick}>
-=======
->>>>>>> fd9ca2c7c5970948b709f2f195055ae7692b3064
 
 			<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
 				role="button"
+				type="button"
 				tabIndex={0}
 				onClick={handleClick}
 				onKeyDown={(e) => {
@@ -51,44 +46,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 				}}
 			>
 
-<<<<<<< HEAD
 
-				{activeMultiselect.map(id => (
-					<MultiSelectActiveItem key={id}
-						deleteItem={deleteItem}
-	name={name}
-						activeMultiselect={activeMultiselect}
-
-						id={id} />
-				))}
-
-			</div>
-
-			<div className={` flex items-center absolute right-4 top-5 z-10`}><img src="/img/down-arrow-svgrepo-com.svg" className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
-			</div>
-
-			<div className={`mt-4`} >
-
-				<InputLocate
-					id={"focused_input"}
-					type={"text"}
-					value={searchValue}
-
-					placeholder={activeMultiselect.length?"": placeholder }
-					name={name}
-					handleSearchChange={handleSearchChange}
-				/><div className="flex top-19 h-max w-full left-0 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" onClick={handleClickDropDown}>
-
-
-					{filteredIds.length ? filteredIds.map(id => (
-						<CheckboxSelect
-							key={id}
-							id={id}
-							checked={activeMultiselect.includes(id)}
-							onChange={(event) => handleLocationChange(event, name,activeMultiselect)}
-						/>
-					)) : "No found"}
-=======
 				<div className={`${isActive ? 'min-h-8' : 'p-4'} flex left-3 flex-wrap items-center h-max ${activeLocations.length ? ' p-3' : ''}`}>
 
 					{activeLocations.map(id => (
@@ -121,8 +79,6 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 								onChange={(event) => handleParamsChange(event, name, activeLocations)}
 							/>
 						)) : "No found"}
->>>>>>> fd9ca2c7c5970948b709f2f195055ae7692b3064
-
 
 
 					</div>
