@@ -2,8 +2,6 @@ import React from 'react';
 import MyMultileSelect from '../my-multi-select';
 import IFilterProps from '@/interface/IFilterProps';
 
-import MySingleSelect from '../my-single-select';
-
 
 const Filter: React.FC<IFilterProps> = ({ 	dataJobs, 
 											filterPhraze,
@@ -46,7 +44,8 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 				<MyMultileSelect name={"exp"}
 								uniqueIds={uniqueExp}
 								activeMultiselect={activeSingleselect}
-								placeholder="Set Location"
+								placeholder="Set Position"
+
 								handleLocationChange={handleLocationChange} deleteItem={deleteItem} />
 								
 								

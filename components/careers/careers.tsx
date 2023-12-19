@@ -2,12 +2,7 @@ import { useState, useEffect, ChangeEvent, MouseEventHandler } from 'react';
 import dataJobs from '../../data/data-jobs';
 import JobList from '../job-list';
 import Filter from '../filter/filter';
-import {getResult} from "../search_function/search_function"
-
 import ICareersProps from '@/interface/ICareersProps';
-import IJob from '@/interface/IJob';
-import exp from 'constants';
-
 
 
 const Careers: React.FC<ICareersProps> = () => {
@@ -20,7 +15,6 @@ const Careers: React.FC<ICareersProps> = () => {
 	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
 		
 		let newValue: string[] = []
-		
 		if (e.target.checked) {
 			newValue = [...active, e.currentTarget.id]
 		}
@@ -28,8 +22,10 @@ const Careers: React.FC<ICareersProps> = () => {
 			newValue = active.filter( (value) => value != e.currentTarget.id)
 		}		
 
+
+		if(name==='location'){setLocation(newValue);}
 		if(name==='exp'){setExp(newValue)}
-		if(name==='location'){setLocation(newValue)}
+
 	};
 
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -37,26 +33,22 @@ const Careers: React.FC<ICareersProps> = () => {
 		setFilterPraze(e.currentTarget.value)
 	
 	};
-	const deleteItem: MouseEventHandler<HTMLSpanElement> = (e) => {
-		
-		let newValue = activeMultiselect.filter( (value) => value != e.currentTarget.id)
-		setLocation(newValue);
-		e.stopPropagation()
-		
-	};
-
-	useEffect(() => {		
-
-		setUniqueIds(getResult(dataJobs, "id"));
-		setUniqueExp(getResult(dataJobs, "nameProf"));
-
-	}, [dataJobs]);
-
+	const deleteItem = (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[]) => {
+		const idToDelete = e.currentTarget.id.toString(); // Convert to string
+		console.log(active)
+		const newValue = active.filter((value) => value !== idToDelete);
+	
+		if(name==='location'){setLocation(newValue);}
+		if(name==='exp'){setExp(newValue)}
+		e.stopPropagation();
+	  };
+	  
+	
 	const filteredJobsList = dataJobs.filter((job)=>{												
 										if(!activeMultiselect.length) return dataJobs												
 										return activeMultiselect.includes(job.id) })
 									 .filter((job)=>{
-										if(!activeSingleselect) return dataJobs
+										if(!activeSingleselect.length) return dataJobs
 										return activeSingleselect.includes(job.nameProf)})
 									 .filter((job)=>{
 										if(!filterPhraze) return dataJobs										
