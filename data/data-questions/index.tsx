@@ -8,8 +8,6 @@ import questionSeven from "./questionSeven"
 import questionEight from "./questionEight"
 import questionNine from "./questionNine"
 import IQustion from "../../interface/IQustion";
-
-
 const question: Record<string, IQustion> = {
     questionOne: questionOne,
     questionTwo: questionTwo,
@@ -19,7 +17,8 @@ const question: Record<string, IQustion> = {
     questionSix:questionSix,
     questionSeven:questionSeven,
     questionEight:questionEight,
-    questionNine:questionNine  
+    questionNine:questionNine
+  
   };
   
   export default {question}

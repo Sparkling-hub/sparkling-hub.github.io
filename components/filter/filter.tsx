@@ -7,15 +7,15 @@ import MySingleSelect from '../my-single-select';
 
 const Filter: React.FC<IFilterProps> = ({ 	dataJobs, 
 											filterPhraze,
-											location,
+											activeMultiselect,
 											uniqueIds,
-											position,											
+											activeSingleselect,											
 											uniqueExp, 
 											
 											handleFilterPrazeChange,
 											handleLocationChange, 
 											deleteItem,
-											handleExpChange, 
+						
 											}) => {
 
 	return (
@@ -35,19 +35,21 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 					</button>
 				</div>
 
-				<MyMultileSelect dataJobs={dataJobs}
+				<MyMultileSelect name={"location"}
 								 uniqueIds={uniqueIds}
-								 location={location}
+								 activeMultiselect={activeMultiselect}
 								 placeholder="Set Location"
 								 handleLocationChange={handleLocationChange}
 								 deleteItem={deleteItem} />
 
 
-				<MySingleSelect dataJobs={dataJobs}
-								uniqueExp={uniqueExp}
-								position={position}
+				<MyMultileSelect name={"exp"}
+								uniqueIds={uniqueExp}
+								activeMultiselect={activeSingleselect}
 								placeholder="Set Location"
-								handleExpChange={handleExpChange} />
+								handleLocationChange={handleLocationChange} deleteItem={deleteItem} />
+								
+								
 
 			</div>
 		</div>

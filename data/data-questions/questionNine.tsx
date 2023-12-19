@@ -5,7 +5,6 @@ your specifics and requirements but not limit themselves on taking orders, they 
 proactively suggest solutions. You can pick a few team members in addition to your current
 crew or create the team from scratch.</p>
 const element = {
-    id: 9,
     question:question,
     answer:answer
 }

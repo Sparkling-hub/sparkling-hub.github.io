@@ -4,7 +4,6 @@ blockchain, cybersecurity, hospitality, entertainment, retail, advertising, e-co
 telecommunication, gambling, news, real estate and many more. Check out what our most
 recent clients say about us. “link text to references” (maybe).</p>
 const element = {
-    id: 7,
     question:question,
     answer:answer
 }

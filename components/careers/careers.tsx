@@ -3,59 +3,64 @@ import dataJobs from '../../data/data-jobs';
 import JobList from '../job-list';
 import Filter from '../filter/filter';
 import {getResult} from "../search_function/search_function"
+
 import ICareersProps from '@/interface/ICareersProps';
+import IJob from '@/interface/IJob';
+import exp from 'constants';
+
 
 
 const Careers: React.FC<ICareersProps> = () => {
 
-	const [filterPhraze, setFilterPhraze] = useState<string>("");
+	const [filterPhraze, setFilterPraze] = useState<string>("");
 	const [uniqueIds, setUniqueIds] = useState<string[]>([]);	
-	const [location, setLocation] = useState<string[]>([]);
+	const [activeMultiselect, setLocation] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
-	const [position, setPosition] = useState<string>("");
-	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
+	const [activeSingleselect, setExp] = useState<string[]>([]);
+	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
 		
 		let newValue: string[] = []
-
+	
 		if (e.target.checked) {
-			newValue = [...location, e.currentTarget.id]
+			newValue = [...active, e.currentTarget.id]
 		}
 		else if (!e.currentTarget.checked){
-			newValue = location.filter( (value) => value != e.currentTarget.id)
+			newValue = active.filter( (value) => value != e.currentTarget.id)
 		}		
-		setLocation(newValue);
-	};
-	const handleExpChange = (e: ChangeEvent<HTMLInputElement>) => {
 
-		setPosition(e.currentTarget.id)
-	
+		if(name==='location'){setLocation(newValue);}
+		if(name==='exp'){setExp(newValue)}
 	};
+
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
 
-		setFilterPhraze(e.currentTarget.value)
+		setFilterPraze(e.currentTarget.value)
 	
 	};
-	const deleteItem: MouseEventHandler<HTMLSpanElement> = (e) => {
-		
-		let newValue = location.filter( (value) => value != e.currentTarget.id)
-		setLocation(newValue);
-		e.stopPropagation()
-		
-	};
+	const deleteItem = (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[]) => {
+		const idToDelete = e.currentTarget.id.toString(); // Convert to string
+		console.log(active)
+		const newValue = active.filter((value) => value !== idToDelete);
+	
+		if(name==='location'){setLocation(newValue);}
+		if(name==='exp'){setExp(newValue)}
+		e.stopPropagation();
+	  };
+	  
 
 	useEffect(() => {		
-	
+
 		setUniqueIds(getResult(dataJobs, "id"));
 		setUniqueExp(getResult(dataJobs, "nameProf"));
 
 	}, [dataJobs]);
 
 	const filteredJobsList = dataJobs.filter((job)=>{												
-										if(!location.length) return dataJobs												
-										return location.includes(job.id) })
+										if(!activeMultiselect.length) return dataJobs												
+										return activeMultiselect.includes(job.id) })
 									 .filter((job)=>{
-										if(!position) return dataJobs
-										return position.includes(job.nameProf)})
+										if(!activeSingleselect) return dataJobs
+										return activeSingleselect.includes(job.nameProf)})
 									 .filter((job)=>{
 										if(!filterPhraze) return dataJobs										
 										return job.namePosition.toLowerCase().includes(filterPhraze.toLowerCase())})
@@ -65,15 +70,15 @@ const Careers: React.FC<ICareersProps> = () => {
 
 			<Filter dataJobs={dataJobs} 
 					filterPhraze={filterPhraze}
-					location = {location}
+					activeMultiselect = {activeMultiselect}
 					uniqueIds={uniqueIds}					
-					position = {position}
+					activeSingleselect = {activeSingleselect}
 					uniqueExp={uniqueExp}
 
 					handleFilterPrazeChange={handleFilterPrazeChange}
 					handleLocationChange={handleLocationChange}
 					deleteItem = {deleteItem}					
-					handleExpChange={handleExpChange} 
+
 					/>
 
 			<JobList jobs = {filteredJobsList}/>

@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useState  } from 'react';
 
 interface InputProps {
   name: string ;
@@ -6,10 +6,10 @@ interface InputProps {
   placeholder?: string ;
   value: string | number | undefined;
   id:string;
-
   handleSearchChange: (event: ChangeEvent<HTMLInputElement>) => void;
 
 }
+
 
 
 const Input: React.FC<InputProps> = ({ name, id,type, placeholder, value , handleSearchChange}) => {
@@ -22,8 +22,8 @@ const Input: React.FC<InputProps> = ({ name, id,type, placeholder, value , handl
       placeholder={placeholder}
       value={value}
       onChange={handleSearchChange}
-      className="w-full p-2 placeholder-teal-800 focus:outline-none bg-color-primary-medium focus:bg-color-primary-medium focus:bg-color-primary-medium"
-    />
+      className="w-full absolute z-10 top-0 left-0 my-3 px-5 z-auto  placeholder-teal-800 focus:outline-none bg-color-primary-medium focus:bg-color-primary-medium focus:bg-color-primary-medium"
+    /> 
   );
 };
 

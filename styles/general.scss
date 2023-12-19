@@ -549,14 +549,16 @@ li:not(:last-child).highlight .s-b-s-text {
     top: 50px;
     margin: 1.5rem;
     width: 25%;
-    height: 300px;
-    border: 1px solid #e2e8f0;    
+	height: max-content;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
+    border: none;
     border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
-    z-index: 15;
+    z-index: 1;
 
     box-shadow: -10px 10px 0px $primaryDarkColor;
 
@@ -592,6 +594,12 @@ li:not(:last-child).highlight .s-b-s-text {
 
     }
 
+    & input:focus {
+       
+    
+
+    }
+
 }
 .my-multiple-select .list,
 .my-single-select .list{
@@ -613,6 +621,9 @@ li:not(:last-child).highlight .s-b-s-text {
 .my-multiple-select .active-item,
 .my-single-select .active-item  {
 	background: #17cfc2;
+}
+.my-multiple-select .active-item,
+.my-single-select .active-item {
 	color: white;
 }
 .my-multiple-select .active-item-container,

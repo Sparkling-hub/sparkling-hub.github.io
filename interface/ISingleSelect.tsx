@@ -1,5 +1,5 @@
 
-import { ChangeEvent } from "react"
+import { ChangeEvent, MouseEventHandler } from "react"
 import IJob from "./IJob"
 
 
@@ -7,7 +7,7 @@ import IJob from "./IJob"
 interface ISingleSelect {
     dataJobs: IJob[]
     uniqueExp: string[]
-    position: string
+    activeSingleselect: string
     placeholder: string    
 
     handleExpChange:  (event: ChangeEvent<HTMLInputElement>) => void

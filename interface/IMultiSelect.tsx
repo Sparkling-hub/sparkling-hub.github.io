@@ -5,13 +5,12 @@ import IJob from "./IJob"
 
 
 interface IMultiSelect {
-    dataJobs: IJob[]
+    name: string;
     uniqueIds: string[]
-    location: string[]
+    activeMultiselect: string[]
     placeholder: string    
-
-    handleLocationChange:  (event: ChangeEvent<HTMLInputElement>) => void
-    deleteItem:  MouseEventHandler<HTMLSpanElement>;
+    handleLocationChange: (event: ChangeEvent<HTMLInputElement>, name:string,active:string[]) => void
+    deleteItem: (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[])=> void
   }
   
 export default IMultiSelect

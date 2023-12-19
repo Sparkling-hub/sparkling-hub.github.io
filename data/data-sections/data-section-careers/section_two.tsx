@@ -1,7 +1,8 @@
 import Button from "../../../components/button";
 import Careers from "../../../components/careers";
 
-
+const header =
+	<h3></h3>
 
 
 const content =
@@ -17,7 +18,8 @@ const content =
 
 const button = <Button href={"/contact#form-contact"} text="Get in touch" />
 const element = {
-	content: content,	
+	content: content,
+	header: header,
 	background: 'bg-teal-50',
 	id: "jobs",
 	button: button
