@@ -33,11 +33,8 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
 
 			<button className={`my-multiple-select-container w-full flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
-				role="button"
-
-				tabIndex={0}
 				onClick={handleClick}
-				onKeyDown={handleClick}	  
+	 
 
 			>
 
@@ -65,12 +62,9 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 						name={name}
 						handleSearchChange={handleSearchChange}
 					/><button className=" text-left flex top-19 h-max w-full left-0 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" 
-					role="button"
-				
-					tabIndex={0}
+
 					onClick={handleClick}
 
-					onKeyDown={handleClick}
 					
 
 
