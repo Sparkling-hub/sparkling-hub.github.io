@@ -37,11 +37,10 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 				
 				tabIndex={0}
 				onClick={handleClick}
-				onKeyDown={(e) => {
-				  if (e.key === 'Enter' || e.key === ' ') {
-					handleClick();
+				onKeyDown={
+					handleClick;
 				  }
-				}}
+				}
 			>
 
 
@@ -72,11 +71,8 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 				
 					tabIndex={0}
 					onClick={handleClick}
-					onKeyDown={(e) => {
-					  if (e.key === 'Enter' || e.key === ' ') {
-						handleClick();
-					  }
-					}}
+					onKeyDown={
+						handleClick}
 				>
 
 						{filteredIds.length ? filteredIds.map(id => (
