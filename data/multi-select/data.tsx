@@ -118,13 +118,7 @@ export interface ColourOption {
     { id: 2, label: 'Bulldog' },
     { id: 3, label: 'Dachshund' },
     { id: 4, label: 'Akita' },
-  ];
-  
-  // let bigOptions = [];
-  // for (let i = 0; i < 10000; i++) {
-  // 	bigOptions = bigOptions.concat(colourOptions);
-  // }
-  
+  ];  
   export interface GroupedOption {
     readonly label: string;
     readonly options: readonly ColourOption[] | readonly FlavourOption[];
