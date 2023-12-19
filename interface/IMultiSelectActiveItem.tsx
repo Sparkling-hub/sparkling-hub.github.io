@@ -1,13 +1,12 @@
-import { MouseEventHandler } from "react"
-
-
 
 interface IMultiSelectActiveItem {
     
-    id: string 
-    deleteItem: (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[])=> void
+    id: string     
     name: string;
-    activeMultiselect: string[];
+    activeLocations: string[];  
+      
+    deleteItem: (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[])=> void     
+
   }
   
 export default IMultiSelectActiveItem

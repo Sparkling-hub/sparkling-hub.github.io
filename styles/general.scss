@@ -551,10 +551,8 @@ li:not(:last-child).highlight .s-b-s-text {
     width: 25%;
 	height: max-content;
     border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
-    border: none;
     border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
@@ -593,13 +591,6 @@ li:not(:last-child).highlight .s-b-s-text {
         top: 0;
 
     }
-
-    & input:focus {
-       
-    
-
-    }
-
 }
 .my-multiple-select .list,
 .my-single-select .list{
@@ -621,9 +612,6 @@ li:not(:last-child).highlight .s-b-s-text {
 .my-multiple-select .active-item,
 .my-single-select .active-item  {
 	background: #17cfc2;
-}
-.my-multiple-select .active-item,
-.my-single-select .active-item {
 	color: white;
 }
 .my-multiple-select .active-item-container,

@@ -5,13 +5,13 @@ import IFilterProps from '@/interface/IFilterProps';
 
 const Filter: React.FC<IFilterProps> = ({ 	dataJobs, 
 											filterPhraze,
-											activeMultiselect,
+											activeLocations,
 											uniqueIds,
-											activeSingleselect,											
+											activePositions,											
 											uniqueExp, 
 											
 											handleFilterPrazeChange,
-											handleLocationChange, 
+											handleParamsChange, 
 											deleteItem,
 						
 											}) => {
@@ -35,18 +35,20 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 
 				<MyMultileSelect name={"location"}
 								 uniqueIds={uniqueIds}
-								 activeMultiselect={activeMultiselect}
+								 activeLocations={activeLocations}
 								 placeholder="Set Location"
-								 handleLocationChange={handleLocationChange}
+								 handleParamsChange={handleParamsChange}
 								 deleteItem={deleteItem} />
 
 
 				<MyMultileSelect name={"exp"}
 								uniqueIds={uniqueExp}
-								activeMultiselect={activeSingleselect}
+								activeLocations={activePositions}
 								placeholder="Set Position"
 
-								handleLocationChange={handleLocationChange} deleteItem={deleteItem} />
+								handleParamsChange={handleParamsChange} 
+								deleteItem={deleteItem} />
+
 								
 								
 

@@ -1,18 +1,22 @@
-import { useState, useEffect, ChangeEvent, MouseEventHandler } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 import dataJobs from '../../data/data-jobs';
 import JobList from '../job-list';
-import Filter from '../filter/filter';
-import ICareersProps from '@/interface/ICareersProps';
+import Filter from '../filter'
 import {getIds} from './search_function/search_function'
+
+
+import ICareersProps from '@/interface/ICareersProps';
+
+
 
 const Careers: React.FC<ICareersProps> = () => {
 
-	const [filterPhraze, setFilterPraze] = useState<string>("");
+	const [filterPhraze, setFilterPhraze] = useState<string>("");
 	const [uniqueIds, setUniqueIds] = useState<string[]>([]);	
-	const [activeMultiselect, setLocation] = useState<string[]>([]);
+	const [activeLocations, setActiveLocations] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
-	const [activeSingleselect, setExp] = useState<string[]>([]);
-	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
+	const [activePositions, setActivePositions] = useState<string[]>([]);
+	const handleParamsChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
 		
 		let newValue: string[] = []
 		if (e.target.checked) {
@@ -23,8 +27,8 @@ const Careers: React.FC<ICareersProps> = () => {
 		}		
 
 
-		if(name==='location'){setLocation(newValue);}
-		if(name==='exp'){setExp(newValue)}
+		if(name==='location'){setActiveLocations(newValue);}
+		if(name==='exp'){setActivePositions(newValue)}
 
 	};
 
@@ -36,26 +40,27 @@ const Careers: React.FC<ICareersProps> = () => {
 	}, [dataJobs]);
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
 
-		setFilterPraze(e.currentTarget.value)
+		setFilterPhraze(e.currentTarget.value)
 	
 	};
 	const deleteItem = (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[]) => {
-		const idToDelete = e.currentTarget.id.toString(); // Convert to string
-		console.log(active)
+		const idToDelete = e.currentTarget.id.toString(); 
 		const newValue = active.filter((value) => value !== idToDelete);
 	
-		if(name==='location'){setLocation(newValue);}
-		if(name==='exp'){setExp(newValue)}
+		if(name==='location'){setActiveLocations(newValue);}
+		if(name==='exp'){setActivePositions(newValue)}
 		e.stopPropagation();
 	  };
 	  
 	
 	const filteredJobsList = dataJobs.filter((job)=>{												
-										if(!activeMultiselect.length) return dataJobs												
-										return activeMultiselect.includes(job.id) })
+										if(!activeLocations.length) return dataJobs												
+										return activeLocations.includes(job.id) })
 									 .filter((job)=>{
-										if(!activeSingleselect.length) return dataJobs
-										return activeSingleselect.includes(job.nameProf)})
+
+										if(!activePositions.length) return dataJobs
+										return activePositions.includes(job.nameProf)})
+
 									 .filter((job)=>{
 										if(!filterPhraze) return dataJobs										
 										return job.namePosition.toLowerCase().includes(filterPhraze.toLowerCase())})
@@ -65,13 +70,13 @@ const Careers: React.FC<ICareersProps> = () => {
 
 			<Filter dataJobs={dataJobs} 
 					filterPhraze={filterPhraze}
-					activeMultiselect = {activeMultiselect}
+					activeLocations = {activeLocations}
 					uniqueIds={uniqueIds}					
-					activeSingleselect = {activeSingleselect}
+					activePositions = {activePositions}
 					uniqueExp={uniqueExp}
 
 					handleFilterPrazeChange={handleFilterPrazeChange}
-					handleLocationChange={handleLocationChange}
+					handleParamsChange={handleParamsChange}
 					deleteItem = {deleteItem}					
 
 					/>

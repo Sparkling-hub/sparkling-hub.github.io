@@ -1,7 +1,4 @@
 import { ChangeEvent } from "react";
-import IJob from "./IJob"
-
-
 
 interface ICheckboxSelect {
     
