@@ -34,11 +34,11 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 
 			<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
 				role="button"
-				
+
 				tabIndex={0}
 				onClick={handleClick}
 				onKeyDown={handleClick}	  
-				
+
 			>
 
 
@@ -71,6 +71,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 					onClick={handleClick}
 					onKeyDown={handleClick}
 					
+
 				>
 
 						{filteredIds.length ? filteredIds.map(id => (
