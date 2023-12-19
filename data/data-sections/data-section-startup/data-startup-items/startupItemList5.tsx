@@ -1,11 +1,11 @@
-const content = <p>Handpicked on merit, infuse energy and innovation into projects, boosting the development progress (subject to timing and availability).</p>
+const content = <p>focusses on enhancing user experience, creating modern and intuitive designs and prototypes to ensure user-friendliness.</p>
 
-const header = <h3>Team of Graduating Students</h3>
+const header = <h3>A UI/UX Designer</h3>
 
 const element = {
     header: header,
     content: content,
-    img: '/img/startup/section2/Students Avatar.svg',
+    img: '/img/startup/section2/UI_UX Designer.png',
     index: 5,
 }
 export default element

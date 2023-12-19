@@ -3,12 +3,12 @@ import React from 'react';
 import Button from "../../components/button";
 
 const header =
-  <h1 className='h-24'><span><strong className='color-primary-light'>Team Augmentation</strong></span> </h1>
+  <h1 className='h-24'><span><strong className='color-primary-light'>Team augmentation</strong></span> </h1>
 
 
 const content = 
-				<div className="mb-12 h-52">
-					<p className='h-32'>Enhance your development efforts by extending your existing team or build your new team from scratch. Customise it to your needs to create a perfect fit!</p>
+				<div className="mb-12">
+					<p>Enhance your development efforts by extending your existing team or build your new team from scratch. Customise it to your needs to create a perfect fit!</p>
 					<ul>
 						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Full stack develoment</li>
 						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Technical support</li>

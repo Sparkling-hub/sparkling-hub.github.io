@@ -7,8 +7,8 @@ const header =
 
 
 const content = 
-				<div className="mb-12 h-52">
-					<p className='h-32'>Revamp your product strategy with personalized guidance addressing complex challenges with tailored solutions. Our experts are here to steer you back on the right track.</p>
+				<div className="mb-12">
+					<p>Revamp your product strategy with personalized guidance addressing complex challenges with tailored solutions. Our experts are here to steer you back on the right track.</p>
 					<ul>
 						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Research & Development (R&D)</li>
 						<li><img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt=""/>Architecture and DevOps</li>

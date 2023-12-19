@@ -1,10 +1,14 @@
 
-
-interface IBenefit {
-	content?: JSX.Element;
-	header?: JSX.Element;
-	image?: string;
-	index: number;
-	reverse?: boolean;
+export enum FlexValues {
+  Row = 'row',
+  ReverseRow = 'reverse-row',
 }
-export default IBenefit
+
+//TODO change to IBenefits 
+interface IBenedits { 
+    content?: JSX.Element;
+   header?: JSX.Element;
+   image?: JSX.Element;
+   flex: FlexValues;
+   }
+ export default IBenedits
