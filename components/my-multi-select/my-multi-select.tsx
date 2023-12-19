@@ -32,7 +32,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 	return (
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
 
-			<div className={`my-multiple-select-container flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
+			<button className={`my-multiple-select-container w-full flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
 				role="button"
 
 				tabIndex={0}
@@ -56,7 +56,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 				<div className={` flex items-center absolute right-4 top-5 z-10`}><img src="/img/down-arrow-svgrepo-com.svg" className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
 				</div>
 
-				<div className={`mt-4`} >
+				<div className={`mt-4 items-left`} >
 					<InputLocate
 						id={"focused_input"}
 						type={"text"}
@@ -64,7 +64,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 						placeholder={activeLocations.length ? "" : placeholder}
 						name={name}
 						handleSearchChange={handleSearchChange}
-					/><div className="flex top-19 h-max w-full left-0 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" 
+					/><button className=" text-left flex top-19 h-max w-full left-0 list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" 
 					role="button"
 				
 					tabIndex={0}
@@ -84,10 +84,10 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 						)) : "No found"}
 
 
-					</div>
+					</button>
 				</div>
 
-			</div>
+			</button>
 
 		</div>
 
