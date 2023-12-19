@@ -46,7 +46,7 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 				<MyMultileSelect name={"exp"}
 								uniqueIds={uniqueExp}
 								activeMultiselect={activeSingleselect}
-								placeholder="Set Location"
+								placeholder="Set Position"
 								handleLocationChange={handleLocationChange} deleteItem={deleteItem} />
 								
 								
