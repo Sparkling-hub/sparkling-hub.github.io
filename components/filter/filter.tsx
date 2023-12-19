@@ -11,7 +11,7 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 											uniqueExp, 
 											
 											handleFilterPrazeChange,
-											handleLocationChange, 
+											handleParamsChange, 
 											deleteItem,
 						
 											}) => {
@@ -37,7 +37,7 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 								 uniqueIds={uniqueIds}
 								 activeLocations={activeLocations}
 								 placeholder="Set Location"
-								 handleLocationChange={handleLocationChange}
+								 handleParamsChange={handleParamsChange}
 								 deleteItem={deleteItem} />
 
 
@@ -45,7 +45,8 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 								uniqueIds={uniqueExp}
 								activeLocations={activePositions}
 								placeholder="Set Position"
-								handleLocationChange={handleLocationChange} deleteItem={deleteItem} />
+								handleParamsChange={handleParamsChange} 
+								deleteItem={deleteItem} />
 								
 								
 

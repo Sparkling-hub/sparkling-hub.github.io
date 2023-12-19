@@ -14,7 +14,7 @@ const Careers: React.FC<ICareersProps> = () => {
 	const [activeLocations, setActiveLocations] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
 	const [activePositions, setActivePositions] = useState<string[]>([]);
-	const handleLocationChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
+	const handleParamsChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
 		
 		let newValue: string[] = []
 	
@@ -35,8 +35,7 @@ const Careers: React.FC<ICareersProps> = () => {
 	
 	};
 	const deleteItem = (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[]) => {
-		const idToDelete = e.currentTarget.id.toString(); // Convert to string
-		console.log(active)
+		const idToDelete = e.currentTarget.id.toString(); 
 		const newValue = active.filter((value) => value !== idToDelete);
 	
 		if(name==='location'){setActiveLocations(newValue);}
@@ -73,7 +72,7 @@ const Careers: React.FC<ICareersProps> = () => {
 					uniqueExp={uniqueExp}
 
 					handleFilterPrazeChange={handleFilterPrazeChange}
-					handleLocationChange={handleLocationChange}
+					handleParamsChange={handleParamsChange}
 					deleteItem = {deleteItem}					
 
 					/>

@@ -4,7 +4,7 @@ import MultiSelectActiveItem from '../multi-select-active-item';
 import IMultiSelect from '@/interface/IMultiSelect';
 import InputLocate from '../ui/custom-input-jobs';
 
-const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocations, placeholder, handleLocationChange, deleteItem }) => {
+const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocations, placeholder, handleParamsChange, deleteItem }) => {
 
 	const [isActive, setIsActive] = useState(false);
 
@@ -66,7 +66,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 							key={id}
 							id={id}
 							checked={activeLocations.includes(id)}
-							onChange={(event) => handleLocationChange(event, name,activeLocations)}
+							onChange={(event) => handleParamsChange(event, name,activeLocations)}
 						/>
 					)) : "No found"}
 
