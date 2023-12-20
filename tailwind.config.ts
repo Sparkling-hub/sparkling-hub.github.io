@@ -36,6 +36,9 @@ const config: Config = {
       },
       zIndex:{
         "-1":'-1'
+      },
+      width:{
+        "55":'55',
       }
     },
   },

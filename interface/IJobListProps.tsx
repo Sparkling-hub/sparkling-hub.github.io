@@ -4,7 +4,7 @@ import IJob from "./IJob"
 
 
 interface IJobListProps {
-    jobs: IJob[]
+    jobs: IJob[] 
 }
   
 export default IJobListProps
