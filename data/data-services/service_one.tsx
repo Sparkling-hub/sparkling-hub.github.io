@@ -11,16 +11,13 @@ const content =
 		<p className='h-32'>Enhance your development efforts by extending your existing team or build your new team from scratch. Customise it to your needs to create a perfect fit!</p>
 		<ul>
 			<li>
-				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />
-				Full stack develoment
+				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Full stack develoment
 			</li>
 			<li>
-				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />
-				Technical support
+				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Technical support
 			</li>
 			<li>
-				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />
-				Agile Collaboration
+				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Agile Collaboration
 			</li>
 		</ul>
 	</div>

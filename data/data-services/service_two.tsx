@@ -13,11 +13,9 @@ const content =
 		<p className='h-32'>Craft a tailored team of engineers delivering tangible results sprint after sprint. Our expertly managed engineers have a great attention to detail, taking great pride in their craft.</p>
 		<ul>
 			<li>
-				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />
-				Team and Project management</li>
+				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Team and Project management</li>
 			<li>
-				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />
-				Dedicated fully functional team</li>
+				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Dedicated fully functional team</li>
 			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Swiss Quality Assurance
 			</li>
