@@ -1,11 +1,11 @@
 
+
 import { ChangeEvent } from "react";
 import IJob from "./IJob"
 import ICheckboxItem from "./IChekboxItem";
 
-
-
 interface IFilterProps {
+  
     dataJobs: IJob[]
     filterPhraze: string
     activeLocations: string[]

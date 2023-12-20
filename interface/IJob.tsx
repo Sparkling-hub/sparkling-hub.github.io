@@ -1,4 +1,7 @@
+
+
 interface IJob {
+
 	namePosition: any;
 	id: string;
 	location: JSX.Element;
@@ -12,6 +15,7 @@ interface IJob {
 	mustHave: string[];
 	niceToHave: string[];
 	weOffer: string[];
+	
 }
 
 export default IJob
