@@ -1,8 +1,13 @@
 import { ChangeEvent } from "react";
 
+interface ICheckboxItem {
+  value: string;
+  count: number;
+}
+
 interface ICheckboxSelect {
     
-    id: string
+    id: ICheckboxItem
     checked: boolean
 
     onChange: (event: ChangeEvent<HTMLInputElement>) => void;
