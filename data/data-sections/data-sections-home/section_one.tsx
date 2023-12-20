@@ -2,9 +2,7 @@ import Button from "../../../components/button";
 
 const header = (
   <h1 className="section_one">
-    We
-    <span className="color-primary-light mx-4">build</span>
-    software to
+    <div>We<span className="color-primary-light mx-4">build</span>software to</div> 
     <br />
     <strong className="s2-uppercase"> reach your goals</strong>
   </h1>
