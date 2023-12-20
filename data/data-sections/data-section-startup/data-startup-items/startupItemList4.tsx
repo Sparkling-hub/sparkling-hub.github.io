@@ -1,4 +1,8 @@
-const content = <p>Focusses on enhancing user experience, creating modern and intuitive designs and prototypes to ensure user-friendliness.</p>
+const content =
+    <p>
+        Focusses on enhancing user experience, creating modern and intuitive designs
+        and prototypes to ensure user-friendliness.
+    </p>
 
 const header = <h3>UI/UX Designer</h3>
 

@@ -2,7 +2,11 @@ import Button from "../../../components/button";
 
 const header = (
   <h1 className="section_one">
-    We <span className="color-primary-light">build </span>software to <br />{" "}
+    We
+    <span className="color-primary-light">build </span>
+    software to
+    <br />
+    {" "}
     <strong className="s2-uppercase"> reach your goals</strong>
   </h1>
 );
@@ -20,9 +24,9 @@ const image = <img src="/img/section/sectionOne.png" className="w-full" alt='sec
 const button = <Button href="/contact" text="Get in touch" />;
 const element = {
   content: content,
-  header: header,  
-  index: 1,  
-  image: image,  
-  button: button,  
+  header: header,
+  index: 1,
+  image: image,
+  button: button,
 };
 export default element;
