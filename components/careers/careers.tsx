@@ -6,15 +6,16 @@ import {getIds} from './search_function/search_function'
 
 
 import ICareersProps from '@/interface/ICareersProps';
+import ICheckboxItem from '@/interface/IChekboxItem';
 
 
 
 const Careers: React.FC<ICareersProps> = () => {
 
 	const [filterPhraze, setFilterPhraze] = useState<string>("");
-	const [uniqueIds, setUniqueIds] = useState<string[]>([]);	
+	const [uniqueIds, setUniqueIds] = useState<ICheckboxItem[]>([]);	
 	const [activeLocations, setActiveLocations] = useState<string[]>([]);
-	const [uniqueExp, setUniqueExp] = useState<string[]>([]);
+	const [uniqueExp, setUniqueExp] = useState<ICheckboxItem[]>([]);
 	const [activePositions, setActivePositions] = useState<string[]>([]);
 	const handleParamsChange = (e: ChangeEvent<HTMLInputElement>,name:string, active:string[]) => {
 		
