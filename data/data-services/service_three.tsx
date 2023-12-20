@@ -14,7 +14,8 @@ const content =
 		</p>
 		<ul>
 			<li>
-				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Research & Development (R&D)</li>
+				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Research & Development (R&D)
+			</li>
 			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Architecture and DevOps
 			</li>
