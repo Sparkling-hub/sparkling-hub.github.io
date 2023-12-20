@@ -1,7 +1,6 @@
 
 
 
-
 interface ICheckboxItem {
     value: string;
     count: number;
