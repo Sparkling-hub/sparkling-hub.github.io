@@ -6,6 +6,7 @@ import startupItemList4 from './startupItemList4';
 import startupItemList5 from './startupItemList5';
 import IStartupItem from '@/interface/IStartupItem';
 
+
 const startupItemList: IStartupItem[] = [
   startupItemList1,
   startupItemList2,

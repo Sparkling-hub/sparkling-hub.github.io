@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import ButtonCircle from "../circle-button";
 import IQustion from '../../../interface/IQustion';
-import type { FC } from 'react';
 
-const DisabledSelect: FC<{ data: IQustion }> = ({ data }) => {
+const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDropdownToggle = () => {
