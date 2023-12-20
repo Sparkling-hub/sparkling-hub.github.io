@@ -3,7 +3,7 @@ import Button from "../../../components/button";
 const header = (
   <h1 className="section_one">
     We
-    <span className="color-primary-light">build </span>
+    <span className="color-primary-light mx-4">build</span>
     software to
     <br />
     <strong className="s2-uppercase"> reach your goals</strong>

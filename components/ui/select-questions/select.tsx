@@ -16,10 +16,7 @@ const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
             :
             'rounded-2xl bg-slate-100'
           }`}
-        role='button'
         onClick={handleDropdownToggle}
-        tabIndex={0}
-        onKeyDown={handleDropdownToggle}
       >
         <span className="block relative flex justify-between ">
           {data.question}
