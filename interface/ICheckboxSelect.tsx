@@ -1,9 +1,7 @@
 import { ChangeEvent } from "react";
+import ICheckboxItem from "./IChekboxItem";
 
-interface ICheckboxItem {
-  value: string;
-  count: number;
-}
+
 
 interface ICheckboxSelect {
     

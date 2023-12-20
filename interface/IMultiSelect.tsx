@@ -1,9 +1,11 @@
 
 import { ChangeEvent } from "react"
+import ICheckboxItem from "./IChekboxItem";
+
 
 interface IMultiSelect {
     name: string;
-    uniqueIds: string[]
+    uniqueIds: ICheckboxItem[]
     activeLocations: string[]
     placeholder: string  
 
