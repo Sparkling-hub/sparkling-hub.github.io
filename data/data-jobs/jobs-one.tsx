@@ -1,24 +1,32 @@
 const experience = <p>PAID POSITION</p>
+
 const head = <h3>Node JS - React JS Intern</h3>
 
-const text = <p>
+const text =
+    <p>
+        Full time or part time
+        <br />
+        Monthly salary depending on experience
+    </p>
 
-        Full time or part time<br />
-        Monthly salary depending on experience</p>
-const location = <> <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13}  alt=""/><p>Tunis</p></>
+
+const location = <>
+    <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} alt="" />
+    <p>Tunis</p>
+</>
 
 
 const jobs = {
-    id: "Tunis asd", 
-    namePosition: "Node JS - React JS Intern",   
-    location:location,
+    id: "Tunis asd",
+    namePosition: "Node JS - React JS Intern",
+    location: location,
     experience: experience,
     head: head,
     text: text,
     slug: 'php-dev-lug-part',
     task: ['Backend development in Magento or WordPress.'],
     nameProf: 'PHP INVALID',
-    descript:<p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
+    descript: <p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
     mustHave: [
         'Completed a degree in computer science (or similar)',
         '1-3 years experience on similar role',
