@@ -40,12 +40,10 @@ const Filter: React.FC<IFilterProps> = ({ 	dataJobs,
 								 handleParamsChange={handleParamsChange}
 								 deleteItem={deleteItem} />
 
-
 				<MyMultileSelect name={"exp"}
 								uniqueIds={uniqueExp}
 								activeLocations={activePositions}
 								placeholder="Set Position"
-
 								handleParamsChange={handleParamsChange} 
 								deleteItem={deleteItem} />
 
