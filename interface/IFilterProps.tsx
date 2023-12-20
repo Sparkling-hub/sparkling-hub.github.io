@@ -1,6 +1,7 @@
 
 import { ChangeEvent } from "react";
 import IJob from "./IJob"
+import ICheckboxItem from "./IChekboxItem";
 
 
 
@@ -8,9 +9,9 @@ interface IFilterProps {
     dataJobs: IJob[]
     filterPhraze: string
     activeLocations: string[]
-    uniqueIds: string[]
+    uniqueIds: ICheckboxItem[]
     activePositions: string[]  
-    uniqueExp: string[]
+    uniqueExp: ICheckboxItem[]
     
     handleFilterPrazeChange: (event: ChangeEvent<HTMLInputElement>) => void
     handleParamsChange: (event: ChangeEvent<HTMLInputElement>, name:string,active:string[]) => void
