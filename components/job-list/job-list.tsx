@@ -14,7 +14,7 @@ const JobList: React.FC<IJobListProps> = ({ jobs }) => {
 						</div>
 					))
 				) : (
-					<h3 className='font-medium m-auto w-[55%] p-5 text-5xl text-teal-700 '>No found jobs</h3>
+					<h3 className='font-medium m-auto w-[55%] text-5xl text-teal-700 '>No found jobs</h3>
 				)}
 			</div>
 		</div>
