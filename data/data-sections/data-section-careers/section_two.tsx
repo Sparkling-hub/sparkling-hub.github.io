@@ -10,7 +10,7 @@ const content =
 			us but your specific skills aren&rsquo;t listed on an open position?
 			<br /> 
 			Don&rsquo;t worry! Please send us your details because
-			<span>we are always looking for bright talents!</span>
+			<span> we are always looking for bright talents!</span>
 		</h2>
 	</>
 

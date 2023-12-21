@@ -5,11 +5,11 @@ import IJob from '@/interface/IJob';
 
 const JobList: React.FC<IJobListProps> = ({ jobs }) => {
 	return (
-		<div className='sticky w-full overflow-auto flex flex-col max-h-[600px]'>
-			<div className="flex flex-wrap m-auto w-full m-3 relative">
+		<div className='sticky w-fit overflow-auto flex flex-col max-h-[600px]'>
+			<div className="flex flex-wrap w-auto relative">
 				{jobs.length ? (
 					jobs.map((job: IJob) => (
-						<div className={`job-content bg-white rounded-xl m-5`} key={job.slug}>
+						<div className={`job-content bg-white rounded-xl m-6`} key={job.slug}>
 							<JobsFiltre job={job} />
 						</div>
 					))
