@@ -5,7 +5,7 @@ import IJob from '@/interface/IJob';
 
 const JobList: React.FC<IJobListProps> = ({ jobs }) => {
 	return (
-		<div className='sticky w-full overflow-auto flex flex-col max-h-[550px]  m-6'>
+		<div className='w-full overflow-auto flex flex-col  m-6'>
 			<div className="flex flex-wrap w-auto relative ">
 				{jobs.length ? (
 					jobs.map((job: IJob) => (

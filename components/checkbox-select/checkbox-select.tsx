@@ -11,7 +11,7 @@ const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked, onChange }) =>
 <div className='relative'>
     <input id={id.value} type="checkbox"  className="opacity-0 w-full absolute h-full" onChange={onChange}/>
 
-      <input className='m-4 h-full ' type="checkbox" read-only checked={checked}  />  
+      <input className='m-4 h-full ' type="checkbox" read-only='true' onChange={onChange} checked={checked}  />  
       <label className='text-white' htmlFor={id.value}>
         <span className='mr-4'>{id.value}</span>
         <span> {id.count}</span>
