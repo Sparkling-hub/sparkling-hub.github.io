@@ -9,12 +9,9 @@ interface IJob {
 	head: JSX.Element;
 	text: JSX.Element;
 	slug: string;
-	task: string[];
+
 	nameProf: string;
-	descript: JSX.Element;
-	mustHave: string[];
-	niceToHave: string[];
-	weOffer: string[];
+
 	
 }
 
