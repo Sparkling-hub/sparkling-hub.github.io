@@ -1,4 +1,4 @@
-
+import { useState, useEffect, ChangeEvent } from 'react';
 import ICheckboxSelect from '@/interface/ICheckboxSelect';
 
 
@@ -6,15 +6,19 @@ import ICheckboxSelect from '@/interface/ICheckboxSelect';
 
 const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked, onChange }) => {
 
+
   return (
     <div>
+
       <input className='m-4' id={id.value} type="checkbox" onChange={onChange} checked={checked} />  
-      <label className='text-white' htmlFor="html">
+      <label className='text-white' htmlFor={id.value} onClick={() => {checked= !checked;} }>
         <span className='mr-4'>{id.value}</span>
         <span> {id.count}</span>
       </label>
+    
     </div>
   );
 };
 
 export default CheckboxSelect;
+

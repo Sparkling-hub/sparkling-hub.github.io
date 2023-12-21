@@ -1,6 +1,6 @@
 const experience = <p>PAID POSITION</p>
 
-const head = <h3>Junior JavaScript Developer</h3>
+const head = <h3>Senior JavaScript Developer</h3>
 
 const text =
     <p>
@@ -25,7 +25,7 @@ const jobs = {
     text: text,
     slug: 'php-dev-lug-part',
     task: ['Backend development in Magento or WordPress.'],
-    nameProf: 'Junior JS Developer',
+    nameProf: 'Senior JS Developer',
     descript: <p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
     mustHave: [
         'Completed a degree in computer science (or similar)',

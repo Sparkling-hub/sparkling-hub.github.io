@@ -33,9 +33,9 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 	return (
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
 
-			<button className={`my-multiple-select-container w-full flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium`}
+			<button className={`my-multiple-select-container w-full flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium h-auto`}
 				onClick={handleClick}>
-				<div className={`${isActive ? 'min-h-8' : 'p-4'} flex left-3 flex-wrap items-center h-max ${activeLocations.length ? ' p-3' : ''}`}>
+				<div className={`min-h-[32px] flex left-3 flex-wrap items-center h-auto ${activeLocations.length ? ' p-3' : ''}`}>
 					{activeLocations.map(id => (
 						<MultiSelectActiveItem key={id}
 							deleteItem={deleteItem}
@@ -46,7 +46,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 				</div>
 				<div className={` flex items-center absolute right-4 top-5 z-10`}><img src="/img/down-arrow-svgrepo-com.svg" className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
 				</div>
-				<div className={`mt-4 items-left`} >
+				<div className={`mt-4 items-left w-full`} >
 					<InputLocate
 						id={"focused_input"}
 						type={"text"}
@@ -56,7 +56,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 						handleSearchChange={handleSearchChange}
 					/>
 					<div className="text-left flex top-19 h-max w-full left-0 
-                        list flex flex-wrap items-center p-4  rounded-b-lg border-t-[1px] 
+                        list flex flex-wrap items-center p-1  rounded-b-lg border-t-[1px] 
                         border-slate-200 bg-color-primary-medium border-bg-color-primary-medium">
 						{filteredIds.length ? filteredIds.map(id => (
 							<CheckboxSelect

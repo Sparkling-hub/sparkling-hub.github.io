@@ -1,6 +1,6 @@
 const experience = <p>PAID POSITION</p>
 
-const head = <h3>Junior JavaScript Developer</h3>
+const head = <h3>Junior PHP Developer</h3>
 
 const text =
     <p>
@@ -12,12 +12,12 @@ const text =
 
 const location = <>
     <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} alt="" />
-    <p>Tunisia, Tunis</p>
+    <p>Ukraine, Zaporizhzhia</p>
 </>
 
 
 const jobs = {
-    id: "Tunis",
+    id: "Ukraine",
     namePosition: "Node JS - React JS Intern",
     location: location,
     experience: experience,
@@ -25,7 +25,7 @@ const jobs = {
     text: text,
     slug: 'php-dev-lug-part',
     task: ['Backend development in Magento or WordPress.'],
-    nameProf: 'Junior JS Developer',
+    nameProf: 'Junior PHP Developer',
     descript: <p>We are looking for PHP developers to introduce on a team focused on Magento or WordPress.</p>,
     mustHave: [
         'Completed a degree in computer science (or similar)',

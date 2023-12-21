@@ -22,7 +22,7 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs,
 			<div className="text-sm">
 				<div className={`my-multiple-select mx-4`} >
 					<div className="relative my-multiple-select-container w-full flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium">
-						<input id="filter_search" className="my-3 px-5 placeholder-teal-800 
+						<input id="filter_search" className="mt-3 mb-4 px-4 placeholder-teal-800 
 							focus:outline-none
 							bg-color-primary-medium 
 							focus:bg-color-primary-medium 
@@ -33,7 +33,7 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs,
 							value={filterPhraze}
 							onChange={handleFilterPrazeChange} />
 						<button className="absolute leading-9 h-full w-2/12  right-0">
-							<img src="https://www.kape.com/wp-content/themes/kape/assets/img/search-ico.png" className="w-3 h-3 m-auto" alt="" />
+							<img src="/img/jobs/search-ico.svg" className="" alt="" />
 						</button>
 					</div>
 				</div>

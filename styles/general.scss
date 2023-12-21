@@ -478,15 +478,15 @@ li:not(:last-child).highlight .s-b-s-text {
 
 }
 
-/* Увеличиваем z-index, чтобы ::before был над основным квадратом */
-.job-content:hover .square-circle {
-    transform: translate(-50%, 100%) scale(2) rotate(90deg);
-    z-index: 2;
-}
 
-.job-content:hover .square-circle::before {
-    opacity: 1;
-}
+// .job-content:hover .square-circle {
+//     transform: translate(-50%, 100%) scale(2) rotate(90deg);
+//     z-index: 2;
+// }
+
+// .job-content:hover .square-circle::before {
+//     opacity: 1;
+// }
 
 .job-content:hover {
     border-color: $primaryDarkColor;
@@ -617,7 +617,7 @@ li:not(:last-child).highlight .s-b-s-text {
 .my-multiple-select .active-item-container,
 .my-single-select .active-item-container{
 	background-color: transparent;
-    margin: 0 5px 0 0;
+    margin: 5px 5px 0 0;
     border: 1px solid grey;
     border-radius: 4px;
     padding: 1px;
