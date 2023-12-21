@@ -18,7 +18,7 @@ const location = <>
 
 const jobs = {
     id: "Tunis",
-    namePosition: "Node JS - React JS Intern",
+    namePosition: "Junior JavaScript Developer",
     location: location,
     experience: experience,
     head: head,

@@ -55,7 +55,7 @@ const Careers: React.FC<ICareersProps> = () => {
 
 
 	const filteredJobsList = dataJobs.filter((job) => {
-		
+
 		if (!activeLocations.length) return dataJobs
 		return activeLocations.includes(job.id)
 	})
