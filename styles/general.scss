@@ -2,7 +2,7 @@ $color1: #eafffd;
 $color2: #86C0BB;
 $color5: #eafffd;
 $color6: #4DA59B;
-// $color7: #285c5c;
+
 
 
 $divideColor: #6AE5CE;
@@ -15,7 +15,7 @@ $colorarrow: #73C9BD;
 
 
 $primaryBlueColor: #3498db;
-$primaryDarkColor: #285c5c;//#134e4a;
+$primaryDarkColor: #285c5c;
 $primaryMediumColor: #4DA59B;
 $primaryMediumColor2: #73C9BD;
 $primaryLightColor: #86C0BB;
@@ -479,14 +479,6 @@ li:not(:last-child).highlight .s-b-s-text {
 }
 
 
-// .job-content:hover .square-circle {
-//     transform: translate(-50%, 100%) scale(2) rotate(90deg);
-//     z-index: 2;
-// }
-
-// .job-content:hover .square-circle::before {
-//     opacity: 1;
-// }
 
 .job-content:hover {
     border-color: $primaryDarkColor;
