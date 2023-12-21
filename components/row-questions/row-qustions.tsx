@@ -16,7 +16,7 @@ const Questions: FC = () => {
 
  
       </div>
-    ))};
+    ))}
        </div>
   )
 
