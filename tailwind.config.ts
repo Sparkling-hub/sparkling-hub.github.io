@@ -39,6 +39,9 @@ const config: Config = {
       },
       width:{
         "55":'55',
+      },
+      minHeight: {
+        '128': '32rem',
       }
     },
   },

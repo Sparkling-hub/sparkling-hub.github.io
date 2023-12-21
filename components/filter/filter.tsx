@@ -32,8 +32,8 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs,
 							placeholder="Search by any keyword"
 							value={filterPhraze}
 							onChange={handleFilterPrazeChange} />
-						<button className="absolute leading-9 h-full w-2/12  right-0">
-							<img src="/img/jobs/search-ico.svg" className="" alt="" />
+						<button className="absolute leading-9  h-full w-1/12  right-2">
+						<img  src={"/img/jobs/search-ico.png"} className="h-4 opacity-60" alt="" />
 						</button>
 					</div>
 				</div>
