@@ -24,7 +24,7 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs,
 			<div className="text-sm">
 				<div className={`my-multiple-select mx-4`} >
 					<div className="relative my-multiple-select-container w-full flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium">
-						<input id="filter_search" className="mt-3 mb-4 px-4 placeholder-teal-800 
+						<input id="filter_search" className="my-3.5 px-3 placeholder-teal-800 
 							focus:outline-none
 							bg-color-primary-medium 
 							focus:bg-color-primary-medium 
