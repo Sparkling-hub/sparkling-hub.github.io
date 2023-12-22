@@ -14,13 +14,13 @@ const JobList: React.FC<IJobListProps> = ({ jobs }) => {
             </div>
           ))}
         </div>
-		) : (
-	
-			<h3 className='font-medium absolute right-[40%] left-auto top-1/2 w-25 text-5xl text-teal-700 justify-center'>
-				No found jobs
-			</h3>
-			
-		)}
+      ) : (
+        <div className='w-full h-full flex justify-center'>
+          <h3 className='font-medium flex items-center w-full h-full text-5xl text-teal-700 justify-center'>
+            No found jobs
+          </h3>
+        </div>
+      )}
     </div>
   );
 };
