@@ -79,7 +79,7 @@ const Careers: React.FC<ICareersProps> = () => {
 		})
 
 	return (
-		<div className='flex relative'>
+		<div className='flex relative w-full'>
 
 			<Filter dataJobs={dataJobs}
 				filterPhraze={filterPhraze}
