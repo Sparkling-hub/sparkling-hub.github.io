@@ -11,7 +11,8 @@ const text =
 
 
 const location = <>
-    <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} alt="" />
+ <img src='/img/jobs/united_kingdom.png' alt="" />
+ 
     <p>United Kingdom</p>
 </>
 

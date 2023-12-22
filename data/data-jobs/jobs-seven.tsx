@@ -11,7 +11,7 @@ const text =
 
 
 const location = <>
-    <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} alt="" />
+    <img src='/img/jobs/ukraine.png' alt="" />
     <p>Ukraine, Zaporizhzhia</p>
 </>
 
@@ -22,9 +22,9 @@ const jobs = {
     location: location,
     experience: experience,
     head: head,
-    workMode:"Hybrid work",
+    workMode: "Hybrid work",
     text: text,
-    slug:"j-php-dev",
+    slug: "j-php-dev",
     nameProf: 'Junior PHP Developer',
 
 
