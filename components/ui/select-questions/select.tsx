@@ -12,14 +12,17 @@ const DisabledSelect: FC<{ data: IQustion }> = ({ data }) => {
 
   return (
     <>
-      <button
-        className={`w-full p-3 border rounded cursor-pointer text-lg border-none  ${
-          isDropdownOpen ? 'bg-emerald-900 text-white rounded-t-2xl' : 'rounded-2xl bg-slate-100'
+      <div
+        className={`w-full p-3 border rounded cursor-pointer text-lg border-none ${
+          isDropdownOpen ? 'bg-emerald-900 text-teal-500 rounded-t-2xl' : 'rounded-2xl bg-slate-100'
         }`}
+        role='button'
         onClick={handleDropdownToggle}
+        tabIndex={0}  
+        onKeyDown={handleDropdownToggle}
       >
-        <span className="block relative flex justify-between ">{data.question}<ButtonCircle isDropdownOpen={isDropdownOpen} /></span>
-      </button>
+        <span className="block relative flex justify-between ">{data.question}<ButtonCircle isDropdownOpen={isDropdownOpen} /> </span>
+      </div>
       {isDropdownOpen && (
         <div className="top-full left-0 bg-white border border-gray-300 rounded-b-2xl p-4 w-full">
           <p>{data.answer}</p>

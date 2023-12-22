@@ -6,7 +6,7 @@ import questions from '../../data/data-questions';  // Используйте д
 import type { FC } from 'react';  // Импортируем тип FC из React
 const Questions: FC = () => {
   return (
-    <div className="p-4 ">
+    <div className="p-4">
       
       {Object.values(questions.question).map((value:IQustians, index) => (
 
@@ -16,7 +16,7 @@ const Questions: FC = () => {
 
  
       </div>
-    ))}
+    ))};
        </div>
   )
 

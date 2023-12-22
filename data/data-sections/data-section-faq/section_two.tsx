@@ -7,7 +7,7 @@ const header =
 
 const content = <><Questions/><h3>Any other burning questions?</h3>
 </>
-const button= <Button href={"/startup"} text={"Let us know"}/>
+const button= <Button href={""} text={"Let us know"}/>
 
 
 const element = {

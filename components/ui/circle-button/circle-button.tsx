@@ -4,9 +4,9 @@ interface ButtonProps {
 
 function Button({ isDropdownOpen }: ButtonProps) {
   return (
-    <div className={`square-circle  h-6 w-6  rounded-full p-0 pointer-events-none transform mr-3 ${isDropdownOpen ? 'text-black rotate-180 bg-teal-300' : 'text-white rotate-90 bg-gradient-to-t from-teal-900 to-teal-300'}`}>
+    <div className={`square-circle rounded-full p-0 pointer-events-none transform mr-3 ${isDropdownOpen ? 'text-black rotate-180 bg-teal-300' : 'text-white rotate-90 bg-gradient-to-t from-teal-900 to-teal-300'}`}>
       <svg
-        className={`rounded-full p-0 w-auto h-6 w-6  pointer-events-none transform`}
+        className={`rounded-full p-0 w-auto h-6 pointer-events-none transform`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"

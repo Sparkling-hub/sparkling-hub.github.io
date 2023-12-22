@@ -4,7 +4,7 @@ interface SelectProps {
   value: string | undefined;
   onChange: any;
   placeholder: string;
-  data: any[]; 
+  data?: any;
 }
 
 const Select: React.FC<SelectProps> = ({ name, value, onChange, placeholder, data }) => {
