@@ -19,10 +19,20 @@ const config: Config = {
         '4xl': '2rem',
       },
       content: {
+
         'curved_white_with_line': 'url("/img/curved/curved_white_with_line.svg")',
         'curved_white_without_line': 'url("/img/curved/curved_white_without_line.svg")',
+
         'curved_dark_without_line': 'url("/img/curved/curved_dark_without_line.svg")', 
         'curved_dark_with_line': 'url("/img/curved/curved_dark_with_line.svg")', 
+        
+        'curved_medium_without_line': 'url("/img/curved/curved_medium_without_line.svg")', 
+        'curved_medium_with_line': 'url("/img/curved/curved_medium_with_line.svg")', 
+
+      },
+      backgroundColor: {
+        'primary-light-light': '#CBF0E9',
+        'primary-dark': '#285c5c',
       },
     },
   },

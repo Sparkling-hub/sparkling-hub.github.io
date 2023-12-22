@@ -2,11 +2,13 @@ $color1: #eafffd;
 $color2: #86C0BB;
 $color5: #eafffd;
 $color6: #4DA59B;
-// $color7: #285c5c;
+$color7: #D3E5EB;   //цвет офисов пртнеров
+
+
 
 
 $divideColor: #6AE5CE;
-$colorarrow: #73C9BD;
+$colorarrow: #73C9BD;  // цвет точек карты при наведении
 
 
 
@@ -19,7 +21,7 @@ $primaryDarkColor: #285c5c;//#134e4a;
 $primaryMediumColor: #4DA59B;
 $primaryMediumColor2: #73C9BD;
 $primaryLightColor: #86C0BB;
-$primaryDoubleLightColor: #CBF0E9;
+$primaryDoubleLightColor: #CBF0E9;   //цвет карты 
 $iconColorStartupSecion3: #C4F4EC;
 $white: #eafffd;
 $colorActiveStep: #fce205;
@@ -385,3 +387,53 @@ li:not(:last-child).highlight .s-b-s-text {
 .kolo.highlight{
 	background: $colorActiveStep;
 }
+
+
+
+
+
+
+.current-map path,
+.svg-map #EU,
+.svg-map #AI,
+.svg-map #AF,
+.svg-map #OC,
+.svg-map #NA,
+.svg-map #SA
+
+{
+    fill: #CBF0E9;
+}
+.svg-map.svg-map #EU:hover,
+.svg-map.svg-map #AI:hover,
+.svg-map.svg-map #AF:hover,
+.svg-map.svg-map #OC:hover,
+.svg-map.svg-map #NA:hover,
+.svg-map.svg-map #SA:hover
+{
+    fill: red;
+}
+.fade-in.cubic.reveal{
+	transition-duration:1200ms;
+	transition-delay:0ms;
+}
+
+.point-office1{
+	left: 50.8798%;
+    top: 37.6115%;
+}
+.point-office2{
+	left: 56.8798%;
+	top: 35.6115%;
+}
+
+
+.static-point{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	border-radius: 50%;
+  }
