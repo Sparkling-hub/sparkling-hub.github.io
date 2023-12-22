@@ -195,10 +195,10 @@ footer{
 #services div.service_icon img {
 	width: 200px;
 }
-section div::before, footer div::before{
-	top: calc(-5vw + 5px);
-	
-}
+.before\:-top-calc::before {
+	position: absolute;
+	top: calc(-5vw + 2px);  
+  }
 .content-section {
 	display: flex;
 	justify-content: center;

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
 			<div className='before:content-curved_dark_without_line 
 							before:w-full
 							before:absolute
-							before:-mt-20
+							before:-top-calc
 							content-section 
 							bg-color-primary-dark 
 							w-150 
