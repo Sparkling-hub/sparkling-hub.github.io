@@ -25,7 +25,7 @@ const jobs = {
     text: text,
     workMode:"Hybrid work",
     slug:"paid-internship",
-    nameProf: 'Paid Internship',
+    nameProf: 'Internships',
    
 
 }

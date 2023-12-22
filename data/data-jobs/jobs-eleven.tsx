@@ -25,7 +25,7 @@ const jobs = {
     text: text,
     workMode:"On site",
     slug:"project-manager",
-    nameProf: 'Project manager',
+    nameProf: 'Management',
    
 
 }

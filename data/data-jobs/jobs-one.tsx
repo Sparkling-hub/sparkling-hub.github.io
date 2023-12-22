@@ -25,7 +25,7 @@ const jobs = {
     text: text,
     slug:"j-js-dev",
     workMode:"Hybrid work",
-    nameProf: 'Junior JS Developer',
+    nameProf: 'Research and Development',
    
 }
 export default jobs

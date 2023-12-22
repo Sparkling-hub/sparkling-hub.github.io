@@ -25,7 +25,7 @@ const jobs = {
     text: text,
     workMode:"Hybrid work",
     slug:"delivery-manager",
-    nameProf: 'Delivery Manager',
+    nameProf: 'Management',
 
 }
 export default jobs

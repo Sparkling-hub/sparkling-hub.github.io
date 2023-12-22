@@ -25,7 +25,7 @@ const jobs = {
     workMode: "Hybrid work",
     text: text,
     slug: "j-php-dev",
-    nameProf: 'Junior PHP Developer',
+    nameProf: 'Research and Development',
 
 
 }

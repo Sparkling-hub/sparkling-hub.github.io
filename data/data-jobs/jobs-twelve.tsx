@@ -26,7 +26,7 @@ const jobs = {
     text: text,
     workMode:"On site",
     slug:"sales-associate",
-    nameProf: 'Sales Associate',
+    nameProf: 'Sales',
    
 
 }
