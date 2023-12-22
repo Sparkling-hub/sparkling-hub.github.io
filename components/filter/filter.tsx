@@ -19,7 +19,7 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs,
 }) => {
 
 	return (
-		<div className="filter-container bg-gray-100 my-6 mx-10 w-[450px]">
+		<div className="filter-container bg-gray-100 my-6 mx-5 w-[500px]">
 			<h3 className="text-center text-3xl mt-10 mb-5  ">Open Position</h3>
 			<div className="text-sm">
 				<div className={`my-multiple-select mx-4`} >

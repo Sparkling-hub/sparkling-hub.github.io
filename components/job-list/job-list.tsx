@@ -9,7 +9,7 @@ const JobList: React.FC<IJobListProps> = ({ jobs }) => {
       {jobs.length ? (
         <div className="flex flex-wrap w-auto relative w-full">
           {jobs.map((job: IJob) => (
-            <div className={`job-content bg-white rounded-xl  mx-6 mb-6 `} key={job.slug}>
+            <div className={`job-content bg-white rounded-xl  mx-[14px] mb-6 `} key={job.slug}>
               <JobsFiltre job={job} />
             </div>
           ))}
