@@ -1,4 +1,3 @@
-
 import React, { ChangeEvent } from 'react';
 
 interface TextAreaProps {
@@ -13,7 +12,6 @@ const TextArea: React.FC<TextAreaProps> = ({ name, placeholder, value, onChange 
   return (
     <textarea
       name={name}
-
       placeholder={placeholder}
       value={value}
       className="border border-green-500 rounded-3xl p-4 w-full my-5 h-40 resize-none"
@@ -23,4 +21,3 @@ const TextArea: React.FC<TextAreaProps> = ({ name, placeholder, value, onChange 
 };
 
 export default TextArea;
-
