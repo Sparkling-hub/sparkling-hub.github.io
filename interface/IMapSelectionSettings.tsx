@@ -1,10 +1,8 @@
-import IMaps from "./IMaps"
 
 
 interface  IMapSelectionSettings{
     
-    currentMap: IMaps | null;
-    handleMapsClick: (e: any) => void;
+    selectedMaps: string
     
 }
 export default IMapSelectionSettings

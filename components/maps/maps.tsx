@@ -2,16 +2,32 @@ import mapsData from "@/data/data-maps";
 import IMaps from "@/interface/IMaps";
 import { useEffect, useState } from "react";
 
-const Maps: React.FC<any> = ({currentMap, handleMapsClick}) => {
-  
+const Maps: React.FC = () => {
+  const [currentMap, setCurrentMap] = useState<IMaps>();
+
   useEffect(() => {
-    debugger
-    if(currentMap && currentMap.id != "world") document.querySelectorAll('.back-arrow')[0].addEventListener('click', handleMapsClick);
-    
-  }, []);
+   
+    const foundMap = mapsData.find((mapItem) => mapItem.id === "world");
+    setCurrentMap(currentMap || foundMap);   
+    const mapItems = document.querySelectorAll('.item-map');
+    mapItems.forEach((element) => {
+      element.addEventListener('click', handleEUClick);
+    });
+    if(currentMap && currentMap.id != "world") document.querySelectorAll('.back-arrow')[0].addEventListener('click', handleEUClick);
+    return () => {      
+      mapItems.forEach((element) => {
+        element.removeEventListener('click', handleEUClick);
+      });
+    };
+  }, [currentMap]);
 
+  const handleEUClick = (e:any) => {
+	
+	const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);
+	setCurrentMap(foundMap);
+	
+  };
 
-  
   return (
 	<div className="map-container col-span-8 lg:col-span-9 lg:gh-4 xl:gh-4 xl:p-14 pt-global lg:block" style={{ position: "relative" }}>
       {

@@ -4,6 +4,7 @@ interface  IMaps{
 
     header: JSX.Element;
     image: JSX.Element;
-    id: string;
+    id: string
+    
 }
 export default IMaps
