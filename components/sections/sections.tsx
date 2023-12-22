@@ -2,15 +2,12 @@ import React from 'react';
 import type SectionType from '../../interface/section';
 
 
-const Section: React.FC<SectionType> = ({ header, content, image, button, background, id, curvedClass, padding_bottom }) => {
+const Section: React.FC<SectionType> = ({ header, content, image, button, background, id, curvedClass, padding_bottom, margin_bottom }) => {
 
   return (
-   
       <section className={`flex items-center justify-center relative ${background} ${curvedClass} ${padding_bottom} xl:px-40 custom-3xl`} id={id}>
    <div className='max-w-screen-xl w-full'>
         <div className='content-section flex   items-start justify-center flex-col justify-center '>
-     
-
           <div className='flex items-center whitespace-normal w-full '>
             <div className='flex justify-center flex-col w-full'>{header}
               {content}
@@ -31,8 +28,6 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
         </div>
 
       </section>  
-
-
   );
 };
 

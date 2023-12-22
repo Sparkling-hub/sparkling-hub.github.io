@@ -11,6 +11,7 @@ const Index = () => {
           <div className=''>
             <Sections {...Section.sections.SectionOne}/> 
             <Sections {...Section.sections.SectionTwo}/> 
+            <Sections {...Section.sections.Section3}/> 
             <Sections {...Section.sections.SectionFour}/> 
           </div>
         </MainLayout>
