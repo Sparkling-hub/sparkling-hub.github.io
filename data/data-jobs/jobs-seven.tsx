@@ -22,6 +22,7 @@ const jobs = {
     location: location,
     experience: experience,
     head: head,
+    workMode:"Hybrid work",
     text: text,
     slug:"j-php-dev",
     nameProf: 'Junior PHP Developer',

@@ -9,7 +9,7 @@ interface IJob {
 	head: JSX.Element;
 	text: JSX.Element;
 	slug: string;
-
+workMode: string;
 	nameProf: string;
 
 	

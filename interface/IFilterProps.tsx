@@ -12,7 +12,8 @@ interface IFilterProps {
     uniqueIds: ICheckboxItem[]
     activePositions: string[]  
     uniqueExp: ICheckboxItem[]
-    
+    uniqueWorkMode:ICheckboxItem[]
+    activeWorkMode: string[] 
     handleFilterPrazeChange: (event: ChangeEvent<HTMLInputElement>) => void
     handleParamsChange: (event: ChangeEvent<HTMLInputElement>, name:string,active:string[]) => void
     deleteItem:  (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[])=> void

@@ -23,7 +23,7 @@ const jobs = {
     experience: experience,
     head: head,
     text: text,
-
+    workMode:"Hybrid work",
     slug:"s-js-dev",
     nameProf: 'Senior JS Developer',
    

@@ -9,6 +9,8 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs,
 	uniqueIds,
 	activePositions,
 	uniqueExp,
+	uniqueWorkMode,
+	activeWorkMode,
 
 	handleFilterPrazeChange,
 	handleParamsChange,
@@ -29,6 +31,7 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs,
 							focus:bg-color-primary-medium"
 							name="name"
 							type="text"
+							autoComplete='off'
 							placeholder="Search by any keyword"
 							value={filterPhraze}
 							onChange={handleFilterPrazeChange} />
@@ -51,6 +54,12 @@ const Filter: React.FC<IFilterProps> = ({ dataJobs,
 					handleParamsChange={handleParamsChange}
 					deleteItem={deleteItem} />
 
+				<MyMultileSelect name={"mode"}
+					uniqueIds={uniqueWorkMode}
+					activeLocations={activeWorkMode}
+					placeholder="Set mode"
+					handleParamsChange={handleParamsChange}
+					deleteItem={deleteItem} />
 
 
 

@@ -5,7 +5,7 @@ import IMultiSelect from '@/interface/IMultiSelect';
 import InputLocate from '../ui/custom-input-jobs';
 
 const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocations, placeholder, handleParamsChange, deleteItem }) => {
-
+	
 	const [isActive, setIsActive] = useState(false);
 
 	const handleClick = () => {
@@ -14,7 +14,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 
 	const [searchValue, setSearchValue] = useState('');
 	const [filteredIds, setFilteredIds] = useState(uniqueIds);
-
+	
 	useEffect(() => {
 		setFilteredIds([...uniqueIds]);
 	}, [uniqueIds]);
@@ -58,13 +58,14 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 					<div className="text-left flex top-19 h-max w-full left-0 
                         list flex flex-wrap items-center p-1  rounded-b-lg border-t-[1px] 
                         border-slate-200 bg-color-primary-medium border-bg-color-primary-medium">
-						{filteredIds.length ? filteredIds.map(id => (
+						{filteredIds.length ? filteredIds.map(id => (<>
+							
 							<CheckboxSelect
 								key={id.value}
 								id={id}
 								checked={activeLocations.includes(id.value)}
 								onChange={(event) => handleParamsChange(event, name, activeLocations)}
-							/>
+							/></>
 						)) : "No found"}
 					</div>
 				</div>

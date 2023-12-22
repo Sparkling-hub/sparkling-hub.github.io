@@ -11,7 +11,7 @@ export const getIds = (data: IJob[], name: string): any[]=> {
       const value = (item as any)[name];
       
       if (!uniqueValues.has(value)) {
-        let count = data.filter((el)=>el.id == value || el.nameProf == value).length       
+        let count = data.filter((el) => (el as any)[name] === value).length; 
         result.push({value, count});
         uniqueValues.add(value);
       }

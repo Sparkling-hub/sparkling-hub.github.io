@@ -17,7 +17,8 @@ const Careers: React.FC<ICareersProps> = () => {
 	const [activeLocations, setActiveLocations] = useState<string[]>([]);
 	const [uniqueExp, setUniqueExp] = useState<ICheckboxItem[]>([]);
 	const [activePositions, setActivePositions] = useState<string[]>([]);
-
+	const [uniqueWorkmode, setUniqueWorkmode] = useState<ICheckboxItem[]>([]);
+	const [activeWorkmode, setActiveWorkmode] = useState<string[]>([]);
 
 	const handleParamsChange = (e: ChangeEvent<HTMLInputElement>, name: string, active: string[]) => {
 		let newValue: string[] = []
@@ -32,11 +33,14 @@ const Careers: React.FC<ICareersProps> = () => {
 
 		if (name === 'location') { setActiveLocations(newValue); }
 		if (name === 'exp') { setActivePositions(newValue) }
+		if (name === 'mode') { setActiveWorkmode(newValue) }
 	};
 
 	useEffect(() => {
 		setUniqueIds(getIds(dataJobs, "id"));
 		setUniqueExp(getIds(dataJobs, "nameProf"));
+		setUniqueWorkmode(getIds(dataJobs, "workMode"));
+	
 	}, [dataJobs]);
 
 
@@ -50,6 +54,7 @@ const Careers: React.FC<ICareersProps> = () => {
 
 		if (name === 'location') { setActiveLocations(newValue); }
 		if (name === 'exp') { setActivePositions(newValue) }
+		if (name === 'mode') { setActiveWorkmode(newValue) }
 		e.stopPropagation();
 	};
 
@@ -68,6 +73,10 @@ const Careers: React.FC<ICareersProps> = () => {
 			if (!filterPhraze) return dataJobs
 			return job.namePosition.toLowerCase().includes(filterPhraze.toLowerCase())
 		})
+		.filter((job) => {
+			if (!activeWorkmode.length) return dataJobs
+			return activeWorkmode.includes(job.workMode)
+		})
 
 	return (
 		<div className='flex relative'>
@@ -77,6 +86,8 @@ const Careers: React.FC<ICareersProps> = () => {
 				activeLocations={activeLocations}
 				uniqueIds={uniqueIds}
 				activePositions={activePositions}
+				uniqueWorkMode={uniqueWorkmode}
+				activeWorkMode={activeWorkmode}
 				uniqueExp={uniqueExp}
 				handleFilterPrazeChange={handleFilterPrazeChange}
 				handleParamsChange={handleParamsChange}
