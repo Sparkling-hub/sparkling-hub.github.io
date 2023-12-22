@@ -25,7 +25,7 @@ const jobs = {
     text: text,
     workMode:"Hybrid work",
     slug:"qa-manager",
-    nameProf: 'Management',
+    nameProf: 'Quality assurance',
 
 }
 export default jobs

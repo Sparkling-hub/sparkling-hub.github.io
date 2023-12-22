@@ -24,7 +24,7 @@ const jobs = {
     experience: experience,
     head: head,
     text: text,
-    workMode:"On site",
+    workMode:"Remote",
     slug:"sales-associate",
     nameProf: 'Sales',
    
