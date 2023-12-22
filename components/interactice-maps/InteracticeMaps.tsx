@@ -7,17 +7,17 @@ import MapSelectionSettings from "../map-selection-setting";
 
 
 const InteracticeMaps: React.FC = () => {
-	const [currentMap, setCurrentMap] = useState<IMaps>();
+	const [currentMap, setCurrentMap] = useState<IMaps | null>(null);
 
 	useEffect(() => {
-
-		const foundMap = mapsData.find((mapItem) => mapItem.id === "world");
+			
+		const foundMap = mapsData.find((mapItem) => mapItem.id === "world")|| null;
 		setCurrentMap(currentMap || foundMap);
 		const mapItems = document.querySelectorAll('.item-map');
 		mapItems.forEach((element) => {
 			element.addEventListener('click', handleMapsClick);
 		});
-
+		
 		return () => {
 			mapItems.forEach((element) => {
 				element.removeEventListener('click', handleMapsClick);
@@ -27,9 +27,10 @@ const InteracticeMaps: React.FC = () => {
 
 	const handleMapsClick = (e: any) => {
 
-		const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);
 		debugger
+		const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id)|| null;		
 		setCurrentMap(foundMap);
+		
 
 	};
 
@@ -40,8 +41,8 @@ const InteracticeMaps: React.FC = () => {
 			<div className="fade-in cubic reveal">
 				<div className="grid relative grid-cols-12 px-global gap-x-global">
 
-					<Maps />
-					<MapSelectionSettings selectedMaps={ currentMap? currentMap.id : ""}/>
+					<Maps currentMap={currentMap ? currentMap : null} id={""} handleMapsClick={handleMapsClick}/>
+					<MapSelectionSettings currentMap={ currentMap? currentMap : null} handleMapsClick={handleMapsClick} />
 
 				</div>
 			</div>
