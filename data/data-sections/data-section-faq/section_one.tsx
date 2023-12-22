@@ -12,7 +12,7 @@ const content = (
   </p>
 );
 
-const image = <img src="/img/section/sectionOne.png" className="w-full" />;
+const image = <img src="/img/section/SectionFAQ.png" className="w-full p-10" alt="faq-icon"/>;
 
 const element = {
   content: content,

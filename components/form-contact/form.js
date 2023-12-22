@@ -26,7 +26,7 @@ const Form = () => {
           };
       
     return (
-        <form method="post" id="rec_form" action="" enctype="multipart/form-data" class="form flex flex-col items-center w-2/4 p-5 m-auto" >
+        <form method="post" id="rec_form" action="" className="form flex flex-col items-center w-2/4 p-5 m-auto" >
 
             <Input type="text" name="name" value={formData.name} placeholder="Full Name*" onChange={handleInputChange} />
       
