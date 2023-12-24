@@ -3,7 +3,7 @@ import IMapField from "@/interface/IMapField";
 import IMaps from "@/interface/IMaps";
 import { useEffect, useState } from "react";
 
-const MapField: React.FC<IMapField> = ({ currentMap, ChangeMap }) => {
+const MapField: React.FC<IMapField> = ({ currentMap, currentOfficeCards, ChangeMap }) => {
 
 
 

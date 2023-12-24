@@ -3,12 +3,14 @@ import IMaps from "@/interface/IMaps";
 import { useEffect, useState } from "react";
 import MapSelectionSettings from "../map-selection-setting";
 import MapField from "../map-field";
+import IOfficeCards from "@/interface/IOfficeCards";
 
 
 
 const InteracticeMaps: React.FC = () => {
 
 	const [currentMap, setCurrentMap] = useState<IMaps | undefined>();
+	const [currentOfficeCards, setCurrentOfficeCards] = useState<IOfficeCards | undefined>();
 
 	useEffect(() => {
 
@@ -25,6 +27,8 @@ const InteracticeMaps: React.FC = () => {
 			});
 		};
 	}, [currentMap]);
+
+
 
 	const handleMapsClick = (e: any) => {
 
@@ -47,8 +51,8 @@ const InteracticeMaps: React.FC = () => {
 			<div className="fade-in cubic reveal">
 				<div className="grid relative grid-cols-12 px-global gap-x-global">
 
-					<MapField currentMap={ currentMap } ChangeMap={ ChangeMap }/>
-					<MapSelectionSettings currentMap={ currentMap }/>
+					<MapField currentMap={ currentMap } currentOfficeCards={currentOfficeCards}  ChangeMap={ ChangeMap }/>
+					<MapSelectionSettings currentMap={ currentMap } currentOfficeCards={currentOfficeCards}/>
 
 				</div>
 			</div>

@@ -711,14 +711,41 @@ const image =<>
                 "></path><path d="M1888.2,1688.3c-0.6,0.6-1,1.2-1.4,1.2c-0.4,0-0.8-0.6-1.3-0.9c0.4-0.4,0.6-1.1,1.1-1.2
                 C1887,1687.4,1887.5,1687.9,1888.2,1688.3z"></path></g></g>
                 </svg>
+
             </>
 
+const officeCards = [
+    {
+        title: "Switzerland Headquarter",
+        adress1: "Via Cattedrale 7",
+        state: "Lugano",
+        country_index: "Switzerland, 6900"
+    },
+    {
+        title: "Ukraine Office",
+        adress1: "Haharina St, 3",
+        state: "Zaporizhzhia, Zaporiz_ka oblast_",
+        country_index: "Ukraine, 69061"
+    },
+    {
+        title: "UK Office",
+        adress1: "16-18 Montagu Place",
+        state: "London",
+        country_index: "United Kingdom, W1H 2BQ"
+    },
+    {
+        title: "Partner’s Office / UK office",
+        adress1: "St John’s Innovation Centre",
+        state: "Cambridge",
+        country_index: "United Kingdom, CB4 0WS"
+    },
+]
+
 const element: IMaps  = {
-
-	header: header,
-	image: image,
-	id: "EU",
-
+    header: header,
+    image: image,
+    id: "EU",
+    officeCards: officeCards
 }
 
 export default element

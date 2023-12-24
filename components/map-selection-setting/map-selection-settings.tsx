@@ -12,7 +12,7 @@ const countries = [
 	{ name: "North America", id: "NA" },
 ]
 
-const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap }) => {
+const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, currentOfficeCards }) => {
 
 
 	// console.log(selectedMaps)
