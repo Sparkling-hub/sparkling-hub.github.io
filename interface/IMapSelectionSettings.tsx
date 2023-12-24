@@ -1,8 +1,9 @@
+import IMaps from "./IMaps";
 
 
 interface  IMapSelectionSettings{
     
-    selectedMaps: string
+    currentMap: IMaps | undefined;
     
 }
 export default IMapSelectionSettings

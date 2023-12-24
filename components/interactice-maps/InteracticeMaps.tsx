@@ -1,13 +1,14 @@
 import mapsData from "@/data/data-maps";
 import IMaps from "@/interface/IMaps";
 import { useEffect, useState } from "react";
-import Maps from "../maps";
 import MapSelectionSettings from "../map-selection-setting";
+import MapField from "../map-field";
 
 
 
 const InteracticeMaps: React.FC = () => {
-	const [currentMap, setCurrentMap] = useState<IMaps>();
+
+	const [currentMap, setCurrentMap] = useState<IMaps | undefined>();
 
 	useEffect(() => {
 
@@ -27,8 +28,14 @@ const InteracticeMaps: React.FC = () => {
 
 	const handleMapsClick = (e: any) => {
 
-		const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);
-		debugger
+		const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);		
+		setCurrentMap(foundMap);
+
+	};
+
+	const ChangeMap = (e: React.MouseEvent<HTMLDivElement>) => {
+
+		const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);		
 		setCurrentMap(foundMap);
 
 	};
@@ -40,8 +47,8 @@ const InteracticeMaps: React.FC = () => {
 			<div className="fade-in cubic reveal">
 				<div className="grid relative grid-cols-12 px-global gap-x-global">
 
-					<Maps />
-					<MapSelectionSettings selectedMaps={ currentMap? currentMap.id : ""}/>
+					<MapField currentMap={ currentMap } ChangeMap={ ChangeMap }/>
+					<MapSelectionSettings currentMap={ currentMap }/>
 
 				</div>
 			</div>

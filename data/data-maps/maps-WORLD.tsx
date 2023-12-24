@@ -1,3 +1,4 @@
+import IMaps from "@/interface/IMaps";
 import _img from "../../public/img/maps/world.svg"
 
 import React from 'react';
@@ -3818,7 +3819,7 @@ C1416.9,2432.1,1416.6,2432,1415.7,2431.9z"></path><path d="M1487.8,1539.3c0.4,0.
 C1487.5,1539.5,1487.6,1539.4,1487.8,1539.3z"></path></g></g></g>
 </svg>
 
-const element = {
+const element: IMaps = {
 
 	header: header,
 	image: image,
