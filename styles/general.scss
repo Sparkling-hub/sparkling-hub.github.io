@@ -405,13 +405,13 @@ li:not(:last-child).highlight .s-b-s-text {
     fill: #CBF0E9;
 }
 .svg-map.svg-map #EU:hover,
-.svg-map.svg-map #AI:hover,
-.svg-map.svg-map #AF:hover,
-.svg-map.svg-map #OC:hover,
-.svg-map.svg-map #NA:hover,
-.svg-map.svg-map #SA:hover
+// .svg-map.svg-map #AI:hover,
+// .svg-map.svg-map #OC:hover,
+// .svg-map.svg-map #NA:hover,
+// .svg-map.svg-map #SA:hover,
+.svg-map.svg-map #AF:hover
 {
-    fill: red;
+    fill: $primaryDarkColor;
 }
 .fade-in.cubic.reveal{
 	transition-duration:1200ms;
@@ -428,12 +428,12 @@ li:not(:last-child).highlight .s-b-s-text {
 }
 
 
-.static-point{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 10px;
-	height: 10px;
-	background-color: red;
-	border-radius: 50%;
-  }
+// .static-point{
+// 	// position: absolute;
+// 	// top: 50%;
+// 	// left: 50%;
+// 	// width: 10px;
+// 	// height: 10px;
+// 	// background-color: red;
+// 	// border-radius: 50%;
+//   }

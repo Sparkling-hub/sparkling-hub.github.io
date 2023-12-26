@@ -12,8 +12,7 @@ const header =
 
 const image =<>
 
-                <div className="point-office2 absolute w-2.5 h-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full z-40 cursor-pointer duration-200 group bg-white"><div className="border-orange border-[1px] rounded-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 duration-[400ms] opacity-0 w-2 h-2 pointer-events-none"></div></div>
-                <div className="point-office1 absolute w-2.5 h-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full z-40 cursor-pointer duration-200 group bg-white" ></div>
+               
                 <svg xmlns="http://www.w3.org/2000/svg" className="current-map h-full w-auto m-auto text-green-80 relative svg-map" version="1.1" viewBox="0 0 1000 1001">
   
 
@@ -74,24 +73,32 @@ const image =<>
 const officeCards = [
 	{
 		title: "Tunis Office 1:",
+        city: "Ariana",
 		adress1: "Pôle Technologique",
 		state: "Ariana ",
-		country_index: "Tunisia, 2083"
+		country_index: "Tunisia, 2083",
+        coords: "top-55% left-45%",
+        id:"Tunis1",
 	},
 	{
 		title: "Tunis Office 2:",
+        city: "Ariana",
 		adress1: "Rue André Ampère",
 		state: "Ariana 2083",
-		country_index: "Tunisia, 2083"
+		country_index: "Tunisia, 2083",
+        coords: "top-45% left-55%",
+        id:"Tunis2",
 	},
 	
 ]
 
 const element: IMaps = {
+
+    name:"Africa",
 	header: header,
 	image: image,
 	id: "AF",
-	officeCards: undefined
+	officeCards: officeCards
 }
 
 export default element

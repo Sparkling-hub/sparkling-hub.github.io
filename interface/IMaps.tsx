@@ -4,6 +4,7 @@ import IOfficeCards from "./IOfficeCards";
 
 interface  IMaps{
 
+    name: string;
     header: JSX.Element;
     image: JSX.Element;
     id: string

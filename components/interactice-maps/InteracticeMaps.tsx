@@ -10,7 +10,7 @@ import IOfficeCards from "@/interface/IOfficeCards";
 const InteracticeMaps: React.FC = () => {
 
 	const [currentMap, setCurrentMap] = useState<IMaps | undefined>();
-	const [currentOfficeCards, setCurrentOfficeCards] = useState<IOfficeCards | undefined>();
+	const [hovered, setHovered] = useState<string | null>(null);
 
 	useEffect(() => {
 
@@ -51,9 +51,9 @@ const InteracticeMaps: React.FC = () => {
 			<div className="fade-in cubic reveal">
 				<div className="grid relative grid-cols-12 px-global gap-x-global">
 
-					<MapField currentMap={ currentMap } currentOfficeCards={currentOfficeCards}  ChangeMap={ ChangeMap }/>
-					<MapSelectionSettings currentMap={ currentMap } currentOfficeCards={currentOfficeCards}/>
-
+					<MapField currentMap={ currentMap } ChangeMap={ ChangeMap } hovered={ hovered } setHovered={ setHovered }/>
+					<MapSelectionSettings currentMap={ currentMap } ChangeMap={ ChangeMap } hovered={ hovered } setHovered={ setHovered }/>
+					
 				</div>
 			</div>
 		</div>
