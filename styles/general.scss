@@ -307,13 +307,9 @@ section div::before, footer div::before{
     text-align: center;
     font-size: 25px;
     margin: 50px;
- 
     & span {
- 
         color: #17cfc2;
- 
         font-weight: $weight-text;
- 
     }
 }
 
@@ -362,8 +358,6 @@ section div::before, footer div::before{
     }
 }
 
-
-
 .s-b-s-title{
     border: 2px solid $primaryDarkColor;
     padding: 2px;
@@ -407,20 +401,6 @@ li:not(:last-child).highlight .s-b-s-text {
 }
 .kolo.highlight{
 	background: $colorActiveStep;
-}
-
-#form-contact h3 {
-    text-align: center;
-    font-size: 25px;
-    margin: 50px;
-
-    & span {
-
-        color: #17cfc2;
-
-        font-weight: 400;
-
-    }
 }
 
 #answers {
