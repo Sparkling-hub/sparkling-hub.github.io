@@ -5,15 +5,9 @@ $color6: #4DA59B;
 
 
 
+
 $divideColor: #6AE5CE;
 $colorarrow: #73C9BD;
-
-
-
-
-
-
-
 $primaryBlueColor: #3498db;
 $primaryDarkColor: #285c5c;
 $primaryMediumColor: #4DA59B;
@@ -24,6 +18,8 @@ $iconColorStartupSecion3: #C4F4EC;
 $white: #eafffd;
 $colorActiveStep: #fce205;
 $widhConainers: 1440px;
+$weight-text:400px;
+
 
 .color-primary-light {
 	color: $primaryLightColor;
@@ -265,11 +261,25 @@ section div::before, footer div::before{
 		font-weight: 400;
 	}
 
-	& p {
-		word-break: break-all;
-		width: auto;
-	}
-}
+
+        & p {
+
+            width: max-content;
+            font-weight: $weight-text;
+
+            color: #3b3b3b;
+            width: auto;
+        }
+
+    
+
+    & h2 {
+
+        font-size: 50px;
+        font-weight: lighter;
+        margin-bottom: 40px;
+    }
+
 
 .r-arrow {
 	width: 24px;
@@ -281,7 +291,7 @@ section div::before, footer div::before{
 	width: 700px;
 	max-width: none;
 }
-
+}
 .form {
 	.text-form {
 		width: 95%;
@@ -292,6 +302,19 @@ section div::before, footer div::before{
 		font-size: 13px;
 		font-weight: normal !important;
 	}
+}
+#form-contact h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 50px;
+ 
+    & span {
+ 
+        color: #17cfc2;
+ 
+        font-weight: $weight-text;
+ 
+    }
 }
 
 .startup-icon {
@@ -386,8 +409,6 @@ li:not(:last-child).highlight .s-b-s-text {
 	background: $colorActiveStep;
 }
 
-
-
 #form-contact h3 {
     text-align: center;
     font-size: 25px;
@@ -414,8 +435,9 @@ li:not(:last-child).highlight .s-b-s-text {
     }
 
     & .button {
-        position: relative;
+        position: relative !important;
         bottom: 0;
+		height: 50px;
         margin: auto;
     }
 }
@@ -425,7 +447,6 @@ li:not(:last-child).highlight .s-b-s-text {
     border-width: 1px;
     border-color: rgb(236, 236, 236);
     width: 400px;
-
     min-width: 400px;
     font-size: 15px;
     color: rgb(60, 60, 60);
@@ -479,8 +500,6 @@ li:not(:last-child).highlight .s-b-s-text {
 
 }
 
-
-
 .job-content:hover {
     border-color: $primaryDarkColor;
 }
@@ -528,11 +547,7 @@ li:not(:last-child).highlight .s-b-s-text {
     & .active {
         border-color: gray;
     }
-
-
 }
-
-
 
 .filter-container {
     top: 50px;
@@ -624,4 +639,26 @@ li:not(:last-child).highlight .s-b-s-text {
 .my-single-select .active-item-container .item-title{
 	padding: 0 8px;
 }
+
+.blank {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 1px, rgb(116 116 116 / 12%) 0px 2px 6px, rgba(76, 81, 191, 0.18) 0px 10px 20px;
+    transition: background-color 0.5s ease-in-out;
+
+
+    & svg {
+        transform: scale(1) rotate(-90deg);
+        transition: transform 0.5s ease-in-out;
+        color: $primaryDarkColor;
+    }
+}
+
+.blank:hover {
+    background-color: rgb(242, 242, 253);
+}
+
+.blank:hover svg {
+    transform: scale(1.5) rotate(-90deg);
+}
+
+
 

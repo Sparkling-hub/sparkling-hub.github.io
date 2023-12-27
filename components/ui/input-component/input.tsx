@@ -17,7 +17,7 @@ const Input: React.FC<InputProps> = ({ name, type, placeholder, value, onChange 
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="border border-teal-900 rounded-3xl p-4 w-full my-5"
+      className="border border-green-500 rounded-3xl p-4 w-full my-5"
     />
   );
 };

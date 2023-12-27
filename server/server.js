@@ -1,6 +1,5 @@
 
 "use strict";
-
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = (require("express"));
 const nodemailer = (require("nodemailer"));
@@ -8,6 +7,7 @@ const cors = (require("cors"));
 const multer = (require("multer"));
 const express_validator = require("express-validator");
 const app = (0, express.default)();
+let helmet = require("helmet");
 const port = 3033;
 
 app.use((0, multer.default)({ dest: 'uploads' }).single('file'));
@@ -21,9 +21,18 @@ const transporter = nodemailer.default.createTransport({
         user: 'careers.sparkling.co@gmail.com',
         pass: 'tuuj ioas vyjh vywx',
     },
-
+    secure: true,
+    requireTLS: true,
+    port: 465,
+    secured: true
 });
 
+
+app.use((0, multer_1)({ dest: 'uploads' }).single('file'));
+app.use(express_1.json());
+app.use((0, cors_1)());
+
+app.use(helmet.hidePoweredBy());
 const validateForm = [
 
     (0, express_validator.body)('formData.name').isLength({ min: 0, max: 255 }).withMessage('Name is required and must be less than 255 characters'),

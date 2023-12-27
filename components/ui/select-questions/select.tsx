@@ -18,10 +18,7 @@ const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
           }`}
         onClick={handleDropdownToggle}
       >
-        <span className="block relative flex justify-between ">
-          {data.question}
-          <ButtonCircle isDropdownOpen={isDropdownOpen} />
-        </span>
+        <span className="block relative flex justify-between ">{data.question}<ButtonCircle isDropdownOpen={isDropdownOpen} /> </span>
       </button>
       {isDropdownOpen && (
         <div className="top-full left-0 bg-white border border-gray-300 rounded-b-2xl p-4 w-full">

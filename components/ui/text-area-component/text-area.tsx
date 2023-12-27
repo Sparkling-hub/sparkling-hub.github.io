@@ -1,4 +1,3 @@
-
 import React, { ChangeEvent } from 'react';
 
 interface TextAreaProps {
@@ -22,4 +21,3 @@ const TextArea: React.FC<TextAreaProps> = ({ name, placeholder, value, onChange 
 };
 
 export default TextArea;
-
