@@ -4,7 +4,7 @@ const header =
 
 
 const content =
-<div className="p-8 bg-gray-100 rounded-2xl max-w-[1000px] mx-auto mb-20">
+<div className="p-8 bg-gray-100 rounded-2xl max-w-[1000px] mx-auto mt-5 mb-20">
   <p>
     Sparkling Co. is an industry expert in digital services with over a decade of field experience in Software Development.
     Our expertise extends to providing dedicated teams of developers and project managers for both in-house project as well
