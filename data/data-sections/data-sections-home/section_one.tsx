@@ -18,7 +18,7 @@ const content = (
   </p>
 );
 
-const image = <img src="/img/section/sectionOne.png" className="w-full" alt='sectionOne' />;
+const image = <img src="/img/section/sectionOne.png" className="" alt='sectionOne' />;
 const button = <Button href="/contact" text="Get in touch" />;
 const element = {
   content: content,

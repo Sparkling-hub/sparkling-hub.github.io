@@ -7,6 +7,7 @@ import ICheckboxSelect from '@/interface/ICheckboxSelect';
 const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked, onChange }) => {
 
 
+
   return (
 <div className='relative'>
     <input id={id.value} type="checkbox"  className="opacity-0 w-full absolute h-full" onChange={onChange}/>
