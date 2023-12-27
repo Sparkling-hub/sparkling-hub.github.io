@@ -1,5 +1,6 @@
 
 interface IStartupAssisting {
+
     header?: JSX.Element;  
     content?: JSX.Element;  
     image?: string;  
@@ -8,5 +9,7 @@ interface IStartupAssisting {
     rotate?: string;
     border?: string;
     index: number;
-    }
+
+}
+
 export default IStartupAssisting

@@ -9,6 +9,13 @@ const config: Config = {
   
   ],
   theme: {
+    minWidth: {
+      '0': '0',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      'full': '100%',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -24,6 +31,18 @@ const config: Config = {
         'curved_dark_without_line': 'url("/img/curved/curved_dark_without_line.svg")', 
         'curved_dark_with_line': 'url("/img/curved/curved_dark_with_line.svg")', 
       },
+      bottom: {
+        '-20': '-5rem'
+      },
+      zIndex:{
+        "-1":'-1'
+      },
+      width:{
+        "55":'55',
+      },
+      minHeight: {
+        '128': '32rem',
+      }
     },
   },
   plugins: [],

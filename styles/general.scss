@@ -2,14 +2,14 @@ $color1: #eafffd;
 $color2: #86C0BB;
 $color5: #eafffd;
 $color6: #4DA59B;
-// $color7: #285c5c;
+
 
 
 
 $divideColor: #6AE5CE;
 $colorarrow: #73C9BD;
 $primaryBlueColor: #3498db;
-$primaryDarkColor: #285c5c;//#134e4a;
+$primaryDarkColor: #285c5c;
 $primaryMediumColor: #4DA59B;
 $primaryMediumColor2: #73C9BD;
 $primaryLightColor: #86C0BB;
@@ -307,13 +307,9 @@ section div::before, footer div::before{
     text-align: center;
     font-size: 25px;
     margin: 50px;
- 
     & span {
- 
         color: #17cfc2;
- 
         font-weight: $weight-text;
- 
     }
 }
 
@@ -362,8 +358,6 @@ section div::before, footer div::before{
     }
 }
 
-
-
 .s-b-s-title{
     border: 2px solid $primaryDarkColor;
     padding: 2px;
@@ -408,6 +402,7 @@ li:not(:last-child).highlight .s-b-s-text {
 .kolo.highlight{
 	background: $colorActiveStep;
 }
+
 #answers {
 
     & h3 {
@@ -427,12 +422,12 @@ li:not(:last-child).highlight .s-b-s-text {
     }
 }
 
-
 .job-content {
     border-style: solid;
     border-width: 1px;
     border-color: rgb(236, 236, 236);
-    width: 575px;
+    width: 400px;
+    min-width: 400px;
     font-size: 15px;
     color: rgb(60, 60, 60);
     font-weight: 400 !important;
@@ -448,6 +443,7 @@ li:not(:last-child).highlight .s-b-s-text {
 
     & img {
         width: 20px;
+		height: 20px;
         margin: 0 3px;
     }
 
@@ -484,15 +480,6 @@ li:not(:last-child).highlight .s-b-s-text {
 
 }
 
-.job-content:hover .square-circle {
-    transform: translate(-50%, 100%) scale(2) rotate(90deg);
-    z-index: 2;
-}
-
-.job-content:hover .square-circle::before {
-    opacity: 1;
-}
-
 .job-content:hover {
     border-color: $primaryDarkColor;
 }
@@ -507,7 +494,7 @@ li:not(:last-child).highlight .s-b-s-text {
     & .on {
         color: $primaryLightColor;
         background: $primaryDarkColor;
-        font-weight: $weight-text;
+        font-weight: 400;
     }
 
     & .off {
@@ -529,9 +516,7 @@ li:not(:last-child).highlight .s-b-s-text {
         }
     }
 
-
     & .button {
-
         position: relative;
         bottom: 0;
         margin: auto;
@@ -541,10 +526,98 @@ li:not(:last-child).highlight .s-b-s-text {
 
     & .active {
         border-color: gray;
+    }
+}
+
+.filter-container {
+    top: 50px;
+
+	height: max-content;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    box-shadow: -10px 10px 0px $primaryDarkColor;
+
+    & h3 {
+        color: $primaryDarkColor;
+        font-weight: 500;
+    }
+
+    & .input {
+        position: relative;
+        border: 1px solid #dfdcfe !important;
+        padding: 0 0px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+
 
     }
 
+    & .arrow::after {
 
+        position: absolute;
+        width: 40px;
+        content: "";
+        height: 100%;
+        background-image: url(/img/arrow.svg);
+        background-size: 10px;
+        background-repeat: no-repeat;
+
+        background-position: center;
+        right: 0;
+        top: 0;
+
+    }
+}
+.my-multiple-select .list,
+.my-single-select .list{
+	display: none;
+}
+.my-multiple-select .my-multiple-select-container,
+.my-single-select .my-single-select-container{
+	padding: 0 5px;
+}
+.my-multiple-select.active .list,
+.my-single-select.active .list{
+	display: block;
+}
+
+.my-multiple-select #focused_input:focus,
+.my-single-select #focused_input:focus{
+	background-color: $primaryMediumColor;
+}
+.my-multiple-select .active-item,
+.my-single-select .active-item  {
+	background: #17cfc2;
+	color: white;
+}
+.my-multiple-select .active-item-container,
+.my-single-select .active-item-container{
+	background-color: transparent;
+    margin: 5px 5px 0 0;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 1px;
+	width: max-content;
+}
+.my-multiple-select .active-item-container button,
+.my-single-select .active-item-container button{
+	border-right: 1px solid grey;
+    margin-right: 2px;
+}
+.my-multiple-select .active-item-container button span,
+.my-single-select .active-item-container button span{
+	padding: 2px;
+}
+.my-multiple-select .active-item-container .item-title,
+.my-single-select .active-item-container .item-title{
+	padding: 0 8px;
 }
 
 .blank {
