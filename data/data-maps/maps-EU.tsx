@@ -139,9 +139,9 @@ const officeCards: IOfficeCards[] = [
         id: "UK Office"
     },
     {
-        title: "Partner&rsquo;s Office / UK office",
+        title: "Partner's Office / UK office",
         city: "Cambridge",
-        adress1: "St John&rsquo;s Innovation Centre",
+        adress1: "St John's Innovation Centre",
         state: "Cambridge",
         country_index: "United Kingdom, CB4 0WS",
         coords: "top-45% left-55%",

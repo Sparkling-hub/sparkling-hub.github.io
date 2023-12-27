@@ -1,16 +1,15 @@
 
+import IOfficeCards from "./IOfficeCards";
 
-import IMaps from "./IMaps";
+interface  IPointOffice{
 
-interface  IMapField{
-
-    currentMap: IMaps | undefined;
+    officeCard: IOfficeCards | undefined; 
     hovered: string | null;
     activeOfficePoint: string | null;
     
-    ChangeMap: (e: React.MouseEvent<HTMLDivElement>)=>void;
+    
     setHovered: React.Dispatch<React.SetStateAction<string | null>>;
     setActiveOfficePoint: React.Dispatch<React.SetStateAction<string | null>>;
-    
+
 }
-export default IMapField
+export default IPointOffice

@@ -11,6 +11,7 @@ const InteracticeMaps: React.FC = () => {
 
 	const [currentMap, setCurrentMap] = useState<IMaps | undefined>();
 	const [hovered, setHovered] = useState<string | null>(null);
+	const [activeOfficePoint, setActiveOfficePoint] = useState<string | null>(null);
 
 	useEffect(() => {
 
@@ -51,8 +52,20 @@ const InteracticeMaps: React.FC = () => {
 			<div className="fade-in cubic reveal">
 				<div className="grid relative grid-cols-12 px-global gap-x-global">
 
-					<MapField currentMap={ currentMap } ChangeMap={ ChangeMap } hovered={ hovered } setHovered={ setHovered }/>
-					<MapSelectionSettings currentMap={ currentMap } ChangeMap={ ChangeMap } hovered={ hovered } setHovered={ setHovered }/>
+					<MapField 	currentMap={ currentMap } 
+								ChangeMap={ ChangeMap } 
+								hovered={ hovered } 
+								setHovered={ setHovered }
+								activeOfficePoint={activeOfficePoint}
+								setActiveOfficePoint={setActiveOfficePoint}
+								 />
+					<MapSelectionSettings currentMap={ currentMap } 
+								ChangeMap={ ChangeMap } 
+								hovered={ hovered } 
+								setHovered={ setHovered }
+								activeOfficePoint={activeOfficePoint}
+								setActiveOfficePoint={setActiveOfficePoint}
+								 />
 					
 				</div>
 			</div>

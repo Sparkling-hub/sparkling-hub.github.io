@@ -14,23 +14,14 @@ const countries = [
 	// { name: "North America", id: "NA" },
 ]
 
-const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, hovered, ChangeMap, setHovered }) => {
+const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, hovered, activeOfficePoint, ChangeMap, setHovered, setActiveOfficePoint }) => {
 
-
-	
-
-	
 	const handleClick = (e: any) => {
 
 		ChangeMap(e)
 
 	};
-	// const handleHover = (e: any) => {
-
-	// 	setHovered(e)
-
-	// };
-
+	
 	return (
 		<div className="col-span-3 flex flex-col">
 			<div>
@@ -69,21 +60,24 @@ const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, hov
 			{
 				currentMap ? <div className={`text-center text-4xl font-medium pb-12`}> {currentMap.name}</div> : ""
 			}
+
 			<div className={`grid grid-cols-2  lg:grid-cols-2 max-lg:gap-x-global max-lg:gap-y-4`}>
 				{currentMap && currentMap.officeCards && currentMap.officeCards.map((card) =>
 					<button
 						key={card.id}
 						className={`lg:block btn duration-200 col-span-1 ml-8 p-4 text-xl text-left font-medium !p-0 !bg-transparent !pb-4 hover:!text-primary-light lg:opacity-100 
-									${hovered === card.id ? "text-primary-light" : ""}`}
+									${hovered === card.id ? 'text-primary-light' : ''}`}
 						onMouseEnter={() => setHovered(card.id)}
 						onMouseLeave={() => setHovered(null)}
+						onClick={() => setActiveOfficePoint(card.id)}
 					>
 
 						{card.city}
 					</button>
 				)}
 			</div>
-			
+
+
 
 		</div>
 
