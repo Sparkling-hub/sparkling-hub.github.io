@@ -1,41 +1,40 @@
+
+
 import React from 'react';
 import type SectionType from '../../interface/section';
 
 
-const Section: React.FC<SectionType> = ({ header, content, image, button, background, id, curvedClass, padding_bottom, margin_bottom }) => {
+const Section: React.FC<SectionType> = ({ header, content, image, button, background, id, curvedClass }) => {
 
-  return (
-   
-      // <section className={`flex items-center justify-center relative ${background} ${curvedClass} ${margin_bottom} ${padding_bottom} xl:px-40 custom-3xl`} id={id}>
-      <section className={`flex items-center justify-center relative ${background} ${curvedClass} before:-top-60 pb-60  xl:px-40 custom-3xl`} id={id}>
+	return (
+		
+		<section className={`flex items-center justify-center relative ${background} ${curvedClass} before:-top-60 pb-60  xl:px-40 custom-3xl`} id={id}>
+       <div className='max-w-screen-xl items-start '>
+			<div className='content-section flex   items-start items-start justify-center flex-col justify-center'>
 
-        <div className='content-section flex   items-start justify-center flex-col justify-center'>
+				<div className='flex items-center whitespace-normal w-full'>
+ 
+					<div className='flex justify-center flex-col w-full'>{header}
+						{content}
+					</div>
 
-          <div className='flex items-center whitespace-normal w-full '>
-            <div className='flex justify-center flex-col w-full'>{header}
-              {content}
-            </div>
+					{!image ? null : <div className='content-image'>  {image}
 
-            {!image ? null : <div className='content-image'>  {image}
+					</div>}
+				</div>
 
-            </div>}
-          </div>
+				{button ? 	<div className='button absolute bottom-20 left-0'>
+								{button}
+							</div>
+							:
+							null
+				}
 
-          {button ? <div className='button absolute bottom-20 left-0'>
-            {button}
-          </div>
-            :
-            null
-          }
+			</div>
+      </div>
+		</section>
 
-        </div>
-
-      </section>  
-
-
-  );
+	);
 };
 
 export default Section;
-
-// Sparkling
