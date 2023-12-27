@@ -654,7 +654,8 @@ li:not(:last-child).highlight .s-b-s-text {
 		line-height: 1;
 		
 		font-size: 35px;
-		margin: 20px auto;
+		margin:auto;
+		margin-bottom: 20px;
 
 		& strong.s2 {
 			color: $primaryMediumColor;
