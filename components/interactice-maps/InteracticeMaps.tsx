@@ -29,6 +29,13 @@ const InteracticeMaps: React.FC = () => {
 		};
 	}, [currentMap]);
 
+	// const handleMapsClick2 = (e: any) => {
+
+	// 	const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);		
+	// 	setCurrentMap(foundMap);
+
+	// };
+
 
 
 	const handleMapsClick = (e: any) => {

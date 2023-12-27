@@ -63,8 +63,7 @@ $widhConainers: 1440px;
 	justify-content: center;
 	align-items: center;
 	top: 0;
-	position: sticky;
-	z-index: 3;
+	position: sticky;	
 	background: $white;
 }
 
@@ -428,12 +427,9 @@ li:not(:last-child).highlight .s-b-s-text {
 }
 
 
-// .static-point{
-// 	// position: absolute;
-// 	// top: 50%;
-// 	// left: 50%;
-// 	// width: 10px;
-// 	// height: 10px;
-// 	// background-color: red;
-// 	// border-radius: 50%;
-//   }
+
+.card-office{
+	transition: all 1s ease-out;
+	// transition-duration: .3s;
+	// transition-delay: .4s;
+}

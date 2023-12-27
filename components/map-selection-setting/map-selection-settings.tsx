@@ -66,7 +66,7 @@ const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, hov
 					<button
 						key={card.id}
 						className={`lg:block btn duration-200 col-span-1 ml-8 p-4 text-xl text-left font-medium !p-0 !bg-transparent !pb-4 hover:!text-primary-light lg:opacity-100 
-									${hovered === card.id ? 'text-primary-light' : ''}`}
+									${hovered === card.id ? 'text-primary-light' : ''} ${activeOfficePoint === card.id ? 'text-white' : ''} `}
 						onMouseEnter={() => setHovered(card.id)}
 						onMouseLeave={() => setHovered(null)}
 						onClick={() => setActiveOfficePoint(card.id)}
