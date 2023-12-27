@@ -287,10 +287,7 @@ section div::before, footer div::before{
 	display: inline-block;
 }
 
-.content-image img {
-	width: 600px;
-	max-width: none;
-}
+
 }
 .form {
 	.text-form {
@@ -642,3 +639,10 @@ li:not(:last-child).highlight .s-b-s-text {
 
 
 
+.content-image {
+	width: 60%;
+	&img{ 
+		width: 100%;
+	max-width: none;
+	}
+}

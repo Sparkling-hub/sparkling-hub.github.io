@@ -10,7 +10,7 @@ const content =
     Engraining this concept into our culture makes us who we are, dedicated to excellence. Perhaps is the Swiss way
   </p>
 
-const image = <img src='/img/about/logo.png' width={100} height={100} className="" alt="about" />;
+const image = <img src='/img/about/logo.png' className="" alt="about" />;
 
 const element = {
   content: content,
