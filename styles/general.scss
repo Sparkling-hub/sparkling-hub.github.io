@@ -646,3 +646,22 @@ li:not(:last-child).highlight .s-b-s-text {
 	max-width: none;
 	}
 }
+
+#whoSparkling {
+
+	& h2 {
+		margin-bottom: 40px;
+		line-height: 1;
+		
+		font-size: 35px;
+		margin: 20px auto;
+
+		& strong.s2 {
+			color: $primaryMediumColor;
+			font-size: 35px;
+			font-weight: 900;
+		}
+	}
+
+
+}
