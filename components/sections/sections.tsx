@@ -20,7 +20,7 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 						</div>}
 					</div>
 
-					{button ? <div className='button absolute bottom-20 left-0'>
+					{button ? <div className='button bottom-20 left-0'>
 						{button}
 					</div>
 						:
