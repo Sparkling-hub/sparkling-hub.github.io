@@ -1,10 +1,8 @@
 
 
-import mapsData from "@/data/data-maps";
+
 import IMapField from "@/interface/IMapField";
-import IMaps from "@/interface/IMaps";
-import { useEffect, useState } from "react";
-import Card from "../card";
+import { useEffect } from "react";
 import PointOffice from "../point-office";
 
 const MapField: React.FC<IMapField> = ({ currentMap, hovered, activeOfficePoint, ChangeMap, setHovered, setActiveOfficePoint }) => {

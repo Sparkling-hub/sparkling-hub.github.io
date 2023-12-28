@@ -3,8 +3,6 @@ import IMaps from "@/interface/IMaps";
 import { useEffect, useState } from "react";
 import MapSelectionSettings from "../map-selection-setting";
 import MapField from "../map-field";
-import IOfficeCards from "@/interface/IOfficeCards";
-
 
 
 const InteracticeMaps: React.FC = () => {
