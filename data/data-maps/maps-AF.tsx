@@ -75,6 +75,7 @@ const officeCards = [
         coords: "top-4.8% left-41.5%",
         id:"Tunis1",
         top: "top-100%",
+        pointColor: "bg-primary-dark",
 	},
 	{
 		title: "Tunis Office 2:",
@@ -85,6 +86,7 @@ const officeCards = [
         coords: "top-4.8% left-41.5%",
         id:"Tunis2",
         top: "top-100%",
+        pointColor: "bg-primary-dark",
 	},
 	
 ]

@@ -119,6 +119,7 @@ const officeCards: IOfficeCards[] = [
         coords: "top-64.7% left-55.8%",
         id: "Switzerland",
         top: "top-0",
+        pointColor: "bg-primary-dark",
     },
     {
         title: "Ukraine Office",
@@ -129,6 +130,7 @@ const officeCards: IOfficeCards[] = [
         coords: "top-62% left-88%",
         id: "Ukraine",
         top: "top-0",
+        pointColor: "bg-primary-dark",
     },
     {
         title: "UK Office",
@@ -139,6 +141,7 @@ const officeCards: IOfficeCards[] = [
         coords: "top-55% left-45%",
         id: "UK Office",
         top: "top-0",
+        pointColor: "bg-primary-dark",
     },
     {
         title: "Partner's Office / UK office",
@@ -149,6 +152,7 @@ const officeCards: IOfficeCards[] = [
         coords: "top-54% left-45.3%",
         id: "UK partner",
         top: "top-0",
+        pointColor: "bg-partner-office-color",
     },
 ]
 

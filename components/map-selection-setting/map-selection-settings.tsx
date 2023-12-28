@@ -21,12 +21,12 @@ const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, hov
 	};
 	
 	return (
-		<div className="col-span-3 flex flex-col">
-			<div>
+		<div className="col-span-3 flex flex-col relative">
+			<div className="border-l-2 border-primary-dark pl-12">
 				<div className="gh-2 pt-global duration-300">
-					<div className="">
-						<div className="mb-12"><p>See locations</p>
-							<div className="flex gap-4 flex-wrap group">
+					<div >
+						<div className="mb-12 text-center "><p className="text-2xl font-medium">See locations</p>
+							<div className="flex gap-4 flex-wrap group mt-8">
 
 								{countries.map((country) => (
 									<button key={country.id} id={country.id == currentMap?.id ? 'world' : country.id} className={`btn duration-200 !flex gap-2 items-center light hover:bg-primary-light-light mx-4 p-4 font-medium ${country.id == currentMap?.id ? 'bg-primary-light-light active' : 'bg-primary-dark'}`} onClick={handleClick} >{country.name}
@@ -56,10 +56,10 @@ const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, hov
 
 			</div>
 			{
-				currentMap ? <div className={`text-center text-4xl font-medium pb-12`}> {currentMap.name}</div> : ""
+				currentMap ? <div className={`text-center text-4xl font-medium pb-12 border-l-2 border-primary-dark pl-12`}> {currentMap.name}</div> : ""
 			}
 
-			<div className={`grid grid-cols-2  lg:grid-cols-2 max-lg:gap-x-global max-lg:gap-y-4`}>
+			<div className={`grid grid-cols-2  lg:grid-cols-2 max-lg:gap-x-global max-lg:gap-y-4 border-l-2 border-primary-dark pl-12`}>
 				{currentMap?.officeCards?.map((card) =>
 					<button
 						key={card.id}

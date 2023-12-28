@@ -42,8 +42,8 @@ const InteracticeMaps: React.FC = () => {
 	};
 
 	return (
-		<div className="flex-section block_map relative has-dark-green-bg">
-			<div className="bg-dark-green absolute inset-0 z-behind"></div>
+		<div className="flex-section block_map relative">
+			<div className="absolute inset-0 z-behind"></div>
 			<div className="absolute top-[-100px]" id="section-12"></div>
 			<div className="fade-in cubic reveal">
 				<div className="grid relative grid-cols-12 px-global gap-x-global">

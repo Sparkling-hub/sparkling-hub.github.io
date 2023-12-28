@@ -10,6 +10,7 @@ interface  IOfficeCards{
     coords: string;
     id: string;
     top: string;
+    pointColor: string;
      
 }
 export default IOfficeCards;

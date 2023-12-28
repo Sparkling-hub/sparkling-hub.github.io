@@ -3820,10 +3820,13 @@ C1487.5,1539.5,1487.6,1539.4,1487.8,1539.3z"></path></g></g></g>
 const officeCardsData = []
 
 const element: IMaps = {
+
+	name: "World",
 	header: header,
 	image: image,
 	id: "world",
-	officeCards: []
+	officeCards: [],
+	
 }
 
 export default element

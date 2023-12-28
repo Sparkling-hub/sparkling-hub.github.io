@@ -36,6 +36,16 @@ const config: Config = {
       backgroundColor: {
         'primary-light-light': '#CBF0E9',
         'primary-dark': '#285c5c',
+        'active-office-color': '#C73926',
+        // 'partner-office-color': '#D3E5EB',
+        'partner-office-color': '#3498db',
+      },
+      borderColor: {
+        'primary-light-light': '#CBF0E9',
+        'primary-dark': '#285c5c',
+        'active-office-color': '#C73926',
+        // 'partner-office-color': '#D3E5EB',
+        'partner-office-color': '#3498db',
       },
       colors: {
         primary: {

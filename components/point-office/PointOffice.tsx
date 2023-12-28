@@ -23,14 +23,13 @@ const PointOffice: React.FC<IPointOffice> = ({ officeCard, hovered, activeOffice
             <div
               className={` absolute
                           w-2.5 
-                          h-2.5 
-                          bg-primary-dark                            
+                          h-2.5                    
                           rounded-full 
                           ${hovered === officeCard?.id ?
 									// "-translate-x-1/2 -translate-x-1/2 z-40 cursor-pointer duration-200 group w-3.5 h-3.5 z-50" 
-									"animate-ping"
+									"animate-ping bg-active-office-color"
 									:
-									""}
+									officeCard?.pointColor}
                           `}
 			 
 
@@ -38,9 +37,13 @@ const PointOffice: React.FC<IPointOffice> = ({ officeCard, hovered, activeOffice
             <div
               className={` absolute
                           w-2.5 
-                          h-2.5 
-                          bg-primary-dark                           
+                          h-2.5                   
                           rounded-full 
+						  ${hovered === officeCard?.id ?
+							"bg-active-office-color"
+							:
+							officeCard?.pointColor}
+						  
                           `}
             ></div>
           </button>
