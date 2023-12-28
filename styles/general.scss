@@ -647,7 +647,7 @@ li:not(:last-child).highlight .s-b-s-text {
 	}
 }
 
-#whoSparkling {
+#whoSparkling, #principle {
 
 	& h2 {
 
@@ -661,6 +661,11 @@ li:not(:last-child).highlight .s-b-s-text {
 			color: $primaryMediumColor;
 			font-size: 35px;
 			font-weight: 900;
+		}
+		& strong.s3 {
+			color: $primaryDarkColor;
+			font-size: 35px;
+			font-weight: 700;
 		}
 	}
 
