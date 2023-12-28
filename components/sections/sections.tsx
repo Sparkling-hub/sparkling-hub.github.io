@@ -1,8 +1,10 @@
+
+
 import React from 'react';
 import type SectionType from '../../interface/section';
 
 
-const Section: React.FC<SectionType> = ({ header, content, image, button, background, id, curvedClass, padding_bottom, margin_bottom }) => {
+const Section: React.FC<SectionType> = ({ header, content, image, button, background, id, curvedClass }) => {
 
 	return (
 
@@ -39,4 +41,3 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 };
 
 export default Section;
-
