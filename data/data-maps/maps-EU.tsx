@@ -117,7 +117,7 @@ const officeCards: IOfficeCards[] = [
         adress1: "Via Cattedrale 7",
         state: "Lugano",
         country_index: "Switzerland, 6900",
-        coords: "top-66.7% left-42.3%",
+        coords: "top-64.7% left-55.8%",
         id: "Switzerland",
     },
     {
@@ -126,7 +126,7 @@ const officeCards: IOfficeCards[] = [
         adress1: "Haharina St, 3",
         state: "Zaporizhzhia, Zaporiz&rsquo;ka oblast&rsquo;",
         country_index: "Ukraine, 69061",
-        coords: "top-63% left-69%",
+        coords: "top-62% left-88%",
         id: "Ukraine"
     },
     {
@@ -144,7 +144,7 @@ const officeCards: IOfficeCards[] = [
         adress1: "St John's Innovation Centre",
         state: "Cambridge",
         country_index: "United Kingdom, CB4 0WS",
-        coords: "top-45% left-55%",
+        coords: "top-54% left-45.3%",
         id: "UK partner"
     },
 ]

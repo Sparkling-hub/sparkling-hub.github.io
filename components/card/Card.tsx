@@ -36,9 +36,9 @@ const Card: React.FC<ICard> = ({ officeCard, setActiveOfficePoint }) => {
 			</button>
 			<p className="medium font-medium text-3xl pb-8">{officeCard?.title}</p>
 			<div>
-			  <p className="text-xs mb-1">{officeCard?.adress1}</p>
-			  <p className="text-xs mb-1"><span>{officeCard?.country_index}</span> <span>{officeCard?.title}</span></p>
-			  <p className="text-xs mb-global">{officeCard?.title}</p>
+			  <p className="text-xl mb-8 font-medium">{officeCard?.adress1}</p>
+			  <p className="text-xl mb-12 font-medium"><span>{officeCard?.country_index}</span> <span>{officeCard?.title}</span></p>
+			  <p className="text-xl b-4 font-medium">{officeCard?.title}</p>
 			  </div>
 		  </div>
 		</div>

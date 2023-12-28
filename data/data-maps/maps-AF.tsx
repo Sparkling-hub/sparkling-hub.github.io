@@ -75,7 +75,7 @@ const officeCards = [
 		adress1: "Pôle Technologique",
 		state: "Ariana ",
 		country_index: "Tunisia, 2083",
-        coords: "top-55% left-45%",
+        coords: "top-4.8% left-41.5%",
         id:"Tunis1",
 	},
 	{
@@ -84,7 +84,7 @@ const officeCards = [
 		adress1: "Rue André Ampère",
 		state: "Ariana 2083",
 		country_index: "Tunisia, 2083",
-        coords: "top-45% left-55%",
+        coords: "top-4.8% left-41.5%",
         id:"Tunis2",
 	},
 	
