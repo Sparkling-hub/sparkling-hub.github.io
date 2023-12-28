@@ -1,7 +1,6 @@
 
 
 import ICard from '@/interface/ICard';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 
