@@ -26,7 +26,10 @@ const Card: React.FC<ICard> = ({ officeCard, setActiveOfficePoint }) => {
 	return (
 
 		<div className={` ${isVisible ? 'h-96 ' : 'h-0'}  lg:absolute z-[80]  text-black w-screen lg:max-w-[280px] max-lg:!left-0   lg:-translate-x-full lg:-ml-3 lg:-translate-y-full lg:-mt-3 `} >
-			<div className={` ${officeCard?.top} ${isVisible ? 'h-96 opacity-95 top-0' : 'h-0 top-100%'} lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
+			<div className={` ${officeCard?.top} ${isVisible ? 'h-96 opacity-95 top-0' : 'h-0 top-100%'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
+
+
+
 				<div className={` p-global lg:absolute w-full left-0  p-8  overflow-hidden bottom-full `}>
 					<button className="absolute top-5% right-5% z-10 h-4 w-4 " onClick={handleClick}>
 						<div className="content-center icon-wrap" >
@@ -41,15 +44,18 @@ const Card: React.FC<ICard> = ({ officeCard, setActiveOfficePoint }) => {
 						<p className="text-left text-xl mb-4 font-medium">{officeCard?.adress1}</p>
 						<p className="text-left text-xl mb-4 font-medium">{officeCard?.city}, {officeCard?.index}</p>
 						<p className="text-left text-xl mb-12 font-medium"><span>{officeCard?.country}</span> </p>
-						
-						<a 	href="https://goo.gl/maps/eeB4moJNcZukf9uk7" 
-							target="_blank" 
-							rel="noopener noreferrer" 
-							className="btn duration-200  text-center  hover:bg-primary-light-light mt-24  p-4 font-bold border-[2px] border-primary-light-light">
-							See on map
-						</a>
 					</div>
+					
 				</div>
+
+				{/*   // It is necessary to correct either smooth appearance, after the card is already there, or to move out together with the card
+				<a href="https://goo.gl/maps/eeB4moJNcZukf9uk7"
+					target="_blank"
+					rel="noopener noreferrer"
+					className={`transition-all duration-2000 delay-1500 ${isVisible ? 'opacity-100 ' : 'opacity-0'} absolute bottom-4 right-20 text-center  hover:bg-primary-light-light mt-24  p-4 font-bold border-[2px] border-primary-light-light`}>
+					See on map
+				</a> */}
+
 			</div>
 			<div className={`transition-opacity duration-200 delay-150 ${isVisible ? 'opacity-100' : 'opacity-0'} absolute h-[2px] bg-primary-dark z-10  right-0 bottom-0 w-full `}></div>
 			<div className="absolute pointer-events-none overflow-hidden duration-[150ms] -right-[1.95rem] -bottom-[1.95rem] w-8 h-8 lg:delay-0">
