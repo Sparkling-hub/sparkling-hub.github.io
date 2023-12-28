@@ -35,11 +35,11 @@ const Card: React.FC<ICard> = ({ officeCard, setActiveOfficePoint }) => {
 				</svg>
 			  </div>
 			</button>
-			<p className="medium font-medium text-3xl pb-8">{officeCard?.title}</p>
+			<p className="text-left font-medium text-3xl pb-8">{officeCard?.title}</p>
 			<div>
-			  <p className="text-xl mb-8 font-medium">{officeCard?.adress1}</p>
-			  <p className="text-xl mb-8 font-medium">{officeCard?.city}, {officeCard?.index}</p>
-			  <p className="text-xl mb-12 font-medium"><span>{officeCard?.country}</span> </p>
+			  <p className="text-left text-xl mb-4 font-medium">{officeCard?.adress1}</p>
+			  <p className="text-left text-xl mb-4 font-medium">{officeCard?.city}, {officeCard?.index}</p>
+			  <p className="text-left text-xl mb-4 font-medium"><span>{officeCard?.country}</span> </p>
 			  </div>
 		  </div>
 		</div>
