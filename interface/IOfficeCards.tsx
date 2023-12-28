@@ -9,6 +9,7 @@ interface  IOfficeCards{
     country_index: string;
     coords: string;
     id: string;
+    top: string;
      
 }
 export default IOfficeCards;

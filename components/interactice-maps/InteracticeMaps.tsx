@@ -21,22 +21,13 @@ const InteracticeMaps: React.FC = () => {
 		mapItems.forEach((element) => {
 			element.addEventListener('click', handleMapsClick);
 		});
-
+		setActiveOfficePoint(null); 
 		return () => {
 			mapItems.forEach((element) => {
 				element.removeEventListener('click', handleMapsClick);
 			});
 		};
 	}, [currentMap]);
-
-	// const handleMapsClick2 = (e: any) => {
-
-	// 	const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);		
-	// 	setCurrentMap(foundMap);
-
-	// };
-
-
 
 	const handleMapsClick = (e: any) => {
 

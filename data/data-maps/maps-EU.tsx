@@ -119,6 +119,7 @@ const officeCards: IOfficeCards[] = [
         country_index: "Switzerland, 6900",
         coords: "top-64.7% left-55.8%",
         id: "Switzerland",
+        top: "top-0",
     },
     {
         title: "Ukraine Office",
@@ -127,7 +128,8 @@ const officeCards: IOfficeCards[] = [
         state: "Zaporizhzhia, Zaporiz&rsquo;ka oblast&rsquo;",
         country_index: "Ukraine, 69061",
         coords: "top-62% left-88%",
-        id: "Ukraine"
+        id: "Ukraine",
+        top: "top-0",
     },
     {
         title: "UK Office",
@@ -136,7 +138,8 @@ const officeCards: IOfficeCards[] = [
         state: "London",
         country_index: "United Kingdom, W1H 2BQ",
         coords: "top-55% left-45%",
-        id: "UK Office"
+        id: "UK Office",
+        top: "top-0",
     },
     {
         title: "Partner's Office / UK office",
@@ -145,7 +148,8 @@ const officeCards: IOfficeCards[] = [
         state: "Cambridge",
         country_index: "United Kingdom, CB4 0WS",
         coords: "top-54% left-45.3%",
-        id: "UK partner"
+        id: "UK partner",
+        top: "top-0",
     },
 ]
 

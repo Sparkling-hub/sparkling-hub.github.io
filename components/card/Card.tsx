@@ -10,6 +10,7 @@ const Card: React.FC<ICard> = ({ officeCard, setActiveOfficePoint }) => {
 	useEffect(() => {
 		
 		setIsVisible(true);
+
 	  }, []);
 	
 
@@ -23,8 +24,8 @@ const Card: React.FC<ICard> = ({ officeCard, setActiveOfficePoint }) => {
 	
 	return (
 
-		<div className={`transition-height  ${isVisible ? 'h-96' : 'h-0'}  lg:absolute z-[80]  text-black w-screen lg:max-w-[280px] max-lg:!left-0   lg:-translate-x-full lg:-ml-3 lg:-translate-y-full lg:-mt-3 `} >
-		<div className={`transition-height top-full   ${isVisible ? 'h-96' : 'h-0'} lg:absolute w-full bg-primary-dark duration-[300ms] overflow-hidden lg:ease-out lg:delay-[400ms]`} >
+		<div className={`transition-height ${isVisible ? 'h-96 ' : 'h-0'}  lg:absolute z-[80]  text-black w-screen lg:max-w-[280px] max-lg:!left-0   lg:-translate-x-full lg:-ml-3 lg:-translate-y-full lg:-mt-3 `} >
+		<div className={`transition-height ${officeCard?.top} ${isVisible ? 'h-96 opacity-95' : 'h-0'} lg:absolute w-full bg-primary-dark duration-[300ms] overflow-hidden lg:ease-out lg:delay-[400ms]`} >
 		  <div className={` p-global lg:absolute w-full left-0  p-8  overflow-hidden bottom-full `}>
 			<button className="absolute top-5% right-5% z-10 h-4 w-4 " onClick={handleClick}>
 			  <div className="content-center icon-wrap" >
