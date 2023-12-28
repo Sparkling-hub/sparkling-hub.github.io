@@ -2,9 +2,9 @@ import InteracticeMaps from "@/components/interactice-maps";
 import React from 'react';
 
 const header = (
-    <h1 className="section_one">
-        <div className="text-black">Sparkling is a <span className="color-primary-light">global </span> company</div>
-    </h1>
+    <h2 className="text-center">
+        <div className="text-black text-5xl pt-12 pb-24">Sparkling is a <span className="color-primary-light">global </span> company</div>
+    </h2>
 );
 
 const content = (
