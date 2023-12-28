@@ -10,7 +10,7 @@ const PointOffice: React.FC<IPointOffice> = ({ officeCard, hovered, activeOffice
 	
 	
 	return (
-		<div
+		<button
             key={officeCard?.id}
             id={officeCard?.id}
             className={`${officeCard?.coords} absolute`}
@@ -43,7 +43,7 @@ const PointOffice: React.FC<IPointOffice> = ({ officeCard, hovered, activeOffice
                           rounded-full 
                           `}
             ></div>
-          </div>
+          </button>
 
 		
 	);

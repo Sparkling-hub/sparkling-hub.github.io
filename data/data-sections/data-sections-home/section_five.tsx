@@ -1,8 +1,5 @@
 import InteracticeMaps from "@/components/interactice-maps";
-import Button from "../../../components/button";
 import React from 'react';
-
-
 
 const header = (
     <h1 className="section_one">

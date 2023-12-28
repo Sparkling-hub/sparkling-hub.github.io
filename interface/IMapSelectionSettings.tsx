@@ -1,6 +1,6 @@
-import IMaps from "./IMaps";
-import IOfficeCards from "./IOfficeCards";
 
+
+import IMaps from "./IMaps";
 
 interface  IMapSelectionSettings{
     

@@ -37,7 +37,7 @@ const MapField: React.FC<IMapField> = ({ currentMap, hovered, activeOfficePoint,
       }
       {currentMap ? currentMap.image : ""}
 
-      {currentMap && currentMap.officeCards && currentMap.officeCards.map((card) => {
+      {currentMap?.officeCards?.map((card) => {
 
         return card.coords ?
           <PointOffice officeCard={card} hovered={hovered} setHovered={setHovered} activeOfficePoint={activeOfficePoint} setActiveOfficePoint={setActiveOfficePoint}/>          

@@ -1,5 +1,5 @@
 import IMaps from "@/interface/IMaps";
-import _img from "../../public/img/maps/world.svg"
+
 
 import React from 'react';
 import IOfficeCards from "@/interface/IOfficeCards";
@@ -11,8 +11,7 @@ const header =
         </span>
     </h1>
 
-const image = <>
-    <svg version="1.1" id="cont_Continents" className="current-map h-full w-auto m-auto text-green-80 relative svg-map" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 900 700">
+const image =   <svg version="1.1" id="cont_Continents" className="current-map h-full w-auto m-auto text-green-80 relative svg-map" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 900 700">
         <g>
             <g id="cont_EU">
                 <path d="M654.7 528.1l0.5 0.4 2 2.9 1.4 0.5 1.9 1.3 1.4 3.2 0.1 2.2-0.5 2.6 0.3 2.1-0.8 0.8 0.7 2 0.2 1.9 1.2 2.2 1.2 1.1 1.3 2.4 1.6-0.2 1.3 1.1 0 1.1 1.1 1.8-0.8 2.6-1.7 0.8-1.2 3.1-0.3 2-0.6 0.5-1.9 0.3-1.7 1.3 1 2.2-0.9 0.7-0.3 1.5-0.7 0.7-2.7-0.9-0.7-2.5-1.7-2.7-4.9-2.6-1.2-1.1 0.4-1.5-0.1-1.4-1.4-2.4 0.3-2.6 0.8-2.2-0.3-2.7 0.1-2.1-0.7-2.9 0.5-2.1 0.9-1.3-0.2-2.2-1.5-1.1-1.6-0.2 0-3.1-0.3-0.6 1.7 0-1.7-2.8 3.2-5.3 1.1 0.3 0.8 2.1 3.4-1.2z" id="AL" name="Albania">
@@ -107,8 +106,8 @@ const image = <>
                 </path>
             </g>
         </g>       
-    </svg>
-</>
+                </svg>
+
 
 const officeCards: IOfficeCards[] = [
     {
