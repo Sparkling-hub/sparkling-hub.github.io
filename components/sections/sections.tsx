@@ -18,7 +18,7 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 						{content}
 					</div>
 
-					{!image ? null : <div className='content-image'>  {image}
+					{!image ? null : <div className='content-image w-full'>  {image}
 
 					</div>}
 				</div>
