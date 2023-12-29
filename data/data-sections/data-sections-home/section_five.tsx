@@ -3,7 +3,7 @@ import React from 'react';
 
 const header = (
     <h2 className="text-center">
-        <div className="text-black text-5xl pt-12 pb-24">Sparkling is a <span className="color-primary-light">global </span> company</div>
+        <div className="text-black text-5xl pt-12 pb-24">Sparkling’s presence in<span className="color-primary-light"> Europe </span> and <span className="color-primary-light"> North Africa</span></div> 
     </h2>
 );
 
