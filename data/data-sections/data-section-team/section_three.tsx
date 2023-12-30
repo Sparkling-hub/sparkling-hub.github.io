@@ -1,5 +1,5 @@
 import Team from "@/components/row-team";
-const head = <h2 className="m-auto font-5 text-3xl">Why <strong className="text-teal-700">Working With Us?</strong></h2>
+const head = <h2 className="m-auto font-5 text-4xl">Why <strong className="text-teal-700">Working With Us?</strong></h2>
 const content = (<Team/>
 );
 
