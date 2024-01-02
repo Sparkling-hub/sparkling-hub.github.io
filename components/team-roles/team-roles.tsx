@@ -17,7 +17,7 @@ const Benefit: React.FC = () => {
             ))}
         </div>
             <div className='mx-4 w-1/2'>
-                <div className='border-gray-100 border-[1px] rounded-3xl  m-5 p-5 h-2/4'>
+                <div className='border-gray-100 border-[1px] rounded-3xl  m-5 p-5 h-8/12'>
                     <h3 className='flex justify-center text-xl mb-5'>
                         Roles<strong className='font-medium text-teal-500'>
                             {'\u00A0'}We Cover
@@ -31,7 +31,7 @@ const Benefit: React.FC = () => {
                 </div>
 
 
-                <div className='border-gray-50 h-auto bg-gray-100 border-[1px] rounded-3xl  m-7 p-7 h-2/5 flex items-center justify-center' >
+                <div className='border-gray-50 h-auto bg-gray-100 border-[1px] rounded-3xl mx-5 mb-2  mt-10 h-[35%] flex items-center justify-center p-2' >
                     <Button href='/contact#rec_form' text={"Build your team"} />
                 </div>
             </div>

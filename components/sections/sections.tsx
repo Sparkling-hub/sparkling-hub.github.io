@@ -9,7 +9,7 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 	return (
 
 		<section className={`flex items-center justify-center relative ${background} ${curvedClass} before:-top-calc pb-20  xl:px-40 custom-3xl`} id={id}>
-			<div className='max-w-screen-xl items-start'>
+			<div className='max-w-screen-xl items-start mb-9'>
 				<div className='content-section flex   items-start justify-center flex-col justify-center'>
 
 					<div className='flex items-center whitespace-normal w-full '>
@@ -23,7 +23,7 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 					</div>
 
 
-					{button ? <div className='button bottom-20 left-0'>
+					{button ? <div className='button bottom-0 left-0'>
 						{button}
 					</div>
 						:
