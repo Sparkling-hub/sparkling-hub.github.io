@@ -1,4 +1,4 @@
-import Button from "../../../components/button";
+
 
 const header = (
   <h1 className="section_one">

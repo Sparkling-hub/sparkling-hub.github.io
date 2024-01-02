@@ -1,6 +1,3 @@
-import Button from "../../../components/button";
-
-
 
 
 const content = (<div>
