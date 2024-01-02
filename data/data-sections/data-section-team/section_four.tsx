@@ -8,7 +8,7 @@ const element = {
   header:head,
   content: content,
   curvedClass: 'before:content-curved_white_without_line before:w-full before:absolute  before:top-[-22%]',
-  background: '', 
+  background: 'bg-color-primary-light', 
   index: 3,
   id: 'team'
 };
