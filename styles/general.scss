@@ -207,11 +207,12 @@ footer {
 	width: 200px;
 }
 
-section div::before,
-footer div::before {
-	top: calc(-5vw + 5px);
 
-}
+
+.before\:-top-calc::before {
+	position: absolute;
+	top: calc(-5vw + 2px);  
+  }
 
 .content-section {
 	display: flex;
@@ -278,12 +279,12 @@ footer div::before {
 
 	& p {
 
-		width: max-content;
-		font-weight: $weight-text;
 
-		color: #3b3b3b;
-		width: auto;
-	}
+            width: max-content;
+            font-weight: $weight-text;
+            color: #3b3b3b;
+        }
+
 
 
 
@@ -696,4 +697,29 @@ li:not(:last-child).highlight .s-b-s-text {
 		color:$color7;
 		font-weight: 700;
 	}
+}
+
+#whoSparkling, #principle {
+
+	& h2 {
+
+		line-height: 1;
+		
+		font-size: 35px;
+		margin:auto;
+		
+
+		& strong.s2 {
+			color: $primaryMediumColor;
+			font-size: 35px;
+			font-weight: 900;
+		}
+		& strong.s3 {
+			color: $primaryDarkColor;
+			font-size: 35px;
+			font-weight: 700;
+		}
+	}
+
+
 }
