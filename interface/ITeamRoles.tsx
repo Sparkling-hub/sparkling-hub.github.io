@@ -2,6 +2,7 @@ interface ITeam {
     content: string,
     header: string,
     index: number,
-    image: JSX.Element
+    image: string
+    
 }
 export default ITeam

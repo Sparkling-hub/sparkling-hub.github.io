@@ -1,4 +1,4 @@
 
-import About from './team'
+import Team from './team'
 
-export default About;
+export default Team;
