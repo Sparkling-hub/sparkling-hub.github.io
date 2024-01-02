@@ -26,7 +26,7 @@ const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, hov
 				<div className="gh-2 pt-global duration-300">
 					<div >
 						<div className="mb-12 text-center "><p className="text-2xl font-medium">See locations</p>
-							<div className="flex gap-4 flex-wrap group mt-8">
+							{/* <div className="flex gap-4 flex-wrap group mt-8">
 
 								{countries.map((country) => (
 									<button key={country.id} id={country.id == currentMap?.id ? 'world' : country.id} className={`btn duration-200 !flex gap-2 items-center light hover:bg-primary-light-light mx-4 p-4 font-medium ${country.id == currentMap?.id ? 'bg-primary-light-light active' : 'bg-primary-dark'}`} onClick={handleClick} >{country.name}
@@ -49,15 +49,15 @@ const MapSelectionSettings: React.FC<IMapSelectionSettings> = ({ currentMap, hov
 								))
 								}
 
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
 
 			</div>
-			{
+			{/* {
 				currentMap ? <div className={`text-center text-4xl font-medium pb-12 border-l-2 border-primary-dark pl-12`}> {currentMap.name}</div> : ""
-			}
+			} */}
 
 			<div className={`grid grid-cols-2  lg:grid-cols-2 max-lg:gap-x-global max-lg:gap-y-4 border-l-2 border-primary-dark pl-12`}>
 				{currentMap?.officeCards?.map((card) =>

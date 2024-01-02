@@ -11,7 +11,7 @@ const MapField: React.FC<IMapField> = ({ currentMap, hovered, activeOfficePoint,
 
   useEffect(() => {
 
-    const mapItems = document.querySelectorAll('.item-map');
+    const mapItems = document.querySelectorAll('.item-map1');
     mapItems.forEach((element) => {
       element.addEventListener('click', handleClick);
     });

@@ -395,17 +395,24 @@ li:not(:last-child).highlight .s-b-s-text {
 
 
 .current-map path,
-.svg-map #EU,
-.svg-map #AI,
-.svg-map #AF,
-.svg-map #OC,
-.svg-map #NA,
-.svg-map #SA
-
+// .svg-map #EU,
+// .svg-map #AI,
+// .svg-map #AF,
+// .svg-map #OC,
+// .svg-map #NA,
+// .svg-map #SA
+.svg-map
 {
     fill: #CBF0E9;
 }
-.svg-map.svg-map #EU:hover,
+.svg-map #svg_12,
+.svg-map #CH,
+.svg-map #UA,
+.svg-map #TN,
+{
+	opacity: 0.6;
+}
+// .svg-map.svg-map #EU:hover,
 // .svg-map.svg-map #AI:hover,
 // .svg-map.svg-map #OC:hover,
 // .svg-map.svg-map #NA:hover,
