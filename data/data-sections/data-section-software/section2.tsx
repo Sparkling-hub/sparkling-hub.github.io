@@ -1,10 +1,7 @@
 
-import StartupsTechnologiesIconList from "@/components/startup-technologies-icon-list"
-
-
 
 const header =
-  <h2 className="flex-col items-center justify-center p-4">
+  <h2 className="">
  
   </h2>
 

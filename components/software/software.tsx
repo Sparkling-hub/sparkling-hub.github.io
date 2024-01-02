@@ -3,7 +3,7 @@
 import React from 'react';
 import IAbout from '@/interface/IAbout';
 
-const Benefit: React.FC<IAbout> = () => {
+const Benefit: React.FC<IAbout> = ({ content, header, number }) => {
 
 	return (
 
