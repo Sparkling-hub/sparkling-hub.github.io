@@ -7,6 +7,7 @@ interface  IMapField{
     currentMap: IMaps | undefined;
     hovered: string | null;
     activeOfficePoint: string | null;
+    activeOfficePointCoords: number[];
     
     ChangeMap: (e: React.MouseEvent<HTMLDivElement>)=>void;
     setHovered: React.Dispatch<React.SetStateAction<string | null>>;

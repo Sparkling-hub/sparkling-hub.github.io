@@ -87,14 +87,43 @@ const image =
  </g>
  <g id="Switzerland" className="office_point">
     <ellipse className="block" cx="515.7" cy="388.9" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
+    <circle className="block" cx="515.7" cy="388.9" fill="none" r="6" stroke-width="1" stroke="transparent"/>
     <ellipse className="hidden" cx="515.7" cy="388.9" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
-    <circle className="hidden" cx="515.7" cy="388.9" fill="none" id="svg_6" r="6" stroke-width="1" stroke="#FF0000"/>
+    <circle className="hidden" cx="515.7" cy="388.9" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
  </g>
  <g id="UK Office" className="office_point">
-    <ellipse className="block" cx="415.7" cy="388.9" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
-    <ellipse className="hidden" cx="415.7" cy="388.9" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
-    <circle className="hidden" cx="415.7" cy="388.9" fill="none" id="svg_6" r="6" stroke-width="1" stroke="#FF0000"/>
+    <ellipse className="block" cx="418.55" cy="301.05" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
+    <circle className="block" cx="418.55" cy="301.05" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <ellipse className="hidden" cx="418.55" cy="301.05" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
+    <circle className="hidden" cx="418.55" cy="301.05" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
  </g>
+ <g id="UK_partner" className="office_point">
+    <ellipse className="block" cx="424.65" cy="286.65" fill="#3498db" rx="3" ry="3" stroke="#3498db"/>
+    <circle className="block" cx="424.65" cy="286.65" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <ellipse className="hidden" cx="424.65" cy="286.65" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
+    <circle className="hidden" cx="424.65" cy="286.65" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+ </g>
+ <g id="Ukraine" className="office_point">
+    <ellipse className="block" cx="780.55" cy="363.95" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
+    <circle className="block" cx="780.55" cy="363.95" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <ellipse className="hidden" cx="780.55" cy="363.95" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
+    <circle className="hidden" cx="780.55" cy="363.95" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+ </g>
+ <g id="Tunis1" className="office_point">
+    <ellipse className="block" cx="522.85" cy="541.25" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
+    <circle className="block" cx="522.85" cy="541.25" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <ellipse className="hidden" cx="522.85" cy="541.25" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
+    <circle className="hidden" cx="522.85" cy="541.25" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+ </g>
+ <g id="Tunis2" className="office_point">
+    <ellipse className="block" cx="522.85" cy="541.25" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
+    <circle className="block" cx="522.85" cy="541.25" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <ellipse className="hidden" cx="522.85" cy="541.25" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
+    <circle className="hidden" cx="522.85" cy="541.25" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+ </g>
+
+ 
+
 
 </svg>
 
@@ -106,9 +135,8 @@ const officeCardsData = [
 		state: "Ariana ",
 		country: "Tunisia",
 		index: "2083",
-        coords: "top-4.8% left-41.5%",
         id:"Tunis1",
-        top: "top-100%",
+        top: "",
         pointColor: "bg-primary-dark",
 	},
 	{
@@ -118,9 +146,8 @@ const officeCardsData = [
 		state: "Ariana 2083",
 		country: "Tunisia",
 		index: "2083",
-        coords: "top-4.8% left-41.5%",
         id:"Tunis2",
-        top: "top-100%",
+        top: "",
         pointColor: "bg-primary-dark",
 	},
     {
@@ -130,7 +157,6 @@ const officeCardsData = [
         state: "Lugano",
         country: "Switzerland0",
         index: "6900",
-        coords: "top-64.7% left-55.8%",
         id: "Switzerland",
         top: "top-0",
         pointColor: "bg-primary-dark",
@@ -142,7 +168,6 @@ const officeCardsData = [
         state: "Zaporizhzhia, Zaporiz&rsquo;ka oblast&rsquo;",
         country: "Ukraine",
         index: "69061",
-        coords: "top-62% left-88%",
         id: "Ukraine",
         top: "top-0",
         pointColor: "bg-primary-dark",
@@ -154,7 +179,6 @@ const officeCardsData = [
         state: "London",
         country: "United Kingdom",
         index: "W1H 2BQ",
-        coords: "top-55% left-45%",
         id: "UK Office",
         top: "top-0",
         pointColor: "bg-primary-dark",
@@ -166,8 +190,7 @@ const officeCardsData = [
         state: "Cambridge",
         country: "United Kingdom",
         index: "CB4 0WS",
-        coords: "top-54% left-45.3%",
-        id: "UK partner",
+        id: "UK_partner",
         top: "top-0",
         pointColor: "bg-partner-office-color",
     },
