@@ -11,7 +11,7 @@ const InteracticeMaps: React.FC = () => {
 	const [hovered, setHovered] = useState<string | null>(null);
 	const [lastHovered, setLastHovered] = useState<string>('');
 	const [activeOfficePoint, setActiveOfficePoint] = useState<string | null>(null);
-	const [activeOfficePointCoords, setactiveOfficePointCoords] = useState<number[]>([]);
+	const [activeOfficePointCoords, setActiveOfficePointCoords] = useState<number[]>([]);
 
 	
 	
@@ -30,13 +30,13 @@ const InteracticeMaps: React.FC = () => {
 
 		if (lastHovered && hovered != lastHovered || lastHovered && !hovered) {
 
-			let el = document.getElementById(lastHovered)?.children
+			let elements = document.getElementById(lastHovered)?.children
 
-			if (el) {
-				for (let i = 0; i < el.length; i++) {
-					el[i].classList.toggle('hidden');
-					el[i].classList.toggle('block');
-					setLastHovered("")
+			if (elements) {
+				for (const element of elements) {
+					element.classList.toggle('hidden');
+					element.classList.toggle('block');
+					setLastHovered("");
 				}
 			}
 		}		
@@ -54,11 +54,11 @@ const InteracticeMaps: React.FC = () => {
 
 	const handleHover = () =>{
 		if (hovered) {
-			let el = document.getElementById(hovered)?.children
-			if (el && !lastHovered) {
-				for (let i = 0; i < el.length; i++) {
-					el[i].classList.toggle('hidden');
-					el[i].classList.toggle('block');
+			let elements = document.getElementById(hovered)?.children
+			if (elements && !lastHovered) {
+				for (const element of elements) {
+					element.classList.toggle('hidden');
+					element.classList.toggle('block');
 					setLastHovered(hovered)
 				}
 			}
@@ -139,7 +139,7 @@ const InteracticeMaps: React.FC = () => {
 			const topCoordinate = rect.top;
 			const leftCoordinate = rect.left;
 
-			setactiveOfficePointCoords([topCoordinate, leftCoordinate])
+			setActiveOfficePointCoords([topCoordinate, leftCoordinate])
 
 		}
 

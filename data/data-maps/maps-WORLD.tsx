@@ -1,7 +1,8 @@
-import IMaps from "@/interface/IMaps";
-import _img from "../../public/img/maps/world.svg"
 
+
+import IMaps from "@/interface/IMaps";
 import React from 'react';
+
 
 const header =
 	<h1 className='h-24'>

@@ -3,7 +3,6 @@
 
 import IMapField from "@/interface/IMapField";
 import { useEffect, useState } from "react";
-import PointOffice from "../point-office";
 import IOfficeCards from "@/interface/IOfficeCards";
 import Card from "../card";
 

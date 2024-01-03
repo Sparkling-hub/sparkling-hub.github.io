@@ -87,39 +87,39 @@ const image =
  </g>
  <g id="Switzerland" className="office_point">
     <ellipse className="block" cx="515.7" cy="388.9" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
-    <circle className="block" cx="515.7" cy="388.9" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <circle className="block" cx="515.7" cy="388.9" fill="none" r="6" strokeWidth="1" stroke="transparent"/>
     <ellipse className="hidden" cx="515.7" cy="388.9" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
-    <circle className="hidden" cx="515.7" cy="388.9" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+    <circle className="hidden" cx="515.7" cy="388.9" fill="none" r="6" strokeWidth="1" stroke="#FF0000"/>
  </g>
  <g id="UK Office" className="office_point">
     <ellipse className="block" cx="418.55" cy="301.05" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
-    <circle className="block" cx="418.55" cy="301.05" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <circle className="block" cx="418.55" cy="301.05" fill="none" r="6" strokeWidth="1" stroke="transparent"/>
     <ellipse className="hidden" cx="418.55" cy="301.05" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
-    <circle className="hidden" cx="418.55" cy="301.05" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+    <circle className="hidden" cx="418.55" cy="301.05" fill="none" r="6" strokeWidth="1" stroke="#FF0000"/>
  </g>
  <g id="UK_partner" className="office_point">
     <ellipse className="block" cx="424.65" cy="286.65" fill="#3498db" rx="3" ry="3" stroke="#3498db"/>
-    <circle className="block" cx="424.65" cy="286.65" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <circle className="block" cx="424.65" cy="286.65" fill="none" r="6" strokeWidth="1" stroke="transparent"/>
     <ellipse className="hidden" cx="424.65" cy="286.65" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
-    <circle className="hidden" cx="424.65" cy="286.65" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+    <circle className="hidden" cx="424.65" cy="286.65" fill="none" r="6" strokeWidth="1" stroke="#FF0000"/>
  </g>
  <g id="Ukraine" className="office_point">
     <ellipse className="block" cx="780.55" cy="363.95" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
-    <circle className="block" cx="780.55" cy="363.95" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <circle className="block" cx="780.55" cy="363.95" fill="none" r="6" strokeWidth="1" stroke="transparent"/>
     <ellipse className="hidden" cx="780.55" cy="363.95" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
-    <circle className="hidden" cx="780.55" cy="363.95" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+    <circle className="hidden" cx="780.55" cy="363.95" fill="none" r="6" strokeWidth="1" stroke="#FF0000"/>
  </g>
  <g id="Tunis1" className="office_point">
     <ellipse className="block" cx="522.85" cy="541.25" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
-    <circle className="block" cx="522.85" cy="541.25" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <circle className="block" cx="522.85" cy="541.25" fill="none" r="6" strokeWidth="1" stroke="transparent"/>
     <ellipse className="hidden" cx="522.85" cy="541.25" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
-    <circle className="hidden" cx="522.85" cy="541.25" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+    <circle className="hidden" cx="522.85" cy="541.25" fill="none" r="6" strokeWidth="1" stroke="#FF0000"/>
  </g>
  <g id="Tunis2" className="office_point">
     <ellipse className="block" cx="522.85" cy="541.25" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
-    <circle className="block" cx="522.85" cy="541.25" fill="none" r="6" stroke-width="1" stroke="transparent"/>
+    <circle className="block" cx="522.85" cy="541.25" fill="none" r="6" strokeWidth="1" stroke="transparent"/>
     <ellipse className="hidden" cx="522.85" cy="541.25" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
-    <circle className="hidden" cx="522.85" cy="541.25" fill="none" r="6" stroke-width="1" stroke="#FF0000"/>
+    <circle className="hidden" cx="522.85" cy="541.25" fill="none" r="6" strokeWidth="1" stroke="#FF0000"/>
  </g>
 
  
