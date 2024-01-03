@@ -6,18 +6,41 @@ import React, { useEffect, useState } from 'react';
 
 const Card: React.FC<ICard> = ({ officeCard, coord, setActiveOfficePoint }) => {
 
-	const [isVisible, setIsVisible] = useState(false);	
+	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
-
 		setIsVisible(true);
+	}, []);
 
+	const updateElementPosition = (top: number, left: number): void => {
+
+		const cardElement = officeCard?  document.getElementById(officeCard?.id): ""
+		if (cardElement) {
+			cardElement.style.top = `${top}px`;
+			cardElement.style.left = `${left}px`;
+		}
+	};
+
+	const handleScroll = () => {
+		const topCoordinate = window.scrollY + coord[0];
+		const leftCoordinate = coord[1];
+		updateElementPosition(topCoordinate, leftCoordinate);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
 	}, [coord]);
+
+	
 
 
 	return (
 
-		<div className={` ${isVisible ? `h-96` : `h-0`} fixed z-[80]  text-black w-screen lg:max-w-[280px] max-lg:!left-0   lg:-translate-x-full lg:-ml-3 lg:-translate-y-full lg:-mt-3 `} style={{top:`${Math.round(coord[0])}px`, left:`${Math.round(coord[1])}px`}} >
+		<div className={` ${isVisible ? `h-96` : `h-0`} fixed z-[80]  text-black w-screen max-w-[280px]    -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(coord[0])}px`, left: `${Math.round(coord[1])}px` }} >
 			<div className={` ${officeCard?.top} ${isVisible ? 'h-96 opacity-95 top-0' : 'h-0 top-100%'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
 
 
@@ -37,7 +60,7 @@ const Card: React.FC<ICard> = ({ officeCard, coord, setActiveOfficePoint }) => {
 						<p className="text-left text-xl mb-4 font-medium">{officeCard?.city}, {officeCard?.index}</p>
 						<p className="text-left text-xl mb-12 font-medium"><span>{officeCard?.country}</span> </p>
 					</div>
-					
+
 				</div>
 
 				{/*   // It is necessary to correct either smooth appearance, after the card is already there, or to move out together with the card
