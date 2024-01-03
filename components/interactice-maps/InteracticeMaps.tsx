@@ -11,29 +11,23 @@ const InteracticeMaps: React.FC = () => {
 	const [hovered, setHovered] = useState<string | null>(null);
 	const [lastHovered, setLastHovered] = useState<string>('');
 	const [activeOfficePoint, setActiveOfficePoint] = useState<string | null>(null);
-	const [activeOfficePointCoords, setactiveOfficePointCoords] = useState<number []>([]);
+	const [activeOfficePointCoords, setactiveOfficePointCoords] = useState<number[]>([]);
 
 	
-
+	
 	useEffect(() => {
 
 		const foundMap = mapsData.find((mapItem) => mapItem.id === "world_all");
 		setCurrentMap(currentMap || foundMap);
 
 		const points = document.querySelectorAll('.office_point');
+
 		window.addEventListener('resize', () => updateElementPosition(activeOfficePoint));
 		window.addEventListener('scroll', () => updateElementPosition(activeOfficePoint));
 
-		if (hovered) {
-			let el = document.getElementById(hovered)?.children
-			if (el && !lastHovered) {
-				for (let i = 0; i < el.length; i++) {
-					el[i].classList.toggle('hidden');
-					el[i].classList.toggle('block');
-					setLastHovered(hovered)
-				}
-			}
-		}
+		handleHover()
+		setupPointEventListeners(points)
+
 		if (lastHovered && hovered != lastHovered || lastHovered && !hovered) {
 
 			let el = document.getElementById(lastHovered)?.children
@@ -45,7 +39,32 @@ const InteracticeMaps: React.FC = () => {
 					setLastHovered("")
 				}
 			}
+		}		
+
+		if (activeOfficePoint) {
+			updateElementPosition(activeOfficePoint)			
 		}
+		
+		return () => {
+			removePointEventListeners(points);
+    		removeWindowEventListeners();
+		};
+	}, [currentMap, hovered, lastHovered, activeOfficePoint]);
+
+
+	const handleHover = () =>{
+		if (hovered) {
+			let el = document.getElementById(hovered)?.children
+			if (el && !lastHovered) {
+				for (let i = 0; i < el.length; i++) {
+					el[i].classList.toggle('hidden');
+					el[i].classList.toggle('block');
+					setLastHovered(hovered)
+				}
+			}
+		}
+	}
+	const setupPointEventListeners = (points: NodeListOf<Element>) => {
 
 		points.forEach((element) => {
 			element.addEventListener('click', handleMapsClick);
@@ -54,18 +73,21 @@ const InteracticeMaps: React.FC = () => {
 
 		});
 
-		if (activeOfficePoint) {
-			updateElementPosition(activeOfficePoint)			
-		}
-		
-		return () => {
-			points.forEach((element) => {
-				element.removeEventListener('click', handleMapsClick);
-			});
-			window.removeEventListener('resize', () => updateElementPosition(activeOfficePoint));
-			window.removeEventListener('scroll', () => updateElementPosition(activeOfficePoint));
-		};
-	}, [currentMap, hovered, lastHovered, activeOfficePoint]);
+	}
+	const removePointEventListeners = (points: NodeListOf<Element>) => {
+		points.forEach((element) => {
+			element.removeEventListener('click', handleMapsClick);
+		});
+	}
+	const removeWindowEventListeners = () => {
+		window.removeEventListener('resize', () => updateElementPosition(activeOfficePoint));
+		window.removeEventListener('scroll', () => updateElementPosition(activeOfficePoint));
+	}
+
+
+
+
+
 
 
 	const handleMapsClick = (e: any) => {		
