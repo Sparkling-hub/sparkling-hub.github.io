@@ -26,14 +26,6 @@ const Card: React.FC<ICard> = ({ officeCard, coord, setActiveOfficePoint }) => {
 		const leftCoordinate = coord[1];
 		updateElementPosition(topCoordinate, leftCoordinate);
 	};
-	const handlePointClick = () => {		
-
-		setIsVisible(false);
-		setActiveOfficePoint("")
-
-
-	};
-
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
@@ -49,7 +41,7 @@ const Card: React.FC<ICard> = ({ officeCard, coord, setActiveOfficePoint }) => {
 
 	return (
 
-		<div className={` ${isVisible ? `h-96` : `h-0`} fixed z-[80]  text-black w-screen max-w-[280px]    -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(coord[0])}px`, left: `${Math.round(coord[1])}px` }} onClick={handlePointClick} >
+		<button className={` ${isVisible ? `h-96` : `h-0`} fixed z-[80]  text-black w-screen max-w-[280px]    -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(coord[0])}px`, left: `${Math.round(coord[1])}px` }}>
 			<div className={` ${officeCard?.top} ${isVisible ? 'h-96 opacity-95 top-0' : 'h-0 top-100%'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
 
 
@@ -85,7 +77,7 @@ const Card: React.FC<ICard> = ({ officeCard, coord, setActiveOfficePoint }) => {
 			<div className="absolute pointer-events-none overflow-hidden duration-[150ms] -right-[1.95rem] -bottom-[1.95rem] w-8 h-8 lg:delay-0">
 				<div className="absolute w-12 h-[2px] bg-primary-dark left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 lg:rotate-45"></div>
 			</div>
-		</div>
+		</button>
 
 	);
 };
