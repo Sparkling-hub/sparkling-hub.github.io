@@ -41,7 +41,7 @@ const Card: React.FC<ICard> = ({ officeCard, coord, setActiveOfficePoint }) => {
 
 	return (
 
-		<button className={` ${isVisible ? `h-96` : `h-0`} fixed z-[80]  text-black w-screen max-w-[280px]    -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(coord[0])}px`, left: `${Math.round(coord[1])}px` }}>
+		<button className={`fixed ${isVisible ? 'h-96' : 'h-0'} z-[80] text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(coord[0])}px`, left: `${Math.round(coord[1])}px` }}>
 			<div className={` ${officeCard?.top} ${isVisible ? 'h-96 opacity-95 top-0' : 'h-0 top-100%'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
 
 
