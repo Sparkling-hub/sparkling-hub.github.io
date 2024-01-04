@@ -10,6 +10,7 @@ const header = (
       </span>
       {' '}We Work With
     </h2>
+    New code
     <p className="text-white font-light text-xl">
       <span className="font-medium">
         Front-end, Back-end and DevOps.
@@ -23,6 +24,7 @@ const header = (
     </p>
   </div>
 );
+
 
 
 const content = <StartupsTechnologiesIconList />
