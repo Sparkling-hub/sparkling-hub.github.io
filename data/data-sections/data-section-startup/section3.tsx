@@ -16,8 +16,8 @@ const header = (
       </span> We use the{' '}
       <span className="font-medium">
         right tools
-      </span>for
-      <span className="font-medium">
+      </span>for{/*
+  */}<span className="font-medium">
         {' '}the right job!
       </span>
     </p>
