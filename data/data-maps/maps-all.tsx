@@ -155,7 +155,7 @@ const officeCardsData = [
         city: "Lugano",
         adress1: "Via Cattedrale 7",
         state: "Lugano",
-        country: "Switzerland0",
+        country: "Switzerland",
         index: "6900",
         id: "Switzerland",
         top: "top-0",

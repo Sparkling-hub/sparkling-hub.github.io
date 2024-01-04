@@ -67,7 +67,8 @@ const InteracticeMaps: React.FC = () => {
 	const setupPointEventListeners = (points: NodeListOf<Element>) => {
 
 		points.forEach((element) => {
-			element.addEventListener('click', handleMapsClick);
+
+			element.addEventListener('click', handlePointsClick);
 			element.addEventListener('mouseover', handleHoverOver);
 			element.addEventListener('mouseout', handleHoverOut);
 
@@ -76,7 +77,7 @@ const InteracticeMaps: React.FC = () => {
 	}
 	const removePointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
-			element.removeEventListener('click', handleMapsClick);
+			element.removeEventListener('click', handlePointsClick);
 		});
 	}
 	const removeWindowEventListeners = () => {
@@ -90,11 +91,12 @@ const InteracticeMaps: React.FC = () => {
 
 
 
-	const handleMapsClick = (e: any) => {		
+	const handlePointsClick = (e: any) => {		
 
 		let officeId = e.currentTarget.id
 		updateElementPosition(officeId)
 		setActiveOfficePoint(officeId)
+		e.stopPropagation()
 
 	};
 	const handleHoverOver = (e: any) => {
