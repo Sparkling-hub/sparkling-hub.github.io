@@ -10,14 +10,14 @@ const header = (
       </span>
       {' '}We Work With
     </h2>
-    New code
+
     <p className="text-white font-light text-xl">
       <span className="font-medium">
         Front-end, Back-end and DevOps.
       </span> We use the
-      <span className="font-medium">{' '}
-        right tools
-      </span>{' '}for
+      <span className="font-medium">
+        {' '}right tools
+      </span>for
       <span className="font-medium">
         {' '}the right job!
       </span>
