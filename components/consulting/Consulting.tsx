@@ -7,13 +7,13 @@ const Consulting: React.FC<IConsulting> = ({ content, header, reverse, img }) =>
 
 	return (
 
-		<div className={`flex justify-between items-center ${!reverse ? 'flex-row-reverse' : ''}  m-10 border-medium2 rounded-4xl`}>
+		<div className={`flex justify-between items-center ${!reverse ? 'flex-row-reverse ml-60' : 'mr-60'}  m-20  bg-color-primary-light-light rounded-4xl`}>
 
 			<div className='basis-5/6 flex-col justify-center  p-4'>
 
 				<div className='flex my-2 ml-4'>
 					
-					<div className='text-emerald-900 font-medium'>{header}</div>
+					<div className='color-primary-medium font-bold'>{header}</div>
 
 				</div>
 
@@ -21,8 +21,8 @@ const Consulting: React.FC<IConsulting> = ({ content, header, reverse, img }) =>
 
 			</div>
 
-			<div className='flex items-center justify-center square-green bg-color-primary-medium h-40 w-48 rounded-3xl'>
-				<img className='inline-block mx-4 w-32 h-32' src={img} alt="" />
+			<div className='flex items-center justify-center square-green bg-white h-40 w-40 scale-150 rounded-full'>
+				<img className='inline-block mx-4 w-24 h-24' src={img} alt="" />
 			</div>
 
 		</div>
