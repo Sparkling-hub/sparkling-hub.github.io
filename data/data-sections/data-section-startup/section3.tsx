@@ -14,13 +14,11 @@ const header = (
     <p className="text-white font-light text-xl">
       <span className="font-medium">
         Front-end, Back-end and DevOps.
-      </span> We use the{' '}
-      <span className="font-medium">{/*
-  */}
+      </span> We use the
+      <span className="font-medium">{' '}
         right tools
-      </span> for
-      <span className="font-medium">{/*
-  */}
+      </span> for{' '}
+      <span className="font-medium">
         {' '}the right job!
       </span>
     </p>
