@@ -13,7 +13,7 @@ const header = (
     <p className="text-white font-light text-xl">
       <span className="font-medium">
         Front-end, Back-end and DevOps.
-      </span> We use the
+      </span> We use the{' '}
       <span className="font-medium">
         right tools
       </span>for
@@ -23,6 +23,7 @@ const header = (
     </p>
   </div>
 );
+
 
 
 
