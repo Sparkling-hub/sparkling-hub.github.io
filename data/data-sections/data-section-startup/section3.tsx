@@ -2,10 +2,9 @@
 import StartupsTechnologiesIconList from "@/components/startup-technologies-icon-list"
 
 
-
-const header =
+const header = (
   <div className="m-auto my-20 text-center">
-    <h2 className=" text-5xl  font-light text-white mb-5">
+    <h2 className="text-5xl font-light text-white mb-5">
       <span className="text-teal-400 font-medium">
         Technologies
       </span>
@@ -14,16 +13,17 @@ const header =
     <p className="text-white font-light text-xl">
       <span className="font-medium">
         Front-end, Back-end and DevOps.
-      </span>We use the
+      </span> We use the
       <span className="font-medium">
-        {' '}right tools</span>
-
-      for
+        {' '}right tools
+      </span> for
       <span className="font-medium">
-        {' '}the right job!</span>
-
+        {' '}the right job!
+      </span>
     </p>
   </div>
+);
+
 
 const content = <StartupsTechnologiesIconList />
 
