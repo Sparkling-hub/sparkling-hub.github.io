@@ -7,16 +7,17 @@ const header = (
     <h2 className="text-5xl font-light text-white mb-5">
       <span className="text-teal-400 font-medium">Technologies</span>{' '}
       We Work With
-      </h2>
+    </h2>
     <p className="text-white font-light text-xl">
       <span className="font-medium">Front-end, Back-end and DevOps.</span>{' '}
-      We use the
-  <span className="font-medium">right tools</span>{' '}
-  for
-  <span className="font-medium">the right job!</span>{' '}
+      We use the{' '}
+      <span className="font-medium">right tools</span>{' '}
+      for{' '}
+      <span className="font-medium">the right job!</span>{' '}
     </p>
   </div>
 );
+
 
 
 
