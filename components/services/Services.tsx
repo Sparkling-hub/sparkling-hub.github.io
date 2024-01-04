@@ -10,7 +10,7 @@ const Services: React.FC<IService> = () => {
 
 	return (
 
-		<div className='flex justify-end pl-[150px]'>
+		<div className='flex justify-end pl-[8%]'>
 
 			{dataServices.map((service) => (
 				<Service key={service.index} {...service} />
