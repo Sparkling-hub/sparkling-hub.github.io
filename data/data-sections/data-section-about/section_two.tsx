@@ -1,6 +1,6 @@
 
 const header =
-  <h2>Who <strong className="s2">We Are</strong></h2>
+  <h2 className="m-auto mt-20 text-4xl ">Who <strong className="text-teal-600 font-bold">We Are</strong></h2>
 
 
 const content =
