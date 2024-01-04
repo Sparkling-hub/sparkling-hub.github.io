@@ -9,7 +9,7 @@ const Consulting: React.FC<IConsulting> = ({ content, header, reverse, img }) =>
 
 		<div className={`flex justify-between items-center ${!reverse ? 'flex-row-reverse ml-60' : 'mr-60'}  m-20  bg-color-primary-light-light rounded-4xl`}>
 
-			<div className='basis-5/6 flex-col justify-center  p-4'>
+			<div className={`basis-5/6 flex-col justify-center  p-4 ${!reverse ? 'pl-10' : 'pr-15'}`}>
 
 				<div className='flex my-2 ml-4'>
 					
@@ -21,7 +21,7 @@ const Consulting: React.FC<IConsulting> = ({ content, header, reverse, img }) =>
 
 			</div>
 
-			<div className='flex items-center justify-center square-green bg-white h-40 w-40 scale-150 rounded-full'>
+			<div className='flex items-center justify-center square-green bg-white h-40 w-40 scale-150 rounded-full border-medium2'>
 				<img className='inline-block mx-4 w-24 h-24' src={img} alt="" />
 			</div>
 
