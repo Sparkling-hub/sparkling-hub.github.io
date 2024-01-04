@@ -15,10 +15,12 @@ const header = (
       <span className="font-medium">
         Front-end, Back-end and DevOps.
       </span> We use the{' '}
-      <span className="font-medium">
+      <span className="font-medium">{/*
+  */}
         right tools
       </span> for
-      <span className="font-medium">
+      <span className="font-medium">{/*
+  */}
         {' '}the right job!
       </span>
     </p>
