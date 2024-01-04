@@ -1,6 +1,6 @@
 
 
-interface IConsulting {
+interface IConsultingItem {
 
     header?: JSX.Element;  
     content?: JSX.Element;  
@@ -8,7 +8,7 @@ interface IConsulting {
     reverse?: boolean;
     img?: string;
     index?: number
-	
+
 }
 
-export default IConsulting
+export default IConsultingItem
