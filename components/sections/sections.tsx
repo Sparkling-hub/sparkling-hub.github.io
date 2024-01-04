@@ -12,12 +12,12 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 			<div className='max-w-screen-xl items-start mb-9'>
 				<div className='content-section flex   items-start justify-center flex-col justify-center'>
 
-					<div className='flex items-center whitespace-normal w-full '>
-						<div className='flex justify-center flex-col w-full'>{header}
+					<div className='flex items-center whitespace-normal  '>
+						<div className='flex justify-center flex-col'>{header}
 							{content}
 						</div>
 
-						{!image ? null : <div className='content-image'>  {image}
+						{!image ? null : <div className='content-image w-full'>  {image}
 
 						</div>}
 					</div>
