@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   return (
     <div id='navbar' className=' content-section mx-auto xl:px-40 custom-3xl'>
       <nav className='flex justify-between px-20 py-4 min-w-[900px] text-center '>
-        <Link href="/" className='h-full w-[25%]' title="Back to Home " >
+        <Link href="/" className='h-full w-[20%]' title="Back to Home " >
           <img className="w-full"  src='/img/navbar/logo2.png' alt="Logo" />
         </Link>
         <ul className='flex justify-between py-4 whitespace-nowrap'>
