@@ -11,7 +11,7 @@ const header =
 const content =
 	<div className="mb-12 h-52">
 		<p className='h-32'>Craft a tailored team of engineers delivering tangible results sprint after sprint. Our expertly managed engineers have a great attention to detail, taking great pride in their craft.</p>
-		<ul>
+		<ul className='text-left w-fit m-auto'>
 			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Team and Project management
 			</li>

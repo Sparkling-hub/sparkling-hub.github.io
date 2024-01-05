@@ -9,7 +9,7 @@ const header =
 const content =
 	<div className="mb-12 h-52">
 		<p className='h-32'>Enhance your development efforts by extending your existing team or build your new team from scratch. Customise it to your needs to create a perfect fit!</p>
-		<ul>
+		<ul className='text-left w-fit m-auto'>
 			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Full stack develoment
 			</li>
