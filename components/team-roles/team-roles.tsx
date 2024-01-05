@@ -26,7 +26,7 @@ const Benefit: React.FC = () => {
                     </h3>
                     <ul>
                         {rolesData.map((role) => (
-                            <li className="flex flex-row m-3" key={role}><Link href={''}><ButtonCircle isDropdownOpen={false} /></Link>{role}</li>
+                            <li className="flex flex-row m-3" key={role}><img className='w-6 h-6 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />{role}</li>
                         ))}
                     </ul>
                 </div>
