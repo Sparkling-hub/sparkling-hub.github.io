@@ -1,9 +1,5 @@
 
 
-import Button from "@/components/button"
-import ConsultingItemList from "@/components/consulting-item-list"
-
-
 
 const header =
     <h2 className="flex-col items-center  text-6xl mt-24">

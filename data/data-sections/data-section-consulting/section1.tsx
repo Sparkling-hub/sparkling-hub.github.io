@@ -9,10 +9,8 @@ const header =
     <br />
   </h1>
 
-const content =
-  <>
-    <p>In the face of challenges or in pursuit of business evolution, a thoughtful IT consultation is essential. Tailored to your unique needs and objectives our guidance is designed to steer your business on the right track!</p>       
-  </>
+const content = <p>In the face of challenges or in pursuit of business evolution, a thoughtful IT consultation is essential. Tailored to your unique needs and objectives our guidance is designed to steer your business on the right track!</p>       
+  
 
 
 const image = <img src='/img/section/IT_Consulting_icon.png' className="w-full" alt="consulting_icon" />;
