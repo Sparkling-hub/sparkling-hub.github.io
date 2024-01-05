@@ -19,7 +19,7 @@ const element = {
   background: 'bg-color-primary-light',
   curvedClass: 'before:content-curved_grey_with_line before:w-full before:absolute',
   padding_bottom: "pb-40 custom-pb-60",
-  index: 1,
+  index: 4,
 
 }
 export default element

@@ -39,10 +39,9 @@ const content =
 const element = {
     content: content,
     header: header,
-    // curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute before:-mt-curved-startup ',
     curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute',
     background: 'bg-color-primary-light',
-    index: 2,
+    index: 3,
     padding_bottom: 'pb-40',
     margin_bottom: 'mb-64'
 }
