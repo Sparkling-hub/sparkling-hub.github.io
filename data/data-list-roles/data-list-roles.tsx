@@ -5,6 +5,8 @@ const rolesData = [
       'Front-end Developer',
       'Back-end Developer',
       'Technical Architect',
+      'DevOps engineer',
+      'UI/UX Designer',
     ]
   
   export default rolesData;

@@ -32,7 +32,7 @@ const Benefit: React.FC = () => {
                 </div>
 
 
-                <div className='border-gray-50 h-1/3 bg-gray-100 border-[1px] rounded-3xl mx-5 mb-2  mt-10 h-[35%] flex items-center justify-center p-2' >
+                <div className='border-gray-50 h-1/4 bg-gray-100 border-[1px] rounded-3xl mx-5 mb-2  mt-8 h-[35%] flex items-center justify-center p-2' >
                     <Button href='/contact#rec_form' text={"Build your team"} />
                 </div>
             </div>
