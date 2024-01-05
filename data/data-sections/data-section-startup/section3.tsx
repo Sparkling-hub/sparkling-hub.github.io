@@ -10,7 +10,7 @@ const header = (
   */}
     </h2>
     <p className="text-white font-light text-xl">{/*
-  */}<span className="font-medium">Front-end, Back-end and DevOps.</span>{' '}
+  */} <span className="font-medium">Front-end, Back-end and DevOps. </span>
       We use the{/*
   */}<span className="font-medium">right tools</span>{' '}
       for
