@@ -15,7 +15,8 @@ const Benefit: React.FC<ISoftwareData> = ({ header, content, number }) => {
 				</div>
 				<h3 className='m-auto text-white z-10 flex items-center '>{header}</h3>
 			</div>
-			<div className='flex justify-center  rounded-3xl bg-teal-800 flex w-fit top-[100px] h-8 left-[79px] items-center text-xl font-bold absolute w-[72px] h-[40px]'>
+			<div className='flex justify-center rounded-3xl bg-teal-800
+			 flex top-[100px] left-[79px] items-center text-xl font-bold absolute w-[72px] h-[40px]'>
 			<p className='text-white font-light'>over</p>
 			</div>
 			<div className=' flex w-fit items-center text-xl font-light relative h-[50%] w-full p-5'>
