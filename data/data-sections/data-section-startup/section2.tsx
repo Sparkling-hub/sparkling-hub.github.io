@@ -4,7 +4,7 @@ import StartupsItemList from "@/components/startup-item-list"
 
 
 const header =
-	<h2 className="flex-col items-center  text-6xl mt-24">
+	<h2 className="flex-col items-center  text-6xl">
 		<div className="flex justify-center">
 			<span className="color-primary-light mx-4">Your</span>
 			<span className="text-black font-medium">Dream Team</span>
@@ -21,8 +21,7 @@ const content = <StartupsItemList />
 
 const element = {
 	content: content,
-	header: header,
-	// curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute before:-mt-curved-startup ',
+	header: header,	
 	curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute',
 	background: 'bg-color-primary-light',
 	index: 2,
