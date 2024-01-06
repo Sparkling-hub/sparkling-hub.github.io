@@ -227,8 +227,9 @@ footer {
 	font-weight: 100;
 
 	& h1 {
+		
+		line-height: 1;
 		margin-bottom: 20px;
-	
 		color: $primaryDarkColor;
 		font-size: 45px;
 

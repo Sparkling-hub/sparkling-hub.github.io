@@ -1,14 +1,9 @@
 import Services from "@/components/services"
 
 const header =
-  <h1 className=" flex items-center justify-center ">
-    <span className="color-primary-light mx-4">
-      We
-    </span>
-    <span className="text-black font-black">
-      Provide
-    </span>
-    <br/>
+  <h1 className="m-auto text-teal-500 my-16">
+
+Explore our <strong className="text-teal-800 font-medium">Solutions</strong> 
   </h1>
 
 const content = <Services />
