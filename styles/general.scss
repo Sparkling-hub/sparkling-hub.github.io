@@ -219,6 +219,7 @@ footer {
 	justify-content: center;
 	width: $widhConainers;
 	width: 100%;
+	align-items: center;
 	flex-direction: column;
 	position: relative;
 	height: auto;
@@ -226,8 +227,8 @@ footer {
 	font-weight: 100;
 
 	& h1 {
-		margin-bottom: 40px;
-		line-height: 1;
+		margin-bottom: 20px;
+	
 		color: $primaryDarkColor;
 		font-size: 45px;
 

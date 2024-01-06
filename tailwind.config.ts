@@ -25,13 +25,11 @@ const config: Config = {
 
         'curved_white_with_line': 'url("/img/curved/curved_white_with_line.svg")',
         'curved_white_without_line': 'url("/img/curved/curved_white_without_line.svg")',
-
         'curved_dark_without_line': 'url("/img/curved/curved_dark_without_line.svg")', 
         'curved_dark_with_line': 'url("/img/curved/curved_dark_with_line.svg")', 
-
+        'curved_dark_with_line_white': 'url("/img/curved/curved_dark_without_line_white.svg")', 
+        'curved_white_with_line_bottom': 'url("/img/curved/curved_white_with_line_bottom.svg")',
         'curved_dark_without_line_white': 'url("/img/curved/curved_dark_without_line_WHITE_background.svg")', 
-
-
         'curved_medium_without_line': 'url("/img/curved/curved_medium_without_line.svg")', 
         'curved_medium_with_line': 'url("/img/curved/curved_medium_with_line.svg")', 
 
