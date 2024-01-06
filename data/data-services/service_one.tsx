@@ -24,7 +24,7 @@ const content =
 
 
 const image = <img src='/img/services/team_augmentation_icon.png' alt="teamAugmentation" />;
-const button = <Button href="/get-in-touch" text="Find out more" />
+const button = <Button href="/team-augmentation" text="Find out more" />
 const element = {
 	content: content,
 	header: header,
