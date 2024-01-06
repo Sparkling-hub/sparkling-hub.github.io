@@ -335,8 +335,8 @@ footer {
 }
 
 .startup-icon:hover {
-	transform: scale(1.3);
-	transition: 0.5s;
+	transform: scale(1.15);
+    transition: 0.5s;
 }
 
 .before\:-mt-curved-startup::before {
@@ -699,4 +699,3 @@ li:not(:last-child).highlight .s-b-s-text {
 		font-weight: 700;
 	}
 }
-
