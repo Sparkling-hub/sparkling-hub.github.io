@@ -27,7 +27,7 @@ const content =
 
 const image = <img src='/img/services/software_development_icon.png' alt="Software Development " />;
 
-const button = <Button href="/get-in-touch" text="Find out more" />
+const button = <Button href="/software-development" text="Find out more" />
 const element = {
 	content: content,
 	header: header,
