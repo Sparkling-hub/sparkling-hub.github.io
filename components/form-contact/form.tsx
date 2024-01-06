@@ -41,9 +41,9 @@ const Form: React.FC = () => {
       id="rec_form"
       action=""
       encType="multipart/form-data"
-      className="form flex items-center w-3/4 m-auto relative"
+      className="form flex items-center w-full m-auto relative"
     >
-      <div className="flex flex-col w-2/4 m-3">
+      <div className="flex flex-col w-3/5 m-3">
         <Input
           type="text"
           name="name"
@@ -87,8 +87,8 @@ const Form: React.FC = () => {
         />
       </div>
       <Link href="mailto:l.arthofer@sparkling.co.com" target="_blank"
-        className="blank m-10 bg-white rounded-md text-left rounded-lg justify-center flex flex-col h-26 w-2/4 bg-teal-900">
-        <div className="p-10 flex justify-between items-center">
+        className="blank m-10 bg-white rounded-md text-left rounded-lg justify-center flex flex-col h-26 w-2/5 bg-teal-900">
+        <div className="p-6 flex justify-between items-center pr-1">
           <div>
             <p className="text-3xl text-black font-normal">
               Prefer Email?
