@@ -1,0 +1,8 @@
+interface ITeam {
+    content: string,
+    header: string,
+    index: number,
+    marginRight: string,
+    marginLeft:string,
+}
+export default ITeam
