@@ -14,7 +14,7 @@ const Questions: React.FC = () => {
 
 			{Object.values(questions.question).map((value: IQustians, index) => (
 
-				<div className="relative m-5 " key={index}>
+				<div className="relative m-5 w-full" key={index}>
 
 					<DisabledSelect data={value} />
 
