@@ -25,7 +25,7 @@ const jobs = {
     text: text,
     workMode:"On site",
     slug:"software-consultantp",
-    nameProf: 'Research and Development',
+    nameProf: 'R & D',
    
 
 }
