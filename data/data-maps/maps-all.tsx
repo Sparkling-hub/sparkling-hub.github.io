@@ -129,11 +129,10 @@ const image =
 </svg>
 
 
-const createOfficeCard = (title: string, city: string, adress1: string, state: string, country: string, index: string, id: string, top: string, pointColor: string): IOfficeCards => ({
+const createOfficeCard = (title: string, city: string, adress1: string, country: string, index: string, id: string, top: string, pointColor: string): IOfficeCards => ({
     title,
     city,
     adress1,
-    state,
     country,
     index,
     id,
@@ -142,12 +141,12 @@ const createOfficeCard = (title: string, city: string, adress1: string, state: s
   });
   
   const officeCardsData: IOfficeCards[] = [
-    createOfficeCard("Tunis Office 1:", "Ariana", "Pôle Technologique", "Ariana ", "Tunisia", "2083", "Tunis1", "", "bg-primary-dark"),
-    createOfficeCard("Tunis Office 2:", "Ariana", "Rue André Ampère", "Ariana 2083", "Tunisia", "2083", "Tunis2", "", "bg-primary-dark"),
-    createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Lugano", "Switzerland", "6900", "Switzerland", "top-0", "bg-primary-dark"),
-    createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Zaporizhzhia, Zaporiz&rsquo;ka oblast&rsquo;", "Ukraine", "69061", "Ukraine", "top-0", "bg-primary-dark"),
-    createOfficeCard("UK Office", "London", "16-18 Montagu Place", "London", "United Kingdom", "W1H 2BQ", "UK Office", "top-0", "bg-primary-dark"),
-    createOfficeCard("Partner's Office / UK office", "Cambridge", "St John's Innovation Centre", "Cambridge", "United Kingdom", "CB4 0WS", "UK_partner", "top-0", "bg-partner-office-color"),    
+    createOfficeCard("Tunis Office 1:", "Ariana", "Pôle Technologique", "Tunisia", "2083", "Tunis1", "", "bg-primary-dark"),
+    createOfficeCard("Tunis Office 2:", "Ariana", "Rue André Ampère", "Tunisia", "2083", "Tunis2", "", "bg-primary-dark"),
+    createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Switzerland", "6900", "Switzerland", "top-0", "bg-primary-dark"),
+    createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Ukraine", "69061", "Ukraine", "top-0", "bg-primary-dark"),
+    createOfficeCard("UK Office", "London", "16-18 Montagu Place", "United Kingdom", "W1H 2BQ", "UK Office", "top-0", "bg-primary-dark"),
+    createOfficeCard("Partner's Office / UK office", "Cambridge", "St John's Innovation Centre", "United Kingdom", "CB4 0WS", "UK_partner", "top-0", "bg-partner-office-color"),    
   ];
 
 const element: IMaps = {
