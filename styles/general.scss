@@ -103,11 +103,7 @@ nav {
 	}
 }
 
-footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+
 
 .footer {
 
@@ -219,7 +215,7 @@ footer {
 .content-section {
 	display: flex;
 	justify-content: center;
-	width: $widhConainers;
+
 	width: 100%;
 	align-items: center;
 	flex-direction: column;
@@ -438,23 +434,8 @@ li:not(:last-child).highlight .s-b-s-text {
 	background: $colorActiveStep;
 }
 
-#answers {
 
-	& h3 {
-		text-align: center;
-		line-height: 1;
 
-		color: #0d8b83;
-		font-size: 40px;
-	}
-
-	& .button {
-		position: relative !important;
-		bottom: 0;
-		height: 50px;
-		margin: auto;
-	}
-}
 
 .job-content {
     border-style: solid;
