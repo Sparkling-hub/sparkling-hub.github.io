@@ -24,6 +24,7 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 
 
 					{button ? <div className='button bottom-0 left-0 h-12'>
+
 						{button}
 					</div>
 						:
