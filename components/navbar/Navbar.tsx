@@ -19,9 +19,9 @@ const Navbar: React.FC = () => {
           {/* <li>
             <Link className="no-underline p-4" href="/">Home</Link>
           </li> */}
-          
+   
           <DropList name={'services'} DataLink={services}/>
-      
+       
           <li>
             <Link className="no-underline p-4" href="/about">About Us</Link>
           </li>          
