@@ -1,16 +1,32 @@
 import Link from 'next/link';
 import DropList from "../ui/drop-list-navbar/drop-list-navbar"
 import Button from '../button';
-
+import React, { useState, useEffect } from 'react';
 const Navbar: React.FC = () => {
   const services = [
     {id:1, href: '/faq', text: 'FAQ' },
     {id:2, href: '/team-augmentation', text: 'Team Augmentation' },
     {id:3, href: '/software-development', text: 'Software Development' },
   ];
-  
-  return (
-    <div id='navbar' className=' content-section mx-auto xl:px-40 custom-3xl z-20'>
+  const [hasShadow, setHasShadow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isTop = window.scrollY < 20; 
+      setHasShadow(!isTop);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  return  (
+    <div
+      id="navbar"
+      className={`content-section mx-auto xl:px-40 custom-3xl z-20 ${
+        hasShadow ? 'shadow-md transition-shadow duration-300' : 'shadow-none transition-shadow duration-300'
+      }`}
+    >
       <nav className='flex justify-between px-20 py-4 min-w-[900px] text-center '>
         <Link href="/" className='h-full w-[20%]' title="Back to Home " >
           <img className="w-full"  src='/img/navbar/logo2.png' alt="Logo" />

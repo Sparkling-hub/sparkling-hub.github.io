@@ -19,9 +19,9 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
   };
 
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    // Prevent the click event from propagating to the document click handler
+
     event.stopPropagation();
-    // Toggle the dropdown
+
     handleDropdownToggle();
   };
 
