@@ -9,7 +9,6 @@ interface  IOfficeCards{
     index: string;
     id: string;
     top: string;
-    pointColor: string;
-     
+         
 }
 export default IOfficeCards;

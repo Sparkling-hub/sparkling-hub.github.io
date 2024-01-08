@@ -129,7 +129,7 @@ const image =
 </svg>
 
 
-const createOfficeCard = (title: string, city: string, adress1: string, country: string, index: string, id: string, top: string, pointColor: string): IOfficeCards => ({
+const createOfficeCard = (title: string, city: string, adress1: string, country: string, index: string, id: string, top: string): IOfficeCards => ({
     title,
     city,
     adress1,
@@ -137,16 +137,15 @@ const createOfficeCard = (title: string, city: string, adress1: string, country:
     index,
     id,
     top,
-    pointColor,
   });
   
   const officeCardsData: IOfficeCards[] = [
-    createOfficeCard("Tunis Office 1:", "Ariana", "Pôle Technologique", "Tunisia", "2083", "Tunis1", "", "bg-primary-dark"),
-    createOfficeCard("Tunis Office 2:", "Ariana", "Rue André Ampère", "Tunisia", "2083", "Tunis2", "", "bg-primary-dark"),
-    createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Switzerland", "6900", "Switzerland", "top-0", "bg-primary-dark"),
-    createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Ukraine", "69061", "Ukraine", "top-0", "bg-primary-dark"),
-    createOfficeCard("UK Office", "London", "16-18 Montagu Place", "United Kingdom", "W1H 2BQ", "UK Office", "top-0", "bg-primary-dark"),
-    createOfficeCard("Partner's Office / UK office", "Cambridge", "St John's Innovation Centre", "United Kingdom", "CB4 0WS", "UK_partner", "top-0", "bg-partner-office-color"),    
+    createOfficeCard("Tunis Office 1:", "Ariana", "Pôle Technologique", "Tunisia", "2083", "Tunis1", ""),
+    createOfficeCard("Tunis Office 2:", "Ariana", "Rue André Ampère", "Tunisia", "2083", "Tunis2", ""),
+    createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Switzerland", "6900", "Switzerland", "top-0"),
+    createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Ukraine", "69061", "Ukraine", "top-0"),
+    createOfficeCard("UK Office", "London", "16-18 Montagu Place", "United Kingdom", "W1H 2BQ", "UK Office", "top-0"),
+    createOfficeCard("Partner's Office / UK office", "Cambridge", "St John's Innovation Centre", "United Kingdom", "CB4 0WS", "UK_partner", "top-0"),    
   ];
 
 const element: IMaps = {
@@ -160,3 +159,6 @@ const element: IMaps = {
 }
 
 export default element
+
+// "bg-primary-dark" 
+// "bg-partner-office-color"
