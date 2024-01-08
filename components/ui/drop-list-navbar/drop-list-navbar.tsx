@@ -46,7 +46,7 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
           className="left-4 bg-white border border-gray-300 p-2 absolute w-auto"
         >
           {DataLink.map((service, index) => (
-            <Link key={index} className="no-underline" href={service.href}>
+            <Link key={service.id} className="no-underline" href={service.href}>
               {service.text}
             </Link>
           ))}

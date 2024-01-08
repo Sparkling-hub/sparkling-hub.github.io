@@ -4,9 +4,9 @@ import Button from '../button';
 
 const Navbar: React.FC = () => {
   const services = [
-    { href: '/faq', text: 'FAQ' },
-    { href: '/team-augmentation', text: 'Team Augmentation' },
-    { href: '/software-development', text: 'Software Development' },
+    {id:1, href: '/faq', text: 'FAQ' },
+    {id:2, href: '/team-augmentation', text: 'Team Augmentation' },
+    {id:3, href: '/software-development', text: 'Software Development' },
   ];
   
   return (
