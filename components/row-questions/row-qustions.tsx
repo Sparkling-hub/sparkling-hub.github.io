@@ -20,12 +20,12 @@ const Questions: React.FC = () => {
 
 				</div>
 
-			))};
+			))}
 
 		</div>
 	)
 
 };
 
-export default Questions;
+export default Questions
 
