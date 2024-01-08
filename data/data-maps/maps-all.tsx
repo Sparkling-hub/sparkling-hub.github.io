@@ -1,4 +1,5 @@
 import IMaps from "@/interface/IMaps";
+import IOfficeCards from "@/interface/IOfficeCards";
 import React from 'react';
 
 const header =
@@ -127,74 +128,27 @@ const image =
 
 </svg>
 
-const officeCardsData = [
-    {
-		title: "Tunis Office 1:",
-        city: "Ariana",
-		adress1: "Pôle Technologique",
-		state: "Ariana ",
-		country: "Tunisia",
-		index: "2083",
-        id:"Tunis1",
-        top: "",
-        pointColor: "bg-primary-dark",
-	},
-	{
-		title: "Tunis Office 2:",
-        city: "Ariana",
-		adress1: "Rue André Ampère",
-		state: "Ariana 2083",
-		country: "Tunisia",
-		index: "2083",
-        id:"Tunis2",
-        top: "",
-        pointColor: "bg-primary-dark",
-	},
-    {
-        title: "Switzerland Headquarter",
-        city: "Lugano",
-        adress1: "Via Cattedrale 7",
-        state: "Lugano",
-        country: "Switzerland",
-        index: "6900",
-        id: "Switzerland",
-        top: "top-0",
-        pointColor: "bg-primary-dark",
-    },
-    {
-        title: "Ukraine Office",
-        city: "Zaporizhzhia",
-        adress1: "Haharina St, 3",
-        state: "Zaporizhzhia, Zaporiz&rsquo;ka oblast&rsquo;",
-        country: "Ukraine",
-        index: "69061",
-        id: "Ukraine",
-        top: "top-0",
-        pointColor: "bg-primary-dark",
-    },
-    {
-        title: "UK Office",
-        city: "London",
-        adress1: "16-18 Montagu Place",
-        state: "London",
-        country: "United Kingdom",
-        index: "W1H 2BQ",
-        id: "UK Office",
-        top: "top-0",
-        pointColor: "bg-primary-dark",
-    },
-    {
-        title: "Partner's Office / UK office",
-        city: "Cambridge",
-        adress1: "St John's Innovation Centre",
-        state: "Cambridge",
-        country: "United Kingdom",
-        index: "CB4 0WS",
-        id: "UK_partner",
-        top: "top-0",
-        pointColor: "bg-partner-office-color",
-    },
-]
+
+const createOfficeCard = (title: string, city: string, adress1: string, state: string, country: string, index: string, id: string, top: string, pointColor: string): IOfficeCards => ({
+    title,
+    city,
+    adress1,
+    state,
+    country,
+    index,
+    id,
+    top,
+    pointColor,
+  });
+  
+  const officeCardsData: IOfficeCards[] = [
+    createOfficeCard("Tunis Office 1:", "Ariana", "Pôle Technologique", "Ariana ", "Tunisia", "2083", "Tunis1", "", "bg-primary-dark"),
+    createOfficeCard("Tunis Office 2:", "Ariana", "Rue André Ampère", "Ariana 2083", "Tunisia", "2083", "Tunis2", "", "bg-primary-dark"),
+    createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Lugano", "Switzerland", "6900", "Switzerland", "top-0", "bg-primary-dark"),
+    createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Zaporizhzhia, Zaporiz&rsquo;ka oblast&rsquo;", "Ukraine", "69061", "Ukraine", "top-0", "bg-primary-dark"),
+    createOfficeCard("UK Office", "London", "16-18 Montagu Place", "London", "United Kingdom", "W1H 2BQ", "UK Office", "top-0", "bg-primary-dark"),
+    createOfficeCard("Partner's Office / UK office", "Cambridge", "St John's Innovation Centre", "Cambridge", "United Kingdom", "CB4 0WS", "UK_partner", "top-0", "bg-partner-office-color"),    
+  ];
 
 const element: IMaps = {
 

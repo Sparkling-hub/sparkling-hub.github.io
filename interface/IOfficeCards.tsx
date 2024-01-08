@@ -8,7 +8,6 @@ interface  IOfficeCards{
     state: string;
     country: string;
     index: string;
-    coords: string;
     id: string;
     top: string;
     pointColor: string;
