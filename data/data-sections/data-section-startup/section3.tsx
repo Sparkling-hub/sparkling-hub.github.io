@@ -2,20 +2,23 @@
 import StartupsTechnologiesIconList from "@/components/startup-technologies-icon-list"
 
 
+const header = (
+  <div className="m-auto my-20 text-center">
+    <h2 className="text-5xl font-light text-white mb-5">
+      <span className="text-teal-400 font-medium">Technologies</span>{' '}We Work With{/*
+  */}</h2>
+    <p className="text-white font-light text-xl">{/*
+  */}<span className="font-medium">Front-end, Back-end and DevOps.</span> We use the{' '}
+      <span className="font-medium">right tools</span>{' '}
+      for
+      <span className="font-medium"> the right job!</span>
+    </p>
+  </div>
+);
 
-const header =
-  <h2 className="flex-col items-center justify-center p-4">
-    <div className="flex justify-center text-5xl mb-4">
-      <span className="color-primary-light font-medium mx-4">Technologies</span>
-      <span className="text-white font-light">We Work With</span>
-    </div>
-    <div className="flex justify-center text-xl">
-      <span className="text-white font-normal ">Front-end, Back-end and DevOps;</span>
-      <span className="text-white font-light mx-2">We use the</span>
-      <span className="text-white font-normal ">right tools for the right job!</span>
-    </div>
 
-  </h2>
+
+
 
 const content = <StartupsTechnologiesIconList />
 
