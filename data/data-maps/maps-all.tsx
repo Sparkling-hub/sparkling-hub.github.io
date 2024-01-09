@@ -110,7 +110,7 @@ const image =
     <ellipse className="hidden" cx="780.55" cy="363.95" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
     <circle className="hidden" cx="780.55" cy="363.95" fill="none" r="6" strokeWidth="1" stroke="#FF0000"/>
  </g>
- <g id="Tunis1" className="office_point">
+ <g id="Tunis" className="office_point">
     <ellipse className="block" cx="522.85" cy="541.25" fill="#285c5c" rx="3" ry="3" stroke="#285c5c"/>
     <circle className="block" cx="522.85" cy="541.25" fill="none" r="6" strokeWidth="1" stroke="transparent"/>
     <ellipse className="hidden" cx="522.85" cy="541.25" fill="#FF0000"  rx="3" ry="3" stroke="#FF0000"/>
@@ -130,7 +130,7 @@ const createOfficeCard = (title: string, city: string, adress1: string, country:
   });
   
   const officeCardsData: IOfficeCards[] = [
-    createOfficeCard("Tunis Office 1:", "Ariana", "Pôle Technologique", "Tunisia", "2083", "Tunis1", ""),  
+    createOfficeCard("Tunis Office", "Ariana", "Pôle Technologique", "Tunisia", "2083", "Tunis", ""),  
     createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Switzerland", "6900", "Switzerland", "top-0"),
     createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Ukraine", "69061", "Ukraine", "top-0"),
     createOfficeCard("UK Office", "London", "16-18 Montagu Place", "United Kingdom", "W1H 2BQ", "UK Office", "top-0"),
