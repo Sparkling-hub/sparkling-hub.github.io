@@ -26,7 +26,7 @@ const PointOffice: React.FC<IPointOffice> = ({ officeCard, hovered, activeOffice
 									// "-translate-x-1/2 -translate-x-1/2 z-40 cursor-pointer duration-200 group w-3.5 h-3.5 z-50" 
 									"animate-ping bg-active-office-color"
 									:
-									officeCard?.pointColor}
+									officeCard}
                           `}
 			 
 
@@ -39,7 +39,7 @@ const PointOffice: React.FC<IPointOffice> = ({ officeCard, hovered, activeOffice
 						  ${hovered === officeCard?.id ?
 							"bg-active-office-color"
 							:
-							officeCard?.pointColor}
+							officeCard}
 						  
                           `}
             ></div>
