@@ -11,7 +11,7 @@ const PointOffice: React.FC<IPointOffice> = ({ officeCard, hovered, activeOffice
 		<button
             key={officeCard?.id}
             id={officeCard?.id}
-            className={`${officeCard?.coords} absolute`}
+            className={`${officeCard} absolute`}
             onMouseEnter={() => officeCard?  setHovered(officeCard.id) : null}
             onMouseLeave={() => setHovered(null)}
 			      onClick={() => officeCard? setActiveOfficePoint(officeCard.id) : null }
