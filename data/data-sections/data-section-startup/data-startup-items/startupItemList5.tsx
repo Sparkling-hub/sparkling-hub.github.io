@@ -1,4 +1,8 @@
-const content = <p>Handpicked on merit, infuse energy and innovation into projects, boosting the development progress (subject to timing and availability).</p>
+const content =
+    <p>
+        Handpicked on merit, infuse energy and innovation into projects, boosting the development progress
+        (subject to timing and availability).
+    </p>
 
 const header = <h3>Team of Graduating Students</h3>
 

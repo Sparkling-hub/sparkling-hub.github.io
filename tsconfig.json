@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "data/data-sections/data-sections-home/section_one.tsx", "components/ui/input-component/input.js", "components/ui/input-component/input.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "data/data-sections/data-sections-home/section_one.tsx", "components/ui/input-component/input.js", "components/ui/input-component/input.js", "components/multi-select/multi-selext.tsx"],
   "exclude": ["node_modules"]
 }

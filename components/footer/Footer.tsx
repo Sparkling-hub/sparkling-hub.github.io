@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 			<div className='before:content-curved_dark_without_line 
 							before:w-full
 							before:absolute
-							before:-mt-20
+							before:-top-calc
 							content-section 
 							bg-color-primary-dark 
 							w-150 
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
 							custom-3xl
 							-mt-36'>
 				<div className='footer-background'></div>				
-					<div className='footer-blocks container mx-auto px-4 flex justify-between'>
+					<div className='footer-blocks container mx-auto px-4 flex justify-between mt-16'>
 						<div className='left-block max-w-[33%]'>
 							<div>Sparkling</div>
 							<div>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
