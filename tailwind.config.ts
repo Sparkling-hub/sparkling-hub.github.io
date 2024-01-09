@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,14 +9,8 @@ const config: Config = {
     "./data/**/*.{js,ts,jsx,tsx}"
   
   ],
+  
   theme: {
-    minWidth: {
-      '0': '0',
-      '1/4': '25%',
-      '1/2': '50%',
-      '3/4': '75%',
-      'full': '100%',
-    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -24,27 +19,44 @@ const config: Config = {
       },
       borderRadius: {
         '4xl': '2rem',
+        '50procent': '50%'
       },
       content: {
+        'curved_grey_with_line': 'url("/img/curved/curved_grey_with_line.svg")',
         'curved_white_with_line': 'url("/img/curved/curved_white_with_line.svg")',
         'curved_white_without_line': 'url("/img/curved/curved_white_without_line.svg")',
         'curved_dark_without_line': 'url("/img/curved/curved_dark_without_line.svg")', 
         'curved_dark_with_line': 'url("/img/curved/curved_dark_with_line.svg")', 
+        'curved_dark_with_line_white': 'url("/img/curved/curved_dark_without_line_white.svg")', 
         'curved_white_with_line_bottom': 'url("/img/curved/curved_white_with_line_bottom.svg")',
+        'curved_dark_without_line_white': 'url("/img/curved/curved_dark_without_line_WHITE_background.svg")', 
+        'curved_medium_without_line': 'url("/img/curved/curved_medium_without_line.svg")', 
+        'curved_medium_with_line': 'url("/img/curved/curved_medium_with_line.svg")', 
+
+
       },
-      bottom: {
-        '-20': '-5rem'
+      backgroundColor: {
+        'primary-light-light': '#CBF0E9',
+        'primary-dark': '#285c5c',
+        'active-office-color': '#C73926',
+        // 'partner-office-color': '#D3E5EB',
+        'partner-office-color': '#3498db',
       },
-      zIndex:{
-        "-1":'-1'
+      borderColor: {
+        'primary-light-light': '#CBF0E9',
+        'primary-dark': '#285c5c',
+        'active-office-color': '#C73926',
+        // 'partner-office-color': '#D3E5EB',
+        'partner-office-color': '#3498db',
       },
-      width:{
-        "55":'55',
-      },
-      minHeight: {
-        '128': '32rem',
+      colors: {
+        primary: {
+          light: '#86C0BB',          
+        },
       }
     },
+
+    
   },
   plugins: [],
 }
