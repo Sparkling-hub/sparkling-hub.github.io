@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const services = [
     {id:1, href: '/team-augmentation', text: 'Team Augmentation' },
     {id:2, href: '/software-development', text: 'Software Development' },
-    {id:3, href: '/сonsulting', text: 'IT Consulting' },
+    {id:3, href: '/consulting', text: 'IT Consulting' },
   ];
   const [hasShadow, setHasShadow] = useState(false);
 

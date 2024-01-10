@@ -52,7 +52,9 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
 
           <div className="left-4  bg-white p-2 border-solid w-auto rounded-lg drop-shadow-sm
           before:border-transparent
-          drop-shadow-[0_3px_9px_rgba(0,0,0,0.2)]
+          border-gray-300
+          border-2
+          drop-shadow-[0_5px_9px_rgba(0,0,0,0.5)]
            before:border-b-white before:border-r-[18px] 
         before:border-b-[18px]
          before:absolute
