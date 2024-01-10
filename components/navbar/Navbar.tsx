@@ -4,9 +4,9 @@ import Button from '../button';
 import React, { useState, useEffect } from 'react';
 const Navbar: React.FC = () => {
   const services = [
-    {id:1, href: '/сonsulting', text: 'IT Consulting' },
-    {id:2, href: '/team-augmentation', text: 'Team Augmentation' },
-    {id:3, href: '/software-development', text: 'Software Development' },
+    {id:1, href: '/team-augmentation', text: 'Team Augmentation' },
+    {id:2, href: '/software-development', text: 'Software Development' },
+    {id:3, href: '/сonsulting', text: 'IT Consulting' },
   ];
   const [hasShadow, setHasShadow] = useState(false);
 
