@@ -3,26 +3,22 @@ import IDropList from '../../../interface/IDropList';
 import Link from 'next/link';
 import ButtonCircle from "../circle-button-black";
 
-
 const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen((prev) => !prev);
+  const handleMouseEnter = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownOpen(false);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setIsDropdownOpen(false);
     }
-  };
-
-  const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-
-    event.stopPropagation();
-
-    handleDropdownToggle();
   };
 
   useEffect(() => {
@@ -34,16 +30,20 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
   }, []);
 
   return (
-    <li className='no-underline p-4 relative'>
-      <button onClick={handleButtonClick}>
+    <li className='no-underline p-4 relative' onMouseEnter={handleMouseEnter}  onMouseLeave={handleMouseLeave}  ref={dropdownRef}>
+      <button>
         <span className="block relative flex justify-between">
           {name}
-          <ButtonCircle isDropdownOpen={isDropdownOpen} /> </span>
+          <ButtonCircle isDropdownOpen={isDropdownOpen} />
+        </span>
       </button>
       {isDropdownOpen && (
         <div
-          ref={dropdownRef}
+         
           className="left-4 bg-white border border-gray-300 p-2 absolute w-auto"
+          onMouseEnter={handleMouseEnter}
+     
+        
         >
           {DataLink.map((service, index) => (
             <Link key={service.id} className="no-underline" href={service.href}>
