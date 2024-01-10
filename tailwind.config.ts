@@ -54,9 +54,8 @@ const config: Config = {
           light: '#86C0BB',          
         },
       }
-    },
 
-    
+    }, 
   },
   plugins: [],
 }
