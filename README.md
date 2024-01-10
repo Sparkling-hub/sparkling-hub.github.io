@@ -5,6 +5,8 @@ First, install all dependencies :
 
 ```bash
 npm install
+npm install @reduxjs/toolkit
+npm install react-redux
 ```
 Once that is done you can run the project locally with the following commands:
 

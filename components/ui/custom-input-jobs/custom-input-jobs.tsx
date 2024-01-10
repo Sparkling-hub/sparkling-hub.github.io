@@ -26,6 +26,7 @@ const Input: React.FC<InputProps> = ({ name, id, type, placeholder, value, handl
       focus:outline-none bg-color-primary-medium 
       focus:bg-color-primary-medium 
       focus:bg-color-primary-medium"
+      autoComplete='off'
     />
 
   );

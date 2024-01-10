@@ -6,7 +6,7 @@ import IJob from '../../../interface/IJob';
 const JobsFiltre = ({ job }: { job: IJob }) => {
   return (
     <>
-      <div className='h-20 py-3 px-5 text-gray-500'>{job.experience}</div>
+      <div className='py-3 px-5 text-gray-500'>{job.experience}</div>
       <div className="bg-gray-100 shadow-sm flex text-gray-500 flex justify-between">
         <div className='flex pr-2 py-3 overflow-hidden w-full items-baseline'>
           <div className='w-5/6 z-10 ml-5 text-left items-left h-28 flex flex-col justify-center'>

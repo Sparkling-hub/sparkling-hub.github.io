@@ -55,9 +55,7 @@ const config: Config = {
         },
       }
 
-    },
-   
-    
+    }, 
   },
   plugins: [],
 }
