@@ -42,15 +42,15 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
 
       {isDropdownOpen && (
 
-        <div
-          className="absolute left-[-50%] my-5 before:border-t-0"
+        <button
+          className="absolute left-[-100%] px-16 top-[40%] py-[40%] before:border-t-0"
 
           onMouseEnter={handleMouseEnter}
         >
 
 
 
-          <button className="left-4  bg-white p-2 border-solid w-auto rounded-lg drop-shadow-sm
+          <div className="left-4  bg-white p-2 border-solid w-auto rounded-lg drop-shadow-sm
           before:border-transparent
           drop-shadow-[0_3px_9px_rgba(0,0,0,0.2)]
            before:border-b-white before:border-r-[18px] 
@@ -61,7 +61,7 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
          before:border-l-[18px]
           before:drop-shadow-[0_-2px_1px_rgba(0,0,0,0.02)]
            before:top-[-15px]"
-            onMouseEnter={handleMouseEnter}
+       
           >
             {DataLink.map((service, index) => (
               <Link key={service.id}  className="p-3 m-2 transform transition-transform hover:scale-110 " href={service.href}>
@@ -69,9 +69,9 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
                 
               </Link>
             ))}
-          </button>
+          </div>
 
-        </div>
+        </button>
       )}
     </button>
   );
