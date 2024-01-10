@@ -5,7 +5,7 @@ import ButtonCircle from "../circle-button-black";
 
 const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLLIElement>(null);
+  const dropdownRef = useRef<HTMLButtonElement>(null);
 
   const handleMouseEnter = () => {
     setIsDropdownOpen(true);
@@ -33,13 +33,13 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
   }, []);
 
   return (
-    <li className='no-underline p-4 relative' ref={dropdownRef} onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-      <button>
+    <button className='no-underline p-4 relative' ref={dropdownRef} onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+ 
         <span className="block relative flex justify-between">
           {name}
           <ButtonCircle isDropdownOpen={isDropdownOpen} />
         </span>
-      </button>
+
       {isDropdownOpen && (
 
         <div
@@ -73,7 +73,7 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
 
         </div>
       )}
-    </li>
+    </button>
   );
 };
 
