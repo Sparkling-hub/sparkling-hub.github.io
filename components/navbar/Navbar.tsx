@@ -4,7 +4,7 @@ import Button from '../button';
 import React, { useState, useEffect } from 'react';
 const Navbar: React.FC = () => {
   const services = [
-    {id:1, href: '/faq', text: 'FAQ' },
+    {id:1, href: '/сonsulting', text: 'IT Consulting' },
     {id:2, href: '/team-augmentation', text: 'Team Augmentation' },
     {id:3, href: '/software-development', text: 'Software Development' },
   ];
@@ -32,11 +32,8 @@ const Navbar: React.FC = () => {
           <img className="w-full"  src='/img/navbar/logo2.png' alt="Logo" />
         </Link>
         <ul className='flex justify-between py-4 whitespace-nowrap'>
-          {/* <li>
-            <Link className="no-underline p-4" href="/">Home</Link>
-          </li> */}
-   
-          <DropList name={'services'} DataLink={services}/>
+     
+          <DropList name={'Services'} DataLink={services}/>
        
           <li>
             <Link className="no-underline p-4" href="/about">About Us</Link>
