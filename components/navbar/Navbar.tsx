@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
     { href: '/faq', text: 'FAQ' },
   ];
   return (
-    <header className="bg-white">
+    <header className="bg-white sticky top-0 z-30">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
         </div>
         <ul className="hidden lg:flex lg:gap-x-12">
           {links.map((link) => (
-            <li key={link.href} className='ml-4 '>
+            <li key={link.href} className='ml-4 flex items-center'>
               <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900'>
 
                 {link.text}
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
         <div className="lg:hidden">
           {/* Mobile menu content */}
           <div className="fixed inset-0 z-10" />
-          <div className="fixed inset-y-0 right-0 z-20 w-full max-w-xs overflow-hidden bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="fixed inset-y-0 right-0 z-20 w-full overflow-hidden bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
