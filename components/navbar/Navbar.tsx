@@ -5,7 +5,13 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const links = [
+    { href: '/services', text: 'Services' },
+    { href: '/about', text: 'About Us' },
+    { href: '/startup', text: 'Start Up' },
+    { href: '/careers', text: 'Careers' },
+    { href: '/faq', text: 'FAQ' },
+  ];
   return (
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -30,31 +36,15 @@ const Navbar: React.FC = () => {
           </button>
         </div>
         <ul className="hidden lg:flex lg:gap-x-12">
-          <li>
-            <Link href="/services" className="text-sm font-semibold leading-6 text-gray-900">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link href="/startup" className="text-sm font-semibold leading-6 text-gray-900">
-              Start Up
-            </Link>
-          </li>
-          <li>
-            <Link href="/careers" className="text-sm font-semibold leading-6 text-gray-900">
-              Careers
-            </Link>
-          </li>
-          <li>
-            <Link href="/faq" className="text-sm font-semibold leading-6 text-gray-900">
-              FAQ
-            </Link>
-          </li>
+          {links.map((link) => (
+            <li key={link.href} className='ml-4 '>
+              <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900'>
+
+                {link.text}
+
+              </Link>
+            </li>
+          ))}
           <li>
             <Button href="/contact" text="Get in touch" />
           </li>
@@ -81,24 +71,19 @@ const Navbar: React.FC = () => {
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <div className="mt-6 space-y-4">
-              <Link href="/services" className="block text-base font-semibold leading-6 text-gray-900">
-                Services
+            <div className="mt-6 ">
+            {links.map((link) => (
+            <div key={link.href} className='border-b border-gray-300 p-5'>
+              
+              <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900'>
+
+                {link.text}
+
               </Link>
-              <Link href="/about" className="block text-base font-semibold leading-6 text-gray-900">
-                About Us
-              </Link>
-              <Link href="/startup" className="block text-base font-semibold leading-6 text-gray-900">
-                Start Up
-              </Link>
-              <Link href="/careers" className="block text-base font-semibold leading-6 text-gray-900">
-                Careers
-              </Link>
-              <Link href="/faq" className="block text-base font-semibold leading-6 text-gray-900">
-                FAQ
-              </Link>
-              <div className='flex justify-center'>
-              <Button  href="/contact" text="Get in touch" />
+            </div>
+          ))}
+          < div className='flex justify-end my-12'> 
+                <Button href="/contact" text="Get in touch" />
               </div>
             </div>
           </div>
