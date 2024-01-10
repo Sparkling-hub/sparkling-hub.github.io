@@ -5,7 +5,7 @@ import ButtonCircle from "../circle-button-black";
 
 const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLLIElement>(null);
 
   const handleMouseEnter = () => {
     setIsDropdownOpen(true);
@@ -21,6 +21,9 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
     }
   };
 
+  const handleClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   useEffect(() => {
     document.addEventListener('click', handleClickOutside);
 
@@ -30,7 +33,7 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
   }, []);
 
   return (
-    <li className='no-underline p-4 relative' onMouseEnter={handleMouseEnter}  onMouseLeave={handleMouseLeave}  ref={dropdownRef}>
+    <li className='no-underline p-4 relative' ref={dropdownRef} onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
       <button>
         <span className="block relative flex justify-between">
           {name}
@@ -38,18 +41,36 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
         </span>
       </button>
       {isDropdownOpen && (
+
         <div
-         
-          className="left-4 bg-white border border-gray-300 p-2 absolute w-auto"
+          className="absolute left-[-50%] my-5 before:border-t-0"
+
           onMouseEnter={handleMouseEnter}
-     
-        
         >
-          {DataLink.map((service, index) => (
-            <Link key={service.id} className="no-underline" href={service.href}>
-              {service.text}
-            </Link>
-          ))}
+
+
+
+          <div className="left-4  bg-white p-2 border-solid w-auto rounded-lg drop-shadow-sm
+          before:border-transparent
+          drop-shadow-[0_3px_9px_rgba(0,0,0,0.2)]
+           before:border-b-white before:border-r-[18px] 
+        before:border-b-[18px]
+         before:absolute
+         before:left-[43%]
+      
+         before:border-l-[18px]
+          before:drop-shadow-[0_-2px_1px_rgba(0,0,0,0.02)]
+           before:top-[-15px]"
+            onMouseEnter={handleMouseEnter}
+          >
+            {DataLink.map((service, index) => (
+              <Link key={service.id}  className="p-3 m-2 transform transition-transform hover:scale-110 " href={service.href}>
+                {service.text}
+                
+              </Link>
+            ))}
+          </div>
+
         </div>
       )}
     </li>
