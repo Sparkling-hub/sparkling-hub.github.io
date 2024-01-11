@@ -33,9 +33,14 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
   }, []);
 
   return (
-    <button className={`no-underline relative  ${mobileMenuOpen ? "w-full" : ""}`} ref={dropdownRef} onClick={handleClick} onMouseEnter={!mobileMenuOpen ? handleMouseEnter : undefined}
+    <button className={`no-underline relative  ${mobileMenuOpen ? "w-full" : ""}`} ref={dropdownRef} 
+     onClick={!mobileMenuOpen ? handleClick : undefined} 
+     onMouseEnter={!mobileMenuOpen ? handleMouseEnter : undefined}
       onMouseLeave={!mobileMenuOpen ? handleMouseLeave : undefined} >
-      <span className="block w-fit items-center flex justify-between text-base font-semibold leading-6 text-gray-900 w-full">
+      <span className="block w-fit items-center flex justify-between text-base font-semibold leading-6 text-gray-900 w-full"
+           onClick={mobileMenuOpen ? handleClick : undefined} 
+           onMouseEnter={mobileMenuOpen ? handleMouseEnter : undefined}
+            onMouseLeave={mobileMenuOpen ? handleMouseLeave : undefined} >
         {name}
         {!mobileMenuOpen ? <ButtonCircle isDropdownOpen={isDropdownOpen} /> :
           <div className="block w-5 top-1/2 z-30 transform">
@@ -70,7 +75,7 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
         </button>
       )}
       {mobileMenuOpen && isDropdownOpen && (
-        <ul className='flex-col flex'>
+        <ul className='flex-col flex z-10'>
           {DataLink.map((service, index) => (
 
             <Link key={service.id} className="p-3 m-2 transform transition-transform hover:scale-110" href={service.href}>
