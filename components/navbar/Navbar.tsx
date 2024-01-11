@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-
+import DropList from '../ui/drop-list-navbar/drop-list-navbar';
 import Button from '../button';
 
 
@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     {id:3, href: '/consulting', text: 'IT Consulting' },
   ];
   const links = [
-    { href: '/services', text: 'Services' },
+
     { href: '/about', text: 'About Us' },
     { href: '/startup', text: 'Start Up' },
     { href: '/careers', text: 'Careers' },
@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
   const [hasShadow, setHasShadow] = useState(false);
 
   useEffect(() => {
+
     const handleScroll = () => {
       const isTop = window.scrollY < 20; 
       setHasShadow(!isTop);
@@ -55,8 +56,11 @@ const Navbar: React.FC = () => {
           </button>
         </div>
         <ul className="hidden lg:flex lg:gap-x-12">
+        <DropList name={'Services'} DataLink={services} mobileMenuOpen={false}/>
           {links.map((link) => (
             <li key={link.href} className='ml-4 flex items-center'>
+             
+       
               <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900'>
 
                 {link.text}
@@ -90,9 +94,12 @@ const Navbar: React.FC = () => {
             
               </button>
             </div>
-            <div className="mt-6 ">
-       
+            <div className="mt-6 "  >
+              <div className='border-b border-gray-300 p-5'>
+            <DropList name={'Services'} DataLink={services} mobileMenuOpen={true}/>
+            </div>
             {links.map((link) => (
+              
             <div key={link.href} className='border-b border-gray-300 p-5'>
               
               <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900'>
