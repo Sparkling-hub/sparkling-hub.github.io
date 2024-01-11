@@ -35,20 +35,21 @@ const Navbar: React.FC = () => {
   
     <header className={`bg-white bg-opacity-95 sticky top-0 z-30  ${hasShadow ? 'shadow-md transition-shadow duration-300' : 'shadow-none transition-shadow duration-300'}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
+        <div className="w-full flex justify-between text-xl items-center ">
+          
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img className="h-8 w-auto" src="/img/navbar/logo2.png" alt="Logo" />
           </Link>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden  h-full">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md  h-8 w-8 p-1  text-gray-700"
+            className="inline-flex items-center justify-center rounded-md h-[60px] w-[60px] relative text-gray-700"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
       
-                <div className="block w-5 h-5 right-[2%] absolute top-1/2 z-30 transform">
+                <div className="block h-[25px] w-[28px] absolute bottom-[3px] z-30 transform">
                     <span aria-hidden="true" className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${ mobileMenuOpen?'rotate-45': ' -translate-y-1.5'}`}></span>
                     <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out ${mobileMenuOpen ?'opacity-0': '' } `}></span>
                     <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out ${mobileMenuOpen ? '-rotate-45':' translate-y-1.5'}`}></span>
