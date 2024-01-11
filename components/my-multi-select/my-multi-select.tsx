@@ -44,7 +44,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ name, uniqueIds, activeLocat
 							id={id} />
 					))}
 				</div>
-				<div className={` flex items-center absolute right-4 top-5 z-10`}><img src="/img/down-arrow-svgrepo-com.svg" className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
+				<div className={`flex items-center absolute right-4 top-5 z-10`}><img src="/img/down-arrow-svgrepo-com.svg" className={`h-3 w-3 transition-transform transform ${isActive ? 'rotate-180' : 'rotate-0'}`} alt="" />
 				</div>
 				<div className={`mt-4 items-left w-full`} >
 					<InputLocate

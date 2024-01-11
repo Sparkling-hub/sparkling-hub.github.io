@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import DropList from "../ui/drop-list-navbar/drop-list-navbar"
 import Button from '../button';
+
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Navbar: React.FC = () => {
@@ -46,6 +48,10 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
           ))}
+
+     
+ 
+
           <li>
             <Button href="/contact" text="Get in touch" />
           </li>
@@ -54,7 +60,7 @@ const Navbar: React.FC = () => {
       <div className={`lg:hidden `}>
       <div className={`fixed inset-0 z-10 transition-all w-0 ease-in-out`}/>       
       <div className={`fixed inset-y-0 right-0 z-20 overflow-hidden bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full transform transition-all ease-in-out ${mobileMenuOpen ? 'translate-x-0 opacity-95' : 'translate-x-full opacity-10'} duration-500`}>
-  {/* ... (ваш существующий код) */}
+        
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5 select-none">
                 <span className="sr-only">Your Company</span>
@@ -69,6 +75,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
             <div className="mt-6 ">
+                       <DropList name={'Services'} DataLink={services}/>
             {links.map((link) => (
             <div key={link.href} className='border-b border-gray-300 p-5'>
               
