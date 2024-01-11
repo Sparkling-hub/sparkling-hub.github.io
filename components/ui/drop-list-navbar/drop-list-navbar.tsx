@@ -39,8 +39,8 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
         {name}
         {!mobileMenuOpen ? <ButtonCircle isDropdownOpen={isDropdownOpen} /> :
           <div className="block w-5 top-1/2 z-30 transform">
-            <span aria-hidden="true" className={`block absolute h-[2px] w-[14px]  bg-gray-500 transform transition duration-300 ease-in-out ${isDropdownOpen ? 'rotate-45' : ' rotate-0'}`}></span>
-            <span aria-hidden="true" className={`block absolute  h-[2px] w-[14px] bg-gray-500  transform  transition duration-300 ease-in-out ${isDropdownOpen ? '-rotate-45' : ' -rotate-0'}`}></span></div>}
+            <span aria-hidden="true" className={`block absolute h-[2px] w-[14px]  bg-gray-500 transform transition duration-300 ease-in-out ${isDropdownOpen ? 'rotate-0' : ' rotate-90'}`}></span>
+            <span aria-hidden="true" className={`block absolute  h-[2px] w-[14px] bg-gray-500  transform  transition duration-300 ease-in-out ${isDropdownOpen ? '-rotate-0' : ' -rotate-180'}`}></span></div>}
       </span>
       {!mobileMenuOpen && isDropdownOpen && (
 
