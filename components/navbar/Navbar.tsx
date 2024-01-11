@@ -6,6 +6,11 @@ import Button from '../button';
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const services = [
+    {id:1, href: '/team-augmentation', text: 'Team Augmentation' },
+    {id:2, href: '/software-development', text: 'Software Development' },
+    {id:3, href: '/consulting', text: 'IT Consulting' },
+  ];
   const links = [
     { href: '/services', text: 'Services' },
     { href: '/about', text: 'About Us' },
