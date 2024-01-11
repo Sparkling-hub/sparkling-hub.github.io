@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
       
-                <div className="block w-5 absolute top-1/2 z-30 transform">
+                <div className="block w-5 h-5 right-[2%] absolute top-1/2 z-30 transform">
                     <span aria-hidden="true" className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${ mobileMenuOpen?'rotate-45': ' -translate-y-1.5'}`}></span>
                     <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out ${mobileMenuOpen ?'opacity-0': '' } `}></span>
                     <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out ${mobileMenuOpen ? '-rotate-45':' translate-y-1.5'}`}></span>
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
               
             <div key={link.href} className='border-b border-gray-300 p-5'>
               
-              <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900'>
+              <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-xl text-gray-900'>
 
                 {link.text}
 
