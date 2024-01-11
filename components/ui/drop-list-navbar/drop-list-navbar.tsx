@@ -69,17 +69,17 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
               onMouseEnter={handleMouseEnter}
             >
               <div className="left-4 bg-white p-2 border-solid w-auto rounded-lg
-before:border-transparent
-border-gray-100
-border-[1px]
-drop-shadow-[0_3px_4px_rgba(0,0,0,0.23)]
-before:border-b-white before:border-r-[18px] 
-before:border-b-[18px]
-before:absolute
-before:left-[43%]
-before:border-l-[18px]
-before:drop-shadow-[0_-3px_3px_rgba(0,0,0,0.0.1)]
-before:top-[-15px]"
+                    before:border-transparent
+                    border-gray-100
+                    border-[1px]
+                    drop-shadow-[0_3px_4px_rgba(0,0,0,0.23)]
+                    before:border-b-white before:border-r-[18px] 
+                    before:border-b-[18px]
+                    before:absolute
+                    before:left-[43%]
+                    before:border-l-[18px]
+                    before:drop-shadow-[0_-3px_3px_rgba(0,0,0,0.0.1)]
+                    before:top-[-15px]"
               >
                 {DataLink.map((service, index) => (
                   <Link key={service.id} className="p-3 m-2 transform transition-transform hover:scale-110 " href={service.href}>
