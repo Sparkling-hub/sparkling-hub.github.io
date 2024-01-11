@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import DropList from "../ui/drop-list-navbar/drop-list-navbar"
 import Button from '../button';
+
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,6 +52,10 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
           ))}
+
+     
+ 
+
           <li>
             <Button href="/contact" text="Get in touch" />
           </li>
@@ -73,6 +79,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
             <div className="mt-6 ">
+                       <DropList name={'Services'} DataLink={services}/>
             {links.map((link) => (
             <div key={link.href} className='border-b border-gray-300 p-5'>
               
