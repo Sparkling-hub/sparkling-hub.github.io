@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     {id:3, href: '/consulting', text: 'IT Consulting' },
   ];
   const links = [
-
+    { href: '/services', text: 'Services' },
     { href: '/about', text: 'About Us' },
     { href: '/startup', text: 'Start Up' },
     { href: '/careers', text: 'Careers' },
@@ -30,12 +30,11 @@ const Navbar: React.FC = () => {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md  h-8 w-8 p-1  text-gray-700"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <span className="sr-only">Toggle mobile menu</span>
-            <span className="sr-only">Open main menu</span>
-                <div className="block w-5 absolute left-1/2 top-1/2  z-30 transform  -translate-x-1/2 -translate-y-1/2">
+      
+                <div className="block w-5 absolute top-1/2 z-30 transform">
                     <span aria-hidden="true" className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${ mobileMenuOpen?'rotate-45': ' -translate-y-1.5'}`}></span>
                     <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out ${mobileMenuOpen ?'opacity-0': '' } `}></span>
                     <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out ${mobileMenuOpen ? '-rotate-45':' translate-y-1.5'}`}></span>
@@ -79,7 +78,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
             <div className="mt-6 ">
-                       <DropList name={'Services'} DataLink={services}/>
+       
             {links.map((link) => (
             <div key={link.href} className='border-b border-gray-300 p-5'>
               
