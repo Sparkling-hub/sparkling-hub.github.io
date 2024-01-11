@@ -5,7 +5,6 @@ import ButtonCircle from "../circle-button-black";
 
 const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [Open, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLButtonElement>(null);
   console.log(mobileMenuOpen)
   const handleMouseEnter = () => {
