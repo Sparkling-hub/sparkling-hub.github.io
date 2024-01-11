@@ -1,43 +1,37 @@
 
 
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectMaps, setActiveOfficePoint, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
+import Card from '@/components/card';
 
-import IMapField from "@/interface/IMapField";
-import { useEffect, useState } from "react";
-import IOfficeCards from "@/interface/IOfficeCards";
-import Card from "../card";
+const MapField: React.FC = () => {
+  const dispatch = useDispatch();
+  const { currentMap, activeOfficePoint, activeOfficePointCoords } = useSelector(selectMaps);
 
-const MapField: React.FC<IMapField> = ({ currentMap, activeOfficePoint, activeOfficePointCoords, setActiveOfficePoint }) => {
+  useEffect(() => {
+    let mapContainer = document.querySelector('.map-container');
+    mapContainer?.addEventListener('click', handleMapsClick);
 
+    let currentCard = currentMap?.officeCards?.find((card) => card.id === activeOfficePoint);
+    if (currentCard) dispatch(setOfficeCard(currentCard));
 
-    const [officeCard, setOfficeCard] = useState<IOfficeCards  | null>(null);
-    
-
-    useEffect(() => {
-
-      let mapContainer = document.querySelector(".map-container")
-      mapContainer?.addEventListener('click', handleMapsClick);
-      
-      let currentCard = currentMap?.officeCards?.find((card) => card.id == activeOfficePoint)
-      if(currentCard) setOfficeCard(currentCard)
-      
-    }, [officeCard, activeOfficePoint, currentMap]);
-
-    const handleMapsClick = (e: any) => {		
-      
-      if(activeOfficePoint) setActiveOfficePoint("")
-  
+    return () => {
+      mapContainer?.removeEventListener('click', handleMapsClick);
     };
+  }, [activeOfficePoint, currentMap, dispatch]);
 
-    return (
-      <div className="map-container col-span-9 lg:gh-4 xl:gh-4 xl:p-14 pt-global lg:block" style={{ position: "relative" }} >
+  const handleMapsClick = (e: any) => {
+    if (activeOfficePoint) dispatch(setActiveOfficePoint(''));
+    dispatch(setOfficeCard(null));
+  };
 
-        {officeCard && activeOfficePoint? <Card officeCard={officeCard} coord = {activeOfficePointCoords} setActiveOfficePoint={setActiveOfficePoint}/>  : ""}
-
-        {currentMap ? currentMap.image : ""}
-
-      </div>
-
-    );
+  return (
+    <div className="map-container col-span-9 lg:gh-4 xl:gh-4 xl:p-14 pt-global lg:block" style={{ position: 'relative' }}>
+      {currentMap ? currentMap.image : ''}
+      {activeOfficePoint ? <Card /> : ''}
+    </div>
+  );
 };
 
 export default MapField;

@@ -1,158 +1,131 @@
 import mapsData from "@/data/data-maps";
-import IMaps from "@/interface/IMaps";
-import { useEffect, useState } from "react";
-import MapSelectionSettings from "../map-selection-setting";
-import MapField from "../map-field";
-
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+	selectMaps,
+	setCurrentMap,
+	setHovered,
+	setLastHovered,
+	setActiveOfficePoint,
+	setActiveOfficePointCoords,
+} from '@/store/redusers/mapsSliceReduser';
+import MapField from '@/components/map-field';
+import MapSelectionSettings from '@/components/map-selection-setting';
 
 const InteracticeMaps: React.FC = () => {
+	const dispatch = useDispatch();
+	const { currentMap, hovered, lastHovered, activeOfficePoint } = useSelector(selectMaps);
 
-	const [currentMap, setCurrentMap] = useState<IMaps | undefined>();
-	const [hovered, setHovered] = useState<string | null>(null);
-	const [lastHovered, setLastHovered] = useState<string>('');
-	const [activeOfficePoint, setActiveOfficePoint] = useState<string | null>(null);
-	const [activeOfficePointCoords, setActiveOfficePointCoords] = useState<number[]>([]);
-
-	
-	
 	useEffect(() => {
+		const foundMap = mapsData.find((mapItem) => mapItem.id === 'world_all');
+		dispatch(setCurrentMap(foundMap));
 
-		const foundMap = mapsData.find((mapItem) => mapItem.id === "world_all");
-		setCurrentMap(currentMap || foundMap);
+		let points = document.querySelectorAll('.office_point .block');
 
-		const points = document.querySelectorAll('.office_point');
+		setupPointEventListeners(points);
 
 		window.addEventListener('resize', () => updateElementPosition(activeOfficePoint));
 		window.addEventListener('scroll', () => updateElementPosition(activeOfficePoint));
 
-		handleHover()
-		setupPointEventListeners(points)
+		handleHover();
+		
 
-		if (lastHovered && hovered != lastHovered || lastHovered && !hovered) {
-
-			let elements = document.getElementById(lastHovered)?.children
+		if (lastHovered && hovered !== lastHovered || (lastHovered && !hovered)) {
+			let elements = document.getElementById(lastHovered)?.children;
 
 			if (elements) {
 				for (const element of elements) {
 					element.classList.toggle('hidden');
 					element.classList.toggle('block');
-					setLastHovered("");
+					dispatch(setLastHovered(''));
 				}
 			}
-		}		
+		}
 
 		if (activeOfficePoint) {
-			updateElementPosition(activeOfficePoint)			
+			updateElementPosition(activeOfficePoint);
 		}
-		
+
 		return () => {
 			removePointEventListeners(points);
-    		removeWindowEventListeners();
+			removeWindowEventListeners();
 		};
-	}, [currentMap, hovered, lastHovered, activeOfficePoint]);
+	}, [currentMap, hovered, lastHovered, activeOfficePoint, dispatch]);
 
+	const handleHover = () => {
 
-	const handleHover = () =>{
+		let points = document.querySelectorAll('.office_point');
+
+		if (!points.length) return
+
 		if (hovered) {
-			let elements = document.getElementById(hovered)?.children
+
+			let elements = document.getElementById(hovered)?.children;
+
 			if (elements && !lastHovered) {
 				for (const element of elements) {
 					element.classList.toggle('hidden');
 					element.classList.toggle('block');
-					setLastHovered(hovered)
+					dispatch(setLastHovered(hovered));
 				}
 			}
 		}
-	}
+	};
+
 	const setupPointEventListeners = (points: NodeListOf<Element>) => {
-
 		points.forEach((element) => {
-
 			element.addEventListener('click', handlePointsClick);
 			element.addEventListener('mouseover', handleHoverOver);
 			element.addEventListener('mouseout', handleHoverOut);
-
 		});
+	};
 
-	}
 	const removePointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
 			element.removeEventListener('click', handlePointsClick);
 		});
-	}
+	};
+
 	const removeWindowEventListeners = () => {
 		window.removeEventListener('resize', () => updateElementPosition(activeOfficePoint));
 		window.removeEventListener('scroll', () => updateElementPosition(activeOfficePoint));
-	}
-
-
-
-
-
-
-
-	const handlePointsClick = (e: any) => {		
-
-		let officeId = e.currentTarget.id
-		updateElementPosition(officeId)
-		setActiveOfficePoint(officeId)
-		e.stopPropagation()
-
 	};
+
+	const handlePointsClick = (e: any) => {
+		let officeId = e.currentTarget.id;
+		updateElementPosition(officeId);
+		dispatch(setActiveOfficePoint(officeId));
+		e.stopPropagation();
+	};
+
 	const handleHoverOver = (e: any) => {
-
-		let elems = e.currentTarget.children
-		if (elems[0].classList.contains("block")) setHovered(e.currentTarget.id)
-
-		elems[0].classList.add('hidden');
-		if (elems[0].classList.contains('block')) elems[0].classList.remove('block');
-
-		for (let i = 1; i < elems.length; i++) {
-
-			elems[0].classList.add('block');
-			if (elems[0].classList.contains('hidden')) elems[0].classList.remove('hidden');
-		}
-
-
-	};
-	const handleHoverOut = (e: any) => {
-
-		let elems = e.currentTarget.children
-		setHovered("")
-
-		elems[0].classList.add('block');
-		if (elems[0].classList.contains('hidden')) elems[0].classList.remove('hidden');
-
-		for (let i = 1; i < elems.length; i++) {
-
-			elems[0].classList.add('hidden');
-			if (elems[0].classList.contains('block')) elems[0].classList.remove('block');
-		}
-
-
-	};
-	const updateElementPosition = (activePoint: string | null): void => {
 		
-		if(!activePoint) return
-		const svgPoint = document.getElementById(activePoint);		
-		if (svgPoint) {
+		dispatch(setHovered(e.currentTarget.closest('.office_point').id));
 
+	};
+
+	const handleHoverOut = (e: any) => {
+		
+		dispatch(setHovered(''));
+	
+	};
+
+	const updateElementPosition = (activePoint: string | null) => {
+		if (!activePoint) return;
+		const svgPoint = document.getElementById(activePoint);
+
+		if (svgPoint) {
 			const rect = svgPoint?.getBoundingClientRect();
 			const topCoordinate = rect.top;
 			const leftCoordinate = rect.left;
 
-			setActiveOfficePointCoords([topCoordinate, leftCoordinate])
-
+			dispatch(setActiveOfficePointCoords([topCoordinate, leftCoordinate]));
 		}
-
 	};
 
-
 	const ChangeMap = (e: React.MouseEvent<HTMLDivElement>) => {
-
 		const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);
-		setCurrentMap(foundMap);
-
+		dispatch(setCurrentMap(foundMap));
 	};
 
 	return (
@@ -161,27 +134,11 @@ const InteracticeMaps: React.FC = () => {
 			<div className="absolute top-[-100px]" id="section-12"></div>
 			<div className="fade-in cubic reveal">
 				<div className="grid relative grid-cols-12 px-global gap-x-global">
-
-					<MapField currentMap={currentMap}
-						ChangeMap={ChangeMap}
-						hovered={hovered}
-						setHovered={setHovered}
-						activeOfficePoint={activeOfficePoint}
-						setActiveOfficePoint={setActiveOfficePoint}
-						activeOfficePointCoords = {activeOfficePointCoords}
-					/>
-					<MapSelectionSettings currentMap={currentMap}
-						ChangeMap={ChangeMap}
-						hovered={hovered}
-						setHovered={setHovered}
-						activeOfficePoint={activeOfficePoint}
-						setActiveOfficePoint={setActiveOfficePoint}
-					/>
-
+					<MapField />
+					<MapSelectionSettings />
 				</div>
 			</div>
 		</div>
-
 	);
 };
 
