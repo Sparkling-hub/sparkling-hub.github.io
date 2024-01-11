@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import Button from '../button';
@@ -12,9 +12,21 @@ const Navbar: React.FC = () => {
     { href: '/startup', text: 'Start Up' },
     { href: '/careers', text: 'Careers' },
     { href: '/faq', text: 'FAQ' },
-  ];
-  return (
-    <header className="bg-white sticky top-0 z-30">
+  ]; const [hasShadow, setHasShadow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isTop = window.scrollY < 20; 
+      setHasShadow(!isTop);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  return  (
+  
+    <header className={`bg-white bg-opacity-95 sticky top-0 z-30  ${hasShadow ? 'shadow-md transition-shadow duration-300' : 'shadow-none transition-shadow duration-300'}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
