@@ -53,7 +53,10 @@ const config: Config = {
         primary: {
           light: '#86C0BB',          
         },
-      }
+      },
+      width: {
+        '100-important': '100% !important',
+      },
     },
     inset: {
       '-10%': '-10%',
