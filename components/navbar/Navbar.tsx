@@ -12,7 +12,8 @@ const Navbar: React.FC = () => {
     { href: '/startup', text: 'Start Up' },
     { href: '/careers', text: 'Careers' },
     { href: '/faq', text: 'FAQ' },
-  ]; const [hasShadow, setHasShadow] = useState(false);
+  ]; 
+  const [hasShadow, setHasShadow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
