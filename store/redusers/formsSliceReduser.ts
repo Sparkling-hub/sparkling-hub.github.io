@@ -7,26 +7,26 @@ import { RootState } from '../store';
 
 interface FormsState {
 
-    //перечисление state
+    //state listing
    
 
 }
 
 const initialState: FormsState = {
-    // начальное состояние state
+    // initial state
 };
 
 const formsSlice = createSlice({
     name: 'forms',
     initialState,
     reducers: {
-       //методы
+       //methods
     },
 });
 
 export const {
 
-  // перечисление методов
+  // method list
 
 } = formsSlice.actions;
 
