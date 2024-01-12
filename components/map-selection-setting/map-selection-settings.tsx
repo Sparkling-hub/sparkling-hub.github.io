@@ -3,7 +3,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMaps, setHovered, setActiveOfficePoint } from '@/store/redusers/mapsSliceReduser';
-// import IMapSelectionSettings from "@/interface/IMapSelectionSettings";
 
 
 const MapSelectionSettings: React.FC = () => {

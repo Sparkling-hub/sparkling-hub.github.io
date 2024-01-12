@@ -123,11 +123,6 @@ const InteracticeMaps: React.FC = () => {
 		}
 	};
 
-	const ChangeMap = (e: React.MouseEvent<HTMLDivElement>) => {
-		const foundMap = mapsData.find((mapItem) => mapItem.id === e.currentTarget.id);
-		dispatch(setCurrentMap(foundMap));
-	};
-
 	return (
 		<div className="flex-section block_map relative">
 			<div className="absolute inset-0 z-behind"></div>
