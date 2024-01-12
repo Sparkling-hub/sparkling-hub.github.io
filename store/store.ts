@@ -4,11 +4,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import mapsReducer from '@/store/redusers/mapsSliceReduser';
 import formsReducer from '@/store/redusers/formsSliceReduser';
+import careersReducer from './redusers/CareersSliceReduser'
 
 const store = configureStore({
   reducer: {
     maps: mapsReducer,
     forms: formsReducer,
+    careers: careersReducer,
   },
 });
 
