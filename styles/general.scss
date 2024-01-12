@@ -69,7 +69,8 @@ $weight-text: 400px;
 	align-items: center;
 	top: 0;
 	position: sticky;
-	background: $white;
+  background-color: rgba(255, 255, 255, 0.97);
+  width: 100%;
 }
 
 nav {
