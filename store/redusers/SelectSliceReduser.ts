@@ -1,35 +1,34 @@
-// SelectSliceReduser.ts
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface Dropdown {
-  question: JSX.Element;
+interface DropdownState {
+  id: number;
   isOpen: boolean;
 }
 
-interface SelectState {
-  dropdowns: Dropdown[];
+interface DropdownSliceState {
+  dropdowns: DropdownState[];
 }
 
-const initialState: SelectState = {
+const initialState: DropdownSliceState = {
   dropdowns: [],
 };
 
-const selectSlice = createSlice({
-  name: 'select',
+const dropdownSlice = createSlice({
+  name: 'dropdown',
   initialState,
   reducers: {
     toggleDropdown: (state, action: PayloadAction<number>) => {
-      const questionIndex = action.payload;
-
-      // Check if the questionIndex is within the valid range
-      if (questionIndex >= 0 && questionIndex < state.dropdowns.length) {
-        state.dropdowns[questionIndex].isOpen = !state.dropdowns[questionIndex].isOpen;
+      const dropdownIndex = state.dropdowns.findIndex(dropdown => dropdown.id === action.payload);
+      if (dropdownIndex !== -1) {
+        state.dropdowns[dropdownIndex].isOpen = !state.dropdowns[dropdownIndex].isOpen;
       }
+    },
+    addDropdown: (state, action: PayloadAction<number>) => {
+      state.dropdowns.push({ id: action.payload, isOpen: false });
     },
   },
 });
 
-export const { toggleDropdown } = selectSlice.actions;
-
-export default selectSlice.reducer;
+export const { toggleDropdown, addDropdown } = dropdownSlice.actions;
+export default dropdownSlice.reducer;

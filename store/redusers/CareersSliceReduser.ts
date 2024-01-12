@@ -1,7 +1,5 @@
-// careersSlice.ts
-
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../store'; // Make sure to import your store configuration
+import { RootState } from '../store';
 import ICheckboxItem from '@/interface/IChekboxItem';
 
 interface CareersState {

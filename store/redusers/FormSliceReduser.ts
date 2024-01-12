@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../store'; // Make sure to import your store configuration
+import { RootState } from '../store'; 
 
 interface FormData {
   name: string;
