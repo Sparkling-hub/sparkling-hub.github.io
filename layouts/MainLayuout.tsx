@@ -11,7 +11,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
 	return (
 
-		<div>
+		<div className='w-fit'>
 			<Navbar />
 			<main>{children}</main>
 			<Footer />

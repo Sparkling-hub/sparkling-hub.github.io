@@ -12,6 +12,7 @@ const store = configureStore({
     form: formReducer,
     careers: careersReducer,
     dropdown: dropdownReducer,
+
   },
 });
 

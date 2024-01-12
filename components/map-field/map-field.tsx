@@ -7,7 +7,7 @@ import Card from '@/components/card';
 
 const MapField: React.FC = () => {
   const dispatch = useDispatch();
-  const { currentMap, activeOfficePoint, activeOfficePointCoords } = useSelector(selectMaps);
+  const { currentMap, activeOfficePoint } = useSelector(selectMaps);
 
   useEffect(() => {
     let mapContainer = document.querySelector('.map-container');
