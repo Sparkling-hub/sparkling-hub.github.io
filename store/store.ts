@@ -3,14 +3,15 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import mapsReducer from '@/store/redusers/mapsSliceReduser';
-import formsReducer from '@/store/redusers/formsSliceReduser';
+import formReducer from '@/store/redusers/FormSliceReduser';
 import careersReducer from './redusers/CareersSliceReduser'
-
+import dropdownReducer from './redusers/SelectSliceReduser'
 const store = configureStore({
   reducer: {
     maps: mapsReducer,
-    forms: formsReducer,
+    form: formReducer,
     careers: careersReducer,
+    dropdown: dropdownReducer,
   },
 });
 
