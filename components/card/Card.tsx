@@ -37,9 +37,9 @@ const Card: React.FC = () => {
 
   return (
     <button className={`fixed ${isVisible ? 'h-96' : 'h-0'} z-[80] text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(activeOfficePointCoords[0])}px`, left: `${Math.round(activeOfficePointCoords[1])}px` }}>
-      <div className={` ${officeCard?.top} ${isVisible ? 'h-96 opacity-95 top-0' : 'h-0 top-100%'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
-        <div className={` p-global lg:absolute w-full left-0  p-8  overflow-hidden bottom-full `}>
-          <button className="absolute top-5% right-5% z-10 h-4 w-4 ">
+      <div className={` ${officeCard?.top} ${isVisible ? 'h-96 opacity-95 top-[0%]' : 'h-0 top-[100%]'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
+        <div className={` p-global lg:absolute w-full left-0  p-8  overflow-hidden `}>
+          <button className="absolute top-[5%] right-[5%] z-10 h-4 w-4 ">
             <div className="content-center icon-wrap" >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => dispatch(setActiveOfficePoint(''))}>
                 <path d="M19 19L5 5" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square"></path>
@@ -57,7 +57,7 @@ const Card: React.FC = () => {
       </div>
       <div className={`transition-opacity duration-200 delay-150 ${isVisible ? 'opacity-100' : 'opacity-0'} absolute h-[2px] bg-primary-dark z-10  right-0 bottom-0 w-full `}></div>
       <div className="absolute pointer-events-none overflow-hidden duration-[150ms] -right-[1.95rem] -bottom-[1.95rem] w-8 h-8 lg:delay-0">
-        <div className="absolute w-14 h-[2px] bg-primary-dark left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 lg:rotate-45"></div>
+        <div className="absolute w-14 h-[2px] bg-primary-dark  -translate-x-[50%] -translate-y-[50%] lg:rotate-[46deg]"></div>
       </div>
     </button>
   );
