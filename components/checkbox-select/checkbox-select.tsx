@@ -17,14 +17,14 @@ const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked,name }) => {
 	
 
   const handleParamsChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.currentTarget.id;
-    console.log('name '+ name);
-    console.log('id '+id.value);
-    const result = get(activeIds, name)
-    result.push(value)
-
-
-    dispatch(setCheckboxData({ name, value: result }));
+    console.log('id ' + id.value);
+    const result = get(activeIds, name);
+    
+    const updatedData = {
+      name,
+      value: [...result, id.value],
+    };
+    dispatch(setCheckboxData(updatedData));
   };
 
 
