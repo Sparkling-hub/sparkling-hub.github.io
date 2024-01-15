@@ -1,6 +1,6 @@
 import React from 'react';
 import MyMultileSelect from '../my-multi-select';
-
+import dataMultiselect from '@/data/data-multiselect'
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -22,7 +22,7 @@ const Filter: React.FC = ({ }) => {
 	} = useSelector(selectCareers);
 
 	return (
-	
+
 		<div className="filter-container bg-gray-100 my-6 mx-5 w-1/4">
 			<h3 className="text-center text-3xl mt-10 mb-5  ">Open Position</h3>
 			<div className="text-sm">
@@ -44,9 +44,10 @@ const Filter: React.FC = ({ }) => {
 						</button>
 					</div>
 				</div>
-				<MyMultileSelect name="location" uniqueIds={uniqueIds} activeValues={activeLocations} placeholder="Location" />
-				<MyMultileSelect name="exp" uniqueIds={uniqueExp} activeValues={activePositions} placeholder="Position" />
-				<MyMultileSelect name="mode" uniqueIds={uniqueWorkmode} activeValues={activeWorkmode} placeholder="Work mode" />
+				{dataMultiselect.map((multiSelect) => (
+					<MyMultileSelect id={multiSelect.id} placeholder={multiSelect.placeholder} key={multiSelect.id}/>
+				))}
+
 			</div>
 		</div>
 

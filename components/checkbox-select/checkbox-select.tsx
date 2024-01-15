@@ -1,18 +1,30 @@
 import React from 'react';
 import ICheckboxSelect from '@/interface/ICheckboxSelect';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCheckboxData } from '@/store/redusers/CareersSliceReduser';
+import { selectCareers, setCheckboxData } from '@/store/redusers/CareersSliceReduser';
 import { ChangeEvent } from 'react';
 import { RootState } from '@reduxjs/toolkit/query';
+import { get } from '../careers/search_function/search_function';
 
 const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked,name }) => {
+
   const dispatch = useDispatch();
+  const {
+
+		activeIds,
+	  
+	  } = useSelector(selectCareers);
+	
 
   const handleParamsChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.currentTarget.id;
-    console.log(value);
+    console.log('name '+ name);
+    console.log('id '+id.value);
+    const result = get(activeIds, name)
+    result.push(value)
 
-    dispatch(setCheckboxData({ name, value }));
+
+    dispatch(setCheckboxData({ name, value: result }));
   };
 
 

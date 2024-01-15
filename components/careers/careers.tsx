@@ -11,33 +11,37 @@ import {
 	selectCareers,
 	setFilterPhraze,
 	setUniqueIds,
-	setActiveLocations,
-	setUniqueExp,
-	setActivePositions,
-	setUniqueWorkmode,
-	setActiveWorkmode,
+	setActiveIds
+
   } from '@/store/redusers/CareersSliceReduser';
 
 
   const Careers: React.FC<ICareersProps> = () => {
 	const dispatch = useDispatch();
 	const {
-	  filterPhraze,
+
 	  uniqueIds,
-	  activeLocations,
-	  uniqueExp,
-	  activePositions,
-	  uniqueWorkmode,
-	  activeWorkmode,
+	
 	} = useSelector(selectCareers);
   
-
   
 	useEffect(() => {
-	  dispatch(setUniqueIds(getIds(dataJobs, 'id')));
-	  dispatch(setUniqueExp(getIds(dataJobs, 'nameProf')));
-	  dispatch(setUniqueWorkmode(getIds(dataJobs, 'workMode')));
-	}, [dataJobs, dispatch]);
+		const result = {
+			workMode: getIds(dataJobs, 'workMode'),
+			experience: getIds(dataJobs, 'nameProf'),
+			location: getIds(dataJobs, 'id'),
+		  };
+		  const activeIds= {
+			workMode:[],
+			experience: [],
+			location: [],
+		  };
+
+		  dispatch(setUniqueIds({ value: result }));
+		  dispatch(setActiveIds({ value: activeIds }));
+
+
+	  }, [dataJobs, dispatch]);
   
 	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
 	  dispatch(setFilterPhraze(e.currentTarget.value));
@@ -45,29 +49,29 @@ import {
   
 
   
-	const filteredJobsList = dataJobs
-	  .filter((job) => {
-		if (!activeLocations.length) return dataJobs;
-		return activeLocations.includes(job.id);
-	  })
-	  .filter((job) => {
-		if (!activePositions.length) return dataJobs;
-		return activePositions.includes(job.nameProf);
-	  })
-	  .filter((job) => {
-		if (!filterPhraze) return dataJobs;
-		return job.namePosition.toLowerCase().includes(filterPhraze.toLowerCase());
-	  })
-	  .filter((job) => {
-		if (!activeWorkmode.length) return dataJobs;
-		return activeWorkmode.includes(job.workMode);
-	  });
+	// const filteredJobsList = dataJobs
+	//   .filter((job) => {
+	// 	if (!activeLocations.length) return dataJobs;
+	// 	return activeLocations.includes(job.id);
+	//   })
+	//   .filter((job) => {
+	// 	if (!activePositions.length) return dataJobs;
+	// 	return activePositions.includes(job.nameProf);
+	//   })
+	//   .filter((job) => {
+	// 	if (!filterPhraze) return dataJobs;
+	// 	return job.namePosition.toLowerCase().includes(filterPhraze.toLowerCase());
+	//   })
+	//   .filter((job) => {
+	// 	if (!activeWorkmode.length) return dataJobs;
+	// 	return activeWorkmode.includes(job.workMode);
+	//   });
   
 	return (
 	  <div className='flex relative w-full'>
 		<Filter
 		/>
-		<JobList jobs={filteredJobsList} />
+		{/* <JobList jobs={filteredJobsList} /> */}
 	  </div>
 	);
   };

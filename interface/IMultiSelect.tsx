@@ -5,9 +5,7 @@ import ICheckboxItem from "./IChekboxItem";
 
 interface IMultiSelect {
 
-    name: string;
-    activeValues:string[];
-    uniqueIds:ICheckboxItem[];
+    id: string;
     placeholder: string  
 
       

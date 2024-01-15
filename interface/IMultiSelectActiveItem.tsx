@@ -2,7 +2,7 @@
 
 interface IMultiSelectActiveItem {
 
-	id: string
+	id: string;
 	name: string;
 
 
