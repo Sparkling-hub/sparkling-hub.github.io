@@ -2,6 +2,9 @@ import Link from 'next/link';
 import DropList from "../ui/drop-list-navbar/drop-list-navbar"
 import Button from '../button';
 import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectHasShadow, setHasShadow } from '@/store/redusers/NavbarSliceReduser';
+
 const Navbar: React.FC = () => {
 
   const services = [
@@ -9,13 +12,15 @@ const Navbar: React.FC = () => {
     {id:2, href: '/software-development', text: 'Software Development' },
     {id:3, href: '/consulting', text: 'IT Consulting' },
   ];
-  const [hasShadow, setHasShadow] = useState(false);
+  const dispatch = useDispatch();
+  const hasShadow = useSelector(selectHasShadow);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isTop = window.scrollY < 20; 
-      setHasShadow(!isTop);
+      const isTop = window.scrollY < 20;
+      dispatch(setHasShadow(!isTop));
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
