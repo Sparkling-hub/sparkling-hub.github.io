@@ -6,12 +6,10 @@ import ICheckboxItem from "./IChekboxItem";
 interface IMultiSelect {
 
     name: string;
-    uniqueIds: ICheckboxItem[]
-    activeLocations: string[]
+    activeValues:string[];
+    uniqueIds:ICheckboxItem[];
     placeholder: string  
 
-    handleParamsChange: (event: ChangeEvent<HTMLInputElement>, name:string,active:string[]) => void
-    deleteItem: (e: React.MouseEvent<HTMLSpanElement>, name: string, active: string[])=> void  
       
   }
   
