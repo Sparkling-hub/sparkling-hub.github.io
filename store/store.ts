@@ -3,6 +3,7 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import mapsReducer from '@/store/redusers/mapsSliceReduser';
+import startupStepByStepReducer from '@/store/redusers/startupStepByStepSliceReduser';
 import formReducer from '@/store/redusers/FormSliceReduser';
 import careersReducer from './redusers/CareersSliceReduser'
 import dropdownReducer from './redusers/SelectSliceReduser'
@@ -11,6 +12,7 @@ import dropdownNavbarReducer from './redusers/dropdownNavbarReduser'
 const store = configureStore({
   reducer: {
     maps: mapsReducer,
+    startupStepByStep: startupStepByStepReducer,
     form: formReducer,
     careers: careersReducer,
     dropdown: dropdownReducer,
