@@ -10,7 +10,14 @@ const app = express();
 const port = 3033;
 
 const storage = multer.memoryStorage(); 
-const upload = multer({ storage }).single('file');
+const upload = multer({ 
+    storage,
+    limits: {
+        fileSize: 10000000
+      }
+ }).single('file');
+ 
+
 app.use(express.json());
 app.use(cors());
 app.use(upload);
