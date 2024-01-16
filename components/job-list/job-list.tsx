@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import JobsFiltre from './job/job';
 import IJobListProps from '@/interface/IJobListProps';
 import IJob from '@/interface/IJob';
+import { filterJobs, selectCareers } from '@/store/redusers/CareersSliceReduser';
+import { useDispatch, useSelector } from 'react-redux';
 
-const JobList: React.FC<IJobListProps> = ({ jobs }) => {
+const JobList: React.FC = () => {
+  const dispatch = useDispatch();
+  const { filteredJobsList, dataJobs, activeIds } = useSelector(selectCareers)
+  useEffect(() => { dispatch(filterJobs())});
+ const jobs= filteredJobsList
   return (
     <div className='w-full overflow-auto flex flex-col m-6 '>
       {jobs.length ? (
@@ -26,3 +32,7 @@ const JobList: React.FC<IJobListProps> = ({ jobs }) => {
 };
 
 export default JobList;
+function dispatch(arg0: { payload: undefined; type: "careers/filterJobs"; }) {
+  throw new Error('Function not implemented.');
+}
+

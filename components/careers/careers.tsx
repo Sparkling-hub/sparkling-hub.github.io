@@ -1,5 +1,5 @@
 import { useState, useEffect, ChangeEvent } from 'react';
-import dataJobs from '../../data/data-jobs';
+import Jobs from '../../data/data-jobs';
 import JobList from '../job-list';
 import Filter from '../filter'
 import { getIds } from './search_function/search_function'
@@ -11,69 +11,50 @@ import {
 	selectCareers,
 	setFilterPhraze,
 	setUniqueIds,
-	setActiveIds
-
+	setActiveIds,
+	filterJobs,
+	setJobsAction
   } from '@/store/redusers/CareersSliceReduser';
 
 
   const Careers: React.FC<ICareersProps> = () => {
 	const dispatch = useDispatch();
-	const {
 
-	  uniqueIds,
+  
+	const { filteredJobsList, dataJobs, activeIds } = useSelector(selectCareers)
 	
-	} = useSelector(selectCareers);
-  
-  
 	useEffect(() => {
+		dispatch(setJobsAction({ value: Jobs }));
+
 		const result = {
-			workMode: getIds(dataJobs, 'workMode'),
-			experience: getIds(dataJobs, 'nameProf'),
-			location: getIds(dataJobs, 'id'),
-		  };
-		  const activeIds= {
-			workMode:[],
-			experience: [],
-			location: [],
-		  };
-
-		  dispatch(setUniqueIds({ value: result }));
-		  dispatch(setActiveIds({ value: activeIds }));
-
-
+		  workMode: getIds(Jobs, 'workMode'),
+		  experience: getIds(Jobs, 'experience'),
+		  location: getIds(Jobs, 'location'),
+		};
+	  
+		const activeIds = {
+		  workMode: [],
+		  experience: [],
+		  location: [],
+		};
+	  
+	
+		dispatch(setUniqueIds({ value: result }));
+		dispatch(setActiveIds({ value: activeIds }));
 	  }, [dataJobs, dispatch]);
-  
-	const handleFilterPrazeChange = (e: ChangeEvent<HTMLInputElement>) => {
-	  dispatch(setFilterPhraze(e.currentTarget.value));
-	};
-  
+	  
 
   
-	// const filteredJobsList = dataJobs
-	//   .filter((job) => {
-	// 	if (!activeLocations.length) return dataJobs;
-	// 	return activeLocations.includes(job.id);
-	//   })
-	//   .filter((job) => {
-	// 	if (!activePositions.length) return dataJobs;
-	// 	return activePositions.includes(job.nameProf);
-	//   })
-	//   .filter((job) => {
-	// 	if (!filterPhraze) return dataJobs;
-	// 	return job.namePosition.toLowerCase().includes(filterPhraze.toLowerCase());
-	//   })
-	//   .filter((job) => {
-	// 	if (!activeWorkmode.length) return dataJobs;
-	// 	return activeWorkmode.includes(job.workMode);
-	//   });
-  
+ 
 	return (
 	  <div className='flex relative w-full'>
 		<Filter
 		/>
-		{/* <JobList jobs={filteredJobsList} /> */}
+		   <JobList />
 	  </div>
 	);
   };
 
 export default Careers;
+
+
