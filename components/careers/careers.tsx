@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useEffect, ChangeEvent } from 'react';
 import Jobs from '../../data/data-jobs';
 import JobList from '../job-list';
 import Filter from '../filter'
