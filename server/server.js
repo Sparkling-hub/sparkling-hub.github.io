@@ -2,6 +2,9 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+let corsOptions = {
+    origin: '*' // Sensitive
+};
 const multer = require("multer");
 const { body, validationResult } = require("express-validator");
 const helmet = require("helmet");
@@ -16,10 +19,10 @@ const upload = multer({
         fileSize: 10000000
       }
  }).single('file');
- 
+
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(upload);
 
 const transporter = nodemailer.createTransport({
