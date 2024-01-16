@@ -9,9 +9,11 @@ const helmet = require("helmet");
 const app = express();
 const port = 3033;
 
-app.use(multer({ dest: 'uploads' }).single('file'));
+const storage = multer.memoryStorage(); 
+const upload = multer({ storage }).single('file');
 app.use(express.json());
 app.use(cors());
+app.use(upload);
 
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
@@ -24,7 +26,6 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secured: true
 });
-
 
 app.use(helmet.hidePoweredBy());
 
