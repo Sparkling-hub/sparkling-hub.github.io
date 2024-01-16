@@ -19,12 +19,12 @@ const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked,name }) => {
     const value = e.currentTarget.id;    
     let result = get(activeIds, name)
     if (!result.includes(value)) {
-      result = [...result, value];
-      dispatch(setCheckboxData({ name, value: result }));
+      result = [...result, value];      
+      dispatch(setCheckboxData({ name, value: result }));     
     }
     else {
-      result = result.filter((item) => item !== value);
-      dispatch(deleteActiveItem({ id: value, ids: result, name }));
+      result = result.filter((item) => item !== value);      
+      dispatch(deleteActiveItem({ id: value, ids: result, name }));     
     }
   };
 
