@@ -52,7 +52,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 						type={"text"}
 						placeholder={activeData.length ? "" : placeholder} name={id}					
 					/>
-					<div className="text-left flex top-19 h-max w-full left-0 
+					<button className="text-left flex top-19 h-max w-full left-0 
                         list flex flex-wrap items-center p-1  rounded-b-lg border-t-[1px] 
                         border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" 
 						onClick={ elStopPropagation }>
@@ -65,7 +65,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 								name={id}					
 							/>
 						)) : "No found"}
-					</div>
+					</button>
 				</div>
 			</button>
 		</div>
