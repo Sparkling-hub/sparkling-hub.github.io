@@ -2,20 +2,21 @@ import Link from 'next/link';
 import DropList from "../ui/drop-list-navbar/drop-list-navbar"
 import Button from '../button';
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectHasShadow, setHasShadow, selectServices  } from '@/store/redusers/NavbarSliceReduser';
+import { useSelector } from 'react-redux';
+import {selectServices  } from '@/store/redusers/NavbarSliceReduser';
 
 const Navbar: React.FC = () => {
 
   const services = useSelector(selectServices);
-  const dispatch = useDispatch();
-  const hasShadow = useSelector(selectHasShadow);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isTop = window.scrollY < 20;
-      dispatch(setHasShadow(!isTop));
-    };
+  const [hasShadow, setLocalHasShadow] = React.useState(false); // Use local state
+  
+useEffect(() => {
+  const handleScroll = () => {
+    const isTop = window.scrollY < 20;
+    // Directly set hasShadow in local state, without dispatching
+    setLocalHasShadow(!isTop);
+  };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
