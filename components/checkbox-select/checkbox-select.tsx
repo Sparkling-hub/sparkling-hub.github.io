@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import ICheckboxSelect from '@/interface/ICheckboxSelect';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCareers, setCheckboxData, deleteActiveItem } from '@/store/redusers/CareersSliceReduser';
-import { ChangeEvent } from 'react';
-import { RootState } from '@reduxjs/toolkit/query';
 import { get } from '../careers/search_function/search_function';
 
 const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked,name }) => {

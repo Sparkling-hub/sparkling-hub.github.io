@@ -1,4 +1,4 @@
-import { useEffect, ChangeEvent } from 'react';
+import { useEffect } from 'react';
 import Jobs from '../../data/data-jobs';
 import JobList from '../job-list';
 import Filter from '../filter'
@@ -9,10 +9,8 @@ import ICareersProps from '@/interface/ICareersProps';
 
 import {
 	selectCareers,
-	setFilterPhraze,
 	setUniqueIds,
 	setActiveIds,
-	filterJobs,
 	setJobsAction
   } from '@/store/redusers/CareersSliceReduser';
 
@@ -21,7 +19,7 @@ import {
 	const dispatch = useDispatch();
 
   
-	const { filteredJobsList, dataJobs, activeIds } = useSelector(selectCareers)
+	const {  dataJobs } = useSelector(selectCareers)
 	
 	useEffect(() => {
 		dispatch(setJobsAction({ value: Jobs }));

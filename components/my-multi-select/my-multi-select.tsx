@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { useState } from 'react';
 import CheckboxSelect from '@/components/checkbox-select';
 import MultiSelectActiveItem from '../multi-select-active-item';
 import IMultiSelect from '@/interface/IMultiSelect';
@@ -50,10 +50,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 					<InputLocate
 						id={"focused_input"}
 						type={"text"}
-						placeholder={activeData.length ? "" : placeholder} name={id}
-						// handleSearchChange={handleSearchChange}	
-											
-					
+						placeholder={activeData.length ? "" : placeholder} name={id}					
 					/>
 					<div className="text-left flex top-19 h-max w-full left-0 
                         list flex flex-wrap items-center p-1  rounded-b-lg border-t-[1px] 
@@ -62,6 +59,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 						{data.length ? data.map(dataCheckbox => (
 							
 							<CheckboxSelect
+								key={dataCheckbox}
 								id={dataCheckbox}
 								checked={activeData.includes(dataCheckbox.value)} 
 								name={id}					
