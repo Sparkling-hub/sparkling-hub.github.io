@@ -1,18 +1,23 @@
 import React from 'react';
 import IMultiSelectActiveItem from '@/interface/IMultiSelectActiveItem';
-import { deleteActiveItem } from '@/store/redusers/CareersSliceReduser';
-import { useDispatch } from 'react-redux';
+import { deleteActiveItem, selectCareers } from '@/store/redusers/CareersSliceReduser';
+import { useDispatch, useSelector } from 'react-redux';
+import { get } from '../careers/search_function/search_function';
 
 const MultiSelectActiveItem: React.FC<IMultiSelectActiveItem> = ({id, name}) => {
   const dispatch = useDispatch();
+  const {
+
+		activeIds,
+	  
+	  } = useSelector(selectCareers);
   const deleteItem = (e: React.MouseEvent<HTMLSpanElement>) => {
-    const idToDelete = e.currentTarget.id.toString();
-    dispatch(deleteActiveItem({ name, idToDelete }));
+    const value = e.currentTarget.id.toString();
+    let result = get(activeIds, name)
+    dispatch(deleteActiveItem({ id: value, ids: result, name }));
     e.stopPropagation();
   };
-  console.log("name "+name)
-  console.log("id "+id)
-  debugger
+  
   return (
     <div className="flex flex-no-wrap active-item-container z-50 m-1" title={id}>
       <div className="" title="Remove item" aria-label="Remove item" aria-describedby="select2-filter_locations-container-choice-rjty-Tel Aviv">

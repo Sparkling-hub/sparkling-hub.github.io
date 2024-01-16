@@ -24,7 +24,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 	};
 	const data = get(uniqueIds, id)
 	const activeData = get(activeIds, id)
-	console.log(activeData);
+
 	return (
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
 
@@ -56,7 +56,8 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 							
 							<CheckboxSelect
 								id={dataCheckbox}
-								checked={activeData.includes(dataCheckbox.value)} name={id}						
+								checked={activeData.includes(dataCheckbox.value)} 
+								name={id}						
 							/>
 						)) : "No found"}
 					</div>

@@ -10,7 +10,7 @@ import { closeDropdown, openDropdown, selectDropdownState, toggleDropdown } from
     const dropdownRef = useRef<HTMLButtonElement>(null);
   
     const handleMouseEnter = () => {
-      console.log(isOpen);
+
       dispatch(openDropdown());
     };
   

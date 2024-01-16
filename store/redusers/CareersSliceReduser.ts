@@ -9,7 +9,6 @@ import IJob from '@/interface/IJob';
 interface CareersState {
   filterPhraze: string;
   uniqueIds: string[][]; 
-  
   activeIds: string[][];
   [key: string]: any;
 }
@@ -28,24 +27,16 @@ const careersSlice = createSlice({
     setUniqueIds: (state, action: PayloadAction<{ value:any }>) => {
       const { value } = action.payload;
       state.uniqueIds = value;
-      console.log(state);
+
     },
     setActiveIds: (state, action: PayloadAction<{ value:any }>) => {
       const { value } = action.payload;
       state.activeIds = value;
-      console.log(state);
+
     },
     setCheckboxData: (state, action: PayloadAction<{ name: string; value: string[] }>) => {
-      const { name, value } = action.payload;
-      console.log(name);
-      console.log(value);
-      debugger
-      Object.keys(state.activeIds).forEach((key: any) => {
-        console.log(key);
- 
-        console.log(state.activeIds[key] );
-        if (key == name) state.activeIds[key] = value});
-      
+      const { name, value } = action.payload;      
+      Object.keys(state.activeIds).forEach((key: any) => { if (key == name) state.activeIds[key] = value});
       
     },
   
@@ -54,11 +45,12 @@ const careersSlice = createSlice({
 
     
       },
-    deleteActiveItem: (state, action: PayloadAction<{ name: string; idToDelete: string }>) => {
-      const { name, idToDelete } = action.payload;
-      let newValue: string[] = [];
-      
-    },
+      deleteActiveItem: (state, action: PayloadAction<{ id: string; ids: string[]; name: string }>) => {
+        const { id, ids, name } = action.payload;        
+          Object.keys(state.activeIds).forEach((key: any) => {
+             if (key == name) state.activeIds[key] = ids.filter((item) => item !== id);
+            });
+      }
    
   },
   
