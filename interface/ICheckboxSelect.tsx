@@ -7,6 +7,7 @@ interface ICheckboxSelect {
     id: ICheckboxItem
     checked: boolean;
     name: string;
+       
   }
   
 export default ICheckboxSelect

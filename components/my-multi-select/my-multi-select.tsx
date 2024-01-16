@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import CheckboxSelect from '@/components/checkbox-select';
 import MultiSelectActiveItem from '../multi-select-active-item';
 import IMultiSelect from '@/interface/IMultiSelect';
@@ -12,6 +12,7 @@ import { get } from '../careers/search_function/search_function';
 const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 
 	const [isActive, setIsActive] = useState(false);
+
 	const {
 		uniqueIds,
 		activeIds,
@@ -22,6 +23,10 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 	const handleClick = () => {
 		setIsActive(!isActive);
 	};
+	const elStopPropagation = (e: any) => {		
+		e.stopPropagation();		
+	};
+
 	const data = get(uniqueIds, id)
 	const activeData = get(activeIds, id)
 
@@ -29,7 +34,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 		<div className={`my-multiple-select ${isActive ? 'active' : ''} m-4`} >
 
 			<button className={`my-multiple-select-container w-full flex-col flex rounded-lg relative bg-color-primary-medium border-bg-color-primary-medium h-auto`}
-				onClick={handleClick}>
+				onClick={ handleClick }>
 				<div className={`min-h-[32px] flex left-3 flex-wrap items-center h-auto ${activeIds.length ? ' p-3' : ''}`}>
 					{activeData.map((active) => {
 						
@@ -45,19 +50,21 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder}) => {
 					<InputLocate
 						id={"focused_input"}
 						type={"text"}
-
-						placeholder={activeData.length ? "" : placeholder} name={id}						
+						placeholder={activeData.length ? "" : placeholder} name={id}
+						// handleSearchChange={handleSearchChange}	
+											
 					
 					/>
 					<div className="text-left flex top-19 h-max w-full left-0 
                         list flex flex-wrap items-center p-1  rounded-b-lg border-t-[1px] 
-                        border-slate-200 bg-color-primary-medium border-bg-color-primary-medium">
+                        border-slate-200 bg-color-primary-medium border-bg-color-primary-medium" 
+						onClick={ elStopPropagation }>
 						{data.length ? data.map(dataCheckbox => (
 							
 							<CheckboxSelect
 								id={dataCheckbox}
 								checked={activeData.includes(dataCheckbox.value)} 
-								name={id}						
+								name={id}					
 							/>
 						)) : "No found"}
 					</div>
