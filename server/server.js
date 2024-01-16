@@ -25,9 +25,7 @@ const transporter = nodemailer.createTransport({
     secured: true
 });
 
-app.use(multer({ dest: 'uploads' }).single('file'));
-app.use(express.json());
-app.use(cors());
+
 app.use(helmet.hidePoweredBy());
 
 const validateForm = [
