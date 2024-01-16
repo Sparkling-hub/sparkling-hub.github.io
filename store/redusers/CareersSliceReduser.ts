@@ -28,36 +28,33 @@ const careersSlice = createSlice({
   reducers: {
     setFilterPhraze: (state, action: PayloadAction<string>) => {
       state.filterPhraze = action.payload;
+    
     },
     setJobsAction: (state, action: PayloadAction<{ value: any }>) => {
       const { value } = action.payload;
       state.dataJobs = value;
     },
-    filterJobs: (state) => { var data:any = [];  
-      const filteredJobsList = Object.keys(state.activeIds).map((key: any) => {
-       
-      state.dataJobs.forEach((job) => {
-   
-          console.log(1);
+    filterJobs: (state) => { 
+      let data: IJob[] = [...state.dataJobs];
+      
+      Object.keys(state.activeIds).forEach((key:any) => {
+
+        data = data.filter((job: any) => {
+          const matchesText = job.namePosition.toLowerCase().includes(state.filterPhraze.toLowerCase());
 
           if (!state.activeIds[key].length) {
-            console.log(1); data.push(JSON.parse(JSON.stringify(job)));
+            return matchesText; 
+          } else {
+            return state.activeIds[key].includes(job[key]) && matchesText;
           }
-          else {
-   
-            if (state.activeIds[key].includes(job[key])) data.push(job[key]) ;
-          }
-   
-       
-        }); 
-  
-      })
+        });
+      });
     
-      console.log(data);
-      state.filteredJobsList = filteredJobsList;
+      state.filteredJobsList = data;
     },
-
-
+    
+    
+    
     setUniqueIds: (state, action: PayloadAction<{ value: any }>) => {
       const { value } = action.payload;
       state.uniqueIds = value;

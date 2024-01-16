@@ -7,9 +7,11 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const JobList: React.FC = () => {
   const dispatch = useDispatch();
-  const { filteredJobsList, dataJobs, activeIds } = useSelector(selectCareers)
-  useEffect(() => { dispatch(filterJobs())});
- const jobs= filteredJobsList
+  
+  const { filteredJobsList, dataJobs, activeIds,filterPhraze } = useSelector(selectCareers)
+   useEffect(() => { dispatch(filterJobs())}, [activeIds,filterPhraze]);
+   const jobs= filteredJobsList
+ console.log(filteredJobsList)
   return (
     <div className='w-full overflow-auto flex flex-col m-6 '>
       {jobs.length ? (
@@ -32,7 +34,5 @@ const JobList: React.FC = () => {
 };
 
 export default JobList;
-function dispatch(arg0: { payload: undefined; type: "careers/filterJobs"; }) {
-  throw new Error('Function not implemented.');
-}
+
 
