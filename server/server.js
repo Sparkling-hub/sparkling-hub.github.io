@@ -3,7 +3,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 let corsOptions = {
-    origin: '*' // Sensitive
+    
 };
 const multer = require("multer");
 const { body, validationResult } = require("express-validator");
