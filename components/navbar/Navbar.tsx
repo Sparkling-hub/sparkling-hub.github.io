@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-lg h-[60px] w-[60px] relative text-gray-700"
+            className="inline-flex items-center justify-center rounded-lg h-[60px] w-[69px] relative text-gray-700"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
 
