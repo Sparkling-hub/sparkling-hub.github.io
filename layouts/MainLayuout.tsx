@@ -10,8 +10,7 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
 	return (
-
-		<div>
+		<div className='w-fit lg:w-full '>
 			<Navbar />
 			<main>{children}</main>
 			<Footer />

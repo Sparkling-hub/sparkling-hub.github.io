@@ -34,15 +34,15 @@ const Navbar: React.FC = () => {
   return  (
   
     <header className={`bg-white bg-opacity-95 sticky top-0 z-30  ${hasShadow ? 'shadow-md transition-shadow duration-300' : 'shadow-none transition-shadow duration-300'}`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 md:px-8" aria-label="Global">
         <div className="flex justify-between text-xl items-center ">
           
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img className="h-16 w-auto" src="/img/navbar/logo2.png" alt="Logo" />
+            <img className="h-16 pr-14 lg:h-auto w-auto min-w-[23rem]" src="/img/navbar/logo2.png" alt="Logo" />
           </Link>
         </div>
-        <div className="flex lg:hidden  h-full">
+        <div className="flex md:hidden  h-full">
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-md h-[60px] w-[60px] relative text-gray-700"
@@ -56,10 +56,10 @@ const Navbar: React.FC = () => {
                 </div>
           </button>
         </div>
-        <ul className="hidden lg:flex lg:gap-x-12 ">
+        <ul className="hidden md:flex md:gap-x-12 ">
         <DropList name={'Services'} DataLink={services} mobileMenuOpen={false}/>
           {links.map((link) => (
-            <li key={link.href} className='ml-4 flex items-center'>
+            <li key={link.href} className='flex items-center'>
              
        
               <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900 w-max'>
@@ -73,19 +73,19 @@ const Navbar: React.FC = () => {
      
  
 
-          <li>
+          <li className='w-max'>
             <Button href="/contact" text="Get in touch" />
           </li>
         </ul>
       </nav>
-      <div className={`lg:hidden `}>
+      <div className={`md:hidden `}>
       <div className={`fixed inset-0 z-10 transition-all w-0 ease-in-out`}/>       
       <div className={`min-w-[24rem] fixed inset-y-0 right-0 z-20 overflow-hidden bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full transform transition-all ease-in-out ${mobileMenuOpen ? 'translate-x-0 opacity-1' : 'translate-x-full opacity-10'} duration-500`}>
 
             <div className="flex items-center justify-between   ">
               <Link href="/" className="-m-1.5 pt-1 select-none">
                 <span className="sr-only">Your Company</span>
-                <img className="h-16 " src="/img/navbar/logo2.png" alt="Logo" />
+                <img className="h-16" src="/img/navbar/logo2.png" alt="Logo" />
               </Link>
               <button
                 type="button"
