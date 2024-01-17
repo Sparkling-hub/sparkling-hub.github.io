@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
   return  (
   
     <header className={`bg-white bg-opacity-95 sticky top-0 z-30  ${hasShadow ? 'shadow-md transition-shadow duration-300' : 'shadow-none transition-shadow duration-300'}`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 md:px-8" aria-label="Global">
+      <nav className="mx-auto flex w-[2000px] items-center justify-between p-6 md:px-8" aria-label="Global">
         <div className="flex justify-between text-xl items-center ">
           
           <Link href="/" className="-m-1.5 p-1.5">
