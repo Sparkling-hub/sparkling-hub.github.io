@@ -17,7 +17,7 @@ const port = 3033;
 const upload = multer({ 
     storage :multer.memoryStorage(),
     limits: {
-        fileSize: 8000000
+        fileSize: 4000000
     }
  }).single('file');
 
