@@ -5,14 +5,17 @@ const cors = require("cors");
 const multer = require("multer");
 const { body, validationResult } = require("express-validator");
 const helmet = require("helmet");
-
+ 
 const app = express();
 const port = 3033;
-
-app.use(multer({ dest: 'uploads' }).single('file'));
+ 
+// app.use(multer({ dest: 'uploads' }).single('file'));
+const storage = multer.memoryStorage(); // Use memory storage for file upload
+const upload = multer({ storage }).single('file');
 app.use(express.json());
 app.use(cors());
-
+app.use(upload);
+ 
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -24,10 +27,12 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secured: true
 });
-
-
+ 
+// app.use(multer({ dest: 'uploads' }).single('file'));
+// app.use(express.json());
+// app.use(cors());
 app.use(helmet.hidePoweredBy());
-
+ 
 const validateForm = [
     body('formData.name').isLength({ min: 0, max: 255 }).withMessage('Name is required and must be less than 255 characters'),
     body('formData.email').isEmail().withMessage('Valid email is required'),
@@ -35,14 +40,14 @@ const validateForm = [
     body('formData.company').isLength({ max: 255 }).withMessage('Company must be less than 255 characters'),
     body('formData.select').isLength({ max: 255 }).withMessage('Select must be less than 255 characters'),
 ];
-
+ 
 app.post('/send-form', validateForm, (req, res) => {
     const errors = validationResult(req);
-
+ 
     if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
-
+ 
     const { name, email, message, company, select } = req.body.formData;
-
+ 
     const mailOptions = {
         from: 'careers.sparkling.co@gmail.com',
         to: 'l.arthofer@sparkling.co.com',
@@ -50,7 +55,7 @@ app.post('/send-form', validateForm, (req, res) => {
         text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nText: ${message}`,
         attachments: [],
     };
-
+ 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log(`errorSend: ${error}`);
@@ -61,7 +66,7 @@ app.post('/send-form', validateForm, (req, res) => {
         }
     });
 });
-
+ 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
