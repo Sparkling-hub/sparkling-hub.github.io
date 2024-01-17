@@ -13,9 +13,9 @@ const app = express();
 const port = 3033;
 
 
-const storage = multer.memoryStorage(); 
+
 const upload = multer({ 
-    storage,
+    storage :multer.memoryStorage(),
     limits: {
         fileSize: 8000000
     }
