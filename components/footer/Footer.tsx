@@ -54,7 +54,10 @@ const Footer: React.FC = () => {
 							<div>Get in touch</div>
 							<div>info@sparkling.co.com</div>
 							<div>+41 (0)91 752 0707 </div>
-							<img className="w-16 h-16 inline-block my-4" src="/img/footer/linkedIn_icon.svg" alt="linkedIn_icon"></img>
+							
+							<a  title="LinkedIn" href="https://www.linkedin.com/company/sparkling-company">
+								<img className="w-16 h-16 inline-block my-4" src="/img/footer/linkedIn_icon.svg" alt="linkedIn_icon"></img>
+							</a>
 
 						</div>						
 					</div>
