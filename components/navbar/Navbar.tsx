@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
   
     <header className={`bg-white bg-opacity-95 sticky top-0 z-30  ${hasShadow ? 'shadow-md transition-shadow duration-300' : 'shadow-none transition-shadow duration-300'}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="w-full flex justify-between text-xl items-center ">
+        <div className="flex justify-between text-xl items-center ">
           
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -56,13 +56,13 @@ const Navbar: React.FC = () => {
                 </div>
           </button>
         </div>
-        <ul className="hidden lg:flex lg:gap-x-12">
+        <ul className="hidden lg:flex lg:gap-x-12 ">
         <DropList name={'Services'} DataLink={services} mobileMenuOpen={false}/>
           {links.map((link) => (
             <li key={link.href} className='ml-4 flex items-center'>
              
        
-              <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900'>
+              <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900 w-max'>
 
                 {link.text}
 
