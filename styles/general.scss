@@ -2,9 +2,9 @@ $color1: #eafffd;
 $color2: #86C0BB;
 $color5: #eafffd;
 $color6: #4DA59B;
-$color7: #3a857e;
-
-
+$color7: #D3E5EB;   
+$color8:#C73926;
+$color9: #3a857e;
 
 $divideColor: #6AE5CE;
 $colorarrow: #73C9BD;
@@ -13,7 +13,7 @@ $primaryDarkColor: #285c5c;
 $primaryMediumColor: #4DA59B;
 $primaryMediumColor2: #73C9BD;
 $primaryLightColor: #86C0BB;
-$primaryDoubleLightColor: #CBF0E9;
+$primaryDoubleLightColor: #CBF0E9;    //Color maps
 $iconColorStartupSecion3: #C4F4EC;
 $white: #eafffd;
 $colorActiveStep: #fce205;
@@ -69,13 +69,8 @@ $weight-text: 400px;
 	align-items: center;
 	top: 0;
 	position: sticky;
-
-    background-color: rgba(255, 255, 255, 0.97);
-
-    width: 100%;
-
-
-
+  background-color: rgba(255, 255, 255, 0.97);
+  width: 100%;
 }
 
 nav {
@@ -216,7 +211,7 @@ nav {
 	position: absolute;
 	top: calc(-5vw - 40px);  
   }
-
+  
 .content-section {
 	display: flex;
 	justify-content: center;
@@ -441,6 +436,37 @@ li:not(:last-child).highlight .s-b-s-text {
 
 
 
+
+
+
+
+.current-map path,
+// .svg-map #EU,
+// .svg-map #AI,
+// .svg-map #AF,
+// .svg-map #OC,
+// .svg-map #NA,
+// .svg-map #SA
+.svg-map
+{
+    fill: #CBF0E9;
+}
+.svg-map #UK,
+.svg-map #CH,
+.svg-map #UA,
+.svg-map #TN
+{
+	opacity: 0.6;
+}
+// .svg-map.svg-map #EU:hover,
+// .svg-map.svg-map #AI:hover,
+// .svg-map.svg-map #OC:hover,
+// .svg-map.svg-map #NA:hover,
+// .svg-map.svg-map #SA:hover,
+.svg-map.svg-map #AF:hover
+{
+    fill: $primaryDarkColor;
+}
 
 .job-content {
     border-style: solid;
@@ -686,4 +712,5 @@ li:not(:last-child).highlight .s-b-s-text {
 		font-weight: 700;
 	}
 }
+
 

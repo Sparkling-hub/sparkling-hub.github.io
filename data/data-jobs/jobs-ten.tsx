@@ -17,15 +17,15 @@ const location = <>
 
 
 const jobs = {
-    id: "Switzerland",
+    location: "Switzerland",
     namePosition: "Software Consultant",
-    location: location,
-    experience: experience,
+    locationHTML: location,
+    experienceHTML: experience,
     head: head,
     text: text,
     workMode:"On site",
     slug:"software-consultantp",
-    nameProf: 'R & D',
+    experience: 'R & D',
    
 
 }

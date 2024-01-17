@@ -1,25 +1,26 @@
 import Link from 'next/link';
 import DropList from "../ui/drop-list-navbar/drop-list-navbar"
 import Button from '../button';
-import React, { useState, useEffect } from 'react';
-const Navbar: React.FC = () => {
-  const services = [
-    {id:1, href: '/team-augmentation', text: 'Team Augmentation' },
-    {id:2, href: '/software-development', text: 'Software Development' },
-    {id:3, href: '/consulting', text: 'IT Consulting' },
-  ];
-  const [hasShadow, setHasShadow] = useState(false);
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import {selectServices  } from '@/store/redusers/NavbarSliceReduser';
 
+const Navbar: React.FC = () => {
+
+  const services = useSelector(selectServices);
+  const [hasShadow, setHasShadow] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
-      const isTop = window.scrollY < 20; 
+      const isTop = window.scrollY < 20;
       setHasShadow(!isTop);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [])
   return  (
     <div
       id="navbar"

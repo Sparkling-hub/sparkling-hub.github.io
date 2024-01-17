@@ -16,7 +16,7 @@ const Questions: React.FC = () => {
 
 				<div className="relative m-5 w-full" key={index}>
 
-					<DisabledSelect data={value} />
+					<DisabledSelect data={value}/>
 
 				</div>
 
