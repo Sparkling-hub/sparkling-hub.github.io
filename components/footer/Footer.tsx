@@ -28,9 +28,13 @@ const Footer: React.FC = () => {
 						<div className='left-block max-w-[33%]'>
 							<div>Sparkling</div>
 							<div>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
-						</div>
+						
+							<div>Privacy</div>
+							<div>Privacy Policy</div>
+							<div>Cookie Policy</div>
+							</div>
 						<div className='center-block max-w-[33%]'>
-							<div>LINKS</div>
+							<div>Links</div>
 							<ul className='flex-col w-1/2 justify-between py-4'>
 								<li>
 									<Link className="no-underline p-4" href="/">Home</Link>
@@ -47,9 +51,11 @@ const Footer: React.FC = () => {
 							</ul>
 						</div>
 						<div className='right-block max-w-[33%]'>
-							<div>GET IN TOUCH</div>
+							<div>Get in touch</div>
 							<div>info@sparkling.co.com</div>
 							<div>+41 (0)91 752 0707 </div>
+							<img className="w-16 h-16 inline-block my-4" src="/img/footer/linkedIn_icon.svg" alt="linkedIn_icon"></img>
+
 						</div>						
 					</div>
 					<div className='footer-text'> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
