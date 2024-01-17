@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import JobsFiltre from './job/job';
-import IJobListProps from '@/interface/IJobListProps';
 import IJob from '@/interface/IJob';
 import { filterJobs, selectCareers } from '@/store/redusers/CareersSliceReduser';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const JobList: React.FC = () => {
 	const dispatch = useDispatch();
 
-	const { filteredJobsList, dataJobs, activeIds, filterPhraze } = useSelector(selectCareers)
+	const { filteredJobsList, activeIds, filterPhraze } = useSelector(selectCareers)
 	useEffect(() => { dispatch(filterJobs()) }, [activeIds, filterPhraze]);
 	const jobs = filteredJobsList
 

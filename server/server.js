@@ -2,20 +2,30 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+let corsOptions = {
+    origin: '*' // Sensitive
+};
 const multer = require("multer");
 const { body, validationResult } = require("express-validator");
 const helmet = require("helmet");
  
 const app = express();
 const port = 3033;
- 
-// app.use(multer({ dest: 'uploads' }).single('file'));
-const storage = multer.memoryStorage(); // Use memory storage for file upload
-const upload = multer({ storage }).single('file');
+
+
+const storage = multer.memoryStorage(); 
+const upload = multer({ 
+    storage,
+    limits: {
+        fileSize: 10000000
+      }
+ }).single('file');
+
+
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(upload);
- 
+
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -27,10 +37,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secured: true
 });
- 
-// app.use(multer({ dest: 'uploads' }).single('file'));
-// app.use(express.json());
-// app.use(cors());
+
+
 app.use(helmet.hidePoweredBy());
  
 const validateForm = [

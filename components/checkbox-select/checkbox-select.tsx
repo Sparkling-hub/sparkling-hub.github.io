@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import ICheckboxSelect from '@/interface/ICheckboxSelect';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCareers, setCheckboxData, deleteActiveItem } from '@/store/redusers/CareersSliceReduser';
-import { ChangeEvent } from 'react';
-import { RootState } from '@reduxjs/toolkit/query';
 import { get } from '../careers/search_function/search_function';
 
 const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked,name }) => {
@@ -21,12 +19,12 @@ const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked,name }) => {
     const value = e.currentTarget.id;    
     let result = get(activeIds, name)
     if (!result.includes(value)) {
-      result = [...result, value];
-      dispatch(setCheckboxData({ name, value: result }));
+      result = [...result, value];      
+      dispatch(setCheckboxData({ name, value: result }));     
     }
     else {
-      result = result.filter((item) => item !== value);
-      dispatch(deleteActiveItem({ id: value, ids: result, name }));
+      result = result.filter((item) => item !== value);      
+      dispatch(deleteActiveItem({ id: value, ids: result, name }));     
     }
   };
 

@@ -9,16 +9,10 @@ import {
 	setFilterPhraze
 } from '@/store/redusers/CareersSliceReduser';
 
-const Filter: React.FC = ({ }) => {
+const Filter: React.FC = () => {
 	const dispatch = useDispatch();
 	const {
 		filterPhraze,
-		uniqueIds,
-		activeLocations,
-		uniqueExp,
-		activePositions,
-		uniqueWorkmode,
-		activeWorkmode,
 	} = useSelector(selectCareers);
 
 	return (
