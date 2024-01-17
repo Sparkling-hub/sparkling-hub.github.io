@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
       
-                <div className="block h-[25px] w-[28px] absolute bottom-[3px] z-30 transform">
+                <div className="block h-[25px] w-[25.5px] absolute bottom-[3px] z-30 transform">
                     <span aria-hidden="true" className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${ mobileMenuOpen?'rotate-45': ' -translate-y-1.5'}`}></span>
                     <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out ${mobileMenuOpen ?'opacity-0': '' } `}></span>
                     <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out ${mobileMenuOpen ? '-rotate-45':' translate-y-1.5'}`}></span>
@@ -83,9 +83,9 @@ const Navbar: React.FC = () => {
       <div className={`fixed inset-y-0 right-0 z-20 overflow-hidden bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full transform transition-all ease-in-out ${mobileMenuOpen ? 'translate-x-0 opacity-1' : 'translate-x-full opacity-10'} duration-500`}>
 
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5 select-none">
+              <Link href="/" className="-m-1.5 pt-6 select-none">
                 <span className="sr-only">Your Company</span>
-                <img className="h-8 w-auto" src="/img/navbar/logo2.png" alt="Logo" />
+                <img className="h-8 " src="/img/navbar/logo2.png" alt="Logo" />
               </Link>
               <button
                 type="button"
