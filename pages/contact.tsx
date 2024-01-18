@@ -14,6 +14,7 @@ const Contact = () => {
         <div >
             <Sections {...Section.sections.SectionOne}/> 
             <Sections {...Section.sections.SectionTwo}/> 
+            <Sections {...Section.sections.SectionThree}/> 
         </div>
         </MainLayout>
        
