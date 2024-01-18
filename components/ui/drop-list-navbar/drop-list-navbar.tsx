@@ -1,16 +1,7 @@
- import React, {useEffect, useRef } from 'react';
-  import IDropList from '../../../interface/IDropList';
-  import Link from 'next/link';
-  import ButtonCircle from "../circle-button-black";
-import { useDispatch, useSelector } from 'react-redux';
-import { closeDropdown, openDropdown, selectDropdownState, toggleDropdown } from '@/store/redusers/dropdownNavbarReduser';
-  const DisabledSelect: React.FC<IDropList> = ({ name, DataLink }) => {
-    const dispatch = useDispatch();
-    const { isOpen } = useSelector(selectDropdownState);
-    const dropdownRef = useRef<HTMLButtonElement>(null);
-  
-    const handleMouseEnter = () => {
-
+import React, { useState, useEffect, useRef } from 'react';
+import IDropList from '../../../interface/IDropList';
+import Link from 'next/link';
+import ButtonCircle from "../circle-button-black";
 
 const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -38,34 +29,8 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
-
     };
-  
-    const handleMouseLeave = () => {
-      dispatch(closeDropdown());
-    };
-  
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        dispatch(closeDropdown());
-      }
-    };
-  
-    const handleClick = () => {
-      dispatch(toggleDropdown());
-    };
-  
-    useEffect(() => {
-      document.addEventListener('click', handleClickOutside);
-  
-      return () => {
-        document.removeEventListener('click', handleClickOutside);
-      };
-    }, []);
-  
-
-    return (
-      <button className='no-underline p-4 relative' ref={dropdownRef} onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+  }, []);
 
   return (
     <div className='items-center flex'>
@@ -138,4 +103,4 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
   )
 };
 
-  export default DisabledSelect;
+export default DisabledSelect;

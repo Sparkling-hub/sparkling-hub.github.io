@@ -10,7 +10,6 @@ const answer =
 
 const element = {
     question: question,
-    answer: answer,
-    id:8,
+    answer: answer
 }
 export default element

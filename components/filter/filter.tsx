@@ -1,22 +1,25 @@
 import React from 'react';
 import MyMultileSelect from '../my-multi-select';
-import dataMultiselect from '@/data/data-multiselect'
-import { useDispatch, useSelector } from 'react-redux';
+import IFilterProps from '@/interface/IFilterProps';
 
 
-import {
-	selectCareers,
-	setFilterPhraze
-} from '@/store/redusers/CareersSliceReduser';
+const Filter: React.FC<IFilterProps> = ({ dataJobs,
+	filterPhraze,
+	activeLocations,
+	uniqueIds,
+	activePositions,
+	uniqueExp,
+	uniqueWorkMode,
+	activeWorkMode,
 
-const Filter: React.FC = () => {
-	const dispatch = useDispatch();
-	const {
-		filterPhraze,
-	} = useSelector(selectCareers);
+	handleFilterPrazeChange,
+	handleParamsChange,
+	deleteItem,
+
+}) => {
 
 	return (
-
+		// <div className="filter-container bg-gray-100 my-6 mx-5 w-[500px]">
 		<div className="filter-container bg-gray-100 my-6 mx-5 w-1/4">
 			<h3 className="text-center text-3xl mt-10 mb-5  ">Open Position</h3>
 			<div className="text-sm">
@@ -32,15 +35,34 @@ const Filter: React.FC = () => {
 							autoComplete='off'
 							placeholder="Search by any keyword"
 							value={filterPhraze}
-							onChange={(e) => dispatch(setFilterPhraze(e.target.value))} />
+							onChange={handleFilterPrazeChange} />
 						<button className="absolute leading-9  h-full w-1/12  right-2">
-							<img src={"/img/jobs/search-ico.png"} className="h-4 opacity-60" alt="" />
+						<img  src={"/img/jobs/search-ico.png"} className="h-4 opacity-60" alt="" />
 						</button>
 					</div>
 				</div>
-				{dataMultiselect.map((multiSelect) => (
-					<MyMultileSelect id={multiSelect.id} placeholder={multiSelect.placeholder} key={multiSelect.id}/>
-				))}
+				<MyMultileSelect name={"location"}
+					uniqueIds={uniqueIds}
+					activeLocations={activeLocations}
+					placeholder="Location"
+					handleParamsChange={handleParamsChange}
+					deleteItem={deleteItem} />
+
+				<MyMultileSelect name={"exp"}
+					uniqueIds={uniqueExp}
+					activeLocations={activePositions}
+					placeholder="Position"
+					handleParamsChange={handleParamsChange}
+					deleteItem={deleteItem} />
+
+				<MyMultileSelect name={"mode"}
+					uniqueIds={uniqueWorkMode}
+					activeLocations={activeWorkMode}
+					placeholder="Work mode"
+					handleParamsChange={handleParamsChange}
+					deleteItem={deleteItem} />
+
+
 
 			</div>
 		</div>

@@ -3,14 +3,14 @@
 interface IJob {
 
 	namePosition: any;
-	location: string;
-	locationHTML: JSX.Element;
-	experienceHTML: JSX.Element;
+	id: string;
+	location: JSX.Element;
+	experience: JSX.Element;
 	head: JSX.Element;
 	text: JSX.Element;
 	slug: string;
 workMode: string;
-	experience: string;
+	nameProf: string;
 
 	
 }
