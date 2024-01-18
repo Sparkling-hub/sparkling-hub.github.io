@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
 					</div>
 					<div className='col-span-1 p-4 md:order-1'>
 						<div className='relative hidden md:block font-bold text-3xl pb-10'>Sparkling</div>
-						<div className='hidden md:block mb-16'>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
+						<div className='relative hidden md:block mb-16'>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
 
 						<div className='font-bold text-3xl pb-10'>Privacy</div>
 						<div>Privacy Policy</div>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
 					</div>
 					<div className='col-span-1 p-4 md:order-2 '>
 						<div className='relative font-bold text-3xl md:pb-10'>Links</div>
-						<ul className='text-left flex-col w-1/2 py-4'>
+						<ul className='relative text-left flex-col w-1/2 py-4'>
 							<li>
 								<Link className="no-underline py-4" href="/">Home</Link>
 							</li>
