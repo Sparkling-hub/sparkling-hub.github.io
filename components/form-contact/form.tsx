@@ -1,33 +1,37 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useState } from "react";
 import Input from "../ui/input-component/input";
 import TextArea from "../ui/text-area-component/text-area";
 import Submit from "../ui/input-sumbit-component";
 import Select from "../ui/select-component";
-
+import FormData from "@/interface/IFromData";
 import Link from "next/link";
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectForm,
-  setFormData,
-  setCheck,
-  selectIsValidEmail,
-
-} from '@/store/redusers/FormSliceReduser';
 
 const Form: React.FC = () => {
-  const dispatch = useDispatch();
-  const { formData, check } = useSelector(selectForm);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    select: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+
+  const [check, setCheck] = useState(false);
+
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([a-z\d])/.exec(email);
+    return emailRegex !== null;
+  };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
-    dispatch(setFormData({
+    setFormData({
       ...formData,
       [name]: value,
-    }));
+    });
 
     if (name === "email") {
-      dispatch(setCheck(selectIsValidEmail(value)));
+      setCheck(isValidEmail(value));
     }
   };
 

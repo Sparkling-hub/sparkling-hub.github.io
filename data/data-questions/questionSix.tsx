@@ -9,8 +9,7 @@ const answer =
     </p>
 const element = {
     question: question,
-    answer: answer,
-    id:6,
+    answer: answer
 
 
 }

@@ -9,8 +9,8 @@ const answer =
     </p>
 const element = {
     question: question,
-    answer: answer,
-    id:3,
+    answer: answer
+
 
 }
 export default element

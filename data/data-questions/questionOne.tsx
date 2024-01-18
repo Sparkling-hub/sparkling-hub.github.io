@@ -3,8 +3,7 @@ const answer = <p>Timelines vary based on project specifics. Typically, our avai
 2-3 weeks, though the average setup time is around a month</p>
 const element = {
     question:question,
-    answer:answer,
-    id:1,
+    answer:answer
 
 
 }

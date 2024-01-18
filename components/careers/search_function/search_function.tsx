@@ -2,7 +2,7 @@
 import IJob from '@/interface/IJob';
 
  
-export const getIds = (data: IJob[] , name: string): any[]=> {
+export const getIds = (data: IJob[], name: string): any[]=> {
   const result: any[] = [];
   const uniqueValues: Set<any> = new Set();
  
@@ -18,14 +18,4 @@ export const getIds = (data: IJob[] , name: string): any[]=> {
     }
   });  
   return result;
-};
- 
-export const get = (data:any, name: string): any[] => {
-  let result: any[] = [];
-  Object.keys(data).forEach((key) => {
- 
-    if (key == name) result =  data[key];
-  });
-  return result;
-
 };

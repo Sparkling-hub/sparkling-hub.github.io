@@ -8,8 +8,8 @@ const answer =
     </p>
 const element = {
     question: question,
-    answer: answer,
-    id:2,
+    answer: answer
+
 
 }
 export default element
