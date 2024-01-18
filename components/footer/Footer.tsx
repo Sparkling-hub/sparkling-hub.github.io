@@ -23,45 +23,48 @@ const Footer: React.FC = () => {
 							xl:px-40
 							custom-3xl
 							-mt-36'>
-				<div className='footer-background'></div>				
-					<div className='footer-blocks container mx-auto px-4 flex justify-between mt-16'>
-						<div className='left-block max-w-[33%]'>
-							<div>Sparkling</div>
-							<div>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
-						
-							<div>Privacy</div>
-							<div>Privacy Policy</div>
-							<div>Cookie Policy</div>
-							</div>
-						<div className='center-block max-w-[33%]'>
-							<div>Links</div>
-							<ul className='flex-col w-1/2 justify-between py-4'>
-								<li>
-									<Link className="no-underline p-4" href="/">Home</Link>
-								</li>
-								<li>
-									<Link className="no-underline p-4" href="/about">About Us</Link>
-								</li>
-								<li>
-									<Link className="no-underline p-4" href="/services">Services</Link>
-								</li>
-								<li>
-									<Link className="no-underline p-4" href="/startup">Startup</Link>
-								</li>
-							</ul>
-						</div>
-						<div className='right-block max-w-[33%]'>
-							<div>Get in touch</div>
-							<div>info@sparkling.co.com</div>
-							<div>+41 (0)91 752 0707 </div>
-							
-							<a  title="LinkedIn" href="https://www.linkedin.com/company/sparkling-company">
-								<img className="w-16 h-16 inline-block my-4" src="/img/footer/linkedIn_icon.svg" alt="linkedIn_icon"></img>
-							</a>
+				<div className='mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-4 '>
+					<div className='md:absolute md:right-0 col-span-1 p-4 md:order-3'>
+						<div className='relative md:text-right font-bold text-3xl pb-10'>Get in touch</div>
+						<div className='md:text-right'>info@sparkling.co.com</div>
+						<div className='md:text-right'>+41 (0)91 752 0707 </div>
 
-						</div>						
+						<a className='md:float-right' title="LinkedIn" href="https://www.linkedin.com/company/sparkling-company">
+							<img className="w-16 h-16 inline-block my-4" src="/img/footer/linkedIn_icon.svg" alt="linkedIn_icon"></img>
+						</a>
+
 					</div>
-					<div className='footer-text'> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
+					<div className='col-span-1 p-4 md:order-1'>
+						<div className='relative hidden md:block font-bold text-3xl pb-10'>Sparkling</div>
+						<div className='hidden md:block mb-16'>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
+
+						<div className='font-bold text-3xl pb-10'>Privacy</div>
+						<div>Privacy Policy</div>
+						<div>Cookie Policy</div>
+					</div>
+					<div className='col-span-1 p-4 md:order-2 '>
+						<div className='relative font-bold text-3xl md:pb-10'>Links</div>
+						<ul className='text-left flex-col w-1/2 py-4'>
+							<li>
+								<Link className="no-underline py-4" href="/">Home</Link>
+							</li>
+							<li>
+								<Link className="no-underline py-4" href="/about">About Us</Link>
+							</li>
+							<li>
+								<Link className="no-underline py-4" href="/services">Services</Link>
+							</li>
+							<li>
+								<Link className="no-underline py-4" href="/startup">Startup</Link>
+							</li>
+							<li className='md:hidden'>
+								<Link className="no-underline py-4" href="/contact">Get in touch</Link>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div className='text-center bottom-20 mb-10 font-semibold'> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
 			</div>
 		</footer>
 	);
