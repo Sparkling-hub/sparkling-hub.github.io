@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
       <nav className="mx-auto flex max-w-screen-2xl items-center justify-between py-6 lg:px-8 w full" aria-label="Global">
         <div className="flex justify-between text-xl items-center ">
 
-          <Link href="/" className="-m-1.5 p-1.5 max-w-[30rem] lg:min-w-[18rem]">
+          <Link href="/" className="-m-1.5 p-1.5 max-w-[23rem] lg:min-w-[18rem]">
             <span className="sr-only">Your Company</span>
             <img className="h-16 pr-7 lg:h-auto w-auto object-contain" src="/img/navbar/logo2.png" alt="Logo" />
           </Link>
