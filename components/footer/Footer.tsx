@@ -19,11 +19,10 @@ const Footer: React.FC = () => {
 							text-white 
 							flex-col 
 							items-center 
-							justify-center
-							custom-3xl
+							justify-center							
 							-mt-36'>
-				<div className=' px-20 lg:px-10 grid grid-cols-1 lg:grid-cols-3 gap-4 '>
-					<div className='lg:absolute lg:right-0 col-span-1 p-4 lg:order-3'>
+				<div className=' px-20 lg:px-40 grid grid-cols-1 lg:grid-cols-3 gap-4'>
+					<div className='lg:absolute lg:right-40 col-span-1 p-4 lg:order-3'>
 						<div className='relative lg:text-right font-medium text-7xl lg:text-3xl  pb-10'>Get in touch</div>
 						<div className='lg:text-right text-5xl lg:text-xl'>info@sparkling.co.com</div>
 						<div className='lg:text-right text-5xl lg:text-xl'>+41 (0)91 752 0707 </div>
