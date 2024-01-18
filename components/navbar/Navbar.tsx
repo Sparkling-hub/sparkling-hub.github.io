@@ -3,7 +3,6 @@ import Link from 'next/link';
 import DropList from '../ui/drop-list-navbar/drop-list-navbar';
 import Button from '../button';
 
-
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const services = [
@@ -20,16 +19,22 @@ const Navbar: React.FC = () => {
   ];
   const [hasShadow, setHasShadow] = useState(false);
 
+
+  const services = useSelector(selectServices);
+  const [hasShadow, setHasShadow] = useState(false);
+  
   useEffect(() => {
 
     const handleScroll = () => {
       const isTop = window.scrollY < 20;
       setHasShadow(!isTop);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+
   }, []);
   return (
 
@@ -79,6 +84,7 @@ const Navbar: React.FC = () => {
 
           <li className='w-max'>
             <Button href="/contact" text="Get in touch" />
+
           </li>
         </ul>
       </nav>
