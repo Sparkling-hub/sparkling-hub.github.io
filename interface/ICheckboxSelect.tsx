@@ -5,10 +5,9 @@ import ICheckboxItem from "./IChekboxItem";
 interface ICheckboxSelect {
 
     id: ICheckboxItem
-    checked: boolean
-
-    onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-    
+    checked: boolean;
+    name: string;
+       
   }
   
 export default ICheckboxSelect

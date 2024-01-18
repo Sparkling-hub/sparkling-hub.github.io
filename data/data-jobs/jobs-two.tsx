@@ -17,15 +17,15 @@ const location = <>
 
 
 const jobs = {
-    id: "Tunis",
+    location: "Tunis",
     namePosition: "Paid Internship",
-    location: location,
-    experience: experience,
+    locationHTML: location,
+    experienceHTML: experience,
     head: head,
     text: text,
     workMode:"Hybrid work",
     slug:"paid-internship",
-    nameProf: 'Internships',
+    experience: 'Internships',
    
 
 }
