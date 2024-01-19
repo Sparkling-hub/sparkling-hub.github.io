@@ -1,12 +1,7 @@
-
-
 import Link from 'next/link';
 import React from 'react';
 
-
 const Footer: React.FC = () => {
-
-
 	return (
 		<footer className='mt-36'>
 			<div className='before:content-curved_dark_without_line 
