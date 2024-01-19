@@ -3,11 +3,20 @@
 import MainLayout from '../layouts/MainLayuout';
 import * as Section from '../data/data-sections/data-section-faq'
 import Sections from '../components/sections/sections'
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setLastPageSlug  } from '@/store/redusers/navigationReducer';
 
 
-const Contact = () => {
+const Faq = () => {
+	
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
 
+        dispatch(setLastPageSlug("about"));
+
+    }, []);
 
 	return (
 
@@ -23,4 +32,4 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default Faq;

@@ -2,11 +2,21 @@
 import MainLayout from '../layouts/MainLayuout';
 import Section from '../data/data-sections/data-section-software'
 import Sections from '../components/sections/sections'
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setLastPageSlug  } from '@/store/redusers/navigationReducer';
 
 
-const Startup_page = () => {
+const SoftwareDevelopment = () => {
+    
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
 
+        dispatch(setLastPageSlug("software_development"));
+
+    }, []);
+    
     return (
 
         <MainLayout>
@@ -21,4 +31,4 @@ const Startup_page = () => {
     );
 };
 
-export default Startup_page;
+export default SoftwareDevelopment;

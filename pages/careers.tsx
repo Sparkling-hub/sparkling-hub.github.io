@@ -3,10 +3,20 @@
 import MainLayout from '../layouts/MainLayuout';
 import * as Section from '../data/data-sections/data-section-careers'
 import Sections from '../components/sections/sections'
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setLastPageSlug  } from '@/store/redusers/navigationReducer';
 
 
-const CareersPage = () => { 
+const CareersPage = () => {     
+    
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
+
+        dispatch(setLastPageSlug("careers"));
+
+    }, []);
 
     return (
        

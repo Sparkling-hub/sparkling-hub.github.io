@@ -9,8 +9,10 @@ import careersReducer from './redusers/CareersSliceReduser'
 import dropdownReducer from './redusers/SelectSliceReduser'
 import navbarReducer from './redusers/NavbarSliceReduser'
 import dropdownNavbarReducer from './redusers/dropdownNavbarReduser'
+import navigationReducer from './redusers/navigationReducer'
 const store = configureStore({
   reducer: {
+    navigation: navigationReducer,
     maps: mapsReducer,
     startupStepByStep: startupStepByStepReducer,
     form: formReducer,
