@@ -2,14 +2,12 @@
 
 import { useDispatch, useSelector } from 'react-redux';
 import { selectNavigation } from '@/store/redusers/navigationReducer';
-import { setActiveOption } from '@/store/redusers/FormSliceReduser';
+import { setActiveOption, selectForm } from '@/store/redusers/FormSliceReduser';
 import rolesData from '@/data/data-contact/data-contact';
 import { ChangeEvent, useEffect } from 'react';
-import { selectForm } from '@/store/redusers/FormSliceReduser';
+
 interface SelectProps {
-	name: string;
-	placeholder: string;
-	data?: any;
+	name: string;	
 }
 
 const Select: React.FC<SelectProps> = ({ name }) => {
