@@ -25,6 +25,7 @@ const config: Config = {
         'curved_grey_with_line': 'url("/img/curved/curved_grey_with_line.svg")',
         'curved_white_with_line': 'url("/img/curved/curved_white_with_line.svg")',
         'curved_white_without_line': 'url("/img/curved/curved_white_without_line.svg")',
+
         'curved_dark_without_line': 'url("/img/curved/curved_dark_without_line.svg")', 
         'curved_dark_with_line': 'url("/img/curved/curved_dark_with_line.svg")', 
         'curved_dark_with_line_white': 'url("/img/curved/curved_dark_without_line_white.svg")', 
@@ -53,11 +54,9 @@ const config: Config = {
         primary: {
           light: '#86C0BB',          
         },
-
       }
 
     }, 
-
   },
   plugins: [],
 }

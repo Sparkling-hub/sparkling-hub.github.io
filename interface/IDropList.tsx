@@ -9,7 +9,7 @@ interface IDropList {
 	
 	name: string;
 	DataLink: Service[];
-	mobileMenuOpen: boolean;
+
 }
 
 export default IDropList
