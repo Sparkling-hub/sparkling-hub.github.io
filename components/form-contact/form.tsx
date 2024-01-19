@@ -67,7 +67,7 @@ const Form: React.FC = () => {
           placeholder="Company"
           onChange={handleInputChange}
         />
-        <Select name="select" placeholder="I am looking for..." />
+        <Select name="select"/>
         <TextArea
           name="message"
           placeholder="Tell us about your project and goals*"
