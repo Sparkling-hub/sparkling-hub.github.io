@@ -3,7 +3,7 @@
 import MainLayout from '../layouts/MainLayuout';
 import * as Section from '../data/data-sections/data-section-contact'
 import Sections from '../components/sections/sections'
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Contact = () => {
 
