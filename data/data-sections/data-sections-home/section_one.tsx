@@ -1,16 +1,17 @@
 import Button from "../../../components/button";
 
 const header = (
-  <h1 className="section_one">
-    <div>We<span className="color-primary-light mx-4">build</span>software to</div> 
+  <h1 className="text-5xl my-4 leading-5 lg:leading-9">
+    <div>We<span className="color-primary-light mx-1">build</span>software to</div> 
     <br />
-    <strong className="s2-uppercase"> reach your goals</strong>
+    <strong className="text-teal-800 text-5xl font-bold uppercase "> reach your goals</strong>
   </h1>
 );
 
 
 const content = (
-  <p>
+  <p className="text-xl">
+  
     Whether you are looking to expand your Development Team, build your idea
     from scratch, or do some good old Research and Development (R&D) you need
     more than coders, you need problem-solvers. Talk to us for seasoned and
@@ -18,7 +19,7 @@ const content = (
   </p>
 );
 
-const image = <img src="/img/section/sectionOne.png" className="" alt='sectionOne' />;
+const image = <img src="/img/section/sectionOne.png" className="lg:w-auto w-full" alt='sectionOne' />;
 
 const button = <Button href="/contact" text="Get in touch" />;
 const element = {

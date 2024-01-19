@@ -9,9 +9,9 @@ const header =
 
 
 const content =
-	<div className="mb-12 h-52">
-		<p className='h-32'>Craft a tailored team of engineers delivering tangible results sprint after sprint. Our expertly managed engineers have a great attention to detail, taking great pride in their craft.</p>
-		<ul className='text-left w-fit m-auto'>
+	<div className="2xl:mb-12  p-4 2xl:pt-0 ">
+	<p className='2xl:h-[200px]'>Craft a tailored team of engineers delivering tangible results sprint after sprint. Our expertly managed engineers have a great attention to detail, taking great pride in their craft.</p>
+		<ul className='text-left text-2xl 2xl:text-xl w-fit m-auto 2xl:p-0 p-4'>
 			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Team and Project management
 			</li>

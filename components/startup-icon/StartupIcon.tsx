@@ -8,7 +8,7 @@ const StartupIcon: React.FC<IStartupTechnologiesItem> = ({ imageSrc, text }) => 
 
 	return (
 
-		<div className={`flex justify-center items-center   w-1/5`}>
+		<div className={`flex justify-center items-center  min-w-[230px] w-1/3 lg:w-1/4`}>
 
 			<div className=' flex startup-icon justify-center items-center bg-white w-48 h-48 rounded-2xl m-4 '>
 

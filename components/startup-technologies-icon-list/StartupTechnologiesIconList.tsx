@@ -16,10 +16,11 @@ const StartupTechnologiesIconList: React.FC = () => {
 				<StartupIcon key={startup.index} {...startup} />
 			))}
 
-			<div className='m-20'>
+			<div className='m-20 p-4 underline underline-offset-8 text-teal-500/100 text-xl font-bold text-center hidden lg:flex'>
 
-				<Link 	className="p-4 underline underline-offset-8 text-teal-500/100 text-xl font-bold " href="/contact">
-				The technology you need isn&apos;t here? Contact us to see if we can help!
+				<Link 	className="" href="/contact">
+				The technology you need isn&apos;t here? 
+				Contact us to see if we can help!
 				</Link>
 
 			</div>

@@ -212,39 +212,6 @@ nav {
 	top: calc(-5vw - 40px);  
   }
   
-.content-section {
-	display: flex;
-	justify-content: center;
-
-	width: 100%;
-	align-items: center;
-	flex-direction: column;
-	position: relative;
-	height: auto;
-
-	font-weight: 100;
-
-	& h1 {
-		
-		line-height: 1;
-		margin-bottom: 20px;
-		color: $primaryDarkColor;
-		font-size: 45px;
-
-		& strong.s2-uppercase {
-			text-transform: uppercase;
-			color: $primaryDarkColor;
-			font-size: 45px;
-			font-weight: bold;
-		}
-
-		& strong.s2 {
-			color: $primaryDarkColor;
-			font-size: 45px;
-			font-weight: 900;
-		}
-	}
-}
 
 @media (max-width: 900px) {
 	.content-section {
