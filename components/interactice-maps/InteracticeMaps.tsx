@@ -128,7 +128,7 @@ const InteracticeMaps: React.FC = () => {
 			<div className="absolute inset-0 z-behind"></div>
 			<div className="absolute top-[-100px]" id="section-12"></div>
 			<div className="fade-in cubic reveal">
-				<div className="grid relative grid-cols-12 px-global gap-x-global">
+				<div className="xl:grid relative grid-cols-12 px-global gap-x-global flex flex-col-reverse">
 					<MapField />
 					<MapSelectionSettings />
 				</div>
