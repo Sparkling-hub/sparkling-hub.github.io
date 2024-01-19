@@ -29,6 +29,7 @@ const Form: React.FC = () => {
     if (name === "email") {
       dispatch(setCheck(selectIsValidEmail(value)));
     }
+
   };
 
   return (
@@ -66,7 +67,7 @@ const Form: React.FC = () => {
           placeholder="Company"
           onChange={handleInputChange}
         />
-        <Select onChange={handleInputChange} value={formData.select} name="select" placeholder="I am looking for..." />
+        <Select name="select" placeholder="I am looking for..." />
         <TextArea
           name="message"
           placeholder="Tell us about your project and goals*"
