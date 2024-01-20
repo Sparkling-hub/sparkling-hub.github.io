@@ -11,7 +11,7 @@ const header =
 
 
 const image =
-<svg id="EU" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 240" className="item-map w-auto m-auto text-dark-gray relative svg-map  max-w-full duration-700 opacity-100 scale-100 -mt-32">
+<svg id="EU" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 240 240" className="item-map w-auto m-auto text-dark-gray relative svg-map  max-w-full duration-700 opacity-100 -mt-32">
  
  <g className="layer">
   <path d="m87.43,158.13l-0.07,0.02l-0.26,0.16l-0.15,0.05l-0.13,0.03l-0.11,-0.01l-0.06,-0.09l0.01,-0.14l-0.02,-0.13l-0.02,-0.06l0.03,-0.18l0.09,-0.1l0.12,-0.08l0.19,0.03l0.39,0.11l0.09,0.11l0,0.07l-0.07,0.12l-0.03,0.09z" id="AD"/>

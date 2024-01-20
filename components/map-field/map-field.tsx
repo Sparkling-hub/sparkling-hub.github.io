@@ -27,8 +27,12 @@ const MapField: React.FC = () => {
   };
 
   return (
-    <div className="map-container col-span-9 lg:gh-4 xl:gh-4 xl:p-14 pt-global lg:block " style={{ position: 'relative' }}>
-      {currentMap ? currentMap.image : ''}
+    <div className="map-container pt-40 lg:col-span-9 lg:gh-4 lg:gh-4 lg:p-14 pt-global lg:block " style={{ position: 'relative' }}>
+      <div className='lg:scale-90'>
+        {currentMap ? currentMap.image : ''}
+      </div>
+      
+
       {activeOfficePoint ? <Card /> : ''}
     </div>
   );
