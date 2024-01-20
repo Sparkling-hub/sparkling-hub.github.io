@@ -23,9 +23,12 @@ const Card: React.FC = () => {
 
   const handleScroll = () => {
     const topCoordinate = window.scrollY + activeOfficePointCoords[0];
-    const leftCoordinate = activeOfficePointCoords[1];
+    let leftCoordinate =0;
+    if (window.innerWidth/ 2> activeOfficePointCoords[1] ){  leftCoordinate = activeOfficePointCoords[1]+384;  }
+    else leftCoordinate= activeOfficePointCoords[1]; 
     updateElementPosition(topCoordinate, leftCoordinate);
   };
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
