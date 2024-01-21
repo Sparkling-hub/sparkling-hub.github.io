@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 							-mt-36'>
 				<section className="flex items-center justify-center relative before:w-full before:absolute before:-top-calc py-20  xl:px-40 custom-3xl" id="maps">
 					<div className="max-w-screen-xl w-full items-start mb-9 ">
-						<div className="content-section flex items-start justify-center flex-col justify-center z-10">
+						<div className="content-section relative flex items-start justify-center flex-col justify-center z-10">
 							<div className="flex items-center whitespace-normal w-full">
 								<div className="flex justify-center flex-col w-full my-12">
 									<div className=' px-20 lg:px-40 grid grid-cols-1 lg:grid-cols-3 gap-4 '>
