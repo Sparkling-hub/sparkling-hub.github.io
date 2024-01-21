@@ -100,8 +100,7 @@ const InteracticeMaps: React.FC = () => {
 
 	const handlePointsClick = (e: any) => {		
 		let officeId = e.currentTarget.id;
-		updateElementPosition(officeId);
-		debugger
+		updateElementPosition(officeId);		
 		dispatch(setActiveOfficePoint(officeId));
 		e.stopPropagation();
 	};
