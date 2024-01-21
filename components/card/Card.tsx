@@ -30,8 +30,7 @@ const Card: React.FC = () => {
     }
   };
 
-  const handleScroll = () => {
-    debugger
+  const handleScroll = () => {    
     if(!isElementVisible()) return 
     const topCoordinate = window.scrollY + activeOfficePointCoords[0];
     const leftCoordinate = activeOfficePointCoords[1];

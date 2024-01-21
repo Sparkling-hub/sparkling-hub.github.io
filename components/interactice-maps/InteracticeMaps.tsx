@@ -98,9 +98,10 @@ const InteracticeMaps: React.FC = () => {
 		window.removeEventListener('scroll', () => updateElementPosition(activeOfficePoint));
 	};
 
-	const handlePointsClick = (e: any) => {
+	const handlePointsClick = (e: any) => {		
 		let officeId = e.currentTarget.id;
 		updateElementPosition(officeId);
+		debugger
 		dispatch(setActiveOfficePoint(officeId));
 		e.stopPropagation();
 	};

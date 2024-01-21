@@ -22,6 +22,7 @@ const MapField: React.FC = () => {
   }, [activeOfficePoint, currentMap, dispatch]);
 
   const handleMapsClick = (e: any) => {
+    
     if (activeOfficePoint) dispatch(setActiveOfficePoint(''));
     dispatch(setOfficeCard(null));
   };

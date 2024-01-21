@@ -82,31 +82,31 @@ const image =
  <g id="Switzerland" className="office_point" transform="matrix(1 0 0 1 0 0)">
    <ellipse className="block" cx="107.75" cy="143.7" fill="#285c5c" id="svg_1" rx="0.6" ry="0.6" stroke="#285c5c"/>
    <circle className="block"  cx="107.75" cy="143.7" fill="none" id="svg_2" r="2.5" stroke="transparent"/>
-   <ellipse className="hidden" cx="107.75" cy="143.7" fill="#FF0000" id="svg_3" rx="0.6" ry="0.6" stroke="#FF0000"/>
+   <ellipse className="hidden" cx="107.75" cy="143.7" fill="#FF0000" id="Switzerland" rx="0.6" ry="0.6" stroke="#FF0000"/>
    <circle className="hidden"  cx="107.75" cy="143.7" fill="none" id="svg_4" r="2.5" stroke="#FF0000"/>
   </g>
   <g id="UK Office" className="office_point" transform="matrix(1 0 0 1 0 0)">
    <ellipse className="block"  cx="82.22" cy="121.38" fill="#285c5c" id="svg_5" rx="0.6" ry="0.6" stroke="#285c5c"/>
    <circle className="block"  cx="82.22" cy="121.38" fill="none" id="svg_6" r="2.5" stroke="transparent"/>
-   <ellipse className="hidden"  cx="82.22" cy="121.38" fill="#FF0000" id="svg_7" rx="0.6" ry="0.6" stroke="#FF0000"/>
-   <circle className="hidden"  cx="82.22" cy="121.38" fill="none" id="svg_8" r="2.5" stroke="#FF0000"/>
+   <ellipse className="hidden"  cx="82.22" cy="121.38" fill="#FF0000" id="UK Office" rx="0.6" ry="0.6" stroke="#FF0000"/>
+   <circle className="hidden"  cx="82.22" cy="121.38" fill="none" id="UK Office" r="2.5" stroke="#FF0000"/>
   </g>
   <g id="UK_partner" className="office_point" transform="matrix(1 0 0 1 0 0)">
    <ellipse className="block"  cx="83.65" cy="119.04" fill="#3498db" id="svg_9" rx="0.6" ry="0.6" stroke="#3498db"/>
    <circle className="block"  cx="83.65" cy="119.04" fill="none" id="svg_10" r="2.5" stroke="transparent"/>
-   <ellipse className="hidden"  cx="83.65" cy="119.04" fill="#FF0000" id="svg_11" rx="0.6" ry="0.6" stroke="#FF0000"/>
-   <circle className="hidden"  cx="83.65" cy="119.04" fill="none" id="svg_12" r="2.5" stroke="#FF0000"/>
+   <ellipse className="hidden"  cx="83.65" cy="119.04" fill="#FF0000" id="UK_partner" rx="0.6" ry="0.6" stroke="#FF0000"/>
+   <circle className="hidden"  cx="83.65" cy="119.04" fill="none" id="UK_partner" r="2.5" stroke="#FF0000"/>
   </g>
   <g id="Ukraine" className="office_point">
    <ellipse className="block"  cx="183.05" cy="136.78" fill="#285c5c" id="svg_13" rx="0.6" ry="0.6" stroke="#285c5c"/>
    <circle className="block"  cx="183.05" cy="136.78" fill="none" id="svg_14" r="2.5" stroke="transparent"/>
-   <ellipse className="hidden"  cx="183.05" cy="136.78" fill="#FF0000" id="svg_15" rx="0.6" ry="0.6" stroke="#FF0000"/>
+   <ellipse className="hidden"  cx="183.05" cy="136.78" fill="#FF0000" id="Ukraine" rx="0.6" ry="0.6" stroke="#FF0000"/>
    <circle className="hidden"  cx="183.05" cy="136.78" fill="none" id="svg_16" r="2.5" stroke="#FF0000"/>
   </g>
   <g id="Tunis" className="office_point">
    <ellipse className="block"  cx="110.91" cy="178.53" fill="#285c5c" id="svg_17" rx="0.6" ry="0.6" stroke="#285c5c"/>
    <circle className="block"  cx="110.91" cy="178.53" fill="none" id="svg_18" r="2.5" stroke="transparent"/>
-   <ellipse className="hidden"  cx="110.91" cy="178.53" fill="#FF0000" id="svg_19" rx="0.6" ry="0.6" stroke="#FF0000"/>
+   <ellipse className="hidden"  cx="110.91" cy="178.53" fill="#FF0000" id="Tunis" rx="0.6" ry="0.6" stroke="#FF0000"/>
    <circle className="hidden"  cx="110.91" cy="178.53" fill="none" id="svg_20" r="2.5" stroke="#FF0000"/>
   </g>
 
