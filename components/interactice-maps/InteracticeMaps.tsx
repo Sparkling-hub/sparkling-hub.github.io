@@ -24,8 +24,15 @@ const InteracticeMaps: React.FC = () => {
 
 		setupPointEventListeners(points);
 
-		window.addEventListener('resize', () => updateElementPosition(activeOfficePoint));
-		window.addEventListener('scroll', () => updateElementPosition(activeOfficePoint));
+		window.addEventListener('resize', () =>{
+			if(!activeOfficePoint) return
+			updateElementPosition(activeOfficePoint)	
+		} );
+		window.addEventListener('scroll', () =>{
+			if(!activeOfficePoint) return
+			updateElementPosition(activeOfficePoint)
+		}
+		 );
 
 		handleHover();
 		

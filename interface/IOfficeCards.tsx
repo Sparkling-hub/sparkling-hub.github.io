@@ -9,6 +9,8 @@ interface  IOfficeCards{
     index: string;
     id: string;
     top: string;
+    left: string;
+    rotate: string;
          
 }
 export default IOfficeCards;
