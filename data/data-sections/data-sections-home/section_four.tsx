@@ -1,10 +1,10 @@
 import ContentBenefits from '../../../components/row-benefits/row-benefits'
 const header =
-<h2 className="flex-col w-fit  m-auto items-center justify-center p-4 text-center">
-<div className="flex justify-center text-5xl mb-4">
-    <span className="color-primary-light font-medium mx-4">Benefits</span> 
-    <span className="text-black font-light">of Partnering with Us</span>
-</div>
+<h2 className="w-fit  m-auto items-center justify-center p-4 text-center text-5xl mb-4">
+
+    <span className="color-primary-light font-medium">Benefits
+</span> of Partnering with Us
+
 
 
 </h2>
