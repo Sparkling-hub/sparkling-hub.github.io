@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
 
 
 	return (
-		<footer className='mt-36 '>
+		<footer className='mt-36 relative'>
 			<div className='before:content-curved_dark_without_line 
 							before:w-full
 							before:absolute

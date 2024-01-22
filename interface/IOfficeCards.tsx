@@ -10,7 +10,7 @@ interface  IOfficeCards{
     id: string;
     top: string;
     left: string;
-    rotate: string;
+
          
 }
 export default IOfficeCards;

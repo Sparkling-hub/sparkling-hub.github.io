@@ -112,7 +112,7 @@ const image =
 
 </svg>
 
-const createOfficeCard = (title: string, city: string, adress1: string, country: string, index: string, id: string, top: string, left: string, rotate: string): IOfficeCards => ({
+const createOfficeCard = (title: string, city: string, adress1: string, country: string, index: string, id: string, top: string, left: string): IOfficeCards => ({
     title,
     city,
     adress1,
@@ -121,15 +121,15 @@ const createOfficeCard = (title: string, city: string, adress1: string, country:
     id,
     top,
     left,
-    rotate,
+
   });
   
   const officeCardsData: IOfficeCards[] = [
-    createOfficeCard("Tunis Office", "Ariana", "Pôle Technologique", "Tunisia", "2083", "Tunis", "", "left-full", "rotate-[46deg]"),  
-    createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Switzerland", "6900", "Switzerland", "top-0", "left-full", "rotate-[46deg]"),
-    createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Ukraine", "69061", "Ukraine", "top-0", "", "rotate-[46deg]"),
-    createOfficeCard("UK Office", "London", "16-18 Montagu Place", "United Kingdom", "W1H 2BQ", "UK Office", "top-0", "left-full", "rotate-[46deg]"),
-    createOfficeCard("Partner's Office / UK office", "Cambridge", "St John's Innovation Centre", "United Kingdom", "CB4 0WS", "UK_partner", "top-0", "left-full", "rotate-[46deg]"),    
+    createOfficeCard("Tunis Office", "Ariana", "Pôle Technologique", "Tunisia", "2083", "Tunis", "", "left-full", ),  
+    createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Switzerland", "6900", "Switzerland", "top-0", "left-full", ),
+    createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Ukraine", "69061", "Ukraine", "top-0", ""),
+    createOfficeCard("UK Office", "London", "16-18 Montagu Place", "United Kingdom", "W1H 2BQ", "UK Office", "top-0", "left-full",),
+    createOfficeCard("Partner's Office / UK office", "Cambridge", "St John's Innovation Centre", "United Kingdom", "CB4 0WS", "UK_partner", "top-0", "left-full",),    
   ];
 
 const element: IMaps = {
