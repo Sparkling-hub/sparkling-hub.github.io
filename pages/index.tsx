@@ -3,11 +3,21 @@
 import MainLayout from '../layouts/MainLayuout';
 import * as Section from '../data/data-sections/data-sections-home';
 import Sections from '../components/sections/sections';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setLastPageSlug  } from '@/store/redusers/navigationReducer';
 
 
 const Index = () => {
+	
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
 
+        dispatch(setLastPageSlug("home"));
+
+    }, []);
+	
 	return (
 
 		<MainLayout>
