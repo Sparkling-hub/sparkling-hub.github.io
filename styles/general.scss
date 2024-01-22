@@ -123,46 +123,6 @@ nav {
 		transform: translateX(-50%);
 		font-weight: 500;
 	}
-
-	&-blocks {
-		position: relative;
-		bottom: 150px;
-
-		.left-block {
-			div:nth-child(1) {
-				margin-bottom: 20px;
-				font-weight: 900;
-			}
-		}
-
-		.center-block {
-			min-width: 200px;
-			transform: translateX(-180px);
-
-			div {
-				font-weight: 700;
-				margin-left: 15px;
-			}
-
-			li {
-				line-height: 30px;
-			}
-		}
-
-		.right-block {
-			text-align: right;
-
-			div:not(:first-child) {
-				line-height: 30px;
-			}
-
-			div:nth-child(1) {
-				font-weight: 700;
-				margin-bottom: 20px;
-			}
-		}
-	}
-
 	&-links {
 		ul {
 			list-style: none;
@@ -213,12 +173,7 @@ nav {
   }
   
 .content-section {
-	display: flex;
-	justify-content: center;
-
-	width: 100%;
-	align-items: center;
-	flex-direction: column;
+	width: 100%;	
 	position: relative;
 	height: auto;
 
