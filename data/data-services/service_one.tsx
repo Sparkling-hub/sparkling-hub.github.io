@@ -23,7 +23,7 @@ const content =
 	</div>
 
 
-const image = <img src='/img/services/team_augmentation_icon.png' alt="teamAugmentation" />;
+const image = <img src='/img/services/team_augmentation_icon.png' className='' alt="teamAugmentation" />;
 const button = <Button href="/team-augmentation" text="Find out more" />
 const element = {
 	content: content,
