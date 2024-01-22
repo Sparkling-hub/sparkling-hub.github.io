@@ -13,15 +13,6 @@ const Card: React.FC = () => {
     setIsVisible(true);
   }, [officeCard]);
 
-  const isElementVisible = () => {
-   
-    if (!officeCard) return false;
-    const element = document.getElementById(".map-container");
-    if (!element) return false;
-    return true
-    
-  };
-
   const updateElementPosition = (top: number, left: number): void => {
     const cardElement = officeCard ? document.getElementById(officeCard?.id) : '';
     if (cardElement) {
@@ -30,15 +21,11 @@ const Card: React.FC = () => {
     }
   };
 
-  const handleScroll = () => {    
-    if(!isElementVisible()) return 
+  const handleScroll = () => {
     const topCoordinate = window.scrollY + activeOfficePointCoords[0];
-    let leftCoordinate =0;
-    if (window.innerWidth/ 2> activeOfficePointCoords[1] ){  leftCoordinate = activeOfficePointCoords[1]+384;  }
-    else leftCoordinate= activeOfficePointCoords[1]; 
+    const leftCoordinate = activeOfficePointCoords[1];
     updateElementPosition(topCoordinate, leftCoordinate);
   };
-
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -50,7 +37,7 @@ const Card: React.FC = () => {
 
   return (
     <button className={`fixed ${isVisible ? 'h-96' : 'h-0'} z-[80] text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(activeOfficePointCoords[0])}px`, left: `${Math.round(activeOfficePointCoords[1])}px` }}>
-      <div className={`bottom-0 lg:left-0 ${isVisible ? 'h-96 opacity-95 top-[0%]' : 'h-0 top-[100%]'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
+      <div className={` ${officeCard?.top} ${isVisible ? 'h-96 opacity-95 top-[0%]' : 'h-0 top-[100%]'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
         <div className={` p-global lg:absolute w-full left-0  p-8  overflow-hidden `}>
           <button className="absolute top-[5%] right-[5%] z-10 h-4 w-4 ">
             <div className="content-center icon-wrap" >
@@ -68,9 +55,9 @@ const Card: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className={`transition-opacity duration-200 delay-150 ${isVisible ? 'opacity-100' : 'opacity-0'} absolute h-[2px] bg-primary-dark z-10  right-0 bottom-0 w-full lg:left-0 `}></div>
+      <div className={`transition-opacity duration-200 delay-150 ${isVisible ? 'opacity-100' : 'opacity-0'} absolute h-[2px] bg-primary-dark z-10  right-0 bottom-0 w-full `}></div>
       <div className="absolute pointer-events-none overflow-hidden duration-[150ms] -right-[1.95rem] -bottom-[1.95rem] w-8 h-8 lg:delay-0">
-        <div className={`absolute w-14 h-[2px] bg-primary-dark  -translate-x-[50%] -translate-y-[50%]`}></div>
+        <div className="absolute w-14 h-[2px] bg-primary-dark  -translate-x-[50%] -translate-y-[50%] lg:rotate-[46deg]"></div>
       </div>
     </button>
   );

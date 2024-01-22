@@ -8,14 +8,14 @@ const Footer: React.FC = () => {
 
 
 	return (
-		<footer className='mt-36 relative'>
+		<footer className='mt-36 '>
 			<div className='before:content-curved_dark_without_line 
 							before:w-full
 							before:absolute
 							before:-top-calc
 							content-section 
 							bg-color-primary-dark 
-							 
+							relative
 							text-white 
 							flex-col 
 							items-center 
