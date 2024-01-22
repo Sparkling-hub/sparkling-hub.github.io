@@ -18,7 +18,7 @@ const Benefit: React.FC<IBenefit> = ({ content, header, reverse, image }) => {
 			</div>
 
 			<div className='basis-1/2 flex items-center justify-center'>
-				<img className='inline-block mx-4  w-96 h-96' src={image} alt="" />
+				<img className='inline-block mx-4  w-96' src={image} alt="" />
 			</div>
 			
 		</div>

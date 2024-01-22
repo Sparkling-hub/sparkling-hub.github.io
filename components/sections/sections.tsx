@@ -15,7 +15,7 @@ const Section: React.FC<SectionType> = ({ header, content, image, button, backgr
 						<div className='flex justify-center flex-col w-full my-12 items-center lg:items-start'>
 							<div className='lg:text-left text-center w-full text-5xl  z-[10]'>{header}</div>
 							{!image ? null : <div className='w-fit h-full flex lg:hidden  z-[10]'>  {image}
-
+							
 							</div>}
 							<div className='text-left w-full  z-[20]'>{content}</div>
 						</div>
