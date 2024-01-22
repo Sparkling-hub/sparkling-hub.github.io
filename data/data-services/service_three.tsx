@@ -6,12 +6,12 @@ const header =
 	<h1 className=''><span><strong className='color-primary-light'>IT Consulting</strong></span> </h1>
 
 
-const content =	<div className="2xl:mb-12  pb-4 2xl:pt-0 ">
-<p className='2xl:h-[200px]'>
+const content =		<div className="lg:mb-12">
+<p className='2xl:h-[160px] lg:h-[170px] text-xl'>
 			Revamp your product strategy with personalized guidance addressing complex challenges with tailored solutions.
 			Our experts are here to steer you back on the right track.
 		</p>
-		<ul className='text-left text-2xl 2xl:text-xl w-fit m-auto  2xl:p-0 p-4'>
+		<ul className='text-left text-2xl lg:text-xl w-fit m-auto  2xl:p-0 p-4'>
 			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Research & Development (R&D)
 			</li>
