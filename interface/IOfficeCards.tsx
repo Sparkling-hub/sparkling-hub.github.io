@@ -8,7 +8,8 @@ interface  IOfficeCards{
     country: string;
     index: string;
     id: string;
-    top: string;
+
+
          
 }
 export default IOfficeCards;

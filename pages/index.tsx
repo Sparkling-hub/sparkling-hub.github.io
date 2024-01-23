@@ -26,8 +26,9 @@ const Index = () => {
 				<Sections {...Section.sections.SectionOne} />
 				<Sections {...Section.sections.SectionTwo} />
 				<Sections {...Section.sections.SectionThree} />
-				<Sections {...Section.sections.SectionFour} />
-				<Sections {...Section.sections.SectionFive} />
+				<Sections {...Section.sections.SectionFour}  />
+				<div className='lg:block hidden'><Sections {...Section.sections.SectionFive} /></div>
+
 			</div>
 
 		</MainLayout>

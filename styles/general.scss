@@ -161,45 +161,14 @@ nav {
 	}
 }
 
-#services div.service_icon img {
-	width: 200px;
-}
 
 
 
 .before\:-top-calc::before {
 	position: absolute;
-	top: calc(-5vw - 40px);  
+	top: calc(-5vw - 35px);  
   }
   
-.content-section {
-	width: 100%;	
-	position: relative;
-	height: auto;
-
-	font-weight: 100;
-
-	& h1 {
-		
-		line-height: 1;
-		margin-bottom: 20px;
-		color: $primaryDarkColor;
-		font-size: 45px;
-
-		& strong.s2-uppercase {
-			text-transform: uppercase;
-			color: $primaryDarkColor;
-			font-size: 45px;
-			font-weight: bold;
-		}
-
-		& strong.s2 {
-			color: $primaryDarkColor;
-			font-size: 45px;
-			font-weight: 900;
-		}
-	}
-}
 
 @media (max-width: 900px) {
 	.content-section {

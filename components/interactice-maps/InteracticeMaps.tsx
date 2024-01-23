@@ -24,8 +24,15 @@ const InteracticeMaps: React.FC = () => {
 
 		setupPointEventListeners(points);
 
-		window.addEventListener('resize', () => updateElementPosition(activeOfficePoint));
-		window.addEventListener('scroll', () => updateElementPosition(activeOfficePoint));
+		window.addEventListener('resize', () =>{
+			if(!activeOfficePoint) return
+			updateElementPosition(activeOfficePoint)	
+		} );
+		window.addEventListener('scroll', () =>{
+			if(!activeOfficePoint) return
+			updateElementPosition(activeOfficePoint)
+		}
+		 );
 
 		handleHover();
 		
@@ -91,9 +98,9 @@ const InteracticeMaps: React.FC = () => {
 		window.removeEventListener('scroll', () => updateElementPosition(activeOfficePoint));
 	};
 
-	const handlePointsClick = (e: any) => {
+	const handlePointsClick = (e: any) => {		
 		let officeId = e.currentTarget.id;
-		updateElementPosition(officeId);
+		updateElementPosition(officeId);		
 		dispatch(setActiveOfficePoint(officeId));
 		e.stopPropagation();
 	};
@@ -128,7 +135,7 @@ const InteracticeMaps: React.FC = () => {
 			<div className="absolute inset-0 z-behind"></div>
 			<div className="absolute top-[-100px]" id="section-12"></div>
 			<div className="fade-in cubic reveal">
-				<div className="grid relative grid-cols-12 px-global gap-x-global">
+				<div className="xl:grid relative grid-cols-12 px-global gap-x-global flex flex-col-reverse">
 					<MapField />
 					<MapSelectionSettings />
 				</div>
