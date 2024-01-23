@@ -11,7 +11,7 @@ const header =
 const content =
 	<div className="lg:mb-12">
 <p className='2xl:h-[160px] lg:h-[170px] text-xl'>Craft a tailored team of engineers delivering tangible results sprint after sprint. Our expertly managed engineers have a great attention to detail, taking great pride in their craft.</p>
-<ul className='text-left text-2xl lg:text-xl w-fit m-auto 2xl:p-0 p-4'>
+<ul className='text-left text-xl lg:text-xl font-semibold w-fit m-auto flex flex-col whitespace-nowrap 2xl:p-0 p-4'>
 			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Team and Project management
 			</li>
