@@ -21,6 +21,7 @@ const Footer: React.FC = () => {
 							items-center 
 							justify-center							
 							-mt-36'>
+
 				<section className="flex items-center justify-center relative before:w-full before:absolute before:-top-calc py-0  xl:px-40 custom-3xl" id="maps">
 					<div className="max-w-screen-2xl w-full items-start mb-9">
 						<div className="content-section relative flex items-start justify-center flex-col justify-center z-10">
@@ -34,10 +35,12 @@ const Footer: React.FC = () => {
 
 											<a className='lg:float-right' title="LinkedIn" href="https://www.linkedin.com/company/sparkling-company">
 												<img className="w-8 h-8 lg:w-16 lg:h-16 inline-block my-4" src="/img/footer/linkedIn_icon.svg" alt="linkedIn_icon"></img>
+
 											</a>
 
 										</div>
 										<div className='col-span-1 p-4 lg:order-1'>
+
 											<div className='relative hidden lg:block font-normal text-2xl lg:text-5xl pb-10'>Sparkling</div>
 											<div className='relative hidden lg:block mb-16 lg:text-2xl text-2xl '>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
 
@@ -48,6 +51,7 @@ const Footer: React.FC = () => {
 										<div className='col-span-1 p-4 lg:order-2 lg:mx-auto'>
 											<div className='relative font-normal text-5xl font-normal mb-1 lg:text-5xl lg:pb-10'>Links</div>
 											<ul className='relative text-left flex-col w-1/2  text-2xl lg:text-2xl '>
+
 												<li>
 													<Link className="no-underline py-4" href="/">Home</Link>
 												</li>
@@ -67,7 +71,9 @@ const Footer: React.FC = () => {
 										</div>
 
 									</div>
+
 									<div className='text-center pb-40 w-1/2 m-auto pt-[120px] lg:pt-[0px] px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
+
 								</div>
 							</div>
 						</div>

@@ -15,6 +15,6 @@ const element: IBenefit = {
   header: header,
   content: content,
   image: image,
-  index: 1,
+  index: 1,  
 };
 export default element;

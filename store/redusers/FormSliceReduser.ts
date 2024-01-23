@@ -12,6 +12,7 @@ interface FormData {
 interface FormState {
   formData: FormData;
   check: boolean;
+  activeOption: string;
 }
 const isValidEmail = (email: string): boolean => {
   const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([a-z\d])/.exec(email);
@@ -26,6 +27,7 @@ const initialState: FormState = {
     message: "",
   },
   check: false,
+  activeOption: ''
 };
 
 const formSlice = createSlice({
@@ -38,12 +40,15 @@ const formSlice = createSlice({
     setCheck: (state, action: PayloadAction<boolean>) => {
       state.check = action.payload;
     },
+    setActiveOption: (state, action: PayloadAction<string>) => {
+      state.activeOption = action.payload;
+    },
   },
 });
 export const selectIsValidEmail = (email: string): boolean => {
   return isValidEmail(email);
 };
-export const { setFormData, setCheck } = formSlice.actions;
+export const { setFormData, setCheck, setActiveOption } = formSlice.actions;
 
 export const selectForm = (state: RootState) => state.form;
 
