@@ -9,8 +9,9 @@ const Service: React.FC<IService> = ({ content, header, image, button, index }) 
     // Set a unique identifier for each component
 
     AOS.init({
-      duration: 1000,
+      duration: 300,
       once: false,
+	  mirror:false
 
     });
 
@@ -24,7 +25,7 @@ const Service: React.FC<IService> = ({ content, header, image, button, index }) 
   }, [index]);
 
   return (
-    <div className='flex-col pb-[40px] w-full lg:w-1/3 lg:p-[20px] h-full text-center lg:h-[700px]' data-aos-delay={400*(index)} data-aos={`zoom-in`}id ={uniqueId}>
+    <div className='flex-col pb-[40px] w-full lg:w-1/3 lg:p-[20px] h-full text-center lg:h-[700px]' data-aos-delay={200*(index)} data-aos-once={true} data-aos={`zoom-in-down`}id ={uniqueId}>
       <div className='service_icon flex justify-center h-96 lg:h-[200px] w-full'>{image}</div>
       <div className='mb-4 lg:mb-8  flex items-first justify-center text-4xl text-medium lg:h-[80px]'>{header}</div>
       <div className='2xl:h-[300px] xl:h-[350px] text-xl lg:h-[370px]'>{content}</div>
