@@ -6,26 +6,25 @@ import 'aos/dist/aos.css';
 const Service: React.FC<IService> = ({ content, header, image, button, index }) => {
 	const uniqueId = `aos-${index}`;
   useEffect(() => {
-    // Set a unique identifier for each component
-
     AOS.init({
-      duration: 300,
-      once: false,
-	  mirror:false
-
+      duration: 1000,
+      once: false, // Set to false to allow the animation to be triggered multiple times on scroll
+      mirror: true,
+    
     });
 
-    // Refresh AOS to apply changes
     AOS.refresh();
-
-    // Destroy AOS instance for the specific component when the component is unmounted
-    return () => {
-      AOS.refreshHard(); // Hard refresh to reset all animations
-    };
-  }, [index]);
+  }, []);
 
   return (
-    <div className='flex-col pb-[40px] w-full lg:w-1/3 lg:p-[20px] h-full text-center lg:h-[700px]' data-aos-delay={200*(index)} data-aos-once={true} data-aos={`zoom-in-down`}id ={uniqueId}>
+    <div  className='flex-col pb-[40px] w-full lg:w-1/3 lg:p-[20px] h-full text-center lg:h-[700px]'
+    data-aos-delay={200 * index}
+    data-aos-once={false} // Set to false for allowing multiple animations on scroll
+    data-aos-mirror={true}
+    data-aos-offset={-1000}
+    data-aos-anchor-placement="top-top"
+    data-aos={`fade`}
+    id={uniqueId}>
       <div className='service_icon flex justify-center h-96 lg:h-[200px] w-full'>{image}</div>
       <div className='mb-4 lg:mb-8  flex items-first justify-center text-4xl text-medium lg:h-[80px]'>{header}</div>
       <div className='2xl:h-[300px] xl:h-[350px] text-xl lg:h-[370px]'>{content}</div>
