@@ -19,7 +19,7 @@ const Service: React.FC<IService> = ({ content, header, image, button, index }) 
   return (
     <div  className='flex-col pb-[40px] w-full lg:w-1/3 lg:p-[20px] h-full text-center lg:h-[700px]'
     data-aos-delay={200 * index}
-    data-aos-once={false} // Set to false for allowing multiple animations on scroll
+    data-aos-once={true} 
     data-aos-mirror={true}
     data-aos-offset={-1000}
     data-aos-anchor-placement="top-top"
