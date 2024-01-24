@@ -638,3 +638,22 @@ li:not(:last-child).highlight .s-b-s-text {
 }
 
 
+
+  
+  .iconContainer {
+	animation: wiggle 30s linear infinite;
+
+  }
+
+  
+
+  
+  @keyframes wiggle {
+	0% {
+	  transform: translateX(25%);
+	}
+	100% {
+	  transform: translateX(-27%);
+	}
+  }
+  
