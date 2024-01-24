@@ -54,7 +54,22 @@ const config: Config = {
         primary: {
           light: '#86C0BB',          
         },
-      }
+      },
+      keyframes: {
+        wiggle:{
+          '0%': {
+            transform: 'translateX(0%)',
+          },
+          '100%': {
+            transform: 'translateX(-100%)',
+          },
+        }
+        
+        
+      },
+      animation: {
+        wiggle: 'wiggle 30s linear infinite',
+      },
 
     }, 
   },
