@@ -5,19 +5,29 @@ import Link from 'next/link';
 
 
 const StartupTechnologiesIconList: React.FC = () => {
-	const duplicatedIcons = [...dataStartups, ...dataStartups,...dataStartups,...dataStartups,...dataStartups, ...dataStartups,...dataStartups,...dataStartups];
+  const duplicatedIcons = [...dataStartups, ...dataStartups];
 
   return (
-    <div className='flex flex-col justify-center items-center'>
-		<div className='container marquee-track'>
-      <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
-	
-        {duplicatedIcons.map((startup, index) => (
-          <div key={index} className='startup-icon'>
-            <StartupIcon {...startup} />
-          </div>
-        ))}
-</div>
+    <div className='flex flex-col justify-center items-center overflow-hidden'>
+      <div className='container marquee-track'>
+        <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
+
+          {duplicatedIcons.map((startup, index) => (
+            <div key={index} className='startup-icon'>
+              <StartupIcon {...startup} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className='container-reverse marquee-track-reverse'>
+        <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
+
+          {duplicatedIcons.map((startup, index) => (
+            <div key={index} className='startup-icon'>
+              <StartupIcon {...startup} />
+            </div>
+          ))}
+        </div>
       </div>
       <div className='m-20 p-4 underline underline-offset-8 text-teal-500/100 text-xl font-bold hidden lg:flex text-center'>
         <Link className='' href='/contact'>
