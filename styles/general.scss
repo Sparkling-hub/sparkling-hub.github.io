@@ -642,17 +642,17 @@ li:not(:last-child).highlight .s-b-s-text {
 :root {
 	--grid-x-offset: 40px;
 	--marquee-animation: marquee-slide;
-	--item-speed: 10s;
+	--item-speed: 15s;
 	--item-count: 11;
 }
 
 @keyframes marquee-slide {
 	0% {
-		transform: translate3d(0, 0, 0);
+		transform: translate3d(calc((-50%) + 0px), 0, 0);
 	}
 
 	100% {
-		transform: translate3d(calc(-50.1% + 0px), 0, 0);
+		transform: translate3d(calc((-75%) + 0px), 0, 0);
 	}
 }
 

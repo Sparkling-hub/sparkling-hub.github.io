@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 
 const StartupTechnologiesIconList: React.FC = () => {
-	const duplicatedIcons = [...dataStartups, ...dataStartups];
+	const duplicatedIcons = [...dataStartups, ...dataStartups,...dataStartups,...dataStartups,...dataStartups, ...dataStartups,...dataStartups,...dataStartups];
 
   return (
-    <div className='flex flex-col justify-center items-center overflow-hidden'>
+    <div className='flex flex-col justify-center items-center'>
 		<div className='container marquee-track'>
       <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 	
