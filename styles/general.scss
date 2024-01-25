@@ -640,7 +640,7 @@ li:not(:last-child).highlight .s-b-s-text {
 }
 
 :root {
-	--grid-x-offset: 40px;
+	--grid-x-offset: 20px;
 	--marquee-animation: marquee-slide;
 	--item-speed: 80s;
 	--item-count: 11;
@@ -681,7 +681,7 @@ li:not(:last-child).highlight .s-b-s-text {
 }
 
 .container:hover {
-	--grid-x-offset: -1px;
+	--grid-x-offset: 0px;
 
 	transform: translateX(var(--grid-x-offset, 0));
 }
