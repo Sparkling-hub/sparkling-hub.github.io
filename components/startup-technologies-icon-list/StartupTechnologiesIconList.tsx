@@ -8,7 +8,7 @@ const StartupTechnologiesIconList: React.FC = () => {
   const duplicatedIcons = [...dataStartups, ...dataStartups];
 
   return (
-    <div className='flex flex-col justify-center items-center overflow-hidden'>
+    <div className='flex flex-col justify-center items-center  overflow-hidden relative right-[110px]'>
       <div className='container marquee-track'>
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
