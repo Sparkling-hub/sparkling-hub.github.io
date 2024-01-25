@@ -2,8 +2,8 @@ $color1: #eafffd;
 $color2: #86C0BB;
 $color5: #eafffd;
 $color6: #4DA59B;
-$color7: #D3E5EB;   
-$color8:#C73926;
+$color7: #D3E5EB;
+$color8: #C73926;
 $color9: #3a857e;
 
 $divideColor: #6AE5CE;
@@ -13,7 +13,7 @@ $primaryDarkColor: #285c5c;
 $primaryMediumColor: #4DA59B;
 $primaryMediumColor2: #73C9BD;
 $primaryLightColor: #86C0BB;
-$primaryDoubleLightColor: #CBF0E9;    //Color maps
+$primaryDoubleLightColor: #CBF0E9; //Color maps
 $iconColorStartupSecion3: #C4F4EC;
 $white: #eafffd;
 $colorActiveStep: #fce205;
@@ -24,9 +24,11 @@ $weight-text: 400px;
 .color-primary-light {
 	color: $primaryLightColor;
 }
+
 .color-primary-medium {
 	color: $primaryMediumColor;
 }
+
 .color-primary-dark {
 	color: $primaryDarkColor;
 }
@@ -69,8 +71,8 @@ $weight-text: 400px;
 	align-items: center;
 	top: 0;
 	position: sticky;
-  background-color: rgba(255, 255, 255, 0.97);
-  width: 100%;
+	background-color: rgba(255, 255, 255, 0.97);
+	width: 100%;
 }
 
 nav {
@@ -123,6 +125,7 @@ nav {
 		transform: translateX(-50%);
 		font-weight: 500;
 	}
+
 	&-links {
 		ul {
 			list-style: none;
@@ -166,9 +169,9 @@ nav {
 
 .before\:-top-calc::before {
 	position: absolute;
-	top: calc(-5vw - 35px);  
-  }
-  
+	top: calc(-5vw - 35px);
+}
+
 
 @media (max-width: 900px) {
 	.content-section {
@@ -204,10 +207,10 @@ nav {
 	& p {
 
 
-            width: max-content;
-            font-weight: $weight-text;
-            color: #3b3b3b;
-        }
+		width: max-content;
+		font-weight: $weight-text;
+		color: #3b3b3b;
+	}
 
 
 
@@ -257,10 +260,7 @@ nav {
 	transition: 0.5s;
 }
 
-.startup-icon:hover {
-	transform: scale(1.15);
-    transition: 0.5s;
-}
+.startup-icon:hover {}
 
 .before\:-mt-curved-startup::before {
 	margin-top: -88rem;
@@ -371,49 +371,48 @@ li:not(:last-child).highlight .s-b-s-text {
 // .svg-map #OC,
 // .svg-map #NA,
 // .svg-map #SA
-.svg-map
-{
-    fill: #CBF0E9;
+.svg-map {
+	fill: #CBF0E9;
 }
+
 .svg-map #UK,
 .svg-map #CH,
 .svg-map #UA,
-.svg-map #TN
-{
+.svg-map #TN {
 	opacity: 0.6;
 }
+
 // .svg-map.svg-map #EU:hover,
 // .svg-map.svg-map #AI:hover,
 // .svg-map.svg-map #OC:hover,
 // .svg-map.svg-map #NA:hover,
 // .svg-map.svg-map #SA:hover,
-.svg-map.svg-map #AF:hover
-{
-    fill: $primaryDarkColor;
+.svg-map.svg-map #AF:hover {
+	fill: $primaryDarkColor;
 }
 
 .job-content {
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(236, 236, 236);
-    font-size: 15px;
-    color: rgb(60, 60, 60);
-    font-weight: 400 !important;
-    z-index: 0;
-    line-height: 25px;
-    transition: border-color 1s ease-out;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(236, 236, 236);
+	font-size: 15px;
+	color: rgb(60, 60, 60);
+	font-weight: 400 !important;
+	z-index: 0;
+	line-height: 25px;
+	transition: border-color 1s ease-out;
 
-    & h3 {
-        font-size: 25px;
-        color: $primaryDarkColor;
-        margin-bottom: 10px;
-    }
+	& h3 {
+		font-size: 25px;
+		color: $primaryDarkColor;
+		margin-bottom: 10px;
+	}
 
-    & img {
-        width: 20px;
+	& img {
+		width: 20px;
 		height: 20px;
-        margin: 0 3px;
-    }
+		margin: 0 3px;
+	}
 
 }
 
@@ -629,31 +628,60 @@ li:not(:last-child).highlight .s-b-s-text {
 
 
 #team {
-	& h1 {color:$color6;}
+	& h1 {
+		color: $color6;
+	}
+
 	& .s2 {
-		
-		color:$color7;
+
+		color: $color7;
 		font-weight: 700;
 	}
 }
 
+:root {
+	--grid-x-offset: 40px;
+	--marquee-animation: marquee-slide;
+	--item-speed: 10s;
+	--item-count: 12;
+}
 
-
-  
-  .iconContainer {
-	animation: wiggle 30s linear infinite;
-
-  }
-
-  
-
-  
-  @keyframes wiggle {
+@keyframes marquee-slide {
 	0% {
-	  transform: translateX(25%);
+		transform: translate3d(0, 0, 0);
 	}
+
 	100% {
-	  transform: translateX(-27%);
+		transform: translate3d(calc(-50% + 40px), 0, 0);
 	}
-  }
-  
+}
+
+.container .marquee-track {
+	display: flex;
+	transition: transform 0.6s ease-out;
+	animation: marquee-slide linear infinite;
+	animation-duration: var(--item-speed);
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+
+}
+
+
+.marquee-track:hover {
+	animation-play-state: paused
+}
+
+.container {
+	transform: translateX(var(--grid-x-offset, 0));
+	transition: transform 0.6s ease-out;
+}
+
+.container:hover {
+	--grid-x-offset: -1px;
+
+	transform: translateX(var(--grid-x-offset, 0));
+}

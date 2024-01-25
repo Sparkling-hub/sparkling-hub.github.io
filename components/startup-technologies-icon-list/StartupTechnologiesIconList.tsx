@@ -9,8 +9,8 @@ const StartupTechnologiesIconList: React.FC = () => {
 
   return (
     <div className='flex flex-col justify-center items-center overflow-hidden'>
-		<div className='iconContainer'>
-      <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit paused py-12'>
+		<div className='container marquee-track'>
+      <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 	
         {duplicatedIcons.map((startup, index) => (
           <div key={index} className='startup-icon'>
