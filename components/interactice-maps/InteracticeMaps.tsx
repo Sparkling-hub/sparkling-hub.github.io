@@ -82,8 +82,7 @@ const InteracticeMaps: React.FC = () => {
 	const setupPointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
 			element.addEventListener('click', handlePointsClick);
-			element.addEventListener('mouseover', handleHoverOver);
-			element.addEventListener('mouseout', handleHoverOut);
+
 		});
 	};
 
