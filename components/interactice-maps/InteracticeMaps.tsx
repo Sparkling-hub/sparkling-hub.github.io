@@ -32,6 +32,7 @@ const InteracticeMaps: React.FC = () => {
 			if(!activeOfficePoint) return
 			updateElementPosition(activeOfficePoint)
 		}
+		
 		 );
 
 		handleHover();
@@ -103,7 +104,7 @@ const InteracticeMaps: React.FC = () => {
 		let officeId = e.currentTarget.id;
 		updateElementPosition(officeId);		
 		dispatch(setActiveOfficePoint(officeId));
-		e.stopPropagation();
+		
 	};
 
 	const handleHoverOver = (e: any) => {

@@ -11,7 +11,7 @@ const Card: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const handleClickOutside = (e: MouseEvent) => {
     if (cardRef.current && !cardRef.current.contains(e.target as Node)) {
-      // Если клик был сделан вне области компонента, закрываем его
+  
       dispatch(setActiveOfficePoint(''));
       dispatch(setOfficeCard(null));
     }
@@ -29,6 +29,7 @@ const Card: React.FC = () => {
     
     dispatch(setActiveOfficePoint(''));
     dispatch(setOfficeCard(null));
+    e.stopPropagation();
   };
   const handleScroll = () => {
     const topCoordinate = window.scrollY + activeOfficePointCoords[0];
