@@ -17,7 +17,7 @@ const content =
 const button = <Button href={"/contact#form-contact"} text="Get in touch" />
 const element = {
 	content: content,
-	curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute',
+
   	background: 'bg-color-primary-light',
 	id: "jobs",
 	button: button
