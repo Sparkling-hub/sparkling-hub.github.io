@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
 								<div className="flex justify-center flex-col w-full my-12">
 									<div className='grid grid-cols-1 lg:grid-cols-3 gap-[10%] lg:gap-[0%] '>
 										<div className='lg:block right-[50px] right-[-40px] lg:right-0  col-span-1 p-4 lg:order-3 '>
-											<div className='relative lg:text-right font-normal text-3xl lg:text-5xl  pb-1'>Get in touch</div>
+											<div className='relative lg:text-right font-normal text-3xl lg:text-5xl  lg:pb-10'>Get in touch</div>
 											<div className='lg:text-right text-xl lg:text-2xl'>info@sparkling.co.com</div>
 											<div className='lg:text-right text-xl lg:text-2xl'>+41 (0)91 752 0707 </div>
 
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
 											<div className='relative hidden lg:block font-normal text-2xl lg:text-5xl pb-10'>Sparkling</div>
 											<div className='relative hidden lg:block mb-16 lg:text-2xl text-2xl '>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
 
-											<div className='font-normal pb-1 text-3xl lg:text-5xl '>Privacy</div>
+											<div className='font-normal pb-1 text-3xl lg:text-5xl lg:pb-10'>Privacy</div>
 											<div className=' text-xl lg:text-2xl'>Privacy Policy</div>
 											<div className='lg:text-2xl text-xl '>Cookie Policy</div>
 										</div>
