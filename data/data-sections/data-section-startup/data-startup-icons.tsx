@@ -52,16 +52,6 @@ const startupIcon: IStartupTechnologiesItem[] = [
 		text: "PHP",
 		index: 10,
 	},
-	{
-		imageSrc: '/img/startup/icon-technologies/PHP.svg',
-		text: "PHP",
-		index: 10,
-	},
-	{
-		imageSrc: '/img/startup/icon-technologies/PHP.svg',
-		text: "PHP",
-		index: 10,
-	},
-];
+]
 
 export default startupIcon
