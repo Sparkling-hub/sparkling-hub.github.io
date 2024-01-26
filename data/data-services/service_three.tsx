@@ -12,13 +12,13 @@ const content =		<div className="lg:mb-12">
 			Our experts are here to steer you back on the right track.
 		</p>
 		<ul className='text-left text-xl font-semibold  lg:text-xl w-fit m-auto flex flex-col   lg:whitespace-normal 2xl:p-0 py-4'>
-		<li className='flex items-center'>
+		<li className='flex items-baseline'>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Research & Development (R&D)
 			</li >
-			<li className='flex items-center'>
+			<li className='flex items-baseline'>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Architecture and DevOps
 			</li>
-			<li className='flex items-center'>
+			<li className='flex items-baseline'>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Long-term Strategy Development
 			</li>
 		</ul>
