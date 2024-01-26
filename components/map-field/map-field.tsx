@@ -11,7 +11,7 @@ const MapField: React.FC = () => {
 
   useEffect(() => {
     let mapContainer = document.querySelector('.map-container');
-    mapContainer?.addEventListener('click', handleMapsClick);
+
 
     let currentCard = currentMap?.officeCards?.find((card) => card.id === activeOfficePoint);
     if (currentCard) dispatch(setOfficeCard(currentCard));
