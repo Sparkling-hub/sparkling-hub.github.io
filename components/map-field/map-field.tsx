@@ -34,7 +34,7 @@ const MapField: React.FC = () => {
       </div>
       
 
-      {activeOfficePoint ? <Card /> : ''}
+      <Card /> 
     </div>
   );
 };

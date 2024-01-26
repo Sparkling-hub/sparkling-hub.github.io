@@ -26,6 +26,9 @@ const Card: React.FC = () => {
     const leftCoordinate = activeOfficePointCoords[1];
     updateElementPosition(topCoordinate, leftCoordinate);
   };
+  useEffect(() => {
+    setIsVisible(true);
+  }, [officeCard]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -36,8 +39,10 @@ const Card: React.FC = () => {
   }, [activeOfficePointCoords]);
 
   return (
-    <button className={`fixed ${isVisible ? 'h-96' : 'h-0'} z-[80] text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(activeOfficePointCoords[0])}px`, left: `${Math.round(activeOfficePointCoords[1])}px` }}>
-      <div className={`${isVisible ? 'h-96 opacity-95 top-[0%]' : 'h-0 top-[100%]'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
+    <button
+      className={`fixed ${officeCard ? 'h-96 opacity-95 top-[0%]' : 'opacity-0 h-0 top-[100%]'} z-[80] text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 transition-height duration-300 ease-in-out`}
+      style={{ top: `${Math.round(activeOfficePointCoords[0])}px`, left: `${Math.round(activeOfficePointCoords[1])}px` }}
+    > <div className={`relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden ease-out lg:delay-[350ms]  transition-height  duration-500 ${officeCard ? 'h-96 opacity-95 top-[0%]' : 'h-0 top-[100%]'}`} >
         <div className={` p-global lg:absolute w-full left-0  p-8  overflow-hidden `}>
           <button className="absolute top-[5%] right-[5%] z-10 h-4 w-4 ">
             <div className="content-center icon-wrap" >

@@ -54,8 +54,12 @@ const config: Config = {
         primary: {
           light: '#86C0BB',          
         },
-      }
-
+      },
+      animations: {
+        height: 'wiggle 1s ease-in-out infinite'
+         
+        },
+      
     }, 
   },
   plugins: [],
