@@ -20,7 +20,7 @@ const InteracticeMaps: React.FC = () => {
 		const foundMap = mapsData.find((mapItem) => mapItem.id === 'world_all');
 		dispatch(setCurrentMap(foundMap));
 
-		let points = document.querySelectorAll('.office_point .block');
+		let points = document.querySelectorAll('.office_point');
 
 		setupPointEventListeners(points);
 
