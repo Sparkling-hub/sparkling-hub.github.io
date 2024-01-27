@@ -18,7 +18,6 @@ const InteracticeMaps: React.FC = () => {
 
 	useEffect(() => {
 		const foundMap = mapsData.find((mapItem) => mapItem.id === 'world_all');
-		dispatch(setCurrentMap(foundMap));
 
 		let points = document.querySelectorAll('.office_point');
 
@@ -115,7 +114,7 @@ const InteracticeMaps: React.FC = () => {
 
 	const handleHoverOut = (e: any) => {
 		
-		dispatch(setHovered(''));
+		dispatch(setHovered(null));
 	
 	};
 

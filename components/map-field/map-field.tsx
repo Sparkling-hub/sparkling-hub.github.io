@@ -4,22 +4,22 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMaps, setActiveOfficePoint, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
 import Card from '@/components/card';
-
+import mapsData from "@/data/data-maps";
 const MapField: React.FC = () => {
   const dispatch = useDispatch();
-  const { currentMap, activeOfficePoint } = useSelector(selectMaps);
+  const {  activeOfficePoint } = useSelector(selectMaps);
 
   useEffect(() => {
     let mapContainer = document.querySelector('.map-container');
 
 
-    let currentCard = currentMap?.officeCards?.find((card) => card.id === activeOfficePoint);
+    let currentCard = mapsData[0]?.officeCards?.find((card) => card.id === activeOfficePoint);
     if (currentCard) dispatch(setOfficeCard(currentCard));
 
     return () => {
       mapContainer?.removeEventListener('click', handleMapsClick);
     };
-  }, [activeOfficePoint, currentMap, dispatch]);
+  }, [activeOfficePoint, mapsData, dispatch]);
 
   const handleMapsClick = (e: any) => {
     
@@ -30,7 +30,7 @@ const MapField: React.FC = () => {
   return (
     <div className="map-container pt-40 lg:col-span-9 lg:gh-4 lg:gh-4 lg:p-14 pt-global lg:block " style={{ position: 'relative' }}>
       <div className='lg:scale-90'>
-        {currentMap ? currentMap.image : ''}
+        {mapsData[0] ? mapsData[0].image : ''}
       </div>
       
 

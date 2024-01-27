@@ -3,11 +3,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMaps, setHovered, setActiveOfficePoint } from '@/store/redusers/mapsSliceReduser';
-
+import mapsData from "@/data/data-maps";
 
 const MapSelectionSettings: React.FC = () => {
 	const dispatch = useDispatch();
-	const { currentMap, hovered, activeOfficePoint } = useSelector(selectMaps);
+	const { hovered, activeOfficePoint } = useSelector(selectMaps);
   
 	return (
 	  <div className="col-span-3 flex flex-col relative xl:w-fit w-4/5 m-auto  ">
@@ -22,7 +22,7 @@ const MapSelectionSettings: React.FC = () => {
 		</div>
   
 		<div className={`grid grid-cols-2  lg:grid-cols-2 xl:border-b-0 max-lg:gap-x-global max-lg:gap-y-4 xl:border-l-2  border-b-2 border-primary-dark pl-12 xl:items-start  items-center`}>
-		  {currentMap?.officeCards?.map((card) => (
+		  {mapsData[0]?.officeCards?.map((card) => (
 			<button
 			  key={card.id}
 			  className={`xl:text-start w-fit  m-auto  text-center lg:block btn duration-200 col-span-1 xl:ml-8 p-4 text-xl text-left font-medium !p-0 !bg-transparent !pb-4 hover:!text-primary-light lg:opacity-100
