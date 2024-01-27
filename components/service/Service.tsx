@@ -9,7 +9,7 @@ const Service: React.FC<IService> = ({ content, header, image, button, index }) 
 	useEffect(() => {
 		AOS.init({
 			duration: 1000,
-			once: false, // Set to false to allow the animation to be triggered multiple times on scroll
+			once: false,
 			mirror: true,
 
 		});
