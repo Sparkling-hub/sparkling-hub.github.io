@@ -30,7 +30,7 @@ const CheckboxSelect: React.FC<ICheckboxSelect> = ({ id, checked,name }) => {
 
 
   return (
-<div className='relative'>
+<div className='relative hover:cursor-pointer'>
     <input id={id.value} type="checkbox"  className="opacity-0 w-full absolute h-full" onChange={handleParamsChange}/>
 
       <input className='m-4 h-full ' type="checkbox"  onChange={handleParamsChange} checked={checked}   />  
