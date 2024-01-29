@@ -9,7 +9,7 @@ const header =
 const content =
 <Card/>
 
-const button = <div className="m-16"><Button href="/contact#form-contact" text="Let’s get started"/></div>;
+const button = <div className="	<h2 className= text-xl text-center mt-12"> <Button href="/contact#form-contact" text="Let’s get started"/></div>;
 const element = {
     content: content,
     header: header,

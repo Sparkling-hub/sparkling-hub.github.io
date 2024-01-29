@@ -1,7 +1,7 @@
 import Button from "../../../components/button";
 
 const header = (
-  <h1 className="text-5xl my-4 leading-12 lg:leading-[100px] text-5xl">
+  <h1 className="text-5xl my-4 leading-12 lg:leading-[100px]">
     We<span className="color-primary-light mx-1">build</span>software to
     <br className="hidden lg:block"/>
     <strong className="text-teal-800  font-bold uppercase "> reach your goals</strong>
