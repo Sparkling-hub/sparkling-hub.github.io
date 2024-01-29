@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import dataStartups from '@/data/data-sections/data-section-startup/data-startup-icons';
 import StartupIcon from '@/components/startup-icon';
 import Link from 'next/link';

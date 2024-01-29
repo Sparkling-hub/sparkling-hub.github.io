@@ -643,7 +643,7 @@ li:not(:last-child).highlight .s-b-s-text {
 	--grid-x-offset: 20px;
 	--grid-x-offset-reverse: -20px;
 	--marquee-animation: marquee-slide;
-	--item-speed: 10s;
+	--item-speed: 50s;
 	--item-count: 11;
 }
 
@@ -658,11 +658,11 @@ li:not(:last-child).highlight .s-b-s-text {
 }
 @keyframes marquee-slide-reverse {
 	0% {
-		transform: translate3d(-27.2%, 0, 0);
+		transform: translate3d(-25.1%, 0, 0);
 	}
 
 	100% {
-		transform: translate3d(calc(23% + 0px), 0, 0);
+		transform: translate3d(calc(25% + 0px), 0, 0);
 	}
 }
 
