@@ -37,7 +37,7 @@ const Card: React.FC = () => {
     updateElementPosition(topCoordinate, leftCoordinate);
   };
   useEffect(() => {
-    if(officeCard==null){``
+    if(officeCard==null){
     
       setIsVisible(false);
       
