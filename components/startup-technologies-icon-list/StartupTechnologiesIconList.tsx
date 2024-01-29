@@ -13,7 +13,7 @@ const StartupTechnologiesIconList: React.FC = () => {
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
           {duplicatedIcons.map((startup, index) => (
-            <div key={index} className='startup-icon'>
+            <div className='startup-icon'>
               <StartupIcon {...startup} />
             </div>
           ))}
@@ -23,7 +23,7 @@ const StartupTechnologiesIconList: React.FC = () => {
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
           {duplicatedIcons.map((startup, index) => (
-            <div key={index} className='startup-icon'>
+            <div className='startup-icon'>
               <StartupIcon {...startup} />
             </div>
           ))}
