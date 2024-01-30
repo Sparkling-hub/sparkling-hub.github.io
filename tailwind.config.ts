@@ -40,8 +40,20 @@ const config: Config = {
         primary: {
           light: '#86C0BB',          
         },
-      }
-
+      },
+      animations: {
+        fadeInHeight: 'fadeInHeight 1s ease-in-out',
+        fadeOutHeight: 'fadeOutHeight 1s ease-in-out',
+      },
+      keyframes: {
+        fadeInHeight: {
+          '0%': { height: '0' },
+          '100%': { height: '100%' },
+        },
+        fadeOutHeight: {
+          '0%': { height: '100%' },
+          '100%': { height: '0' },
+        },}
     }, 
   },
   plugins: [],
