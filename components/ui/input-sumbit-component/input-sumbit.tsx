@@ -24,7 +24,8 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, formDat
     }
   };
 
-  const buttonClass = disabled ? 'bg-gradient-to-r from-teal-900 to-teal-300' : 'bg-color-primary-dark';
+  const buttonClass = disabled? 'bg-teal-500' : 'bg-color-primary-dark';
+
 
   return (
     <>
@@ -37,10 +38,10 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, formDat
       />
       <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
         {typeof result === 'object' ? (
-          // Handle object result, you can display a specific property or handle it as needed
+          
           <h3 className='text-red-500'>{result.message || 'An error occurred'}</h3>
         ) : (
-          // Render string result
+    
           <h3 className='text-teal-600 '>{result}</h3>
         )}
       </div>

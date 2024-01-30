@@ -66,10 +66,10 @@ app.post('/send-form', validateForm, (req, res) => {
  
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(`errorSend: ${error}`);
+
             res.status(500).send('Failed to send email');
         } else {
-            console.log('Email sent: ' + info.response);
+     
             res.status(200).send('Email sent successfully');
         }
     });
