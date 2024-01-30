@@ -11,16 +11,16 @@ interface InputSubmitProps {
 }
 
 const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, formData, http }) => {
-  const [result, setError] = useState<any>(''); // Change the type to any
+  const [result, setResult] = useState<any>('');
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
     try {
       const response = await axios.post(http, { formData });
-      setError(response.data);
+      setResult(response.data);
     } catch (error) {
-      setError(error || 'An error occurred');
+      setResult(error || 'An error occurred');
     }
   };
 
