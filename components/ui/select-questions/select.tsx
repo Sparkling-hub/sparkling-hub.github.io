@@ -43,7 +43,7 @@ const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
 
     return () => clearInterval(intervalId);
   }, [data.answer, isOpen]);
-
+  
   return (
     <>
       <button
