@@ -49,8 +49,9 @@ const Form: React.FC = () => {
           placeholder="Full Name*"
           onChange={handleInputChange}
         />
+        <div className="relative"> 
         {check || formData.email.length <= 3 ? null : (
-          <p className="absolute bottom-20 text-red-500 font-bold" key={formData.email.length}>
+          <p className="absolute bottom-20 text-red-500 font-bold ml-4" key={formData.email.length}>
             Invalid Email
           </p>
         )}
@@ -61,6 +62,7 @@ const Form: React.FC = () => {
           onChange={handleInputChange}
           placeholder="Email*"
         />
+        </div>
         <Input
           type="text"
           name="company"
@@ -68,7 +70,9 @@ const Form: React.FC = () => {
           placeholder="Company"
           onChange={handleInputChange}
         />
-        <Select name="select"/>
+        <Select name="select"   
+        value = {formData.select}
+        onChange={handleInputChange}/>
         <TextArea
           name="message"
           placeholder="Tell us about your project and goals*"
