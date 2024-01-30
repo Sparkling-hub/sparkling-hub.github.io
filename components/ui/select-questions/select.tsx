@@ -27,13 +27,12 @@ const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
 
   useEffect(() => {
     setVisibleText('')
-    const propsData = data.answer as unknown as ReactElement;
-    const textToAnimate = propsData.props.children;
+ 
     let index = 0;
     const intervalId = setInterval(() => {
-      if (index < (textToAnimate).length) {
+      if (index < (data.answer).length) {
 
-        setVisibleText((prevText) => prevText + textToAnimate[index - 1]);
+        setVisibleText((prevText) => prevText + data.answer[index - 1]);
 
         index++;
       } else {

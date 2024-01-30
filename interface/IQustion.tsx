@@ -2,7 +2,7 @@
 
 interface IQustion {
 	id:number;
-	question: string;
+	question: JSX.Element;
 	answer: string;
 
 }
