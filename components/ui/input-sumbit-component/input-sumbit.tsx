@@ -22,7 +22,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, formDat
       console.error('Send eeror:', error);
     }
   };
-  const buttonClass = disabled? 'bg-teal-500 hover:bg-teal-400 ' : 'bg-color-primary-dark';
+  const buttonClass = disabled? 'bg-gradient-to-r from-teal-900 to-teal-300' : 'bg-color-primary-dark';
 
   return (
     <input
