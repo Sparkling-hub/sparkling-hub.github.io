@@ -1,14 +1,14 @@
 const header = (
-  <h1 className="mb-4">
+  <h1>
     <strong className="s2 text-5xl" >FAQs</strong>
   </h1>
 );
 
 const content = (
-  <p className="text-5xl font-normal leading-[50px]">
+  <p className="text-5xl text-teal-500">
     Got any question?
     <br />
-    <strong className="text-teal-400 font-normal">We have answers!
+    <strong className="font-black text-teal-800">We have answers!
     </strong>
   </p>
 );
