@@ -84,7 +84,7 @@ const Form: React.FC = () => {
         />
       </div>
       <Link href="mailto:l.arthofer@sparkling.co.com" target="_blank"
-        className="blank m-10 bg-white rounded-md text-left rounded-lg justify-center flex flex-col h-26 w-2/5 bg-teal-900">
+        className="blank m-10 bg-white rounded-md text-left rounded-lg justify-center flex flex-col h-26 w-2/5 bg-teal-900 ">
         <div className="p-6 flex justify-between items-center pr-1">
           <div>
             <p className="text-3xl text-black font-normal">
