@@ -29,6 +29,7 @@ const Form: React.FC = () => {
     if (name === "email") {
       dispatch(setCheck(selectIsValidEmail(value)));
     }
+    
 
   };
 
@@ -75,13 +76,15 @@ const Form: React.FC = () => {
           onChange={handleInputChange}
         />
         <br />
-        <Submit
+        <div className="w-fit m-auto relative">
+          <Submit
           type="submit"
           name="submit"
           formData={formData}
           disabled={!!(formData.name && check && formData.message)}
           http={"http://localhost:3033/send-form"}
         />
+        </div>
       </div>
       <Link href="mailto:l.arthofer@sparkling.co.com" target="_blank"
         className="blank m-10 bg-white rounded-md text-left rounded-lg justify-center flex flex-col h-26 w-2/5 bg-teal-900">

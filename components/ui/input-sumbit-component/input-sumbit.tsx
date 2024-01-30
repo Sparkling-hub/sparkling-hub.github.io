@@ -1,37 +1,50 @@
-import React, { SyntheticEvent } from 'react';
-import axios from "axios";
+import React, { SyntheticEvent, useState } from 'react';
+import axios from 'axios';
 import FormData from '@/interface/IFromData';
+
 interface InputSubmitProps {
   name: string;
   type: string;
-
-  
   disabled: boolean;
   formData: FormData;
   http: string;
 }
 
 const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, formData, http }) => {
+  const [result, setError] = useState<any>(''); // Change the type to any
+
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
     try {
       const response = await axios.post(http, { formData });
-      console.log('Send:', response.data);
+      setError(response.data);
     } catch (error) {
-      console.error('Send eeror:', error);
+      setError(error || 'An error occurred');
     }
   };
-  const buttonClass = disabled? 'bg-gradient-to-r from-teal-900 to-teal-300' : 'bg-color-primary-dark';
+
+  const buttonClass = disabled ? 'bg-gradient-to-r from-teal-900 to-teal-300' : 'bg-color-primary-dark';
 
   return (
-    <input
-      name={name}
-      type={type}
-      disabled={!disabled}
-      className={`no-underline text-white py-3 px-8  rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
-      onClick={handleSubmit}
-    />
+    <>
+      <input
+        name={name}
+        type={type}
+        disabled={!disabled}
+        className={`no-underline text-white py-3 px-8  rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
+        onClick={handleSubmit}
+      />
+      <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
+        {typeof result === 'object' ? (
+          // Handle object result, you can display a specific property or handle it as needed
+          <h3 className='text-red-500'>{result.message || 'An error occurred'}</h3>
+        ) : (
+          // Render string result
+          <h3 className='text-teal-600 '>{result}</h3>
+        )}
+      </div>
+    </>
   );
 };
 
