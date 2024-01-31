@@ -1,28 +1,13 @@
 
 
-import { useDispatch, useSelector } from 'react-redux';
-import { selectNavigation } from '@/store/redusers/navigationReducer';
-import { setActiveOption, selectForm } from '@/store/redusers/FormSliceReduser';
-import rolesData from '@/data/data-contact/data-contact';
-import { ChangeEvent, useEffect } from 'react';
-import { Value } from 'sass';
 
-interface SelectProps {
-	name: string;	
-}
+import rolesData from '@/data/data-contact/data-contact';
+
 
 const Select: React.FC<any> = ({ name, onChange,value }) => {
 
-	const dispatch = useDispatch();
+
 	
-	const { lastPageSlug } = useSelector(selectNavigation);
-
-
-	useEffect(() => {
-		
-		dispatch(setActiveOption(lastPageSlug));		
-
-	}, []);
 
 
 	

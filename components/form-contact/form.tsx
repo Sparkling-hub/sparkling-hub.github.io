@@ -10,13 +10,13 @@ import {
   selectForm,
   setFormData,
   setCheck,
-  selectIsValidEmail,
 
+  setCheckFormByKey
 } from '@/store/redusers/FormSliceReduser';
 
 const Form: React.FC = () => {
   const dispatch = useDispatch();
-  const { formData, check } = useSelector(selectForm);
+  const { formData, check, checkForm } = useSelector(selectForm);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -26,10 +26,11 @@ const Form: React.FC = () => {
       [name]: value,
     }));
 
+    dispatch(setCheckFormByKey({ key: name as any, value: '' }));
+
     if (name === "email") {
-      dispatch(setCheck(selectIsValidEmail(value)));
+      dispatch(setCheck(null));
     }
-    
 
   };
 
@@ -42,26 +43,32 @@ const Form: React.FC = () => {
       className="form flex items-center w-full m-auto relative"
     >
       <div className="flex flex-col w-3/5 m-3">
-        <Input
-          type="text"
-          name="name"
-          value={formData.name}
-          placeholder="Full Name*"
-          onChange={handleInputChange}
-        />
-        <div className="relative"> 
-        {check || formData.email.length <= 3 ? null : (
-          <p className="absolute bottom-20 text-red-500 font-bold ml-4" key={formData.email.length}>
-            Invalid Email
-          </p>
-        )}
-        <Input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          placeholder="Email*"
-        />
+        <div className="relative">
+          {checkForm.name.length ? <p className="absolute top-[-5%] text-red-500 font-bold ml-4">Fill in the  fields:</p> : ''}
+          <Input
+            type="text"
+            name="name"
+            value={formData.name}
+            placeholder="Full Name*"
+            onChange={handleInputChange}
+            checked={checkForm.name.length>0}
+          />  </div>
+        <div className="relative">
+          {checkForm.email.length || check===false ? (
+            check === false && (
+              <p className="absolute top-[-5%] text-red-500 font-bold ml-4">
+                {!checkForm.email.length ? 'Invalid Email' : checkForm.email}
+              </p>
+            )
+          ) : ""}
+          <Input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            placeholder="Email*"
+            checked={  check === false && checkForm.email.length>0 || check===false}
+          />
         </div>
         <Input
           type="text"
@@ -69,25 +76,30 @@ const Form: React.FC = () => {
           value={formData.company}
           placeholder="Company"
           onChange={handleInputChange}
+         
         />
-        <Select name="select"   
-        value = {formData.select}
-        onChange={handleInputChange}/>
-        <TextArea
-          name="message"
-          placeholder="Tell us about your project and goals*"
-          value={formData.message}
-          onChange={handleInputChange}
-        />
+        <Select name="select"
+          value={formData.select}
+          onChange={handleInputChange} />
+        <div className="relative">
+          {checkForm.message.length ? <p className="absolute top-[-5%] text-red-500 font-bold ml-4">Fill in the  fields:</p> : ''}
+          <TextArea
+            name="message"
+            placeholder="Tell us about your project and goals*"
+            value={formData.message}
+            onChange={handleInputChange}
+            checked={checkForm.message.length>0}
+          />
+        </div>
         <br />
         <div className="w-fit m-auto relative">
           <Submit
-          type="submit"
-          name="submit"
-          formData={formData}
-          disabled={!!(formData.name && check && formData.message)}
-          http={"http://localhost:3033/send-form"}
-        />
+            type="submit"
+            name="submit"
+
+            disabled={!!(formData.name && formData.email && formData.message)}
+            http={"http://localhost:3033/send-form"}
+          />
         </div>
       </div>
       <Link href="mailto:l.arthofer@sparkling.co.com" target="_blank"

@@ -1,21 +1,33 @@
 import React, { SyntheticEvent, useState } from 'react';
 import axios from 'axios';
-import FormData from '@/interface/IFromData';
+
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  selectForm,
+  selectIsValidEmail,
+  setCheck,
+  setCheckFormByKey
+
+
+} from '@/store/redusers/FormSliceReduser';
+
 
 interface InputSubmitProps {
   name: string;
   type: string;
   disabled: boolean;
-  formData: FormData;
+
   http: string;
 }
 
-const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, formData, http }) => {
+const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http }) => {
   const [result, setResult] = useState<any>('');
-
+  const { formData } = useSelector(selectForm);
+  const dispatch = useDispatch();
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    if (disabled) {
+    dispatch(setCheck(selectIsValidEmail(formData.email)));
+    if (disabled && selectIsValidEmail(formData.email)) {
       try {
         const response = await axios.post(http, { formData });
         setResult(response.data);
@@ -24,52 +36,52 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, formDat
       }
     }
     else {
-      const requiredKeys:string[] = ['name', 'email', 'message'];
+      const requiredKeys: string[] = ['name', 'email', 'message'];
 
- 
       const emptyKeys: string[] = requiredKeys
-        .filter(key => (formData as any)[key] === '')  
-        .map(key => key);
+        .filter(key => (formData as any)[key] === '')
+        .map(key => {
+          if (key == "email") {
+          }
+          return key
+        });
+
 
       if (emptyKeys.length > 0) {
-        setResult(
-          <div className='w-fit'>
-           <h3 className='text-'>Fill in the following fields:</h3>
-            {emptyKeys.map((key) => (
-              <React.Fragment key={key}>
-                 '{key}'{' '}
-              
-              </React.Fragment>
-            ))}
-          </div>
-        );
+        {
+          emptyKeys.map((key: any) => (
+            dispatch(setCheckFormByKey({ key: key, value: 'Fill in the following fields:' }))
+          ))
+        }
+        setResult(<p>Fill in all the fields</p>)
         return;
       }
-    };}
+    };
+  }
 
-    const buttonClass = disabled ? 'bg-teal-500' : 'bg-color-primary-dark';
+  const buttonClass = disabled && selectIsValidEmail(formData.email) ? 'bg-teal-500' : 'bg-color-primary-dark';
 
+  return (
+    <>
+      <input
+        name={name}
+        type={type}
 
-    return (
-      <>
-        <input
-          name={name}
-          type={type}
+        className={`no-underline text-white py-3 px-8  rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
+        onClick={handleSubmit}
+      />
+      <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
+        {typeof result === 'object' || result === '' ? (
 
-          className={`no-underline text-white py-3 px-8  rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
-          onClick={handleSubmit}
-        />
-        <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
-          {typeof result === 'object' || result===''  ? (
+          <h3 className='text-red-500'>{result}</h3>
+        ) : (
 
-            <h3 className='text-red-500'>{result || 'An error occurred'}</h3>
-          ) : (
-
-            <h3 className='text-teal-600 '>{result}</h3>
-          )}
-        </div>
-      </>
-    );
-  };
+          <h3 className='text-teal-600 '>{result}</h3>
+        )}
+      </div>
+    </>
+  );
+};
 
 export default InputSubmit;
+
