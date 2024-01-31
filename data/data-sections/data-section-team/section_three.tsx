@@ -7,6 +7,7 @@ const content = (<Team/>
 const element = {
   header:head,
   content: content,
+  curvedClass: 'before:content-curved_dark_without_line_white before:w-full before:absolute  before:top-[-%]',
   background: '', 
   index: 3,
   id: 'team'

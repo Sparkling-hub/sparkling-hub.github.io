@@ -25,7 +25,7 @@ const content = <div className="we-work-container relative my-10 h-96">
 const element = {
     content: content,
     header: header,
-
+    curvedClass: 'before:content-curved_white_without_line before:w-full before:absolute',
     background: 'bg-color-primary-light',
     index: 5,
     padding_bottom: 'pb-40',

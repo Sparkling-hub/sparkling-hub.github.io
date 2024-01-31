@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 281" style="enable-background:new 0 0 1920 281;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#EAFEFD;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#6AE5CE;}
+</style>
+<path class="st0" d="M0 0v281h1920V.37C1634.07 53 1307.62 82.85 961 82.85 613.57 82.85 286.41 52.88 0 0z" />
+<path xmlns="http://www.w3.org/2000/svg" class="st1" d="M961,82.8C613.6,82.8,286.4,52.9,0,0v10c286.4,52.9,613.6,75.8,961,75.8c346.6,0,673.1-22.8,959-75.5v-10  C1634.1,53,1307.6,82.8,961,82.8z"/>
+</svg>

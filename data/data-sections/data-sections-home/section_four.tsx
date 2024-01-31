@@ -15,7 +15,7 @@ const element = {
   header: header,
   id: "benefits", 
   index:4,
-
+  curvedClass: 'before:content-curved_white_without_line before:w-full before:absolute',
   background: 'bg-color-primary-light', 
 }
 export default element

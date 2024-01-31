@@ -27,7 +27,7 @@ const element = {
   header: header,
   id: 'technologies',
   index: 3,
-
+  curvedClass: 'before:content-curved_dark_without_line before:w-full before:absolute',
   background: 'bg-color-primary-dark',
 }
 export default element

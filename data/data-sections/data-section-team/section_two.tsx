@@ -15,7 +15,7 @@ const element = {
   content: content,
 
   index: 2,
-
+  curvedClass: 'before:content-curved_dark_without_line before:w-full',
 	background: 'bg-color-primary-dark', 
 
   id: 'team'

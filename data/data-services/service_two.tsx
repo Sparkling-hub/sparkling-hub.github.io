@@ -10,15 +10,15 @@ const header =
 
 const content =
 	<div className="lg:mb-12">
-		<p className='2xl:h-[190px] xl:h-[180px] lg:h-[200px] text-xl'>Craft a tailored team of engineers delivering tangible results sprint after sprint. Our expertly managed engineers have a great attention to detail, taking great pride in their craft.</p>
-		<ul className='text-left text-xl lg:text-xl font-semibold w-fit m-auto flex flex-col lg:whitespace-normal 2xl:p-0 py-4'>
-			<li className='flex items-baseline'>
+<p className='2xl:h-[160px] lg:h-[170px] text-xl'>Craft a tailored team of engineers delivering tangible results sprint after sprint. Our expertly managed engineers have a great attention to detail, taking great pride in their craft.</p>
+<ul className='text-left text-xl lg:text-xl font-semibold w-fit m-auto flex flex-col whitespace-nowrap 2xl:p-0 p-4'>
+			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Team and Project management
 			</li>
-			<li className='flex items-baseline'>
+			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Dedicated fully functional team
 			</li>
-			<li className='flex items-baseline'>
+			<li>
 				<img className='w-4 h-4 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" />Swiss Quality Assurance
 			</li>
 		</ul>

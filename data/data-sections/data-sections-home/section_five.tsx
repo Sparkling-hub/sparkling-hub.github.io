@@ -17,7 +17,7 @@ const element = {
     header: header,
     id: 'maps',
     index: 5,
-
+    curvedClass: 'before:content-curved_medium_without_line before:w-full before:absolute',
     background: 'bg-color-primary-medium',
     margin_bottom: 'mb-12',
     padding_bottom: "pb-12"
