@@ -5,14 +5,20 @@ import Link from 'next/link';
 
 
 const StartupTechnologiesIconList: React.FC = () => {
-  const duplicatedIcons = [...dataStartups, ...dataStartups];
 
+  const totalItems = dataStartups.length;
+  const middleIndex = Math.ceil(totalItems / 2);
+  
+  const firstPart = dataStartups.slice(0, middleIndex);
+  const secondPart = dataStartups.slice(middleIndex);
+  const duplicatedIconsOne = [...firstPart, ...firstPart];
+  const duplicatedIconsTwo = [...secondPart, ...secondPart];
   return (
     <div className='flex flex-col justify-center items-center  overflow-hidden block 2xl:relative 2xl:w-[1500px] right-[110px]'>
       <div className='container marquee-track'>
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
-          {duplicatedIcons.map((startup) => (
+          {duplicatedIconsOne.map((startup) => (
             <div className='startup-icon'  key={startup.index}>
               <StartupIcon {...startup} />
             </div>
@@ -22,7 +28,7 @@ const StartupTechnologiesIconList: React.FC = () => {
       <div className='container-reverse marquee-track-reverse'>
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
-          {duplicatedIcons.map((startup) => (
+          {duplicatedIconsTwo.map((startup) => (
             <div className='startup-icon' key={startup.index}> 
               <StartupIcon {...startup} />
             </div>

@@ -70,37 +70,33 @@ const startupIcon: IStartupTechnologiesItem[] = [
 	{
 		imageSrc: '/img/startup/icon-technologies/selenium.svg',
 		text: "Selenium",
-		index: 14,
+		index: 15,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/r-lang.svg',
 		text: "R",
-		index: 14,
+		index: 16,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/kubernets.svg',
 		text: "Kubernets",
-		index: 15,
+		index: 17,
 	},
-	{
-		imageSrc: '/img/startup/icon-technologies/selenium.svg',
-		text: "Selenium",
-		index: 16,
-	},
+
 	{
 		imageSrc: '/img/startup/icon-technologies/django.svg',
 		text: "Django",
-		index: 16,
+		index: 18,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/firebase.svg',
 		text: "Firebase",
-		index: 16,
+		index: 19,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/dot-net-core.svg',
 		text: ".NET",
-		index: 16,
+		index: 20,
 	},
 ]
 
