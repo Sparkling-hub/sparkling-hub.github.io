@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.18",
     "@reduxjs/toolkit": "^2.0.1",
+    "aos": "^2.3.4",
     "axios": "^1.6.2",
     "chroma-js": "^2.4.2",
     "express-https-redirect": "^1.0.0",
@@ -27,7 +28,11 @@
     "sass": "^1.69.5"
   },
   "devDependencies": {
+
     "@types/animejs": "^3.1.12",
+
+    "@types/aos": "^3.0.7",
+
     "@types/chroma-js": "^2.4.3",
     "@types/node": "^20",
     "@types/react": "^18",
