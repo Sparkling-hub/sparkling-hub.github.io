@@ -8,9 +8,14 @@ const startupIcon: IStartupTechnologiesItem[] = [
 		index: 1,
 	},
 	{
-		imageSrc: '/img/startup/icon-technologies/Python.svg',
-		text: "Python",
-		index: 2,
+		imageSrc: '/img/startup/icon-technologies/Typescript.svg',
+		text: "Typescript",
+		index: 6,
+	},
+	{
+		imageSrc: '/img/startup/icon-technologies/React_Js.svg',
+		text: "React Js",
+		index: 5,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/Java.svg',
@@ -22,16 +27,8 @@ const startupIcon: IStartupTechnologiesItem[] = [
 		text: "Node js",
 		index: 4,
 	},
-	{
-		imageSrc: '/img/startup/icon-technologies/React_Js.svg',
-		text: "React Js",
-		index: 5,
-	},
-	{
-		imageSrc: '/img/startup/icon-technologies/Typescript.svg',
-		text: "Typescript",
-		index: 6,
-	},
+	
+
 	{
 		imageSrc: '/img/startup/icon-technologies/Angular.svg',
 		text: "Angular",
@@ -97,6 +94,11 @@ const startupIcon: IStartupTechnologiesItem[] = [
 		imageSrc: '/img/startup/icon-technologies/dot-net-core.svg',
 		text: ".NET",
 		index: 20,
+	},
+	{
+		imageSrc: '/img/startup/icon-technologies/Python.svg',
+		text: "Python",
+		index: 2,
 	},
 ]
 
