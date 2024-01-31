@@ -47,32 +47,32 @@ const startupIcon: IStartupTechnologiesItem[] = [
 	{
 		imageSrc: '/img/startup/icon-technologies/dot-net-core.svg',
 		text: ".NET",
-		index: 10,
+		index: 9,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/PHP.svg',
 		text: "PHP",
-		index: 11,
+		index: 10,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/Python.svg',
 		text: "Python",
-		index: 12,
+		index: 11,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/django.svg',
 		text: "Django",
-		index: 13,
+		index: 12,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/r-lang.svg',
 		text: "R",
-		index: 14,
+		index: 13,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/Java.svg',
 		text: "Java",
-		index: 15,
+		index: 14,
 	},
 
 
@@ -80,30 +80,30 @@ const startupIcon: IStartupTechnologiesItem[] = [
 	{
 		imageSrc: '/img/startup/icon-technologies/AWS.svg',
 		text: "AWS",
-		index: 16,
+		index: 15,
 	},
 
 
 	{
 		imageSrc: '/img/startup/icon-technologies/docker.svg',
 		text: "Docker",
-		index: 17,
+		index: 16,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/kubernets.svg',
 		text: "Kubernets",
-		index: 18,
+		index: 17,
 	},
 	
 	{
 		imageSrc: '/img/startup/icon-technologies/selenium.svg',
 		text: "Selenium",
-		index: 19,
+		index: 18,
 	},
 	{
 		imageSrc: '/img/startup/icon-technologies/firebase.svg',
 		text: "Firebase",
-		index: 20,
+		index: 19,
 	},
 	
 
