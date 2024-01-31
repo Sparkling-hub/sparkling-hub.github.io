@@ -43,11 +43,7 @@ const startupIcon: IStartupTechnologiesItem[] = [
 		text: "C#",
 		index: 8,
 	},
-	{
-		imageSrc: '/img/startup/icon-technologies/C++.svg',
-		text: "C++",
-		index: 9,
-	},
+
 	{
 		imageSrc: '/img/startup/icon-technologies/dot-net-core.svg',
 		text: ".NET",
