@@ -6,7 +6,7 @@ import IService from '../../interface/service'
 import Service from '../service'
 
 
-const Services: React.FC<IService> = () => {
+const Services: React.FC = () => {
 
 	return (
 

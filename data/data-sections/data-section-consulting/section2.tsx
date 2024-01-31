@@ -18,7 +18,7 @@ const element = {
   header: header,
   image: null,
   background: 'bg-color-primary-dark', 
-  curvedClass: 'before:content-curved_dark_without_line before:w-full before:absolute',
+
   padding_bottom: "pb-40 custom-pb-60",
   index: 2,
 
