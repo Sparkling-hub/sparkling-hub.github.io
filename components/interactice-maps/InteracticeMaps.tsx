@@ -17,25 +17,16 @@ const InteracticeMaps: React.FC = () => {
 	const { currentMap, hovered, lastHovered, activeOfficePoint } = useSelector(selectMaps);
 
 	useEffect(() => {
-		const foundMap = mapsData.find((mapItem) => mapItem.id === 'world_all');
-
+		
 		let points = document.querySelectorAll('.office_point');
 
 		setupPointEventListeners(points);
 
-		window.addEventListener('resize', () =>{
-			if(!activeOfficePoint) return
-			updateElementPosition(activeOfficePoint)	
-		} );
-		window.addEventListener('scroll', () =>{
-			if(!activeOfficePoint) return
-			updateElementPosition(activeOfficePoint)
-		}
+	
 		
-		 );
-
+		
 		handleHover();
-		
+	
 
 		if (lastHovered && hovered !== lastHovered || (lastHovered && !hovered)) {
 			let elements = document.getElementById(lastHovered)?.children;
@@ -49,13 +40,11 @@ const InteracticeMaps: React.FC = () => {
 			}
 		}
 
-		if (activeOfficePoint) {
-			updateElementPosition(activeOfficePoint);
-		}
+	
 
 		return () => {
 			removePointEventListeners(points);
-			removeWindowEventListeners();
+		
 		};
 	}, [currentMap, hovered, lastHovered, activeOfficePoint, dispatch]);
 
@@ -94,16 +83,13 @@ const InteracticeMaps: React.FC = () => {
 		});
 	};
 
-	const removeWindowEventListeners = () => {
-		window.removeEventListener('resize', () => updateElementPosition(activeOfficePoint));
-		window.removeEventListener('scroll', () => updateElementPosition(activeOfficePoint));
-	};
+
 
 	const handlePointsClick = (e: any) => {		
 		let officeId = e.currentTarget.id;
 		updateElementPosition(officeId);		
 		dispatch(setActiveOfficePoint(officeId));
-		
+	  
 	};
 
 	const handleHoverOver = (e: any) => {
@@ -121,16 +107,20 @@ const InteracticeMaps: React.FC = () => {
 	const updateElementPosition = (activePoint: string | null) => {
 		if (!activePoint) return;
 		const svgPoint = document.getElementById(activePoint);
-
-		if (svgPoint) {
-			const rect = svgPoint?.getBoundingClientRect();
-			const topCoordinate = rect.top;
-			const leftCoordinate = rect.left;
-
-			dispatch(setActiveOfficePointCoords([topCoordinate, leftCoordinate]));
+		const parentElement = svgPoint?.parentElement;
+	  
+		if (svgPoint && parentElement) {
+		  const rect = svgPoint.getBoundingClientRect();
+		  const parentRect = parentElement.getBoundingClientRect();
+	  
+		  const relativeHeight = rect.top - parentRect.top - parentElement.scrollTop;
+		  const relativeWidth = rect.left - parentRect.left - parentElement.scrollLeft;
+	  
+		  dispatch(setActiveOfficePointCoords([relativeHeight, relativeWidth]));
 		}
-	};
-
+	  };
+	  
+	  
 	return (
 		<div className="flex-section block_map relative">
 			<div className="absolute inset-0 z-behind"></div>

@@ -25,10 +25,11 @@ const MapField: React.FC = () => {
     
     if (activeOfficePoint) dispatch(setActiveOfficePoint(''));
     dispatch(setOfficeCard(null));
+    e.stopPropagation();
   };
 
   return (
-    <div className="map-container pt-40 lg:col-span-9 lg:gh-4 lg:gh-4 lg:p-14 pt-global lg:block " style={{ position: 'relative' }}>
+    <div className="map-container pt-40 lg:col-span-9 lg:gh-4 lg:gh-4 lg:p-14 pt-global lg:block relative">
       <div className='lg:scale-90'>
         {mapsData[0] ? mapsData[0].image : ''}
       </div>
