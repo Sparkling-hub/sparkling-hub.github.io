@@ -4,31 +4,19 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMaps, setHovered, setActiveOfficePoint, setActiveOfficePointCoords } from '@/store/redusers/mapsSliceReduser';
 import mapsData from "@/data/data-maps";
+import { updateElementPosition } from '../helper/updateElementPosition';
 
 const MapSelectionSettings: React.FC = () => {
 	const dispatch = useDispatch();
 	const { hovered, activeOfficePoint } = useSelector(selectMaps);
 	const handlePointsClick = (activePoint: any) => {		
-		updateElementPosition(activePoint);		
+		dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));	
 		dispatch(setActiveOfficePoint(activePoint));
 		
 	};
 
-	const updateElementPosition = (activePoint: string | null) => {
-		if (!activePoint) return;
-		const svgPoint = document.getElementById(activePoint);
-		const parentElement = svgPoint?.parentElement;
-	  
-		if (svgPoint && parentElement) {
-		  const rect = svgPoint.getBoundingClientRect();
-		  const parentRect = parentElement.getBoundingClientRect();
-	  
-		  const relativeHeight = rect.top - parentRect.top - parentElement.scrollTop;
-		  const relativeWidth = rect.left - parentRect.left - parentElement.scrollLeft;
-	  
-		  dispatch(setActiveOfficePointCoords([relativeHeight, relativeWidth]));
-		}
-	  };
+
+	
 	  
 
 	return (

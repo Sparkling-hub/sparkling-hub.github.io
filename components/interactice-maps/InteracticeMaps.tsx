@@ -11,6 +11,7 @@ import {
 } from '@/store/redusers/mapsSliceReduser';
 import MapField from '@/components/map-field';
 import MapSelectionSettings from '@/components/map-selection-setting';
+import { updateElementPosition } from "../helper/updateElementPosition";
 
 const InteracticeMaps: React.FC = () => {
 	const dispatch = useDispatch();
@@ -87,7 +88,8 @@ const InteracticeMaps: React.FC = () => {
 
 	const handlePointsClick = (e: any) => {		
 		let officeId = e.currentTarget.id;
-		updateElementPosition(officeId);		
+	
+		dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
 		dispatch(setActiveOfficePoint(officeId));
 	  
 	};
@@ -104,21 +106,7 @@ const InteracticeMaps: React.FC = () => {
 	
 	};
 
-	const updateElementPosition = (activePoint: string | null) => {
-		if (!activePoint) return;
-		const svgPoint = document.getElementById(activePoint);
-		const parentElement = svgPoint?.parentElement;
-	  
-		if (svgPoint && parentElement) {
-		  const rect = svgPoint.getBoundingClientRect();
-		  const parentRect = parentElement.getBoundingClientRect();
-	  
-		  const relativeHeight = rect.top - parentRect.top - parentElement.scrollTop;
-		  const relativeWidth = rect.left - parentRect.left - parentElement.scrollLeft;
-	  
-		  dispatch(setActiveOfficePointCoords([relativeHeight, relativeWidth]));
-		}
-	  };
+
 	  
 	  
 	return (

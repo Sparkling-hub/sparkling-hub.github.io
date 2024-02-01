@@ -13,7 +13,6 @@ interface MapsState {
   activeOfficePoint: string | null;
   activeOfficePointCoords: number[];
   officeCard: IOfficeCards | null;
-  
 
 }
 
