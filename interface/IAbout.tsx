@@ -5,7 +5,7 @@ interface IAbout {
 	content: string;
 	header: string;
 	number: number;
-	margin: string;
+	margin?: string;
 	
 }
 export default IAbout
