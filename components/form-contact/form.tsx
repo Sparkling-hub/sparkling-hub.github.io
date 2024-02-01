@@ -43,8 +43,8 @@ const Form: React.FC = () => {
       className="form flex items-center w-full m-auto relative"
     >
       <div className="flex flex-col w-3/5 m-3">
-        <div className="relative">
-          {checkForm.name.length ? <p className="absolute top-[-5%] text-red-500 font-bold ml-4">Fill in the  fields:</p> : ''}
+   
+          
           <Input
             type="text"
             name="name"
@@ -52,15 +52,8 @@ const Form: React.FC = () => {
             placeholder="Full Name*"
             onChange={handleInputChange}
             checked={checkForm.name.length>0}
-          />  </div>
-        <div className="relative">
-          {checkForm.email.length || check===false ? (
-            check === false && (
-              <p className="absolute top-[-5%] text-red-500 font-bold ml-4">
-                {!checkForm.email.length ? 'Invalid Email' : checkForm.email}
-              </p>
-            )
-          ) : ""}
+          /> 
+       
           <Input
             type="email"
             name="email"
@@ -69,20 +62,20 @@ const Form: React.FC = () => {
             placeholder="Email*"
             checked={  check === false && checkForm.email.length>0 || check===false}
           />
-        </div>
-        <Input
+       
+       <Input
           type="text"
           name="company"
           value={formData.company}
           placeholder="Company"
           onChange={handleInputChange}
-         
+     
         />
         <Select name="select"
           value={formData.select}
           onChange={handleInputChange} />
-        <div className="relative">
-          {checkForm.message.length ? <p className="absolute top-[-5%] text-red-500 font-bold ml-4">Fill in the  fields:</p> : ''}
+     
+        
           <TextArea
             name="message"
             placeholder="Tell us about your project and goals*"
@@ -90,7 +83,7 @@ const Form: React.FC = () => {
             onChange={handleInputChange}
             checked={checkForm.message.length>0}
           />
-        </div>
+        
         <br />
         <div className="w-fit m-auto relative">
           <Submit

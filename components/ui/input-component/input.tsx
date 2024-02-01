@@ -9,18 +9,12 @@ interface InputProps {
 checked?: boolean;
 }
 
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectForm,
 
-
-
-} from '@/store/redusers/FormSliceReduser';
 
 const Input: React.FC<InputProps> = ({ name, type, placeholder, value, onChange,checked }) => {
-  const { formData } = useSelector(selectForm);
 
-  if(name=='email'||name=='messege'||name=='name')
+
+
 
   return (
     <input

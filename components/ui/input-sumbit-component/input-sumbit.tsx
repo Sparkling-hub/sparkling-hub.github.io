@@ -53,7 +53,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
             dispatch(setCheckFormByKey({ key: key, value: 'Fill in the following fields:' }))
           ))
         }
-        setResult(<p>Fill in all the fields</p>)
+       
         return;
       }
     };
