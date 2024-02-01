@@ -8,7 +8,7 @@ const header =
 const content = <><Questions/><h3 className="text-center text-4xl text-teal-600 mt-8">Any other burning questions?</h3>
 
 </>
-const button= <Button href={"/contact"} text={"Let us know"}/>
+const button= <div className="flex justify-center m-auto"><Button href={"/contact"} text={"Let us know"}/></div>
 
 const element = {
   content: content,
