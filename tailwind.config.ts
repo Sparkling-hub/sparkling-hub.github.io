@@ -40,7 +40,8 @@ const config: Config = {
         primary: {
           light: '#86C0BB',          
         },
-      }
+      },
+ 
 
     }, 
   },
