@@ -43,13 +43,14 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
         .map(key =>  key);
 
 
+        {
           emptyKeys.map((key: any) => (
             dispatch(setCheckFormByKey({ key: key, value: 'Fill in the following fields:' }))
           ))
-        
+        }
        
-        return;
-      }
+     
+      
     };
   }
 
