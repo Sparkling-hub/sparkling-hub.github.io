@@ -1,11 +1,10 @@
 const header = (
-  <h1>
-    <strong className="s2">Contact Us</strong>
+ <h1 className="text-5xl my-4 text-teal-800 font-bold"> Contact Us
   </h1>
 );
 
 const content = (
-  <p>
+  <p className="text-xl">
     <strong>Get in touch!</strong>
     <br />
     Drop us a message to learn more about our innovative solutions.
