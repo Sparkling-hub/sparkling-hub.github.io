@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMaps, setHovered, setActiveOfficePoint, setActiveOfficePointCoords } from '@/store/redusers/mapsSliceReduser';
 import mapsData from "@/data/data-maps";
@@ -16,6 +16,19 @@ const MapSelectionSettings: React.FC = () => {
 	};
 
 
+	useEffect(() => {
+		const handleResize = () => {
+		  if (activeOfficePoint) {
+			dispatch(setActiveOfficePointCoords(updateElementPosition(activeOfficePoint)));
+		  }
+		};
+	
+		window.addEventListener('resize', handleResize);
+	
+		return () => {
+		  window.removeEventListener('resize', handleResize);
+		};
+	  }, [activeOfficePoint, dispatch]);
 	
 	  
 
