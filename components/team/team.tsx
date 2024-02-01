@@ -17,10 +17,10 @@ const Benefit: React.FC<ITeam> = ({ content, header, index, marginRight, marginL
 					
 		
 				<div className='flex flex-col '>
-					<h3 className='flex text-2xl m-2 px-8 w-auto  break-all flex flex-reserve text-teal-700'>{header}</h3>
+					<h3 className='flex text-2xl m-2 px-8 w-auto  break-all flex flex-reserve text-teal-700 font-light'>{header}</h3>
 				
 					<div className={`m-2 min-h-[60px] w-7/8 leading-8 rounded-3xl py-5 px-8 relative ${(index % 2) ? "bg-violet-50" : "bg-teal-50"}`}>
-					<div className='text-5xl  left-[-50px] top-[35%] absolute'>{index}</div>
+					<div className='text-5xl  left-[-70px] top-[35%] absolute'>{index}</div>
 						{content}
 						</div>
 				</div>
