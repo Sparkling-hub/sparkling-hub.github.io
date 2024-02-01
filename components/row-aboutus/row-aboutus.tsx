@@ -9,8 +9,8 @@ const Benefits: React.FC = () => {
 	
 	return (
 
-		<div className='flex-col m-5'>
-	<img src='/img/about/principles.svg' className='absolute'></img>
+		<div className='flex-col m-5 relative '>
+	<img src='/img/about/principles.svg' className='hidden lg:block relative left-[-200px] z-10'></img>
 			{dataAbout.map((about) => (
 				<About key={Number(about.number)} {...about} />
 			

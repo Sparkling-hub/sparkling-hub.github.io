@@ -1,25 +1,43 @@
 
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import IAbout from '@/interface/IAbout';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+const Benefit: React.FC<IAbout> = ({ content, header, number,margin }) => {
+	const uniqueId = `aos-${number}`;
+	useEffect(() => {
+		AOS.init({
+			duration: 2000,
+			once: false, 
+			mirror: true,
 
-const Benefit: React.FC<IAbout> = ({ content, header, number }) => {
+		});
 
+
+		AOS.refresh();
+	}, []);
 	return (
 
-		<div className={`flex justify-between items-center relative`}>
-			<div className='bg-teal-500 border-teal-600 border-[1px] font-medium text-2xl p-0.2 absolute rounded-full z-10 flex'>
+		<div className={`justify-between items-center ${margin} flex relative lg:absolute w-full`}data-aos-delay={500 * number}
+		data-aos-once={true}
+		data-aos-mirror={true}
+		data-aos-offset={-number*100}
+	
+		data-aos={`fade`}
+		id={uniqueId}>
+			<div className='lg:hidden bg-teal-500 border-teal-600 border-[1px] font-medium text-2xl p-0.2 absolute rounded-full z-10 flex'>
 				<div className='rounded-full justify-center border-black border-[1px] flex items-center bg-teal-700 w-20 bg-teal-800 h-20 text-center font-bold text-white -4  text-5xl'>{number}</div>
 
 			</div>
-			<div className='w-[60%] flex-col justify-center  px-12 py-2 bg-green-color rounded-2xl px-10 relative  mx-10 my-12'>
+			<div className='lg:w-[50vw] lg:max-w-[50%] w-full flex-col flex justify-center lg:h-52 p-8 lg:pl-12 lg:pr-4 lg:py-2 bg-green-color rounded-4xl pl-20 relative  mx-10 my-5'>
 
 
-				<h3 className='ml-3 flex p-1 items-center text-black break-all'></h3>
-				<div className='my-3 mx-2 min-h-[60px] leading-8 flex flex-col'>
+				<h3 className='ml-3 flex p-1 items-center  text-black break-all'></h3>
+				<div className='min-h-[60px] leading-8 flex flex-col'>
 					<div className='text-2xl text-teal-800 font-bold uppercase'>{header}</div>
-					{content}</div>
+					<div className='text-lg'>{content}</div></div>
 			</div>
 
 

@@ -28,7 +28,7 @@ const config: Config = {
         'active-office-color': '#C73926',
         // 'partner-office-color': '#D3E5EB',
         'partner-office-color': '#3498db',
-        'green-color': '#9fc236'
+        'green-color': '#AFCB1A'
       },
       borderColor: {
         'primary-light-light': '#CBF0E9',
