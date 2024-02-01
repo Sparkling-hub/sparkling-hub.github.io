@@ -24,7 +24,9 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
   const [result, setResult] = useState<any>('');
   const { formData } = useSelector(selectForm);
   const dispatch = useDispatch();
+
   const handleSubmit = async (e: SyntheticEvent) => {
+
     e.preventDefault();
     dispatch(setCheck(selectIsValidEmail(formData.email)));
     if (disabled && selectIsValidEmail(formData.email)) {
@@ -35,16 +37,12 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
         setResult(<p>{error.message}</p> || <p>An error occurred</p>);
       }
     }
+
     else {
       const requiredKeys: string[] = ['name', 'email', 'message'];
       requiredKeys
         .filter(key => (formData as any)[key] === '')
-        .map(key =>  { dispatch(setCheckFormByKey({ key: key, value: 'Fill in the following fields:' }))});
-
-
-       
-     
-      
+        .map(key => { dispatch(setCheckFormByKey({ key: key, value: 'Fill in the following fields:' })) });
     };
   }
 
@@ -55,16 +53,14 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
       <input
         name={name}
         type={type}
-
         className={`no-underline text-white py-3 px-8  rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
         onClick={handleSubmit}
       />
       <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
-        {typeof result === 'object' || result === '' ? (
 
+        {typeof result === 'object' || result === '' ? (
           <h3 className='text-red-500'>{result}</h3>
         ) : (
-
           <h3 className='text-teal-600 '>{result}</h3>
         )}
       </div>
