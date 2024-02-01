@@ -43,48 +43,49 @@ const Form: React.FC = () => {
       className="form flex items-center w-full m-auto relative"
     >
       <div className="flex flex-col w-3/5 m-3">
-   
-          
-          <Input
-            type="text"
-            name="name"
-            value={formData.name}
-            placeholder="Full Name*"
-            onChange={handleInputChange}
-            checked={checkForm.name.length>0}
-          /> 
-       
-          <Input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder="Email*"
-            checked={  check === false && checkForm.email.length>0 || check===false}
-          />
-       
-       <Input
+
+
+        <Input
+          type="text"
+          name="name"
+          value={formData.name}
+          placeholder="Full Name*"
+          onChange={handleInputChange}
+          checked={checkForm.name.length > 0}
+        />
+
+        <Input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          placeholder="Email*"
+          checked={check === false && checkForm.email.length > 0 || check === false}
+        />
+
+        <Input
           type="text"
           name="company"
           value={formData.company}
           placeholder="Company"
           onChange={handleInputChange}
-     
+
         />
         <Select name="select"
           value={formData.select}
           onChange={handleInputChange} />
-     
-        
-          <TextArea
-            name="message"
-            placeholder="Tell us about your project and goals*"
-            value={formData.message}
-            onChange={handleInputChange}
-            checked={checkForm.message.length>0}
-          />
-        
+
+
+        <TextArea
+          name="message"
+          placeholder="Tell us about your project and goals*"
+          value={formData.message}
+          onChange={handleInputChange}
+          checked={checkForm.message.length > 0}
+        />
+
         <br />
+        
         <div className="w-fit m-auto relative">
           <Submit
             type="submit"
