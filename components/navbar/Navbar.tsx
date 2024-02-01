@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
 
           <Link href="/" className="-m-1.5 p-1.5 max-w-[23rem] lg:min-w-[18rem]">
             <span className="sr-only">Your Company</span>
-            <img className="h-16 pr-7 lg:h-auto w-auto object-contain" src="/img/navbar/logo2.png" alt="Logo" />
+            <img className="h-16 pr-7 lg:h-auto w-auto object-contain" src="/img/navbar/logo.svg" alt="Logo" />
           </Link>
 
         </div>
