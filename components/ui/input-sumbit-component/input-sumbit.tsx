@@ -40,19 +40,13 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
 
       const emptyKeys: string[] = requiredKeys
         .filter(key => (formData as any)[key] === '')
-        .map(key => {
-          if (key == "email") {
-          }
-          return key
-        });
+        .map(key =>  key);
 
 
-      if (emptyKeys.length > 0) {
-        {
           emptyKeys.map((key: any) => (
             dispatch(setCheckFormByKey({ key: key, value: 'Fill in the following fields:' }))
           ))
-        }
+        
        
         return;
       }
