@@ -1,6 +1,6 @@
 
 const header =
-  <h2 className="m-auto mt-20 text-4xl ">Who <strong className="text-teal-600 font-bold">We Are</strong></h2>
+  <h2 className="m-auto mt-20 text-4xl w-fit">Who <strong className="text-teal-600 font-bold">We Are</strong></h2>
 
 
 const content =
@@ -25,7 +25,7 @@ const content =
 const element = {
   content: content,
   header: header,
-  curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute before: bottom-10',
+
   background: 'bg-color-primary-light', 
   id: "whoSparkling"
 
