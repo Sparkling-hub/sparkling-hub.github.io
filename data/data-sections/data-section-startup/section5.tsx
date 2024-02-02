@@ -5,8 +5,8 @@ const header =
     <h2 className="p-4">
         <div className=" text-5xl mb-8 text-black font-light mx-auto w-fit ">
 
-            <span className="color-primary-dark font-bold">Assisting you </span>
-        all the way through
+            <span className="color-primary-dark font-bold">Assisting you</span>{' '}
+            all the way through
         </div>
         <div className="flex-col justify-center text-lg w-fit m-auto px-14">
             <div className="text-center text-black font-normal pb-4">
@@ -29,7 +29,7 @@ const content = <StartupAssistings />
 const element = {
     content: content,
     header: header,
- 
+
     background: 'bg-color-primary-light',
     index: 4,
 

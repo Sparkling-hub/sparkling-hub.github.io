@@ -10,10 +10,10 @@ const header =
             <span className="text-teal-700 font-medium">MVP in 5 simple steps</span>
         </div>
         <div className="text-center text-black font-normal px-40 pb-20 text-lg">
-       
-                Do you have a ground-breaking idea? Want to develop and launch your MVP effectively and affordably? We have got you covered!
-                Our streamlined 5-step process is designed just for that:
-       
+
+            Do you have a ground-breaking idea? Want to develop and launch your MVP effectively and affordably? We have got you covered!
+            Our streamlined 5-step process is designed just for that:
+
         </div>
 
     </h2>
@@ -24,7 +24,7 @@ const content = <StartupStepByStep />
 const element = {
     content: content,
     header: header,
-   
+
     background: 'bg-color-primary-light',
     index: 4,
 

@@ -8,7 +8,7 @@ import ConsultingItemList from "@/components/consulting-item-list"
 const header =
     <div>
         <h2 className="text-5xl mt-24 text-center font-light">
-            <span className="text-teal-500 mx-4 font-medium">Customised Solutions</span>
+            <span className="text-teal-500 font-medium">Customised Solutions</span>{' '}
             for Every Project
         </h2>
         <br />
