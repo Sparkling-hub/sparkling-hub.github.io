@@ -4,7 +4,7 @@ import StartupsItemList from "@/components/startup-item-list"
 
 
 const header =
-	<h2 className="flex-col items-center  text-6xl">
+	<h2 className="text-5xl">
 		<div className="flex justify-center">
 			<span className="color-primary-light mx-4">Your</span>
 			<span className="text-black font-medium">Dream Team</span>

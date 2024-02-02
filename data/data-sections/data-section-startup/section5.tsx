@@ -2,14 +2,14 @@
 import StartupAssistings from "@/components/startup-assistings"
 
 const header =
-    <h2 className="flex-col items-center justify-center  p-4">
-        <div className="flex justify-center text-5xl mb-4">
+    <h2 className="p-4">
+        <div className=" text-5xl mb-8 text-black font-light mx-auto w-fit ">
 
-            <span className="color-primary-dark font-bold pb-5">Assisting you</span>
-            <span className="text-black font-light mx-4 pb-20">all the way through</span>
+            <span className="color-primary-dark font-bold">Assisting you </span>
+        all the way through
         </div>
-        <div className="flex-col justify-center text-xl">
-            <div className="text-center text-black font-normal px-40 pb-4">
+        <div className="flex-col justify-center text-lg w-fit m-auto px-14">
+            <div className="text-center text-black font-normal pb-4">
                 While the MVP marks the starting line, it is not the finish line.
                 It is the foundational groundwork imperative for a successful future.
                 Our approach in developing an MVP keeps your future in
