@@ -6,8 +6,8 @@ import StartupStepByStep from "@/components/startup-step-by-step"
 const header =
     <h2 className="p-4">
         <div className=" text-5xl mb-4 text-black font-light text-center pb-5">
-            Launching an
-            <span className="text-teal-700 font-medium"> MVP in 5 simple steps</span>
+            Launching an{" "}
+            <span className="text-teal-700 font-medium">MVP in 5 simple steps</span>
         </div>
         <div className="text-center text-black font-normal px-40 pb-20 text-lg">
        
