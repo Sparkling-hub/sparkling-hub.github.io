@@ -3,8 +3,8 @@
 
 const header =
     <h2 className="text-5xl mx-auto w-fit mt-12 mb-28">
-        How
-        <span className="text-teal-500 font-medium"> We Work</span>
+        How{" "}
+        <span className="text-teal-500 font-medium">We Work</span>
 
     </h2>
 
