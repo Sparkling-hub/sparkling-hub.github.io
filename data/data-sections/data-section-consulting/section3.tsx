@@ -13,11 +13,11 @@ const header =
         </h2>
         <br />
         <h3 className="text-3xl text-center ">
-            Understanding that
-            <span className="text-teal-500 font-normal"> “one size, does NOT fit all”</span>
-            , our Consulting Projects are fully adaptable to meet your needs.
-            Explore some of the
-            <span className="text-teal-500 font-normal"> challenges we can solve together.</span>
+            Understanding that{' '}
+            <span className="text-teal-500 font-normal">“one size, does NOT fit all”</span>{/*
+  */}, our Consulting Projects are fully adaptable to meet your needs.
+            Explore some of the{' '}
+            <span className="text-teal-500 font-normal">challenges we can solve together.</span>
         </h3>
 
     </div>
