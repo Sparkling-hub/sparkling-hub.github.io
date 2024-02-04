@@ -1,26 +1,35 @@
-
+// StartupStepByStep.jsx
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectStartupStepByStep, setHighlightedIndices } from '@/store/redusers/startupStepByStepSliceReduser';
 import dataStartupSteps from '@/data/data-sections/data-section-startup/data-startup-step-by-step';
 import StartupStepItem from '../startup-step-item';
 import Button from '../button';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const StartupStepByStep: React.FC = () => {
   const dispatch = useDispatch();
   const { highlightedIndices } = useSelector(selectStartupStepByStep);
 
   useEffect(() => {
+    AOS.init({
+      duration: 500,
+      once: false,
+      mirror: true,
+    });
+
     const handleScroll = () => {
       const elements = document.querySelectorAll('.s-b-s-title');
-
       elements.forEach((element, index) => {
         const rect = element.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight / 2 && rect.bottom >= 0;
-
-        if (isVisible && !highlightedIndices.includes(index + 1)) {
-          dispatch(setHighlightedIndices([...highlightedIndices, index + 1]));
-        }
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+       
+        if (isVisible && !highlightedIndices[index] && index ==1) {
+          dispatch(setHighlightedIndices([...highlightedIndices, true]))
+        }  
+        else if (isVisible && !highlightedIndices[index]){      setTimeout(() => {
+          dispatch(setHighlightedIndices([...highlightedIndices, true])); }, 1800); } 
       });
     };
 
@@ -35,10 +44,10 @@ const StartupStepByStep: React.FC = () => {
     <div className='flex flex-wrap justify-center items-center'>
       <ol>
         {dataStartupSteps.map((step) => (
-          <StartupStepItem key={Number(step.index)} {...step} highlighted={highlightedIndices.includes(Number(step.index))} />
+          <StartupStepItem key={Number(step.index)} {...step} highlighted={highlightedIndices[step.index]} />
         ))}
       </ol>
-      <div className='m-20'>
+      <div className='m-7'>
         <Button href="/contact" text="Embark in your MVP adventure!" />
       </div>
     </div>

@@ -720,3 +720,10 @@ li:not(:last-child).highlight .s-b-s-text {
 
 	transform: translateX(var(--grid-x-offset-reverse, 0));
 }
+.animated-line {
+	background-color: #ffffff;
+	height: 2px;
+	position: absolute;
+	z-index: -1;
+	transition: background-color 0.5s ease; /* Adjust the duration and easing as needed */
+  }
