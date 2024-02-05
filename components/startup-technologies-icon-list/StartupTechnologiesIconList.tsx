@@ -12,28 +12,26 @@ const StartupTechnologiesIconList: React.FC = () => {
   const firstPart = dataStartups.slice(0, middleIndex);
   const secondPart = dataStartups.slice(middleIndex);
   const duplicatedIconsOne = [...firstPart, ...firstPart];
-  console.log(duplicatedIconsOne)
   const duplicatedIconsTwo = [...secondPart, ...secondPart];
   return (
     <div className='flex flex-col justify-center items-center  overflow-hidden block 2xl:relative 2xl:w-[1500px] right-[110px]'>
       <div className='container marquee-track'>
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
-          {duplicatedIconsOne.map((startup, number) => (
-            <div className='startup-icon'  key={startup.index+10*number}>
-              <StartupIcon {...startup} />
-            </div>
-          ))}
+        {duplicatedIconsOne.map((startup, index) => (
+  <div className='startup-icon' key={`${startup.index || ''}_${index}`}>
+    <StartupIcon {...startup} />
+  </div>
+))}
         </div>
       </div>
       <div className='container-reverse marquee-track-reverse'>
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
-          {duplicatedIconsTwo.map((startup,number) => (     
-            <div className='startup-icon' key={startup.index+10*number}> 
-    
-              <StartupIcon {...startup} />
-            </div>
+          {duplicatedIconsTwo.map((startup, index) => (
+            <div className='startup-icon' key={`${startup.index || ''}_${index}`}>
+            <StartupIcon {...startup} />
+          </div>
           ))}
         </div>
       </div>
