@@ -1,36 +1,14 @@
 // StartupStepItem.jsx
 
 import IStartupStepItem from '../../interface/IStartupStepItem';
-import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
+import React from 'react';
+
 import 'aos/dist/aos.css'; // Import AOS styles
-import { setAnimation } from '@/store/redusers/startupStepByStepSliceReduser';
-import { useDispatch, useSelector } from 'react-redux';
+
 
 const StartupStepItem: React.FC<IStartupStepItem> = ({ title, subtext, index, highlighted }) => {
-	const dispatch = useDispatch();
-	const animation = useSelector(setAnimation);
-	const [animationTriggered, setAnimationTriggered] = useState(false);
 
-	useEffect(() => {
-		const handleTransitionEnd = () => {
-			AOS.refresh();
-			setAnimationTriggered(true);
-		};
 
-		const elements = document.querySelectorAll('.s-b-s-title');
-
-		elements.forEach((element, i) => {
-			const rect = element.getBoundingClientRect();
-			const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-		})
-
-		return () => {
-			elements.forEach((element) => {
-				element.removeEventListener('transitionend', handleTransitionEnd);
-			});
-		};
-	}, [dispatch, highlighted, index, animationTriggered]);
 
 	return (
 		<li className={`flex-col px-40 flex items-center relative  pb-[5rem]`}>
@@ -39,8 +17,8 @@ const StartupStepItem: React.FC<IStartupStepItem> = ({ title, subtext, index, hi
 				<path
 					d="M0 3H434C456.091 3 474 20.9086 474 43V359C474 381.091 456.091 399 434 399H0"
 					stroke="#1A5858"
-					stroke-width="5"
-					stroke-dasharray="1500" stroke-dashoffset="1500"
+					strokeWidth="5"
+					strokeDasharray="1500" strokeDashoffset="1500"
 				>
 					<animate
 						attributeName="stroke-dashoffset"
