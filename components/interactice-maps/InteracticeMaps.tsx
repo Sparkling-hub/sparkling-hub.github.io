@@ -35,7 +35,7 @@ const InteracticeMaps: React.FC = () => {
 					element.classList.toggle('hidden');
 					element.classList.toggle('block');
 				
-					dispatch(setLastHovered(null));
+					dispatch(setLastHovered(''));
 				}
 			}
 		}

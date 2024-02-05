@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectMaps, setActiveOfficePoint, setHovered, setLastHovered, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
+import { selectMaps, setActiveOfficePoint, setHovered, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
 import Card from '@/components/card';
 import mapsData from "@/data/data-maps";
 const MapField: React.FC = () => {
