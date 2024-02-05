@@ -2,6 +2,7 @@ import React from 'react';
 import dataStartups from '@/data/data-sections/data-section-startup/data-startup-icons';
 import StartupIcon from '@/components/startup-icon';
 import Link from 'next/link';
+import { v4 as uuidv4 } from 'uuid';
 
 
 const StartupTechnologiesIconList: React.FC = () => {
@@ -19,7 +20,7 @@ const StartupTechnologiesIconList: React.FC = () => {
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
         {duplicatedIconsOne.map((startup, index) => (
-  <div className='startup-icon' key={`${startup.index || ''}_${index}`}>
+  <div className='startup-icon' key={uuidv4()}> 
     <StartupIcon {...startup} />
   </div>
 ))}
@@ -29,7 +30,7 @@ const StartupTechnologiesIconList: React.FC = () => {
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 
           {duplicatedIconsTwo.map((startup, index) => (
-            <div className='startup-icon' key={`${startup.index || ''}_${index}`}>
+            <div className='startup-icon' key={uuidv4()}> 
             <StartupIcon {...startup} />
           </div>
           ))}
