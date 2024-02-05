@@ -16,6 +16,7 @@ const header =
             </p>
      
 
+
     </div>
 
 const content = <StartupStepByStep />
@@ -24,9 +25,9 @@ const content = <StartupStepByStep />
 const element = {
     content: content,
     header: header,
-   
+
     background: 'bg-color-primary-light',
     index: 4,
-    margin_bottom: 'mb-12'
+
 }
 export default element

@@ -244,16 +244,6 @@ nav {
 	}
 }
 
-#form-contact h3 {
-	text-align: center;
-	font-size: 25px;
-	margin: 50px;
-
-	& span {
-		color: #17cfc2;
-		font-weight: $weight-text;
-	}
-}
 
 .startup-icon {
 	flex-direction: column;
@@ -579,17 +569,6 @@ nav {
 }
 
 
-#team {
-	& h1 {
-		color: $color6;
-	}
-
-	& .s2 {
-
-		color: $color7;
-		font-weight: 700;
-	}
-}
 
 :root {
 	--grid-x-offset: 20px;

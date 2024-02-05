@@ -37,8 +37,10 @@ const StartupStepItem: React.FC<IStartupStepItem> = ({ title, subtext, index, hi
 				<div className={`text-primary-darkTeal text-center w-[315px] h-[50px] flex items-center justify-center font-bold text-2xl ${highlighted ? 'highlight' : ''}`}>{title}</div>
 			</div>
 
+
 			<div className='s-b-s-text text-center'>
 				<div className='mx-5  h-auto lg:h-[10rem] pt-5 px-22 text-xl font-normal'>{subtext}</div>
+
 			</div>
 		</li>
 	);
