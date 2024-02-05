@@ -17,7 +17,7 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      borderRadius: {
+      borderRadius: { 
         '4xl': '2rem',
         '50procent': '50%'
       },
@@ -38,7 +38,9 @@ const config: Config = {
       },
       colors: {
         primary: {
-          light: '#86C0BB',          
+          light: '#86C0BB', 
+          yellow: '#AECA13',
+          darkTeal:'#1A5858'      
         },
       },
  
