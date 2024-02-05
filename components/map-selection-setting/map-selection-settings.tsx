@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectMaps, setHovered, setActiveOfficePoint, setActiveOfficePointCoords } from '@/store/redusers/mapsSliceReduser';
+import { selectMaps, setHovered, setActiveOfficePoint, setActiveOfficePointCoords, setLastHovered } from '@/store/redusers/mapsSliceReduser';
 import mapsData from "@/data/data-maps";
 import { updateElementPosition } from '../helper/updateElementPosition';
 
@@ -12,9 +12,10 @@ const MapSelectionSettings: React.FC = () => {
 	const handlePointsClick = (activePoint: any) => {		
 		dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));	
 		dispatch(setActiveOfficePoint(activePoint));
+	
 		
 	};
-
+	console.log(hovered);
 
 	useEffect(() => {
 		const handleResize = () => {

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectMaps, setActiveOfficePoint, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
+import { selectMaps, setActiveOfficePoint, setHovered, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
 
 const Card: React.FC = () => {
   const dispatch = useDispatch();
@@ -19,12 +19,13 @@ const Card: React.FC = () => {
     ) {
       dispatch(setOfficeCard(null));
       dispatch(setActiveOfficePoint(''));
+      dispatch(setHovered(null))
     }
   };
 
 
   const handleMapsClick = (e: any) => {
-    
+    dispatch(setHovered(null))
     dispatch(setActiveOfficePoint(''));
     dispatch(setOfficeCard(null));
     e.stopPropagation();
@@ -54,7 +55,7 @@ const Card: React.FC = () => {
 
   return (
     <div ref={cardRef}
-      className={`absolute h-96  ${(isVisible)  ? 'opacity-95 top-[100%]' : 'opacity-0 top-[100%]'} z-[80] text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 transition-height duration-300 ease-in-out`}
+      className={`absolute h-96  ${(isVisible)  ? 'opacity-95 top-[100%] z-[1] ' : 'opacity-0 top-[100%] z-[-1] '} text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 transition-height duration-300 ease-in-out`}
       style={{ top: `${Math.round(activeOfficePointCoords[0]-30)}px`, left: `${Math.round(activeOfficePointCoords[1]+100)}px` }}
     > <div className={`relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden ease-out lg:delay-[500ms]  transition-height  duration-500 ${isVisible ? 'h-96 top-[0%]' : 'h-0 top-[100%]'}`} >
         <div className={` p-global lg:absolute w-full left-0  p-8  overflow-hidden `}>

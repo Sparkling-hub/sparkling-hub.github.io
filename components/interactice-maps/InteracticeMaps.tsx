@@ -23,20 +23,19 @@ const InteracticeMaps: React.FC = () => {
 
 		setupPointEventListeners(points);
 
-	
-		
 		
 		handleHover();
 	
 
 		if (lastHovered && hovered !== lastHovered || (lastHovered && !hovered)) {
 			let elements = document.getElementById(lastHovered)?.children;
-
+	
 			if (elements) {
 				for (const element of elements) {
 					element.classList.toggle('hidden');
 					element.classList.toggle('block');
-					dispatch(setLastHovered(''));
+				
+					dispatch(setLastHovered(null));
 				}
 			}
 		}
@@ -72,7 +71,8 @@ const InteracticeMaps: React.FC = () => {
 	const setupPointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
 			element.addEventListener('click', handlePointsClick);
-
+			element.addEventListener('mouseover', handleHoverOver);
+			element.addEventListener('mouseout', handleHoverOut);
 		});
 	};
 

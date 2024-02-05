@@ -704,7 +704,7 @@ li:not(:last-child).highlight .s-b-s-text {
 	transform: translateX(var(--grid-x-offset, 0));
 	transition: transform 0.6s ease-out;
 }
-
+.office_point{z-index: 10;}
 .container:hover {
 	--grid-x-offset: 0px;
 
