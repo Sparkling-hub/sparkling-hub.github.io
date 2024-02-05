@@ -44,4 +44,4 @@ const StartupStepItem: React.FC<IStartupStepItem> = ({ title, subtext, index, hi
 	);
 };
 
-export default StartupStepItem;
+export default StartupStepItem;	
