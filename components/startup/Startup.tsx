@@ -11,14 +11,14 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 			<div className='basis-5/6 flex-col justify-center  p-4'>
 
-				<div className='flex my-2'>
+				<div className='flex my-2 mx-3 items-end'>
 
-					<div><img className='w-5 h-5 inline-block mx-4' src='/img/right-arrow-circle.svg' alt="" /></div>
-					<div className='text-emerald-900 font-medium'>{header}</div>
+					<div><img className='w-7 h-7 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" /></div>
+					<div className='text-emerald-900 font-medium text-2xl'>{header}</div>
 
 				</div>
 
-				<div className='mx-4 my-2'>{content}</div>
+				<div className='mx-4 my-2 text-xl'>{content}</div>
 
 			</div>
 

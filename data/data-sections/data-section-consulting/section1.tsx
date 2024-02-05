@@ -1,15 +1,16 @@
 
 
 const header =
-  <h1 className="flex-col items-center justify-start">
-    <div className="font-bold text-4xl 2xl:text-6xl mr-4">IT Consulting</div>
+  <h1 className="text-5xl font-bold text-teal-800 leading-[50px] mb-10">
+    IT Consulting
     <br />
-    <div className="2xl:text-6xl text-4xl color-primary-light">Empowering</div> 
-    <div className="font-bold text-4xl 2xl:text-6xl">Your Digital Growth</div> 
+   <span className="font-light text-teal-800">Empowering</span>
     <br />
+  <span className="font-bold">Your Digital Growth</span>
+   
   </h1>
 
-const content = <p>In the face of challenges or in pursuit of business evolution, a thoughtful IT consultation is essential. Tailored to your unique needs and objectives our guidance is designed to steer your business on the right track!</p>       
+const content = <p className="text-xl">In the face of challenges or in pursuit of business evolution, a thoughtful IT consultation is essential. Tailored to your unique needs and objectives our guidance is designed to steer your business on the right track!</p>       
   
 
 
