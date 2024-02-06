@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-between   ">
             <Link href="/" className="-m-1.5 pt-1 select-none">
               <span className="sr-only">Your Company</span>
-              <img className="h-16" src="/img/navbar/logo2.png" alt="Logo" />
+              <img className="h-16" src="/img/navbar/logo.svg" alt="Logo" />
             </Link>
             <button
               type="button"
