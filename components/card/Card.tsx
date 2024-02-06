@@ -1,52 +1,73 @@
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectMaps, setActiveOfficePoint } from '@/store/redusers/mapsSliceReduser';
+import { selectMaps, setActiveOfficePoint, setHovered, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
 
 const Card: React.FC = () => {
   const dispatch = useDispatch();
+  const cardRef = useRef<HTMLDivElement>(null);
   const { officeCard, activeOfficePointCoords } = useSelector(selectMaps);
   const [isVisible, setIsVisible] = useState(false);
+  const handleClickOutside = (e: MouseEvent) => {
+    const points = document.querySelectorAll('.office_point');
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, [officeCard]);
-
-  const updateElementPosition = (top: number, left: number): void => {
-    const cardElement = officeCard ? document.getElementById(officeCard?.id) : '';
-    if (cardElement) {
-      cardElement.style.top = `${top}px`;
-      cardElement.style.left = `${left}px`;
+    if (
+      cardRef.current &&
+      !cardRef.current.contains(e.target as Node) &&
+      !Array.from(points).some((point) => point.contains(e.target as Node)) 
+    ) {
+      dispatch(setOfficeCard(null));
+      dispatch(setActiveOfficePoint(''));
+      dispatch(setHovered(null))
     }
   };
 
-  const handleScroll = () => {
-    const topCoordinate = window.scrollY + activeOfficePointCoords[0];
-    const leftCoordinate = activeOfficePointCoords[1];
-    updateElementPosition(topCoordinate, leftCoordinate);
+
+  const handleMapsClick = (e: any) => {
+    dispatch(setHovered(null))
+    dispatch(setActiveOfficePoint(''));
+    dispatch(setOfficeCard(null));
+    e.stopPropagation();
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+
+    if(officeCard==null){
+    
+      setIsVisible(false);
+      
+ 
+    }
+   
+    else setIsVisible(true);
+  }, [activeOfficePointCoords, officeCard]);
+
+  useEffect(() => {
+
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [activeOfficePointCoords]);
 
   return (
-    <button className={`fixed ${isVisible ? 'h-96' : 'h-0'} z-[80] text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 `} style={{ top: `${Math.round(activeOfficePointCoords[0])}px`, left: `${Math.round(activeOfficePointCoords[1])}px` }}>
-      <div className={`${isVisible ? 'h-96 opacity-95 top-[0%]' : 'h-0 top-[100%]'} relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden lg:ease-out lg:delay-[350ms]`} >
+    <div ref={cardRef}
+      className={`absolute h-96  ${(isVisible)  ? 'opacity-95 top-[100%] z-[1] ' : 'opacity-0 top-[100%] z-[-1] '} text-black w-screen max-w-[280px] -translate-x-full -ml-3 -translate-y-full -mt-3 transition-height duration-300 ease-in-out`}
+      style={{ top: `${Math.round(activeOfficePointCoords[0]-30)}px`, left: `${Math.round(activeOfficePointCoords[1]+100)}px` }}
+    > <div className={`relative lg:absolute w-full bg-primary-dark duration-[500ms] overflow-hidden ease-out lg:delay-[500ms]  transition-height  duration-500 ${isVisible ? 'h-96 top-[0%]' : 'h-0 top-[100%]'}`} >
         <div className={` p-global lg:absolute w-full left-0  p-8  overflow-hidden `}>
-          <button className="absolute top-[5%] right-[5%] z-10 h-4 w-4 ">
-            <div className="content-center icon-wrap" >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => dispatch(setActiveOfficePoint(''))}>
+          <div className="absolute top-[5%] right-[5%] z-10 h-4 w-4 ">
+            <button className="content-center icon-wrap" onClick={handleMapsClick}>
+              
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 19L5 5" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square"></path>
                 <path d="M19 5L5 19" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square"></path>
               </svg>
-            </div>
-          </button>
+            </button>
+          </div>
           <p className="text-left font-medium text-3xl pb-8">{officeCard?.title}</p>
           <div>
             <p className="text-left text-xl mb-4 font-medium">{officeCard?.adress1}</p>
@@ -59,7 +80,7 @@ const Card: React.FC = () => {
       <div className="absolute pointer-events-none overflow-hidden duration-[150ms] -right-[1.95rem] -bottom-[1.95rem] w-8 h-8 lg:delay-0">
         <div className="absolute w-14 h-[2px] bg-primary-dark  -translate-x-[50%] -translate-y-[50%] lg:rotate-[46deg]"></div>
       </div>
-    </button>
+    </div>
   );
 };
 

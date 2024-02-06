@@ -11,51 +11,40 @@ import {
 } from '@/store/redusers/mapsSliceReduser';
 import MapField from '@/components/map-field';
 import MapSelectionSettings from '@/components/map-selection-setting';
+import { updateElementPosition } from "../helper/updateElementPosition";
 
 const InteracticeMaps: React.FC = () => {
 	const dispatch = useDispatch();
 	const { currentMap, hovered, lastHovered, activeOfficePoint } = useSelector(selectMaps);
 
 	useEffect(() => {
-		const foundMap = mapsData.find((mapItem) => mapItem.id === 'world_all');
-		dispatch(setCurrentMap(foundMap));
-
-		let points = document.querySelectorAll('.office_point .block');
+		
+		let points = document.querySelectorAll('.office_point');
 
 		setupPointEventListeners(points);
 
-		window.addEventListener('resize', () =>{
-			if(!activeOfficePoint) return
-			updateElementPosition(activeOfficePoint)	
-		} );
-		window.addEventListener('scroll', () =>{
-			if(!activeOfficePoint) return
-			updateElementPosition(activeOfficePoint)
-		}
-		 );
-
-		handleHover();
 		
+		handleHover();
+	
 
 		if (lastHovered && hovered !== lastHovered || (lastHovered && !hovered)) {
 			let elements = document.getElementById(lastHovered)?.children;
-
+	
 			if (elements) {
 				for (const element of elements) {
 					element.classList.toggle('hidden');
 					element.classList.toggle('block');
+				
 					dispatch(setLastHovered(''));
 				}
 			}
 		}
 
-		if (activeOfficePoint) {
-			updateElementPosition(activeOfficePoint);
-		}
+	
 
 		return () => {
 			removePointEventListeners(points);
-			removeWindowEventListeners();
+		
 		};
 	}, [currentMap, hovered, lastHovered, activeOfficePoint, dispatch]);
 
@@ -90,19 +79,19 @@ const InteracticeMaps: React.FC = () => {
 	const removePointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
 			element.removeEventListener('click', handlePointsClick);
+			element.addEventListener('mouseover', handleHoverOver);
+			element.addEventListener('mouseout', handleHoverOut);
 		});
 	};
 
-	const removeWindowEventListeners = () => {
-		window.removeEventListener('resize', () => updateElementPosition(activeOfficePoint));
-		window.removeEventListener('scroll', () => updateElementPosition(activeOfficePoint));
-	};
+
 
 	const handlePointsClick = (e: any) => {		
 		let officeId = e.currentTarget.id;
-		updateElementPosition(officeId);		
+	
+		dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
 		dispatch(setActiveOfficePoint(officeId));
-		e.stopPropagation();
+	  
 	};
 
 	const handleHoverOver = (e: any) => {
@@ -113,23 +102,13 @@ const InteracticeMaps: React.FC = () => {
 
 	const handleHoverOut = (e: any) => {
 		
-		dispatch(setHovered(''));
+		dispatch(setHovered(null));
 	
 	};
 
-	const updateElementPosition = (activePoint: string | null) => {
-		if (!activePoint) return;
-		const svgPoint = document.getElementById(activePoint);
 
-		if (svgPoint) {
-			const rect = svgPoint?.getBoundingClientRect();
-			const topCoordinate = rect.top;
-			const leftCoordinate = rect.left;
-
-			dispatch(setActiveOfficePointCoords([topCoordinate, leftCoordinate]));
-		}
-	};
-
+	  
+	  
 	return (
 		<div className="flex-section block_map relative">
 			<div className="absolute inset-0 z-behind"></div>

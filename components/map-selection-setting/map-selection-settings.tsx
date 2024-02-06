@@ -1,14 +1,37 @@
 
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectMaps, setHovered, setActiveOfficePoint } from '@/store/redusers/mapsSliceReduser';
-
+import { selectMaps, setHovered, setActiveOfficePoint, setActiveOfficePointCoords } from '@/store/redusers/mapsSliceReduser';
+import mapsData from "@/data/data-maps";
+import { updateElementPosition } from '../helper/updateElementPosition';
 
 const MapSelectionSettings: React.FC = () => {
 	const dispatch = useDispatch();
-	const { currentMap, hovered, activeOfficePoint } = useSelector(selectMaps);
-  
+	const { hovered, activeOfficePoint } = useSelector(selectMaps);
+	const handlePointsClick = (activePoint: any) => {		
+		dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));	
+		dispatch(setActiveOfficePoint(activePoint));
+	
+		
+	};
+
+	useEffect(() => {
+		const handleResize = () => {
+		  if (activeOfficePoint) {
+			dispatch(setActiveOfficePointCoords(updateElementPosition(activeOfficePoint)));
+		  }
+		};
+	
+		window.addEventListener('resize', handleResize);
+	
+		return () => {
+		  window.removeEventListener('resize', handleResize);
+		};
+	  }, [activeOfficePoint, dispatch]);
+	
+	  
+
 	return (
 	  <div className="col-span-3 flex flex-col relative xl:w-fit w-4/5 m-auto  ">
 		<div className="xl:border-l-2  border-t-2   xl:border-t-0  border-primary-dark pl-12">
@@ -22,14 +45,14 @@ const MapSelectionSettings: React.FC = () => {
 		</div>
   
 		<div className={`grid grid-cols-2  lg:grid-cols-2 xl:border-b-0 max-lg:gap-x-global max-lg:gap-y-4 xl:border-l-2  border-b-2 border-primary-dark pl-12 xl:items-start  items-center`}>
-		  {currentMap?.officeCards?.map((card) => (
+		  {mapsData[0]?.officeCards?.map((card) => (
 			<button
 			  key={card.id}
 			  className={`xl:text-start w-fit  m-auto  text-center lg:block btn duration-200 col-span-1 xl:ml-8 p-4 text-xl text-left font-medium !p-0 !bg-transparent !pb-4 hover:!text-primary-light lg:opacity-100
 				${hovered === card.id ? 'text-primary-light' : ''} ${activeOfficePoint === card.id ? 'text-white' : ''} `}
 			  onMouseEnter={() => dispatch(setHovered(card.id))}
 			  onMouseLeave={() => dispatch(setHovered(null))}
-			  onClick={() => dispatch(setActiveOfficePoint(card.id))}
+			  onClick={() => handlePointsClick(card.id)}
 			>
 			  {card.city}
 			</button>

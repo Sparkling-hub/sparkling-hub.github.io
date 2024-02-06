@@ -42,7 +42,10 @@ const config: Config = {
           light: '#86C0BB',          
         },
       },
+
       animations: {
+        height: 'wiggle 1s ease-in-out infinite',
+         
         fadeInHeight: 'fadeInHeight 1s ease-in-out',
         fadeOutHeight: 'fadeOutHeight 1s ease-in-out',
       },
@@ -55,6 +58,7 @@ const config: Config = {
           '0%': { height: '100%' },
           '100%': { height: '0' },
         },}
+
     }, 
   },
   plugins: [],
