@@ -16,7 +16,6 @@ const Filter: React.FC = () => {
 	} = useSelector(selectCareers);
 
 	return (
-
 		<div className="filter-container bg-gray-100 my-6 mx-5 w-1/4">
 			<h3 className="text-center text-3xl mt-10 mb-5  ">Open Position</h3>
 			<div className="text-sm">
