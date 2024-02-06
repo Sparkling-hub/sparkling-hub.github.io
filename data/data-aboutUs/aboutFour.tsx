@@ -7,7 +7,7 @@ const element: IAbout = {
     header: header,
     content: content,
     number: 4,
-
+    margin:'lg:ml-[390px] bottom-[17%]',
 
 }
 export default element;
