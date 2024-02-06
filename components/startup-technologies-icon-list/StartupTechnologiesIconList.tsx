@@ -2,7 +2,7 @@ import React from 'react';
 import dataStartups from '@/data/data-sections/data-section-startup/data-startup-icons';
 import StartupIcon from '@/components/startup-icon';
 import Link from 'next/link';
-import { v4 as uuidv4, v4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 
 const StartupTechnologiesIconList: React.FC = () => {

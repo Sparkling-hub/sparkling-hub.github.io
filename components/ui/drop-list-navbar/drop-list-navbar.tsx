@@ -54,17 +54,17 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
 
           )}
         </div>
-      ) : (  <button className={`no-underline relative   ${mobileMenuOpen ? "w-full" : ""}`} ref={dropdownRef}
-      onClick={!mobileMenuOpen ? handleClick : undefined}
-      onMouseEnter={!mobileMenuOpen ? handleMouseEnter : undefined}
-      onMouseLeave={!mobileMenuOpen ? handleMouseLeave : undefined} >
+      ) : (  <div className={`no-underline relative   ${mobileMenuOpen ? "w-full" : ""}`} 
+      >
 
         <span className="block items-center w-fit items-center flex justify-between text-base font-semibold leading-6 text-gray-900 w-full">
-          {name}
+         <button ref={dropdownRef} onClick={!mobileMenuOpen ? handleClick : undefined}
+      onMouseEnter={!mobileMenuOpen ? handleMouseEnter : undefined}
+      onMouseLeave={!mobileMenuOpen ? handleMouseLeave : undefined}>{name}</button> 
          <ButtonCircle isDropdownOpen={isDropdownOpen} />
          {isDropdownOpen && (
 
-            <div
+            <button
               className="absolute left-[-130%] px-16 top-[40%] py-[40%] before:border-t-0"
               onMouseEnter={handleMouseEnter}
             >
@@ -87,11 +87,11 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
                   </Link>
                 ))}
               </div>
-            </div>
+            </button>
           )}
 
         </span>
-        </button>
+        </div>
       )
       }
 
