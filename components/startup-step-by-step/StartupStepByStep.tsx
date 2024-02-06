@@ -1,26 +1,37 @@
-
+// StartupStepByStep.jsx
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectStartupStepByStep, setHighlightedIndices } from '@/store/redusers/startupStepByStepSliceReduser';
 import dataStartupSteps from '@/data/data-sections/data-section-startup/data-startup-step-by-step';
 import StartupStepItem from '../startup-step-item';
-import Button from '../button';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const StartupStepByStep: React.FC = () => {
   const dispatch = useDispatch();
   const { highlightedIndices } = useSelector(selectStartupStepByStep);
 
   useEffect(() => {
+    AOS.init({
+      duration: 500,
+      once: false,
+      mirror: true,
+    });
+
     const handleScroll = () => {
       const elements = document.querySelectorAll('.s-b-s-title');
-
       elements.forEach((element, index) => {
         const rect = element.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight / 2 && rect.bottom >= 0;
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+       
+        if (isVisible && !highlightedIndices[index] && index ==1) {
+          dispatch(setHighlightedIndices([...highlightedIndices, true]))
+        }  
 
-        if (isVisible && !highlightedIndices.includes(index + 1)) {
-          dispatch(setHighlightedIndices([...highlightedIndices, index + 1]));
-        }
+        if (!highlightedIndices[index]){      setTimeout(() => {
+          if(isVisible)dispatch(setHighlightedIndices([...highlightedIndices, true])); }, 1000); } 
       });
     };
 
@@ -35,11 +46,15 @@ const StartupStepByStep: React.FC = () => {
     <div className='flex flex-wrap justify-center items-center'>
       <ol>
         {dataStartupSteps.map((step) => (
-          <StartupStepItem key={Number(step.index)} {...step} highlighted={highlightedIndices.includes(Number(step.index))} />
+          <StartupStepItem key={Number(step.index)} {...step} highlighted={highlightedIndices[step.index]} />
         ))}
+        
       </ol>
-      <div className='m-20'>
-        <Button href="/contact" text="Embark in your MVP adventure!" />
+     
+
+      <div className='top-[-15px] p-3 relative flex items-center justify-center w-[450px] h-[90px] bg-primary-darkTeal rounded-full text-green-300  hover:bg-teal-700 s-b-s-title'>
+      <Link className="no-underline relative  text-2xl z-10 font-bold text-primary-yellow"  href={'/contact'} >Embark in your MVP adventure!</Link>
+
       </div>
     </div>
   );

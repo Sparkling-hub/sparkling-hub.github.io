@@ -3,20 +3,23 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
 interface StartupStepByStepState {
-  highlightedIndices: number[];
+  highlightedIndices: boolean[];
+
 }
 
 const initialState: StartupStepByStepState = {
-  highlightedIndices: [],
+  highlightedIndices: [false],
+
 };
 
 const startupStepByStepSlice = createSlice({
   name: 'startupStepByStep',
   initialState,
   reducers: {
-    setHighlightedIndices: (state, action: PayloadAction<number[]>) => {
+    setHighlightedIndices: (state, action: PayloadAction<boolean[]>) => {
       state.highlightedIndices = action.payload;
     },
+ 
   },
 });
 

@@ -4,7 +4,7 @@ interface IStartupStepItem {
 
     title?: string;  
     subtext?: string;  
-    index?: number;
+    index: number;
     highlighted?: boolean;
 
 }
