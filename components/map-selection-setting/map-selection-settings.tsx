@@ -15,7 +15,6 @@ const MapSelectionSettings: React.FC = () => {
 	
 		
 	};
-	console.log(hovered);
 
 	useEffect(() => {
 		const handleResize = () => {
