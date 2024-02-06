@@ -35,7 +35,7 @@ const Benefit: React.FC<IAbout> = ({ content, header, number,margin }) => {
 
 
 				
-				<div className='min-h-[60px] leading-8 flex flex-col'>
+				<div className='min-h-[60px] leading-8 pl-5 flex flex-col'>
 					<div className='text-2xl text-teal-800 font-bold uppercase'>{header}</div>
 					<div className='text-lg'>{content}</div></div>
 			</div>
