@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
 						<div className="content-section relative flex items-start justify-center flex-col justify-center z-10">
 							<div className="flex items-center whitespace-normal w-full">
 								<div className="flex justify-center flex-col w-full my-12">
-									<div className='grid grid-cols-1 lg:grid-cols-3 gap-[10%] lg:gap-[0%] '>
+									<div className='grid grid-cols-1 lg:grid-cols-3 gap-[10%] lg:gap-[0%] pb-40'>
 										<div className='lg:block right-[50px] right-[-40px] lg:right-0  col-span-1 p-4 lg:order-3 '>
 											<div className='relative lg:text-right font-normal text-3xl lg:text-5xl  lg:pb-10'>Get in touch</div>
 											<div className='lg:text-right text-xl lg:text-2xl'>info@sparkling.co.com</div>
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
 
 									</div>
 
-									<div className='text-center pb-40 w-1/2 m-auto pt-[120px] lg:pt-[0px] px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
+									<div className='text-center absolute bottom-0 left-1/4 w-1/2 m-auto pt-[120px] lg:pt-[0px] px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
 
 								</div>
 							</div>
