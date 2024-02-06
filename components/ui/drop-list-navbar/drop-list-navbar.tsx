@@ -64,7 +64,7 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
          <ButtonCircle isDropdownOpen={isDropdownOpen} />
          {isDropdownOpen && (
 
-            <button
+            <div
               className="absolute left-[-130%] px-16 top-[40%] py-[40%] before:border-t-0"
               onMouseEnter={handleMouseEnter}
             >
@@ -87,7 +87,7 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
                   </Link>
                 ))}
               </div>
-            </button>
+            </div>
           )}
 
         </span>
