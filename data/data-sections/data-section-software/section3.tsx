@@ -9,11 +9,11 @@ const header =
 const content =
 <Card/>
 
-const button = <div className="m-16"><Button href="/contact#form-contact" text="Let’s get started"/></div>;
+const button = <div className="	<h2 className= text-xl text-center mt-12"> <Button href="/contact#form-contact" text="Let’s get started"/></div>;
 const element = {
     content: content,
     header: header,
-    curvedClass: 'before:content-curved_dark_with_line_white before:w-full before:absolute',
+
 
     index: 3,
     margin_bottom: 'mb-12',

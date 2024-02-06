@@ -1,3 +1,5 @@
+
+
 import Link from 'next/link';
 import React from 'react';
 
@@ -7,8 +9,11 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ href, text }) => {
+
 	return (
-		<Link className="no-underline relative text-white py-3 px-8 bg-gradient-to-r from-teal-500 to-teal-500 rounded-full z-10" href={href} >{text}</Link>
+
+		<Link className="no-underline relative text-white py-3 px-8 bg-teal-500 rounded-full z-10  hover:bg-teal-400" href={href} >{text}</Link>
+
 	);
 };
 

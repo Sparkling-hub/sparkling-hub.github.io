@@ -5,18 +5,17 @@ import * as Section from '../data/data-sections/data-section-contact'
 import Sections from '../components/sections/sections'
 import React from 'react';
 
-
-const Contact = () => { 
+const Contact = () => {
 
     return (
-       
+
         <MainLayout>
-        <div >
-            <Sections {...Section.sections.SectionOne}/> 
-            <Sections {...Section.sections.SectionTwo}/> 
-        </div>
+            <div >
+                <Sections {...Section.sections.SectionOne} />
+                <Sections {...Section.sections.SectionTwo} />
+            </div>
         </MainLayout>
-       
+
     );
 };
 

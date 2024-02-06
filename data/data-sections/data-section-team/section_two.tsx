@@ -2,7 +2,7 @@
 
 const content = (<div>
 
-<p className="leading-8 text-center text-white">
+<p className="leading-8 text-center text-white text-xl">
 
 Buried under a mountain of development tasks and the finish line seems unattainable?
 
@@ -15,7 +15,7 @@ const element = {
   content: content,
 
   index: 2,
-  curvedClass: 'before:content-curved_dark_without_line before:w-full',
+
 	background: 'bg-color-primary-dark', 
 
   id: 'team'

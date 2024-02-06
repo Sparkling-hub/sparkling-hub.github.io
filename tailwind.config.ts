@@ -17,30 +17,18 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      borderRadius: {
+      borderRadius: { 
         '4xl': '2rem',
         '50procent': '50%'
       },
-      content: {
-        'curved_grey_with_line': 'url("/img/curved/curved_grey_with_line.svg")',
-        'curved_white_with_line': 'url("/img/curved/curved_white_with_line.svg")',
-        'curved_white_without_line': 'url("/img/curved/curved_white_without_line.svg")',
-        'curved_dark_without_line': 'url("/img/curved/curved_dark_without_line.svg")', 
-        'curved_dark_with_line': 'url("/img/curved/curved_dark_with_line.svg")', 
-        'curved_dark_with_line_white': 'url("/img/curved/curved_dark_without_line_white.svg")', 
-        'curved_white_with_line_bottom': 'url("/img/curved/curved_white_with_line_bottom.svg")',
-        'curved_dark_without_line_white': 'url("/img/curved/curved_dark_without_line_WHITE_background.svg")', 
-        'curved_medium_without_line': 'url("/img/curved/curved_medium_without_line.svg")', 
-        'curved_medium_with_line': 'url("/img/curved/curved_medium_with_line.svg")', 
-
-
-      },
+    
       backgroundColor: {
         'primary-light-light': '#CBF0E9',
         'primary-dark': '#285c5c',
         'active-office-color': '#C73926',
         // 'partner-office-color': '#D3E5EB',
         'partner-office-color': '#3498db',
+        'green-color': '#AFCB1A'
       },
       borderColor: {
         'primary-light-light': '#CBF0E9',
@@ -51,12 +39,29 @@ const config: Config = {
       },
       colors: {
         primary: {
-          light: '#86C0BB',          
+          light: '#86C0BB', 
+          yellow: '#AECA13',
+          darkTeal:'#1A5858'      
         },
-      }
-    },
+      },
 
-    
+      animations: {
+        height: 'wiggle 1s ease-in-out infinite',
+         
+        fadeInHeight: 'fadeInHeight 1s ease-in-out',
+        fadeOutHeight: 'fadeOutHeight 1s ease-in-out',
+      },
+      keyframes: {
+        fadeInHeight: {
+          '0%': { height: '0' },
+          '100%': { height: '100%' },
+        },
+        fadeOutHeight: {
+          '0%': { height: '100%' },
+          '100%': { height: '0' },
+        },}
+
+    }, 
   },
   plugins: [],
 }

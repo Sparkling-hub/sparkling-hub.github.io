@@ -1,14 +1,14 @@
 
 const header =
-  <h1>
-    <strong className="s2">
+  <h1 className="s2 text-teal-800 m-auto mb-2 text-5xl">
+    <strong >
       Careers
     </strong>
   </h1>
 
 
 const content =
-  <p>
+  <p className="text-xl">
     Sparkling Co. is Swiss headquartered company with presence all around Europe always in search of great professionals!
     Want to join the team? Here are the current open positions.
   </p>

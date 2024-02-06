@@ -1,38 +1,37 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent } from "react";
 import Input from "../ui/input-component/input";
 import TextArea from "../ui/text-area-component/text-area";
 import Submit from "../ui/input-sumbit-component";
 import Select from "../ui/select-component";
-import FormData from "@/interface/IFromData";
+
 import Link from "next/link";
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  selectForm,
+  setFormData,
+  setCheck,
+
+  setCheckFormByKey
+} from '@/store/redusers/FormSliceReduser';
 
 const Form: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    select: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-
-  const [check, setCheck] = useState(false);
-
-  const isValidEmail = (email: string): boolean => {
-    const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([a-z\d])/.exec(email);
-    return emailRegex !== null;
-  };
+  const dispatch = useDispatch();
+  const { formData, check, checkForm } = useSelector(selectForm);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
-    setFormData({
+    dispatch(setFormData({
       ...formData,
       [name]: value,
-    });
+    }));
+
+    dispatch(setCheckFormByKey({ key: name as any, value: '' }));
 
     if (name === "email") {
-      setCheck(isValidEmail(value));
+      dispatch(setCheck(null));
     }
+
   };
 
   return (
@@ -44,47 +43,58 @@ const Form: React.FC = () => {
       className="form flex items-center w-full m-auto relative"
     >
       <div className="flex flex-col w-3/5 m-3">
+
+
         <Input
           type="text"
           name="name"
           value={formData.name}
           placeholder="Full Name*"
           onChange={handleInputChange}
+          checked={checkForm.name.length > 0}
         />
-        {check || formData.email.length <= 3 ? null : (
-          <p className="absolute bottom-20 text-red-500 font-bold" key={formData.email.length}>
-            Invalid Email
-          </p>
-        )}
+
         <Input
           type="email"
           name="email"
           value={formData.email}
           onChange={handleInputChange}
           placeholder="Email*"
+          checked={check === false && checkForm.email.length > 0 || check === false}
         />
+
         <Input
           type="text"
           name="company"
           value={formData.company}
           placeholder="Company"
           onChange={handleInputChange}
+
         />
-        <Select onChange={handleInputChange} value={formData.select} name="select" placeholder="I am looking for..." />
+        <Select name="select"
+          value={formData.select}
+          onChange={handleInputChange} />
+
+
         <TextArea
           name="message"
           placeholder="Tell us about your project and goals*"
           value={formData.message}
           onChange={handleInputChange}
+          checked={checkForm.message.length > 0}
         />
+
         <br />
-        <Submit
-          type="submit"
-          name="submit"
-          formData={formData}
-          disabled={!!(formData.name && check && formData.message)}
-          http={"http://localhost:3033/send-form"}
-        />
+        
+        <div className="w-fit m-auto relative">
+          <Submit
+            type="submit"
+            name="submit"
+
+            disabled={!!(formData.name && formData.email && formData.message)}
+            http={"http://localhost:3033/send-form"}
+          />
+        </div>
       </div>
       <Link href="mailto:l.arthofer@sparkling.co.com" target="_blank"
         className="blank m-10 bg-white rounded-md text-left rounded-lg justify-center flex flex-col h-26 w-2/5 bg-teal-900">

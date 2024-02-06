@@ -1,9 +1,9 @@
 
 
 interface IQustion {
-	
-	question?: JSX.Element;
-	answer?: JSX.Element;
+	id:number;
+	question: JSX.Element;
+	answer: string;
 
 }
 

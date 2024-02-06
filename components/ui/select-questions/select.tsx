@@ -1,30 +1,61 @@
-import React, { useState } from 'react';
-import ButtonCircle from "../circle-button";
+
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addDropdown, toggleDropdown } from '@/store/redusers/SelectSliceReduser';
+import ButtonCircle from '../circle-button';
 import IQustion from '../../../interface/IQustion';
+import { RootState } from '@/store/store';
 
 const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [visibleText, setVisibleText] = useState('');
+  const dispatch = useDispatch();
+
+
+  const isOpen = useSelector((state: RootState) => {
+    const dropdown = state.dropdown.dropdowns.find(dropdown => dropdown.id === data.id);
+    return dropdown ? dropdown.isOpen : false;
+  });
 
   const handleDropdownToggle = () => {
-    setIsDropdownOpen((prev) => !prev);
+    dispatch(toggleDropdown(data.id));
   };
 
+  useEffect(() => {
+    dispatch(addDropdown(data.id));
+  }, [dispatch, data.id]);
+
+
+  useEffect(() => {
+    setVisibleText('')
+ 
+    let index = 0;
+    const intervalId = setInterval(() => {
+      if (index < (data.answer).length) {
+
+        setVisibleText((prevText) => prevText + data.answer[index - 1]);
+
+        index++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 10);
+
+    return () => clearInterval(intervalId);
+  }, [data.answer, isOpen]);
+  
   return (
     <>
       <button
-        className={`w-full p-3 border rounded cursor-pointer text-lg border-none ${isDropdownOpen ? 'bg-emerald-900 text-white rounded-t-2xl'
-            :
-            'rounded-2xl bg-slate-100'
-          }`}
+        className={`w-full p-3 border rounded cursor-pointer text-lg border-none ${isOpen ? 'bg-emerald-900 text-white rounded-t-2xl' : 'rounded-2xl bg-slate-100'}`}
         onClick={handleDropdownToggle}
       >
-        <span className="block relative flex justify-between w-full">{data.question}<ButtonCircle isDropdownOpen={isDropdownOpen} /> </span>
+        <span className="block relative flex justify-between w-full">{data.question}<ButtonCircle isDropdownOpen={isOpen} /> </span>
       </button>
-      {isDropdownOpen && (
-        <div className="top-full left-0 bg-white border border-gray-300 rounded-b-2xl p-4 w-full">
-          <p>{data.answer}</p>
-        </div>
-      )}
+
+      <div className={`${isOpen ? 'h-auto p-4 border-[1px] border-gray-300' : 'h-0'}  overflow-hidden  top-full left-0 block bg-white   transition-height rounded-b-2xl w-full duration-500`}>
+        <p>{visibleText}</p>
+      </div>
+
     </>
   );
 };

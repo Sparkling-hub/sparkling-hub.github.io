@@ -13,11 +13,11 @@ const Consulting: React.FC<IConsulting> = ({ content, header, reverse, img }) =>
 
 				<div className='flex my-2 ml-4'>
 					
-					<div className='color-primary-medium font-bold text-xl'>{header}</div>
+					<div className='color-primary-medium font-bold text-3xl'>{header}</div>
 
 				</div>
 
-				<div className='mx-4 my-2'>{content}</div>
+				<div className='mx-4 my-2 text-xl'>{content}</div>
 
 			</div>
 

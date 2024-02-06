@@ -4,9 +4,9 @@ const header =<></>
   
 
 const content =
-  <div className="flex-col justify-center align-center text-center mt-14">
-    <p className="text-white ">At our core we are <span className="color-primary-light font-medium ml-2">driven by passion for our craft,</span> committing precision and agility</p>       
-    <p className="text-white">in every collaboration, to make an <span className="color-primary-light font-medium ml-2">impactful difference.</span></p>
+  <div className="text-white text-center mt-14 text-xl">
+ At our core we are <span className="color-primary-light font-medium ">driven by passion for our craft,</span> committing precision and agility <br/>
+  in every collaboration, to make an <span className="color-primary-light font-medium">impactful difference.</span>
   </div>
 
 
@@ -17,7 +17,7 @@ const element = {
   header: header,
   image: null,
   background: 'bg-color-primary-dark', 
-  curvedClass: 'before:content-curved_dark_without_line before:w-full before:absolute',
+
   padding_bottom: "pb-40 custom-pb-60",
   index: 4,
 

@@ -5,7 +5,7 @@ import Careers from "../../../components/careers";
 const content =
 	<>
 		<Careers />
-		<h2>
+		<h2 className="text-xl text-center mt-12">
 			<span>Want to join </span>
 			us but your specific skills aren&rsquo;t listed on an open position?
 			<br /> 
@@ -14,10 +14,10 @@ const content =
 		</h2>
 	</>
 
-const button = <Button href={"/contact#form-contact"} text="Get in touch" />
+const button = <div className="flex justify-center m-auto"><Button href={"/contact#form-contact"} text="Get in touch" /></div>
 const element = {
 	content: content,
-	curvedClass: 'before:content-curved_white_with_line before:w-full before:absolute',
+
   	background: 'bg-color-primary-light',
 	id: "jobs",
 	button: button

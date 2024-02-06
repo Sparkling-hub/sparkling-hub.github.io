@@ -17,15 +17,15 @@ const location = <>
 
 
 const jobs = {
-    id: "Tunis",
+    location: "Tunis",
     namePosition: "Quality Assurance Manager",
-    location: location,
-    experience: experience,
+    locationHTML: location,
+    experienceHTML: experience,
     head: head,
     text: text,
     workMode:"Hybrid work",
     slug:"qa-manager",
-    nameProf: 'Quality assurance',
+    experience: 'Quality assurance',
 
 }
 export default jobs
