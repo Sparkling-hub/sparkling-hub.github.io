@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addDropdown, toggleDropdown } from '@/store/redusers/SelectSliceReduser';
 import ButtonCircle from '../circle-button';
@@ -7,7 +7,10 @@ import IQustion from '../../../interface/IQustion';
 import { RootState } from '@/store/store';
 
 const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
+  const [visibleText, setVisibleText] = useState('');
   const dispatch = useDispatch();
+
+
   const isOpen = useSelector((state: RootState) => {
     const dropdown = state.dropdown.dropdowns.find(dropdown => dropdown.id === data.id);
     return dropdown ? dropdown.isOpen : false;
@@ -17,10 +20,29 @@ const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
     dispatch(toggleDropdown(data.id));
   };
 
-useEffect(() => {
-  dispatch(addDropdown(data.id));
-}, [dispatch, data.id]);
+  useEffect(() => {
+    dispatch(addDropdown(data.id));
+  }, [dispatch, data.id]);
 
+
+  useEffect(() => {
+    setVisibleText('')
+ 
+    let index = 0;
+    const intervalId = setInterval(() => {
+      if (index < (data.answer).length) {
+
+        setVisibleText((prevText) => prevText + data.answer[index - 1]);
+
+        index++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 10);
+
+    return () => clearInterval(intervalId);
+  }, [data.answer, isOpen]);
+  
   return (
     <>
       <button
@@ -29,11 +51,11 @@ useEffect(() => {
       >
         <span className="block relative flex justify-between w-full">{data.question}<ButtonCircle isDropdownOpen={isOpen} /> </span>
       </button>
-      {isOpen && (
-        <div className="top-full left-0 bg-white border border-gray-300 rounded-b-2xl p-4 w-full">
-          <p>{data.answer}</p>
-        </div>
-      )}
+
+      <div className={`${isOpen ? 'h-auto p-4 border-[1px] border-gray-300' : 'h-0'}  overflow-hidden  top-full left-0 block bg-white   transition-height rounded-b-2xl w-full duration-500`}>
+        <p>{visibleText}</p>
+      </div>
+
     </>
   );
 };

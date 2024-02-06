@@ -4,9 +4,9 @@ const header =<></>
   
 
 const content =
-  <div className="flex-col justify-center align-center text-center mt-14">
+  <div className="text-xl text-center mt-14">
     <p className="text-white ">Feeling stuck on a problem and don&rsquo;t know which way to turn? </p>       
-    <p className="text-white">Or perhaps looking for a long-term strategy for your business? <span className="color-primary-light font-medium ml-2">We&rsquo;ve Got Your Back!</span> </p>       
+    <p className="text-white">Or perhaps looking for a long-term strategy for your business? <span className="text-teal-400 font-medium">We&rsquo;ve Got Your Back!</span> </p>       
     <p className="text-white">Navigate obstacles confidently with our experienced IT consultations.</p>       
   </div>
 

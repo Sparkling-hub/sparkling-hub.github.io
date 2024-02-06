@@ -19,7 +19,7 @@ const StartupStepItem: React.FC<IStartupStepItem> = ({ title, subtext, index, hi
 
 			<div className="s-b-s-text">
 
-				<div className='mx-5 pt-3 pb-20'>{subtext}</div>
+				<div className='mx-5 pt-3 pb-20 text-lg'>{subtext}</div>
 
 			</div>
 
