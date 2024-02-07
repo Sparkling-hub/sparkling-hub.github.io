@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
           <div className="flex justify-between text-xl items-center px-1 ">
           <Link href="/" className="-m-1.5 pt-2">
          
-            <img className="max-w-[292px] lg:h-auto w-auto" src="/img/navbar/logo.svg" alt="Logo" />
+            <img className="max-w-[282px] lg:h-auto w-auto" src="/img/navbar/logo.svg" alt="Logo" />
           </Link>
             <button
               type="button"
