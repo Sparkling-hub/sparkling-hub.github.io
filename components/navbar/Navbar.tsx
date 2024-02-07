@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
    <nav className="mx-auto flex max-w-screen-2xl items-center justify-between py-6 lg:px-8 w full" aria-label="Global">
         <div className="flex justify-between text-xl items-center ">
 
-          <Link href="/" className="-m-1.5 p-1.5 max-w-[400px] w-fit">
+          <Link href="/" className="-m-1.5 p-1.5 max-w-[370px] w-fit">
    
             <img className="max-w-[320px] lg:min-w-[200px] lg:max-w-[100%]  pr-7 lg:h-auto w-auto object-contain" src="/img/navbar/logo.svg" alt="Logo" />
           </Link>
