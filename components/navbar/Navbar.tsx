@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
   return (
 
     <header className={`bg-white bg-opacity-95 sticky top-0 z-30 w-full ${hasShadow ? 'shadow-lg transition-shadow duration-300' : 'shadow-none transition-shadow duration-300'}`}>
-      <nav className="mx-auto flexitems-center justify-between py-6 lg:px-8 w full min-w-[265px]" aria-label="Global">
+      <nav className="mx-auto max-w-screen-2xl flex items-center justify-between py-6 lg:px-8 w full min-w-[265px]" aria-label="Global">
         <div className="flex justify-between text-xl items-center ">
 
           <Link href="/" className="-m-1.5 p-1.5 max-w-[350px] w-min lg:min-w-[200px]">
@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
         <div className={`min-w-[24rem] fixed inset-y-0 right-0 z-20 overflow-hidden bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10 w-full transform transition-all ease-in-out ${mobileMenuOpen ? 'translate-x-0 opacity-1' : 'translate-x-full opacity-10'} duration-500`}>
 
           <div className="flex justify-between text-xl items-center px-1 ">
-          <Link href="/" className="-m-1.5 pt-2 max-w-[400px] lg:min-w-[200px]">
+          <Link href="/" className="-m-1.5 pt-2">
          
             <img className="max-w-[322px] lg:h-auto w-auto" src="/img/navbar/logo.svg" alt="Logo" />
           </Link>
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
             </button>
           </div>
           <div className="mt-6 "  >
-            <div className='border-b border-gray-300 p-5 min-w-[365px]'>
+            <div className='border-b border-gray-300 p-5'>
               <DropList name={'Services'} DataLink={services} mobileMenuOpen={true} />
             </div>
             {links.map((link) => (
