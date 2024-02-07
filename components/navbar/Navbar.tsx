@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
 
           <Link href="/" className="-m-1.5 p-1.5 max-w-[370px] w-fit">
    
-            <img className="max-w-[300px] lg:min-w-[200px] lg:max-w-[100%]  pr-7 lg:h-auto w-auto object-contain" src="/img/navbar/logo.svg" alt="Logo" />
+            <img className="max-w-[310px] lg:min-w-[200px] lg:max-w-[100%]  pr-7 lg:h-auto w-auto object-contain" src="/img/navbar/logo.svg" alt="Logo" />
           </Link>
 
         </div>
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
           <div className="flex justify-between text-xl items-center px-1 ">
           <Link href="/" className="-m-1.5 pt-2">
          
-            <img className="max-w-[282px] lg:h-auto w-auto" src="/img/navbar/logo.svg" alt="Logo" />
+            <img className="max-w-[292px] lg:h-auto w-auto" src="/img/navbar/logo.svg" alt="Logo" />
           </Link>
             <button
               type="button"
