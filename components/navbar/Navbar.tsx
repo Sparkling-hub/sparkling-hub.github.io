@@ -46,11 +46,11 @@ const Navbar: React.FC = () => {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-lg h-[60px] w-[69px] relative text-gray-700"
+            className="inline-flex items-center justify-center rounded-lg h-[60px] w-[0px] relative text-gray-700"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
 
-            <div className="block h-[25px] w-[25.5px] absolute bottom-[3px] z-30 transform">
+            <div className="block h-[25px] right-[27px] w-[0px] absolute bottom-[3px] z-30 transform">
               <span aria-hidden="true" className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${mobileMenuOpen ? 'rotate-45' : ' -translate-y-1.5'}`}></span>
               <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out ${mobileMenuOpen ? 'opacity-0' : ''} `}></span>
               <span aria-hidden="true" className={`block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out ${mobileMenuOpen ? '-rotate-45' : ' translate-y-1.5'}`}></span>
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
             <li key={link.href} className='flex items-center '>
 
 
-              <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900'>
+              <Link href={link.href} className='no-underline text-base font-semibold leading-6 text-gray-900 w-max'>
 
                 {link.text}
 
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
             </button>
           </div>
           <div className="mt-6 "  >
-            <div className='border-b border-gray-300 p-5'>
+            <div className='border-b border-gray-300 py-5 pl-5'>
               <DropList name={'Services'} DataLink={services} mobileMenuOpen={true} />
             </div>
             {links.map((link) => (
