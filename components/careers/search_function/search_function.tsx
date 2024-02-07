@@ -22,7 +22,7 @@ export const getIds = (data: IJob[] , name: string): any[]=> {
  
 export const get = (data:any, name: string): any[] => {
   let result: any[] = [];
-  Object.keys(data).forEach((key) => {
+  Object.keys(data).forEach((key:any) => {
  
     if (key == name) result =  data[key];
   });
