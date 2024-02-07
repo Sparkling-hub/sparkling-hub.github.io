@@ -45,11 +45,13 @@ import {
   
  
 	return (
-	  <div className='flex relative w-full'>
-		<Filter
-		/>
-		   <JobList />
-	  </div>
+
+		<div className='flex relative w-full items-center lg:items-start flex-col lg:flex-row'>
+			<Filter
+			/>
+			<JobList />
+		</div>
+
 	);
   };
 
