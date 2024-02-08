@@ -9,7 +9,7 @@ const Benefits: React.FC = () => {
 	
 	return (
 
-		<div className='flex-col m-5'>
+		<div className='flex-col'>
 
 			{dataTeam.map((team) => (
 				<Team key={Number(team.index)} {...team} />
