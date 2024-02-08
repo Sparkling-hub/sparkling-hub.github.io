@@ -11,13 +11,13 @@ const Consulting: React.FC<IConsulting> = ({ content, header, reverse, img }) =>
 
 			<div className={`lg:basis-5/6 flex-col justify-center  p-4 ${!reverse ? 'pl-10' : 'pr-15'}`}>
 
-				<div className='flex my-2 ml-4'>
+				<div className='flex my-2 ml-4 lg:justify-start lg:text-start justify-center text-center'>
 					
-					<div className='color-primary-medium font-bold text-3xl'>{header}</div>
+					<div className='color-primary-medium font-bold text-3xl lg:m-0 mb-1'>{header}</div>
 
 				</div>
 
-				<div className='mx-4 my-2 text-xl'>{content}</div>
+				<div className='mx-4 my-2 text-xl lg:text-start  text-center'>{content}</div>
 
 			</div>
 

@@ -7,12 +7,12 @@ import ConsultingItemList from "@/components/consulting-item-list"
 
 const header =
     <div>
-        <h2 className="text-5xl mt-24 text-center font-light">
+        <h2 className="text-5xl mt-12  text-center font-light">
             <span className="text-teal-500 font-medium">Customised Solutions</span>{' '}
             for Every Project
         </h2>
         <br />
-        <h3 className="text-3xl text-center ">
+        <h3 className="text-3xl text-center mb-12">
             Understanding that{' '}
             <span className="text-teal-500 font-normal">“one size, does NOT fit all”</span>{/*
   */}, our Consulting Projects are fully adaptable to meet your needs.
