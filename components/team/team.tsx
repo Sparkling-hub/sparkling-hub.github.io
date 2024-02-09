@@ -17,7 +17,7 @@ const Benefit: React.FC<ITeam> = ({ content, header, index, marginRight, marginL
 					
 		
 				<div className='flex flex-col'>
-					<h3 className='flex text-2xl my-2 lg:m-2 px-4 lg:px-68 w-auto  break-all flex flex-reserve text-teal-700 font-light lg:justify-start justify-center lg:text-start text-center'>{header}</h3>
+					<h3 className='flex break-keep text-2xl my-2 lg:m-2 px-4 lg:px-68 w-auto  break-all flex flex-reserve text-teal-700 font-light lg:justify-start justify-center lg:text-start text-center'>{header}</h3>
 				
 					<div className={`m-2 min-h-[60px] w-full lg:w-7/8 leading-8 rounded-3xl py-5  px-4 lg:px-6 relative ${(index % 2) ? "bg-violet-50" : "bg-teal-50"}`}>
 					<div className='text-5xl lg:block hidden left-[-70px] top-[35%] absolute'>{index}</div>
