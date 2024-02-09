@@ -46,7 +46,7 @@ const StartupStepByStep: React.FC = () => {
      
 
       <div className='top-[-15px] p-3 relative flex items-center justify-center w-[450px] h-[90px] bg-primary-darkTeal rounded-full text-green-300  hover:bg-teal-700 s-b-s-title'>
-      <Link className="no-underline relative  text-2xl z-10 font-bold text-primary-yellow"  href={'/contact'} >Embark in your MVP adventure!</Link>
+      <Link className="no-underline relative  text-2xl z-10 font-bold text-primary-yellow text-center"  href={'/contact'} >Embark in your MVP adventure!</Link>
 
       </div>
     </div>
