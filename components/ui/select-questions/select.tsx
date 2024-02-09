@@ -49,7 +49,7 @@ const DisabledSelect: React.FC<{ data: IQustion }> = ({ data }) => {
         className={`w-full p-3 border rounded cursor-pointer text-lg border-none ${isOpen ? 'bg-emerald-900 text-white rounded-t-xl lg:rounded-t-2xl' : 'lg:rounded-2xl rounded-xl bg-slate-100'}`}
         onClick={handleDropdownToggle}
       >
-        <span className="block relative flex justify-between w-full">{data.question}<ButtonCircle isDropdownOpen={isOpen} /> </span>
+        <span className="block relative flex justify-between w-full text-start">{data.question}<ButtonCircle isDropdownOpen={isOpen} /> </span>
       </button>
 
       <div className={`${isOpen ? 'h-auto p-4 border-[1px] border-gray-300' : 'h-0'}  overflow-hidden  top-full left-0 block bg-white   transition-height rounded-b-2xl w-full duration-500`}>
