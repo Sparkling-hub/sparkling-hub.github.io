@@ -2,8 +2,8 @@
 
 import Manifest from "@/components/manifest"
 const header =
-    <div className="text-center mt-12 mb-20 w-2/3 mx-auto font-light ">
-        <h2 className="text-5xl m-4">
+    <div className="text-center mt-12 mb-20 lg:w-2/3 mx-auto font-light ">
+        <h2 className="text-5xl mb-4">
             <strong className="text-teal-500 font-bold">Agile</strong> with a kick
         </h2>
         <p className="text-center text-lg font-normal leading-8">

@@ -12,12 +12,16 @@ const JobList: React.FC = () => {
 	const jobs = filteredJobsList
 
 	return (
-		<div className='w-full overflow-auto flex flex-col m-6 '>
+		<div className='w-full overflow-auto flex flex-col m-6'>
 			{jobs.length ? (
-				<div className="flex flex-wrap w-auto relative w-full">
+				<div className="flex flex-wrap w-auto relative w-full justify-center lg:justify-start">
 					{jobs.map((job: IJob) => (
-						<div className={`job-content bg-white rounded-xl  mx-[14px] mb-6 w-5/12`} key={job.slug}>
+
+
+						<div className={`job-content bg-white rounded-xl  mx-[14px] mb-6 w-full sm:w-5/12`} key={job.slug}>
 							<JobsFiltre job={job}  />
+
+
 						</div>
 					))}
 				</div>

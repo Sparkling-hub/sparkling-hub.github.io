@@ -45,11 +45,15 @@ const Careers: React.FC<ICareersProps> = () => {
 
 
 	return (
-		<div className='flex relative w-full'>
+
+
+		<div className='flex relative w-full items-center lg:items-start flex-col lg:flex-row'>
+
 			<Filter
 			/>
 			<JobList />
 		</div>
+
 	);
 };
 

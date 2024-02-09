@@ -35,8 +35,9 @@ const DisabledSelect: React.FC<IDropList> = ({ name, DataLink, mobileMenuOpen })
   return (
     <div className='items-center flex'>
       {mobileMenuOpen ? (
-        <div className="block  text-base font-semibold leading-6 text-gray-900 w-full flex-col"  >
-          <button className='w-full flex justify-between text-xl items-center' onClick={handleClick}>{name}
+        <div className="block text-base font-semibold leading-6 text-gray-900 w-full flex-col"  >
+          <button className='w-full flex justify-between text-xl items-center' onClick={handleClick}>
+            <span className='text-start w-full'>{name}</span>
           <div className="block w-5 top-1/2 z-30 transform leading-0 ">
             <span aria-hidden="true" className={`block absolute h-[2px] w-[14px] bg-gray-500 transform transition duration-300 ease-in-out ${isDropdownOpen ? 'rotate-0' : ' rotate-90'}`}></span>
             <span aria-hidden="true" className={`block absolute h-[2px] w-[14px] bg-gray-500 transform transition duration-300 ease-in-out ${isDropdownOpen ? '-rotate-0' : ' -rotate-180'}`}></span>
