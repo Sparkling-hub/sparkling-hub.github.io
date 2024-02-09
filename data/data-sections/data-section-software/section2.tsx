@@ -13,7 +13,7 @@ const content = <p className="text-white text-center text-xl font-light  m-5">Wa
 const element = {
   content: content,
   header: header,
-  index: 3,
+  index: 2,
 
   background: 'bg-color-primary-dark',
   margin_bottom: 'mb-12'

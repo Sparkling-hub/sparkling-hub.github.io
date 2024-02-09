@@ -1,12 +1,9 @@
-// StartupStepByStep.jsx
+
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectStartupStepByStep, setHighlightedIndices } from '@/store/redusers/startupStepByStepSliceReduser';
 import dataStartupSteps from '@/data/data-sections/data-section-startup/data-startup-step-by-step';
 import StartupStepItem from '../startup-step-item';
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Link from 'next/link';
 
 const StartupStepByStep: React.FC = () => {
@@ -14,11 +11,7 @@ const StartupStepByStep: React.FC = () => {
   const { highlightedIndices } = useSelector(selectStartupStepByStep);
 
   useEffect(() => {
-    AOS.init({
-      duration: 500,
-      once: false,
-      mirror: true,
-    });
+  
 
     const handleScroll = () => {
       const elements = document.querySelectorAll('.s-b-s-title');

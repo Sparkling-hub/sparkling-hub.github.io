@@ -2,7 +2,7 @@ interface ButtonProps {
   readonly isDropdownOpen: boolean;
 }
 
-function Button({ isDropdownOpen }: ButtonProps) {
+function ButtonCircle({ isDropdownOpen }: ButtonProps) {
   return (
     <div className={`square-circle h-6 w-6 rounded-full p-0 pointer-events-none transform mr-3  bg-teal-500 ${isDropdownOpen ? 'text-black rotate-180' : 'text-white rotate-90'}`}>
       <svg
@@ -20,4 +20,4 @@ function Button({ isDropdownOpen }: ButtonProps) {
   );
 }
 
-export default Button;
+export default ButtonCircle;
