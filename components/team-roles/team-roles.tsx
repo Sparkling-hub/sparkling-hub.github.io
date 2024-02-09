@@ -11,12 +11,12 @@ const Benefit: React.FC = () => {
 
     return (
         <div className='w-full flex lg:flex-row flex-col mb-16'>
-            <div className='w-full lg:w-1/2  mx-4'>
+            <div className='w-full lg:w-1/2 '>
                 {data.map((item) => (
                     <Row key={item.index} {...item} />
                 ))}
             </div>
-            <div className='mx-4 w-full lg:w-1/2'>
+            <div className='w-full lg:w-1/2'>
                 <div className='border-gray-100 border-[1px] rounded-3xl my-5 lg:m-5 p-5 h-8/12'>
                     <h3 className='flex justify-center text-xl mb-5'>
                         Roles<strong className='font-medium text-teal-500'>
