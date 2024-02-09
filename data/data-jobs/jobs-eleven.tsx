@@ -1,26 +1,19 @@
-const experience = <p>PAID POSITION</p>
+const experience = "PAID POSITION"
 
-const head = <h3>Project manager</h3>
+const head = "Project manager"
 
-const text =
-    <p>
-        Full time
-        <br />
-        On site
-    </p>
+const text =[`Full time`,'Hybrid work']
 
-
-const location = <>
-    <img src='/img/jobs/switzerland.png' alt="" />
-    <p>Switzerland, Lugano</p>
-</>
-
+const locationPath ='/img/jobs/switzerland.png'
+const locationHtml = 'Switzerland, Lugano'
 
 const jobs = {
+    
     location: "Switzerland",
     namePosition: "Project manager",
-    locationHTML: location,
+    locationPath: locationPath,
     experienceHTML: experience,
+    locationHTML:locationHtml,
     head: head,
     text: text,
     workMode:"On site",

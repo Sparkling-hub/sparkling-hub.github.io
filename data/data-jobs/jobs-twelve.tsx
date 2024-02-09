@@ -1,25 +1,20 @@
-const experience = <p>PAID POSITION</p>
-
-const head = <h3>Sales Associate</h3>
-
-const text =
-    <p>
-        Full time
-        <br />
-        On site
-    </p>
 
 
-const location = <>
- <img src='/img/jobs/united_kingdom.png' alt="" />
- 
-    <p>United Kingdom</p>
-</>
+const head = 'Sales Associate'
+
+const experience = "PAID POSITION"
+
+const text =[`Full time`,'Hybrid work']
+
+const locationPath = '/img/jobs/united_kingdom.png'
+const location =  'United Kingdom'
+  
 
 
 const jobs = {
     location: "United Kingdom",
     namePosition: "Sales Associate",
+    locationPath:locationPath,
     locationHTML: location,
     experienceHTML: experience,
     head: head,

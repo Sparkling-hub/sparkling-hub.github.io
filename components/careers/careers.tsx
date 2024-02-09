@@ -12,48 +12,50 @@ import {
 	setUniqueIds,
 	setActiveIds,
 	setJobsAction
-  } from '@/store/redusers/CareersSliceReduser';
+} from '@/store/redusers/CareersSliceReduser';
 
 
-  const Careers: React.FC<ICareersProps> = () => {
+const Careers: React.FC<ICareersProps> = () => {
 	const dispatch = useDispatch();
 
-  
-	const {  dataJobs } = useSelector(selectCareers)
-	
+
+	const { dataJobs } = useSelector(selectCareers)
+
 	useEffect(() => {
 		dispatch(setJobsAction({ value: Jobs }));
 
 		const result = {
-		  workMode: getIds(Jobs, 'workMode'),
-		  experience: getIds(Jobs, 'experience'),
-		  location: getIds(Jobs, 'location'),
+			workMode: getIds(Jobs, 'workMode'),
+			experience: getIds(Jobs, 'experience'),
+			location: getIds(Jobs, 'location'),
 		};
-	  
+
 		const activeIds = {
-		  workMode: [],
-		  experience: [],
-		  location: [],
+			workMode: [],
+			experience: [],
+			location: [],
 		};
-	  
-	
+
+
 		dispatch(setUniqueIds({ value: result }));
 		dispatch(setActiveIds({ value: activeIds }));
-	  }, [dataJobs, dispatch]);
-	  
+	}, [dataJobs, dispatch]);
 
-  
- 
+
+
+
 	return (
 
+
 		<div className='flex relative w-full items-center lg:items-start flex-col lg:flex-row'>
+
 			<Filter
 			/>
 			<JobList />
 		</div>
 
 	);
-  };
+};
 
 export default Careers;
 

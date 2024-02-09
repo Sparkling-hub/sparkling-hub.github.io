@@ -1,24 +1,20 @@
-const experience = <p>PAID POSITION</p>
-
-const head = <h3>Middle Level JavaScript Developer</h3>
-
-const text =
-    <p>
-        Full time
-        <br />
-        Hybrid work
-    </p>
 
 
-const location = <>
-    <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg" height={13} alt="" />
-    <p>Tunisia, Tunis</p>
-</>
+const head = 'Middle Level JavaScript Developer'
+const experience = "PAID POSITION"
+
+const text =[`Full time`,'Hybrid work']
+
+
+const locationPath = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg"
+const location ='Tunisia, Tunis'
+
 
 
 const jobs = {
     location: "Tunis",
     namePosition: "Middle Level JavaScript Developer",
+    locationPath:locationPath,
     locationHTML: location,
     experienceHTML: experience,
     head: head,
