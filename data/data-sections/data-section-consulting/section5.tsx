@@ -8,17 +8,17 @@ const header =
 
     </h2>
 
-const content = <div className="we-work-container relative my-10 h-auto flex flex-col">
-    <div className="arrow absolute left-[-4rem]">
+const content = <div className="we-work-container relative my-10 h-auto jystify-ceter flex  flex-col lg:items-start items-center">
+    <div className="arrow absolute lg:left-[-4rem]">
         <img src={`/img/consulting/arrow_consulting.svg`} className=' h-[500px] lg:block hidden w-auto' alt="we-work" />
-        <img src={`/img/consulting/arrow_consulting_mobile.svg`} className=' h-[500px] block lg:hidden w-auto' alt="we-work" />
+        
     </div>
-    <ul className="h-auto flex flex-col justify-around text-xl font-light  h-[100%]">
-        <li className="ml-28 ml-8 mb-8 xl:w-[70%] max-w-[600px] w-fullrounded-full bg-color-primary-light-light "><div className=" h-[20%] h-full w-full pl-8 pt-2 pb-3">Analyse the issue and its roots.</div></li>
-        <li className="ml-48  ml-8 mb-10 max-w-[600px] xl:w-[70%] max-w-[600px] w-fullrounded-full bg-color-primary-light-light "><div className="rounded-full bg-color-primary-light-light pl-8 pt-2 pb-3">Evaluate the technical architecture of the project.</div></li>
-        <li className="ml-64 mb-9 xl:w-[70%] max-w-[600px] w-full h-20 rounded-full bg-color-primary-light-light "><div className="rounded-full bg-color-primary-light-light pl-8 pt-2 pb-3">Plan a solution with your company tailoring it to its needs.</div></li>
-        <li className="ml-48 mb-8 xl:w-[70%] max-w-[600px] w-full rounded-full bg-color-primary-light-light "><div className="rounded-full bg-color-primary-light-light pl-8 pt-2 pb-3">Implement new changes in the ecosystem and iterate if needed.</div></li>
-        <li className=" ml-28 mb-0 xl:xl:w-[70%] max-w-[600px] w-fullw-full rounded-full bg-color-primary-light-light "><div className="rounded-full bg-color-primary-light-light pl-8 pt-2 pb-3">Keep it working! Supporting you also once the project is finished. Always ready to help.</div></li>
+    <ul className="h-auto flex flex-col lg:justify-around text-2xl font-light justify-center h-[100%] lg:text-start items-center lg:items-start  text-center">
+        <li className="lg:ml-20 lg:mt-9 lg:mb-2 my-4 w-fit flex items-center rounded-full  bg-color-primary-light-light  lg:h-[70px] ">  <p className="lg:pr-24 px-8 py-4">Analyse the issue and its roots.</p></li>
+        <li className="lg:ml-44  lg:mb-4 w-fit flex items-center my-4  lg:h-[70px] rounded-full  bg-color-primary-light-light"><p className=" px-8 lg:pr-24 py-4">Evaluate the technical architecture of the project.</p></li>
+        <li className="lg:ml-60  lg:mb-4 w-fit flex items-center  my-4 lg:h-[70px] rounded-full  bg-color-primary-light-light "><p className=" px-8 lg:pr-24 py-4">Plan a solution with your company tailoring it to its needs.</p></li>
+        <li className="lg:ml-44  lg:mb-2 w-fit flex items-center my-4 lg:h-[70px] rounded-full  bg-color-primary-light-light "><p className=" px-8 lg:pr-24 py-4">Implement new changes in the ecosystem and iterate if needed.</p></li>
+        <li className="lg:ml-20    w-fit  flex items-center my-4 lg:h-[70px] rounded-full  bg-color-primary-light-light "><p className=" px-8 lg:pr-24 py-4">Keep it working! Supporting you also once the project is finished. Always ready to help.</p></li>
     </ul>
 </div>
 
