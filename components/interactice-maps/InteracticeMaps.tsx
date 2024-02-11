@@ -33,7 +33,7 @@ const InteracticeMaps: React.FC = () => {
 			if (elements) {
 				for (const element of elements) {
 					element.classList.remove('scale-125');
-			
+				
 				
 			
 				}
@@ -100,7 +100,7 @@ const InteracticeMaps: React.FC = () => {
 
 	const handlePointsClick = (e: any) => {		
 		let officeId = e.currentTarget.id;
-	
+		e.currentTarget.classList.add('hidden');
 		dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
 		dispatch(setActiveOfficePoint(officeId));
 	  
@@ -126,7 +126,7 @@ const InteracticeMaps: React.FC = () => {
 			<div className="absolute inset-0 z-behind"></div>
 			<div className="absolute top-[-100px]" id="section-12"></div>
 			<div className="fade-in cubic relative">
-				<div className="xl:grid relative grid-cols-12 px-global gap-x-global flex flex-col-reverse">
+				<div className="flex relative flex-row px-global gap-x-global flex">
 					<MapField />
 					<MapSelectionSettings />
 				</div>

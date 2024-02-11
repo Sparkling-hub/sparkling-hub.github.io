@@ -17,6 +17,9 @@ const Card: React.FC = () => {
       !cardRef.current.contains(e.target as Node) &&
       !Array.from(points).some((point) => point.contains(e.target as Node))
     ) {
+      points.forEach(point => {
+        point.classList.remove('hidden');
+    });
       dispatch(setOfficeCard(null));
       dispatch(setActiveOfficePoint(''));
       dispatch(setHovered(null))
@@ -24,12 +27,7 @@ const Card: React.FC = () => {
   };
 
 
-  const handleMapsClick = (e: any) => {
-    dispatch(setHovered(null))
-    dispatch(setActiveOfficePoint(''));
-    dispatch(setOfficeCard(null));
-    e.stopPropagation();
-  };
+
 
   useEffect(() => {
 
@@ -71,11 +69,13 @@ const Card: React.FC = () => {
       before:-translate-x
       before:overflow-visible
       before:transition-all before:duration-300 before:ease-in-out 
-      absolute h-[180px] w-full text-black w-screen max-w-[200px] ${(isVisible)  ? 'opacity-95 top-[100%] z-[1] delay-300 before:border-b-[60px] h-full ' : ' opacity-0 top-[100%] z-[-1] before:border-b-[0px] h-0'} w-full text-black w-screen max-w-[200px] transition-height  duration-300 ease-in-out
+      absolute w-full text-black w-screen max-w-[200px]  transition-all  duration-300 ease-in-out
+  
+      ${(isVisible) ? 'opacity-95 z-[1] delay-300 before:border-b-[60px] top-[100%]  h-[180px]' : ' opacity-0 z-[-1] before:border-b-[0px] top-[0%]'} 
       `}
-      style={{ top: `${Math.round(activeOfficePointCoords[0])}px`, left: `${Math.round(activeOfficePointCoords[1])}px` }}
+      style={{ top: `${Math.round(activeOfficePointCoords[0]-200)}px`, left: `${Math.round(activeOfficePointCoords[1])-80}px` }}
 
-    > <div className={`overflow-hidden flex items-center justify-center relative lg:absolute w-full bg-[#B0D311]  rounded-3xl ease-out lg:delay-[500ms]  transition-height  duration-300 ${isVisible ? 'opacity-100 h-[180px] top-[0%]' : 'h-[0px] top-full'}`} >
+    > <div className={`overflow-hidden flex items-center justify-center relative lg:absolute w-full bg-[#B0D311]  rounded-3xl ease-out lg:delay-[300ms]  transition-height  duration-300 ${isVisible ? 'opacity-100 h-[180px] top-[0%]' : 'h-[0px] top-full'}`} >
         <div className={`w-full left-0 px-6`}>
 
 

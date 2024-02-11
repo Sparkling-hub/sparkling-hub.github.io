@@ -15,29 +15,23 @@ const MapField: React.FC = () => {
 
     let currentCard = mapsData[0]?.officeCards?.find((card) => card.id === activeOfficePoint);
     if (currentCard) dispatch(setOfficeCard(currentCard));
+   
 
     return () => {
-      mapContainer?.removeEventListener('click', handleMapsClick);
+
     };
   }, [activeOfficePoint, mapsData, dispatch]);
 
-  const handleMapsClick = (e: any) => {
-    
-    if (activeOfficePoint) {dispatch(setActiveOfficePoint(''));
-    dispatch(setOfficeCard(null));
-    dispatch(setHovered(null))
-  
-    e.stopPropagation();}
-  };
+
 
   return (
-    <div className="map-container  max-w-screen-2xl  pt-40 lg:col-span-9 lg:gh-4 lg:gh-4 lg:p-14 pt-global lg:block relative">
-      <div className='lg:scale-90'>
-        {mapsData[0] ? mapsData[0].image : ''}
+    <div className="map-container  w-3/4 pt-40 lg:col-span-9 lg:gh-4 lg:gh-4 lg:p-14 pt-global lg:block relative">
+      <div className='relative'>
+        {mapsData[0] ? mapsData[0].image : ''}    <Card /> 
       </div>
       
 
-      <Card /> 
+  
     </div>
   );
 };
