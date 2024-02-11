@@ -32,10 +32,10 @@ const InteracticeMaps: React.FC = () => {
 	
 			if (elements) {
 				for (const element of elements) {
-					element.classList.toggle('hidden');
-					element.classList.toggle('block');
+					element.classList.remove('scale-125');
+			
 				
-					dispatch(setLastHovered(''));
+			
 				}
 			}
 		}
@@ -49,24 +49,36 @@ const InteracticeMaps: React.FC = () => {
 	}, [currentMap, hovered, lastHovered, activeOfficePoint, dispatch]);
 
 	const handleHover = () => {
-
 		let points = document.querySelectorAll('.office_point');
-
-		if (!points.length) return
-
+		if (!points.length) return;
+	
 		if (hovered) {
-
-			let elements = document.getElementById(hovered)?.children;
-
+			let elements = document.getElementById(hovered)?.querySelectorAll('svg');
+	
 			if (elements && !lastHovered) {
 				for (const element of elements) {
-					element.classList.toggle('hidden');
-					element.classList.toggle('block');
+					element.classList.add('svg-scale');
+;
 					dispatch(setLastHovered(hovered));
 				}
 			}
+		} else {
+			let lastHoveredElement = document.getElementById(lastHovered)?.querySelectorAll('svg');
+	
+			if (lastHoveredElement) {
+				for (const element of lastHoveredElement) {
+					element.classList.remove('svg-scale');
+				}
+				dispatch(setLastHovered(''));
+			}
 		}
 	};
+	
+	
+	
+	
+	
+	
 
 	const setupPointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
@@ -110,10 +122,10 @@ const InteracticeMaps: React.FC = () => {
 	  
 	  
 	return (
-		<div className="flex-section block_map relative">
+		<div className="flex-section block_map relative  max-w-screen-2xl ">
 			<div className="absolute inset-0 z-behind"></div>
 			<div className="absolute top-[-100px]" id="section-12"></div>
-			<div className="fade-in cubic reveal">
+			<div className="fade-in cubic relative">
 				<div className="xl:grid relative grid-cols-12 px-global gap-x-global flex flex-col-reverse">
 					<MapField />
 					<MapSelectionSettings />

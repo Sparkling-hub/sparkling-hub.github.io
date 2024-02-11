@@ -18,7 +18,7 @@ const element = {
     id: 'maps',
     index: 5,
 
-    background: 'bg-color-primary-medium',
+    background: 'bg-color-primary-light',
     margin_bottom: 'mb-12',
     padding_bottom: "pb-12"
 };

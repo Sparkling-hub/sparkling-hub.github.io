@@ -7,7 +7,7 @@ import Card from '@/components/card';
 import mapsData from "@/data/data-maps";
 const MapField: React.FC = () => {
   const dispatch = useDispatch();
-  const {  activeOfficePoint } = useSelector(selectMaps);
+  const {  activeOfficePoint, hovered} = useSelector(selectMaps);
 
   useEffect(() => {
     let mapContainer = document.querySelector('.map-container');
@@ -31,7 +31,7 @@ const MapField: React.FC = () => {
   };
 
   return (
-    <div className="map-container pt-40 lg:col-span-9 lg:gh-4 lg:gh-4 lg:p-14 pt-global lg:block relative">
+    <div className="map-container  max-w-screen-2xl  pt-40 lg:col-span-9 lg:gh-4 lg:gh-4 lg:p-14 pt-global lg:block relative">
       <div className='lg:scale-90'>
         {mapsData[0] ? mapsData[0].image : ''}
       </div>

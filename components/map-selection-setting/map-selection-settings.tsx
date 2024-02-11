@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectMaps, setHovered, setActiveOfficePoint, setActiveOfficePointCoords } from '@/store/redusers/mapsSliceReduser';
+import { selectMaps, setHovered, setActiveOfficePoint, setActiveOfficePointCoords, setLastHovered } from '@/store/redusers/mapsSliceReduser';
 import mapsData from "@/data/data-maps";
 import { updateElementPosition } from '../helper/updateElementPosition';
 
@@ -30,7 +30,19 @@ const MapSelectionSettings: React.FC = () => {
 		};
 	  }, [activeOfficePoint, dispatch]);
 	
-	  
+	  const handleHoverOut = (id: string) => {
+		const hoveredElement =document.querySelectorAll(`svg #${+id}`);
+	
+		if (hoveredElement) {
+			for (const element of hoveredElement) {
+				element.classList.add('svg-scale');
+;
+				
+			}
+		}
+		dispatch(setHovered(null));
+	
+	};
 
 	return (
 	  <div className="col-span-3 flex flex-col relative xl:w-fit w-4/5 m-auto  ">
@@ -51,7 +63,7 @@ const MapSelectionSettings: React.FC = () => {
 			  className={`xl:text-start w-fit  m-auto  text-center lg:block btn duration-200 col-span-1 xl:ml-8 p-4 text-xl text-left font-medium !p-0 !bg-transparent !pb-4 hover:!text-primary-light lg:opacity-100
 				${hovered === card.id ? 'text-primary-light' : ''} ${activeOfficePoint === card.id ? 'text-white' : ''} `}
 			  onMouseEnter={() => dispatch(setHovered(card.id))}
-			  onMouseLeave={() => dispatch(setHovered(null))}
+			  onMouseLeave={() => {handleHoverOut(card.id)}}
 			  onClick={() => handlePointsClick(card.id)}
 			>
 			  {card.city}
