@@ -1,34 +1,31 @@
 
-import StartupsTechnologiesIconList from "@/components/startup-technologies-icon-list"
-
-
-const header = (
-  <div className="m-auto my-20 text-center">
-    <h2 className="text-5xl font-light text-white mb-5">
-      <span className="text-teal-400 font-medium">Technologies</span>{' '}We Work With{/*
-  */}</h2>
-    <p className="text-white font-light text-xl">{/*
-  */}<span className="font-medium">Front-end, Back-end and DevOps.</span> We use the{' '}
-      <span className="font-medium">right tools</span>{' '}
-      for
-      <span className="font-medium"> the right job!</span>
-    </p>
-  </div>
-);
+import StartupsItemList from "@/components/startup-item-list"
 
 
 
+const header =
+	<h2 className="text-5xl">
+		<div className="text-center">
+			<span className="color-primary-light">Your</span>{' '}
+			<span className="text-black font-medium">Dream Team</span>
+			<br />
+		</div>
+		<div className="text-center">
+			<span className="text-3xl ">Experts dedicated to their craft and fully committed to your project.</span>
+			<br />
+		</div>
+	</h2>
 
-
-const content = <StartupsTechnologiesIconList />
+const content = <StartupsItemList />
 
 
 const element = {
-  content: content,
-  header: header,
-  index: 3,
-  background: 'bg-color-primary-dark',
-  margin_bottom: 'mb-12'
+	content: content,
+	header: header,	
 
+	background: 'bg-color-primary-light',
+	index: 2,
+	padding_bottom: 'pb-40',
+	margin_bottom: 'mb-64'
 }
 export default element
