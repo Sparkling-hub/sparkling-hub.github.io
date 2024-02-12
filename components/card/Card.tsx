@@ -71,7 +71,7 @@ const Card: React.FC = () => {
       before:transition-all before:duration-300 before:ease-in-out 
       absolute w-full text-black w-screen max-w-[200px]  transition-all  duration-300 ease-in-out
   
-      ${(isVisible) ? 'opacity-95 z-[1] delay-300 before:border-b-[60px] top-[100%]  h-[180px]' : ' opacity-0 z-[-1] before:border-b-[0px] top-[0%]'} 
+      ${(isVisible) ? 'opacity-95 z-[1]  before:border-b-[60px] top-[100%]  h-[180px]' : ' opacity-0 z-[-1] before:border-b-[0px] top-[0%]'} 
       `}
       style={{ top: `${Math.round(activeOfficePointCoords[0]-200)}px`, left: `${Math.round(activeOfficePointCoords[1])-80}px` }}
 

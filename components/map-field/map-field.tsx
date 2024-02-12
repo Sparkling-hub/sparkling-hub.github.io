@@ -2,15 +2,14 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectMaps, setActiveOfficePoint, setHovered, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
+import { selectMaps, setOfficeCard } from '@/store/redusers/mapsSliceReduser';
 import Card from '@/components/card';
 import mapsData from "@/data/data-maps";
 const MapField: React.FC = () => {
   const dispatch = useDispatch();
-  const {  activeOfficePoint, hovered} = useSelector(selectMaps);
+  const {  activeOfficePoint} = useSelector(selectMaps);
 
   useEffect(() => {
-    let mapContainer = document.querySelector('.map-container');
 
 
     let currentCard = mapsData[0]?.officeCards?.find((card) => card.id === activeOfficePoint);

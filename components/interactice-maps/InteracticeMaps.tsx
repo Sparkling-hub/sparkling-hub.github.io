@@ -33,7 +33,7 @@ const InteracticeMaps: React.FC = () => {
 			if (elements) {
 				for (const element of elements) {
 					element.classList.remove('scale-125');
-				
+			
 				
 			
 				}
@@ -100,10 +100,17 @@ const InteracticeMaps: React.FC = () => {
 
 	const handlePointsClick = (e: any) => {		
 		let officeId = e.currentTarget.id;
-		e.currentTarget.classList.add('hidden');
+		let points = document.querySelectorAll('.office_point');
+	
+
+
+		for (const element of points) {
+			element.classList.remove('hidden');
+		}
+		e.currentTarget.classList.add('hidden')
 		dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
 		dispatch(setActiveOfficePoint(officeId));
-	  
+		
 	};
 
 	const handleHoverOver = (e: any) => {
