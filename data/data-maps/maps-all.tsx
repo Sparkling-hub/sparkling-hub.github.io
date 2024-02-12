@@ -128,7 +128,7 @@ const officeCardsData: IOfficeCards[] = [
   createOfficeCard("Switzerland Headquarter", "Lugano", "Via Cattedrale 7", "Switzerland", "6900", "Switzerland",),
   createOfficeCard("Ukraine Office", "Zaporizhzhia", "Haharina St, 3", "Ukraine", "69061", "Ukraine"),
   createOfficeCard("UK Office", "London", "16-18 Montagu Place", "United Kingdom", "W1H 2BQ", "UK Office",),
-  createOfficeCard("Partner's Office / UK office", "Cambridge", "St John's Innovation Centre", "United Kingdom", "CB4 0WS", "UK_partner",),
+  createOfficeCard("Partner's Office", "Cambridge", "St John's Innovation Centre", "United Kingdom", "CB4 0WS", "UK_partner",),
 ];
 
 const element: IMaps = {

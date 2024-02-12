@@ -46,7 +46,7 @@ const MapSelectionSettings: React.FC = () => {
 		
   
 		<div className={`grid grid-cols-1 lg:grid-cols-1 xl:border-b-0  xl:items-start w-full items-center`}>
-		{mapsData[0]?.officeCards?.sort((a, b) => a.city.localeCompare(b.country)) // Сортируем по полю city
+		{mapsData[0]?.officeCards?.sort((a, b) => a.city.localeCompare(b.city)) // Сортируем по полю city
   .map((card) => (
     <button
       key={card.id}
@@ -56,7 +56,7 @@ const MapSelectionSettings: React.FC = () => {
       onMouseLeave={() => {handleHoverOut()}}
       onClick={() => handlePointsClick(card.id)}
     >
-     {card.country} <br/> {card.city}
+      {card.city}
     </button>
   ))}
 
