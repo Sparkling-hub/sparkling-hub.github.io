@@ -14,7 +14,7 @@ const element = {
 	content: content,
 	header: header,
 	index: 4,
-	image:'/img/startup/section2/UI_UX Designer.png'
+	image:'/img/team/UI_UX Designer.png'
 
 }
 

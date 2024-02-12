@@ -9,7 +9,7 @@ const header = <h3>Team of Graduating Students</h3>
 const element = {
     header: header,
     content: content,
-    img: '/img/startup/section2/Students Avatar.svg',
+    img: '/img/startup/section2/Students Avatar.png',
     index: 5,
 }
 export default element

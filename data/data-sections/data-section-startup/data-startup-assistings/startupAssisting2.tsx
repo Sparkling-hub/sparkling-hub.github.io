@@ -9,7 +9,7 @@ const content =
         we stand by to assist. Our team is equipped to guide you through these crucial stages, helping you achieve your objectives.
     </p>
 
-const image = '/img/startup/assisting-plane/medium_plane.png'
+const image = '/img/startup/assisting-plane/rocket2.svg'
 
 const element = {
     header: header,

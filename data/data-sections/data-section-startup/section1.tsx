@@ -13,7 +13,7 @@ const content =
   </div>
 
 
-const image = <img src='/img/startup/startup_icon.png' className="w-full" alt="startup_icon" />;
+const image = <img src='/img/startup/logo.png' className="w-full" alt="startup_icon" />;
 
 const element = {
   content: content,
