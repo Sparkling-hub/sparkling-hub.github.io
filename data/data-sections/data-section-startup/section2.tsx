@@ -17,7 +17,7 @@ const element = {
   header: header,
 
   padding_bottom: "pb-40 custom-pb-60",
-  index: 1,
+  index: 2,
 
 }
 export default element

@@ -26,7 +26,7 @@ const content = <StartupsTechnologiesIconList />
 const element = {
   content: content,
   header: header,
-  index: 3,
+  index: 4,
   background: 'bg-color-primary-dark',
   margin_bottom: 'mb-12'
 

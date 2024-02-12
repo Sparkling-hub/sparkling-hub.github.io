@@ -27,7 +27,7 @@ const element = {
     header: header,
 
     background: 'bg-color-primary-light',
-    index: 4,
+    index: 5,
 
 }
 export default element
