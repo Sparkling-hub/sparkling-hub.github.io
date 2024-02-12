@@ -650,15 +650,15 @@ nav {
 	height: 2px;
 	position: absolute;
 	z-index: -1;
-	transition: background-color 0.5s ease; /* Adjust the duration and easing as needed */
+	transition: background-color 0.5s ease;
   }
   
   .svg-scale path {
-    transform: scale(1.25)  translateX(5px);; /* Увеличение в 1.25 раза */
+    transform: scale(1.25)  translateX(5px);
     transform-origin: center; 
 	
   
-    transition: transform 0.3s ease; /* Плавное изменение за 0.3 секунды */
+    transition: transform 0.3s ease;
 }
 
   
