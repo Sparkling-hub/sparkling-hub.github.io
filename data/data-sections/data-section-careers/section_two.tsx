@@ -18,7 +18,7 @@ const button = <div className="flex justify-center m-auto"><Button href={"/conta
 const element = {
 	content: content,
 
-  	background: 'bg-color-primary-light',
+  	
 	id: "jobs",
 	button: button
 }

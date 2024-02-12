@@ -19,7 +19,7 @@ const Service: React.FC<IService> = ({ content, header, image, button, index }) 
 	}, []);
 
 	return (
-		<div className={`flex-col pb-[50px] w-full lg:w-1/3 lg:px-[20px] h-full text-center 2xl:h-[700px] xl:h-[750px] lg:h-[800px] bg-white m-2 rounded-3xl shadow-lg ${(index) % 2 == 0 ? 'lg:mt-[100px]' : ""}`}
+		<div className={`flex-col border-slate-100 border-[1px] pb-[50px] w-full lg:w-1/3 lg:px-[20px] h-full text-center 2xl:h-[700px] xl:h-[750px] lg:h-[800px] bg-white m-2 rounded-3xl shadow-lg ${(index) % 2 == 0 ? 'lg:mt-[100px]' : ""}`}
 			data-aos-delay={200 * index}
 			data-aos-once={true}
 			data-aos-mirror={true}

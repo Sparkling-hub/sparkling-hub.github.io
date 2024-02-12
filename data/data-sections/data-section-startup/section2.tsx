@@ -22,8 +22,6 @@ const content = <StartupsItemList />
 const element = {
 	content: content,
 	header: header,	
-
-	background: 'bg-color-primary-light',
 	index: 2,
 	padding_bottom: 'pb-40',
 	margin_bottom: 'mb-64'
