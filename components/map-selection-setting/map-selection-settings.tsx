@@ -46,20 +46,20 @@ const MapSelectionSettings: React.FC = () => {
 		
   
 		<div className={`grid grid-cols-1 lg:grid-cols-1 xl:border-b-0  xl:items-start w-full items-center`}>
-		  {mapsData[0]?.officeCards?.map((card) => (
-		
-			<button
-			  key={card.id}
-			  className={`bg-[#285C5C]  text-center duration-200 col-span-1 p-3 my-1.5 text-[24px] text-[#AECA13] rounded-4xl w-full hover:!opacity-75 hover:!text-[#AECA13]
-				${hovered == card.id ? 'text-primary-light' : ''} ${activeOfficePoint == card.id ? 'opacity-80' : ''} `}
-			  onMouseEnter={() => dispatch(setHovered(card.id))}
-			  onMouseLeave={() => {handleHoverOut()}}
-			  onClick={() => handlePointsClick(card.id)}
-			>
-			  {card.city}
-			</button>
-			
-		  ))}
+		{mapsData[0]?.officeCards?.sort((a, b) => a.city.localeCompare(b.city)) // Сортируем по полю city
+  .map((card) => (
+    <button
+      key={card.id}
+      className={`bg-[#285C5C]  text-center duration-200 col-span-1 p-3 my-1.5 text-[24px] text-[#AECA13] rounded-4xl w-full hover:!opacity-75 hover:!text-[#AECA13]
+        ${hovered == card.id ? 'text-primary-light' : ''} ${activeOfficePoint == card.id ? 'opacity-80' : ''} `}
+      onMouseEnter={() => dispatch(setHovered(card.id))}
+      onMouseLeave={() => {handleHoverOut()}}
+      onClick={() => handlePointsClick(card.id)}
+    >
+      {card.city}
+    </button>
+  ))}
+
 		</div>
 	  </div>
 	);
