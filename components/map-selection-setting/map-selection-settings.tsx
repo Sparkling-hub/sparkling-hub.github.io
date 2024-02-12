@@ -44,7 +44,7 @@ const MapSelectionSettings: React.FC = () => {
 	};
 
 	return (
-	  <div className="flex flex-col relative w-1/4 w-full m-auto  ">
+	  <div className="flex flex-col relative w-1/4 m-auto">
 		
   
 		<div className={`grid grid-cols-1 lg:grid-cols-1 xl:border-b-0  xl:items-start w-full items-center`}>
@@ -52,7 +52,7 @@ const MapSelectionSettings: React.FC = () => {
 		
 			<button
 			  key={card.id}
-			  className={`bg-[#285C5C]  text-center duration-200 col-span-1 p-2 my-1.5 text-[24px] text-[#AECA13] rounded-3xl w-full hover:!opacity-75 hover:!text-[#AECA13]
+			  className={`bg-[#285C5C]  text-center duration-200 col-span-1 p-3 my-1.5 text-[24px] text-[#AECA13] rounded-4xl w-full hover:!opacity-75 hover:!text-[#AECA13]
 				${hovered == card.id ? 'text-primary-light' : ''} ${activeOfficePoint == card.id ? 'opacity-80' : ''} `}
 			  onMouseEnter={() => dispatch(setHovered(card.id))}
 			  onMouseLeave={() => {handleHoverOut()}}
