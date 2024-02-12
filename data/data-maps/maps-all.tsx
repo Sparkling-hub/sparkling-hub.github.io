@@ -13,7 +13,7 @@ const header =
 const image =
   <svg id="EU" version="1.1"  xmlns="http://www.w3.org/2000/svg" viewBox="40 70 180 180" className="item-map w-auto m-auto text-dark-gray relative svg-map  max-w-full duration-700 opacity-100 ">
 
-<svg className="layer" x="33" y="69">
+<svg className="layer" x="33" y="68.5">
 
   <path d="m746.68,497.14l0.03,0.02l0.04,-0.02l0.02,0.02l-0.07,0.03l-0.04,-0.05l-0.02,-0.08l0,-0.07l0.01,0l0,0.02l0.01,0.03l0.01,0.04l-0.01,0.03l0.02,0.03zm0.21,0.04l-0.03,0.01l-0.03,-0.01l0,-0.01l-0.01,-0.01l0.04,0l0.02,-0.02l0.02,-0.02l0,-0.04l0.01,0.04l0,0.03l-0.02,0.03z" id="CC"/>
   <path d="m771.61,492.34l-0.08,0.2l-0.15,-0.11l-0.16,-0.03l0.03,-0.15l0.14,-0.03l0.07,0l0.1,-0.06l0.05,0.18z" id="CX"/>
