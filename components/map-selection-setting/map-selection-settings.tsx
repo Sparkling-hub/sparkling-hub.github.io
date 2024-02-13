@@ -18,6 +18,7 @@ const MapSelectionSettings: React.FC = () => {
 
         if (point) {
             point.classList.add('hidden');
+			
         } 
     };
 	
@@ -46,17 +47,20 @@ const MapSelectionSettings: React.FC = () => {
 		
   
 		<div className={`grid grid-cols-1 lg:grid-cols-1 xl:border-b-0  xl:items-start w-full items-center`}>
-		{mapsData[0]?.officeCards?.sort((a, b) => a.city.localeCompare(b.city)) // Сортируем по полю city
+		{mapsData[0]?.officeCards
+  ?.map(card => ({ ...card, city: card.city === "Ariana" ?card.country : card.city }))
+  .sort((a, b) => a.city.localeCompare(b.city))
   .map((card) => (
     <button
       key={card.id}
-      className={`bg-[#285C5C]  text-center duration-200 col-span-1 p-3 my-1.5 text-[24px] text-[#AECA13] rounded-4xl w-full hover:!opacity-75 hover:!text-[#AECA13]
+	  
+	  className={`bg-[#285C5C] select_maps text-center duration-200 col-span-1 p-3 my-1.5 text-[24px] text-[#AECA13] rounded-4xl w-full hover:!opacity-75 hover:!text-[#AECA13]
         ${hovered == card.id ? 'text-primary-light' : ''} ${activeOfficePoint == card.id ? 'opacity-80' : ''} `}
       onMouseEnter={() => dispatch(setHovered(card.id))}
       onMouseLeave={() => {handleHoverOut()}}
       onClick={() => handlePointsClick(card.id)}
     >
-      {card.city}
+      {card.city=="Ariana"?card.country:card.city}
     </button>
   ))}
 

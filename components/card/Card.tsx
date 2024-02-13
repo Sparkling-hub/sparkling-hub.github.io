@@ -15,15 +15,17 @@ const Card: React.FC = () => {
     if (
       cardRef.current &&
       !cardRef.current.contains(e.target as Node) &&
-      !Array.from(points).some((point) => point.contains(e.target as Node))
+      !Array.from(points).some((point) => point.contains(e.target as Node)) &&
+      !Array.from(document.querySelectorAll('.select_maps')).some((elem) => elem.contains(e.target as Node))
     ) {
       points.forEach(point => {
         point.classList.remove('hidden');
-    });
+      });
       dispatch(setOfficeCard(null));
       dispatch(setActiveOfficePoint(''));
-      dispatch(setHovered(null))
+      dispatch(setHovered(null));
     }
+    
   };
 
 
@@ -75,7 +77,7 @@ const Card: React.FC = () => {
       `}
       style={{ top: `${Math.round(activeOfficePointCoords[0]-199)}px`, left: `${Math.round(activeOfficePointCoords[1])-82}px` }}
 
-    > <div className={`overflow-hidden flex items-center justify-center relative lg:absolute w-full bg-[#B0D311] duration-300 rounded-3xl ease-out  transition-height  duration-300 ${isVisible ? 'opacity-100 h-[100%] top-[0%]' : '100 h-[100%] top-[0%]'}`} >
+    > <div className={`overflow-hidden flex items-center justify-center relative lg:absolute w-full bg-[#B0D311] duration-300 rounded-3xl ease-out  transition-height  ${isVisible ? 'opacity-100 h-[100%] top-[0%] ' : '100 h-[100%] top-[0%]'}`} >
         <div className={`w-full left-0 px-6`}>
 
 
