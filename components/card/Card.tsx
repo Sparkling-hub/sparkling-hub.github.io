@@ -61,7 +61,7 @@ const Card: React.FC = () => {
       z-[5]
       before:transform before:rotate-180
       before:absolute
-      before:top-[169.7px]
+
       before:rounded-b-3xl
       before:border-l-[100px]
       before:w-full
@@ -70,12 +70,12 @@ const Card: React.FC = () => {
       before:overflow-visible
       before:transition-all before:duration-300 before:ease-in-out 
       absolute w-full text-black w-screen max-w-[200px]  transition-all  duration-300 ease-in-out
-  
-      ${(isVisible) ? 'opacity-95 z-[1]  before:border-b-[60px] top-[100%]  h-[180px]' : ' opacity-0 z-[-1] before:border-b-[0px] top-[0%]'} 
+ 
+      ${(isVisible) ? 'opacity-95 z-[1] before:bottom-[-50px] before:border-b-[60px] h-[180px]' : ' h-[20px] before:bottom-[0px] opacity-0 z-[-1] before:border-b-[0px]'} 
       `}
-      style={{ top: `${Math.round(activeOfficePointCoords[0]-200)}px`, left: `${Math.round(activeOfficePointCoords[1])-80}px` }}
+      style={{ top: `${Math.round(activeOfficePointCoords[0]-199)}px`, left: `${Math.round(activeOfficePointCoords[1])-82}px` }}
 
-    > <div className={`overflow-hidden flex items-center justify-center relative lg:absolute w-full bg-[#B0D311]  rounded-3xl ease-out lg:delay-[300ms]  transition-height  duration-300 ${isVisible ? 'opacity-100 h-[180px] top-[0%]' : 'h-[0px] top-full'}`} >
+    > <div className={`overflow-hidden flex items-center justify-center relative lg:absolute w-full bg-[#B0D311] duration-300 rounded-3xl ease-out  transition-height  duration-300 ${isVisible ? 'opacity-100 h-[100%] top-[0%]' : '100 h-[100%] top-[0%]'}`} >
         <div className={`w-full left-0 px-6`}>
 
 
