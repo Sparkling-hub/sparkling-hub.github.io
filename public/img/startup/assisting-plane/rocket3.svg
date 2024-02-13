@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg  fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg  fill="none" xmlns="http://www.w3.org/2000/svg" >
 
-  <svg width="243" height="237"  viewBox="0 -50 282 282" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M135 229.138C207.902 229.138 267 178.553 267 116.153C267 53.7529 207.902 3.16772 135 3.16772C62.0984 3.16772 3 53.7529 3 116.153C3 178.553 62.0984 229.138 135 229.138Z" fill="#D2E3E9" stroke="#373435" stroke-width="5.33315" stroke-miterlimit="2.61313"/>
+      <svg width="253" height="237" viewBox="5 -80 330 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M127.5 234C196.259 234 252 182.289 252 118.5C252 54.7111 196.259 3 127.5 3C58.7406 3 3 54.7111 3 118.5C3 182.289 58.7406 234 127.5 234Z" fill="#D2E3E9" stroke="#373435" stroke-width="5.33315" stroke-miterlimit="2.61313"/>
 </svg>
-<svg width="252" height="338" viewBox="-30 50 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="242" height="318" viewBox="-20 30 330 330" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M82.5309 176.786C79.2862 166.118 79.2524 155.253 76.0091 144.584C43.5669 166.175 19.7383 190.112 0.754342 215.367C0.0367669 217.947 1.24082 218.515 3.27733 218.214C30.2371 213.408 55.4698 205.893 80.5808 198.187C80.1214 191.184 80.8106 183.985 82.5309 176.786Z" fill="#EAF8F8" stroke="#373435" stroke-width="1.00003" stroke-miterlimit="22.9256"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M52.0158 139.282C40.7954 159.775 40.2332 184.863 50.4157 214.287C49.186 219.461 49.3631 223.824 51.678 227.639C55.8185 227.898 60.1996 227.693 64.8672 226.854C66.1335 222.357 65.5254 218.03 63.9497 213.797C70.3714 183.689 67.9133 158.163 52.0158 139.282Z" fill="#85BBB6" stroke="#373435" stroke-width="1.00003" stroke-miterlimit="22.9256"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M63.9873 213.619L50.3696 214.486C49.1912 219.573 49.3939 223.873 51.6777 227.638C55.8183 227.897 60.1994 227.692 64.867 226.852C66.1332 222.356 65.5252 218.029 63.9495 213.796L63.9873 213.617V213.619Z" fill="#136868"/>
