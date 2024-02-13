@@ -13,11 +13,13 @@ const content =
 
 
 const element = {
+
   content: content,
   header: header,
 
   padding_bottom: "pb-40 custom-pb-60",
   index: 2,
+
 
 }
 export default element

@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
 										</div>
 										<div className='col-span-1 p-4 lg:order-2 lg:mx-auto'>
 											<div className='relative font-normal text-5xl font-normal mb-1 lg:text-5xl lg:pb-10'>Links</div>
-											<ul className='relative text-left flex-col w-1/2  text-2xl lg:text-2xl '>
+											<ul className='relative text-left flex-col w-full  text-2xl lg:text-2xl '>
 
 												<li>
 													<Link className="no-underline py-4" href="/">Home</Link>
@@ -56,10 +56,19 @@ const Footer: React.FC = () => {
 													<Link className="no-underline py-4" href="/about">About Us</Link>
 												</li>
 												<li>
-													<Link className="no-underline py-4" href="/services">Services</Link>
+													<Link className="no-underline py-4" href="/team-augmentation">Team Augmentation</Link>
+												</li>
+												<li>
+													<Link className="no-underline py-4" href="/software-development">Software Development</Link>
+												</li>
+												<li>
+													<Link className="no-underline py-4" href="/consulting">It Consultancy</Link>
 												</li>
 												<li>
 													<Link className="no-underline py-4" href="/startup">Startup</Link>
+												</li>
+												<li>
+													<Link className="no-underline py-4" href="/careers">Careers</Link>
 												</li>
 												<li className='lg:hidden'>
 													<Link className="no-underline py-4" href="/contact">Get in touch</Link>

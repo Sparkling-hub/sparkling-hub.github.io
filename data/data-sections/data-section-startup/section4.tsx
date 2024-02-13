@@ -23,12 +23,14 @@ const header = (
 const content = <StartupsTechnologiesIconList />
 
 
+
 const element = {
   content: content,
   header: header,
   index: 4,
-  background: 'bg-color-primary-dark',
+
   margin_bottom: 'mb-12'
+
 
 }
 export default element
