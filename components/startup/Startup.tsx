@@ -13,7 +13,8 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 				<div className='flex my-3 mx-3 w-full justify-center lg:justify-start lg:text-start align-baseline'>
 
-					<div className='align-baseline flex lg:w-auto lg:text-start text-center w-fit  flex '><img className='align-baseline h-[30px] w-[30px] lg:block hidden' src='/img/right-arrow-circle.svg' alt="" /></div>
+					<div className='align-baseline flex lg:w-auto lg:text-start text-center w-fit  flex '>
+						<img className='align-baseline h-[30px] w-[30px] lg:block hidden' src='/img/right-arrow-circle.svg' alt="" /></div>
 					<div className='text-emerald-900 font-medium text-2xl w-fit lg:w-auto text-center lg:text-start'>{header}</div>
 
 				</div>
@@ -22,7 +23,7 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 			</div>
 
-			<div className='flex items-center justify-center square-green bg-color-primary-medium h-40 w-48 rounded-3xl'>
+			<div className='flex items-center justify-center square-green  h-40 w-48 rounded-3xl'>
 				<img className='inline-block mx-4 w-32 h-32' src={img} alt="" />
 			</div>
 
