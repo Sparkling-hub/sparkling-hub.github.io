@@ -10,7 +10,7 @@ const header = <h3>Software Architecture Consultancy</h3>
 const element = {
     header: header,
     content: content,
-    img: '/img/consulting/section3/Software Architecture Icon .png',
+    img: '/img/services/software_development_icon.png',
     index: 1,
 }
 export default element
