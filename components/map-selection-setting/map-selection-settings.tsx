@@ -14,12 +14,19 @@ const MapSelectionSettings: React.FC = () => {
         dispatch(setActiveOfficePoint(activePoint));
 
         const hoveredElements = document.querySelectorAll('.office_point');
-        const point = Array.from(hoveredElements).find(element => element.id === activePoint);
+       
+		for (const element of hoveredElements) {
+			element.classList.remove('hidden');
+			if(element.id==activePoint){element.classList.add('hidden')
+			dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));
+			dispatch(setActiveOfficePoint(activePoint));}
+		}
 
-        if (point) {
-            point.classList.add('hidden');
-			
-        } 
+		
+	
+
+    
+	
     };
 	
 	useEffect(() => {
