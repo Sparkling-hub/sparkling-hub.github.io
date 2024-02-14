@@ -2,7 +2,7 @@
 
 const content = (<div>
 
-<p className="leading-8 text-center text-white text-xl">
+<p className="leading-8 text-center text-white mt-3 text-xl">
 
 Buried under a mountain of development tasks and the finish line seems unattainable?
 
