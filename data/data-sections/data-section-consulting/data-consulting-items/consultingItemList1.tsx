@@ -10,7 +10,8 @@ const header = <h3>Software Architecture Consultancy</h3>
 const element = {
     header: header,
     content: content,
-    img: '/img/benefits/Agile_working.png',
+
+    img: '/img/benefits/Seasoned_CTO.png',
     index: 1,
 }
 export default element
