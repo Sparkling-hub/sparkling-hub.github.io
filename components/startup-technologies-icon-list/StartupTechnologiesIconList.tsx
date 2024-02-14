@@ -15,7 +15,7 @@ const StartupTechnologiesIconList: React.FC = () => {
   const duplicatedIconsOne = [...firstPart, ...firstPart];
   const duplicatedIconsTwo = [...secondPart, ...secondPart];
   return (
-    <div className='flex flex-col justify-center items-center  overflow-hidden block 2xl:relative 2xl:w-[1500px] right-[110px]'>
+    <div className='flex flex-col justify-center items-center  overflow-hidden block 2xl:relative 2xl:w-full right-[110px]'>
       <div className='container marquee-track'>
         <div className='grid grid-flow-col grid-cols-1 grid-rows-1 gap-4 w-fit iconContainer marquee-track'>
 

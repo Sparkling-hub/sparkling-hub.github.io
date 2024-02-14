@@ -567,17 +567,17 @@ nav {
 	--grid-x-offset: 20px;
 	--grid-x-offset-reverse: -20px;
 	--marquee-animation: marquee-slide;
-	--item-speed: 30s;
+	--item-speed: 10s;
 	--item-count: 11;
 }
 
 @keyframes marquee-slide {
 	0% {
-		transform: translate3d( 0, 0, 0);
+		transform: translate3d( -10%, 0, 0);
 	}
 
 	100% {
-		transform: translate3d( calc(-50.1% + 0px), 0, 0);
+		transform: translate3d( calc(-60.1% + 0px), 0, 0);
 	}
 }
 @keyframes marquee-slide-reverse {
