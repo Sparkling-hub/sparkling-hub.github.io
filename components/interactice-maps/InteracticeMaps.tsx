@@ -113,51 +113,37 @@ const InteracticeMaps: React.FC = () => {
 		dispatch(setActiveOfficePoint(officeId));
 		
 	};
-
 	const handleHoverOver = (e: any) => {
 		let points = document.querySelectorAll('.office_point');
-		e.currentTarget.classList.add('hidden');
-	
-		let officeId = e.currentTarget.id;
-		
-		
-		if (hoverTimer) {
-			clearTimeout(hoverTimer);
-		  }
-		
+		const object = e.currentTarget;
+		const officeId = e.currentTarget.id;
+	  
 		const newTimer = setTimeout(() => {
-			for (const element of points) {
-			
-				if(element.id!=officeId)element.classList.remove('hidden');
-				
-		
-			  }
-	
-		
+		  for (const element of points) {
+			if (element.id !== officeId) {
+			  element.classList.remove('hidden');
+			} else {
+			  object.classList.add('hidden');
+			}
+		  }
+	  
 		  dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
 		  dispatch(setActiveOfficePoint(officeId));
-		  
-		}, 100);
-	
-	
-
+		}, 300);
+	  
 		setHoverTimer(newTimer);
-	
+	  
 		e.stopPropagation();
 	  };
-	
-
-	
-	
-
-	const handleHoverOut = (e: any) => {
+	  
+	  const handleHoverOut = (e: any) => {
 		if (hoverTimer) {
-			clearTimeout(hoverTimer);
-			setHoverTimer(null);
-		  }
+		  clearTimeout(hoverTimer);
+		  setHoverTimer(null);
+		}
 		dispatch(setHovered(null));
-	
-	};
+	  };
+	  
 
 
 	  
