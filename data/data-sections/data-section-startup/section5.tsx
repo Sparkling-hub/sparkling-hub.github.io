@@ -1,30 +1,26 @@
 
-import StartupAssistings from "@/components/startup-assistings"
+import StartupStepByStep from "@/components/startup-step-by-step"
+
+
 
 const header =
-    <h2 className="p-4">
-        <div className=" text-5xl mb-8 text-black font-light mx-auto w-fit ">
+    <div className="pb-20  text-5xl text-center">
+            
+            <h2 className="font-light">Launching an{' '}
+            <span className="text-primary-yellow font-medium pb-2">MVP in 5 simple steps</span>
+            </h2>
+            <br/>
+            <p className="text-2xl font-light text-teal-700 leading-6 ">
+                Do you have a ground-breaking idea? Want to develop and launch your MVP effectively and affordably?<br/> We have got you covered!
+                Our streamlined 5-step process is designed just for that:
+            </p>
+     
 
-            <span className="color-primary-dark font-bold">Assisting you</span>{' '}
-            all the way through
-        </div>
-        <div className="text-lg w-fit m-auto lg:w-2/3">
-            <div className="text-center text-black font-normal pb-4">
-                While the MVP marks the starting line, it is not the finish line.
-                It is the foundational groundwork imperative for a successful future.
-                Our approach in developing an MVP keeps your future in
-                mind and its stability as a core value ensuring a sound foundation that eases subsequent development.
-            </div>
-            <div className="text-center text-black font-normal pb-20">
-                From this point onwards it is on you and your dream to lead the way,
-                we offer our support and guidance, serving as your technological partner
-                or consultant as you navigate the different stages of growth.
-            </div>
-        </div>
 
-    </h2>
+    </div>
 
-const content = <StartupAssistings />
+const content = <StartupStepByStep />
+
 
 const element = {
     content: content,
