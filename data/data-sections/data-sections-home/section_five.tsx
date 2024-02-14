@@ -2,8 +2,9 @@ import InteracticeMaps from "@/components/interactice-maps";
 import React from 'react';
 
 const header = (
-    <h2 className="text-center">
-        <div className="text-black text-5xl pt-12 pb-24">Sparkling’s presence in<span className="color-primary-light"> Europe </span> and <span className="color-primary-light"> North Africa</span></div> 
+    <h2 className="text-center absolute left-[55%] mx-5 bottom-[65%]">
+        <div className="text-primary-darkTeal text-[52px] pt-12 font-semibold pb-24">Sparkling’s presence <br />
+        in<span className="text-primary-yellow"> Europe </span> and <span className="text-primary-yellow"> Tunis</span></div> 
     </h2>
 );
 
@@ -18,7 +19,7 @@ const element = {
     id: 'maps',
     index: 5,
 
-    background: 'bg-color-primary-medium',
+    background: 'bg-color-primary-light',
     margin_bottom: 'mb-12',
     padding_bottom: "pb-12"
 };

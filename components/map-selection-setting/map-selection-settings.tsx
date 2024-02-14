@@ -9,13 +9,26 @@ import { updateElementPosition } from '../helper/updateElementPosition';
 const MapSelectionSettings: React.FC = () => {
 	const dispatch = useDispatch();
 	const { hovered, activeOfficePoint } = useSelector(selectMaps);
-	const handlePointsClick = (activePoint: any) => {		
-		dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));	
-		dispatch(setActiveOfficePoint(activePoint));
-	
-		
-	};
+	const handlePointsClick = (activePoint: any) => {
+        dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));    
+        dispatch(setActiveOfficePoint(activePoint));
 
+        const hoveredElements = document.querySelectorAll('.office_point');
+       
+		for (const element of hoveredElements) {
+			element.classList.remove('hidden');
+			if(element.id==activePoint){element.classList.add('hidden')
+			dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));
+			dispatch(setActiveOfficePoint(activePoint));}
+		}
+
+		
+	
+
+    
+	
+    };
+	
 	useEffect(() => {
 		const handleResize = () => {
 		  if (activeOfficePoint) {
@@ -30,33 +43,34 @@ const MapSelectionSettings: React.FC = () => {
 		};
 	  }, [activeOfficePoint, dispatch]);
 	
-	  
+	  const handleHoverOut = () => {
+		
+		dispatch(setHovered(null));
+	
+	};
 
 	return (
-	  <div className="col-span-3 flex flex-col relative xl:w-fit w-4/5 m-auto  ">
-		<div className="xl:border-l-2  border-t-2   xl:border-t-0  border-primary-dark pl-12">
-		  <div className="gh-2 pt-global duration-300">
-			<div>
-			  <div className="mb-12 text-center">
-				<p className="text-2xl font-medium">See locations</p>
-			  </div>
-			</div>
-		  </div>
-		</div>
+	  <div className="flex flex-col relative w-1/4 m-auto">
+		
   
-		<div className={`grid grid-cols-2  lg:grid-cols-2 xl:border-b-0 max-lg:gap-x-global max-lg:gap-y-4 xl:border-l-2  border-b-2 border-primary-dark pl-12 xl:items-start  items-center`}>
-		  {mapsData[0]?.officeCards?.map((card) => (
-			<button
-			  key={card.id}
-			  className={`xl:text-start w-fit  m-auto  text-center lg:block btn duration-200 col-span-1 xl:ml-8 p-4 text-xl text-left font-medium !p-0 !bg-transparent !pb-4 hover:!text-primary-light lg:opacity-100
-				${hovered === card.id ? 'text-primary-light' : ''} ${activeOfficePoint === card.id ? 'text-white' : ''} `}
-			  onMouseEnter={() => dispatch(setHovered(card.id))}
-			  onMouseLeave={() => dispatch(setHovered(null))}
-			  onClick={() => handlePointsClick(card.id)}
-			>
-			  {card.city}
-			</button>
-		  ))}
+		<div className={`grid grid-cols-1 lg:grid-cols-1 xl:border-b-0  xl:items-start w-full items-center`}>
+		{mapsData[0]?.officeCards
+  ?.map(card => ({ ...card, city: card.city === "Ariana" ?card.country : card.city }))
+  .sort((a, b) => a.city.localeCompare(b.city))
+  .map((card) => (
+    <button
+      key={card.id}
+	  
+	  className={`bg-[#285C5C] select_maps text-center duration-200 col-span-1 p-3 my-1.5 text-[24px] text-[#AECA13] rounded-4xl w-full hover:!opacity-75 hover:!text-[#AECA13]
+        ${hovered == card.id ? 'text-primary-light' : ''} ${activeOfficePoint == card.id ? 'opacity-80' : ''} `}
+      onMouseEnter={() => handlePointsClick(card.id)}
+      onMouseLeave={() => {handleHoverOut()}}
+      onClick={() => handlePointsClick(card.id)}
+    >
+      {card.city=="Ariana"?card.country:card.city}
+    </button>
+  ))}
+
 		</div>
 	  </div>
 	);
