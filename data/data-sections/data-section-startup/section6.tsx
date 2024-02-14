@@ -30,7 +30,7 @@ const element = {
     content: content,
     header: header,
 
-    background: 'bg-color-primary-light',
+    
     index: 6,
 
 }
