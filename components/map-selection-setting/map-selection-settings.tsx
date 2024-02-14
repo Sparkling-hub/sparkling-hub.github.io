@@ -63,7 +63,7 @@ const MapSelectionSettings: React.FC = () => {
 	  
 	  className={`bg-[#285C5C] select_maps text-center duration-200 col-span-1 p-3 my-1.5 text-[24px] text-[#AECA13] rounded-4xl w-full hover:!opacity-75 hover:!text-[#AECA13]
         ${hovered == card.id ? 'text-primary-light' : ''} ${activeOfficePoint == card.id ? 'opacity-80' : ''} `}
-      onMouseEnter={() => dispatch(setHovered(card.id))}
+      onMouseEnter={() => handlePointsClick(card.id)}
       onMouseLeave={() => {handleHoverOut()}}
       onClick={() => handlePointsClick(card.id)}
     >
