@@ -22,7 +22,7 @@ const Consulting: React.FC<IConsulting> = ({ content, header, reverse, img }) =>
 			</div>
 
 			<div className='flex items-center justify-center square-green bg-white h-40 w-40 scale-150 rounded-full border-medium2'>
-				<img className='inline-block mx-4 w-28 p-1 ' src={img} alt="" />
+				<img className='inline-block mx-4 w-28 ' src={img} alt="" />
 			</div>
 
 		</div>

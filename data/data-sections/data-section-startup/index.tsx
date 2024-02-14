@@ -4,6 +4,7 @@ import Section3 from "./section3";
 import Section4 from "./section4";
 import Section5 from "./section5";
 import Section6 from "./section6";
+import Section7 from "./section7";
 import type  IStartupData  from "../../../interface/IStartupItemList";
 
 
@@ -13,7 +14,8 @@ const sections: IStartupData[] = [
   Section3,
   Section4,
   Section5,
-  Section6
+  Section6,
+  Section7
 ];
 
 export default sections
