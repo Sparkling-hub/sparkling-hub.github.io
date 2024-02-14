@@ -7,7 +7,7 @@ const Benefit: React.FC<ITeamRoles> = ({ content, header, image }) => {
 
 	return (
 
-		<div className='flex flex-row my-5 w-full'>
+		<div className='flex flex-row my-5 w-full items-center'>
 			<img className='w-1/5 h-1/5' src={image} alt='Roles'/>
 			<div className='mx-6  w-4/5'>
 				<h3 className='text-teal-700 text-xl font-semibold '>{header}</h3>

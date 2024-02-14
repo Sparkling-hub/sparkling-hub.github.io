@@ -13,8 +13,8 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 				<div className='flex my-3 mx-3 w-full justify-center lg:justify-start lg:text-start align-baseline'>
 
-					<div className='align-baseline flex lg:w-auto lg:text-start text-center w-fit  flex '>
-						<img className='align-baseline h-[30px] w-[30px] lg:block hidden' src='/img/right-arrow-circle.svg' alt="" /></div>
+					<div className='align-baseline flex lg:w-auto lg:text-start text-center w-fit  flex items-center'>
+						<img className='align-baseline h-[23px] w-[23px]  lg:block hidden' src='/img/right-arrow-circle.svg' alt="" /></div>
 					<div className='text-emerald-900 font-medium text-2xl w-fit lg:w-auto text-center lg:text-start'>{header}</div>
 
 				</div>

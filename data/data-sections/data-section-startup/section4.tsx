@@ -29,6 +29,7 @@ const element = {
   header: header,
   index: 4,
 
+  background: 'bg-color-primary-dark',
   margin_bottom: 'mb-12'
 
 

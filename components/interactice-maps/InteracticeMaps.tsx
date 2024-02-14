@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
 	selectMaps,
@@ -15,6 +15,7 @@ import { updateElementPosition } from "../helper/updateElementPosition";
 
 const InteracticeMaps: React.FC = () => {
 	const dispatch = useDispatch();
+	const [hoverTimer, setHoverTimer] = useState<NodeJS.Timeout | null>(null);
 	const { currentMap, hovered, lastHovered, activeOfficePoint } = useSelector(selectMaps);
 
 	useEffect(() => {
@@ -83,7 +84,7 @@ const InteracticeMaps: React.FC = () => {
 	const setupPointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
 			element.addEventListener('click', handlePointsClick);
-			element.addEventListener('mouseover', handlePointsClick);
+			element.addEventListener('mouseover', handleHoverOver);
 			element.addEventListener('mouseout', handleHoverOut);
 		});
 	};
@@ -112,18 +113,37 @@ const InteracticeMaps: React.FC = () => {
 		dispatch(setActiveOfficePoint(officeId));
 		
 	};
-
 	const handleHoverOver = (e: any) => {
-		
-		dispatch(setHovered(e.currentTarget.closest('.office_point').id));
-
-	};
-
-	const handleHoverOut = (e: any) => {
-		
+		let points = document.querySelectorAll('.office_point');
+		const object = e.currentTarget;
+		const officeId = e.currentTarget.id;
+	  
+		const newTimer = setTimeout(() => {
+		  for (const element of points) {
+			if (element.id !== officeId) {
+			  element.classList.remove('hidden');
+			} else {
+			  object.classList.add('hidden');
+			}
+		  }
+	  
+		  dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
+		  dispatch(setActiveOfficePoint(officeId));
+		}, 150);
+	  
+		setHoverTimer(newTimer);
+	  
+		e.stopPropagation();
+	  };
+	  
+	  const handleHoverOut = (e: any) => {
+		if (hoverTimer) {
+		  clearTimeout(hoverTimer);
+		  setHoverTimer(null);
+		}
 		dispatch(setHovered(null));
-	
-	};
+	  };
+	  
 
 
 	  

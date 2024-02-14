@@ -23,7 +23,7 @@ const element = {
 	content: content,
 	header: header,	
 
-	background: 'bg-color-primary-light',
+	
 	index:3,
 	padding_bottom: 'pb-40',
 	margin_bottom: 'mb-64'

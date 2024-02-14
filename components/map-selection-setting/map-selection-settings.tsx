@@ -21,13 +21,9 @@ const MapSelectionSettings: React.FC = () => {
 			dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));
 			dispatch(setActiveOfficePoint(activePoint));}
 		}
-
-		
-	
-
-    
 	
     };
+	
 	
 	useEffect(() => {
 		const handleResize = () => {
