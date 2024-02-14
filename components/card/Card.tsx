@@ -71,9 +71,9 @@ const Card: React.FC = () => {
       before:-translate-x
       before:overflow-visible
       before:transition-all before:duration-300 before:ease-in-out 
-      absolute w-full text-black w-screen max-w-[200px]  transition-all  duration-300 ease-in-out
+      absolute w-full text-black w-screen max-w-[200px]  
  
-      ${(isVisible) ? 'opacity-95 z-[1] before:bottom-[-50px] before:border-b-[60px] h-[180px]' : ' h-[20px] before:bottom-[0px] opacity-0 z-[-1] before:border-b-[0px]'} 
+      ${(isVisible) ? 'opacity-95 z-[1] before:bottom-[-50px] before:border-b-[60px] h-[180px] transition-all  duration-300 ease-in-out' : ' h-[20px] before:bottom-[0px] opacity-0 z-[-1] before:border-b-[0px]'} 
       `}
       style={{ top: `${Math.round(activeOfficePointCoords[0]-199)}px`, left: `${Math.round(activeOfficePointCoords[1])-82}px` }}
 
