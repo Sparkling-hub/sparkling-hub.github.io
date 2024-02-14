@@ -19,7 +19,7 @@ const content = (<div>
     </p></div>
 );
 
-const image = <img src="/img/team/logo.png" className="" alt='sectionOne' />;
+const image = <img src="/img/team/team_augmentation_icon.png" className="" alt='sectionOne' />;
 
 const element = {
   content: content,

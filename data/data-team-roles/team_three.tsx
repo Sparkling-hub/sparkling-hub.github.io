@@ -15,7 +15,7 @@ const element = {
 	content: content,
 	header: header,
 	index: 3,
-	image:'/img/startup/section2/Software Engineer Avatar.svg'
+	image:'/img/team/Software Engineer Avatar.png'
 }
 
 export default element

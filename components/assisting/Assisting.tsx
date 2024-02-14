@@ -19,7 +19,7 @@ const Assisting: React.FC<IStartupAssisting> = ({ header, content, image, backgr
 				</div>
 			</div>
 			<div className={`${rotate}`}>
-				<img className='w-60 h-60 inline-block mx-4' src={image} alt="" />
+				<img className='w-60 h-72 inline-block mx-4' src={image} alt="" />
 			</div>
 		</div>
 	);
