@@ -129,7 +129,7 @@ const InteracticeMaps: React.FC = () => {
 	  
 		  dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
 		  dispatch(setActiveOfficePoint(officeId));
-		}, 300);
+		}, 150);
 	  
 		setHoverTimer(newTimer);
 	  
