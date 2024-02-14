@@ -126,7 +126,6 @@ const InteracticeMaps: React.FC = () => {
 		  clearTimeout(hoverTimer);
 		}
 	
-		// Устанавливаем новый таймер для 500 мс
 		const newTimer = setTimeout(() => {
 	
 	
@@ -141,8 +140,7 @@ const InteracticeMaps: React.FC = () => {
 		e.stopPropagation();
 	  };
 	
-	  // Отменяем таймер при уходе с элемента
-	
+
 	
 	
 
