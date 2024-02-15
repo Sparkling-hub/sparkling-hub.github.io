@@ -11,13 +11,12 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 			<div className='lg:basis-5/6 flex-col justify-center  '>
 
-				<div className={`flex my-3 mx-3 w-full justify-center lg:justify-start align-baseline ${reverse ? 'lg:flex-row-reverse lg:text-rihgt  px-6' : 'lg:flex-row'}`}>
+				<div className={`flex my-3 mx-3 w-full justify-center lg:justify-start items-center align-baseline ${reverse ? 'lg:flex-row-reverse lg:text-rihgt  px-6' : 'lg:flex-row'}`}>
 
-					<div className='align-baseline flex lg:w-auto mt-[1px]  w-fit  flex items-center'>
-						<img className='align-baseline h-[22px] w-[22px]   lg:block hidden' src='/img/right-arrow-circle.svg' alt="" /></div>
-					<div className= {`text-emerald-900 font-medium text-2xl w-fit lg:w-auto`}>{header}</div>
 
-				</div>
+					
+					<div className= {`text-emerald-900 font-medium text-2xl flex flex-row w-fit lg:w-auto items-center`}><img className='align-baseline  h-[25px] w-[25px] pb-[px] pt-[3px] items-end  lg:block hidden' src='/img/right-arrow-circle.svg' alt="" />{header} 	</div></div>
+
 
 				<div className='mx-4 my-2 text-xl'>{content}</div>
 
