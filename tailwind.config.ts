@@ -13,9 +13,9 @@ const config: Config = {
   theme: {
     
     fontFamily: {
-      'Roboto': ['"Roboto Light"', 'Helvetica', 'Arial', 'sans-serif'], 
-      'Raleway':['Raleway', 'Helvetica', 'Arial', 'sans-serif'], 
-      'Ralevay_Light':['"Ralevay Light"', 'Helvetica', 'Arial', 'sans-serif'], 
+      'Roboto': ['"Roboto_Light"'], 
+      'Raleway':['Raleway'], 
+      'Ralevay_Light':['"Ralevay_Light"'], 
   },
     extend: {
       backgroundImage: {
