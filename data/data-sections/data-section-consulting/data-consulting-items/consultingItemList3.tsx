@@ -10,7 +10,8 @@ const header = <h3>Research & Development</h3>
 const element = {
     header: header,
     content: content,
-    img: '/img/consulting/section3/Research & Development.png',
+
+    img: '/img/benefits/Agile_working.png',
     index: 3,
 
 }

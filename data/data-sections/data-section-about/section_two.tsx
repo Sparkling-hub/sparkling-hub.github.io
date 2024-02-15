@@ -1,10 +1,10 @@
 
 const header =
-  <h2 className="m-auto my-10 text-5xl w-fit">Who <strong className="text-teal-600 font-bold">We Are</strong></h2>
+  <h2 className="m-auto mb-10 text-5xl text-white w-fit">Who <strong className="text-teal-500 font-bold">We Are</strong></h2>
 
 
 const content =
-<div className="p-8 bg-gray-100 rounded-2xl max-w-[1000px] mx-auto mt-5 mb-20">
+<div className="px-8 text-center text-white rounded-2xl max-w-[1000px] mx-auto">
   <p>
     Sparkling Co. is an industry expert in digital services with over a decade of field experience in Software Development.
     Our expertise extends to providing dedicated teams of developers and project managers for both in-house project as well
@@ -26,7 +26,7 @@ const element = {
   content: content,
   header: header,
 
-
+  background: 'bg-color-primary-dark',
   id: "whoSparkling"
 
 }
