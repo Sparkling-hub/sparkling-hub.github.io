@@ -16,6 +16,6 @@ const element = {
   id: "benefits", 
   index:4,
 
-  background: 'bg-color-primary-light', 
+   
 }
 export default element

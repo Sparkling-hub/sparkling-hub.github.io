@@ -15,8 +15,8 @@ const element = {
 	content: content,
 	header: header,
 	index: 3,
-	marginLeft: "ml-[25%]",
-	marginRight: "mr-[-5%]"
+	marginLeft: "lg:ml-[25%]",
+	marginRight: "lg:mr-[-5%]"
 }
 
 export default element

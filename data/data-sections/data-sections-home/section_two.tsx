@@ -14,6 +14,5 @@ const element = {
   id: "services",
   index: 2,
 
-  background: 'bg-color-primary-light',
 }
 export default element

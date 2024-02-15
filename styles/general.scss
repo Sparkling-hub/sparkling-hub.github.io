@@ -314,14 +314,16 @@ nav {
 // .svg-map #NA,
 // .svg-map #SA
 .svg-map {
-	fill: #CBF0E9;
+	fill:rgba(40, 92, 92, 0.75);
+
 }
 
 .svg-map #UK,
 .svg-map #CH,
 .svg-map #UA,
 .svg-map #TN {
-	opacity: 0.6;
+	opacity: 1;
+	fill: #285C5C;
 }
 
 // .svg-map.svg-map #EU:hover,
@@ -330,7 +332,7 @@ nav {
 // .svg-map.svg-map #NA:hover,
 // .svg-map.svg-map #SA:hover,
 .svg-map.svg-map #AF:hover {
-	fill: $primaryDarkColor;
+	fill: rgb(215, 140, 0);
 }
 
 .job-content {
@@ -344,17 +346,8 @@ nav {
 	line-height: 25px;
 	transition: border-color 1s ease-out;
 
-	& h3 {
-		font-size: 25px;
-		color: $primaryDarkColor;
-		margin-bottom: 10px;
-	}
 
-	& img {
-		width: 20px;
-		height: 20px;
-		margin: 0 3px;
-	}
+
 
 }
 
@@ -657,5 +650,18 @@ nav {
 	height: 2px;
 	position: absolute;
 	z-index: -1;
-	transition: background-color 0.5s ease; /* Adjust the duration and easing as needed */
+	transition: background-color 0.5s ease;
   }
+  
+  .svg-scale path {
+    transform: scale(1.25)  translateX(5px);
+    transform-origin: center; 
+	
+  
+    transition: transform 0.3s ease;
+}
+
+  
+.opacity-class{
+	opacity: 1;
+}

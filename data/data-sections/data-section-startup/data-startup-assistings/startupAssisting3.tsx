@@ -10,7 +10,7 @@ const content =
         Lasting growth is about quality, not just quantity!
     </p>
 
-const image = '/img/startup/assisting-plane/big_plane.png'
+const image = '/img/startup/assisting-plane/rocket3.svg'
 const element = {
     header: header,
     content: content,

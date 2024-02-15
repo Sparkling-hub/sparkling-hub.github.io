@@ -6,7 +6,7 @@ import InputLocate from '../ui/custom-input-jobs';
 import { useSelector } from 'react-redux';
 import { selectCareers } from '@/store/redusers/CareersSliceReduser';
 import { get } from '../careers/search_function/search_function';
-
+import { v4 as uuidv4 } from 'uuid';
 const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder }) => {
   const [isActive, setIsActive] = useState(false);
   const arrowButtonRef = useRef<HTMLDivElement>(null);
@@ -66,7 +66,7 @@ const MyMultipleSelect: React.FC<IMultiSelect> = ({ id, placeholder }) => {
           >
             {data.length ? data.map((dataCheckbox) => (
               <CheckboxSelect
-                key={dataCheckbox}
+                key={uuidv4()}
                 id={dataCheckbox}
                 checked={activeData.includes(dataCheckbox.value)}
                 name={id}

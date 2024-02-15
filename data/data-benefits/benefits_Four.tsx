@@ -8,7 +8,7 @@ const content =
   </p>
 const header = <h3>Affordable Excellence</h3>
 
-const image = '/img/benefits/Swiss_quality_control.png';
+const image = '/img/benefits/Affordable_prices.png';
 
 
 const element: IBenefit = {

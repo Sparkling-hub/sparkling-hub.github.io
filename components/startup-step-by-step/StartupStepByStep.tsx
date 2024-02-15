@@ -1,12 +1,9 @@
-// StartupStepByStep.jsx
+
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectStartupStepByStep, setHighlightedIndices } from '@/store/redusers/startupStepByStepSliceReduser';
 import dataStartupSteps from '@/data/data-sections/data-section-startup/data-startup-step-by-step';
 import StartupStepItem from '../startup-step-item';
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Link from 'next/link';
 
 const StartupStepByStep: React.FC = () => {
@@ -14,11 +11,7 @@ const StartupStepByStep: React.FC = () => {
   const { highlightedIndices } = useSelector(selectStartupStepByStep);
 
   useEffect(() => {
-    AOS.init({
-      duration: 500,
-      once: false,
-      mirror: true,
-    });
+  
 
     const handleScroll = () => {
       const elements = document.querySelectorAll('.s-b-s-title');
@@ -53,7 +46,7 @@ const StartupStepByStep: React.FC = () => {
      
 
       <div className='top-[-15px] p-3 relative flex items-center justify-center w-[450px] h-[90px] bg-primary-darkTeal rounded-full text-green-300  hover:bg-teal-700 s-b-s-title'>
-      <Link className="no-underline relative  text-2xl z-10 font-bold text-primary-yellow"  href={'/contact'} >Embark in your MVP adventure!</Link>
+      <Link className="no-underline relative  text-2xl z-10 font-bold text-primary-yellow text-center"  href={'/contact'} >Embark in your MVP adventure!</Link>
 
       </div>
     </div>

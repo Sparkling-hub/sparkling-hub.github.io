@@ -14,7 +14,7 @@ const content =
     </p>
 
 
-const image = <img src='/img/software/logo.png' className="w-full" alt="sofrware_icon" />;
+const image = <img src='/img/software/software_development_icon.png' className="w-full" alt="sofrware_icon" />;
 
 const element = {
   content: content,

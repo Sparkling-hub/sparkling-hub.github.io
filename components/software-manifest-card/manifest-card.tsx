@@ -7,7 +7,7 @@ const Benefit: React.FC<ISoftwareData> = ({ header, content, number }) => {
 
 	return (
 
-		<div className={`flex flex-col bg-white rounded-3xl  m-5 w-[230px] items-start h-60 relative text-center ` }>
+		<div className={`flex flex-col bg-white rounded-3xl  m-5 w-[230px] items-start h-60 relative text-center drop-shadow-lg` }>
 			<div className='rounded-t-3xl bg-teal-600 flex items-center p-[1px] text-xl font-bold relative h-[50%] w-full '>
 				<div className='z-0 absolute rounded-full text-white flex items-center
     justify-center bg-teal-600 top-[-20%] h-12 w-12 left-[91px]'>

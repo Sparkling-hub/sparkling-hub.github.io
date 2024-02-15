@@ -7,14 +7,15 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 	return (
 
-		<div className={`flex justify-between items-center ${!reverse ? 'flex-row-reverse' : ''}  m-10 border-medium2 rounded-4xl`}>
+		<div className={`flex justify-between items-center flex-col-reverse flex p-4  ${!reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} my-10 lg:m-10 border-medium2 rounded-4xl`}>
 
-			<div className='basis-5/6 flex-col justify-center  p-4'>
+			<div className='lg:basis-5/6 flex-col justify-center  '>
 
-				<div className='flex my-2 mx-3 items-end'>
+				<div className='flex my-3 mx-3 w-full justify-center lg:justify-start lg:text-start align-baseline'>
 
-					<div><img className='w-7 h-7 inline-block mx-2' src='/img/right-arrow-circle.svg' alt="" /></div>
-					<div className='text-emerald-900 font-medium text-2xl'>{header}</div>
+					<div className='align-baseline flex lg:w-auto lg:text-start text-center w-fit  flex items-center'>
+						<img className='align-baseline h-[23px] w-[23px]  lg:block hidden' src='/img/right-arrow-circle.svg' alt="" /></div>
+					<div className='text-emerald-900 font-medium text-2xl w-fit lg:w-auto text-center lg:text-start'>{header}</div>
 
 				</div>
 
@@ -22,8 +23,8 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 			</div>
 
-			<div className='flex items-center justify-center square-green bg-color-primary-medium h-40 w-48 rounded-3xl'>
-				<img className='inline-block mx-4 w-32 h-32' src={img} alt="" />
+			<div className='flex items-center justify-center square-green  h-40 w-48 rounded-3xl'>
+				<img className='inline-block mx-4' src={img} alt="" />
 			</div>
 
 		</div>
