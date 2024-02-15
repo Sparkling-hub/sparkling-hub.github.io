@@ -4,11 +4,11 @@ interface ButtonProps {
 
 function ButtonCircle({ isDropdownOpen }: ButtonProps) {
   return (
-    <div className={`square-circle h-6 w-6 rounded-full p-0 pointer-events-none transform mr-3  bg-teal-500 ${isDropdownOpen ? 'text-black rotate-180' : 'text-white rotate-90'}`}>
+    <div className={`square-circle h-6 w-6 rounded-full p-0 pointer-events-none transform mr-3   ${isDropdownOpen ? 'bg-white rotate-180 text-black' : 'bg-teal-500  text-white rotate-90'}`}>
       <svg
         className={`rounded-full p-0 w-auto h-6 w-6 pointer-events-none transform`}
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
+        viewBox="-0.5 -0.5 20 20"
         fill="currentColor"
       >
         <path

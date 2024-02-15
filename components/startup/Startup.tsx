@@ -7,15 +7,15 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 	return (
 
-		<div className={`flex justify-between items-center flex-col-reverse flex p-4  ${!reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} my-10 lg:m-10 border-medium2 rounded-4xl`}>
+		<div className={`flex justify-between items-center flex-col-reverse flex p-4  text-center ${!reverse ? 'lg:flex-row-reverse lg:text-start' : 'lg:text-end lg:flex-row '} my-10 lg:m-10 border-medium2 rounded-4xl`}>
 
 			<div className='lg:basis-5/6 flex-col justify-center  '>
 
-				<div className='flex my-3 mx-3 w-full justify-center lg:justify-start lg:text-start align-baseline'>
+				<div className={`flex my-3 mx-3 w-full justify-center lg:justify-start align-baseline ${reverse ? 'lg:flex-row-reverse lg:text-rihgt  px-6' : 'lg:flex-row'}`}>
 
-					<div className='align-baseline flex lg:w-auto lg:text-start text-center w-fit  flex items-center'>
+					<div className='align-baseline flex lg:w-auto   w-fit  flex items-center'>
 						<img className='align-baseline h-[23px] w-[23px]  lg:block hidden' src='/img/right-arrow-circle.svg' alt="" /></div>
-					<div className='text-emerald-900 font-medium text-2xl w-fit lg:w-auto text-center lg:text-start'>{header}</div>
+					<div className= {`text-emerald-900 font-medium text-2xl w-fit lg:w-auto`}>{header}</div>
 
 				</div>
 

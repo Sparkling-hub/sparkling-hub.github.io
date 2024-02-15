@@ -1,6 +1,6 @@
 
 
-const header = <h3>Scale up and expand</h3>
+const header = <h3>Scale-up and Expand</h3>
 
 const content =
     <p>
