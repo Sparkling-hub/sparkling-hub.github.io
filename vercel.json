@@ -1,0 +1,19 @@
+{
+    "version":2,
+    "framework":"node",
+    "name":"email",
+    "builds": [
+        {
+            "scr":"index.tsx",
+            "use":"@vercel/node"
+        }
+    ],
+    "routes":[
+        {
+            "scr": "/(.*)",
+            "dest": "/index.js"
+        }
+    ]
+
+}
+
