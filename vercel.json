@@ -1,11 +1,11 @@
 {
     "version":2,
-    "framework":"node",
+    "framework":"nextjs",
     "name":"email",
     "builds": [
         {
             "src":"index.tsx",
-            "use":"@vercel/node"
+            "use":"@vercel/nextjs"
         }
     ],
     "routes":[
