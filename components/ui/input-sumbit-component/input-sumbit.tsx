@@ -24,23 +24,24 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    toast.promise(
-      new Promise((resolve, reject) => {
-        setTimeout(() => {
-          reject(new Error('Promise is pending...!')); 
-        }, 2000);
-      }),
-      {
-        pending: 'Sending a message...', 
-      }
-    );
+
     dispatch(setCheck(selectIsValidEmail(formData.email)));
     if (disabled && selectIsValidEmail(formData.email)) {
+      toast.promise(
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            reject(new Error('Promise is pending...!')); 
+          }, 2000);
+        }),
+        {
+          pending: 'Sending a message...', 
+        }
+      );
       try {
         const response = await axios.post(http, { formData });
         setResult(response.data);
         toast.success('Form submitted successfully!', {
-          position: "top-left",
+       
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -53,7 +54,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
       } catch (error: any) {
      
         toast.error(<p>{error.message ||"An error occurred"}</p>, {
-          position: "top-left",
+     
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -85,7 +86,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http })
       <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
         <ToastContainer
         className="mt-[5%]"
-          position="top-left"
+          position="top-right"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
