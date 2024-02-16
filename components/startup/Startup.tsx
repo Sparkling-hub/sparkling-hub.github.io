@@ -15,7 +15,7 @@ const Startup: React.FC<IStartup> = ({ content, header, reverse, img }) => {
 
 
 					
-					<div className= {`text-emerald-900 font-medium text-2xl flex flex-row w-fit lg:w-auto items-center`}><img className='align-baseline  h-[25px] w-[25px] pb-[px] pt-[3px] items-end  lg:block hidden' src='/img/right-arrow-circle.svg' alt="" />{header} 	</div></div>
+					<div className= {`text-emerald-900 font-medium text-2xl flex flex-row w-fit lg:w-auto items-center ${reverse ? 'lg:flex-row-reverse lg:text-rihgt  px-6' : 'lg:flex-row'}`}><img className='align-baseline  h-[25px] w-[25px] pb-[px] pt-[3px] items-end  lg:block hidden' src='/img/right-arrow-circle.svg' alt="" />{header} 	</div></div>
 
 
 				<div className='mx-4 my-2 text-xl'>{content}</div>
