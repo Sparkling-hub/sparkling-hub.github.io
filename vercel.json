@@ -4,13 +4,13 @@
     "name":"email",
     "builds": [
         {
-            "scr":"index.tsx",
+            "src":"index.tsx",
             "use":"@vercel/node"
         }
     ],
     "routes":[
         {
-            "scr": "/(.*)",
+            "src": "/(.*)",
             "dest": "/index.js"
         }
     ]
