@@ -25,6 +25,7 @@
     "react-dom": "^18",
     "react-redux": "^9.0.4",
     "react-select": "^5.8.0",
+    "react-toastify": "^10.0.4",
     "sass": "^1.69.5",
     "uuid": "^9.0.1"
   },
