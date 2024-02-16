@@ -3,7 +3,13 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 let corsOptions = {
-    
+    origin: function (origin, callback) {
+        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+      }
 };
 const multer = require("multer");
 const { body, validationResult } = require("express-validator");
