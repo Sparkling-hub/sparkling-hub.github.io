@@ -92,7 +92,7 @@ const Form: React.FC = () => {
             name="submit"
 
             disabled={!!(formData.name && formData.email && formData.message)}
-            http={"https://sparkling-hub.github.io/send-form"}
+            http={"https://sparkling-hub-github-io.vercel.app/send-form"}
           />
         </div>
       </div>
