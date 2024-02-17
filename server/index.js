@@ -31,6 +31,8 @@ const upload = multer({
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use(upload);
+app.use(helmet.hidePoweredBy());
+
 
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
@@ -45,7 +47,6 @@ const transporter = nodemailer.createTransport({
 });
 
 
-app.use(helmet.hidePoweredBy());
  
 const validateForm = [
     body('formData.name').isLength({ min: 0, max: 255 }).withMessage('Name is required and must be less than 255 characters'),

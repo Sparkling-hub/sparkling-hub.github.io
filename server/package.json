@@ -6,7 +6,7 @@
   "author": "Maksim Sologubov",
   "license": "MIT",
   "scripts": {
-    "start": "node server",
+    "start": "node index.js",
     "start:dev": "nodemon",
     "test": "mocha **/*.spec.js"
   },
