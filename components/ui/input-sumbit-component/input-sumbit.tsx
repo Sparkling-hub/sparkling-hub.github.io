@@ -107,6 +107,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
           pauseOnHover
           theme="light"
           transition={Bounce}
+          limit={1}
         />
       </div>
     </>
