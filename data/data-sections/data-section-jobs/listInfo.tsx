@@ -13,7 +13,7 @@ const JobInfo: React.FC<JobInfoProps> = ({ title, content }) => {
          <h2 className='text-2xl'>{title}:</h2>
       <p className="mx-1">
       {content.map((requirement, index) => (
-    <li key={index} className="">{requirement}</li>
+    <li className="">{requirement}</li>
   ))}
       </p>
     </div>
