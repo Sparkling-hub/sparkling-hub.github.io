@@ -7,6 +7,7 @@ import {
   selectForm,
   selectIsValidEmail,
   setCheck,
+  resetFormData,
   setCheckFormByKey
 } from '@/store/redusers/FormSliceReduser';
 
@@ -41,7 +42,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
       );
       try {
         const response =   await onClick(formData)
-      
+        dispatch(resetFormData());
     
         toast.success('Form submitted successfully!', {
        

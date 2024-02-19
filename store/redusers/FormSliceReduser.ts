@@ -56,7 +56,12 @@ const formSlice = createSlice({
         state.check = action.payload;
 
     },
-    
+    resetFormData: (state) => {
+  
+      Object.keys(state.formData).forEach(key => {
+        state.formData[key] = '';
+      });
+    },
     setCheckFormByKey: (state, action: PayloadAction<{ key: keyof FormData; value: string }>
     ) => {
       const { key, value } = action.payload;
@@ -67,7 +72,7 @@ const formSlice = createSlice({
 export const selectIsValidEmail = (email: string): boolean => {
   return isValidEmail(email);
 };
-export const { setFormData, setCheck,setCheckFormByKey } = formSlice.actions;
+export const { setFormData, setCheck,setCheckFormByKey,resetFormData } = formSlice.actions;
 
 export const selectForm = (state: RootState) => state.form;
 
