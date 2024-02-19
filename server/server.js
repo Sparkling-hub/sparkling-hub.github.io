@@ -10,11 +10,6 @@ const { body, validationResult } = require("express-validator");
 const helmet = require("helmet");
  
 const app = express();
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://sparkling-hub.github.io');
-    next();
-  });
-  
 const port = 3033;
 
 
@@ -39,7 +34,7 @@ const transporter = nodemailer.createTransport({
     },
     secure: true,
     requireTLS: true,
-    port: 3033,
+    port: 465,
     secured: true
 });
 

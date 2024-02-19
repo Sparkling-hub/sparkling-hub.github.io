@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, useState } from 'react';
-
+import axios from 'axios';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,13 +14,11 @@ interface InputSubmitProps {
   name: string;
   type: string;
   disabled: boolean;
-
-  onClick: any;
-
+  http: string;
 }
 
-const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick }) => {
-
+const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, http }) => {
+  const [result, setResult] = useState<any>('');
   const { formData } = useSelector(selectForm);
   const dispatch = useDispatch();
 
@@ -40,9 +38,8 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
         }
       );
       try {
-        const response =   await onClick(formData)
-      
-    
+        const response = await axios.post(http, { formData });
+        setResult(response.data);
         toast.success('Form submitted successfully!', {
        
           autoClose: 5000,
@@ -68,13 +65,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
           transition: Bounce
         });
       }
-    } 
-
-   
-  
-
-    else {
-
+    } else {
       const requiredKeys: string[] = ['name', 'email', 'message'];
       requiredKeys
         .filter(key => (formData as any)[key] === '')
@@ -94,7 +85,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
       />
       <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
         <ToastContainer
-        className="mt-[7%]"
+        className="mt-[5%]"
           position="top-right"
           autoClose={5000}
           hideProgressBar={false}
