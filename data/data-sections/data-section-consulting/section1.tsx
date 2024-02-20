@@ -1,7 +1,7 @@
 
 
 const header =
-  <h1 className="text-5xl font-bold text-teal-800 leading-[50px] mb-10">
+  <h1 className="text-5xl font-bold text-teal-800 leading-[50px] font-Ralevay_Light mb-10">
     IT Consulting
     <br />
    <span className="font-light text-teal-800">Empowering</span>
