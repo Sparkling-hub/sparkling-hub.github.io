@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { SyntheticEvent } from 'react';
 
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,7 +41,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
         }
       );
       try {
-        const response =   await onClick(formData)
+       await onClick(formData)
         dispatch(resetFormData());
     
         toast.success('Form submitted successfully!', {
