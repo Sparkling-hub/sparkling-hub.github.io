@@ -92,7 +92,9 @@ const Form: React.FC = () => {
             name="submit"
 
             disabled={!!(formData.name && formData.email && formData.message)}
+
             onClick={sendContactForm}
+
 
           />
         </div>

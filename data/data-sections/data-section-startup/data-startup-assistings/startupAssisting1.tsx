@@ -1,6 +1,6 @@
 
 
-const header = <h3>Plan and assemble</h3>
+const header = <h3>Plan and Assemble</h3>
 
 const content =
     <p>

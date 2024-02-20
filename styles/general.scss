@@ -21,6 +21,42 @@ $widhConainers: 1440px;
 $weight-text: 400px;
 
 
+
+
+@font-face {
+	font-family: 'Roboto_Light';
+	src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'Ralevay';
+	src: url('/fonts/Ralevay/Raleway-VariableFont_wght.ttf');
+	font-weight: normal;
+	font-style: normal;
+
+  }
+  @font-face {
+	font-family: 'Ralevay_light';
+	src: url('/fonts/Raleway/static/Raleway-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
+  h2,h3,h1 {font-family: 'Ralevay_light', Arial,sans-serif !important; font-weight: normal
+}
+
+
+  @font-face {
+	font-family: 'Ralevay Light';
+	src: url('/fonts/Ralevay/static/Raleway-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
 .color-primary-light {
 	color: $primaryLightColor;
 }
