@@ -1,8 +1,8 @@
 
 
 import MainLayout from '../layouts/MainLayuout';
-
-import Sections from '../components/sections/sections'
+import Jobs from '../data/data-jobs';
+import InfoJob from '../data/data-sections/data-section-jobs/infoJob'
 import React, { useEffect } from 'react';
 
 import { useRouter } from 'next/router';
@@ -13,6 +13,8 @@ const Faq = () => {
     const router = useRouter();
 	console.log(router)
   const { id } = router.query;
+  const job = Jobs.find(job => job.slug === id )
+ 
 
 
 
@@ -20,10 +22,7 @@ const Faq = () => {
 
 		<MainLayout>
 
-			<div className='h-40 bg-gray-200'>
-			{id}
-			</div>
-
+{job?<InfoJob job={job}/>:<div className='justify-center h-60 items-center text-5xl flex'>Job not found</div>}
 		</MainLayout>
 
 	);
