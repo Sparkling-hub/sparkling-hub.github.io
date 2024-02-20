@@ -8,6 +8,9 @@ interface FormData {
   email: string;
   company: string;
   message: string;
+  phone: string;
+  linkId: string;
+  file: string;
   [key: string]: string;
 }
 
@@ -31,6 +34,9 @@ const initialState: FormState = {
     email: '',
     company: '',
     message: '',
+    phone: '',
+    linkId: '',
+    file: '',
   },
   check: null,
   checkForm: {
@@ -39,6 +45,9 @@ const initialState: FormState = {
     email: '',
     company: '',
     message: '',
+    phone: '',
+    linkId: '',
+    file: '',
   },
 };
 
