@@ -12,6 +12,11 @@ interface IJob {
 	slug: string;
 workMode: string;
 	experience: string;
+	benefits:string[];
+	additionalQualifications: string[];
+	skillsRequirements : string[];
+	coreResponsibilities : string[];
+	overview: string;
 
 	
 }
