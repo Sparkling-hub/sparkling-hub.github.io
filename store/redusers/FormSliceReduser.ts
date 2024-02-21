@@ -14,7 +14,7 @@ interface FormValues {
   phone: string;
   linkId: string;
   file: FileData|null;
-  [key: string]: string | File | null |any; 
+  [key: string]: string | File | null | FileData ;
 }
 
 interface FormState {
