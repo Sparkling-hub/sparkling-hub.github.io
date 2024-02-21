@@ -3,10 +3,10 @@ import React, { ChangeEvent } from "react";
 import Input from "../../components/ui/input-component/input";
 import TextArea from "../../components/ui/text-area-component/text-area";
 import Submit from "../../components/ui/input-sumbit-component";
-import Select from "../../components/ui/select-component";
+
 import MainLayout from '../../layouts/MainLayuout';
 import Jobs from '../../data/data-jobs';
-import InfoJob from '../../data/data-sections/data-section-jobs/infoJob'
+
 
 import Link from "next/link";
 import { useDispatch, useSelector } from 'react-redux';

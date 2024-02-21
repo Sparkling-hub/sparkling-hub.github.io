@@ -1,6 +1,6 @@
 
 import IJob from "@/interface/IJob";
-import Button from "@/components/button";
+
 import List from "./listInfo";
 import Link from "next/link";
 interface JobComponentProps {

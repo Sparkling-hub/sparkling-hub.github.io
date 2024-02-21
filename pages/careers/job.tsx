@@ -3,7 +3,7 @@
 import MainLayout from '../../layouts/MainLayuout';
 import Jobs from '../../data/data-jobs';
 import InfoJob from '../../data/data-sections/data-section-jobs/infoJob'
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { useRouter } from 'next/router';
 
