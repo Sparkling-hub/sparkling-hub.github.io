@@ -18,6 +18,7 @@ import {
 	setCheckFormByKey
 } from '@/store/redusers/FormSliceReduser';
 import { useRouter } from 'next/router';
+import { sendContactForm } from "@/lib/api";
 
 
 
@@ -54,23 +55,23 @@ const Faq = () => {
 
 	};
 	const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
-		const file = e.target.files?.[0];
-		if (file) {
-		
-			dispatch(setFormData({
-				...formData,
-				file: { name: file.name, url: URL.createObjectURL(file) }, 
-			}));
-		}
+	
+		const file: File | null = e.target.files?.[0] ?? null; // Проверяем, есть ли файл
+	
+		dispatch(setFormData({
+			...formData,
+			file: file,
+		}));
+		console.log(formData.file);
 	};
 	
-	console.log("Uploaded CV file:", formData.file);
+	
 
 	return (
 		<MainLayout>
 			{job ?
 
-				<div className="m-14 max-w-[1920px] pb-14">
+				<div className="my-14 max-w-[1920px] pb-14 mx-auto px-14">
 					<Link href='/careers' className="flex items-center text-xl  mb-4"> <img src="/img/jobs/arrowBack.png" alt="back" className="h-4" /> Explore all vacancies</Link>
 					<h1 className="text-5xl mb-6 mx-1 ">{job.head}</h1>
 					<p className="text-xl pb-8">
@@ -109,7 +110,7 @@ const Faq = () => {
 							/>
 							<Input
 								type="text" name="linkId"
-								value={formData.linkId}
+								value={formData.linkedin}
 								onChange={handleInputChange}
 								placeholder="Linkedin" />
 
@@ -129,7 +130,7 @@ const Faq = () => {
 							<Input
 								type="file"
 								name="file"
-								onChange={handleFileUpload} value={undefined} />
+								onChange={handleFileUpload} value={formData.file?.webkitRelativePath} />
 								</div>
 							<div className="relative">
 								<Submit
@@ -137,7 +138,7 @@ const Faq = () => {
 									name="submit"
 
 									disabled={!!(formData.name && formData.email && formData.message)}
-									http={"http://localhost:3033/send-form"}
+									onClick={sendContactForm}
 								/>
 							</div>
 						

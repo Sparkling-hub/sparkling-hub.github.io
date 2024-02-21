@@ -11,7 +11,7 @@ const JobComponent: React.FC<JobComponentProps> = ({job}) => {
 
   return (
     
-    <div className="m-14 max-w-[1920px] pb-14">
+    <div className="my-14 max-w-[1920px] pb-14 mx-auto px-14">
       <Link href='/careers' className="flex items-center text-xl  mb-4"> <img src="/img/jobs/arrowBack.png" alt="back"  className="h-4"/> Explore all vacancies</Link>
      <h1 className="text-5xl mb-6 mx-1 ">{job.head}</h1>
      <p className="text-xl pb-8">
