@@ -3,7 +3,7 @@ import Input from "../ui/input-component/input";
 import TextArea from "../ui/text-area-component/text-area";
 import Submit from "../ui/input-sumbit-component";
 import Select from "../ui/select-component";
-
+import { sendContactForm } from "../../lib/api";
 import Link from "next/link";
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -92,7 +92,10 @@ const Form: React.FC = () => {
             name="submit"
 
             disabled={!!(formData.name && formData.email && formData.message)}
-            http={"http://localhost:3033/send-form"}
+
+            onClick={sendContactForm}
+
+
           />
         </div>
       </div>

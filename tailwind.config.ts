@@ -11,6 +11,12 @@ const config: Config = {
   ],
   
   theme: {
+    
+    fontFamily: {
+      'Roboto': ['"Roboto_Light"'], 
+      'Raleway':['Raleway'], 
+      'Ralevay_Light':['"Ralevay_Light"'], 
+  },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

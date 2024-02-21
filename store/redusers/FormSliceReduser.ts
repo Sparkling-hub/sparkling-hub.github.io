@@ -12,8 +12,8 @@ interface FormValues {
   company: string;
   message: string;
   phone: string;
-  linkId: string;
-  file: FileData|null;
+  linkedin: string;
+  file: File|null;
   [key: string]: string | File | null | FileData ;
 }
 
@@ -36,7 +36,7 @@ const initialState: FormState = {
     company: '',
     message: '',
     phone: '',
-    linkId: '',
+    linkedin: '',
     file: null,
   },
   check: null,
@@ -47,7 +47,7 @@ const initialState: FormState = {
     company: '',
     message: '',
     phone: '',
-    linkId: '',
+    linkedin: '',
     file: null,
   },
 };
@@ -62,7 +62,15 @@ const formSlice = createSlice({
     setCheck: (state, action: PayloadAction<boolean | null>) => {
       state.check = action.payload;
     },
+    resetFormData: (state) => {
+  
+      Object.keys(state.formData).forEach(key => {
+        state.formData[key] = '';
+      });
+    },
+
     setCheckFormByKey: (state, action: PayloadAction<{ key: keyof FormValues; value: string }>) => {
+
       const { key, value } = action.payload;
       state.checkForm[key] = value;
     },
@@ -72,8 +80,7 @@ const formSlice = createSlice({
 export const selectIsValidEmail = (email: string): boolean => {
   return isValidEmail(email);
 };
-
-export const { setFormData, setCheck, setCheckFormByKey } = formSlice.actions;
+export const { setFormData, setCheck,setCheckFormByKey,resetFormData } = formSlice.actions;
 
 export const selectForm = (state: RootState) => state.form;
 
