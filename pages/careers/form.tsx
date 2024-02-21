@@ -78,7 +78,7 @@ const Faq = () => {
 						{job.workMode}, {job.location}, {job.experienceHTML}
 					</p>
 
-					<form action="" className="max-w-[790px]">
+					<form action="" className="max-w-[790px]" encType="multipart/form-data">
 						<div className="flex flex-col w-full ">
 
 
@@ -109,7 +109,7 @@ const Faq = () => {
 
 							/>
 							<Input
-								type="text" name="linkId"
+								type="text" name="linkedin"
 								value={formData.linkedin}
 								onChange={handleInputChange}
 								placeholder="Linkedin" />
