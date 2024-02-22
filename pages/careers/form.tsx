@@ -62,7 +62,7 @@ const Faq = () => {
 			...formData,
 			file: file,
 		}));
-		console.log(formData.file);
+		console.log(e.target.files);
 	};
 	
 	
@@ -78,7 +78,7 @@ const Faq = () => {
 						{job.workMode}, {job.location}, {job.experienceHTML}
 					</p>
 
-					<form action="" className="max-w-[790px]" encType="multipart/form-data">
+					<form action="" className="max-w-[790px]" method="POST" encType="multipart/form-data">
 						<div className="flex flex-col w-full ">
 
 
