@@ -54,9 +54,7 @@ const upload = multer({
     }
 
    
-    if (file.size > 5 * 1024 * 1024) {
-      return cb(new Error("The file size exceeds the maximum limit (5MB)."));
-    }
+
 
 
     else cb(null, true);
