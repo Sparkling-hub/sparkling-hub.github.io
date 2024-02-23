@@ -2,7 +2,6 @@ import multer from "multer";
 import { mailOptions, transporter } from "../../config/nodemailer";
 import fs from "fs";
 
-
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
   email: "Email",
@@ -11,7 +10,7 @@ const CONTACT_MESSAGE_FIELDS = {
   phone: "Phone",
   linkedin: "Linkdin",
   message: "Message",
-  file: "File",
+
 };
 
 const generateEmailContent = (data) => {
@@ -23,7 +22,7 @@ const generateEmailContent = (data) => {
   }, "");
 
   const htmlData = Object.entries(data).reduce((str, [key, val]) => {
-    if (val) {
+    if (val ) {
       return `${str}<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`;
     }
     return str;
@@ -44,15 +43,18 @@ const upload = multer({
       cb(null, file.originalname);
     },
     fileFilter: function (req, file, cb) {
+      // Проверка формата файла
       if (file.mimetype !== "application/pdf") {
-        return cb(new Error("Only PDF files are allowed"));
+        return cb(new Error("Incorrect file format"));
       }
 
+      // Проверка размера файла (необязательно)
       if (file.size > 5 * 1024 * 1024) {
-        return cb(new Error("File size exceeds the maximum limit (5MB)"));
+        return cb(new Error("The file size exceeds the maximum limit (5MB)."));
       }
 
-      cb(null, true);
+      // Принять файл, если он соответствует условиям
+      else cb(null, true);
     },
   }),
 });
@@ -76,45 +78,48 @@ export default async function handler(req, res) {
 
     console.log(req.body);
 
-    if (!req.body || !req.body.name || !req.body.email || !req.file) {
+    if (!req.body || !req.body.name || !req.body.email) {
       throw new Error("Missing required fields in request body");
     }
+    if (req.body.file) {
+      const clamscanConfig = {
+        remove_infected: true,
+        quarantine_infected: "./quarantine",
+      };
+      const NodeClam = require("clamscan");
+      const ClamScan = new NodeClam().init(clamscanConfig);
 
-    const clamscanConfig = {
-      remove_infected: true,
-      quarantine_infected: "./quarantine",
-    };
-    const NodeClam = require("clamscan");
-    const ClamScan = new NodeClam().init(clamscanConfig);
+      ClamScan.then(async (clamscan) => {
+        try {
+          const { isInfected1, file, viruses } = await clamscan.isInfected(
+            req.file
+          );
+          if (isInfected1) console.log(`${file} is infected with ${viruses}!`);
+          else console.log("File is harmless");
+        } catch (err) {
+          console.log("Error:", err.message);
+        }
+      }).catch((err) => {
+        console.log("Initialization Error:", err.message);
+      });
+    }
+    let attachments = [];
 
-    ClamScan.then(async (clamscan) => {
-      try {
-        const { isInfected1, file, viruses } = await clamscan.isInfected(
-          req.file
-        );
-        if (isInfected1) console.log(`${file} is infected with ${viruses}!`);
-        else console.log("File is harmless");
-      } catch (err) {
-        console.log("Error:", err.message);
-      }
-    }).catch((err) => {
-  
-      console.log("Initialization Error:", err.message);
-    });
-
+    if (req.file) {
+      attachments.push({
+        filename: req.file.originalname,
+        path: req.file.path,
+      });
+    }
     await transporter.sendMail({
       ...mailOptions,
       ...generateEmailContent(req.body),
       subject: req.body.email,
-      attachments: [
-        {
-          filename: req.file.originalname,
-          path: req.file.path,
-        },
-      ],
+      attachments: attachments,
     });
 
     res.status(200).send("Email sent successfully");
+    return { success: true };
   } catch (error) {
     res.status(500).send(error.message);
   }

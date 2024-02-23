@@ -66,7 +66,9 @@ const formSlice = createSlice({
   
       Object.keys(state.formData).forEach(key => {
         state.formData[key] = '';
+
       });
+      state.formData.file=null;
     },
 
     setCheckFormByKey: (state, action: PayloadAction<{ key: keyof FormValues; value: string }>) => {

@@ -59,7 +59,7 @@ const Faq = () => {
 		const maxSize = 5 * 1024 * 1024; 
 		const allowedTypes = ['application/pdf'];
 
-		if (file ) {
+		if (file && allowedTypes.includes(file.type)) {
 			if (file.size <= maxSize) {
 				dispatch(setFormData({
 					...formData,
@@ -147,7 +147,7 @@ const Faq = () => {
 									type="submit"
 									name="submit"
 
-									disabled={!!(formData.name && formData.email && formData.message)}
+									disabled={!!(formData.name && formData.email && formData.message  )}
 									onClick={sendContactForm}
 								/>
 							</div>
