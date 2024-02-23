@@ -133,11 +133,12 @@ export default async function handler(req, res) {
     res.status(500).send(error.message);
   
   }finally {
-  fs.unlink(req.file.path, (err) => {
-    if (err) {
-      console.error("Error deleting file:", err);
-    } else {
-      console.log("File deleted successfully");
-    }
-  });}
+    if (req.file) { // Перевіряємо наявність файлу перед його видаленням
+      fs.unlink(fs.realpathSync(path.resolve("uploads", req.file.filename)), (err) => {
+        if (err) {
+          console.error("Error deleting file:", err);
+        } else {
+          console.log("File deleted successfully");
+        }
+      });}}
 }
