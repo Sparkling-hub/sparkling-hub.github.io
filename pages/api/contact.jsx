@@ -1,6 +1,7 @@
 import multer from "multer";
 import { mailOptions, transporter } from "../../config/nodemailer";
 import fs from "fs";
+import { limits } from "chroma-js";
 
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
@@ -38,29 +39,31 @@ const upload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, "uploads/");
-      
+    
     },
+    
     filename: function (req, file, cb) {
       cb(null, file.originalname);
     },
-    fileFilter: function (req, file, cb) {
-      // Проверка формата файла
-      if (file.mimetype !== "application/pdf") {
-        return cb(new Error("Incorrect file format"));
-      }
-
-      // Проверка размера файла (необязательно)
-      if (file.size > 5 * 1024 * 1024) {
-        return cb(new Error("The file size exceeds the maximum limit (5MB)."));
-      }
-
-      // Принять файл, если он соответствует условиям
-      else cb(null, true);
-    },
- 
+   
   }),
+  fileFilter: function (req, file, cb) {
+  
+    if (file.mimetype !== "application/pdf") {
+      return cb(new Error("Incorrect file format"));
+    }
+
+   
+    if (file.size > 5 * 1024 * 1024) {
+      return cb(new Error("The file size exceeds the maximum limit (5MB)."));
+    }
+
+
+    else cb(null, true);
+  },
+  
   limits:{
-    fileSize: 5 * 1024 * 1024,}
+    fileSize: 5000000 }
 });
 
 export const config = {
