@@ -56,7 +56,10 @@ const upload = multer({
       // Принять файл, если он соответствует условиям
       else cb(null, true);
     },
+ 
   }),
+  limits:{
+    fileSize: 5 * 1024 * 1024,}
 });
 
 export const config = {
@@ -122,12 +125,13 @@ export default async function handler(req, res) {
     return { success: true };
   } catch (error) {
     res.status(500).send(error.message);
-  }
+  
+  }finally {
   fs.unlink(req.file.path, (err) => {
     if (err) {
       console.error("Error deleting file:", err);
     } else {
       console.log("File deleted successfully");
     }
-  });
+  });}
 }

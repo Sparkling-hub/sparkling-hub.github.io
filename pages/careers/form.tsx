@@ -140,7 +140,7 @@ const Faq = () => {
 								type="file"
 								name="file"
 								checked={checkForm.file==null? false: true}
-								onChange={handleFileUpload}   value={undefined} />
+								onChange={handleFileUpload}   value={formData.file? undefined:''} />
 								</div>
 							<div className="relative">
 								<Submit
