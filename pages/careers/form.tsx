@@ -53,18 +53,27 @@ const Faq = () => {
 			dispatch(setCheck(null));
 		}
 
+	};const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
+		const fileInput = e.target;
+		const file: File | null = e.target.files?.[0] ?? null; 
+		const maxSize = 5 * 1024 * 1024; 
+		const allowedTypes = ['application/pdf'];
+
+		if (file ) {
+			if (file.size <= maxSize) {
+				dispatch(setFormData({
+					...formData,
+					file: file,
+				}));
+			} else {
+				fileInput.value = '';
+				alert('Selected file exceeds the maximum size of 5 MB.');
+			}
+		} else {
+			fileInput.value = '';
+			alert('Please select a PDF file.');
+		}
 	};
-	const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
-	
-		const file: File | null = e.target.files?.[0] ?? null; // Проверяем, есть ли файл
-	
-		dispatch(setFormData({
-			...formData,
-			file: file,
-		}));
-		console.log(e.target.files);
-	};
-	
 	
 
 	return (
@@ -130,7 +139,8 @@ const Faq = () => {
 							<Input
 								type="file"
 								name="file"
-								onChange={handleFileUpload} value={formData.file?.webkitRelativePath} />
+								checked={checkForm.file==null? false: true}
+								onChange={handleFileUpload}   value={undefined} />
 								</div>
 							<div className="relative">
 								<Submit

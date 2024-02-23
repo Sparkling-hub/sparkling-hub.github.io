@@ -18,7 +18,8 @@ export const sendContactForm = async (formData) => {
     }
 
 
-    return response.json();
+
+    return { success: true};
   } catch (error) {
     console.error("Error:", error);
     throw error; 

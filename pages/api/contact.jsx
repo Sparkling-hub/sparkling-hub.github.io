@@ -1,39 +1,33 @@
-import multer from 'multer';
+import multer from "multer";
 import { mailOptions, transporter } from "../../config/nodemailer";
-import { NextApiRequest, NextApiResponse } from 'next';
+import fs from "fs";
+
+
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
   email: "Email",
   select: "Select",
-  company:'Company',
+  company: "Company",
+  phone: "Phone",
+  linkedin: "Linkdin",
   message: "Message",
   file: "File",
-  phone: "Phone",
-  linkdin : "Linkdin",
-
 };
 
 const generateEmailContent = (data) => {
-  const stringData = Object.entries(data).reduce(
-    (str, [key, val]) => {
-      if (CONTACT_MESSAGE_FIELDS[key]) {
-        return `${str}${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`;
-      } else {
-        return str;
-      }
-    },
-    ""
-  );
-  const htmlData = Object.entries(data).reduce(
-    (str, [key, val]) => {
-      if (CONTACT_MESSAGE_FIELDS[key]) {
-        return `${str}<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`;
-      } else {
-        return str;
-      }
-    },
-    ""
-  );
+  const stringData = Object.entries(data).reduce((str, [key, val]) => {
+    if (CONTACT_MESSAGE_FIELDS[key] && val) {
+      return `${str}${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`;
+    }
+    return str;
+  }, "");
+
+  const htmlData = Object.entries(data).reduce((str, [key, val]) => {
+    if (val) {
+      return `${str}<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`;
+    }
+    return str;
+  }, "");
 
   return {
     text: stringData,
@@ -44,55 +38,91 @@ const generateEmailContent = (data) => {
 const upload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'uploads/');
+      cb(null, "uploads/");
     },
     filename: function (req, file, cb) {
       cb(null, file.originalname);
-    }
-  })
+    },
+    fileFilter: function (req, file, cb) {
+      if (file.mimetype !== "application/pdf") {
+        return cb(new Error("Only PDF files are allowed"));
+      }
+
+      if (file.size > 5 * 1024 * 1024) {
+        return cb(new Error("File size exceeds the maximum limit (5MB)"));
+      }
+
+      cb(null, true);
+    },
+  }),
 });
 
 export const config = {
   api: {
-    bodyParser: false
-  }
+    bodyParser: false,
+  },
 };
 
 export default async function handler(req, res) {
   try {
     await new Promise((resolve, reject) => {
-      upload.single('file')(req, res, (err) => {
+      upload.single("file")(req, res, (err) => {
         if (err) {
           return reject(err);
         }
         resolve(null);
       });
     });
-    
-    console.log(req.body); 
+
+    console.log(req.body);
 
     if (!req.body || !req.body.name || !req.body.email || !req.file) {
-      throw new Error('Missing required fields in request body');
+      throw new Error("Missing required fields in request body");
     }
 
- 
+    const clamscanConfig = {
+      remove_infected: true,
+      quarantine_infected: "./quarantine",
+    };
+    const NodeClam = require("clamscan");
+    const ClamScan = new NodeClam().init(clamscanConfig);
+
+    ClamScan.then(async (clamscan) => {
+      try {
+        const { isInfected1, file, viruses } = await clamscan.isInfected(
+          req.file
+        );
+        if (isInfected1) console.log(`${file} is infected with ${viruses}!`);
+        else console.log("File is harmless");
+      } catch (err) {
+        console.log("Error:", err.message);
+      }
+    }).catch((err) => {
+  
+      console.log("Initialization Error:", err.message);
+    });
 
     await transporter.sendMail({
       ...mailOptions,
-     ...generateEmailContent(req.body),
-
+      ...generateEmailContent(req.body),
       subject: req.body.email,
       attachments: [
         {
           filename: req.file.originalname,
-          path: req.file.path
-        }
-      ]
+          path: req.file.path,
+        },
+      ],
     });
 
-    res.status(200).send('Email sent successfully');
+    res.status(200).send("Email sent successfully");
   } catch (error) {
-
-    res.status(500).send('Internal Server Error');
+    res.status(500).send(error.message);
   }
+  fs.unlink(req.file.path, (err) => {
+    if (err) {
+      console.error("Error deleting file:", err);
+    } else {
+      console.log("File deleted successfully");
+    }
+  });
 }
