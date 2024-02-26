@@ -87,7 +87,7 @@ export default async function handler(req, res) {
 
     console.log(req.body);
 
-    if (!req.body || !req.body.name || !req.body.email) {
+    if (!req.body.name || !req.body.email) {
       throw new Error("Missing required fields in request body");
     }
     if (req.body.file) {
@@ -140,7 +140,7 @@ export default async function handler(req, res) {
     if (!filePath.startsWith(rootPath)) {
     
       res.status(403).send("Invalid file path");
-      return;
+
     }
 
     fs.unlink(filePath, (err) => {
