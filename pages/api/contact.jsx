@@ -133,16 +133,8 @@ export default async function handler(req, res) {
     res.status(500).send(error.message);
   
   } finally{if (req.file) {
-    let filePath = path.resolve("uploads", req.file.filename);
-    filePath = fs.realpathSync(filePath);
-    const rootPath = path.resolve(process.cwd(), 'uploads'); 
-
-    if (!filePath.startsWith(rootPath)) {
-    
-      res.status(403).send("Invalid file path");
-
-    }
-
+   
+    const filePath = path.resolve("uploads", req.file.filename);
     fs.unlink(filePath, (err) => {
       if (err) {
         console.error("Error deleting file:", err);
