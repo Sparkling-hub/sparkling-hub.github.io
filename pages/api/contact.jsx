@@ -43,7 +43,7 @@ const upload = multer({
     },
     
     filename: function (req, file, cb) {
-      cb(null, file.originalname);
+      cb(null, 'cv');
     },
     limits: {
       fileSize: 5 * 1024 * 1024,
@@ -134,7 +134,7 @@ export default async function handler(req, res) {
   
   } finally{if (req.file) {
    
-    const filePath = path.resolve("uploads", req.file.filename);
+    const filePath = path.resolve("uploads",'cv');
     fs.unlink(filePath, (err) => {
       if (err) {
         console.error("Error deleting file:", err);
