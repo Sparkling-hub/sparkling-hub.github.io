@@ -141,7 +141,7 @@ const Faq = () => {
 							<br />
 							<div className="relative">
 								<h3 className="mx-3 absolute top-[-15px] text-xl">Upload CV*</h3>
-							<div className="relative" key={checkForm.file}><Input
+							<div className="relative"><Input
 								type="file"
 								name="file"
 								checked={check === false && checkForm.file.length > 0 || check === false}
