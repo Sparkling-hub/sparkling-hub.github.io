@@ -145,7 +145,7 @@ const Faq = () => {
 								type="file"
 								name="file"
 								checked={check === false && checkForm.file.length > 0 || check === false}
-								onChange={handleFileUpload}   value={undefined} />
+								onChange={handleFileUpload}   value={checkForm.file.length ? undefined :'' }/>
 								</div>
 							
 								</div>
