@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 const Faq = () => {
 	
     const router = useRouter();
-	console.log(router)
+
   const { id } = router.query;
   const job = Jobs.find(job => job.slug === id )
  

@@ -1,4 +1,4 @@
-export const sendContactForm = async (formData) => {
+export const sendContactForm = async (formData,fileData) => {
   try {
 
     const form = new FormData();
@@ -6,6 +6,7 @@ export const sendContactForm = async (formData) => {
     for (const key in formData) {
       form.append(key, formData[key]);
     }
+    form.append('file', fileData);
 
     const response = await fetch("/api/contact", {
       method: "POST",

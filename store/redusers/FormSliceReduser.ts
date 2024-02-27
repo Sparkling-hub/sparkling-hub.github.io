@@ -1,9 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store'; 
-interface FileData {
-  name: string;
-  url: string;
-}
+
 
 interface FormValues {
   name: string;
@@ -13,8 +10,8 @@ interface FormValues {
   message: string;
   phone: string;
   linkedin: string;
-  file: File|null;
-  [key: string]: string | File | null | FileData ;
+  file: string;
+  [key: string]: string | File | null  ;
 }
 
 interface FormState {
@@ -37,7 +34,7 @@ const initialState: FormState = {
     message: '',
     phone: '',
     linkedin: '',
-    file: null,
+    file: '',
   },
   check: null,
   checkForm: {
@@ -48,7 +45,7 @@ const initialState: FormState = {
     message: '',
     phone: '',
     linkedin: '',
-    file: null,
+    file: '',
   },
 };
 
@@ -68,9 +65,16 @@ const formSlice = createSlice({
         state.formData[key] = '';
 
       });
-      state.formData.file=null;
+ 
     },
+    resetCheckForm: (state) => {
+  
+      Object.keys(state.formData).forEach(key => {
+        state.checkForm[key] = '';
 
+      });
+ 
+    },
     setCheckFormByKey: (state, action: PayloadAction<{ key: keyof FormValues; value: string }>) => {
 
       const { key, value } = action.payload;
@@ -82,7 +86,7 @@ const formSlice = createSlice({
 export const selectIsValidEmail = (email: string): boolean => {
   return isValidEmail(email);
 };
-export const { setFormData, setCheck,setCheckFormByKey,resetFormData } = formSlice.actions;
+export const { setFormData, setCheck,setCheckFormByKey,resetFormData,resetCheckForm } = formSlice.actions;
 
 export const selectForm = (state: RootState) => state.form;
 

@@ -23,7 +23,8 @@ const generateEmailContent = (data) => {
   }, "");
 
   const htmlData = Object.entries(data).reduce((str, [key, val]) => {
-    if (val ) {
+    if (val && CONTACT_MESSAGE_FIELDS[key] ) {
+
       return `${str}<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`;
     }
     return str;
@@ -75,20 +76,22 @@ export const config = {
 };
 
 export default async function handler(req, res) {
+
   try {
     await new Promise((resolve, reject) => {
       upload.single("file")(req, res, (err) => {
         if (err) {
-          return reject(err);
+          return { success: false };
         }
         resolve(null);
       });
     });
 
-    console.log(req.body);
+    
 
     if (!req.body.name || !req.body.email) {
       throw new Error("Missing required fields in request body");
+      
     }
     if (req.body.file) {
       const clamscanConfig = {
@@ -100,16 +103,15 @@ export default async function handler(req, res) {
 
       ClamScan.then(async (clamscan) => {
         try {
-          const { isInfected1, file, viruses } = await clamscan.isInfected(
+            await clamscan.isInfected(
             req.file
           );
-          if (isInfected1) console.log(`${file} is infected with ${viruses}!`);
-          else console.log("File is harmless");
+     
         } catch (err) {
-          console.log("Error:", err.message);
+          return { success: false };
         }
       }).catch((err) => {
-        console.log("Initialization Error:", err.message);
+
       });
     }
     let attachments = [];
@@ -131,17 +133,18 @@ export default async function handler(req, res) {
     return { success: true };
   } catch (error) {
     res.status(500).send(error.message);
+    return { success: false };
   
-  } finally{if (req.file) {
+  } finally{ 
+    try {
    
     const filePath = path.resolve("uploads",'cv');
     fs.unlink(filePath, (err) => {
       if (err) {
-        console.error("Error deleting file:", err);
+        return { success: false };
       } else {
-        console.log("File deleted successfully");
+        return { success: true };
       }
-    });
-  }
-  }
+  });} catch (err) {        return { success: false };}
+}
 }

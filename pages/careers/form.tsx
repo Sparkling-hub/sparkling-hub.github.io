@@ -1,5 +1,5 @@
 
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useState } from "react";
 import Input from "../../components/ui/input-component/input";
 import TextArea from "../../components/ui/text-area-component/text-area";
 import Submit from "../../components/ui/input-sumbit-component";
@@ -26,8 +26,9 @@ const Faq = () => {
 
 	const dispatch = useDispatch();
 	const { formData, check, checkForm } = useSelector(selectForm);
+	const [fileForm, setFile] = useState<File|null>(null)
 	const router = useRouter();
-	console.log(router)
+	
 	const { id } = router.query;
 	const job = Jobs.find(job => job.slug === id)
 
@@ -61,10 +62,14 @@ const Faq = () => {
 
 		if (file && allowedTypes.includes(file.type)) {
 			if (file.size <= maxSize) {
+				setFile(file)
 				dispatch(setFormData({
 					...formData,
-					file: file,
+					file: file.name,
 				}));
+				dispatch(setCheckFormByKey({ key:'file' as any, value: '123' }));
+			
+
 			} else {
 				fileInput.value = '';
 				alert('Selected file exceeds the maximum size of 5 MB.');
@@ -130,25 +135,27 @@ const Faq = () => {
 								placeholder="Motivation letter"
 								value={formData.message}
 								onChange={handleInputChange}
-								checked={checkForm.message.length > 0}
+								checked={ checkForm.message.length > 0  }
 							/>
 
 							<br />
 							<div className="relative">
 								<h3 className="mx-3 absolute top-[-15px] text-xl">Upload CV*</h3>
-							<Input
+							<div className="relative" key={checkForm.file}><Input
 								type="file"
 								name="file"
-								checked={checkForm.file==null? false: true}
-								onChange={handleFileUpload}   value={formData.file? undefined:''} />
+								checked={check === false && checkForm.file.length > 0 || check === false}
+								onChange={handleFileUpload}   value={undefined} />
+								</div>
+							
 								</div>
 							<div className="relative">
 								<Submit
 									type="submit"
 									name="submit"
-
-									disabled={!!(formData.name && formData.email && formData.message  )}
-									onClick={sendContactForm}
+file={fileForm}
+									disabled={!!(formData.name && formData.email && formData.message && formData.file  )}
+									onClick={sendContactForm} 
 								/>
 							</div>
 						
