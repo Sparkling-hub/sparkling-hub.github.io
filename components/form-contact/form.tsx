@@ -93,8 +93,7 @@ const Form: React.FC = () => {
 
             disabled={!!(formData.name && formData.email && formData.message)}
 
-            onClick={sendContactForm}
-
+            onClick={sendContactForm} requiredKeys={['name', 'email', 'message']}
 
           />
         </div>

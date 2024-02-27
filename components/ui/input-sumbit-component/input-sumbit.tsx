@@ -18,12 +18,12 @@ interface InputSubmitProps {
   disabled: boolean;
   file?: File|null;
   onClick: any;
-
+  requiredKeys: string[];
 }
 
-const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick,file }) => {
+const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick,file, requiredKeys}) => {
 
-  const { formData } = useSelector(selectForm);
+  const { formData,checkForm } = useSelector(selectForm);
   const dispatch = useDispatch();
 
   const handleSubmit = async (e: SyntheticEvent) => {
@@ -78,10 +78,9 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
   
 
     else {
+     
 
-      const requiredKeys: string[] = ['name', 'email', 'message'];
-      requiredKeys
-        .filter(key => (formData as any)[key] === '')
+      requiredKeys.filter(key => (formData as any)[key] === '')
         .map(key => { dispatch(setCheckFormByKey({ key: key, value: 'Fill in the following fields:' })) });
     }
   }
