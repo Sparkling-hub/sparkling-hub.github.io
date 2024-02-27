@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    target: 'server',
+    target: 'serverless',
+
     output: 'static'
 }
 
