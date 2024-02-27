@@ -145,6 +145,6 @@ export default async function handler(req, res) {
       } else {
         return { success: true };
       }
-  });} catch (err) {        return { success: false };}
+  });} catch (err) {   }
 }
 }

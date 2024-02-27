@@ -16,7 +16,7 @@ interface InputSubmitProps {
   name: string;
   type: string;
   disabled: boolean;
-  file?: File|undefined|null;
+  file?: File|null;
   onClick: any;
 
 }
