@@ -23,7 +23,7 @@ import { sendContactForm } from "@/lib/api";
 
 
 const Faq = () => {
-
+	
 	const dispatch = useDispatch();
 	const { formData, check, checkForm } = useSelector(selectForm);
 	const [fileForm, setFile] = useState<File | null>(null)
@@ -158,7 +158,11 @@ const Faq = () => {
 									type="file"
 									name="file"
 									onClick={(e: { target: { value: string; }; }) => {
-										e.target.value = '';}}
+										e.target.value = ''; 		dispatch(setFormData({
+											...formData,
+											file: '',
+										}));
+								}}
 									checked={checkForm.file.length > 0}
 									onChange={handleFileUpload} value={undefined} />
 									{formData.file && (
