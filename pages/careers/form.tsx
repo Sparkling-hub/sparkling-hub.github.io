@@ -121,7 +121,7 @@ const Faq = () => {
 								value={formData.email}
 								onChange={handleInputChange}
 								placeholder="Email*"
-								checked={checkForm.email.length > 0}
+								checked={check === false && checkForm.email.length > 0 || check === false}
 							/>
 
 							<Input
