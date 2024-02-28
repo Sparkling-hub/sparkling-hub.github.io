@@ -23,7 +23,7 @@ interface InputSubmitProps {
 
 const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick,file, requiredKeys}) => {
 
-  const { formData,checkForm } = useSelector(selectForm);
+  const { formData } = useSelector(selectForm);
   const dispatch = useDispatch();
 
   const handleSubmit = async (e: SyntheticEvent) => {
