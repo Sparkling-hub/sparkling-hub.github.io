@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 
 const CONTACT_MESSAGE_FIELDS = {
+  vacancy: "Vacancy",
   name: "Name",
   email: "Email",
   select: "Select",

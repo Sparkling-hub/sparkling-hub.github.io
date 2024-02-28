@@ -2,6 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import IJob from '@/interface/IJob';
 interface CareersState {
+	
 	filterPhraze: string;
 	uniqueIds: string[][];
 	activeIds: string[][];

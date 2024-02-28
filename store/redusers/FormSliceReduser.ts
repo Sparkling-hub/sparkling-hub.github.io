@@ -3,6 +3,7 @@ import { RootState } from '../store';
 
 
 interface FormValues {
+  vacancy: string;
   name: string;
   select: string;
   email: string;
@@ -27,6 +28,7 @@ const isValidEmail = (email: string): boolean => {
 
 const initialState: FormState = {
   formData: {
+    vacancy: '',
     name: '',
     select: '',
     email: '',
@@ -38,6 +40,7 @@ const initialState: FormState = {
   },
   check: null,
   checkForm: {
+    vacancy: '',
     name: '',
     select: '',
     email: '',

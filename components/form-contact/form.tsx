@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import Input from "../ui/input-component/input";
 import TextArea from "../ui/text-area-component/text-area";
 import Submit from "../ui/input-sumbit-component";
@@ -33,7 +33,14 @@ const Form: React.FC = () => {
     }
 
   };
+  useEffect(() => {
 
+		  dispatch(setFormData({
+			...formData,
+			['vacancy']: 'Contact Us',
+		  }));
+
+	  }, []);
   return (
     <form
       method="post"
