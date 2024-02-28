@@ -22,7 +22,7 @@ export const sendContactForm = async (formData,fileData) => {
 
     return { success: true};
   } catch (error) {
-    console.error("Error:", error);
-    throw error; 
+  
+    throw new Error("Failed to fetch");
   }
 };
