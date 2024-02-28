@@ -11,7 +11,9 @@ import {
   setFormData,
   setCheck,
 
-  setCheckFormByKey
+  setCheckFormByKey,
+  resetCheckForm,
+  resetFormData
 } from '@/store/redusers/FormSliceReduser';
 
 const Form: React.FC = () => {
@@ -34,13 +36,15 @@ const Form: React.FC = () => {
 
   };
   useEffect(() => {
-
+		dispatch(resetFormData());
+        dispatch(resetCheckForm())
 		  dispatch(setFormData({
 			...formData,
 			['vacancy']: 'Contact Us',
 		  }));
 
 	  }, []);
+    
   return (
     <form
       method="post"
@@ -56,7 +60,7 @@ const Form: React.FC = () => {
           type="text"
           name="name"
           value={formData.name}
-          placeholder="Full Name*"
+          placeholder="Full Name"
           onChange={handleInputChange}
           checked={checkForm.name.length > 0}
         />
@@ -66,7 +70,7 @@ const Form: React.FC = () => {
           name="email"
           value={formData.email}
           onChange={handleInputChange}
-          placeholder="Email*"
+          placeholder="Email"
           checked={check === false && checkForm.email.length > 0 || check === false}
         />
 
@@ -85,7 +89,7 @@ const Form: React.FC = () => {
 
         <TextArea
           name="message"
-          placeholder="Tell us about your project and goals*"
+          placeholder="Tell us about your project and goals"
           value={formData.message}
           onChange={handleInputChange}
           checked={checkForm.message.length > 0}

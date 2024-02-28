@@ -11,7 +11,9 @@ import {
 	selectForm,
 	setFormData,
 	setCheck,
-	setCheckFormByKey
+	setCheckFormByKey,
+	resetFormData,
+	resetCheckForm
 } from '@/store/redusers/FormSliceReduser';
 import { useRouter } from 'next/router';
 import { sendContactForm } from "@/lib/api";
@@ -26,6 +28,8 @@ const Faq = () => {
 
 	if (formData.file.length > 0) { setCheck(null) }
 	useEffect(() => {
+		dispatch(resetFormData());
+        dispatch(resetCheckForm())
 		if (job?.head && job?.location) {
 			dispatch(setFormData({
 				...formData,
@@ -123,9 +127,10 @@ const Faq = () => {
 								type="text"
 								name="name"
 								value={formData.name}
-								placeholder="Full Name*"
+								placeholder="Full Name"
 								onChange={handleInputChange}
 								checked={checkForm.name.length > 0}
+							
 							/>
 
 							<Input
@@ -133,25 +138,26 @@ const Faq = () => {
 								name="email"
 								value={formData.email}
 								onChange={handleInputChange}
-								placeholder="Email*"
+								placeholder="Email"
 								checked={check === false && checkForm.email.length > 0 || check === false}
+						
 							/>
 
 							<Input
 								type="tel"
 								name="phone"
 								value={formData.phone}
-								placeholder="Phone number*"
+								placeholder="Phone number"
 								onChange={handleInputChange}
 								checked={checkForm.phone.length > 0}
-
+							
 							/>
 							<Input
 								type="text" name="linkedin"
 								value={formData.linkedin}
 								onChange={handleInputChange}
 								placeholder="Linkedin" />
-
+						
 
 
 							<TextArea
@@ -159,13 +165,15 @@ const Faq = () => {
 								placeholder="Motivation letter"
 								value={formData.message}
 								onChange={handleInputChange}
-								checked={checkForm.message.length > 0}
+								
 							/>
 
 							<br />
 
 							<div className="relative">
-								<h3 className="mx-3 top-[-15px] text-xl flex items-center">Upload CV* <p className="text-gray-400 contents mx-4 text-[15px]">PDF only</p></h3>
+								<div className="flex items-center">
+								<h3 className="mx-3 top-[-15px] text-xl flex items-center">Upload CV <span className="text-red-800 text-5xl px-1">*</span></h3> <p className="text-gray-400 contents mx-4 text-[15px]">PDF only</p>
+								</div>
 								<div className="relative">
 									<Input
 										type="file"
