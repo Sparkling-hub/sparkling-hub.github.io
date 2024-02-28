@@ -32,7 +32,7 @@ const Faq = () => {
 	const { id } = router.query;
 	const job = Jobs.find(job => job.slug === id)
 
-
+	if(formData.file.length>0){setCheck(null)}
 	const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target;
 		dispatch(setCheckFormByKey({ key: name as any, value: '' }));
@@ -62,11 +62,12 @@ const Faq = () => {
 		}));
 
 		const fileInput = e.target;
+	
 		const file: File | null = e.target.files?.[0] ?? null;
 		const maxSize = 5 * 1024 * 1024;
 		const allowedTypes = ['application/pdf'];
 		const nameFile: string = file == null ? '' : file.name
-
+	
 		if (file && allowedTypes.includes(file.type)) {
 			if (file.size <= maxSize) {
 				setFile(file)
@@ -74,7 +75,7 @@ const Faq = () => {
 					...formData,
 					file: nameFile,
 				}));
-
+		
 				dispatch(setCheckFormByKey({ key: e.target.name as any, value: '' }))
 
 
@@ -152,10 +153,12 @@ const Faq = () => {
 							<br />
 							<div className="relative">
 								<h3 className="mx-3 top-[-15px] text-xl flex items-center">Upload CV* <p className="text-gray-400 contents mx-4 text-[15px]">PDF only</p></h3>
-								<div className="relative"><Input
+								<div className="relative">
+									<Input
 									type="file"
 									name="file"
-
+									onClick={(e: { target: { value: string; }; }) => {
+										e.target.value = '';}}
 									checked={checkForm.file.length > 0}
 									onChange={handleFileUpload} value={undefined} />
 									{formData.file && (
