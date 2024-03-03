@@ -1,15 +1,15 @@
-import jobs_one from './jobs-one';
-import jobs_two from './jobs-two';
-import jobs_three from './jobs-three';
-import jobs_four from './jobs-four';
-import jobs_five from './jobs-five';
-import jobs_six from './jobs-six';
-import jobs_seven from './jobs-seven';
-import jobs_eight from './jobs-eight';
-import jobs_nine from './jobs-nine';
-import jobs_ten from './jobs-ten';
-import jobs_eleven from './jobs-eleven';
-import jobs_twelve from './jobs-twelve';
+import jobs_one from './j-js-dev';
+import jobs_two from './paid-internship';
+import jobs_three from './ml-js-dev';
+import jobs_four from './s-js-dev';
+import jobs_five from './qa-manager';
+import jobs_six from './delivery-manager';
+import jobs_seven from './j-php-dev';
+import jobs_eight from './ml-php-dev';
+import jobs_nine from './s-php-dev';
+import jobs_ten from './software-consultantp';
+import jobs_eleven from './project-manager';
+import jobs_twelve from './sales-associate';
 import IJob from '../../interface/IJob'
 
 

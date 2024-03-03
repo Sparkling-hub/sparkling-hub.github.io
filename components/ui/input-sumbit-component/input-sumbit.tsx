@@ -8,28 +8,30 @@ import {
   selectIsValidEmail,
   setCheck,
   resetFormData,
-  setCheckFormByKey
+  setCheckFormByKey,
+  resetCheckForm
 } from '@/store/redusers/FormSliceReduser';
 
 interface InputSubmitProps {
   name: string;
   type: string;
   disabled: boolean;
-
+  file?: File|null;
   onClick: any;
-
+  requiredKeys: string[];
 }
 
-const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick }) => {
+const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick,file, requiredKeys}) => {
 
   const { formData } = useSelector(selectForm);
   const dispatch = useDispatch();
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-
+ 
     dispatch(setCheck(selectIsValidEmail(formData.email)));
     if (disabled && selectIsValidEmail(formData.email)) {
+      disabled= false;
       toast.promise(
         new Promise((resolve, reject) => {
           setTimeout(() => {
@@ -41,9 +43,9 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
         }
       );
       try {
-       await onClick(formData)
+       await onClick(formData, file);
         dispatch(resetFormData());
-    
+        dispatch(resetCheckForm())
         toast.success('Form submitted successfully!', {
        
           autoClose: 5000,
@@ -56,7 +58,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
           transition: Bounce
         });
       } catch (error: any) {
-     
+       
         toast.error(<p>{error.message ||"An error occurred"}</p>, {
      
           autoClose: 5000,
@@ -69,16 +71,16 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
           transition: Bounce
         });
       }
+      disabled= true;
     } 
 
    
   
 
     else {
+     
 
-      const requiredKeys: string[] = ['name', 'email', 'message'];
-      requiredKeys
-        .filter(key => (formData as any)[key] === '')
+      requiredKeys.filter(key => (formData as any)[key] === '')
         .map(key => { dispatch(setCheckFormByKey({ key: key, value: 'Fill in the following fields:' })) });
     }
   }
@@ -91,7 +93,10 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
         name={name}
         type={type}
         className={`no-underline text-white py-3 px-8 rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
-        onClick={handleSubmit}
+        onClick={(e) => {
+          toast.dismiss(); 
+          handleSubmit(e);
+        }}
       />
       <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
         <ToastContainer
@@ -100,7 +105,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
-          closeOnClick
+          closeOnClick={false}
           rtl={false}
           pauseOnFocusLoss
           draggable
@@ -108,6 +113,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
           theme="light"
           transition={Bounce}
           limit={1}
+
         />
       </div>
     </>
