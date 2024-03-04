@@ -101,8 +101,8 @@
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1.5s"
-                begin="2s"
+                dur="1s"
+                begin="1s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -117,8 +117,8 @@
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1.5s"
-                begin="3.5s"
+                dur="1s"
+                begin="1.2s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -130,8 +130,8 @@
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1.5s"
-                begin="2.4s"
+                dur="0.7s"
+                begin="1.1s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -148,8 +148,8 @@
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1s"
-                begin="3.8s"
+                dur="0.5s"
+                begin="1.4s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -165,8 +165,8 @@
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1s"
-                begin="4s"
+                dur="0.5s"
+                begin="1.7s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -182,8 +182,8 @@
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1.5s"
-                begin="3.4s"
+                dur="1s"
+                begin="1.3s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -195,15 +195,23 @@
     <path fill-rule="evenodd" clip-rule="evenodd"
         d="M477.76 192.433H500.624V521.217C493.129 512.11 485.568 501.891 477.76 490.633V192.433Z"
         fill="#29584E" />
-    <path
-        d="M516.711 160.094V167.081C516.711 169.364 515.779 171.438 514.277 172.94L514.271 172.934C512.764 174.44 510.691 175.375 508.417 175.375H506.252C505.44 175.375 504.7 175.709 504.162 176.246C503.625 176.784 503.291 177.524 503.291 178.336V524.411C501.517 522.314 499.739 520.158 497.957 517.935V178.336C497.957 176.053 498.89 173.979 500.392 172.477C501.894 170.975 503.969 170.042 506.251 170.042H508.416C509.233 170.042 509.973 169.712 510.504 169.18V169.17C511.042 168.632 511.376 167.892 511.376 167.08V160.093H516.71L516.711 160.094Z"
-        fill="#373435" />
-    <path
-        d="M467.007 149.423V161.79C467.007 162.601 467.341 163.341 467.878 163.879V163.889C468.409 164.42 469.149 164.751 469.967 164.751H472.132C474.415 164.751 476.489 165.684 477.991 167.186C479.493 168.688 480.425 170.763 480.425 173.045V492.598H479.127C478.081 491.101 477.033 489.594 475.978 488.059C475.682 487.629 475.387 487.218 475.091 486.796V173.045C475.091 172.233 474.757 171.493 474.22 170.956C473.683 170.418 472.943 170.084 472.131 170.084H469.966C467.692 170.084 465.619 169.149 464.111 167.644L464.106 167.649C462.604 166.148 461.671 164.073 461.671 161.79V149.424H467.005L467.007 149.423Z"
-        fill="#373435" />
-    <path
-        d="M491.988 188.149V509.426H491.335C489.781 507.374 488.221 505.275 486.654 503.135V188.15H491.988V188.149Z"
-        fill="#373435" />
+        <g>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:yellow;stop-opacity:1" />
+                <stop offset="10%" style="stop-color:black;stop-opacity:1" />
+               
+
+              
+         
+
+                <animate attributeName="y1" from="100%" to="0.1%" begin="1.2s" dur="1.2s" fill="freeze"  />
+            </linearGradient>
+              <path d="M516.711 160.094V167.081C516.711 169.364 515.779 171.438 514.277 172.94L514.271 172.934C512.764 174.44 510.691 175.375 508.417 175.375H506.252C505.44 175.375 504.7 175.709 504.162 176.246C503.625 176.784 503.291 177.524 503.291 178.336V524.411C501.517 522.314 499.739 520.158 497.957 517.935V178.336C497.957 176.053 498.89 173.979 500.392 172.477C501.894 170.975 503.969 170.042 506.251 170.042H508.416C509.233 170.042 509.973 169.712 510.504 169.18V169.17C511.042 168.632 511.376 167.892 511.376 167.08V160.093H516.71L516.711 160.094Z" fill="url(#grad)" />
+              <path d="M467.007 149.423V161.79C467.007 162.601 467.341 163.341 467.878 163.879V163.889C468.409 164.42 469.149 164.751 469.967 164.751H472.132C474.415 164.751 476.489 165.684 477.991 167.186C479.493 168.688 480.425 170.763 480.425 173.045V492.598H479.127C478.081 491.101 477.033 489.594 475.978 488.059C475.682 487.629 475.387 487.218 475.091 486.796V173.045C475.091 172.233 474.757 171.493 474.22 170.956C473.683 170.418 472.943 170.084 472.131 170.084H469.966C467.692 170.084 465.619 169.149 464.111 167.644L464.106 167.649C462.604 166.148 461.671 164.073 461.671 161.79V149.424H467.005L467.007 149.423Z" fill="url(#grad)" />
+              <path d="M491.988 188.149V509.426H491.335C489.781 507.374 488.221 505.275 486.654 503.135V188.15H491.988V188.149Z" fill="url(#grad)" />
+            
+        </g>
+
     <path
         d="M488.759 370.967C494.587 370.967 499.312 366.242 499.312 360.414C499.312 354.586 494.587 349.861 488.759 349.861C482.931 349.861 478.206 354.586 478.206 360.414C478.206 366.242 482.931 370.967 488.759 370.967Z"
         fill="#FEFEFE" />
@@ -234,9 +242,25 @@
     <path
         d="M491.853 185.576H487.224C486.624 185.576 486.137 186.026 486.137 186.58V187.036C486.137 187.591 486.624 188.041 487.224 188.041H491.853C492.453 188.041 492.94 187.591 492.94 187.036V186.58C492.94 186.026 492.453 185.576 491.853 185.576Z"
         fill="#FEFEFE" />
-    <path fill-rule="evenodd" clip-rule="evenodd"
-        d="M492.991 174.97C492.991 173.172 493.755 168.49 495.121 167.66C500.089 164.639 503.801 159.041 503.801 149.77C503.801 140.497 496.607 134.973 489.464 134.973C482.321 134.973 475.127 140.498 475.127 149.77C475.127 159.042 478.838 164.639 483.807 167.66C485.173 168.491 485.937 173.172 485.937 174.97H492.991Z"
-        fill="#FEFEFE" />
+        <g id='lamp'>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M467.622 136.717C467.622 134.918 468.386 130.236 469.752 129.406C474.72 126.385 478.432 120.788 478.432 111.516C478.432 102.243 471.238 96.7192 464.095 96.7192C456.952 96.7192 449.758 102.244 449.758 111.516C449.758 120.788 453.469 126.385 458.437 129.406C459.804 130.237 460.568 134.918 460.568 136.717H467.622Z"
+                fill="#FEFEFE">
+                <animate attributeName="fill" from="#FEFEFE" to="yellow" begin='2.4s'   dur="0.6s" repeatCount="1" fill="freeze" />
+            </path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M517.604 147.645C517.604 145.846 518.368 141.164 519.735 140.334C524.702 137.314 528.414 131.716 528.414 122.444C528.414 113.171 521.22 107.647 514.077 107.647C506.934 107.647 499.74 113.172 499.74 122.444C499.74 131.717 503.451 137.314 508.42 140.334C509.786 141.165 510.55 145.846 510.55 147.645H517.604Z"
+                fill="#FEFEFE">
+                <animate attributeName="fill" from="#FEFEFE" to="yellow" begin='2.4s'   dur="0.6s" repeatCount="1" fill="freeze" />
+            </path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M492.991 174.97C492.991 173.172 493.755 168.49 495.121 167.66C500.089 164.639 503.801 159.041 503.801 149.77C503.801 140.497 496.607 134.973 489.464 134.973C482.321 134.973 475.127 140.498 475.127 149.77C475.127 159.042 478.838 164.639 483.807 167.66C485.173 168.491 485.937 173.172 485.937 174.97H492.991Z"
+                fill="#FEFEFE">
+                <animate attributeName="fill" from="#FEFEFE" to="yellow" begin='2.2s'  dur="0.6s" repeatCount="1" fill="freeze"  />
+            </path>
+        </g>
+        
+
     <path
         d="M493.221 174.618H485.854C484.899 174.618 484.124 175.393 484.124 176.349V177.134C484.124 178.089 484.899 178.864 485.854 178.864H493.221C494.177 178.864 494.951 178.089 494.951 177.134V176.349C494.951 175.393 494.177 174.618 493.221 174.618Z"
         fill="#FEFEFE" />
@@ -267,9 +291,7 @@
     <path
         d="M466.484 147.322H461.855C461.254 147.322 460.768 147.772 460.768 148.327V148.783C460.768 149.338 461.254 149.788 461.855 149.788H466.484C467.084 149.788 467.571 149.338 467.571 148.783V148.327C467.571 147.772 467.084 147.322 466.484 147.322Z"
         fill="#FEFEFE" />
-    <path fill-rule="evenodd" clip-rule="evenodd"
-        d="M467.622 136.717C467.622 134.918 468.386 130.236 469.752 129.406C474.72 126.385 478.432 120.788 478.432 111.516C478.432 102.243 471.238 96.7192 464.095 96.7192C456.952 96.7192 449.758 102.244 449.758 111.516C449.758 120.788 453.469 126.385 458.437 129.406C459.804 130.237 460.568 134.918 460.568 136.717H467.622Z"
-        fill="#FEFEFE" />
+
     <path
         d="M467.853 136.364H460.486C459.531 136.364 458.756 137.139 458.756 138.095V138.88C458.756 139.835 459.531 140.61 460.486 140.61H467.853C468.808 140.61 469.583 139.835 469.583 138.88V138.095C469.583 137.139 468.808 136.364 467.853 136.364Z"
         fill="#FEFEFE" />
@@ -300,9 +322,7 @@
     <path
         d="M516.467 158.25H511.838C511.238 158.25 510.751 158.7 510.751 159.255V159.711C510.751 160.266 511.238 160.716 511.838 160.716H516.467C517.067 160.716 517.554 160.266 517.554 159.711V159.255C517.554 158.7 517.067 158.25 516.467 158.25Z"
         fill="#FEFEFE" />
-    <path fill-rule="evenodd" clip-rule="evenodd"
-        d="M517.604 147.645C517.604 145.846 518.368 141.164 519.735 140.334C524.702 137.314 528.414 131.716 528.414 122.444C528.414 113.171 521.22 107.647 514.077 107.647C506.934 107.647 499.74 113.172 499.74 122.444C499.74 131.717 503.451 137.314 508.42 140.334C509.786 141.165 510.55 145.846 510.55 147.645H517.604Z"
-        fill="#FEFEFE" />
+
 
     <path
         d="M517.835 147.293H510.469C509.513 147.293 508.738 148.068 508.738 149.024V149.809C508.738 150.764 509.513 151.539 510.469 151.539H517.835C518.791 151.539 519.566 150.764 519.566 149.809V149.024C519.566 148.068 518.791 147.293 517.835 147.293Z"
@@ -335,8 +355,8 @@
                 attributeName="opacity"
                 from="0"
                 to="1"
-                dur="1s"
-                begin="3s"
+                dur="0.5s"
+                begin="1.5s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -354,16 +374,16 @@
                 attributeType="XML"
                 type="rotate"
                 values="-140;160"
-                dur="1s"
-                begin="2.5s"
+                dur="0.5s"
+                begin="1.4s"
                 repeatCount="1"
                 fill="freeze"
             />
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1s"
-                begin="2.5s"
+                dur="0.5s"
+                begin="1.4s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -408,7 +428,7 @@
                 from="0, 20"
                 to="0, 0"
                 dur="0.5s"
-                begin="3s"
+                begin="1.5s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -417,7 +437,7 @@
                 from="0"
                 to="1"
                 dur="0.5s"
-                begin="3.2s"
+                begin="1.8s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -433,8 +453,8 @@
                 attributeName="opacity"
                 from="0"
                 to="1"
-                dur="1s"
-                begin="4s"
+                dur="0.5s"
+                begin="1.5s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -453,16 +473,16 @@
                 attributeType="XML"
                 type="rotate"
                 values="0;-270"
-                dur="1s"
-                begin="4s"
+                dur="0.5s"
+                begin="1.4s"
                 repeatCount="1"
                 fill="freeze"
             />
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1s"
-                begin="4s"
+                dur="0.5s"
+                begin="1.4s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -474,10 +494,10 @@
             attributeName="transform"
             attributeType="XML"
             type="translate"
-            from="0, 30"
+            from="0, 20"
             to="0, 0"
-            dur="0.5s"
-            begin="4.3s"
+            dur="0.6s"
+            begin="1.6s"
             repeatCount="1"
             fill="freeze"
         />
@@ -486,7 +506,7 @@
             from="0"
             to="1"
             dur="0.5s"
-            begin="4.5s"
+            begin="1.8s"
             repeatCount="1"
             fill="freeze"
         />
@@ -501,8 +521,8 @@
                 attributeName="opacity"
                 from="0"
                 to="1"
-                dur="1s"
-                begin="4s"
+                dur="0.5s"
+                begin="2s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -521,16 +541,16 @@
                 attributeType="XML"
                 type="rotate"
                 values="-200;50"
-                dur="1s"
-                begin="4"
+                dur="0.5s"
+                begin="1.9s"
                 repeatCount="1"
                 fill="freeze"
             />
             <animate
                 attributeName="stroke-dashoffset"
                 values="500;0"
-                dur="1s"
-                begin="4.5"
+                dur="0.5s"
+                begin="1.9s"
                 repeatCount="1"
                 fill="freeze"
             />
@@ -554,7 +574,7 @@
             from="0, 30"
             to="0, 0"
             dur="0.5s"
-            begin="4.5s"
+            begin="2.1s"
             repeatCount="1"
             fill="freeze"
         />
@@ -563,7 +583,7 @@
             from="0"
             to="1"
             dur="0.5s"
-            begin="4.8s"
+            begin="2.3s"
             repeatCount="1"
             fill="freeze"
         />
@@ -578,8 +598,8 @@
             attributeName="opacity"
             from="0"
             to="1"
-            dur="1s"
-            begin="4.2s"
+            dur="0.5s"
+            begin="2s"
             repeatCount="1"
             fill="freeze"
         />
@@ -597,17 +617,17 @@
             attributeName="transform"
             attributeType="XML"
             type="rotate"
-            values="-290;-90"
-            dur="1s"
-            begin="4.7"
+            values="-240;40"
+            dur="0.5s"
+            begin="2.1s"
             repeatCount="1"
             fill="freeze"
         />
         <animate
             attributeName="stroke-dashoffset"
             values="500;0"
-            dur="1s"
-            begin="4.9"
+            dur="0.5s"
+            begin="2.1s"
             repeatCount="1"
             fill="freeze"
         />
@@ -641,7 +661,7 @@
             from="0, 30"
             to="0, 0"
             dur="0.5s"
-            begin="4.7s"
+            begin="2.2s"
             repeatCount="1"
             fill="freeze"
         />
@@ -650,7 +670,7 @@
             from="0"
             to="1"
             dur="0.5s"
-            begin="4.9s"
+            begin="2.4s"
             repeatCount="1"
             fill="freeze"
         />
@@ -664,8 +684,8 @@
             attributeName="opacity"
             from="0"
             to="1"
-            dur="1s"
-            begin="4s"
+            dur="0.5s"
+            begin="1.7s"
             repeatCount="1"
             fill="freeze"
         />
@@ -683,16 +703,16 @@
             attributeType="XML"
             type="rotate"
             values="70;270"
-            dur="1s"
-            begin="3.8s"
+            dur="0.5s"
+            begin="1.6s"
             repeatCount="1"
             fill="freeze"
         />
         <animate
             attributeName="stroke-dashoffset"
             values="500;0"
-            dur="1s"
-            begin="3.8s"
+            dur="0.5s"
+            begin="1.6s"
             repeatCount="1"
             fill="freeze"
         />
@@ -714,7 +734,7 @@
             from="0, 30"
             to="0, 0"
             dur="0.5s"
-            begin="4.5s"
+            begin="1.8s"
             repeatCount="1"
             fill="freeze"
         />
@@ -723,7 +743,7 @@
             from="0"
             to="1"
             dur="0.5s"
-            begin="4.7s"
+            begin="2s"
             repeatCount="1"
             fill="freeze"
         />
@@ -739,8 +759,8 @@
             attributeName="opacity"
             from="0"
             to="1"
-            dur="1s"
-            begin="3.5s"
+            dur="0.5s"
+            begin="1.4s"
             repeatCount="1"
             fill="freeze"
         />
@@ -759,7 +779,7 @@
             type="rotate"
             values="50;250"
             dur="1s"
-            begin="3.4s"
+            begin="1.3s"
             repeatCount="1"
             fill="freeze"
         />
@@ -767,7 +787,7 @@
             attributeName="stroke-dashoffset"
             values="500;0"
             dur="1s"
-            begin="3.4s"
+            begin="1.3s"
             repeatCount="1"
             fill="freeze"
         />
@@ -847,7 +867,7 @@
             from="0, 30"
             to="0, 0"
             dur="0.5s"
-            begin="4s"
+            begin="1.5s"
             repeatCount="1"
             fill="freeze"
         />
@@ -856,7 +876,7 @@
             from="0"
             to="1"
             dur="0.5s"
-            begin="4.2s"
+            begin="1.7s"
             repeatCount="1"
             fill="freeze"
         />
@@ -894,7 +914,7 @@
             values="#a1a100;#bfbf00;#d7d700;#FFFF00"
             dur="0.9s"
             repeatCount="1"
-            begin="3s"
+            begin="1.5s"
             
             fill="freeze"
         />
@@ -942,7 +962,7 @@
             values="#FEFEFE;#373435;#FEFEFE;#373435"
             dur="0.1s"
             repeatCount="5"
-            begin='2.8s'
+            begin='1.3s'
             fill="freeze"
         />
     </path>
@@ -977,7 +997,7 @@
             type="rotate"
             from="10 220 250"
             to="0 0 0"
-            dur="1.5s"
+            dur="1s"
             begin='0s'
             repeatCount=""
             fill="freeze"
@@ -988,7 +1008,7 @@
             type="rotate"
             from="0 0 0"
             to="10 220 250"
-            dur="1.5s"
+            dur="1s"
             begin='4s'
             repeatCount=""
             fill="freeze"
