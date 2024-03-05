@@ -15,11 +15,14 @@ import {
   resetCheckForm,
   resetFormData
 } from '@/store/redusers/FormSliceReduser';
-
+import {
+  selectNavigation,
+ 
+} from '@/store/redusers/navigationReducer';
 const Form: React.FC = () => {
   const dispatch = useDispatch();
   const { formData, check, checkForm } = useSelector(selectForm);
-
+const {lastPageSlug} = useSelector(selectNavigation);
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
@@ -83,7 +86,7 @@ const Form: React.FC = () => {
 
         />
         <Select name="select"
-          value={formData.select}
+          value={lastPageSlug?lastPageSlug:formData.select}
           onChange={handleInputChange} />
 
 

@@ -13,7 +13,7 @@ const AboutUs = () => {
     
     useEffect(() => {
 
-        dispatch(setLastPageSlug("about"));
+        dispatch(setLastPageSlug("About"));
 
     }, []);
 
