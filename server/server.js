@@ -29,8 +29,8 @@ app.use(upload);
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'careers.sparkling.co@gmail.com',
-        pass: 'tuuj ioas vyjh vywx',
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASS,
     },
     secure: true,
     requireTLS: true,
@@ -57,8 +57,8 @@ app.post('/send-form', validateForm, (req, res) => {
     const { name, email, message, company, select } = req.body.formData;
  
     const mailOptions = {
-        from: 'careers.sparkling.co@gmail.com',
-        to: 'l.arthofer@sparkling.co.com',
+        from: process.env.EMAIL,
+        to: EMAIL_TO,
         subject: `${select} From: ${email}`,
         text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nText: ${message}`,
         attachments: [],
