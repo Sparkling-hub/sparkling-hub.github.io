@@ -7,7 +7,10 @@ import ConsultingItemList from "@/components/consulting-item-list"
 
 const header =
     <div>
-        <h2 className="text-5xl mt-12  text-center font-light">
+
+
+        <h2 className="text-5xl mt-12 text-center font-light  font-Ralevay_Light">
+
             <span className="text-teal-500 font-medium">Customised Solutions</span>{' '}
             for Every Project
         </h2>
@@ -44,8 +47,6 @@ const content =
 const element = {
     content: content,
     header: header,
-
-    background: 'bg-color-primary-light',
     index: 3,
     padding_bottom: 'pb-40',
     margin_bottom: 'mb-64'

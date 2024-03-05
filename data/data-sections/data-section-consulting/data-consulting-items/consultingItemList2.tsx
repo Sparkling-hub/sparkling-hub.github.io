@@ -8,7 +8,7 @@ const header = <h3>IT Strategy Development</h3>
 const element = {
     header: header,
     content: content,
-    img: '/img/consulting/section3/IT Strategy Development.png',
+    img: '/img/benefits/Tailored_teams.png',
     index: 2,
 }
 export default element

@@ -1,5 +1,4 @@
 
-
 import React, { useEffect } from 'react';
 import IAbout from '@/interface/IAbout';
 
@@ -20,18 +19,18 @@ const Benefit: React.FC<IAbout> = ({ content, header, number,margin }) => {
 	}, []);
 	return (
 
-		<div className={`justify-between items-center ${margin} flex relative lg:absolute w-full`}data-aos-delay={500 * number}
+		<div className={`justify-between items-center ${margin} flex relative lg:absolute w-full lg:w-fit`}data-aos-delay={500 * number}
 		data-aos-once={true}
 		data-aos-mirror={true}
 		data-aos-offset={-number*100}
 	
 		data-aos={`fade`}
-		id={uniqueId}>
-			<div className='lg:hidden bg-teal-500 border-teal-600 border-[1px] font-medium text-2xl p-0.2 absolute rounded-full z-10 flex'>
+		id={uniqueId}> 
+			<div className='lg:hidden bg-teal-500 w border-teal-600 border-[1px] font-medium text-2xl p-0.2 absolute rounded-full z-10 flex'>
 				<div className='rounded-full justify-center border-black border-[1px] flex items-center bg-teal-700 w-20 bg-teal-800 h-20 text-center font-bold text-whit  text-5xl'>{number}</div>
 
 			</div>
-			<div className='lg:w-[50vw] lg:max-w-[50%] w-full flex-col flex justify-center lg:h-52 p-8 lg:pl-12 lg:pr-4 lg:py-2 bg-green-color rounded-4xl pl-14 relative  mx-10 my-5'>
+			<div className='lg:max-w-[70%] w-full flex-col flex justify-center lg:h-52 p-8 lg:pl-12 lg:pr-4 lg:py-2 bg-green-color rounded-4xl pl-14 relative  mx-10 my-5'>
 
 
 				

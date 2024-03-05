@@ -1,7 +1,7 @@
 
 
 const header =
-  <h1 className="text-5xl font-bold text-teal-800 leading-[50px] mb-10">
+  <h1 className="text-5xl font-bold text-teal-800 leading-[50px] font-Ralevay_Light mb-10">
     IT Consulting
     <br />
    <span className="font-light text-teal-800">Empowering</span>
@@ -14,7 +14,7 @@ const content = <p className="text-xl">In the face of challenges or in pursuit o
   
 
 
-const image = <img src='/img/section/IT_Consulting_icon.png' className="w-full" alt="consulting_icon" />;
+const image = <img src='/img/section/it_consulting_icon.png' className="w-full" alt="consulting_icon" />;
 
 const element = {
   content: content,

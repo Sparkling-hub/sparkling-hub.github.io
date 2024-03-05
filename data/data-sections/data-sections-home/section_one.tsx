@@ -1,8 +1,8 @@
 import Button from "../../../components/button";
 
 const header = (
-  <h1 className="text-5xl my-4 leading-12 lg:leading-[100px]">
-    We<span className="color-primary-light mx-1">build</span>software to
+  <h1 className="text-5xl my-4 leading-12 lg:leading-[100px] font-Roboto">
+    We<span className="color-primary-light mx-1"> build </span>software to
     <br className="hidden lg:block"/>
     <strong className="text-teal-800  font-bold uppercase "> reach your goals</strong>
   </h1>
@@ -19,7 +19,7 @@ const content = (
   </p>
 );
 
-const image = <img src="/img/section/sectionOne.png" className="lg:w-auto w-full" alt='sectionOne' />;
+const image = <img src="/img/section/sectionHome.png" className="lg:w-auto w-full" alt='sectionOne' />;
 
 const button = <Button href="/contact" text="Get in touch" />;
 const element = {

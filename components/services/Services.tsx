@@ -2,7 +2,7 @@
 
 import React from 'react';
 import dataServices from '../../data/data-services'
-import IService from '../../interface/service'
+
 import Service from '../service'
 
 

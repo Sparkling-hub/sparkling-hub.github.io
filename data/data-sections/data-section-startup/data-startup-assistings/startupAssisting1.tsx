@@ -1,6 +1,6 @@
 
 
-const header = <h3>Plan and assemble</h3>
+const header = <h3>Plan and Assemble</h3>
 
 const content =
     <p>
@@ -9,7 +9,7 @@ const content =
         and fostering sustainable growth.
     </p>
 
-const image = '/img/startup/assisting-plane/small_plane.png'
+const image = '/img/startup/assisting-plane/rocket1.svg'
 
 const element = {
     header: header,

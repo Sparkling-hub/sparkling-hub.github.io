@@ -1,7 +1,7 @@
 
 
 const header = (
-  <h1 className="text-5xl font-light mb-10 text-teal-800">
+  <h1 className="text-5xl font-light mb-10 text-teal-800 font-Ralevay_Light">
    Team build <strong className="font-bold">Augmentation</strong>
 
 
@@ -11,7 +11,7 @@ const header = (
 
 
 const content = (<div>
-  <strong className=" text-2xl text-teal-800"> Level up your projects with enhanced teams</strong>
+  <strong className=" text-2xl text-teal-800 "> Level up your projects with enhanced teams</strong>
   <p className="text-xl my-3">    
       Enhance your development efforts by integrating seasoned developers.
       At Sparkling, our skilled engineers smoothly integrate into your project, empowering you to excel at what you do best.
@@ -19,7 +19,7 @@ const content = (<div>
     </p></div>
 );
 
-const image = <img src="/img/team/logo.png" className="" alt='sectionOne' />;
+const image = <img src="/img/team/team_augmentation_icon.png" className="" alt='sectionOne' />;
 
 const element = {
   content: content,
