@@ -22,7 +22,7 @@ const Select: React.FC<any> = ({ name, onChange,value }) => {
 			{Object.entries(rolesData).map(([key, label]) => {
 
 				return (
-					<option key={key} value={key}>
+					<option key={key} value={label}>
 						{label}
 					</option>
 				)

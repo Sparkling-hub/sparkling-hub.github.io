@@ -5,6 +5,8 @@ import Submit from "../ui/input-sumbit-component";
 import Select from "../ui/select-component";
 import { sendContactForm } from "../../lib/api";
 import Link from "next/link";
+
+import rolesData from '@/data/data-contact/data-contact';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   selectForm,
@@ -39,6 +41,7 @@ const {lastPageSlug} = useSelector(selectNavigation);
 
   };
   useEffect(() => {
+    console.log(rolesData[lastPageSlug])
 		dispatch(resetFormData());
         dispatch(resetCheckForm())
 		  dispatch(setFormData({
@@ -47,7 +50,7 @@ const {lastPageSlug} = useSelector(selectNavigation);
 		  }));
       dispatch(setFormData({
         ...formData,
-        ['select']: lastPageSlug ? lastPageSlug:formData.select,
+        select: rolesData[lastPageSlug]
         }));
 
 	  }, []);
