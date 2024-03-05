@@ -14,7 +14,7 @@ const content = <p className="text-xl">In the face of challenges or in pursuit o
   
 
 
-const image = <img src='/img/section/it_consulting_icon.png' className="w-full" alt="consulting_icon" />;
+const image = <img src='/img/section/IT_Consulting_icon.png' className="w-full" alt="consulting_icon" />;
 
 const element = {
   content: content,
