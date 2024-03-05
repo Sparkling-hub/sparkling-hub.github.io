@@ -28,12 +28,19 @@ const Faq = () => {
 
 	if (formData.file.length > 0) { setCheck(null) }
 	useEffect(() => {
-		dispatch(resetFormData());
-        dispatch(resetCheckForm())
+		
 		if (job?.head && job?.location) {
 			dispatch(setFormData({
 				...formData,
 				['vacancy']: job?.head + `, ` + job?.location,
+				name: '',
+            select: '',
+            email: '',
+            company: '',
+            message: '',
+            phone: '',
+            linkedin: '',
+            file: '',
 			}));
 		}
 		else dispatch(setFormData({

@@ -45,6 +45,10 @@ const {lastPageSlug} = useSelector(selectNavigation);
 			...formData,
 			['vacancy']: 'Contact Us',
 		  }));
+      dispatch(setFormData({
+        ...formData,
+        ['select']: lastPageSlug ? lastPageSlug:formData.select,
+        }));
 
 	  }, []);
     
@@ -86,7 +90,7 @@ const {lastPageSlug} = useSelector(selectNavigation);
 
         />
         <Select name="select"
-          value={lastPageSlug?lastPageSlug:formData.select}
+          value={formData.select}
           onChange={handleInputChange} />
 
 
