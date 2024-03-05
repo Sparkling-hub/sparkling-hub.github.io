@@ -12,8 +12,7 @@ import {
 	setFormData,
 	setCheck,
 	setCheckFormByKey,
-	resetFormData,
-	resetCheckForm
+
 } from '@/store/redusers/FormSliceReduser';
 import { useRouter } from 'next/router';
 import { sendContactForm } from "@/lib/api";
