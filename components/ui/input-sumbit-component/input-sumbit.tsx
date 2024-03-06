@@ -11,7 +11,7 @@ import {
   setCheckFormByKey,
   resetCheckForm
 } from '@/store/redusers/FormSliceReduser';
-import {key}  from "../../../config/nodemailer";
+
 interface InputSubmitProps {
   name: string;
   type: string;
@@ -26,7 +26,6 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
   const { formData } = useSelector(selectForm);
   const dispatch = useDispatch();
 
-  console.log(key);
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
   
@@ -93,7 +92,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
     <>
              <ReCAPTCHA
         className="h-captcha"
-        sitekey={""}
+        sitekey={'123'}
         onChange={(value: string | null) => setRecaptchaValue(value)}
       />
 

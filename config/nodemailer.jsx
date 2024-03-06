@@ -3,6 +3,8 @@ import nodemailer from "nodemailer";
 const email = process.env.EMAIL;
 const pass = process.env.EMAIL_PASS;
 const email_to = process.env.EMAIL_TO;
+console.log (process.env.SECRET_KEY)
+export  const secret_key = process.env.SECRET_KEY;
 
 export const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -17,4 +19,3 @@ export const mailOptions = {
   from: email,
   to: email_to,
 };
-export const key = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
