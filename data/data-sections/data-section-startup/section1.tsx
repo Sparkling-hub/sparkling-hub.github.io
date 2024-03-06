@@ -1,6 +1,6 @@
 
 const header =
-  <h1 className="text-5xl mb-10 text-teal-800">
+  <h1 className="text-5xl mb-10 text-primary-darkTeal">
     <span className="font-bold">Start-up</span> <br />
   </h1>
 

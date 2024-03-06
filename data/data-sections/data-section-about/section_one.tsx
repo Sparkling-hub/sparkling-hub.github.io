@@ -1,6 +1,7 @@
 
 const header =
-  <h1 className="text-5xl my-4 color-primary-light mx-1 ">Sparkling’s<strong className="s2 text-teal-800"> Vision</strong></h1>
+  <h1 className="text-5xl my-4 mx-1 text-primary-darkTeal">Sparkling’s Vision</h1>
+  // <h1 className="text-5xl my-4 color-primary-light mx-1 text-primary-darkTeal">Sparkling’s<strong className="s2 text-primary-darkTeal"> Vision</strong></h1>
 
 
 const content =

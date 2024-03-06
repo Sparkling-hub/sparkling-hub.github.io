@@ -1,6 +1,6 @@
 
 const header =
-  <h1 className="s2 text-teal-800 m-auto mb-2 text-5xl">
+  <h1 className="s2 text-primary-darkTeal m-auto mb-10 text-5xl">
     <strong >
       Careers
     </strong>

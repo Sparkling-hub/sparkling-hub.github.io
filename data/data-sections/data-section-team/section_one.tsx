@@ -1,8 +1,8 @@
 
 
 const header = (
-  <h1 className="text-5xl font-light mb-10 text-teal-800 font-Ralevay_Light">
-   Team build <strong className="font-bold">Augmentation</strong>
+  <h1 className="text-5xl font-light mb-2 text-primary-darkTeal font-Ralevay_Light">
+   Team <strong className="font-bold">Augmentation</strong>
 
 
   
@@ -10,9 +10,9 @@ const header = (
 );
 
 
-const content = (<div>
-  <strong className=" text-2xl text-teal-800 "> Level up your projects with enhanced teams</strong>
-  <p className="text-xl my-3">    
+const content = (<div className="text-primary-darkTeal">
+  <strong className="text-2xl"> Level up your projects with enhanced teams</strong>
+  <p className="text-xl my-2">    
       Enhance your development efforts by integrating seasoned developers.
       At Sparkling, our skilled engineers smoothly integrate into your project, empowering you to excel at what you do best.
       Experience a significant boost in production and enjoy peace of mind

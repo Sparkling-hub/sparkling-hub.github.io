@@ -45,12 +45,11 @@ const coreResponsibilities = [
     "English lessons"
   ];
   
-
-const locationPath = "/img/jobs/ukraine.png"
+  const locationPath = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg"
 const location ='Tunisia, Tunis'
 const jobs = {
     locationPath:locationPath,
-    location: "Ukraine",
+    location: "Tunis",
     namePosition: "Senior PHP Developer",
     locationHTML: location,
     experienceHTML: experience,
