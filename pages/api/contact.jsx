@@ -82,6 +82,7 @@ export default async function handler(req, res) {
     await new Promise((resolve, reject) => {
       upload.single("file")(req, res, (err) => {
         if (err) {
+          console.log(err.message);
           return { success: false };
         }
         resolve(null);
@@ -109,10 +110,11 @@ export default async function handler(req, res) {
           );
      
         } catch (err) {
+          console.log(err.message);
           return { success: false };
         }
       }).catch((err) => {
-
+        console.log(err.message);
       });
     }
     let attachments = [];
@@ -133,6 +135,7 @@ export default async function handler(req, res) {
     res.status(200).send("Email sent successfully");
     return { success: true };
   } catch (error) {
+    console.log(error.message);
     res.status(500).send(error.message);
     return { success: false };
   
@@ -142,10 +145,11 @@ export default async function handler(req, res) {
     const filePath = path.resolve("uploads",'cv');
     fs.unlink(filePath, (err) => {
       if (err) {
+        console.log(err.message);
         return { success: false };
       } else {
         return { success: true };
       }
-  });} catch (err) {   }
+  });} catch (err) {   console.log(err.message);  }
 }
 }
