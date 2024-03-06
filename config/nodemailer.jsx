@@ -17,3 +17,4 @@ export const mailOptions = {
   from: email,
   to: email_to,
 };
+export const key = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
