@@ -12,7 +12,7 @@ const header = (
 
 const content = (<div className="text-primary-darkTeal">
   <strong className="text-2xl"> Level up your projects with enhanced teams</strong>
-  <p className="text-xl my-2">    
+  <p className="text-xl my-2  text-primary-darkTeal">    
       Enhance your development efforts by integrating seasoned developers.
       At Sparkling, our skilled engineers smoothly integrate into your project, empowering you to excel at what you do best.
       Experience a significant boost in production and enjoy peace of mind

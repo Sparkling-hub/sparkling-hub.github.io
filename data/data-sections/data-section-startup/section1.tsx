@@ -5,7 +5,7 @@ const header =
   </h1>
 
 const content =
-  <div className="text-xl">
+  <div className="text-xl  text-primary-darkTeal">
     <p>Over the last decade, we have collaborated with more than 20 start-ups, spanning from pre-seed stages to Series A, helping entrepreneurs in transforming their ideas into reality and supporting others in scaling and iterating.</p>
     </div>
 

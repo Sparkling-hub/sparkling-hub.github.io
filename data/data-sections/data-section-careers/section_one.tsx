@@ -8,7 +8,7 @@ const header =
 
 
 const content =
-  <p className="text-xl">
+  <p className="text-xl text-primary-darkTeal">
     Sparkling Co. is Swiss headquartered company with presence all around Europe always in search of great professionals!
     Want to join the team? Here are the current open positions.
   </p>
