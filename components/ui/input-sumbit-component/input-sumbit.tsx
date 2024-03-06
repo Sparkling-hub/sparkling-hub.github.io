@@ -1,5 +1,5 @@
-import React, { SyntheticEvent } from 'react';
-
+import React, { SyntheticEvent, useEffect, useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,13 +22,13 @@ interface InputSubmitProps {
 }
 
 const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick,file, requiredKeys}) => {
-
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const { formData } = useSelector(selectForm);
   const dispatch = useDispatch();
-
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
- 
+  
+
     dispatch(setCheck(selectIsValidEmail(formData.email)));
     if (disabled && selectIsValidEmail(formData.email)) {
       disabled= false;
@@ -89,15 +89,22 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
 
   return (
     <>
+             <ReCAPTCHA
+        className="h-captcha"
+        sitekey="6LfToIspAAAAAA9TXJ_1x9gweZVsUmoElTZeNcWo"
+        onChange={(value: string | null) => setRecaptchaValue(value)}
+      />
+
       <input
         name={name}
         type={type}
-        className={`no-underline text-white py-3 px-8 rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
+        className={`no-underline text-white mt-3 py-3 px-8 rounded-3xl p-2 w-40 m-auto ${buttonClass}`}
         onClick={(e) => {
           toast.dismiss(); 
           handleSubmit(e);
         }}
       />
+     
       <div className='absolute top-[150%] text-center text-xl w-full font-bold'>
         <ToastContainer
         className="mt-[7%]"
@@ -116,6 +123,7 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
 
         />
       </div>
+ 
     </>
   );
 };
