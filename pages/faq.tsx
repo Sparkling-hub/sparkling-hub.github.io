@@ -14,7 +14,7 @@ const Faq = () => {
     
     useEffect(() => {
 
-        dispatch(setLastPageSlug("about"));
+        dispatch(setLastPageSlug("About"));
 
     }, []);
 

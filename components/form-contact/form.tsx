@@ -5,6 +5,8 @@ import Submit from "../ui/input-sumbit-component";
 import Select from "../ui/select-component";
 import { sendContactForm } from "../../lib/api";
 import Link from "next/link";
+
+import rolesData from '@/data/data-contact/data-contact';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   selectForm,
@@ -15,11 +17,14 @@ import {
   resetCheckForm,
   resetFormData
 } from '@/store/redusers/FormSliceReduser';
-
+import {
+  selectNavigation,
+ 
+} from '@/store/redusers/navigationReducer';
 const Form: React.FC = () => {
   const dispatch = useDispatch();
   const { formData, check, checkForm } = useSelector(selectForm);
-
+const {lastPageSlug} = useSelector(selectNavigation);
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
@@ -36,12 +41,17 @@ const Form: React.FC = () => {
 
   };
   useEffect(() => {
+    console.log(rolesData[lastPageSlug])
 		dispatch(resetFormData());
         dispatch(resetCheckForm())
 		  dispatch(setFormData({
 			...formData,
 			['vacancy']: 'Contact Us',
 		  }));
+      dispatch(setFormData({
+        ...formData,
+        select: rolesData[lastPageSlug]
+        }));
 
 	  }, []);
     

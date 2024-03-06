@@ -12,8 +12,7 @@ import {
 	setFormData,
 	setCheck,
 	setCheckFormByKey,
-	resetFormData,
-	resetCheckForm
+
 } from '@/store/redusers/FormSliceReduser';
 import { useRouter } from 'next/router';
 import { sendContactForm } from "@/lib/api";
@@ -28,12 +27,19 @@ const Faq = () => {
 
 	if (formData.file.length > 0) { setCheck(null) }
 	useEffect(() => {
-		dispatch(resetFormData());
-        dispatch(resetCheckForm())
+		
 		if (job?.head && job?.location) {
 			dispatch(setFormData({
 				...formData,
 				['vacancy']: job?.head + `, ` + job?.location,
+				name: '',
+            select: '',
+            email: '',
+            company: '',
+            message: '',
+            phone: '',
+            linkedin: '',
+            file: '',
 			}));
 		}
 		else dispatch(setFormData({
