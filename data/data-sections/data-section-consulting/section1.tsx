@@ -9,10 +9,10 @@ const header =
   </h1>
 
 const content = <div className=" text-primary-darkTeal">    
-  <h2 className="text-2xl leading-[40px]">  <strong  className="">Empowering</strong>
-    <br />
-  <strong className="font-bold ">Your Digital Growth</strong></h2>
-<p className="text-xl mt-4">In the face of challenges or in pursuit of business evolution, a thoughtful IT consultation is essential. Tailored to your unique needs and objectives our guidance is designed to steer your business on the right track!</p>       
+  <h2 className="text-2xl leading-[40px]"> 
+
+  <strong className="font-bold ">Empowering Your Digital Growth</strong></h2>
+<p className="text-xl mt-2">In the face of challenges or in pursuit of business evolution, a thoughtful IT consultation is essential. Tailored to your unique needs and objectives our guidance is designed to steer your business on the right track!</p>       
 </div>
   
 
