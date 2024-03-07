@@ -1,14 +1,15 @@
 const header = (
-  <h1 className="text-center font-bold text-5xl text-teal-800 mb-5">
+  <h1 className="text-5xl mb-10 text-primary-darkTeal font-bold">
     FAQs
   </h1>
 );
 
-const content = (
-  <p className="text-5xl text-teal-500 text-center">
-    Got any question?
+const content = (<p className="text-primary-darkTeal leading-[40px] text-2xl ">
+<strong className=""> 
+    Got any question? </strong>
     <br />
-    <strong className="font-black text-teal-800">We have answers!
+
+    <strong className="font-black text-primary-darkTeal">We have answers!
     </strong>
   </p>
 );
