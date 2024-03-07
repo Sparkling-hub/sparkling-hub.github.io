@@ -1,6 +1,6 @@
 
 const header =
-  <h1 className="text-5xl my-4 mx-1 text-primary-darkTeal">Sparkling’s Vision</h1>
+  <h1 className="text-5xl my-4 mx-1 text-primary-darkTeal font-bold mb-10">Sparkling’s Vision</h1>
  
 const content =
   <p className="text-xl text-primary-darkTeal">
@@ -9,7 +9,7 @@ const content =
     Engraining this concept into our culture makes us who we are, dedicated to excellence. Perhaps is the Swiss way
   </p>
 
-const image = <img src='/img/about/logo.png' className="mb-20" alt="about" />;
+const image = <img src='/img/about/logo.png' className="" alt="about" />;
 
 const element = {
   content: content,

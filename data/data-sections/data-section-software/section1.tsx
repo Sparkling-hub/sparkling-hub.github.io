@@ -2,7 +2,6 @@
 const header =
   <h1 className="leading-[60px] mb-2 text-5xl">
  <span className="text-primary-darkTeal font-bold">Software Development<br/></span>
-    <span className="text-primary-lightTeal font-bold">Your vision</span>, Our code, Incredible potential!
   
   </h1>
 

@@ -45,8 +45,8 @@ const coreResponsibilities = [
     "English lessons"
   ];
   
-  const locationPath = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/1x1/tn.svg"
-const location ='Tunisia, Tunis'
+  const locationPath = '/img/jobs/ukraine.png'
+  const location= "Ukraine, Zaporizhzhia"
 const jobs = {
     locationPath:locationPath,
     location: "Tunis",

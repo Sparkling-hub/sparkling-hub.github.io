@@ -1,5 +1,5 @@
 const header = (
-  <h1 className="text-center font-bold text-5xl text-primary-darkTeal mb-5">
+  <h1 className="text-5xl mb-10 text-primary-darkTeal font-bold">
     FAQs
   </h1>
 );

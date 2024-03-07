@@ -44,7 +44,7 @@ const Select: React.FC<any> = ({ name, onChange, value }) => {
                     </option>
                 ))}
             </select>
-            <span className='absolute bottom-[35px] right-2 scale-110'>
+            <span className='absolute bottom-[35px] right-2 scale-110 pointer-events-none'>
                 <ButtonCircle isDropdownOpen={isDropdownOpen} />
             </span>
         </div>
