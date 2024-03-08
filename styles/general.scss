@@ -28,12 +28,17 @@ $weight-text: 400px;
             }
         }
 		.adaptive {
-			transform: translate(318px, 440px);
+			--left-offset: 318px !important; /* Устанавливаем смещение left */
+			--top-offset: -440px !important; /* Устанавливаем смещение top */
 		}
+		
 }
 
 
-
+.adaptive {
+	--left-offset: 0px; /* Устанавливаем смещение left */
+	--top-offset: 0px; /* Устанавливаем смещение top */
+}
 
 @font-face {
 	font-family: 'Roboto_Light';
