@@ -77,7 +77,7 @@ const Card: React.FC = () => {
       `}
       style={{
         transform: `translate(${Math.round(activeOfficePointCoords[1])  -85}px, ${Math.round(activeOfficePointCoords[0]) - 1040}px)`,
-        WebkitTransform: `translate(${Math.round(activeOfficePointCoords[1])  +586}px, ${Math.round(activeOfficePointCoords[0]) +1040}px)`
+        WebkitTransform: `translate(${Math.round(activeOfficePointCoords[1])  +586}px, ${Math.round(activeOfficePointCoords[0]) -1040}px)`
     }}
     
 
