@@ -18,6 +18,7 @@ export const updateElementPosition = (activePoint: string | null): any => {
       console.log(relativeHeight)
     
       console.log(relativeWidth)
+      svgPoint.classList.add('hidden')
     return [relativeHeight, relativeWidth];
   }
   

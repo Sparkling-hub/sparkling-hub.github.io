@@ -108,7 +108,7 @@ const InteracticeMaps: React.FC = () => {
 		for (const element of points) {
 			element.classList.remove('hidden');
 		}
-		e.currentTarget.classList.add('hidden')
+
 		dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
 		dispatch(setActiveOfficePoint(officeId));
 		
@@ -119,13 +119,10 @@ const InteracticeMaps: React.FC = () => {
 		const officeId = e.currentTarget.id;
 	  
 		const newTimer = setTimeout(() => {
-		  for (const element of points) {
-			if (element.id !== officeId) {
-			  element.classList.remove('hidden');
-			} else {
-			  object.classList.add('hidden');
+			for (const element of points) {
+				element.classList.remove('hidden');
 			}
-		  }
+	
 	  
 		  dispatch(setActiveOfficePointCoords(updateElementPosition(officeId)));
 		  dispatch(setActiveOfficePoint(officeId));

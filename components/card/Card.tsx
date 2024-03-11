@@ -51,7 +51,7 @@ const Card: React.FC = () => {
 
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [activeOfficePointCoords]);
+  }, []);
 
   return (
     <div ref={cardRef}
