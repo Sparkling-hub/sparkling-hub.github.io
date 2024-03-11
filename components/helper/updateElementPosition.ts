@@ -4,13 +4,22 @@ export const updateElementPosition = (activePoint: string | null): any => {
   const parentElement = svgPoint?.parentElement;
 
   if (svgPoint && parentElement) {
+    let relativeHeight, relativeWidth;
 
-    const svgPointRect = svgPoint.getBoundingClientRect();
-    const parentRect = parentElement.getBoundingClientRect();
-    console.log(svgPoint)
-    console.log(activePoint)
-    const relativeHeight = svgPointRect.top - parentRect.top + parentElement.scrollTop;
-    const relativeWidth = svgPointRect.left - parentRect.left + parentElement.scrollLeft;
+    // Проверяем, является ли текущий браузер Safari
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+      // Используем альтернативный метод для Safari
+      relativeHeight = svgPoint.offsetTop;
+      relativeWidth = svgPoint.offsetLeft;
+    } else {
+      // Используем стандартный метод для других браузеров
+      const svgPointRect = svgPoint.getBoundingClientRect();
+      const parentRect = parentElement.getBoundingClientRect();
+      relativeHeight = svgPointRect.top - parentRect.top + parentElement.scrollTop;
+      relativeWidth = svgPointRect.left - parentRect.left + parentElement.scrollLeft;
+    }
 
     return [relativeHeight, relativeWidth];
   }
