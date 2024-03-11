@@ -18,17 +18,18 @@ const MapSelectionSettings: React.FC = () => {
 		for (const element of hoveredElements) {
 			element.classList.remove('hidden');
 			if(element.id==activePoint){element.classList.add('hidden')
-			dispatch(setActiveOfficePointCoords(updateElementPosition(activePoint)));
-			dispatch(setActiveOfficePoint(activePoint));}
+			}
 		}
 	
     };
 	
-	
+	const handleResize = () => {
+		if (activeOfficePoint) {
+		  dispatch(setActiveOfficePointCoords(updateElementPosition(activeOfficePoint)));
+		}
+	  };
 	useEffect(() => {
-		const handleResize = () => {
-		  
-		};
+		
 	
 		window.addEventListener('resize', handleResize);
 	
