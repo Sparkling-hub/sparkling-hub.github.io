@@ -47,7 +47,7 @@ const InteracticeMaps: React.FC = () => {
 			removePointEventListeners(points);
 		
 		};
-	}, [currentMap, hovered, lastHovered, activeOfficePoint, dispatch]);
+	}, [currentMap, dispatch]);
 
 	const handleHover = () => {
 		let points = document.querySelectorAll('.office_point');
@@ -83,7 +83,7 @@ const InteracticeMaps: React.FC = () => {
 
 	const setupPointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
-			element.addEventListener('click', handlePointsClick);
+	
 			element.addEventListener('mouseover', handleHoverOver);
 			element.addEventListener('mouseout', handleHoverOut);
 		});
@@ -91,7 +91,7 @@ const InteracticeMaps: React.FC = () => {
 
 	const removePointEventListeners = (points: NodeListOf<Element>) => {
 		points.forEach((element) => {
-			element.removeEventListener('click', handlePointsClick);
+		
 			element.addEventListener('mouseover', handleHoverOver);
 			element.addEventListener('mouseout', handleHoverOut);
 		});
