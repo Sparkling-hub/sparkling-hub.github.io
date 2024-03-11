@@ -10,10 +10,12 @@ export const updateElementPosition = (activePoint: string | null): any => {
 
    
     if (isSafari) {
-      // Используем альтернативный метод для Safari
-      relativeHeight = svgPoint.offsetTop - parentElement.offsetTop;
-      relativeWidth = svgPoint.offsetLeft - parentElement.offsetLeft;
-    }else {
+
+        const svgPointRect = svgPoint.getBoundingClientRect();
+        const parentRect = parentElement.getBoundingClientRect();
+        relativeHeight = svgPointRect.top - parentRect.top;
+        relativeWidth = svgPointRect.left - parentRect.left;
+          }else {
       // Используем стандартный метод для других браузеров
       const svgPointRect = svgPoint.getBoundingClientRect();
       const parentRect = parentElement.getBoundingClientRect();
