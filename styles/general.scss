@@ -25,6 +25,7 @@ $weight-text: 400px;
         .safari-specific {
             &::before {
                 top: 24px !important;
+				left: 45% !important;
             }
         }
 		.adaptive {
