@@ -27,9 +27,7 @@ const MapSelectionSettings: React.FC = () => {
 	
 	useEffect(() => {
 		const handleResize = () => {
-		  if (activeOfficePoint) {
-			dispatch(setActiveOfficePointCoords(updateElementPosition(activeOfficePoint)));
-		  }
+		  
 		};
 	
 		window.addEventListener('resize', handleResize);
