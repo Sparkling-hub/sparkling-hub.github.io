@@ -2,8 +2,9 @@ export const updateElementPosition = (activePoint: string | null): any => {
   if (!activePoint) return null;
   const svgPoint = document.getElementById(activePoint);
   const parentElement = svgPoint?.parentElement;
-console.log(svgPoint)
+  console.log(parentElement)
   if (svgPoint && parentElement) {
+    
     const svgPointRect = svgPoint.getBoundingClientRect();
     const parentRect = parentElement.getBoundingClientRect();
 
