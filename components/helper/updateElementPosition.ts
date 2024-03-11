@@ -7,7 +7,7 @@ export const updateElementPosition = (activePoint: string | null): any => {
 
 
       const svgPointRect = svgPoint.getBoundingClientRect();
-      console.log(svgPointRect);
+      console.log(activePoint);
       const parentRect = parentElement.getBoundingClientRect();
       relativeHeight = svgPointRect.top - parentRect.top + parentElement.scrollTop;
       relativeWidth = svgPointRect.left - parentRect.left + parentElement.scrollLeft;
