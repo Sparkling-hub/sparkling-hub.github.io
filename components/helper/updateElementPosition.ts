@@ -3,7 +3,7 @@ export const updateElementPosition = (activePoint: string | null): any => {
   const svgPoint = document.getElementById(activePoint);
   const parentElement = svgPoint?.parentElement;
   console.log(svgPoint);
-  debugger
+
   if (svgPoint && parentElement) {
     let relativeHeight, relativeWidth;
 
