@@ -32,7 +32,7 @@ const Card: React.FC = () => {
 
 
   useEffect(() => {
-console.log(activeOfficePointCoords)
+
     if (officeCard == null) {
 
       setIsVisible(false);
