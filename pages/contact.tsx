@@ -10,6 +10,11 @@ const Contact = () => {
     return (
 
         <MainLayout>
+             <meta property="og:title" content="Sparkling.Co. Contact" />
+            <meta property="og:description" content="Drop us a message to learn more about our innovative solutions." />
+
+            <meta property="og:url" content="/contact" />
+           
             <div >
                 <Sections {...Section.sections.SectionOne} />
                 <Sections {...Section.sections.SectionTwo} />

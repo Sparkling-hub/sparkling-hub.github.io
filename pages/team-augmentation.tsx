@@ -18,7 +18,11 @@ const TeamAugmentation = () => {
     return (
        
         <MainLayout>
+<meta property="og:title" content="Sparkling.Co. Team Augmentation" />
+			<meta property="og:description" content="Level up your projects with enhanced teams Enhance your development efforts by integrating seasoned developers. At Sparkling, our skilled engineers smoothly integrate into your project, empowering you to excel at what you do best. Experience a significant boost in production and enjoy peace of mind" />
 
+			<meta property="og:url" content="/team-augmentation" />
+   
         <div className=''>
 
         <Sections {...Section.sections.SectionOne}/> 

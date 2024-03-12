@@ -20,7 +20,10 @@ const SoftwareDevelopment = () => {
     return (
 
         <MainLayout>
+		<meta property="og:title" content="Sparkling.Co. Software Development" />
+			<meta property="og:description" content="Accelerate your software development endeavours with a team you can rely on! Our expertly managed engineers aren’t just rapid and reliable, they care. Taking great pride in what they do. Sprint after sprint" />
 
+			<meta property="og:url" content="/software-development" />
             {Section.map((section) => (
                 <Sections key={section.index} {...section} />
             ))

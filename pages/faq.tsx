@@ -21,6 +21,9 @@ const Faq = () => {
 	return (
 
 		<MainLayout>
+			<meta property="og:title" content="Sparkling.Co. FAQ" />
+			<meta property="og:description" content="Got any question? We have answers!" />
+			<meta property="og:url" content="/faq" />
 
 			<div >
 				<Sections {...Section.sections.SectionOne} />

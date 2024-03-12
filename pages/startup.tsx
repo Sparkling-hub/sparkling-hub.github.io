@@ -20,7 +20,10 @@ const Startup_page = () => {
     return (
 
         <MainLayout>
+	<meta property="og:title" content="Sparkling.Co. Start-up" />
+			<meta property="og:description" content="Over the last decade, we have collaborated with more than 20 start-ups, spanning from pre-seed stages to Series A, helping entrepreneurs in transforming their ideas into reality and supporting others in scaling and iterating." />
 
+			<meta property="og:url" content="/startup" />
             {Section.map((section) => (
                 <Sections key={section.index} {...section} />
             ))

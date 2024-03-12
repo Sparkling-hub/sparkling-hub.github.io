@@ -21,7 +21,10 @@ const AboutUs = () => {
     return (
        
         <MainLayout>
+      <meta property="og:title" content="Sparkling.Co. About Us" />
+            <meta property="og:description" content="Sparkling Co. is an industry expert in digital services with over a decade of field experience in Software Development. Our expertise extends to providing dedicated teams of developers and project managers for both in-house project as well as in Team Augmentation, where our experts seamlessly integrate into client-led endeavours. Headquartered in Switzerland our branches reach out across Europe and North Africa, from London to Tunis." />
 
+            <meta property="og:url" content="/careers" />
         <div className=''>
 
         <Sections {...Section.sections.SectionOne}/> 
