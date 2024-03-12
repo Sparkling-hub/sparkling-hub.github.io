@@ -1,23 +1,16 @@
-export const updateElementPosition = (activePoint: string | null): any => {
+export const updateElementPosition = (activePoint: string | null) : any => {
   if (!activePoint) return null;
   const svgPoint = document.getElementById(activePoint);
   const parentElement = svgPoint?.parentElement;
 
-
   if (svgPoint && parentElement) {
-    let relativeHeight, relativeWidth;
+    const rect = svgPoint.getBoundingClientRect();
+    const parentRect = parentElement.getBoundingClientRect();
 
+    const relativeHeight = rect.top - parentRect.top - parentElement.scrollTop;
+    const relativeWidth = rect.left - parentRect.left - parentElement.scrollLeft;
 
-      const svgPointRect = svgPoint.getBoundingClientRect();
-
-      const parentRect = parentElement.getBoundingClientRect();
- 
-      relativeHeight = svgPointRect.top - parentRect.top + parentElement.scrollTop;
-      relativeWidth = svgPointRect.left - parentRect.left + parentElement.scrollLeft;
-
-      svgPoint.classList.add('hidden')
-    return [relativeHeight, relativeWidth];
+    svgPoint.classList.add('hidden')
+    return ([relativeHeight, relativeWidth]);
   }
-  
-  return null;
 };

@@ -76,8 +76,8 @@ const Card: React.FC = () => {
       ${(isVisible) ? 'opacity-95 z-[1] before:bottom-[-50px] before:border-b-[60px] h-[180px] transition-all  duration-300 ease-in-out' : ' h-[20px] before:bottom-[0px] opacity-0 z-[-1] before:border-b-[0px]'} 
       `}
       style={{
-        top: `calc(${Math.round(activeOfficePointCoords[0] - 199)}px + var(--top-offset, 0))`,
-        left: `calc(${Math.round(activeOfficePointCoords[1] - 85)}px + var(--left-offset, 0))`
+        top: `calc(${Math.round(activeOfficePointCoords[0] - 199)}px)`,
+        left: `calc(${Math.round(activeOfficePointCoords[1] - 85)}px)`
     }}><div className={`overflow-hidden flex items-center justify-center relative lg:absolute w-full bg-[#B0D311] duration-300 rounded-3xl ease-out  transition-height  ${isVisible ? 'opacity-100 h-[100%] top-[0%] ' : '100 h-[100%] top-[0%]'}`} >
         <div className={`w-full left-0 px-6`}>
 
