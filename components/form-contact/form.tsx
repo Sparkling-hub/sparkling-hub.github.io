@@ -41,7 +41,7 @@ const {lastPageSlug} = useSelector(selectNavigation);
 
   };
   useEffect(() => {
-    console.log(rolesData[lastPageSlug])
+
 		dispatch(resetFormData());
         dispatch(resetCheckForm())
 		  dispatch(setFormData({
