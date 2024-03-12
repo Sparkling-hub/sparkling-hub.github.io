@@ -12,6 +12,9 @@ const JobComponent: React.FC<JobComponentProps> = ({job}) => {
   return (
     
     <div className="my-14 max-w-screen-2xl pb-14 mx-auto w-full px-8">
+      	<meta name="description"content={job.head +" "+ job.overview} />
+				<meta name="keywords" content="web development, programming, frontend, backend, website, careers, work" />
+			
       <meta property="og:title" content={`Sparkling.Co. ${job.head}`} />
 			<meta property="og:description" content={job.overview} />
 			<meta property="og:url" content={`/careers/job?id=${job.slug}`} />

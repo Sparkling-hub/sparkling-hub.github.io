@@ -21,6 +21,8 @@ const Index = () => {
 	return (
 
 		<MainLayout>
+				            <meta name="description" content="Whether you are looking to expand your Development Team, build your idea from scratch, or do some good old Research and Development (R&D) you need more than coders, you need problem-solvers. Talk to us for seasoned and affordable Software Engineers that add real value to your long-term future." />
+            <meta name="keywords" content="solutions, answers, technologies, benefits, HTML, CSS, JavaScript" />
 			<meta property="og:title" content="Sparkling.Co" />
 			<meta property="og:description" content="Whether you are looking to expand your Development Team, build your idea from scratch, or do some good old Research and Development (R&D) you need more than coders, you need problem-solvers. Talk to us for seasoned and affordable Software Engineers that add real value to your long-term future." />
 

@@ -21,6 +21,8 @@ const CareersPage = () => {
     return (
 
         <MainLayout>
+            <meta name="description" content="Sparkling Co. is Swiss headquartered company with presence all around Europe always in search of great professionals! Want to join the team? Here are the current open positions." />
+            <meta name="keywords" content="careers, work, Europe, developer, consultant, sales, management, junior, senior, middle, full time, part time, hibrid work," />
 
             <meta property="og:title" content="Sparkling.Co. Careers" />
             <meta property="og:description" content="Sparkling Co. is Swiss headquartered company with presence all around Europe always in search of great professionals! Want to join the team? Here are the current open positions." />
