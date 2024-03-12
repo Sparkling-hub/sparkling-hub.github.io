@@ -1,5 +1,5 @@
-import React, { SyntheticEvent } from 'react';
-
+import React, { SyntheticEvent, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,6 +22,7 @@ interface InputSubmitProps {
 }
 
 const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick,file, requiredKeys}) => {
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const { formData } = useSelector(selectForm);
   const dispatch = useDispatch();
@@ -88,7 +89,11 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
   const buttonClass = disabled && selectIsValidEmail(formData.email) ? 'bg-teal-500' : 'bg-color-primary-dark';
 
   return (
-    <>
+    <>   <ReCAPTCHA
+    className="h-captcha"
+    sitekey={'123'}
+    onChange={(value: string | null) => setRecaptchaValue(value)}
+  />
       <input
         name={name}
         type={type}
