@@ -3,7 +3,7 @@ const head = 'Middle Level PHP Developer';
 const text = ['Full time', 'Hybrid work'];
 const location = 'Ukraine, Zaporizhzhia';
 const locationPath = '/img/jobs/ukraine.png';
-
+ 
 const jobs = {
     location: "Ukraine",
     namePosition: "Middle Level PHP Developer",

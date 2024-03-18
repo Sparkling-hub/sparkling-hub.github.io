@@ -2,79 +2,95 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store'; 
 
 
-interface FormData {
+interface FormValues {
+  vacancy: string;
   name: string;
   select: string;
   email: string;
   company: string;
   message: string;
-  [key: string]: string;
+  phone: string;
+  linkedin: string;
+  file: string;
+  [key: string]: string | File | null  ;
 }
 
 interface FormState {
-  formData: FormData;
+  formData: FormValues;
   check: boolean | null;
-
-  checkForm:FormData
+  checkForm: FormValues;
 }
+
 const isValidEmail = (email: string): boolean => {
   const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([a-z\d])/.exec(email);
-
   return emailRegex !== null;
-
 };
 
 const initialState: FormState = {
   formData: {
+    vacancy: '',
     name: '',
     select: '',
     email: '',
     company: '',
     message: '',
+    phone: '',
+    linkedin: '',
+    file: '',
   },
   check: null,
   checkForm: {
+    vacancy: '',
     name: '',
     select: '',
     email: '',
     company: '',
     message: '',
+    phone: '',
+    linkedin: '',
+    file: '',
   },
 };
-
 
 const formSlice = createSlice({
   name: 'form',
   initialState,
   reducers: {
-    setFormData: (state, action: PayloadAction<FormData>) => {
+    setFormData: (state, action: PayloadAction<FormValues>) => {
       state.formData = action.payload;
     },
-    setCheck: (state, action: PayloadAction<boolean|null>) => {
-      
-      console.log(action.payload)
-        state.check = action.payload;
-
+    setCheck: (state, action: PayloadAction<boolean | null>) => {
+      state.check = action.payload;
     },
     resetFormData: (state) => {
   
       Object.keys(state.formData).forEach(key => {
         state.formData[key] = '';
+
       });
+ 
     },
-    setCheckFormByKey: (state, action: PayloadAction<{ key: keyof FormData; value: string }>
-    ) => {
+    resetCheckForm: (state) => {
+  
+      Object.keys(state.formData).forEach(key => {
+        state.checkForm[key] = '';
+
+      });
+ 
+    },
+    setCheckFormByKey: (state, action: PayloadAction<{ key: keyof FormValues; value: string }>) => {
+
       const { key, value } = action.payload;
       state.checkForm[key] = value;
     },
   },
 });
+
 export const selectIsValidEmail = (email: string): boolean => {
   return isValidEmail(email);
 };
-export const { setFormData, setCheck,setCheckFormByKey,resetFormData } = formSlice.actions;
+export const { setFormData, setCheck,setCheckFormByKey,resetFormData,resetCheckForm } = formSlice.actions;
 
 export const selectForm = (state: RootState) => state.form;
-
 
 export default formSlice.reducer;

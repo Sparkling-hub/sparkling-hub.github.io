@@ -17,7 +17,7 @@ const JobsFiltre = ({ job }: { job: IJob }) => {
             ))}
 
           </div>
-          <Link href={job.slug} className='h-full w-1/6 animation flex justify-end rounded-full'>
+          <Link  href={{ pathname: 'careers/job', query: {id:job.slug}}} className='h-full w-1/6 animation flex justify-end rounded-full'>
             <Button isDropdownOpen={false} />
           </Link>
         </div>
