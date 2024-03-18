@@ -1,3 +1,4 @@
+import React from "react";
 
 const header =
   <h1 className="leading-[60px] mb-2 text-5xl">
@@ -13,7 +14,7 @@ const content =<div>
     Our expertly managed engineers aren’t just rapid and reliable, they care.
     Taking great pride in what they do. Sprint after sprint
     </p>
-
+    </div>
 
 
 const image = <img src='/img/software/software_development_icon.svg' className="w-full" alt="sofrware_icon" />;
