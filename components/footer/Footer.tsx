@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
 							justify-center							
 							-mt-36'>
 
-				<section className="flex items-center justify-center relative before:w-full before:absolute before:-top-calc py-0  xl:px-40 custom-3xl" id="maps">
-					<div className="max-w-screen-2xl w-full items-start mb-9">
-						<div className="content-section relative flex items-start justify-center flex-col justify-center z-10">
-							<div className="flex items-center whitespace-normal w-full">
+				<section className="flex items-center w-full justify-center relative before:w-full before:absolute before:-top-calc  custom-3xl" id="maps">
+					<div className="max-w-[2200px] w-full items-center  justify-center flex relative">
+						<div className="content-section max-w-screen-2xl relative flex items-start justify-center flex-col justify-center z-10">
+							<div className="flex items-center whitespace-normal w-full py-0  xl:px-40">
 								<div className="flex justify-center flex-col w-full my-12">
 									<div className='grid grid-cols-1 lg:grid-cols-3 gap-[10%] lg:gap-[0%] pb-40'>
 										<div className='lg:block right-[50px] right-[-40px] lg:right-0  col-span-1 p-4 lg:order-3 '>
@@ -75,15 +75,19 @@ const Footer: React.FC = () => {
 												</li>
 											</ul>
 										</div>
-
+									
 									</div>
 
-									<div className='text-center absolute bottom-0 left-1/4 w-1/2 m-auto pt-[120px] lg:pt-[0px] px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
-
+									<div className='text-center absolute bottom-9 left-1/4 w-1/2 m-auto pt-[120px] lg:pt-[0px] px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
+					
 								</div>
+							
 							</div>
+						
 						</div>
+						<img className="absolute bottom-0 right-0  h-[95%]" src="/img/footer/S.png" alt="f_logo"></img>
 					</div>
+					
 				</section>
 			</div>
 		</footer>
