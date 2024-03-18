@@ -1,23 +1,30 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import Input from "../ui/input-component/input";
 import TextArea from "../ui/text-area-component/text-area";
 import Submit from "../ui/input-sumbit-component";
 import Select from "../ui/select-component";
 import { sendContactForm } from "../../lib/api";
 import Link from "next/link";
+
+import rolesData from '@/data/data-contact/data-contact';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   selectForm,
   setFormData,
   setCheck,
 
-  setCheckFormByKey
+  setCheckFormByKey,
+  resetCheckForm,
+  resetFormData
 } from '@/store/redusers/FormSliceReduser';
-
+import {
+  selectNavigation,
+ 
+} from '@/store/redusers/navigationReducer';
 const Form: React.FC = () => {
   const dispatch = useDispatch();
   const { formData, check, checkForm } = useSelector(selectForm);
-
+const {lastPageSlug} = useSelector(selectNavigation);
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
@@ -33,7 +40,21 @@ const Form: React.FC = () => {
     }
 
   };
+  useEffect(() => {
 
+		dispatch(resetFormData());
+        dispatch(resetCheckForm())
+		  dispatch(setFormData({
+			...formData,
+			['vacancy']: 'Contact Us',
+		  }));
+      dispatch(setFormData({
+        ...formData,
+        select: rolesData[lastPageSlug]
+        }));
+
+	  }, []);
+    
   return (
     <form
       method="post"
@@ -49,7 +70,7 @@ const Form: React.FC = () => {
           type="text"
           name="name"
           value={formData.name}
-          placeholder="Full Name*"
+          placeholder="Full Name"
           onChange={handleInputChange}
           checked={checkForm.name.length > 0}
         />
@@ -59,7 +80,7 @@ const Form: React.FC = () => {
           name="email"
           value={formData.email}
           onChange={handleInputChange}
-          placeholder="Email*"
+          placeholder="Email"
           checked={check === false && checkForm.email.length > 0 || check === false}
         />
 
@@ -78,7 +99,7 @@ const Form: React.FC = () => {
 
         <TextArea
           name="message"
-          placeholder="Tell us about your project and goals*"
+          placeholder="Tell us about your project and goals"
           value={formData.message}
           onChange={handleInputChange}
           checked={checkForm.message.length > 0}
@@ -93,8 +114,7 @@ const Form: React.FC = () => {
 
             disabled={!!(formData.name && formData.email && formData.message)}
 
-            onClick={sendContactForm}
-
+            onClick={sendContactForm} requiredKeys={['name', 'email', 'message']}
 
           />
         </div>
@@ -106,7 +126,7 @@ const Form: React.FC = () => {
             <p className="text-3xl text-black font-normal">
               Prefer Email?
             </p>
-            <p className="text-2xl text-green-500 mt-5 font-normal">
+            <p className="text-2xl text-primary-darkTeal mt-5 font-normal">
               Drop us a line
             </p>
           </div>

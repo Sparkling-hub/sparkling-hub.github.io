@@ -20,6 +20,16 @@ $colorActiveStep: #fce205;
 $widhConainers: 1440px;
 $weight-text: 400px;
 
+@media not all and (min-resolution:.001dpcm) { 
+  
+        .safari-specific {
+            &::before {
+                top: 24px !important;
+				left: 45% !important;
+            }
+        }
+	
+}
 
 
 
@@ -43,7 +53,9 @@ $weight-text: 400px;
 	font-weight: normal;
 	font-style: normal;
   }
-
+ input[type="file"] {
+    color: transparent;
+}
 
   h2,h3,h1 {font-family: 'Ralevay_light', Arial,sans-serif !important; font-weight: normal
 }
@@ -417,6 +429,8 @@ nav {
 
 
 }
+
+
 
 .job-content:hover {
 	border-color: $primaryDarkColor;

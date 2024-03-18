@@ -1,6 +1,14 @@
+interface RolesData {
+    other: string;
+    team_augmentation: string;
+    software_development: string;
+    consulting: string;
+    startup: string;
+    careers: string;
+    [key: string]: string; 
+}
 
-
-const rolesData = {
+const rolesData: RolesData = {
 
 	other: "Other",
 	team_augmentation: "Team Augmentation",
