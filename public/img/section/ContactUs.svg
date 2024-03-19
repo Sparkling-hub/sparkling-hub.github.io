@@ -185,7 +185,7 @@ viewBox="0 0 8049.65 7218.02"
     </g>
     
     <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="-410" dur="3s" calcMode="spline" begin="1.4s"  keySplines="0.2 0.1 0.3 1;" fill="freeze" />
-    <animateTransform attributeName="transform" attributeType="XML" type="scale" from="0.2" to="1" dur="1.4s" alcMode="spline" keySplines="0.6 0.2 1 1;" fill="freeze" repeatCount="1"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="scale" from="0.2" to="1" dur="1.4s" calcMode="spline" keySplines="0.6 0.2 1 1;" fill="freeze" repeatCount="1"/>
     <animateMotion dur="5s"  fill="freeze">
       <mpath href="#motionPath"/>
     </animateMotion>
