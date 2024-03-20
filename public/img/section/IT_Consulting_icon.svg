@@ -12,7 +12,8 @@
             fill="#EAF7F8" />
         <g clip-path="url(#cut-off-bottom)">
 
-            <g id='cloud'>
+            <g id='cloud' transform='translate(-400, 0)'>
+        
                 <g>
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M111.759 269.981C149.959 270.018 188.159 270.056 226.372 270.093C233.568 267.023 229.77 254.881 220.352 252.171C220.055 240.214 214.113 233.741 203.003 232.281C201.53 210.683 178.884 199.964 159.57 210.646C138.603 207.155 124.948 215.695 120.815 233.704C99.7055 234.806 97.5223 264.771 111.771 269.981H111.759Z"
@@ -22,7 +23,10 @@
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M367.896 160.53C321.041 160.568 274.185 160.617 227.329 160.654C218.493 157.213 223.156 143.661 234.719 140.628C235.093 127.273 242.379 120.045 255.995 118.411C257.804 94.2884 285.579 82.3074 309.259 94.2389C334.967 90.3401 351.722 99.8828 356.799 119.996C382.688 121.221 385.375 154.713 367.883 160.53H367.896Z"
                         fill="#FEFEFE" />
-                    <g>
+                    <g opacity='0'>
+                        <animate attributeName="opacity" from="0" to="1" dur="1s" begin='2.4s'  fill="freeze" />
+                
+
                         <polyline class="fil1 str1"
                             points="286.832 160.593 328.068 211.302 412.272 332.151"
                             stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
@@ -153,8 +157,11 @@
                     attributeName="transform"
                     attributeType="XML"
                     type="translate"
-                    values="-200; 0"
-                    dur="2s"
+                    values="-300; 0"
+                    dur="1.2s"
+                    calcMode="spline" keySplines="0.3 0.3 0.3 1;"
+                    fill="freeze"
+                    begin='2s'
                     repeatCount="1" />
             </g>
 
@@ -481,7 +488,8 @@
                 <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.6s" fill="freeze" />
             </g>
         </g>
-        <g id='coin'>
+        <g id='coin' opacity='0'>
+            <animate attributeName="opacity" from="0" to="1" dur="1s" begin='4s'  fill="freeze" />
             <path d="M350.029 410.833H421.185" stroke="black" stroke-miterlimit="2.61" />
             <path d="M278.28 482.149L267.854 472.148" stroke="black" stroke-miterlimit="2.61" />
             <path
