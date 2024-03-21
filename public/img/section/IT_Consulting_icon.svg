@@ -100,7 +100,45 @@
                                 fill="freeze"
                                 repeatCount="indefinite" begin='0.2s' />
                         </polyline>
-
+                        <polyline class="fil1 str1"
+                        points="312.76 160.568 356.425 214.47 357.82 222.144 420.281 296.481"
+                        stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
+                        stroke-dashoffset="0">
+                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            fill="freeze"
+                            repeatCount="indefinite" begin='0.15s' />
+                    </polyline>
+                    <polyline class="fil1 str1"
+                        points="319.193 160.568 363.905 214.804 364.085 221.636 424.803 294.983"
+                        stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
+                        stroke-dashoffset="0">
+                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            fill="freeze"
+                            repeatCount="indefinite" begin='0.1s' />
+                    </polyline>
+                    <polyline class="fil1 str1"
+                        points="330.329 160.556 350.508 184.307 353.815 194.976 434.363 294.315"
+                        stroke-miterlimit="2.61" stroke-dasharray="80 20" stroke-dashoffset="0">
+                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            fill="freeze"
+                            repeatCount="indefinite" begin='0.3s' />
+                    </polyline>
+                    <polyline class="fil1 str1"
+                        points="340.38 160.556 357.988 180.965 361.838 194.716 437.851 290.317"
+                        stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
+                        stroke-dashoffset="0">
+                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            fill="freeze"
+                            repeatCount="indefinite" />
+                    </polyline>
+                    <polyline class="fil1 str1"
+                        points="139.702 271.937 176.262 316.902 250.931 424.076"
+                        stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
+                        stroke-dashoffset="0">
+                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            fill="freeze"
+                            repeatCount="indefinite" />
+                    </polyline>
 
                     </g>
 
@@ -121,7 +159,7 @@
                     dur="1.2s"
                     calcMode="spline" keySplines="0.3 0.3 0.3 1;"
                     fill="freeze"
-                    begin='2s'
+                    begin='0.8s'
                     repeatCount="1" />
             </g>
 
@@ -275,7 +313,7 @@
                     attributeType="XML"
                     type="translate"
                     values="-570; 0"
-                    dur="1.5s"
+                    dur="0.8s"
                     repeatCount="1"
                     timing-function="cubic-bezier(1, 1, 1, 0)" />
                   
@@ -362,7 +400,7 @@
                     type="translate"
                     values="400; 0"
             
-                    dur="1.5s"
+                    dur="0.8s"
                     repeatCount="1"
                     timing-function="cubic-bezier(1, 1, 1, 0)" />
 
@@ -392,7 +430,7 @@
                         type="translate"
                         values="0;0 , -5; 0"
                         dur="5s"
-                        begin="2s"
+                        begin="0.8s"
                         repeatCount="indefinite"
                     
                         timing-function="cubic-bezier(0, 0.2, 1, 1)" />
@@ -402,8 +440,8 @@
                         attributeType="XML"
                         type="translate"
                         values="0, -50; 0"
-                        dur="1s"
-                        begin="1s"
+                        dur="0.5s"
+                        begin="0.8s"
                         repeatCount="1" 
                         calcMode="spline" keySplines="0.6 0.2 1 1;" />
                 </g>
@@ -431,7 +469,7 @@
                         type="translate"
                         values="0,-5;0;0, -5;"
                         dur="5s"
-                        begin="2.1s"
+                        begin="0.8s"
                         repeatCount="indefinite" 
                         timing-function="cubic-bezier(0, 0.2, 1, 1)" />
                     
@@ -440,16 +478,16 @@
                         attributeType="XML"
                         type="translate"
                         values="0, -50; 0,-5"
-                        dur="1s"
-                        begin="1.1s"
+                        dur="0.5s"
+                        begin="0.8s"
                         repeatCount="1"
                         calcMode="spline" keySplines="0.7 0.5 0.2 0.1 ;" />
                 </g>
-                <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.6s" fill="freeze" />
+                <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.1s" fill="freeze" />
             </g>
         </g>
         <g id='coin' opacity='0'>
-            <animate attributeName="opacity" from="0" to="1" dur="1s" begin='4s'  fill="freeze" />
+            <animate attributeName="opacity" from="0" to="1" dur="1s" begin='1.8s'  fill="freeze" />
             <path d="M350.029 410.833H421.185" stroke="black" stroke-miterlimit="2.61" />
             <path d="M278.28 482.149L267.854 472.148" stroke="black" stroke-miterlimit="2.61" />
             <path
