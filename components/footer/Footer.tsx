@@ -78,7 +78,9 @@ const Footer: React.FC = () => {
 									
 									</div>
 
+
 									<div className='text-center absolute bottom-1 left-1/4 w-1/2 m-auto pt-[150px] lg:pt-[0px]  px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2024 Sparkling. ALL RIGHT RESERVED </div>
+
 					
 								</div>
 							
