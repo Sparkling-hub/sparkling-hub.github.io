@@ -14,7 +14,7 @@
 
             <g id='cloud' transform='translate(-400, 0)'>
         
-                <g>
+                <g >
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M111.759 269.981C149.959 270.018 188.159 270.056 226.372 270.093C233.568 267.023 229.77 254.881 220.352 252.171C220.055 240.214 214.113 233.741 203.003 232.281C201.53 210.683 178.884 199.964 159.57 210.646C138.603 207.155 124.948 215.695 120.815 233.704C99.7055 234.806 97.5223 264.771 111.771 269.981H111.759Z"
                         fill="#FEFEFE" />
@@ -51,46 +51,6 @@
                             <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
                                 fill="freeze"
                                 repeatCount="indefinite" begin='0.4s' />
-                        </polyline>
-
-                        <polyline class="fil1 str1"
-                            points="312.76 160.568 356.425 214.47 357.82 222.144 420.281 296.481"
-                            stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
-                            stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
-                                fill="freeze"
-                                repeatCount="indefinite" begin='0.15s' />
-                        </polyline>
-                        <polyline class="fil1 str1"
-                            points="319.193 160.568 363.905 214.804 364.085 221.636 424.803 294.983"
-                            stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
-                            stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
-                                fill="freeze"
-                                repeatCount="indefinite" begin='0.1s' />
-                        </polyline>
-                        <polyline class="fil1 str1"
-                            points="330.329 160.556 350.508 184.307 353.815 194.976 434.363 294.315"
-                            stroke-miterlimit="2.61" stroke-dasharray="80 20" stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
-                                fill="freeze"
-                                repeatCount="indefinite" begin='0.3s' />
-                        </polyline>
-                        <polyline class="fil1 str1"
-                            points="340.38 160.556 357.988 180.965 361.838 194.716 437.851 290.317"
-                            stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
-                            stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
-                                fill="freeze"
-                                repeatCount="indefinite" />
-                        </polyline>
-                        <polyline class="fil1 str1"
-                            points="139.702 271.937 176.262 316.902 250.931 424.076"
-                            stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
-                            stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
-                                fill="freeze"
-                                repeatCount="indefinite" />
                         </polyline>
                         <polyline class="fil1 str1"
                             points="147.569 271.924 187.178 321.346 250.479 412.689"
