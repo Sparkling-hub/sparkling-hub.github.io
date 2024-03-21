@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
 				<section className="flex items-center w-full justify-center relative before:w-full before:absolute before:-top-calc  custom-3xl" id="maps">
 					<div className="max-w-[2200px] w-full items-center  justify-center flex relative">
-						<div className="content-section max-w-screen-2xl relative flex items-start justify-center flex-col justify-center z-10">
+						<div className="content-section max-w-screen-2xl w-full px-5 relative flex items-start justify-center flex-col justify-center z-10">
 							<div className="flex items-center whitespace-normal w-full py-0  xl:px-40">
 								<div className="flex justify-center flex-col w-full my-12">
 									<div className='grid grid-cols-1 lg:grid-cols-3 lg:gap-[10%] gap-[0%] pb-5'>
@@ -78,14 +78,16 @@ const Footer: React.FC = () => {
 									
 									</div>
 
-									<div className='text-center absolute bottom-9 left-1/4 w-1/2 m-auto pt-[120px] lg:pt-[0px] px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2024 Sparkling. ALL RIGHT RESERVED </div>
+
+									<div className='text-center absolute bottom-1 left-1/4 w-1/2 m-auto pt-[150px] lg:pt-[0px]  px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2024 Sparkling. ALL RIGHT RESERVED </div>
+
 					
 								</div>
 							
 							</div>
 						
 						</div>
-						<img className="absolute bottom-0 right-0  h-[95%]" src="/img/footer/S.png" alt="f_logo"></img>
+						<img className="absolute bottom-0 right-0  h-auto sm:h-[95%]" src="/img/footer/S.png" alt="f_logo"></img>
 					</div>
 					
 				</section>
