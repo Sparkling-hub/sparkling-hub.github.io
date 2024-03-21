@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
 						<div className="content-section max-w-screen-2xl relative flex items-start justify-center flex-col justify-center z-10">
 							<div className="flex items-center whitespace-normal w-full py-0  xl:px-40">
 								<div className="flex justify-center flex-col w-full my-12">
-									<div className='grid grid-cols-1 lg:grid-cols-3 gap-[10%] lg:gap-[0%] pb-40'>
+									<div className='grid grid-cols-1 lg:grid-cols-3 lg:gap-[10%] gap-[0%] pb-5'>
 										<div className='lg:block right-[50px] right-[-40px] lg:right-0  col-span-1 p-4 lg:order-3 '>
 											<div className='relative lg:text-right font-normal text-3xl lg:text-5xl  lg:pb-10'>Get in touch</div>
 											<div className='lg:text-right text-xl lg:text-2xl'>info@sparkling.co.com</div>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
 											<div className='relative hidden lg:block font-normal text-2xl lg:text-5xl pb-10'>Sparkling</div>
 											<div className='relative hidden lg:block mb-16 lg:text-2xl text-2xl '>Sparkling is an industry expert specialised in delivering top-tier Software Development solutions. Through its range of services, Sparkling focusses in providing reliable and tangible value to businesses, aiding in their development efforts.</div>
 
-											<div className='font-normal pb-1 text-3xl lg:text-5xl lg:pb-10'>Privacy</div>
+											<div className='font-normal pb-1 text-3xl lg:text-5xl lg:pb-2'>Privacy</div>
 											<div className=' text-xl lg:text-2xl'>Privacy Policy</div>
 											<div className='lg:text-2xl text-xl '>Cookie Policy</div>
 										</div>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
 									
 									</div>
 
-									<div className='text-center absolute bottom-9 left-1/4 w-1/2 m-auto pt-[120px] lg:pt-[0px] px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2023 Sparkling. ALL RIGHT RESERVED </div>
+									<div className='text-center absolute bottom-9 left-1/4 w-1/2 m-auto pt-[120px] lg:pt-[0px] px-1/2 lg:px-0 lg:pb-[0px] text-lg font-semibold lg:text-2xl '> &copy; 2024 Sparkling. ALL RIGHT RESERVED </div>
 					
 								</div>
 							
