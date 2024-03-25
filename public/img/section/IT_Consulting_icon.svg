@@ -483,8 +483,8 @@
                         repeatCount="1"
                         calcMode="spline" keySplines="0.7 0.5 0.2 0.1 ;" />
                 </g>
-              
-            </g>
+                <animate attributeName="opacity" from="0" to="1" dur="1s" begin='0.8s'  fill="freeze" />
+            </g> 
         </g>
         <g id='coin' opacity='0'>
             <animate attributeName="opacity" from="0" to="1" dur="1s" begin='1.8s'  fill="freeze" />
