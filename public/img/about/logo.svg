@@ -132,9 +132,10 @@
 
   <path class="fil10 str1" d="M4028.06 2299.79l0 322.67 118.35 132.21 2.59 6.66 0 1351.02 -20.06 0 0 -1347.25 -118.35 -132.21 -2.59 -6.66 0 -326.44 20.06 0m-260.46 0l0 978.47 -2.43 6.51 -126.09 147.42 0 671.19 -20.06 0 0 -674.86 2.43 -6.51 126.09 -147.42 0 -974.81 20.06 0m56.66 0l0 1114.95 -2.7 6.78 -80.32 86.69 0 633.09 -20.06 0 0 -636.95 2.7 -6.78 80.32 -86.69 0 -1111.09 20.06 0m59.16 0l0 481.8 80.32 86.69 2.7 6.78 0 1237.29 -20.06 0 0 -1233.43 -80.32 -86.69 -2.7 -6.78 0 -485.66 20.06 0m78.34 0l0 443.89 80.32 86.69 2.7 6.78 0 1290.36 -20.06 0 0 -1286.5 -80.32 -86.69 -2.7 -6.78 0 -447.75 20.06 0z"
   stroke="#FEFEFE" stroke-width='1' stroke-dasharray="160,10, 50" stroke-dashoffset="0">
- <animate attributeName="stroke-dashoffset" from="0" to="2500" dur="6.3s"
+ <animate attributeName="stroke-dashoffset" from="0" to="2500" dur="1.3s"
  fill="freeze"
- repeatCount="indefinite" /></path>
+ repeatCount="indefinite" />
+</path>
 
 
 
@@ -168,17 +169,17 @@ stroke-dashoffset="0">
 
   <path class="fil10" d="M2240.16 2608.73l0 344.41 122.89 195.71 1.57 5.33 0 946.54 -20.06 0 0 -943.7 -122.89 -195.71 -1.57 -5.33 0 -347.25 20.06 0m-476.3 0l0 969.52 -2.39 6.46 -117.46 138.54 0 380.13 -20.06 0 0 -383.78 2.39 -6.46 117.46 -138.54 0 -965.87 20.06 0m61.46 0l0 1044.35 -113.7 113.7 0 333.94 -20.06 0 0 -342.25 113.7 -113.7 0 -1036.04 20.06 0m55.31 -1.54l0 1138.08 -105.25 105.25 0 252.87 -20.06 0 0 -261.18 105.25 -105.24 0 -1129.77 20.06 0m52.24 1.54l0 1494.66 -20.06 0 0 -1494.66 20.06 0m55.31 0l0 1494.66 -20.06 0 0 -1494.66 20.06 0m58.39 0l0 1494.66 -20.06 0 0 -1494.66 20.06 0zm66.07 1.54l0 390.74 92.38 160 1.37 4.98 0 937.4 -20.06 0 0 -934.8 -92.38 -160 -1.37 -4.98 0 -393.34 20.06 0m64.53 1.54l0 372.3 91.91 159.2 1.37 4.98 0 955.1 -20.06 0 0 -952.5 -91.91 -159.2 -1.37 -4.98 0 -374.9 20.06 0" stroke="#d5e0eb" stroke-miterlimit="2.61" stroke-width="19" stroke-dasharray="150 150"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.3s"
+  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="0.7s"
   fill="freeze"
   repeatCount="indefinite" /></path>
   <path class="fil2" d="M6900.61 4407.08c-986.98,-143.95 -2044.39,-187.4 -2891.68,-160.49 -933.96,29.66 -1612.12,144.22 -1657.84,303.39 -5.17,19.27 -3.9,35.23 1.72,49.56 5.69,14.52 15.88,27.52 28.4,40.63 160.43,168.04 235.16,349.33 311.16,533.72 67.89,164.7 136.81,331.9 268.88,494.04 468.75,37.55 901.3,30.29 1214.78,25.04l64.23 -1.06c566.88,-9.08 1161.07,-71.31 1649.19,-261.38 486.47,-189.42 867.58,-505.91 1011.16,-1023.45zm-2891.89 -167.15c848.75,-26.96 1908.2,16.65 2896.61,161.08l3.73 0.54 -1 3.64c-143.45,522.08 -526.73,840.96 -1016.22,1031.55 -488.97,190.39 -1083.94,252.73 -1651.49,261.83l-64.23 1.06c-314.01,5.27 -747.42,12.54 -1216.82,-25.15l-1.41 -0.11 -0.91 -1.11c-133.27,-163.24 -202.55,-331.29 -270.78,-496.83 -75.76,-183.79 -150.25,-364.51 -309.83,-531.66 -13.06,-13.67 -23.72,-27.34 -29.79,-42.8 -6.13,-15.63 -7.53,-32.96 -1.94,-53.76l0.01 -0.05c46.57,-162.12 727.23,-278.47 1664.06,-308.23z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="0.7s"
   fill="freeze"
   repeatCount="indefinite" /></path>
   <path class="fil10"  fill="currentColor" d="M6311.4 2744.01l4.17 588.56 73.38 100.14 1.92 5.96 -4.19 671.9 -19.99 -0.08 4.17 -668.59 -73.34 -100.08 -1.92 -5.88 -4.19 -591.85 19.99 -0.08zm-68.07 0.08l-4.19 690.37 -2.47 6.54 -63.91 72.85 4.17 584.8 -19.99 0.08 -4.19 -588.58 2.47 -6.62 63.96 -72.91 4.17 -686.62 19.99 0.08zm-64.4 0l-4.19 584.24 -2.67 6.78 -116.79 125.88 4.17 637.67 -19.99 0.08 -4.19 -641.63 2.67 -6.85 116.84 -125.94 4.17 -580.3 19.99 0.08zm-53.94 0l-4.19 538.76 -2.67 6.78 -116.79 125.89 4.17 683.15 -19.99 0.08 -4.19 -687.1 2.67 -6.85 116.85 -125.95 4.16 -534.82 19.99 0.08zm-51.36 0.04l-4.19 500.86 -2.67 6.74 -116.79 125.89 4.17 721.05 -19.99 0.08 -4.19 -725 2.67 -6.85 116.85 -125.95 4.16 -496.96 19.99 0.16zm384.13 -0.16l4.17 497.61 73.39 100.15 1.92 5.96 -4.19 762.9 -19.99 -0.08 4.17 -759.59 -73.34 -100.09 -1.92 -5.84 -4.19 -500.86 19.99 -0.16zm-85.28 0.04l4.17 558.23 73.38 100.14 1.92 5.96 -4.19 702.23 -19.99 -0.08 4.17 -698.93 -73.34 -100.08 -1.92 -5.88 -4.19 -561.52 19.99 -0.08zm338.11 0.04l0 430.81 74.07 138.36 1.21 4.7 0 792.62 -20.06 0 0 -790.18 -74.07 -138.36 -1.21 -4.7 0 -433.24 20.06 0zm-51.14 0l0 1366.49 -20.06 0 0 -1366.49 20.06 0zm-60.99 0l0 1366.49 -20.06 0 0 -1366.49 20.06 0z" stroke="#d5e0eb" stroke-miterlimit="2.61" stroke-width="19" stroke-dasharray="150 150"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="0.7s"
   fill="freeze"
   repeatCount="indefinite" /></path>
 
@@ -186,42 +187,42 @@ stroke-dashoffset="0">
 
    <path class="fil10 str1" d="M478.12 3371.47l0 330.45 125.53 101.04 0 300.43 -20.06 0 0 -290.89 -125.53 -101.04 0 -339.99 20.06 0zm-435.25 355.06c6.22,31.21 12.83,62.04 20.06,92.29l0 -176.9 84.36 -66.88 0 -203.57 -20.06 0 0 193.92 -84.36 66.88 0 94.26zm72.92 278.73c6.39,19.24 13.25,38.02 20.06,56.85l0 -386.24 84.36 -70.67 0 -233.74 -20.06 0 0 224.41 -84.36 70.67 0 338.71zm169.98 -638.85l0 736.97 -20.06 0 0 -736.97 20.06 0zm48.18 0l0 736.97 -20.06 0 0 -736.97 20.06 0zm50.79 5.05l0 368.35 125.53 101.04 0 262.52 -20.06 0 0 -252.98 -125.53 -101.04 0 -377.9 20.06 0" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="150 150"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="0.5s"
   fill="freeze"
   repeatCount="indefinite" /></path>
   <path class="" d="M5710.8 4272.46c-7.08,-1.65 -10.82,-1.4 -19.6,-1.4 1.16,3.5 -3.02,1.61 14.04,2.15 4.39,0.14 -1.13,0.65 2.91,0.2 2.8,-0.31 1.02,0.06 2.65,-0.95z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="0.5s"
   fill="freeze"
   repeatCount="indefinite" /></path>
   <path class="" d="M5680.01 4272.46c5.59,0 4.12,2.32 8.4,-1.4l-8.4 1.4z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="0.5s"
   fill="freeze"
   repeatCount="indefinite" /></path>
   <path class="" d="M5666.01 4271.06c1.44,1.44 5.06,-2.02 1.62,-0.75 -0.03,0.01 -3.97,-1.6 -1.62,0.75z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="0.5s"
   fill="freeze"
   repeatCount="indefinite" /></path>
   <path class="" d="M3214.79 4307.45c0.14,0.14 0.42,-0.61 0.42,-0.42 -0.03,0.03 -0.56,0.28 -0.42,0.42z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="0.5s"
   fill="freeze"
   repeatCount="indefinite" /></path>
-  <path class="" d="M3097.22 4325.65c0.14,0.14 0.41,-0.61 0.41,-0.42 -0.03,0.03 -0.56,0.28 -0.41,0.42z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
+  <path class="" d="M3097.22 4325.65c0.14,0.14 0.41,-0.61 0.41,-0.42 -0.03,0.03 -0.56,0.28 -0.41,0.42z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="180 20"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="0.5s"
   fill="freeze"
   repeatCount="indefinite" /></path>
-  <path class="" d="M3290.37 4300.46l0.41 -0.42c-0.03,0.03 -0.56,0.28 -0.41,0.42z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
+  <path class="" d="M3290.37 4300.46l0.41 -0.42c-0.03,0.03 -0.56,0.28 -0.41,0.42z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="180 20"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="1s"
   fill="freeze"
   repeatCount="indefinite" /></path>
   <path class="" d="M3224.58 4307.45l0.42 -0.42c-0.03,0.03 -0.56,0.28 -0.42,0.42z" stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
   stroke-dashoffset="0">
-  <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+  <animate attributeName="stroke-dashoffset" values="1000;0;" dur="1s"
   fill="freeze"
   repeatCount="indefinite" /></path>
 </g>
