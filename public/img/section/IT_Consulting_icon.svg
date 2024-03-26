@@ -142,6 +142,34 @@
 
                     </g>
 
+                    <g>
+
+
+                        <polyline class="fil10 str1" points="3961.75,2299.79 3961.75,2743.68 4042.07,2830.37 4044.77,2837.15 4044.77,4127.51 4024.71" id="polygon5" stroke-dasharray="200, 100" stroke-dashoffset="0" width='4400' stroke-width='20' >
+                  
+                          <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.2s" />
+                        </polyline>
+                        <polyline class="fil10 str1" points="3883.41,2299.79 3883.41,2781.59 3963.74,2868.28 3966.44,2875.06 3966.44,4112.35 3946.38,4112.35 3946.38" id="polygon6" stroke-dasharray="200, 100" stroke-dashoffset="0" width='4400' stroke-width='20' >
+                  
+                          <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.25s" />
+                        </polyline>
+                        <polyline class="fil10 str1" points="3824.26,2299.79 3824.26,3414.74 3821.55,3421.51 3741.23,3508.2 3741.23,4141.29 3721.17" id="polygon7" stroke-dasharray="200, 100" stroke-dashoffset="0" width='4400' stroke-width='20' >
+                  
+                          <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.17s" />
+                        </polyline>
+                        <polyline class="fil10 str1" points="3767.6,2299.79 3767.6,3278.26 3765.17,3284.77 3639.08,3432.19 3639.08,4103.38 3619.02" id="polygon8" stroke-dasharray="200, 100" stroke-dashoffset="0" width='4400' stroke-width='20' >
+                  
+                          <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.0s" />
+                        </polyline>
+                        <polyline class="fil10 str1" points=" 4007.99,2299.79 4028.06,2299.79 4028.06,2622.46 4146.4,2754.67 4148.99,2761.33 4148.99,4112.35 4128.93 " id="polygon9-1" 
+                        transform="translate(6.82,0.794896)" stroke-dasharray="200, 100" stroke-dashoffset="0" width='4400' stroke-width='20' >
+                  
+                        <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.19s" />
+                      </polyline>
+                        
+                      </g>
+
+
                     <animateTransform
                         attributeName="transform"
                         attributeType="XML"
