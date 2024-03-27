@@ -39,7 +39,7 @@
                             points="295.707 160.593 340.38 216.302 411.755 319.316"
                             stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                             stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                                 fill="freeze"
                                 repeatCount="indefinite" />
                         </polyline>
@@ -48,7 +48,7 @@
                             points="303.885 160.581 351.038 219.137 351.903 224.471 412.104 298.313"
                             stroke="#FEFEFE"
                             stroke-miterlimit="2.61" stroke-dasharray="80 20" stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                                 fill="freeze"
                                 repeatCount="indefinite" begin='0.4s' />
                         </polyline>
@@ -56,7 +56,7 @@
                             points="147.569 271.924 187.178 321.346 250.479 412.689"
                             stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                             stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                                 fill="freeze"
                                 repeatCount="indefinite" begin='0.2s' />
                         </polyline>
@@ -64,7 +64,7 @@
                             points="154.817 271.924 196.622 323.859 197.397 328.587 250.777 394.074"
                             stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                             stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                                 fill="freeze"
                                 repeatCount="indefinite" begin='0.5s' />
                         </polyline>
@@ -72,7 +72,7 @@
                             points="162.685 271.912 201.415 319.712 202.642 326.519 258.037 392.44"
                             stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                             stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                                 fill="freeze"
                                 repeatCount="indefinite" begin='0.3s' />
                         </polyline>
@@ -80,7 +80,7 @@
                             points="168.395 271.912 208.042 320.009 208.197 326.074 262.041 391.115"
                             stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                             stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                                 fill="freeze"
                                 repeatCount="indefinite" begin='0.4s' />
                         </polyline>
@@ -88,7 +88,7 @@
                             points="178.265 271.899 196.17 292.953 199.102 302.421 270.529 390.521"
                             stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                             stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                                 fill="freeze"
                                 repeatCount="indefinite" />
                         </polyline>
@@ -96,7 +96,7 @@
                             points="187.178 271.899 202.796 290.007 206.207 302.186 273.616 386.969"
                             stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                             stroke-dashoffset="0">
-                            <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                            <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                                 fill="freeze"
                                 repeatCount="indefinite" begin='0.2s' />
                         </polyline>
@@ -104,7 +104,7 @@
                         points="312.76 160.568 356.425 214.47 357.82 222.144 420.281 296.481"
                         stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                         stroke-dashoffset="0">
-                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                        <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                             fill="freeze"
                             repeatCount="indefinite" begin='0.15s' />
                     </polyline>
@@ -112,14 +112,14 @@
                         points="319.193 160.568 363.905 214.804 364.085 221.636 424.803 294.983"
                         stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                         stroke-dashoffset="0">
-                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                        <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                             fill="freeze"
                             repeatCount="indefinite" begin='0.1s' />
                     </polyline>
                     <polyline class="fil1 str1"
                         points="330.329 160.556 350.508 184.307 353.815 194.976 434.363 294.315"
                         stroke-miterlimit="2.61" stroke-dasharray="80 20" stroke-dashoffset="0">
-                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                        <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                             fill="freeze"
                             repeatCount="indefinite" begin='0.3s' />
                     </polyline>
@@ -127,7 +127,7 @@
                         points="340.38 160.556 357.988 180.965 361.838 194.716 437.851 290.317"
                         stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                         stroke-dashoffset="0">
-                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                        <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                             fill="freeze"
                             repeatCount="indefinite" />
                     </polyline>
@@ -135,7 +135,7 @@
                         points="139.702 271.937 176.262 316.902 250.931 424.076"
                         stroke="#FEFEFE" stroke-miterlimit="2.61" stroke-dasharray="80 20"
                         stroke-dashoffset="0">
-                        <animate attributeName="stroke-dashoffset" values="80;0;" dur="1s"
+                        <animate attributeName="stroke-dashoffset" values="80;0;"  dur="2.7s"
                             fill="freeze"
                             repeatCount="indefinite" />
                     </polyline>

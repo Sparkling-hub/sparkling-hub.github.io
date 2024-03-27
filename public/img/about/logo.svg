@@ -136,24 +136,24 @@
 
     <polyline class="fil10 str1" points="3961.75,2299.79 3961.75,2743.68 4042.07,2830.37 4044.77,2837.15 4044.77,4127.51 4024.71" id="polygon5" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.2s" />
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.2s" />
     </polyline>
     <polyline class="fil10 str1" points="3883.41,2299.79 3883.41,2781.59 3963.74,2868.28 3966.44,2875.06 3966.44,4112.35 3946.38,4112.35 3946.38" id="polygon6" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.25s" />
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.25s" />
     </polyline>
     <polyline class="fil10 str1" points="3824.26,2299.79 3824.26,3414.74 3821.55,3421.51 3741.23,3508.2 3741.23,4141.29 3721.17" id="polygon7" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.17s" />
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.17s" />
     </polyline>
     <polyline class="fil10 str1" points="3767.6,2299.79 3767.6,3278.26 3765.17,3284.77 3639.08,3432.19 3639.08,4103.38 3619.02" id="polygon8" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.0s" />
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.0s" />
     </polyline>
     <polyline class="fil10 str1" points=" 4007.99,2299.79 4028.06,2299.79 4028.06,2622.46 4146.4,2754.67 4148.99,2761.33 4148.99,4112.35 4128.93 " id="polygon9-1" 
     transform="translate(6.82,0.794896)" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-    <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1s" fill="freeze" repeatCount="indefinite" begin="0.19s" />
+    <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.19s" />
   </polyline>
     
   </g>
@@ -163,38 +163,38 @@
 
     <polyline class="fil10 str5" points="6598.46,2744.05 6598.46,4110.54 6578.4" id="polygon27" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.1s" />
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.1s" />
     </polyline>
     <polyline class="fil10 str5" points="6659.45,2744.05 6659.45,4110.54" id="polygon28"  stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.3s" />
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.3s" />
     </polyline>
     <polyline class="fil10 str5" points="6710.59,2744.05 6710.59,3174.86 6784.66,3313.22 6785.88,3317.92 6785.88,4110.54" id="polygon29" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.13s" />
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.13s" />
     </polyline>
     <polyline class="fil10 str5" points="6372.48,2744.01 6376.65,3302.25 6450.04,3402.39 6451.96,3408.34 6447.77,4110.58 " id="polygon30" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.12s" />    </polyline>
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.12s" />    </polyline>
     <polyline class="str5 fil10" points="6457.77,2743.97 6461.93,3241.58 6535.32,3341.72 6537.24,3347.68 6533.05,4110.58 " id="polygon31" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.15s" />    </polyline>
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.15s" />    </polyline>
     <polyline class="str5 fil10" points="6073.63,2744.13 6069.44,3244.99 6066.78,3251.72 5949.98,3377.61 5954.15,4098.66 " id="polygon32" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.1s" />    </polyline>
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.1s" />    </polyline>
     <polyline class="str5 fil10" points="6125,2744.09 6120.8,3282.84 6118.14,3289.62 6001.35,3415.51 6005.52,4098.66 " id="polygon33" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.18s" />    </polyline>
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.18s" />    </polyline>
     <polyline class="str5 fil10" points="6178.93,2744.09 6174.74,3328.32 6172.08,3335.1 6055.29,3460.99 6059.45,4098.66 " id="polygon34" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.21s" />    </polyline>
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.21s" />    </polyline>
     <polyline class="str5 fil10" points="6243.34,2744.09 6239.15,3434.46 6236.68,3441 6172.76,3513.85 6176.93,4098.66" id="polygon35" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.22s" />    </polyline>
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.22s" />    </polyline>
     <polyline class="str5 fil10" points="6311.4,2744.01 6315.57,3332.58 6388.96,3432.72 6390.88,3438.68 6386.69,4110.58 " id="polygon36" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-      <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0s" />    </polyline>
+      <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0s" />    </polyline>
 
 
 
@@ -202,60 +202,60 @@
 >
 <g>    <polyline class="fil10 str5" points="2177.17,2611.8 2177.17,2984.1 2269.08,3143.3 2270.46,3148.28 2270.46,4103.38 2250.39 " id="polygon17" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.1s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.1s" />
 </polyline>
 <polyline class="fil10 str5" points="2112.64,2610.26 2112.64,3001 2205.01,3161 2206.39,3165.98 2206.39,4103.38 2186.32 " id="polygon18" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.2s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.2s" />
 </polyline>
 <polyline class="fil10 str5" points="2046.57,2608.73 2046.57,4103.38 2026.51 " id="polygon19" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.1s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"   dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.1s" />
 </polyline>
 <polyline class="fil10 str5" points="1988.18,2608.73 1988.18,4103.38 1968.12 " id="polygon20" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0s" />
 </polyline>
 <polyline class="fil10 str5" points="1932.87,2608.73 1932.87,4103.38 1912.81 " id="polygon21" stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.3s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.3s" />
 </polyline>
 <polyline class="fil10 str5" points="1880.63,2607.19 1880.63,3745.27 1775.38,3850.52 1775.38,4103.38 1755.32" id="polygon22"  stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="1.1s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="1.1s" />
 </polyline>
 <polyline class="fil10 str5" points="1825.32,2608.73 1825.32,3653.08 1711.62,3766.78 1711.62,4100.72 1691.55 " id="polygon23"  stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.7s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.7s" />
 </polyline>
 <polyline class="fil10 str5" points="1763.86,2608.73 1763.86,3578.25 1761.47,3584.71 1644.01,3723.25 1644.01,4103.38 1623.95 " id="polygon24"  stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.5s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.5s" />
 </polyline>
 <polyline class="fil10 str5" points="2240.16,2608.73 2240.16,2953.14 2363.06,3148.85 2364.62,3154.18 2364.62,4100.72 2344.56,4100.72 2344.56 " id="polygon25"  stroke-dasharray="200, 100" stroke-dashoffset="0"  stroke-width='20' >
 
-  <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.5s" />
+  <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.5s" />
 </polyline></g>
 <g>
 
 
   <polyline class="fil10 str1" points="384.74,3371.47 384.74,3739.82 510.27,3840.86 510.27,4103.38 " stroke-dasharray="200, 100" stroke-dashoffset="0" id="polyline114">
-    <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.12s" />
+    <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.12s" />
   </polyline>
   <polyline class="fil10 str1" points="384.74,3371.47 384.74,3739.82 510.27,3840.86 510.27,4103.38 " stroke-dasharray="200, 100" stroke-dashoffset="0" id="polyline114-4" transform="matrix(-1,0,0,0.71745555,513.22693,927.94392)">
-    <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0s" />
+    <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0s" />
   </polyline>
   <polyline class="fil0 str1" points="384.74,3371.47 384.74,3739.82 510.27,3840.86 510.27,4103.38 " stroke-dasharray="200, 100" stroke-dashoffset="0"  id="polyline114-4-6" transform="matrix(-1,0,0,0.68379532,600.82117,1078.5687)">
-    <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.21s" />
+    <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.21s" />
   </polyline>
   <polyline class="fill0 str1" points="285.77,3366.41 285.77,4103.38 " stroke-dasharray="200, 100" stroke-dashoffset="0" id="polyline116">
-    <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.22s" />
+    <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.22s" />
   </polyline>
   <polyline class="fill0 str1" points="285.77,3366.41 285.77,4103.38 " stroke-dasharray="200, 100" stroke-dashoffset="0" id="polyline116-1"  stroke='white' transform="matrix(-1,0,0,0.25525376,375.5805,3027)">
-    <animate attributeName="stroke-dashoffset" values="1200;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.15s" />
+    <animate attributeName="stroke-dashoffset" values="1200;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.15s" />
   </polyline>
   <polyline class="fil0 str1" points="587.66,4103.38 583.59,3812.5 458.06,3711.45 458.06,3371.47 478.12,3371.47 " stroke-dasharray="200, 100" id="polygon117" transform="translate(2.4563265)"  stroke='white' >
-    <animate attributeName="stroke-dashoffset" values="-1250;0;" dur="1.5s" fill="freeze" repeatCount="indefinite" begin="0.14s" />
+    <animate attributeName="stroke-dashoffset" values="-1250;0;"  dur="2.7s" fill="freeze" repeatCount="indefinite" begin="0.14s" />
   </polyline>
 </g>
  </g>
