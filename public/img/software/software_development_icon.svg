@@ -5,8 +5,14 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0481863 212.411C10.1764 307.907 98.2921 396.524 312.502 401.707C385.18 403.465 609.095 350.647 607.33 221.905C603.577 -52.0261 -6.23265 -21.5265 0.0481863 212.411Z" fill="#D2E3E9" />
 
 
-        <g id = "table">
-
+        <g id = "table" opacity='0'>
+            <animate
+            attributeName="opacity"
+            values="0;1"
+            dur="0.5s"
+            begin="0.3s"
+            fill="freeze"
+            />
             <g id='right-table'>
 
                 <animateTransform attributeName="transform" attributeType="XML" type="translate" values="1000; 0" begin='0.1s' dur="0.9s" repeatCount="1"           calcMode="spline" keySplines="0.3 0.3 0.3 1;"  fill="freeze" />
