@@ -17,7 +17,9 @@ const content = <div className=" text-primary-darkTeal">
   
 
 
-const image = <img src='/img/section/IT_Consulting_icon.png' className="w-full" alt="consulting_icon" />;
+
+const image = <img src='/img/section/it_consulting_icon.svg' className="w-full" alt="consulting_icon" />;
+
 
 const element = {
   content: content,

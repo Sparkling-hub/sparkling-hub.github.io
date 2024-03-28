@@ -11,7 +11,7 @@ const content = (
   </div>
 );
 
-const image = <img src="/img/section/ContactUs.png" className="" alt="SectionOne"/>;
+const image = <img src="/img/section/ContactUs.svg" className="" alt="SectionOne"/>;
 
 const element = {
   content: content,

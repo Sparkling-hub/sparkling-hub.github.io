@@ -14,7 +14,7 @@ const content = (<p className="text-primary-darkTeal leading-[40px] text-2xl ">
   </p>
 );
 
-const image = <img src="/img/section/SectionFAQ.png" className="w-full p-10" alt="FAQ" />
+const image = <img src="/img/section/SectionFAQ.svg" className="w-full p-10" alt="FAQ" />
 
 const element = {
   content: content,

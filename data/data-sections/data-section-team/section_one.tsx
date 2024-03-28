@@ -1,3 +1,4 @@
+import React from "react";
 
 
 const header = (
@@ -19,7 +20,7 @@ const content = (<div className="text-primary-darkTeal">
     </p></div>
 );
 
-const image = <img src="/img/team/team_augmentation_icon.png" className="" alt='sectionOne' />;
+const image = <img src="/img/team/team_augmentation_icon.svg" className="" alt='sectionOne' />;
 
 const element = {
   content: content,

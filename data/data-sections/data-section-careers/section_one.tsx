@@ -13,7 +13,7 @@ const content =
     Want to join the team? Here are the current open positions.
   </p>
 
-const image = <img src='/img/section/Careers_icon.png' className="w-full" alt="careers" />;
+const image = <img src='/img/section/Careers_icon.svg' className="w-full" alt="careers" />;
 
 const element = {
   content: content,
