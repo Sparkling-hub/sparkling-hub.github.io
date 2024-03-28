@@ -90,8 +90,8 @@ const InputSubmit: React.FC<InputSubmitProps> = ({ name, type, disabled, onClick
 
   return (
     <>   <ReCAPTCHA
-    className="h-captcha"
-    sitekey={'123'}
+    className="g-recaptcha"
+    sitekey={'6LfyIacpAAAAAFGCRDEuhC5Fx7WvIjtQMp8Z-jQ4'}
     onChange={(value: string | null) => setRecaptchaValue(value)}
   />
       <input

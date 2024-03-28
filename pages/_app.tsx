@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 		<Provider store={store}>
 			<Component {...pageProps} />
+		
 		</Provider>
 		
 		  
